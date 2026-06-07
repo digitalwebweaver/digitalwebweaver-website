@@ -1,0 +1,65 @@
+/* ─── Forge Theme Tokens ─── */
+:root {
+  /* Surface */
+  --paper:       #f3efe6;
+  --paper-2:     #ede8de;
+  --paper-3:     #e5dfd3;
+
+  /* Ink */
+  --ink:         #16140f;
+  --ink-2:       #2c2a23;
+  --muted:       #6b6457;
+  --faint:       #9e9589;
+
+  /* Lines */
+  --line:        #d9d3c7;
+  --line-dark:   #3a3830;
+
+  /* Accent */
+  --accent:      #ec1763;
+  --accent-soft: #fde0ea;
+
+  /* Reverse */
+  --on-dark:       #f3efe6;
+  --on-dark-muted: #b0aa9e;
+
+  /* Spacing scale */
+  --s1:  4px;
+  --s2:  8px;
+  --s3:  12px;
+  --s4:  16px;
+  --s5:  20px;
+  --s6:  24px;
+  --s8:  32px;
+  --s10: 40px;
+  --s12: 48px;
+  --s16: 64px;
+  --s20: 80px;
+  --s24: 96px;
+
+  /* Radius */
+  --r1: 4px;
+  --r2: 8px;
+  --r3: 12px;
+  --r4: 16px;
+  --r5: 20px;
+  --r6: 24px;
+
+  /* Type scale */
+  --t-xs:  11px;
+  --t-sm:  13px;
+  --t-md:  15px;
+  --t-lg:  17px;
+  --t-xl:  20px;
+  --t-2xl: 24px;
+  --t-3xl: 30px;
+  --t-4xl: 36px;
+  --t-5xl: 48px;
+  --t-6xl: 60px;
+  --t-7xl: 72px;
+
+  /* Max content width */
+  --wrap-xl: 1280px;
+  --wrap-lg: 1100px;
+  --wrap-md:  900px;
+}

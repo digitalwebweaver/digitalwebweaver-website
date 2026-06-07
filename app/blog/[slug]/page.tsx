@@ -1,0 +1,202 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { marked } from "marked";
+import { getPostBySlug, getPublishedPosts, formatPostDate } from "@/lib/posts";
+
+export const dynamic = "force-dynamic";
+
+const SITE_URL = "https://digitalwebweaver.com";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+  if (!post) return {};
+
+  const title = post.seo_title || post.title;
+  const description = post.seo_description || post.excerpt || undefined;
+  const url = `/blog/${post.slug}/`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      url,
+      type: "article",
+      title,
+      description,
+      images: post.cover_image ? [{ url: post.cover_image }] : undefined,
+      publishedTime: post.published_at || undefined,
+      authors: post.author_name ? [post.author_name] : undefined,
+    },
+    twitter: {
+      card: post.cover_image ? "summary_large_image" : "summary",
+      title,
+      description,
+      images: post.cover_image ? [post.cover_image] : undefined,
+    },
+  };
+}
+
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+  if (!post) notFound();
+
+  const html = await marked.parse(post.content || "");
+  const allPosts = await getPublishedPosts(4);
+  const related = allPosts.filter((p) => p.id !== post.id).slice(0, 3);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.seo_description || post.excerpt || undefined,
+    image: post.cover_image || undefined,
+    datePublished: post.published_at || post.created_at,
+    dateModified: post.updated_at,
+    author: {
+      "@type": "Person",
+      name: post.author_name || "Digital Web Weaver",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Digital Web Weaver",
+      url: SITE_URL,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/blog/${post.slug}/`,
+    },
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
+      {/* ===== HERO ===== */}
+      <section className="page-hero" style={{ paddingBottom: "40px" }}>
+        <div className="wrap">
+          <div className="breadcrumb reveal">
+            <Link href="/">Home</Link>
+            <span className="sep">/</span>
+            <Link href="/blog">Blog</Link>
+            <span className="sep">/</span>
+            {post.title}
+          </div>
+          {post.tag && <span className="eyebrow reveal">{post.tag}</span>}
+          <h1 className="reveal" style={{ marginTop: "18px", maxWidth: "820px" }}>
+            {post.title}
+          </h1>
+          {post.excerpt && (
+            <p className="lead reveal" style={{ maxWidth: "640px" }}>
+              {post.excerpt}
+            </p>
+          )}
+          <div className="reveal" style={{ display: "flex", alignItems: "center", gap: "14px", marginTop: "28px" }}>
+            <div className="av" style={{ width: "40px", height: "40px", fontSize: "13px" }}>
+              {post.author_initials || "DW"}
+            </div>
+            <div>
+              <div style={{ fontWeight: 600, fontSize: "14px" }}>{post.author_name || "Digital Web Weaver"}</div>
+              <div style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "var(--faint)", letterSpacing: ".08em" }}>
+                {post.read_minutes} min read &nbsp;·&nbsp; {formatPostDate(post.published_at)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {post.cover_image && (
+        <section className="wrap reveal" style={{ marginBottom: "8px" }}>
+          <div
+            style={{
+              width: "100%",
+              minHeight: "320px",
+              borderRadius: "18px",
+              border: "1px solid var(--line)",
+              backgroundImage: `url(${post.cover_image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+        </section>
+      )}
+
+      {/* ===== CONTENT ===== */}
+      <section className="sec">
+        <div className="wrap" style={{ maxWidth: "760px" }}>
+          <div className="post-content reveal" dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
+      </section>
+
+      {/* ===== Related ===== */}
+      {related.length > 0 && (
+        <section className="sec" style={{ background: "var(--paper-2)" }}>
+          <div className="wrap">
+            <span className="eyebrow reveal">Keep reading</span>
+            <h2 className="reveal" style={{ marginTop: "18px", marginBottom: "32px" }}>
+              More from the blog
+            </h2>
+            <div className="blog-grid">
+              {related.map((p) => (
+                <Link href={`/blog/${p.slug}`} key={p.id} className="blog-card reveal" style={{ textDecoration: "none", color: "inherit" }}>
+                  <div className="bc-vis bc-2" style={p.cover_image ? { backgroundImage: `url(${p.cover_image})`, backgroundSize: "cover", backgroundPosition: "center" } : undefined}>
+                    {p.tag && <span className="bc-tag">{p.tag}</span>}
+                  </div>
+                  <div className="bc-body">
+                    <h3>{p.title}</h3>
+                    {p.excerpt && <p>{p.excerpt}</p>}
+                    <div className="bc-meta">
+                      <span>{p.author_name || "Digital Web Weaver"}</span>
+                      <span className="bc-dot"></span>
+                      <span>{p.read_minutes} min</span>
+                      <span className="bc-dot"></span>
+                      <span>{formatPostDate(p.published_at)}</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== CTA ===== */}
+      <section>
+        <div className="wrap">
+          <div className="cta reveal">
+            <div className="cta-inner">
+              <span className="eyebrow" style={{ color: "rgba(255,255,255,.85)" }}>
+                Let&apos;s build
+              </span>
+              <h2 style={{ marginTop: "18px" }}>
+                Like what you&apos;re reading?
+                <br />
+                Let&apos;s work together.
+              </h2>
+              <p>
+                See how the thinking in these posts becomes shipped software.
+                Get a free consultation from the team behind the articles.
+              </p>
+              <div className="cta-actions">
+                <Link href="/contact" className="btn btn-primary">
+                  Start a project <span className="arr">↗</span>
+                </Link>
+                <Link href="/blog" className="btn btn-ghost">
+                  Back to blog
+                </Link>
+              </div>
+              <div className="cta-meta">
+                <span>● Free consultation</span>
+                <span>● 24-hour response</span>
+                <span>● No commitment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

@@ -1,0 +1,10 @@
+import type { Metadata } from "next";
+import ServicePage from "@/components/sections/ServicePage";
+import { crmErpSystems as data } from "@/data/pages/services/main-services";
+export const metadata: Metadata = {
+  title: data.meta.title,
+  description: data.meta.description,
+  alternates: { canonical: "/crm-erp-systems/" },
+  openGraph: { url: "/crm-erp-systems/", type: "website" },
+};
+export default function Page() { return <ServicePage data={data} />; }

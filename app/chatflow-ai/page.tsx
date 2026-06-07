@@ -1,0 +1,10 @@
+import type { Metadata } from "next";
+import ServicePage from "@/components/sections/ServicePage";
+import { chatflowAi as data } from "@/data/pages/products/readyApps4";
+export const metadata: Metadata = {
+  title: data.meta.title,
+  description: data.meta.description,
+  alternates: { canonical: "/chatflow-ai/" },
+  openGraph: { url: "/chatflow-ai/", type: "website" },
+};
+export default function Page() { return <ServicePage data={data} />; }
