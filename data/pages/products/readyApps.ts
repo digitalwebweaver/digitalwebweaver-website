@@ -122,7 +122,7 @@ export const solarops: ServicePageData = {
   },
   hero: {
     eyebrow: "SolarOps",
-    heading: "Run your solar installation business without the spreadsheet chaos",
+    heading: "SolarOps ERP — Run Your Solar Installation Business Without the Spreadsheet Chaos",
     lead: "From the first site survey to the final commissioning report — SolarOps tracks leads, quotations, inventory, installation crews, subsidy paperwork, and AMC schedules in one connected system.",
     breadcrumbs: crumbs("SolarOps"),
     stats: [
@@ -229,7 +229,7 @@ export const glowdesk: ServicePageData = {
   },
   hero: {
     eyebrow: "GlowDesk",
-    heading: "Run your aesthetic clinic like the premium brand it is",
+    heading: "GlowDesk Clinic Management Software — Run Your Aesthetic Clinic Like the Premium Brand It Is",
     lead: "GlowDesk brings booking, treatment plans, before/after galleries, consent forms, billing, and automated client follow-ups into one elegant system — so your front desk feels as polished as your treatment rooms.",
     breadcrumbs: crumbs("GlowDesk"),
     stats: [

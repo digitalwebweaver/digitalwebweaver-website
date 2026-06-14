@@ -15,6 +15,7 @@ interface Props {
 
 export default function FaqSection({ eyebrow = "FAQ", heading, body, items }: Props) {
   const [open, setOpen] = useState<number | null>(null);
+  const [revealed, setRevealed] = useState(false);
 
   return (
     <section className="sec">
@@ -29,10 +30,13 @@ export default function FaqSection({ eyebrow = "FAQ", heading, body, items }: Pr
         <div className="faq-layout">
           <div className="faq-list">
             {items.map((item, i) => (
-              <div key={i} className={`faq-item reveal${open === i ? " open" : ""}`}>
+              <div key={i} className={`faq-item reveal${revealed ? " in" : ""}${open === i ? " open" : ""}`}>
                 <button
                   className="faq-q"
-                  onClick={() => setOpen(open === i ? null : i)}
+                  onClick={() => {
+                    setRevealed(true);
+                    setOpen(open === i ? null : i);
+                  }}
                   aria-expanded={open === i}
                 >
                   {item.q}

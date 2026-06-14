@@ -60,6 +60,7 @@ export default function Footer() {
               <Image src="/logo.png" alt="Digital Web Weaver" width={391} height={152} />
             </Link>
             <p>A senior engineering studio building high-performance software, SaaS platforms, and AI systems for ambitious teams since 2013.</p>
+            <p><strong>Office:</strong> 207/208 Sanket Heights, Sunpharma Road, Vadodara 390012, Gujarat, India</p>
             <div className="foot-contact">
               <a href="mailto:info@digitalwebweaver.com">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
@@ -86,7 +87,7 @@ export default function Footer() {
             <Link href="/web-development/"><span className="tagdot"></span>Web &amp; SaaS</Link>
             <Link href="/custom-software-development/"><span className="tagdot"></span>Custom software</Link>
             <Link href="/mobile-app-development/"><span className="tagdot"></span>Mobile apps</Link>
-            <Link href="/artificial-intelligence-development/"><span className="tagdot"></span>AI &amp; automation</Link>
+            <Link href="/ai-automation/"><span className="tagdot"></span>AI &amp; automation</Link>
             <Link href="/cloud-devops/"><span className="tagdot"></span>Cloud &amp; DevOps</Link>
             <Link href="/ui-ux-design/"><span className="tagdot"></span>Product design</Link>
           </div>

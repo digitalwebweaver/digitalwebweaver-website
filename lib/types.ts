@@ -60,6 +60,10 @@ export interface ServicePageData {
     formSub?: string;
     formSubmitLabel?: string;
     formNote?: string;
+    localBadge?: {
+      flag: string;
+      chips: string[];
+    };
   };
   services?: {
     eyebrow?: string;

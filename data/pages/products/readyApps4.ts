@@ -15,7 +15,7 @@ export const chatflowAi: ServicePageData = {
   },
   hero: {
     eyebrow: "ChatFlow AI",
-    heading: "Turn your WhatsApp into a 24/7 sales and support team",
+    heading: "ChatFlow AI WhatsApp Automation — Turn Your WhatsApp Into a 24/7 Sales and Support Team",
     lead: "ChatFlow AI answers enquiries, books appointments, sends order updates, and follows up with customers automatically — on your business WhatsApp number, in your brand's voice, around the clock.",
     breadcrumbs: crumbs("ChatFlow AI"),
     stats: [
@@ -122,7 +122,7 @@ export const telecare: ServicePageData = {
   },
   hero: {
     eyebrow: "TeleCare",
-    heading: "Bring your clinic online without losing the personal touch",
+    heading: "TeleCare Telemedicine Platform — Bring Your Clinic Online Without Losing the Personal Touch",
     lead: "TeleCare brings video consultations, e-prescriptions, patient records, appointment scheduling, and payments into one branded telemedicine platform — so you can see patients beyond your waiting room, on your own terms.",
     breadcrumbs: crumbs("TeleCare"),
     stats: [
@@ -229,7 +229,7 @@ export const insuredesk: ServicePageData = {
   },
   hero: {
     eyebrow: "InsureDesk",
-    heading: "Stop losing renewals to a missed reminder",
+    heading: "InsureDesk Insurance CRM — Stop Losing Renewals to a Missed Reminder",
     lead: "InsureDesk brings lead management, policy tracking, renewal reminders, claims follow-up, and client communication into one connected CRM — so every policy, every renewal, and every client conversation has somewhere to live.",
     breadcrumbs: crumbs("InsureDesk"),
     stats: [
@@ -314,7 +314,7 @@ export const insuredesk: ServicePageData = {
   },
   cta: {
     eyebrow: "Ready when you are",
-    heading: "Stop losing renewals to a missed reminder",
+    heading: "InsureDesk Insurance CRM — Stop Losing Renewals to a Missed Reminder",
     body: "We'll walk through a real policy lifecycle — from lead to renewal — in InsureDesk, configured around your agency's product lines and team.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
     secondaryCta: { label: "See all Ready Apps", href: "/products" },
@@ -336,7 +336,7 @@ export const callmateAi: ServicePageData = {
   },
   hero: {
     eyebrow: "CallMate AI",
-    heading: "Give your business a phone team that never clocks off",
+    heading: "CallMate AI Voice Calling Agent — Give Your Business a Phone Team That Never Clocks Off",
     lead: "CallMate AI answers inbound calls, qualifies leads, books appointments, and makes follow-up and reminder calls automatically — in a natural voice, in your brand's tone, around the clock — so no enquiry waits for someone to be free.",
     breadcrumbs: crumbs("CallMate AI"),
     stats: [

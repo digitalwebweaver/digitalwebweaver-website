@@ -11,7 +11,7 @@ const SECTIONS = [
       { label: "Custom Software / SaaS", href: "/saas-development/" },
       { label: "Mobile Apps", href: "/mobile-app-development/" },
       { label: "Cloud & DevOps", href: "/cloud-devops/" },
-      { label: "AI & Automation", href: "/artificial-intelligence-development/" },
+      { label: "AI & Automation", href: "/ai-automation/" },
       { label: "API Development", href: "/services/api-development/" },
     ],
   },

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getPublishedPosts } from "@/lib/posts";
+import { getPublishedProjects } from "@/lib/projects";
 
 export const dynamic = "force-dynamic";
 
@@ -34,6 +35,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  const projects = await getPublishedProjects();
+  const projectEntries: Entry[] = projects.map((p) => ({
+    url: `${base}/portfolio/${p.slug}/`,
+    lastModified: new Date(p.updated_at).toISOString().split("T")[0],
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   return [
     // ── Homepage ──────────────────────────────────────────────────────────────
     url("/", 1.0, "weekly"),
@@ -44,6 +53,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url("/web-design-ahmedabad/", 0.85),
     url("/web-design-surat/", 0.85),
     url("/web-design-rajkot/", 0.85),
+    url("/software-development-company-uk/", 0.85),
+    url("/software-development-company-south-africa/", 0.85),
+    url("/agence-developpement-web-abidjan/", 0.85),
     url("/web-development/", 0.9),
 
     // ── Core service pages ────────────────────────────────────────────────────
@@ -56,7 +68,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url("/custom-web-apps/", 0.8),
     url("/ui-ux-design/", 0.8),
     url("/cloud-devops/", 0.8),
-    url("/open-source-development/", 0.7),
 
     // ── Hire dedicated resource pages ─────────────────────────────────────────
     url("/hire-dedicated-resource/", 0.85),
@@ -94,6 +105,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url("/wordpress-courier-tracking-plugin/", 0.65),
     url("/wordpress-logistics-courier-tracking-plugin/", 0.65),
 
+    // ── Ready Apps (product line) ─────────────────────────────────────────────
+    url("/educore/", 0.65),
+    url("/solarops/", 0.65),
+    url("/glowdesk/", 0.65),
+    url("/quickbite/", 0.65),
+    url("/rideeasy/", 0.65),
+    url("/schoolhub/", 0.65),
+    url("/clinicflow/", 0.65),
+    url("/vetcare/", 0.65),
+    url("/salonbook/", 0.65),
+    url("/pesttrack/", 0.65),
+    url("/chemsupply/", 0.65),
+    url("/clinicvoice-ai/", 0.65),
+    url("/chatflow-ai/", 0.65),
+    url("/telecare/", 0.65),
+    url("/insuredesk/", 0.65),
+    url("/callmate-ai/", 0.65),
+
     // ── New service pages (Phase 6) ───────────────────────────────────────────
     url("/custom-software-development/", 0.85),
     url("/website-development/", 0.85),
@@ -125,6 +154,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // EXCLUDED (noindex): /privacy-policy/, /stack/*, /solutions/*
 
+    ...projectEntries,
     ...postEntries,
   ];
 }

@@ -103,7 +103,7 @@ export default function HireDedicatedClient() {
       </section>
 
       {/* ===== MARQUEE ===== */}
-      <div className="marquee-wrap" style={{ margin: 0 }}>
+      <div className="marquee" style={{ margin: 0 }}>
         <div className="marquee-track">
           <span>React</span><span>Vue.js</span><span>Angular</span><span>Node.js</span><span>Python</span><span>Laravel</span><span>FastAPI</span><span>React Native</span><span>Flutter</span><span>DevOps</span><span>AWS</span><span>GCP</span><span>PostgreSQL</span><span>MongoDB</span><span>TypeScript</span><span>Docker</span><span>Kubernetes</span><span>Go</span><span>AI / ML</span><span>GraphQL</span>
           <span>React</span><span>Vue.js</span><span>Angular</span><span>Node.js</span><span>Python</span><span>Laravel</span><span>FastAPI</span><span>React Native</span><span>Flutter</span><span>DevOps</span><span>AWS</span><span>GCP</span><span>PostgreSQL</span><span>MongoDB</span><span>TypeScript</span><span>Docker</span><span>Kubernetes</span><span>Go</span><span>AI / ML</span><span>GraphQL</span>

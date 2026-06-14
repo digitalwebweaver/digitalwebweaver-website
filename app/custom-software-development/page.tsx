@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import JsonLd from "@/components/seo/JsonLd";
 import ServicePage from "@/components/sections/ServicePage";
 import { customSoftwareDevelopment as data } from "@/data/pages/services/missing-services";
@@ -41,7 +41,7 @@ const localBusinessSchema = {
     "Legacy System Replacement",
     "Workflow Automation Software",
   ],
-  priceRange: "â‚¹â‚¹â‚¹",
+  priceRange: "₹₹₹",
   currenciesAccepted: "INR",
   paymentAccepted: "Bank Transfer, UPI, Cheque",
 };

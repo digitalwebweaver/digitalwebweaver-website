@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -67,7 +67,7 @@ export default function PrivacyPolicyPage() {
                   <li>Company name, size, and industry</li>
                   <li>Project details and requirements you share with us</li>
                   <li>Communications, messages, and attachments you send to us</li>
-                  <li>Payment information (processed securely through our payment provider â€” we do not store card details)</li>
+                  <li>Payment information (processed securely through our payment provider — we do not store card details)</li>
                 </ul>
                 <h3>Information collected automatically</h3>
                 <p>When you visit our website, we automatically collect certain technical information, including:</p>
@@ -86,12 +86,12 @@ export default function PrivacyPolicyPage() {
                 <h2>How we use it</h2>
                 <p>We use the information we collect for the following purposes:</p>
                 <ul>
-                  <li><strong>Providing services</strong> â€” to deliver the software development and consulting services you have engaged us for.</li>
-                  <li><strong>Communication</strong> â€” to respond to enquiries, send project updates, and provide support.</li>
-                  <li><strong>Marketing</strong> â€” to send newsletters, case studies, and service updates to contacts who have opted in or have a legitimate interest. You can opt out at any time.</li>
-                  <li><strong>Analytics and improvement</strong> â€” to understand how our website is used and improve its content and performance.</li>
-                  <li><strong>Legal compliance</strong> â€” to meet our obligations under applicable laws, including accounting, tax, and data protection regulations.</li>
-                  <li><strong>Security</strong> â€” to detect, prevent, and respond to fraud, abuse, or security threats.</li>
+                  <li><strong>Providing services</strong> — to deliver the software development and consulting services you have engaged us for.</li>
+                  <li><strong>Communication</strong> — to respond to enquiries, send project updates, and provide support.</li>
+                  <li><strong>Marketing</strong> — to send newsletters, case studies, and service updates to contacts who have opted in or have a legitimate interest. You can opt out at any time.</li>
+                  <li><strong>Analytics and improvement</strong> — to understand how our website is used and improve its content and performance.</li>
+                  <li><strong>Legal compliance</strong> — to meet our obligations under applicable laws, including accounting, tax, and data protection regulations.</li>
+                  <li><strong>Security</strong> — to detect, prevent, and respond to fraud, abuse, or security threats.</li>
                 </ul>
                 <p>Our legal bases for processing personal data (under GDPR and applicable law) are: contract performance, legitimate interests, legal obligation, and consent.</p>
               </section>
@@ -100,10 +100,10 @@ export default function PrivacyPolicyPage() {
                 <h2>Sharing data</h2>
                 <p>We do not sell, rent, or trade your personal data to third parties. We may share your data in the following limited circumstances:</p>
                 <ul>
-                  <li><strong>Service providers</strong> â€” trusted vendors who help us operate our business, such as cloud hosting (AWS), analytics (Google Analytics), CRM (HubSpot), payment processing (Stripe), and email marketing (Mailchimp). These providers process data only on our behalf and under contract.</li>
-                  <li><strong>Business transfers</strong> â€” if Digital Web Weaver is acquired, merged, or undergoes a significant structural change, client data may be transferred as part of that transaction. We will notify affected parties in advance.</li>
-                  <li><strong>Legal requirements</strong> â€” when required by law, court order, or regulatory request.</li>
-                  <li><strong>Protection of rights</strong> â€” to protect the rights, property, or safety of Digital Web Weaver, our clients, or the public.</li>
+                  <li><strong>Service providers</strong> — trusted vendors who help us operate our business, such as cloud hosting (AWS), analytics (Google Analytics), CRM (HubSpot), payment processing (Stripe), and email marketing (Mailchimp). These providers process data only on our behalf and under contract.</li>
+                  <li><strong>Business transfers</strong> — if Digital Web Weaver is acquired, merged, or undergoes a significant structural change, client data may be transferred as part of that transaction. We will notify affected parties in advance.</li>
+                  <li><strong>Legal requirements</strong> — when required by law, court order, or regulatory request.</li>
+                  <li><strong>Protection of rights</strong> — to protect the rights, property, or safety of Digital Web Weaver, our clients, or the public.</li>
                 </ul>
                 <p>We do not transfer personal data outside the European Economic Area (EEA) without appropriate safeguards such as Standard Contractual Clauses or equivalent adequacy decisions.</p>
               </section>
@@ -112,9 +112,9 @@ export default function PrivacyPolicyPage() {
                 <h2>Cookies</h2>
                 <p>Our website uses cookies and similar tracking technologies. We use the following types:</p>
                 <ul>
-                  <li><strong>Essential cookies</strong> â€” required for the website to function correctly. Cannot be disabled.</li>
-                  <li><strong>Analytics cookies</strong> â€” help us understand how visitors interact with our site (e.g. Google Analytics). Disabled unless you consent.</li>
-                  <li><strong>Marketing cookies</strong> â€” used for retargeting and measuring advertising effectiveness. Disabled unless you consent.</li>
+                  <li><strong>Essential cookies</strong> — required for the website to function correctly. Cannot be disabled.</li>
+                  <li><strong>Analytics cookies</strong> — help us understand how visitors interact with our site (e.g. Google Analytics). Disabled unless you consent.</li>
+                  <li><strong>Marketing cookies</strong> — used for retargeting and measuring advertising effectiveness. Disabled unless you consent.</li>
                 </ul>
                 <p>You can manage your cookie preferences at any time via the cookie banner on our site, or by adjusting your browser settings. Note that disabling certain cookies may affect your experience on our website.</p>
               </section>
@@ -123,11 +123,11 @@ export default function PrivacyPolicyPage() {
                 <h2>Data retention</h2>
                 <p>We retain personal data only for as long as necessary for the purposes described in this policy, or as required by law. Our standard retention periods are:</p>
                 <ul>
-                  <li><strong>Client records</strong> â€” 7 years after the end of a project (for legal and accounting purposes)</li>
-                  <li><strong>Prospective client enquiries</strong> â€” 2 years from last contact</li>
-                  <li><strong>Newsletter subscribers</strong> â€” until you unsubscribe</li>
-                  <li><strong>Website analytics</strong> â€” 26 months (Google Analytics default)</li>
-                  <li><strong>Security logs</strong> â€” 12 months</li>
+                  <li><strong>Client records</strong> — 7 years after the end of a project (for legal and accounting purposes)</li>
+                  <li><strong>Prospective client enquiries</strong> — 2 years from last contact</li>
+                  <li><strong>Newsletter subscribers</strong> — until you unsubscribe</li>
+                  <li><strong>Website analytics</strong> — 26 months (Google Analytics default)</li>
+                  <li><strong>Security logs</strong> — 12 months</li>
                 </ul>
                 <p>After these periods, data is deleted or anonymised.</p>
               </section>
@@ -136,13 +136,13 @@ export default function PrivacyPolicyPage() {
                 <h2>Your rights</h2>
                 <p>Depending on your location, you may have the following rights regarding your personal data:</p>
                 <ul>
-                  <li><strong>Access</strong> â€” request a copy of the personal data we hold about you.</li>
-                  <li><strong>Rectification</strong> â€” request correction of inaccurate or incomplete data.</li>
-                  <li><strong>Erasure</strong> â€” request deletion of your data (&ldquo;right to be forgotten&rdquo;) in certain circumstances.</li>
-                  <li><strong>Restriction</strong> â€” request that we limit the processing of your data in certain circumstances.</li>
-                  <li><strong>Portability</strong> â€” request your data in a structured, machine-readable format.</li>
-                  <li><strong>Objection</strong> â€” object to processing based on legitimate interests or for direct marketing.</li>
-                  <li><strong>Withdraw consent</strong> â€” where processing is based on consent, withdraw it at any time without affecting prior processing.</li>
+                  <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
+                  <li><strong>Rectification</strong> — request correction of inaccurate or incomplete data.</li>
+                  <li><strong>Erasure</strong> — request deletion of your data (&ldquo;right to be forgotten&rdquo;) in certain circumstances.</li>
+                  <li><strong>Restriction</strong> — request that we limit the processing of your data in certain circumstances.</li>
+                  <li><strong>Portability</strong> — request your data in a structured, machine-readable format.</li>
+                  <li><strong>Objection</strong> — object to processing based on legitimate interests or for direct marketing.</li>
+                  <li><strong>Withdraw consent</strong> — where processing is based on consent, withdraw it at any time without affecting prior processing.</li>
                 </ul>
                 <p>To exercise any of these rights, contact us at <a href="mailto:info@digitalwebweaver.com">info@digitalwebweaver.com</a>. We will respond within 30 days. If you are in the EEA, you also have the right to lodge a complaint with your national data protection authority.</p>
               </section>

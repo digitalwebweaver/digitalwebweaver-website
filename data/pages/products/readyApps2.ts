@@ -122,7 +122,7 @@ export const schoolhub: ServicePageData = {
   },
   hero: {
     eyebrow: "SchoolHub",
-    heading: "Run your entire school from one connected platform",
+    heading: "SchoolHub School Management System — Run Your Entire School From One Connected Platform",
     lead: "SchoolHub brings admissions, attendance, timetables, fee collection, exams, report cards, and parent communication into one system — so your staff stop juggling registers, spreadsheets, and group chats.",
     breadcrumbs: crumbs("SchoolHub"),
     stats: [
@@ -229,7 +229,7 @@ export const clinicflow: ServicePageData = {
   },
   hero: {
     eyebrow: "ClinicFlow",
-    heading: "Run your clinic on one system — not five disconnected tools",
+    heading: "ClinicFlow Clinic Management System — Run Your Clinic on One System, Not Five Disconnected Tools",
     lead: "ClinicFlow brings appointment scheduling, electronic medical records, billing, pharmacy, lab orders, and patient communication into one platform — so your front desk, doctors, and back office finally work from the same data.",
     breadcrumbs: crumbs("ClinicFlow"),
     stats: [
@@ -336,7 +336,7 @@ export const vetcare: ServicePageData = {
   },
   hero: {
     eyebrow: "VetCare",
-    heading: "Everything your veterinary practice needs — in one connected system",
+    heading: "VetCare Veterinary Management System — Everything Your Veterinary Practice Needs in One Connected System",
     lead: "VetCare brings appointment scheduling, patient and pet records, vaccination tracking, billing, pharmacy, and pet-owner communication into one platform — built around how veterinary practices actually run.",
     breadcrumbs: crumbs("VetCare"),
     stats: [

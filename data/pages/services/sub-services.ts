@@ -27,7 +27,7 @@ const mk = (
 
 export const apiDevelopment: ServicePageData = {
   meta: { title: "API Development Services — REST & GraphQL APIs", description: "Custom REST, GraphQL, and WebSocket API development with OAuth/JWT auth, OpenAPI documentation, versioning, and performance optimisation." },
-  hero: { eyebrow: "API Development", heading: "APIs for Every Integration — Web to Mobile", lead: "We design and build secure, documented, versioned APIs using REST, GraphQL, and WebSocket patterns — ready for any client to consume.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Services", href: "/services/" }, { label: "API Development" }] },
+  hero: { eyebrow: "API Development", heading: "API Development Services for Every Integration — Web to Mobile", lead: "We design and build secure, documented, versioned APIs using REST, GraphQL, and WebSocket patterns — ready for any client to consume.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Services", href: "/services/" }, { label: "API Development" }] },
   services: { variant: "svc", eyebrow: "What We Build", heading: "API Development Services", items: [{ icon: "🔌", title: "REST APIs", desc: "CRUD-based resource APIs with proper status codes and error handling." }, { icon: "🔷", title: "GraphQL APIs", desc: "Flexible query APIs with schema, resolvers, and subscriptions." }, { icon: "⚡", title: "WebSocket APIs", desc: "Real-time bidirectional APIs for live data and chat." }, { icon: "🔒", title: "Auth & Security", desc: "OAuth 2.0, JWT, API keys, rate limiting, and IP allowlisting." }, { icon: "📖", title: "OpenAPI Docs", desc: "Swagger/Redoc auto-generated documentation with examples." }, { icon: "🔄", title: "API Versioning", desc: "URL, header, and content-type versioning strategies." }] },
   capabilities: { eyebrow: "Technical Depth", heading: "API Capabilities", dark: true, items: [{ icon: "🔌", title: "Express & Fastify", desc: "Production-grade Node.js API frameworks." }, { icon: "🔷", title: "Apollo Server", desc: "GraphQL with resolvers, dataloaders, and subscriptions." }, { icon: "🧪", title: "Contract Testing", desc: "Pact and Dredd for API contract verification." }, { icon: "📊", title: "Performance", desc: "Response caching, pagination, and database query optimisation." }, { icon: "🔒", title: "Security", desc: "Input validation, SQL injection prevention, CORS, and CSP." }, { icon: "📈", title: "Observability", desc: "Structured logging, tracing, and endpoint latency monitoring." }] },
   process: { eyebrow: "How We Work", heading: "API Development Process", steps: [{ title: "Design-First", desc: "OpenAPI spec written and reviewed before any code is written." }, { title: "Core Implementation", desc: "Endpoints, validation, auth, and error handling." }, { title: "Testing", desc: "Unit, integration, and contract tests with 80%+ coverage." }, { title: "Documentation & Deploy", desc: "Swagger docs, rate limits, and production deployment." }] },
@@ -39,7 +39,7 @@ export const apiDevelopment: ServicePageData = {
 
 export const apiIntegrations: ServicePageData = mk(
   "api-integrations", "API Integration Services — Connect Your Business Systems", "Connect payment gateways, CRMs, ERPs, and third-party APIs with custom middleware, webhook management, and error handling.",
-  "API Integrations", "APIs That Connect Every System You Rely On",
+  "API Integrations", "API Integration Services That Connect Every System You Rely On",
   "We integrate third-party APIs, payment gateways, CRMs, and ERPs into your applications — reliably, with proper error handling and monitoring.",
   [
     { icon: "💳", title: "Payment Gateways", desc: "Stripe, Razorpay, PayPal, Braintree integration." },
@@ -53,7 +53,7 @@ export const apiIntegrations: ServicePageData = mk(
 
 export const corporateWebsites: ServicePageData = mk(
   "corporate-websites", "Corporate Website Development — Lead Generation & Brand", "Professional corporate websites designed to convert visitors into leads. CMS integration, SEO structure, performance optimisation.",
-  "Corporate Websites", "Corporate Websites Designed to Convert Visitors into Leads",
+  "Corporate Websites", "Corporate Website Development Designed to Convert Visitors into Leads",
   "We build professional, fast, and SEO-optimised corporate websites that represent your brand and capture qualified leads.",
   [
     { icon: "🏢", title: "Company Websites", desc: "Professional presence with CMS for easy content management." },
@@ -67,7 +67,7 @@ export const corporateWebsites: ServicePageData = mk(
 
 export const databaseDesign: ServicePageData = mk(
   "database-design", "Database Design & Architecture — Scale & Speed", "Database design for relational and NoSQL systems: schema design, indexing, query optimisation, migrations, and sharding strategies.",
-  "Database Design", "Database Architecture Built for Scale and Speed",
+  "Database Design", "Database Design & Architecture Built for Scale and Speed",
   "We design database schemas, optimise queries, and architect data layers for performance, integrity, and future scale.",
   [
     { icon: "🗄️", title: "Relational Design", desc: "PostgreSQL and MySQL schema design with normalisation and indexing." },
@@ -81,7 +81,7 @@ export const databaseDesign: ServicePageData = mk(
 
 export const enterpriseApplications: ServicePageData = mk(
   "enterprise-applications", "Enterprise Application Development — Scale Across Teams", "Enterprise application development: large-scale systems with role-based access, workflow automation, SSO, multi-tenant architecture, and compliance.",
-  "Enterprise Applications", "Enterprise Systems That Scale Across Teams and Workflows",
+  "Enterprise Applications", "Enterprise Application Development That Scales Across Teams and Workflows",
   "We build large-scale enterprise applications with complex role hierarchies, workflow automation, SSO, and multi-tenant architectures.",
   [
     { icon: "🏛️", title: "ERP-Class Systems", desc: "Custom enterprise resource planning and management platforms." },
@@ -95,7 +95,7 @@ export const enterpriseApplications: ServicePageData = mk(
 
 export const iosDevelopment: ServicePageData = mk(
   "ios-development", "iOS App Development — Native Swift & SwiftUI", "Native iOS app development with Swift, SwiftUI, and App Store submission. HIPAA, payment integrations, and enterprise iOS solutions.",
-  "iOS Development", "Native iOS Apps Built for Performance and App Store Launch",
+  "iOS Development", "iOS App Development Built for Performance and App Store Launch",
   "We build polished, App Store-approved iOS apps with Swift and SwiftUI — delivered with TestFlight builds and full submission support.",
   [
     { icon: "📱", title: "Swift & SwiftUI", desc: "Modern declarative UI with native platform feel." },
@@ -137,7 +137,7 @@ export const performanceOptimization: ServicePageData = mk(
 
 export const progressiveWebApps: ServicePageData = mk(
   "progressive-web-apps", "Progressive Web App Development — Native Feel Without Native Build", "PWA development: offline mode, push notifications, installable apps, service worker implementation, and Lighthouse optimisation.",
-  "Progressive Web Apps", "PWAs That Feel Native Without a Native Build",
+  "Progressive Web Apps", "Progressive Web App Development That Feels Native Without a Native Build",
   "We build Progressive Web Apps that install from the browser, work offline, and deliver native-like performance across all platforms.",
   [
     { icon: "📲", title: "Installable PWA", desc: "Web App Manifest and install prompts for home screen placement." },
@@ -151,7 +151,7 @@ export const progressiveWebApps: ServicePageData = mk(
 
 export const appModernization: ServicePageData = mk(
   "app-modernization", "App Modernisation — Legacy to Modern Without Big-Bang Rewrite", "Legacy application modernisation: strangler fig pattern, monolith to microservices, database migration, and UI modernisation.",
-  "App Modernisation", "Modernise Legacy Systems Without the Big-Bang Rewrite",
+  "App Modernisation", "App Modernisation — Modernise Legacy Systems Without the Big-Bang Rewrite",
   "We modernise legacy applications incrementally — using the strangler fig pattern to reduce risk while continuously delivering new value.",
   [
     { icon: "🔄", title: "Strangler Fig Pattern", desc: "Route-by-route migration from legacy to modern system." },

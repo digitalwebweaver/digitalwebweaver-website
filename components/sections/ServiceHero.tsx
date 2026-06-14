@@ -15,6 +15,10 @@ interface Props {
   formSubmitLabel?: string;
   formNote?: string;
   formVariant?: "service" | "hire";
+  localBadge?: {
+    flag: string;
+    chips: string[];
+  };
 }
 
 export default function ServiceHero({
@@ -30,6 +34,7 @@ export default function ServiceHero({
   formSubmitLabel,
   formNote,
   formVariant = "service",
+  localBadge,
 }: Props) {
   return (
     <section className="svc-hero">
@@ -37,7 +42,12 @@ export default function ServiceHero({
         {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
         <div className="svc-hero-grid">
           <div className="shg-left">
-            {eyebrow && <span className="eyebrow reveal">{eyebrow}</span>}
+            {eyebrow && (
+              <span className="eyebrow reveal">
+                {localBadge?.flag && <span className="eyebrow-flag">{localBadge.flag}</span>}
+                {eyebrow}
+              </span>
+            )}
             <h1 className="reveal" style={{ marginTop: 18 }}>{heading}</h1>
             <p className="lead reveal">{lead}</p>
             {stats && (
@@ -50,15 +60,26 @@ export default function ServiceHero({
                 ))}
               </div>
             )}
-            <div className="usedby reveal">
-              <span>Trusted by</span>
-              <div className="ub-chips">
-                <div className="ub-c">150+ clients</div>
-                <div className="ub-c">India</div>
-                <div className="ub-c">UK</div>
-                <div className="ub-c">US &amp; Global</div>
+            {localBadge ? (
+              <div className="usedby reveal">
+                <span>{localBadge.flag} Local to you</span>
+                <div className="ub-chips">
+                  {localBadge.chips.map((chip) => (
+                    <div key={chip} className="ub-c">{chip}</div>
+                  ))}
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="usedby reveal">
+                <span>Trusted by</span>
+                <div className="ub-chips">
+                  <div className="ub-c">150+ clients</div>
+                  <div className="ub-c">India</div>
+                  <div className="ub-c">UK</div>
+                  <div className="ub-c">US &amp; Global</div>
+                </div>
+              </div>
+            )}
           </div>
           <div className="shg-right reveal">
             <FormCard

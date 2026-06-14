@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Services — Engineering Software That Delivers Business Outcomes",
-  description: "Full-spectrum software engineering services: web, mobile, APIs, cloud, AI, and design — from MVP to enterprise scale.",
+  title: "Custom Software Development Services — Web, Mobile, Cloud & AI",
+  description: "Custom software development services from Digital Web Weaver: web apps, mobile apps, APIs, cloud infrastructure, AI automation, and enterprise systems — from MVP to enterprise scale.",
   alternates: { canonical: "/services/" },
   openGraph: { url: "/services/", type: "website" },
 };
@@ -37,8 +37,8 @@ export default function ServicesPage() {
       <section className="hero sec">
         <div className="wrap">
           <span className="eyebrow">All Services</span>
-          <h1>Engineering Software Systems That Deliver Business Outcomes</h1>
-          <p className="lead">Full-spectrum software engineering — web, mobile, APIs, cloud, and AI — from idea to production.</p>
+          <h1>Custom Software Development Services for Every Stage of Your Business</h1>
+          <p className="lead">Full-spectrum custom software development — web, mobile, APIs, cloud, and AI — from idea to production.</p>
         </div>
       </section>
       <section className="sec">

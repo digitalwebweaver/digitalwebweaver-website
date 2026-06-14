@@ -7,6 +7,7 @@ const TABS = [
   { href: "/admin", label: "Inquiries" },
   { href: "/admin/visits", label: "Visits" },
   { href: "/admin/blog", label: "Blog" },
+  { href: "/admin/portfolio", label: "Portfolio" },
 ];
 
 export default function AdminTopBar({ subtitle }: { subtitle: string }) {

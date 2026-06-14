@@ -85,7 +85,7 @@ export default function Header() {
                         <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18"/></svg></div>
                         SaaS App Development
                       </Link>
-                      <Link className="eng-lnk" href="/artificial-intelligence-development/">
+                      <Link className="eng-lnk" href="/ai-automation/">
                         <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.8 1-6.3L3 8.9 9 8z"/></svg></div>
                         Business Automation
                       </Link>
@@ -190,7 +190,7 @@ export default function Header() {
               <div className="nav-item has-drop">
                 <a href="/stack/">Stack {chevSvg}</a>
                 <div className="drop-menu">
-                  <Link className="drop-lnk" href="/stack/"><div className="drop-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="4"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(60 12 12)"/></svg></div>React / Next.js</Link>
+                  <Link className="drop-lnk" href="/react-developer/"><div className="drop-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="4"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(60 12 12)"/></svg></div>React / Next.js</Link>
                   <Link className="drop-lnk" href="/nodejs-developer/"><div className="drop-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M12 3L4 7v5c0 5 3.6 9.7 8 10.9C16.4 21.7 20 17 20 12V7z"/></svg></div>Node.js</Link>
                   <Link className="drop-lnk" href="/laravel-developer/"><div className="drop-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M8 6L3 12l5 6M16 6l5 6-5 6"/></svg></div>Laravel / PHP</Link>
                   <Link className="drop-lnk" href="/python-developer/"><div className="drop-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18"/></svg></div>Python / Django</Link>

@@ -100,7 +100,7 @@ export default function WebDesignVadodaraClient() {
       </section>
 
       {/* ===== MARQUEE ===== */}
-      <div className="marquee-wrap">
+      <div className="marquee">
         <div className="marquee-track">
           <span>Website design</span><span>Web development</span><span>Mobile apps</span><span>E-commerce</span><span>WordPress</span><span>WooCommerce</span><span>React</span><span>Next.js</span><span>SEO</span><span>Vadodara</span><span>Gujarat</span><span>India</span>
           <span>Website design</span><span>Web development</span><span>Mobile apps</span><span>E-commerce</span><span>WordPress</span><span>WooCommerce</span><span>React</span><span>Next.js</span><span>SEO</span><span>Vadodara</span><span>Gujarat</span><span>India</span>
@@ -198,7 +198,7 @@ export default function WebDesignVadodaraClient() {
               <h2 style={{ marginTop: 18, color: "var(--on-dark)" }}>Why choose Digital Web Weaver<br />over other Vadodara agencies?</h2>
             </div>
           </div>
-          <div className="cap-grid" style={{ gridTemplateColumns: "repeat(4,1fr)" }}>
+          <div className="cap-grid">
             <div className="cap reveal">
               <div className="cp-ic">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">

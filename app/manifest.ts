@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Digital Web Weaver",
     short_name: "Digital Web Weaver",
     description:
-      "Expert web development, custom software, mobile apps, and AI solutions. Based in India, serving global clients.",
+      "Expert web development, custom software, mobile apps, and AI solutions. 200+ projects delivered. Based in India, serving global clients.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

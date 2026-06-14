@@ -7,11 +7,13 @@ import type { NextConfig } from "next";
 //   rewrite ^/apps/?$ /products/ permanent;
 //   rewrite ^/vue-developer/?$ /vuejs-developer/ permanent;
 //   rewrite ^/artificial-intelligence-development/?$ /ai-automation/ permanent;
+//   rewrite ^/open-source-development/?$ /wordpress-development/ permanent;
 //
 // Cloudflare Pages (_redirects file in /out):
 //   /apps/*  /products/:splat  301
 //   /vue-developer/  /vuejs-developer/  301
 //   /artificial-intelligence-development/  /ai-automation/  301
+//   /open-source-development/  /wordpress-development/  301
 
 const nextConfig: NextConfig = {
   trailingSlash: true,

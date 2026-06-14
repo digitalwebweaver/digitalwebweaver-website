@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import WebDesignVadodaraClient from "./WebDesignVadodaraClient";
 import JsonLd from "@/components/seo/JsonLd";
 
@@ -30,7 +30,7 @@ const localBusinessSchema = {
     { "@type": "State", name: "Gujarat" },
     { "@type": "Country", name: "India" },
   ],
-  priceRange: "â‚¹â‚¹â‚¹",
+  priceRange: "₹₹₹",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -54,7 +54,7 @@ const localBusinessSchema = {
 export const metadata: Metadata = {
   title: "Web Development Company in Vadodara, Gujarat",
   description:
-    "Digital Web Weaver â€” leading web development company in Vadodara, Gujarat. Custom websites, web apps, e-commerce and mobile apps built by senior engineers for local and global clients.",
+    "Digital Web Weaver — leading web development company in Vadodara, Gujarat. Custom websites, web apps, e-commerce and mobile apps built by senior engineers for local and global clients.",
   alternates: { canonical: "/web-design-vadodara/" },
   openGraph: { url: "/web-design-vadodara/", type: "website" },
 };

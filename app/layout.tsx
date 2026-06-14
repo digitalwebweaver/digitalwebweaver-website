@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
 import SiteChrome from "@/components/layout/SiteChrome";
 import JsonLd from "@/components/seo/JsonLd";
@@ -37,7 +37,12 @@ const organizationSchema = {
       areaServed: ["India", "Vadodara", "Gujarat", "Ahmedabad", "Surat", "South Africa", "United Kingdom", "Ivory Coast"],
       description:
         "Expert web development, custom software, mobile apps, and AI solutions. Based in Vadodara, Gujarat, India — serving clients across India, South Africa, the UK, and West Africa.",
-      sameAs: [],
+      sameAs: [
+        "https://www.facebook.com/digitalwebweaver",
+        "https://in.linkedin.com/company/digital-web-weaver",
+        "https://x.com/dwebweaver",
+        "https://maps.app.goo.gl/nWGopWEYkMKYQP1D9",
+      ],
     },
     {
       "@type": "WebSite",
@@ -45,6 +50,18 @@ const organizationSchema = {
       url: "https://digitalwebweaver.com",
       name: "Digital Web Weaver",
       publisher: { "@id": "https://digitalwebweaver.com/#organization" },
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://digitalwebweaver.com/#sitenav",
+      name: ["Services", "Products", "Portfolio", "About", "Contact"],
+      url: [
+        "https://digitalwebweaver.com/services/",
+        "https://digitalwebweaver.com/products/",
+        "https://digitalwebweaver.com/portfolio/",
+        "https://digitalwebweaver.com/about/",
+        "https://digitalwebweaver.com/contact/",
+      ],
     },
   ],
 };
@@ -76,7 +93,7 @@ export const metadata: Metadata = {
     template: "%s | Digital Web Weaver",
   },
   description:
-    "Expert web development, custom software, mobile apps, and AI solutions. 150+ projects delivered. Based in India, serving global clients.",
+    "Expert web development, custom software, mobile apps, and AI solutions. 200+ projects delivered. Based in India, serving global clients.",
   metadataBase: new URL("https://digitalwebweaver.com"),
   authors: [{ name: "Digital Web Weaver", url: "https://digitalwebweaver.com" }],
   creator: "Digital Web Weaver",
@@ -103,9 +120,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://digitalwebweaver.com",
   },
-  verification: {
-    google: "",
-  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

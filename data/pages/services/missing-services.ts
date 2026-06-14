@@ -219,7 +219,7 @@ export const websiteDevelopment: ServicePageData = {
   },
   hero: {
     eyebrow: "Website Development",
-    heading: "Professional Websites That Win You Business",
+    heading: "Website Development for Professional Websites That Win You Business",
     lead:
       "A great website is your best salesperson — working 24/7, building trust before the first call. We build custom business websites that look professional, load in under 2 seconds, and rank on Google.",
     breadcrumbs: [

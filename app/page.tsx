@@ -59,8 +59,8 @@ const localBusinessSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Web Development Agency India",
-  description: "Digital Web Weaver is a web development agency in India building custom software, mobile apps, SaaS platforms, ERP/CRM systems, and AI solutions. 200+ projects delivered.",
+  title: "Custom Software Development Company India | Digital Web Weaver",
+  description: "Digital Web Weaver is a custom software development company in India building enterprise software, SaaS platforms, mobile apps, and AI solutions. 200+ projects delivered since 2013.",
   alternates: { canonical: "/" },
   openGraph: { url: "/", type: "website" },
 };

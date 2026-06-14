@@ -15,7 +15,7 @@ export const salonbook: ServicePageData = {
   },
   hero: {
     eyebrow: "SalonBook",
-    heading: "Run your salon like a brand clients keep coming back to",
+    heading: "SalonBook Salon Management System — Run Your Salon Like a Brand Clients Keep Coming Back To",
     lead: "SalonBook brings online booking, staff scheduling, billing, service packages, inventory, and automated client follow-ups into one branded system — so your front desk runs as smoothly as your styling chairs.",
     breadcrumbs: crumbs("SalonBook"),
     stats: [
@@ -122,7 +122,7 @@ export const pesttrack: ServicePageData = {
   },
   hero: {
     eyebrow: "PestTrack",
-    heading: "Run your pest control business without the dispatch-board chaos",
+    heading: "PestTrack CRM — Run Your Pest Control Business Without the Dispatch-Board Chaos",
     lead: "PestTrack brings job scheduling, technician routing, service history, AMC contracts, billing, and automated client reminders into one connected system — so nothing slips through between the call and the completed job.",
     breadcrumbs: crumbs("PestTrack"),
     stats: [
@@ -229,7 +229,7 @@ export const chemsupply: ServicePageData = {
   },
   hero: {
     eyebrow: "ChemSupply",
-    heading: "Run your chemical supply business without the compliance headaches",
+    heading: "ChemSupply ERP — Run Your Chemical Supply Business Without the Compliance Headaches",
     lead: "ChemSupply brings inventory with batch and expiry tracking, safety documentation, order management, distributor portals, and compliance reporting into one connected ERP — built for an industry where the paperwork matters as much as the product.",
     breadcrumbs: crumbs("ChemSupply"),
     stats: [
@@ -336,7 +336,7 @@ export const clinicvoiceAi: ServicePageData = {
   },
   hero: {
     eyebrow: "ClinicVoice AI",
-    heading: "Never let a patient call go to voicemail again",
+    heading: "ClinicVoice AI Voice Agent — Never Let a Patient Call Go to Voicemail Again",
     lead: "ClinicVoice AI answers calls, books appointments, sends reminders, answers common questions, and follows up after visits — automatically, in a natural voice, around the clock — so your front desk can focus on the patients standing in front of them.",
     breadcrumbs: crumbs("ClinicVoice AI"),
     stats: [

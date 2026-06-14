@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import CountStat from "@/components/ui/CountStat";
+import { readyApps } from "@/data/pages/products/readyAppsList";
 
 export const metadata: Metadata = {
   title: "Ready-Made Software Products",
@@ -32,7 +33,7 @@ export default function AppsPage() {
           </p>
           <div className="hero-stats reveal" style={{ maxWidth: "540px", marginTop: "32px" }}>
             <div className="hs">
-              <CountStat target={7} suffix="" className="hn" />
+              <CountStat target={16} suffix="" className="hn" />
               <div className="hl">Products</div>
             </div>
             <div className="hs">
@@ -51,216 +52,27 @@ export default function AppsPage() {
       <section className="sec" style={{ paddingTop: "0" }}>
         <div className="wrap">
           <div className="apps-grid">
-            {/* App 1 */}
-            <div className="app-card reveal">
-              <div className="app-vis av-1">
-                <div className="app-price-tag">From $4,999</div>
-                <svg className="app-ic" viewBox="0 0 64 64" fill="none">
-                  <rect width="64" height="64" rx="18" fill="rgba(236,65,23,.12)" />
-                  <path d="M22 44V24h14M22 34h10" stroke="#ec4117" strokeWidth="2.6" strokeLinecap="round" />
-                  <circle cx="42" cy="40" r="5" fill="rgba(236,65,23,.18)" stroke="#ec4117" strokeWidth="2.2" />
-                </svg>
-              </div>
-              <div className="app-body">
-                <span className="app-label">ERP &amp; Business OS</span>
-                <h3>WebWeaver ERP</h3>
-                <p>
-                  End-to-end ERP covering HR, payroll, inventory, procurement, production, and executive dashboards.
-                  Modular — deploy only the modules you need.
-                </p>
-                <div className="app-footer">
-                  <div className="case-stack">
-                    <span>Laravel</span>
-                    <span>Vue.js</span>
-                    <span>MySQL</span>
-                  </div>
-                  <Link href="/contact" className="app-cta-link">Get a demo ↗</Link>
+            {readyApps.map((app, i) => (
+              <Link key={app.href} href={app.href} className="app-card reveal">
+                <div className={`app-vis av-${(i % 7) + 1}`}>
+                  <div className="app-price-tag">Ready to deploy</div>
+                  <span className="app-emoji">{app.icon}</span>
                 </div>
-              </div>
-            </div>
-
-            {/* App 2 */}
-            <div className="app-card reveal">
-              <div className="app-vis av-2">
-                <div className="app-price-tag">From $3,499</div>
-                <svg className="app-ic" viewBox="0 0 64 64" fill="none">
-                  <rect width="64" height="64" rx="18" fill="rgba(43,72,255,.1)" />
-                  <path d="M20 44V24l12-6 12 6v20" stroke="#2b48ff" strokeWidth="2.2" strokeLinejoin="round" />
-                  <path d="M26 44v-8h8v8" stroke="#2b48ff" strokeWidth="2.2" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <div className="app-body">
-                <span className="app-label">Real estate</span>
-                <h3>PropNest CRM</h3>
-                <p>
-                  CRM built for real estate — lead management, automated follow-ups, pipeline tracking, commission
-                  calculations, and a white-label buyer portal.
-                </p>
-                <div className="app-footer">
-                  <div className="case-stack">
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>PostgreSQL</span>
+                <div className="app-body">
+                  <span className="app-label">{app.category}</span>
+                  <h3>{app.name}</h3>
+                  <p>{app.desc}</p>
+                  <div className="app-footer">
+                    <div className="case-stack">
+                      {app.stack.map((s) => (
+                        <span key={s}>{s}</span>
+                      ))}
+                    </div>
+                    <span className="app-cta-link">View product ↗</span>
                   </div>
-                  <Link href="/contact" className="app-cta-link">Get a demo ↗</Link>
                 </div>
-              </div>
-            </div>
-
-            {/* App 3 */}
-            <div className="app-card reveal">
-              <div className="app-vis av-3">
-                <div className="app-price-tag">From $3,999</div>
-                <svg className="app-ic" viewBox="0 0 64 64" fill="none">
-                  <rect width="64" height="64" rx="18" fill="rgba(31,107,77,.12)" />
-                  <path
-                    d="M32 18c-8 0-13 5-13 10 0 7 13 18 13 18s13-11 13-18c0-5-5-10-13-10z"
-                    stroke="#1f6b4d"
-                    strokeWidth="2.2"
-                    strokeLinejoin="round"
-                  />
-                  <circle cx="32" cy="28" r="3.5" stroke="#1f6b4d" strokeWidth="2" />
-                </svg>
-              </div>
-              <div className="app-body">
-                <span className="app-label">Logistics</span>
-                <h3>LogiCore TMS</h3>
-                <p>
-                  Transport management system with route optimisation, live GPS tracking, fuel monitoring, driver
-                  payroll, and a client dispatch portal. B2B-ready.
-                </p>
-                <div className="app-footer">
-                  <div className="case-stack">
-                    <span>React Native</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                  </div>
-                  <Link href="/contact" className="app-cta-link">Get a demo ↗</Link>
-                </div>
-              </div>
-            </div>
-
-            {/* App 4 */}
-            <div className="app-card reveal">
-              <div className="app-vis av-4">
-                <div className="app-price-tag">From $5,499</div>
-                <svg className="app-ic" viewBox="0 0 64 64" fill="none">
-                  <rect width="64" height="64" rx="18" fill="rgba(236,65,23,.08)" />
-                  <circle cx="32" cy="32" r="13" stroke="#ec4117" strokeWidth="2" />
-                  <path d="M28 26h2v12M34 26h2v6M28 38h8" stroke="#ec4117" strokeWidth="2.2" strokeLinecap="round" />
-                </svg>
-              </div>
-              <div className="app-body">
-                <span className="app-label">HealthTech</span>
-                <h3>MedConnect Telehealth</h3>
-                <p>
-                  HIPAA-compliant telemedicine platform. Video consultations via WebRTC, e-prescriptions, EHR,
-                  appointment scheduling, billing, and a patient portal.
-                </p>
-                <div className="app-footer">
-                  <div className="case-stack">
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>WebRTC</span>
-                    <span>AWS</span>
-                  </div>
-                  <Link href="/contact" className="app-cta-link">Get a demo ↗</Link>
-                </div>
-              </div>
-            </div>
-
-            {/* App 5 */}
-            <div className="app-card reveal">
-              <div className="app-vis av-5">
-                <div className="app-price-tag">From $2,999</div>
-                <svg className="app-ic" viewBox="0 0 64 64" fill="none">
-                  <rect width="64" height="64" rx="18" fill="rgba(43,76,255,.1)" />
-                  <path
-                    d="M22 10v6M42 10v6M18 22h28M18 16h28a2 2 0 012 2v28a2 2 0 01-2 2H18a2 2 0 01-2-2V18a2 2 0 012-2z"
-                    stroke="#2b4cff"
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path d="M24 32h6v6h-6zM34 32h6v6h-6z" stroke="#2b4cff" strokeWidth="1.8" />
-                </svg>
-              </div>
-              <div className="app-body">
-                <span className="app-label">EdTech</span>
-                <h3>LearnVault LMS</h3>
-                <p>
-                  Full learning management system — live sessions, recorded courses, quizzes, grade tracking,
-                  certificates, compliance reporting, and a mobile learner app.
-                </p>
-                <div className="app-footer">
-                  <div className="case-stack">
-                    <span>Next.js</span>
-                    <span>PostgreSQL</span>
-                    <span>AWS</span>
-                  </div>
-                  <Link href="/contact" className="app-cta-link">Get a demo ↗</Link>
-                </div>
-              </div>
-            </div>
-
-            {/* App 6 */}
-            <div className="app-card reveal">
-              <div className="app-vis av-6">
-                <div className="app-price-tag">From $3,200</div>
-                <svg className="app-ic" viewBox="0 0 64 64" fill="none">
-                  <rect width="64" height="64" rx="18" fill="rgba(236,65,23,.1)" />
-                  <circle cx="24" cy="34" r="6" stroke="#ec4117" strokeWidth="2.2" />
-                  <circle cx="40" cy="30" r="6" stroke="#ec4117" strokeWidth="2.2" />
-                  <path d="M30 34c1 2 4 3 6 1" stroke="#ec4117" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-              </div>
-              <div className="app-body">
-                <span className="app-label">Food &amp; F&amp;B</span>
-                <h3>OrderFlow POS</h3>
-                <p>
-                  Restaurant POS system with table management, online ordering, kitchen display, loyalty points,
-                  multi-branch dashboards, and end-of-day financial reports.
-                </p>
-                <div className="app-footer">
-                  <div className="case-stack">
-                    <span>React Native</span>
-                    <span>Node.js</span>
-                    <span>PostgreSQL</span>
-                  </div>
-                  <Link href="/contact" className="app-cta-link">Get a demo ↗</Link>
-                </div>
-              </div>
-            </div>
-
-            {/* App 7 */}
-            <div className="app-card reveal">
-              <div className="app-vis av-7">
-                <div className="app-price-tag">From $4,299</div>
-                <svg className="app-ic" viewBox="0 0 64 64" fill="none">
-                  <rect width="64" height="64" rx="18" fill="rgba(31,107,77,.1)" />
-                  <rect x="16" y="20" width="32" height="24" rx="4" stroke="#1f6b4d" strokeWidth="2.2" />
-                  <path d="M22 32h20M16 27h32" stroke="#1f6b4d" strokeWidth="2" strokeLinecap="round" />
-                  <circle cx="32" cy="38" r="2.5" fill="#1f6b4d" />
-                </svg>
-              </div>
-              <div className="app-body">
-                <span className="app-label">FinTech / B2B</span>
-                <h3>SettleFlow — Payments</h3>
-                <p>
-                  B2B payment and invoicing platform. Recurring billing, payment links, PDF invoices, multi-currency,
-                  reconciliation, and a client-facing payment portal.
-                </p>
-                <div className="app-footer">
-                  <div className="case-stack">
-                    <span>Next.js</span>
-                    <span>Python</span>
-                    <span>Stripe</span>
-                    <span>PostgreSQL</span>
-                  </div>
-                  <Link href="/contact" className="app-cta-link">Get a demo ↗</Link>
-                </div>
-              </div>
-            </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

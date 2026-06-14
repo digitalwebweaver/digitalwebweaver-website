@@ -7,7 +7,7 @@ const data: ServicePageData = {
   },
   hero: {
     eyebrow: "React Native Development",
-    heading: "One Codebase. iOS & Android. Native Feel.",
+    heading: "React Native Developers — One Codebase. iOS & Android. Native Feel.",
     lead: "We build cross-platform mobile apps with React Native and Expo — sharing 90%+ code while delivering native performance and UX.",
     breadcrumbs: [{ label: "Home", href: "/" }, { label: "React Native Developer" }],
     marqueeItems: ["React Native","Expo","TypeScript","Redux Toolkit","React Query","Firebase","SQLite","Reanimated","Detox","Jest"],

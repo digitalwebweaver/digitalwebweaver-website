@@ -11,7 +11,7 @@ const WEB_DEV = [
 const CUSTOM_SW = [
   { icon: "🏗️", label: "Custom Software", desc: "Bespoke systems", href: "/services/custom-software-development/" },
   { icon: "🔌", label: "API Development", desc: "REST & GraphQL", href: "/services/api-development-integration/" },
-  { icon: "🤖", label: "AI Development", desc: "ML, LLM & automation", href: "/artificial-intelligence-development/" },
+  { icon: "🤖", label: "AI Development", desc: "ML, LLM & automation", href: "/ai-automation/" },
   { icon: "☁️", label: "Cloud Solutions", desc: "AWS, GCP, Azure", href: "/services/cloud-infrastructure-devops/" },
   { icon: "🔒", label: "Security Audit", desc: "Pen-test & hardening", href: "/services/security-compliance/" },
 ];
@@ -39,7 +39,7 @@ const HIRE = [
 
 const PILLS = [
   { label: "🛍️ App Store Products", href: "/apps/" },
-  { label: "🤖 AI Solutions", href: "/artificial-intelligence-development/" },
+  { label: "🤖 AI Solutions", href: "/ai-automation/" },
   { label: "🚀 Start a Project", href: "/contact/", cta: true },
   { label: "📋 All Services", href: "/services/" },
 ];

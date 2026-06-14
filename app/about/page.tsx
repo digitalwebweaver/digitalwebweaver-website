@@ -354,73 +354,117 @@ export default function AboutPage() {
           </div>
           <div className="team-grid">
             <div className="team-card reveal">
+              <div className="team-av">KA</div>
+              <div className="tc-role">CEO &amp; Founder</div>
+              <h3>Kamlesh</h3>
+              <p>
+                Founded Digital Web Weaver to bring senior-level engineering to
+                businesses that deserve better than templated agencies. Leads
+                strategy, client partnerships, and the studio&apos;s long-term
+                vision.
+              </p>
+            </div>
+            <div className="team-card reveal">
+              <div className="team-av">AN</div>
+              <div className="tc-role">Full Stack Developer</div>
+              <h3>Aniket</h3>
+              <p>
+                Builds end-to-end web applications across the modern stack —
+                comfortable owning a feature from database schema to polished
+                UI, and shipping it without hand-holding.
+              </p>
+            </div>
+            <div className="team-card reveal">
+              <div className="team-av">AJ</div>
+              <div className="tc-role">Full Stack Developer · Node.js</div>
+              <h3>Ajay</h3>
+              <p>
+                Node.js specialist focused on APIs, services, and backend
+                architecture that stay fast and reliable as products scale from
+                first users to high traffic.
+              </p>
+            </div>
+            <div className="team-card reveal">
+              <div className="team-av">HA</div>
+              <div className="tc-role">Full Stack Developer · Laravel</div>
+              <h3>Harsh</h3>
+              <p>
+                Laravel and PHP backend engineer who builds clean, maintainable
+                systems — from custom CRMs and ERPs to client portals that teams
+                actually enjoy using.
+              </p>
+            </div>
+            <div className="team-card reveal">
+              <div className="team-av">SW</div>
+              <div className="tc-role">Full Stack Developer · PHP</div>
+              <h3>Swati</h3>
+              <p>
+                PHP full-stack developer covering both sides of the stack,
+                turning project requirements into working software with an eye
+                for detail and code that&apos;s easy to extend.
+              </p>
+            </div>
+            <div className="team-card reveal">
               <div className="team-av">AR</div>
-              <div className="tc-role">Founder &amp; CTO</div>
-              <h3>Arjun R.</h3>
+              <div className="tc-role">Business Development Executive</div>
+              <h3>Arvind</h3>
               <p>
-                15 years building scalable systems. Architected platforms serving
-                10M+ users. Previously at a Series B fintech. Leads all
-                architectural decisions at Digital Web Weaver.
+                First point of contact for new partnerships — understands a
+                client&apos;s goals early and connects them with the right team
+                and approach to get there.
               </p>
             </div>
             <div className="team-card reveal">
-              <div className="team-av">SM</div>
-              <div className="tc-role">Head of Engineering</div>
-              <h3>Sophia M.</h3>
+              <div className="team-av">MA</div>
+              <div className="tc-role">Regional Sales</div>
+              <h3>Maxime</h3>
               <p>
-                Full-stack and cloud infrastructure specialist. 10+ years across
-                React, Node, Kubernetes, and AWS. Keeps every delivery on time
-                and under budget.
+                Builds and manages regional client relationships, helping
+                businesses outside India navigate working with an offshore team
+                smoothly and confidently.
               </p>
             </div>
             <div className="team-card reveal">
-              <div className="team-av">DK</div>
-              <div className="tc-role">Lead Designer</div>
-              <h3>Devika K.</h3>
+              <div className="team-av">SA</div>
+              <div className="tc-role">Business Operations</div>
+              <h3>Sanjita</h3>
               <p>
-                Product designer and design-systems lead. 9 years of UX
-                research, Figma prototypes, and accessibility-first interfaces
-                shipped for enterprise clients.
+                Keeps projects, timelines, and internal operations running
+                smoothly behind the scenes, so engineering teams can focus on
+                shipping quality work.
               </p>
             </div>
             <div className="team-card reveal">
-              <div className="team-av">MH</div>
-              <div className="tc-role">Senior Mobile Lead</div>
-              <h3>Marcus H.</h3>
+              <div className="team-av">RA</div>
+              <div className="tc-role">Business Analyst</div>
+              <h3>Rahul</h3>
               <p>
-                React Native and Swift specialist. Has shipped 30+ apps to the
-                App Store and Play Store including two that crossed 1M downloads.
-                Performance-obsessed.
-              </p>
-            </div>
-            <div className="team-card reveal">
-              <div className="team-av">PS</div>
-              <div className="tc-role">AI &amp; ML Engineer</div>
-              <h3>Priya S.</h3>
-              <p>
-                ML engineer turned product engineer. Specialises in LLM
-                integrations, RAG pipelines, and production AI features that
-                actually work beyond a demo.
-              </p>
-            </div>
-            <div className="team-card reveal">
-              <div className="team-av">OA</div>
-              <div className="tc-role">Cloud &amp; DevOps Lead</div>
-              <h3>Omar A.</h3>
-              <p>
-                AWS certified architect and DevOps engineer. Sets up
-                infrastructure as code, zero-downtime deployment pipelines, and
-                cost-optimised cloud environments.
+                Bridges client requirements and engineering execution — turning
+                business goals into clear specs that the development team can
+                build against with confidence.
               </p>
             </div>
           </div>
+          <p
+            className="reveal"
+            style={{
+              marginTop: "32px",
+              fontFamily: "var(--mono)",
+              fontSize: "13px",
+              letterSpacing: ".06em",
+              color: "var(--faint)",
+              textTransform: "uppercase",
+            }}
+          >
+            + 10 more engineers, designers, and specialists across the team
+          </p>
         </div>
       </section>
 
       {/* ===== CULTURE ===== */}
       <section className="sec" style={{ background: "var(--paper-2)" }}>
         <div className="wrap">
-          <div className="about" style={{ gridTemplateColumns: "1.15fr .85fr" }}>
+          <div className="about about-reverse">
             <div className="about-copy reveal">
               <span className="eyebrow">How we work</span>
               <h2 style={{ marginTop: "18px" }}>

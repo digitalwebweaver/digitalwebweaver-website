@@ -73,6 +73,7 @@ export default function ServicePage({ data }: { data: ServicePageData }) {
         formSub={hero.formSub}
         formSubmitLabel={hero.formSubmitLabel}
         formNote={hero.formNote}
+        localBadge={hero.localBadge}
       />
       <MarqueeBand items={hero.marqueeItems} />
       {services && (

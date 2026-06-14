@@ -7,7 +7,7 @@ const data: ServicePageData = {
   },
   hero: {
     eyebrow: "Flutter Development",
-    heading: "Flutter Apps That Run Everywhere, Look Native",
+    heading: "Flutter Developers Who Build Apps That Run Everywhere, Look Native",
     lead: "We build pixel-perfect, 60fps Flutter apps for iOS, Android, and web with Dart — one codebase, every platform.",
     breadcrumbs: [{ label: "Home", href: "/" }, { label: "Flutter Developer" }],
     marqueeItems: ["Flutter","Dart","Riverpod","BLoC","Firebase","SQLite","GetIt","GoRouter","Freezed","Isar"],

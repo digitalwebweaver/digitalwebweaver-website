@@ -1,20 +1,20 @@
-﻿import type { ServicePageData } from "@/lib/types";
+import type { ServicePageData } from "@/lib/types";
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// —————————————————————————————————————————————————————————————————————————————
 // AHMEDABAD
-// Gujarat's commercial capital â€” IT hub, startups, textiles, pharma, GIFT City
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// Gujarat's commercial capital — IT hub, startups, textiles, pharma, GIFT City
+// —————————————————————————————————————————————————————————————————————————————
 export const ahmedabad: ServicePageData = {
   meta: {
     title: "Web Development Company in Ahmedabad, Gujarat",
     description:
-      "Digital Web Weaver â€” web development company serving Ahmedabad businesses. Custom websites, mobile apps, SaaS, ERP, and AI solutions built by senior engineers. Free consultation.",
+      "Digital Web Weaver — web development company serving Ahmedabad businesses. Custom websites, mobile apps, SaaS, ERP, and AI solutions built by senior engineers. Free consultation.",
   },
   hero: {
-    eyebrow: "Web Development Â· Ahmedabad",
+    eyebrow: "Web Development · Ahmedabad",
     heading: "Web Development Company Serving Ahmedabad",
     lead:
-      "Senior engineers building custom websites, mobile apps, SaaS platforms, and ERP systems for Ahmedabad businesses â€” from Naroda's manufacturers to SG Highway's IT firms and GIFT City's fintech startups.",
+      "Senior engineers building custom websites, mobile apps, SaaS platforms, and ERP systems for Ahmedabad businesses — from Naroda's manufacturers to SG Highway's IT firms and GIFT City's fintech startups.",
     breadcrumbs: [
       { label: "Home", href: "/" },
       { label: "Web Development Ahmedabad" },
@@ -50,32 +50,32 @@ export const ahmedabad: ServicePageData = {
     items: [
       {
         title: "Business Websites & Landing Pages",
-        desc: "Custom-designed, mobile-first websites that convert visitors into leads â€” built for Ahmedabad's professional services, retail, and B2B sectors.",
+        desc: "Custom-designed, mobile-first websites that convert visitors into leads — built for Ahmedabad's professional services, retail, and B2B sectors.",
         tags: ["Next.js", "React", "SEO-ready"],
       },
       {
         title: "E-commerce Platforms",
-        desc: "Scalable online stores for Ahmedabad's textile traders, fashion labels, and consumer brands â€” with Razorpay, GST invoicing, and WhatsApp order integration.",
+        desc: "Scalable online stores for Ahmedabad's textile traders, fashion labels, and consumer brands — with Razorpay, GST invoicing, and WhatsApp order integration.",
         tags: ["Shopify", "Custom", "Razorpay"],
       },
       {
         title: "Custom ERP & CRM Systems",
-        desc: "Purpose-built ERP and CRM software replacing spreadsheets and legacy tools â€” for manufacturing, trading, and distribution businesses in Ahmedabad.",
+        desc: "Purpose-built ERP and CRM software replacing spreadsheets and legacy tools — for manufacturing, trading, and distribution businesses in Ahmedabad.",
         tags: ["Custom ERP", "Laravel", "PostgreSQL"],
       },
       {
         title: "Mobile Applications",
-        desc: "iOS and Android apps for Ahmedabad's growing consumer and enterprise market â€” field service, logistics, retail, and on-demand platforms.",
+        desc: "iOS and Android apps for Ahmedabad's growing consumer and enterprise market — field service, logistics, retail, and on-demand platforms.",
         tags: ["Flutter", "React Native", "iOS", "Android"],
       },
       {
         title: "SaaS & Fintech Products",
-        desc: "Scalable multi-tenant SaaS platforms for Ahmedabad startups and GIFT City fintech companies â€” with subscription billing, compliance hooks, and investor-ready architecture.",
+        desc: "Scalable multi-tenant SaaS platforms for Ahmedabad startups and GIFT City fintech companies — with subscription billing, compliance hooks, and investor-ready architecture.",
         tags: ["SaaS", "Multi-tenant", "Stripe", "Node.js"],
       },
       {
         title: "AI & Automation Solutions",
-        desc: "Document processing, chatbots, predictive analytics, and workflow automation that eliminate repetitive work â€” for pharma, logistics, and trading businesses.",
+        desc: "Document processing, chatbots, predictive analytics, and workflow automation that eliminate repetitive work — for pharma, logistics, and trading businesses.",
         tags: ["OpenAI", "Python", "LangChain"],
       },
     ],
@@ -87,11 +87,11 @@ export const ahmedabad: ServicePageData = {
     items: [
       {
         title: "Gujarati-speaking team",
-        desc: "We communicate in English, Hindi, and Gujarati â€” whichever you prefer. Technical depth meets local understanding, with no translation barriers.",
+        desc: "We communicate in English, Hindi, and Gujarati — whichever you prefer. Technical depth meets local understanding, with no translation barriers.",
       },
       {
         title: "Based 100 km from Ahmedabad",
-        desc: "Our studio is in Vadodara. We make regular visits to Ahmedabad for client meetings, discovery workshops, and project reviews â€” in person when it matters.",
+        desc: "Our studio is in Vadodara. We make regular visits to Ahmedabad for client meetings, discovery workshops, and project reviews — in person when it matters.",
       },
       {
         title: "Senior engineers, not freshers",
@@ -109,23 +109,23 @@ export const ahmedabad: ServicePageData = {
     items: [
       {
         q: "Do you have an office in Ahmedabad?",
-        a: "Our studio is based in Vadodara, 100 km from Ahmedabad. We serve Ahmedabad clients remotely day-to-day, with in-person meetings at your office or a co-working space when needed. Many of our long-term clients prefer the remote model â€” it keeps costs down without sacrificing quality or communication.",
+        a: "Our studio is based in Vadodara, 100 km from Ahmedabad. We serve Ahmedabad clients remotely day-to-day, with in-person meetings at your office or a co-working space when needed. Many of our long-term clients prefer the remote model — it keeps costs down without sacrificing quality or communication.",
       },
       {
         q: "What types of Ahmedabad businesses do you typically work with?",
-        a: "We work with a wide range: textile traders and exporters, pharmaceutical companies, IT firms on SG Highway, MSME manufacturers in GIDC, real-estate developers, fintech startups in GIFT City, and retail/D2C brands. Our work spans from â‚¹50k business websites to multi-crore enterprise systems.",
+        a: "We work with a wide range: textile traders and exporters, pharmaceutical companies, IT firms on SG Highway, MSME manufacturers in GIDC, real-estate developers, fintech startups in GIFT City, and retail/D2C brands. Our work spans from ₹50k business websites to multi-crore enterprise systems.",
       },
       {
         q: "Can you build e-commerce platforms for Ahmedabad textile exporters?",
-        a: "Yes. We have experience building B2B wholesale portals and B2C e-commerce platforms for textile and apparel businesses â€” with features like MOQ pricing, GST invoicing, fabric catalogue management, and WhatsApp order integration. We can also integrate with IndiaMART or export marketplaces if needed.",
+        a: "Yes. We have experience building B2B wholesale portals and B2C e-commerce platforms for textile and apparel businesses — with features like MOQ pricing, GST invoicing, fabric catalogue management, and WhatsApp order integration. We can also integrate with IndiaMART or export marketplaces if needed.",
       },
       {
         q: "Do you build custom ERP systems for Ahmedabad manufacturers?",
-        a: "Yes. We build custom ERP and CRM systems for manufacturing, trading, and distribution companies â€” including inventory, purchase orders, production tracking, and financial reporting. Custom ERP costs significantly less than SAP or Oracle and is built exactly for your processes.",
+        a: "Yes. We build custom ERP and CRM systems for manufacturing, trading, and distribution companies — including inventory, purchase orders, production tracking, and financial reporting. Custom ERP costs significantly less than SAP or Oracle and is built exactly for your processes.",
       },
       {
         q: "How long does a typical project take and what does it cost?",
-        a: "A business website typically takes 3â€“5 weeks and starts from â‚¹40,000. A custom web application or e-commerce platform takes 8â€“14 weeks and starts from â‚¹1.5L. Custom ERP systems take 3â€“6 months depending on scope. We'll give you a detailed estimate after a free discovery call.",
+        a: "A business website typically takes 3–5 weeks and starts from ₹40,000. A custom web application or e-commerce platform takes 8–14 weeks and starts from ₹1.5L. Custom ERP systems take 3–6 months depending on scope. We'll give you a detailed estimate after a free discovery call.",
       },
     ],
   },
@@ -145,21 +145,21 @@ export const ahmedabad: ServicePageData = {
   },
 };
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// —————————————————————————————————————————————————————————————————————————————
 // SURAT
-// Diamond city â€” diamond trading, textiles, fashion, e-commerce, SME boom
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// Diamond city — diamond trading, textiles, fashion, e-commerce, SME boom
+// —————————————————————————————————————————————————————————————————————————————
 export const surat: ServicePageData = {
   meta: {
     title: "Web Development Company in Surat, Gujarat",
     description:
-      "Digital Web Weaver â€” web development company serving Surat. Custom websites, e-commerce platforms, ERP systems, and mobile apps for diamond, textile, and trading businesses in Surat.",
+      "Digital Web Weaver — web development company serving Surat. Custom websites, e-commerce platforms, ERP systems, and mobile apps for diamond, textile, and trading businesses in Surat.",
   },
   hero: {
-    eyebrow: "Web Development Â· Surat",
+    eyebrow: "Web Development · Surat",
     heading: "Web Development Company Serving Surat",
     lead:
-      "Senior engineers building custom digital solutions for Surat's trading community â€” from B2B wholesale portals for diamond and textile businesses to consumer e-commerce platforms and custom ERP for SME manufacturers.",
+      "Senior engineers building custom digital solutions for Surat's trading community — from B2B wholesale portals for diamond and textile businesses to consumer e-commerce platforms and custom ERP for SME manufacturers.",
     breadcrumbs: [
       { label: "Home", href: "/" },
       { label: "Web Development Surat" },
@@ -195,32 +195,32 @@ export const surat: ServicePageData = {
     items: [
       {
         title: "B2B Wholesale Portals",
-        desc: "Dealer portals and wholesale platforms for Surat's diamond, textile, and chemical traders â€” with catalogue management, tiered pricing, order tracking, and GST-compliant invoicing.",
+        desc: "Dealer portals and wholesale platforms for Surat's diamond, textile, and chemical traders — with catalogue management, tiered pricing, order tracking, and GST-compliant invoicing.",
         tags: ["Custom", "Laravel", "React"],
       },
       {
         title: "E-commerce & D2C Stores",
-        desc: "Online stores for Surat's fashion labels, saree traders, and consumer brands â€” with Razorpay payment, GST invoicing, WhatsApp integration, and catalogue management.",
+        desc: "Online stores for Surat's fashion labels, saree traders, and consumer brands — with Razorpay payment, GST invoicing, WhatsApp integration, and catalogue management.",
         tags: ["Shopify", "Custom", "Razorpay", "WhatsApp"],
       },
       {
         title: "Custom ERP & Inventory Systems",
-        desc: "ERP software built for Surat's trading and manufacturing operations â€” purchase orders, inventory, production, dispatch, and financial reporting in one system.",
+        desc: "ERP software built for Surat's trading and manufacturing operations — purchase orders, inventory, production, dispatch, and financial reporting in one system.",
         tags: ["Custom ERP", "PostgreSQL", "Multi-user"],
       },
       {
         title: "Business Websites",
-        desc: "Professional websites for Surat's businesses â€” diamond exporters, textile mills, manufacturers, and service providers â€” optimised for local Google search.",
+        desc: "Professional websites for Surat's businesses — diamond exporters, textile mills, manufacturers, and service providers — optimised for local Google search.",
         tags: ["Next.js", "SEO", "Mobile-first"],
       },
       {
         title: "Mobile Applications",
-        desc: "iOS and Android apps for field sales, logistics tracking, dealer ordering, and customer service â€” for Surat's growing mobile-first market.",
+        desc: "iOS and Android apps for field sales, logistics tracking, dealer ordering, and customer service — for Surat's growing mobile-first market.",
         tags: ["Flutter", "React Native", "iOS", "Android"],
       },
       {
         title: "Diamond & Jewellery Software",
-        desc: "Specialised software for diamond and jewellery businesses â€” rough tracking, polish inventory, client memo management, and international quotation tools.",
+        desc: "Specialised software for diamond and jewellery businesses — rough tracking, polish inventory, client memo management, and international quotation tools.",
         tags: ["Custom", "Node.js", "PDF generation"],
       },
     ],
@@ -232,15 +232,15 @@ export const surat: ServicePageData = {
     items: [
       {
         title: "We understand trading businesses",
-        desc: "We have built B2B portals, wholesale platforms, and trading ERP systems. We understand the workflows of India's traders â€” catalogues, bulk pricing, credit limits, GST, and fast turnaround.",
+        desc: "We have built B2B portals, wholesale platforms, and trading ERP systems. We understand the workflows of India's traders — catalogues, bulk pricing, credit limits, GST, and fast turnaround.",
       },
       {
         title: "Gujarati-speaking team",
-        desc: "Our team speaks Gujarati and Hindi fluently. You can explain your business requirements in your own language â€” no translation friction, no misunderstood briefs.",
+        desc: "Our team speaks Gujarati and Hindi fluently. You can explain your business requirements in your own language — no translation friction, no misunderstood briefs.",
       },
       {
         title: "Fast delivery on fixed price",
-        desc: "Surat businesses move fast. We do too. Most websites launch in 3â€“4 weeks. Complex platforms in 8â€“12 weeks. All at a fixed price agreed upfront.",
+        desc: "Surat businesses move fast. We do too. Most websites launch in 3–4 weeks. Complex platforms in 8–12 weeks. All at a fixed price agreed upfront.",
       },
       {
         title: "Senior engineers on every project",
@@ -254,14 +254,14 @@ export const surat: ServicePageData = {
     items: [
       {
         q: "Can you build a B2B portal for our diamond or textile business?",
-        a: "Yes. We build B2B wholesale portals with features like product catalogues, tiered pricing, dealer login, order management, dispatch tracking, and GST invoicing. These replace email and WhatsApp-based ordering with a proper system â€” reducing errors and saving hours per day.",
+        a: "Yes. We build B2B wholesale portals with features like product catalogues, tiered pricing, dealer login, order management, dispatch tracking, and GST invoicing. These replace email and WhatsApp-based ordering with a proper system — reducing errors and saving hours per day.",
       },
       {
         q: "Can you build e-commerce websites for Surat's saree and textile sellers?",
-        a: "Absolutely. We build e-commerce platforms for Surat's fashion and textile businesses â€” with fabric/saree catalogues, COD support, Razorpay integration, GST invoices, and WhatsApp order notifications. We can build on Shopify for speed or fully custom for more control.",
+        a: "Absolutely. We build e-commerce platforms for Surat's fashion and textile businesses — with fabric/saree catalogues, COD support, Razorpay integration, GST invoices, and WhatsApp order notifications. We can build on Shopify for speed or fully custom for more control.",
       },
       {
-        q: "Do you build diamond business software â€” inventory, memo, client tracking?",
+        q: "Do you build diamond business software — inventory, memo, client tracking?",
         a: "Yes. We have built diamond business software including rough and polish inventory, client memo management, international quotation generation, and commission tracking. If you have a specific workflow, we'll build exactly to it.",
       },
       {
@@ -270,7 +270,7 @@ export const surat: ServicePageData = {
       },
       {
         q: "What does a custom website or portal cost for a Surat business?",
-        a: "A professional business website starts from â‚¹35,000. A B2B dealer portal starts from â‚¹1.2L. A custom ERP or trading management system starts from â‚¹2.5L. We'll give you an exact quote after a free 30-minute discovery call.",
+        a: "A professional business website starts from ₹35,000. A B2B dealer portal starts from ₹1.2L. A custom ERP or trading management system starts from ₹2.5L. We'll give you an exact quote after a free 30-minute discovery call.",
       },
     ],
   },
@@ -290,21 +290,21 @@ export const surat: ServicePageData = {
   },
 };
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// —————————————————————————————————————————————————————————————————————————————
 // RAJKOT
-// Saurashtra's industrial hub â€” engineering goods, auto parts, SME manufacturing
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// Saurashtra's industrial hub — engineering goods, auto parts, SME manufacturing
+// —————————————————————————————————————————————————————————————————————————————
 export const rajkot: ServicePageData = {
   meta: {
     title: "Web Development Company in Rajkot, Gujarat",
     description:
-      "Digital Web Weaver â€” web development company serving Rajkot. Custom websites, ERP systems, B2B portals, and mobile apps for Rajkot's engineering, manufacturing, and SME businesses.",
+      "Digital Web Weaver — web development company serving Rajkot. Custom websites, ERP systems, B2B portals, and mobile apps for Rajkot's engineering, manufacturing, and SME businesses.",
   },
   hero: {
-    eyebrow: "Web Development Â· Rajkot",
+    eyebrow: "Web Development · Rajkot",
     heading: "Web Development Company Serving Rajkot",
     lead:
-      "Senior engineers building digital infrastructure for Rajkot's industrial SMEs â€” from B2B portals and custom inventory ERP for engineering manufacturers to professional websites and mobile apps for Saurashtra's growing businesses.",
+      "Senior engineers building digital infrastructure for Rajkot's industrial SMEs — from B2B portals and custom inventory ERP for engineering manufacturers to professional websites and mobile apps for Saurashtra's growing businesses.",
     breadcrumbs: [
       { label: "Home", href: "/" },
       { label: "Web Development Rajkot" },
@@ -340,27 +340,27 @@ export const rajkot: ServicePageData = {
     items: [
       {
         title: "Manufacturing ERP Systems",
-        desc: "Custom ERP for Rajkot's engineering and manufacturing businesses â€” production planning, raw material inventory, machine scheduling, dispatch, and financial reporting in one platform.",
+        desc: "Custom ERP for Rajkot's engineering and manufacturing businesses — production planning, raw material inventory, machine scheduling, dispatch, and financial reporting in one platform.",
         tags: ["Custom ERP", "Laravel", "PostgreSQL"],
       },
       {
         title: "B2B Dealer & Distributor Portals",
-        desc: "Wholesale portals for Rajkot's auto parts, engineering goods, and industrial component manufacturers â€” with catalogue, order management, credit tracking, and GST invoicing.",
+        desc: "Wholesale portals for Rajkot's auto parts, engineering goods, and industrial component manufacturers — with catalogue, order management, credit tracking, and GST invoicing.",
         tags: ["Custom", "React", "Multi-user"],
       },
       {
         title: "Business Websites",
-        desc: "Professional websites for Rajkot's manufacturers, engineering firms, and service businesses â€” optimised for Google search so buyers across India and internationally can find you.",
+        desc: "Professional websites for Rajkot's manufacturers, engineering firms, and service businesses — optimised for Google search so buyers across India and internationally can find you.",
         tags: ["Next.js", "SEO", "Mobile-first"],
       },
       {
         title: "Inventory Management Systems",
-        desc: "Custom inventory and warehouse management software replacing Excel and manual processes â€” for multi-location stock, FIFO costing, barcode scanning, and reorder alerts.",
+        desc: "Custom inventory and warehouse management software replacing Excel and manual processes — for multi-location stock, FIFO costing, barcode scanning, and reorder alerts.",
         tags: ["Custom", "Barcode", "Multi-location"],
       },
       {
         title: "Mobile Apps for Field Operations",
-        desc: "Android and iOS apps for field sales teams, delivery tracking, and service engineers â€” with offline capability for areas with poor connectivity in Saurashtra.",
+        desc: "Android and iOS apps for field sales teams, delivery tracking, and service engineers — with offline capability for areas with poor connectivity in Saurashtra.",
         tags: ["Flutter", "Offline-first", "GPS"],
       },
       {
@@ -377,7 +377,7 @@ export const rajkot: ServicePageData = {
     items: [
       {
         title: "We understand manufacturing workflows",
-        desc: "We have built ERP, inventory, and production tracking systems for industrial businesses. We know how factories work â€” from BOM and job cards to dispatch and invoicing â€” and we build software that fits, not the other way around.",
+        desc: "We have built ERP, inventory, and production tracking systems for industrial businesses. We know how factories work — from BOM and job cards to dispatch and invoicing — and we build software that fits, not the other way around.",
       },
       {
         title: "Gujarati-speaking team",
@@ -385,11 +385,11 @@ export const rajkot: ServicePageData = {
       },
       {
         title: "No juniors, no handoffs",
-        desc: "Every project is built by senior engineers with 5+ years of experience. The engineer who understands your business builds your software â€” there's no handoff to a junior after the sale.",
+        desc: "Every project is built by senior engineers with 5+ years of experience. The engineer who understands your business builds your software — there's no handoff to a junior after the sale.",
       },
       {
         title: "Fixed price on every project",
-        desc: "We scope carefully and commit in writing. No scope-creep charges. The quote we give after discovery is the price you pay â€” even if we underestimated the work.",
+        desc: "We scope carefully and commit in writing. No scope-creep charges. The quote we give after discovery is the price you pay — even if we underestimated the work.",
       },
     ],
   },
@@ -399,23 +399,23 @@ export const rajkot: ServicePageData = {
     items: [
       {
         q: "Can you build custom ERP for a Rajkot manufacturing company?",
-        a: "Yes. Custom ERP is one of our most common projects. We build systems covering production planning, raw material inventory, job cards, quality checks, dispatch, and billing. A custom ERP costs significantly less than SAP or Tally Enterprise and is built exactly for your processes â€” not adapted from a generic template.",
+        a: "Yes. Custom ERP is one of our most common projects. We build systems covering production planning, raw material inventory, job cards, quality checks, dispatch, and billing. A custom ERP costs significantly less than SAP or Tally Enterprise and is built exactly for your processes — not adapted from a generic template.",
       },
       {
         q: "We sell auto parts / engineering components. Can you build a B2B dealer portal?",
-        a: "Yes. A B2B dealer portal lets your distributors and dealers place orders online 24/7 â€” with your product catalogue, their credit limit, real-time stock visibility, and automatic GST invoicing. This replaces phone/WhatsApp ordering and reduces order errors significantly.",
+        a: "Yes. A B2B dealer portal lets your distributors and dealers place orders online 24/7 — with your product catalogue, their credit limit, real-time stock visibility, and automatic GST invoicing. This replaces phone/WhatsApp ordering and reduces order errors significantly.",
       },
       {
         q: "Can you build a website that helps us get international buyers for our Rajkot products?",
-        a: "Yes. We build export-focused websites optimised for Google search â€” with product catalogues, certificates/compliance documents, enquiry forms, and structured data that helps international buyers find you. We also help with SEO so you rank for '[product] manufacturer India' type searches.",
+        a: "Yes. We build export-focused websites optimised for Google search — with product catalogues, certificates/compliance documents, enquiry forms, and structured data that helps international buyers find you. We also help with SEO so you rank for '[product] manufacturer India' type searches.",
       },
       {
         q: "Do you have an office in Rajkot?",
-        a: "Our studio is in Vadodara. We serve Rajkot clients remotely for day-to-day communication, with Rajkot visits for kickoff and milestone meetings on larger projects. Most of our manufacturing clients prefer video calls â€” it saves travel time for their busy teams.",
+        a: "Our studio is in Vadodara. We serve Rajkot clients remotely for day-to-day communication, with Rajkot visits for kickoff and milestone meetings on larger projects. Most of our manufacturing clients prefer video calls — it saves travel time for their busy teams.",
       },
       {
         q: "What does custom software cost for a Rajkot SME?",
-        a: "A business website starts from â‚¹30,000. A B2B dealer portal starts from â‚¹1L. A custom ERP or inventory system starts from â‚¹2L depending on scope. Contact us for a free discovery call â€” we'll give you a detailed estimate within 48 hours.",
+        a: "A business website starts from ₹30,000. A B2B dealer portal starts from ₹1L. A custom ERP or inventory system starts from ₹2L depending on scope. Contact us for a free discovery call — we'll give you a detailed estimate within 48 hours.",
       },
     ],
   },
@@ -435,21 +435,21 @@ export const rajkot: ServicePageData = {
   },
 };
 
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// —————————————————————————————————————————————————————————————————————————————
 // GUJARAT (state-level)
-// Broad state targeting â€” all major cities, all industries
-// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// Broad state targeting — all major cities, all industries
+// —————————————————————————————————————————————————————————————————————————————
 export const gujarat: ServicePageData = {
   meta: {
     title: "Web Development Company in Gujarat, India",
     description:
-      "Digital Web Weaver â€” web development company serving businesses across Gujarat. Custom websites, mobile apps, SaaS platforms, ERP systems, and AI solutions for Vadodara, Ahmedabad, Surat, Rajkot, and beyond.",
+      "Digital Web Weaver — web development company serving businesses across Gujarat. Custom websites, mobile apps, SaaS platforms, ERP systems, and AI solutions for Vadodara, Ahmedabad, Surat, Rajkot, and beyond.",
   },
   hero: {
-    eyebrow: "Web Development Â· Gujarat",
+    eyebrow: "Web Development · Gujarat",
     heading: "Web Development Company Serving Gujarat",
     lead:
-      "Senior engineers based in Vadodara, building custom software for businesses across Gujarat â€” from Ahmedabad's IT startups and GIFT City fintechs to Surat's textile traders, Rajkot's manufacturers, and the state's 3.6 million+ MSMEs.",
+      "Senior engineers based in Vadodara, building custom software for businesses across Gujarat — from Ahmedabad's IT startups and GIFT City fintechs to Surat's textile traders, Rajkot's manufacturers, and the state's 3.6 million+ MSMEs.",
     breadcrumbs: [
       { label: "Home", href: "/" },
       { label: "Web Development Gujarat" },
@@ -485,32 +485,32 @@ export const gujarat: ServicePageData = {
     items: [
       {
         title: "Custom Websites & Web Apps",
-        desc: "Mobile-first websites and web applications for Gujarat businesses â€” from professional company sites to complex customer portals and SaaS products.",
+        desc: "Mobile-first websites and web applications for Gujarat businesses — from professional company sites to complex customer portals and SaaS products.",
         tags: ["Next.js", "React", "TypeScript"],
       },
       {
         title: "ERP & CRM Systems",
-        desc: "Custom business software replacing spreadsheets and legacy tools â€” for Gujarat's manufacturers, traders, distributors, and service businesses.",
+        desc: "Custom business software replacing spreadsheets and legacy tools — for Gujarat's manufacturers, traders, distributors, and service businesses.",
         tags: ["Custom ERP", "Laravel", "PostgreSQL"],
       },
       {
         title: "E-commerce & B2B Portals",
-        desc: "Online stores and wholesale portals for Gujarat's textile, diamond, chemical, and consumer goods businesses â€” with Razorpay, GST, and WhatsApp integration.",
+        desc: "Online stores and wholesale portals for Gujarat's textile, diamond, chemical, and consumer goods businesses — with Razorpay, GST, and WhatsApp integration.",
         tags: ["Shopify", "Custom", "B2B", "B2C"],
       },
       {
         title: "Mobile Applications",
-        desc: "iOS and Android apps for Gujarat businesses â€” field sales, logistics, dealer apps, and consumer-facing applications built for India's mobile-first users.",
+        desc: "iOS and Android apps for Gujarat businesses — field sales, logistics, dealer apps, and consumer-facing applications built for India's mobile-first users.",
         tags: ["Flutter", "React Native", "iOS", "Android"],
       },
       {
         title: "SaaS & Product Development",
-        desc: "Multi-tenant SaaS platforms for Gujarat startups â€” from MVP in 8 weeks to enterprise-scale with subscription billing, team management, and API ecosystem.",
+        desc: "Multi-tenant SaaS platforms for Gujarat startups — from MVP in 8 weeks to enterprise-scale with subscription billing, team management, and API ecosystem.",
         tags: ["SaaS", "Multi-tenant", "Node.js", "AWS"],
       },
       {
         title: "AI & Automation",
-        desc: "Intelligent automation for Gujarat's industries â€” document processing, demand forecasting, chatbots, and AI-powered workflows that cut manual overhead.",
+        desc: "Intelligent automation for Gujarat's industries — document processing, demand forecasting, chatbots, and AI-powered workflows that cut manual overhead.",
         tags: ["Python", "OpenAI", "LangChain", "ML"],
       },
     ],
@@ -522,11 +522,11 @@ export const gujarat: ServicePageData = {
     items: [
       {
         title: "Built and rooted in Gujarat",
-        desc: "Our studio is in Vadodara, Gujarat. We understand the local business culture, the industries, the pace of decision-making, and the value of trust in a business relationship. We're not a distant vendor â€” we're your neighbours.",
+        desc: "Our studio is in Vadodara, Gujarat. We understand the local business culture, the industries, the pace of decision-making, and the value of trust in a business relationship. We're not a distant vendor — we're your neighbours.",
       },
       {
-        title: "We speak your language â€” literally",
-        desc: "Our team works in Gujarati, Hindi, and English. Business requirements can be explained in the language you think in â€” not the language you translate into for a vendor.",
+        title: "We speak your language — literally",
+        desc: "Our team works in Gujarati, Hindi, and English. Business requirements can be explained in the language you think in — not the language you translate into for a vendor.",
       },
       {
         title: "No juniors, no outsourcing",
@@ -544,7 +544,7 @@ export const gujarat: ServicePageData = {
     items: [
       {
         q: "Do you serve clients across all of Gujarat or just Vadodara?",
-        a: "We serve clients across all of Gujarat â€” Ahmedabad, Surat, Rajkot, Gandhinagar, Bharuch, Anand, Junagadh, Jamnagar, and smaller cities. Day-to-day communication is remote (video calls, WhatsApp, email). For larger projects, we travel to client sites for kickoff meetings and key milestones.",
+        a: "We serve clients across all of Gujarat — Ahmedabad, Surat, Rajkot, Gandhinagar, Bharuch, Anand, Junagadh, Jamnagar, and smaller cities. Day-to-day communication is remote (video calls, WhatsApp, email). For larger projects, we travel to client sites for kickoff meetings and key milestones.",
       },
       {
         q: "What industries in Gujarat do you typically work with?",
@@ -556,7 +556,7 @@ export const gujarat: ServicePageData = {
       },
       {
         q: "What is your typical project cost and timeline for a Gujarat SME?",
-        a: "A professional business website costs from â‚¹30,000â€“â‚¹80,000 and takes 3â€“5 weeks. A custom web application or B2B portal costs from â‚¹1Lâ€“â‚¹3L and takes 8â€“14 weeks. A full ERP system costs from â‚¹2.5Lâ€“â‚¹10L depending on scope and takes 3â€“6 months. We'll give you a detailed, itemised quote after a free discovery call.",
+        a: "A professional business website costs from ₹30,000–₹80,000 and takes 3–5 weeks. A custom web application or B2B portal costs from ₹1L–₹3L and takes 8–14 weeks. A full ERP system costs from ₹2.5L–₹10L depending on scope and takes 3–6 months. We'll give you a detailed, itemised quote after a free discovery call.",
       },
       {
         q: "Do you offer post-launch support and maintenance for Gujarat clients?",
@@ -577,5 +577,469 @@ export const gujarat: ServicePageData = {
     primaryCta: { label: "Book a free call", href: "/contact/" },
     secondaryCta: { label: "See our portfolio", href: "/portfolio/" },
     meta: ["Free consultation", "Gujarati-speaking", "Based in Gujarat"],
+  },
+};
+
+// —————————————————————————————————————————————————————————————————————————————
+// UNITED KINGDOM
+// Offshore software development partner for UK businesses — bespoke development,
+// outsourced teams, and cost-effective delivery from an experienced India-based studio
+// —————————————————————————————————————————————————————————————————————————————
+export const unitedKingdom: ServicePageData = {
+  meta: {
+    title: "Software Development Company for UK Businesses",
+    description:
+      "Digital Web Weaver — an offshore software development company serving the UK. Bespoke web development, custom software, and dedicated development teams at a fraction of UK agency rates.",
+  },
+  hero: {
+    eyebrow: "Software Development · United Kingdom",
+    heading: "Software Development Company for UK Businesses",
+    lead:
+      "An experienced offshore development partner for UK companies — bespoke web applications, custom software, e-commerce platforms, and dedicated development teams, delivered by senior engineers at significantly lower cost than UK-based agencies.",
+    breadcrumbs: [
+      { label: "Home", href: "/" },
+      { label: "Software Development UK" },
+    ],
+    marqueeItems: [
+      "Bespoke Software",
+      "Outsourced Development",
+      "Dedicated Teams",
+      "E-commerce Platforms",
+      "SaaS Development",
+      "Custom Web Apps",
+      "Mobile Apps",
+      "GDPR-aware Development",
+      "London Businesses",
+      "UK Startups",
+      "Fixed-price Projects",
+      "Time Zone Friendly",
+    ],
+    stats: [
+      { value: "200+", label: "Projects Delivered" },
+      { value: "Senior", label: "Engineers Only" },
+      { value: "8yr", label: "In Business" },
+    ],
+    formVariant: "service",
+    formTag: "UK Project",
+    formHeading: "Tell us about your project",
+    formSub: "Free consultation. UK time zone overlap available. Response within 24 hours.",
+    formSubmitLabel: "Send enquiry",
+    localBadge: {
+      flag: "🇬🇧",
+      chips: ["UK hours overlap", "GBP pricing", "NDA on request"],
+    },
+  },
+  services: {
+    eyebrow: "What we build",
+    heading: "Bespoke software development for UK companies, at a fraction of local agency rates",
+    items: [
+      {
+        title: "Bespoke Software Development",
+        desc: "Custom-built software designed around your organisation's exact processes — internal tools, booking systems, management platforms, and workflow automation for UK SMEs and enterprises.",
+        tags: ["Custom", "Node.js", "Laravel", "PostgreSQL"],
+      },
+      {
+        title: "Dedicated Development Teams",
+        desc: "Hire dedicated developers who work as an extension of your in-house team, with daily standups during UK working hours. Scale up or down without the overhead of permanent hires.",
+        tags: ["React", "Node.js", "Flexible scaling"],
+      },
+      {
+        title: "E-commerce Development",
+        desc: "Online stores and marketplaces built for UK retailers — Shopify, WooCommerce, or fully custom platforms with Stripe payments, VAT-compliant invoicing, and multi-currency support.",
+        tags: ["Shopify", "Custom", "Stripe", "VAT-ready"],
+      },
+      {
+        title: "SaaS & MVP Development",
+        desc: "From idea to launch — we help UK founders and startups build and ship SaaS products and MVPs quickly, with a clear roadmap to scale once you've found product-market fit.",
+        tags: ["Next.js", "MVP", "Cloud-native"],
+      },
+      {
+        title: "Web & Mobile Applications",
+        desc: "Professional, mobile-first websites and cross-platform mobile apps for UK businesses — built for performance, accessibility, and search visibility on Google.co.uk.",
+        tags: ["Next.js", "Flutter", "React Native"],
+      },
+      {
+        title: "AI & Automation Solutions",
+        desc: "Practical AI integrations for UK businesses — chatbots, document processing, workflow automation, and AI-powered tools that reduce manual work and operating costs.",
+        tags: ["AI", "Automation", "Custom"],
+      },
+    ],
+    variant: "card",
+  },
+  why: {
+    eyebrow: "Why Digital Web Weaver",
+    heading: "A reliable offshore development partner for UK businesses",
+    items: [
+      {
+        title: "Significant cost savings",
+        desc: "Get the same calibre of engineering as a UK agency at a fraction of the cost. Most UK clients save 50-70% on development costs without compromising on quality or communication.",
+      },
+      {
+        title: "Working hours overlap",
+        desc: "Our team works hours that overlap with UK business hours (GMT/BST), so you get live calls, daily updates, and quick turnarounds — not a 12-hour wait for every reply.",
+      },
+      {
+        title: "Fluent English communication",
+        desc: "All client communication is in clear, professional English. Detailed specifications, regular video calls, and written documentation mean nothing gets lost in translation.",
+      },
+      {
+        title: "Senior engineers, fixed pricing",
+        desc: "No junior developers learning on your project. Every engagement is scoped and delivered by engineers with 5+ years of experience, with fixed-price quotes agreed upfront.",
+      },
+    ],
+  },
+  faq: {
+    eyebrow: "FAQs",
+    heading: "Questions from UK clients",
+    items: [
+      {
+        q: "Do you work with UK businesses remotely?",
+        a: "Yes. We work with clients across London and the wider UK entirely remotely, using video calls, project management tools, and regular progress updates. Many of our long-term UK clients have never needed an in-person meeting.",
+      },
+      {
+        q: "Can your team overlap with UK working hours?",
+        a: "Yes. Our team can adjust working hours to overlap with GMT/BST for daily standups, calls, and urgent communication, so your project moves at the pace you expect.",
+      },
+      {
+        q: "How much cheaper is offshore development compared to a UK agency?",
+        a: "Typically 50-70% lower than equivalent UK agency rates, while working with senior engineers (5+ years experience). This is because of lower operating costs in India, not lower quality — many of our UK clients have previously worked with local agencies and switched for both cost and responsiveness.",
+      },
+      {
+        q: "Can you build VAT-compliant e-commerce and invoicing for UK businesses?",
+        a: "Yes. We build e-commerce platforms and internal tools with UK VAT handling, GBP pricing, Stripe/PayPal integration, and invoicing that meets UK requirements. We can also integrate with UK accounting tools such as Xero and QuickBooks.",
+      },
+      {
+        q: "Do you sign contracts and NDAs for UK clients?",
+        a: "Yes. We're happy to sign NDAs before any discussion of your project, and provide a clear contract covering scope, timelines, payment milestones, and IP ownership before work begins.",
+      },
+      {
+        q: "What does a project typically cost for a UK business?",
+        a: "A professional business website starts from £500. A custom web application or SaaS MVP starts from £2,000. A dedicated developer starts from £1,200/month. We'll provide an exact fixed-price quote after a free discovery call.",
+      },
+    ],
+  },
+  related: [
+    { label: "Hire Dedicated Developers", href: "/hire-dedicated-resource/", desc: "Hire dedicated developers who work to your schedule and requirements." },
+    { label: "Web Development", href: "/web-development/", desc: "Full-stack web development for businesses of every size." },
+    { label: "SaaS Development", href: "/saas-development/", desc: "From MVP to scale — SaaS product development for startups and founders." },
+    { label: "E-commerce Development", href: "/ecommerce-development/", desc: "Online stores and marketplaces with VAT-ready invoicing and Stripe payments." },
+  ],
+  cta: {
+    eyebrow: "Start your project",
+    heading: "Ready to build with a development partner UK businesses trust?",
+    body: "Free technical consultation. Fixed-price quote within 48 hours. UK working-hours overlap available.",
+    primaryCta: { label: "Book a free call", href: "/contact/" },
+    secondaryCta: { label: "View portfolio", href: "/portfolio/" },
+    meta: ["Free consultation", "UK hours overlap", "Fixed pricing"],
+  },
+};
+
+// —————————————————————————————————————————————————————————————————————————————
+// SOUTH AFRICA
+// Offshore software development partner for South African businesses — bespoke
+// development, outsourced teams, and cost-effective delivery from an experienced
+// India-based studio, with same-time-zone overlap (SAST/IST)
+// —————————————————————————————————————————————————————————————————————————————
+export const southAfrica: ServicePageData = {
+  meta: {
+    title: "Software Development Company for South African Businesses",
+    description:
+      "Digital Web Weaver — an offshore software development company serving South Africa. Bespoke web development, custom software, and dedicated development teams at a fraction of local agency rates.",
+  },
+  hero: {
+    eyebrow: "Software Development · South Africa",
+    heading: "Software Development Company for South African Businesses",
+    lead:
+      "An experienced offshore development partner for South African companies — bespoke web applications, custom software, e-commerce platforms, and dedicated development teams, delivered by senior engineers with near-real-time overlap (IST/SAST) at a fraction of local agency rates.",
+    breadcrumbs: [
+      { label: "Home", href: "/" },
+      { label: "Software Development South Africa" },
+    ],
+    marqueeItems: [
+      "Bespoke Software",
+      "Outsourced Development",
+      "Dedicated Teams",
+      "E-commerce Platforms",
+      "FinTech Solutions",
+      "Custom Web Apps",
+      "Mobile Apps",
+      "POPIA-aware Development",
+      "Johannesburg Businesses",
+      "Cape Town Startups",
+      "Fixed-price Projects",
+      "Same Time Zone",
+    ],
+    stats: [
+      { value: "200+", label: "Projects Delivered" },
+      { value: "Senior", label: "Engineers Only" },
+      { value: "8yr", label: "In Business" },
+    ],
+    formVariant: "service",
+    formTag: "South Africa Project",
+    formHeading: "Tell us about your project",
+    formSub: "Free consultation. SAST/IST overlap — just 3.5 hours apart. Response within 24 hours.",
+    formSubmitLabel: "Send enquiry",
+    localBadge: {
+      flag: "🇿🇦",
+      chips: ["SAST/IST overlap", "ZAR pricing", "NDA on request"],
+    },
+  },
+  services: {
+    eyebrow: "What we build",
+    heading: "Bespoke software development for South African companies, at a fraction of local agency rates",
+    items: [
+      {
+        title: "Bespoke Software Development",
+        desc: "Custom-built software designed around your organisation's exact processes — internal tools, booking systems, management platforms, and workflow automation for South African SMEs and enterprises.",
+        tags: ["Custom", "Node.js", "Laravel", "PostgreSQL"],
+      },
+      {
+        title: "Dedicated Development Teams",
+        desc: "Hire dedicated developers who work as an extension of your in-house team, with daily standups during South African working hours. Scale up or down without the overhead of permanent hires.",
+        tags: ["React", "Node.js", "Flexible scaling"],
+      },
+      {
+        title: "E-commerce Development",
+        desc: "Online stores and marketplaces built for South African retailers — Shopify, WooCommerce, or fully custom platforms with PayFast/Yoco/Stripe payments and ZAR pricing.",
+        tags: ["Shopify", "Custom", "PayFast", "ZAR-ready"],
+      },
+      {
+        title: "FinTech & SaaS Development",
+        desc: "From idea to launch — we help South African founders and startups build and ship FinTech platforms, SaaS products, and MVPs quickly, with a clear roadmap to scale once you've found product-market fit.",
+        tags: ["Next.js", "FinTech", "MVP", "Cloud-native"],
+      },
+      {
+        title: "Web & Mobile Applications",
+        desc: "Professional, mobile-first websites and cross-platform mobile apps for South African businesses — built for performance, accessibility, and search visibility on Google.co.za.",
+        tags: ["Next.js", "Flutter", "React Native"],
+      },
+      {
+        title: "AI & Automation Solutions",
+        desc: "Practical AI integrations for South African businesses — chatbots, document processing, workflow automation, and AI-powered tools that reduce manual work and operating costs.",
+        tags: ["AI", "Automation", "Custom"],
+      },
+    ],
+    variant: "card",
+  },
+  why: {
+    eyebrow: "Why Digital Web Weaver",
+    heading: "A reliable offshore development partner for South African businesses",
+    items: [
+      {
+        title: "Significant cost savings",
+        desc: "Get the same calibre of engineering as a local agency at a fraction of the cost. Most South African clients save 50-70% on development costs without compromising on quality or communication.",
+      },
+      {
+        title: "Near-real-time overlap",
+        desc: "South Africa (SAST) is only 3.5 hours behind India (IST), so our team works hours that overlap with your business day — live calls, daily updates, and quick turnarounds, not a wait until tomorrow for every reply.",
+      },
+      {
+        title: "Fluent English communication",
+        desc: "All client communication is in clear, professional English. Detailed specifications, regular video calls, and written documentation mean nothing gets lost in translation.",
+      },
+      {
+        title: "Senior engineers, fixed pricing",
+        desc: "No junior developers learning on your project. Every engagement is scoped and delivered by engineers with 5+ years of experience, with fixed-price quotes agreed upfront.",
+      },
+    ],
+  },
+  faq: {
+    eyebrow: "FAQs",
+    heading: "Questions from South African clients",
+    items: [
+      {
+        q: "Do you work with South African businesses remotely?",
+        a: "Yes. We work with clients across Johannesburg, Cape Town, Durban, and the wider South Africa entirely remotely, using video calls, project management tools, and regular progress updates. Many of our long-term South African clients have never needed an in-person meeting.",
+      },
+      {
+        q: "How big is the time difference between India and South Africa?",
+        a: "Only 3.5 hours — South Africa (SAST) is behind India (IST). This means our working day overlaps with yours for most of the afternoon, so you get live calls, daily standups, and same-day responses rather than waiting until the next day.",
+      },
+      {
+        q: "How much cheaper is offshore development compared to a South African agency?",
+        a: "Typically 50-70% lower than equivalent South African agency rates, while working with senior engineers (5+ years experience). This is because of lower operating costs in India, not lower quality — many of our South African clients have previously worked with local agencies and switched for both cost and responsiveness.",
+      },
+      {
+        q: "Can you build e-commerce platforms with South African payment gateways?",
+        a: "Yes. We build e-commerce platforms and internal tools with ZAR pricing and South African payment gateways such as PayFast, Yoco, and Ozow, alongside Stripe for international cards. We can also integrate with local accounting tools.",
+      },
+      {
+        q: "Are you familiar with POPIA and South African data requirements?",
+        a: "Yes. We design systems with data protection best practices aligned to POPIA — including consent management, data minimisation, and secure storage — and can work with your local legal advisors on compliance specifics.",
+      },
+      {
+        q: "What does a project typically cost for a South African business?",
+        a: "A professional business website starts from R9,000. A custom web application or SaaS MVP starts from R35,000. A dedicated developer starts from R22,000/month. We'll provide an exact fixed-price quote after a free discovery call.",
+      },
+    ],
+  },
+  related: [
+    { label: "Hire Dedicated Developers", href: "/hire-dedicated-resource/", desc: "Hire dedicated developers who work to your schedule and requirements." },
+    { label: "Web Development", href: "/web-development/", desc: "Full-stack web development for businesses of every size." },
+    { label: "SaaS Development", href: "/saas-development/", desc: "From MVP to scale — SaaS product development for startups and founders." },
+    { label: "E-commerce Development", href: "/ecommerce-development/", desc: "Online stores and marketplaces with ZAR-ready invoicing and local payment gateways." },
+  ],
+  cta: {
+    eyebrow: "Start your project",
+    heading: "Ready to build with a development partner South African businesses trust?",
+    body: "Free technical consultation. Fixed-price quote within 48 hours. SAST/IST overlap available.",
+    primaryCta: { label: "Book a free call", href: "/contact/" },
+    secondaryCta: { label: "View portfolio", href: "/portfolio/" },
+    meta: ["Free consultation", "SAST/IST overlap", "Fixed pricing"],
+  },
+};
+
+// —————————————————————————————————————————————————————————————————————————————
+// IVORY COAST (Côte d'Ivoire) — ABIDJAN
+// Partenaire de développement logiciel offshore pour les entreprises ivoiriennes —
+// développement sur mesure, équipes externalisées, livraison à coût maîtrisé
+// depuis un studio expérimenté basé en Inde
+// —————————————————————————————————————————————————————————————————————————————
+export const ivoryCoast: ServicePageData = {
+  meta: {
+    title: "Agence de Développement Web et Logiciel pour Abidjan, Côte d'Ivoire",
+    description:
+      "Digital Web Weaver — agence de développement web et logiciel pour les entreprises d'Abidjan et de Côte d'Ivoire. Sites web, applications sur mesure, e-commerce et équipes de développement dédiées à coût maîtrisé.",
+  },
+  hero: {
+    eyebrow: "Développement Logiciel · Côte d'Ivoire",
+    heading: "Agence de Développement Web et Logiciel pour Abidjan",
+    lead:
+      "Une équipe d'ingénieurs expérimentés au service des entreprises d'Abidjan et de Côte d'Ivoire — sites web sur mesure, applications métier, plateformes e-commerce et équipes de développement dédiées, livrés à un coût nettement inférieur à celui des agences locales ou européennes.",
+    breadcrumbs: [
+      { label: "Home", href: "/" },
+      { label: "Développement Logiciel Côte d'Ivoire" },
+    ],
+    marqueeItems: [
+      "Logiciels Sur Mesure",
+      "Développement Externalisé",
+      "Équipes Dédiées",
+      "Plateformes E-commerce",
+      "Applications Mobiles",
+      "Sites Web d'Entreprise",
+      "Solutions FinTech",
+      "ERP & Gestion",
+      "Entreprises d'Abidjan",
+      "Startups Ivoiriennes",
+      "Projets à Prix Fixe",
+      "Support en Français",
+    ],
+    stats: [
+      { value: "200+", label: "Projets Livrés" },
+      { value: "Senior", label: "Ingénieurs Confirmés" },
+      { value: "8 ans", label: "D'Expérience" },
+    ],
+    formVariant: "service",
+    formTag: "Projet Côte d'Ivoire",
+    formHeading: "Parlez-nous de votre projet",
+    formSub: "Consultation gratuite. Équipe francophone. Réponse sous 24 heures.",
+    formSubmitLabel: "Envoyer la demande",
+    localBadge: {
+      flag: "🇨🇮",
+      chips: ["Équipe francophone", "Tarifs FCFA", "NDA sur demande"],
+    },
+  },
+  services: {
+    eyebrow: "Ce que nous développons",
+    heading: "Des solutions logicielles sur mesure pour les entreprises ivoiriennes, à coût maîtrisé",
+    items: [
+      {
+        title: "Développement de Logiciels Sur Mesure",
+        desc: "Logiciels conçus autour de vos processus métier exacts — outils internes, systèmes de réservation, plateformes de gestion et automatisation des flux de travail pour les PME et grandes entreprises ivoiriennes.",
+        tags: ["Sur mesure", "Node.js", "Laravel", "PostgreSQL"],
+      },
+      {
+        title: "Équipes de Développement Dédiées",
+        desc: "Recrutez des développeurs dédiés qui travaillent comme une extension de votre équipe interne, avec des points quotidiens adaptés à votre fuseau horaire. Augmentez ou réduisez l'équipe sans les coûts d'embauche permanente.",
+        tags: ["React", "Node.js", "Flexible"],
+      },
+      {
+        title: "E-commerce et Plateformes en Ligne",
+        desc: "Boutiques en ligne et places de marché pour les commerçants ivoiriens — paiement Mobile Money (Orange Money, MTN, Wave), tarification en FCFA et catalogues multilingues.",
+        tags: ["Custom", "Mobile Money", "FCFA", "Multilingue"],
+      },
+      {
+        title: "Applications Métier et ERP",
+        desc: "Logiciels de gestion pour le commerce, la logistique et l'agro-industrie ivoirienne — gestion des stocks, facturation, suivi des commandes et reporting financier dans un seul système.",
+        tags: ["ERP sur mesure", "PostgreSQL", "Multi-utilisateurs"],
+      },
+      {
+        title: "Sites Web et Applications Mobiles",
+        desc: "Sites web professionnels et applications mobiles multiplateformes pour les entreprises ivoiriennes — optimisés pour la performance et le référencement sur Google.",
+        tags: ["Next.js", "Flutter", "React Native"],
+      },
+      {
+        title: "Solutions IA et Automatisation",
+        desc: "Intégrations d'intelligence artificielle pratiques pour les entreprises ivoiriennes — chatbots, traitement de documents, automatisation des processus et outils IA pour réduire les tâches manuelles.",
+        tags: ["IA", "Automatisation", "Sur mesure"],
+      },
+    ],
+    variant: "card",
+  },
+  why: {
+    eyebrow: "Pourquoi Digital Web Weaver",
+    heading: "Le bon partenaire technique pour les entreprises d'Abidjan et de Côte d'Ivoire",
+    items: [
+      {
+        title: "Coûts nettement réduits",
+        desc: "Bénéficiez d'une qualité d'ingénierie comparable à celle d'une agence locale ou européenne, à un coût nettement inférieur. La plupart de nos clients ivoiriens réduisent leurs coûts de développement de 50 à 70 %.",
+      },
+      {
+        title: "Équipe francophone",
+        desc: "Notre équipe communique en français professionnel — appels vidéo, spécifications détaillées et documentation écrite, sans barrière de langue ni malentendu sur votre cahier des charges.",
+      },
+      {
+        title: "Paiements Mobile Money intégrés",
+        desc: "Nous intégrons les moyens de paiement utilisés en Côte d'Ivoire — Orange Money, MTN Mobile Money, Wave — ainsi que les cartes bancaires internationales via Stripe.",
+      },
+      {
+        title: "Ingénieurs seniors, prix fixe",
+        desc: "Aucun développeur junior en formation sur votre projet. Chaque mission est cadrée et réalisée par des ingénieurs ayant plus de 5 ans d'expérience, avec un devis à prix fixe validé en amont.",
+      },
+    ],
+  },
+  faq: {
+    eyebrow: "Questions Fréquentes",
+    heading: "Questions des clients ivoiriens",
+    items: [
+      {
+        q: "Travaillez-vous avec des entreprises basées à Abidjan à distance ?",
+        a: "Oui. Nous travaillons avec des clients à Abidjan et dans toute la Côte d'Ivoire entièrement à distance, via appels vidéo, outils de gestion de projet et points d'avancement réguliers. Beaucoup de nos clients ivoiriens n'ont jamais eu besoin de réunion en présentiel.",
+      },
+      {
+        q: "Votre équipe parle-t-elle français ?",
+        a: "Oui. Nous disposons d'une équipe francophone pour les échanges avec nos clients d'Afrique francophone — cahier des charges, appels de suivi et support, tout se déroule en français.",
+      },
+      {
+        q: "Combien coûte un site web ou une application sur mesure pour une entreprise ivoirienne ?",
+        a: "Un site web professionnel démarre à partir de 350 000 FCFA. Une application web ou un MVP sur mesure démarre à partir de 1 200 000 FCFA. Un développeur dédié démarre à partir de 750 000 FCFA/mois. Nous fournissons un devis exact à prix fixe après un appel de découverte gratuit.",
+      },
+      {
+        q: "Pouvez-vous intégrer les paiements Mobile Money (Orange Money, MTN, Wave) ?",
+        a: "Oui. Nous intégrons les principales solutions de paiement mobile utilisées en Côte d'Ivoire, ainsi que les paiements par carte bancaire internationale, pour vos plateformes e-commerce et applications.",
+      },
+      {
+        q: "Signez-vous des contrats et accords de confidentialité (NDA) ?",
+        a: "Oui. Nous signons volontiers un accord de confidentialité avant toute discussion sur votre projet, et fournissons un contrat clair couvrant le périmètre, les délais, les modalités de paiement et la propriété intellectuelle.",
+      },
+      {
+        q: "Combien de temps faut-il pour développer un site web ou une application ?",
+        a: "Un site web professionnel est généralement livré en 3 à 4 semaines. Une application web sur mesure ou un MVP prend 8 à 12 semaines selon la complexité. Nous établissons un calendrier précis dès le début du projet.",
+      },
+    ],
+  },
+  related: [
+    { label: "Hire Dedicated Developers", href: "/hire-dedicated-resource/", desc: "Recrutez des développeurs dédiés qui travaillent selon vos besoins et votre planning." },
+    { label: "Web Development", href: "/web-development/", desc: "Développement web full-stack pour entreprises de toute taille." },
+    { label: "SaaS Development", href: "/saas-development/", desc: "Du MVP à la mise à l'échelle — développement de produits SaaS pour startups et porteurs de projet." },
+    { label: "E-commerce Development", href: "/ecommerce-development/", desc: "Boutiques en ligne avec paiements Mobile Money et tarification FCFA." },
+  ],
+  cta: {
+    eyebrow: "Démarrez votre projet",
+    heading: "Prêt à développer votre projet avec un partenaire de confiance ?",
+    body: "Consultation technique gratuite. Devis à prix fixe sous 48 heures. Équipe francophone disponible.",
+    primaryCta: { label: "Réserver un appel gratuit", href: "/contact/" },
+    secondaryCta: { label: "Voir notre portfolio", href: "/portfolio/" },
+    meta: ["Consultation gratuite", "Équipe francophone", "Prix fixe"],
   },
 };
