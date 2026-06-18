@@ -95,7 +95,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </p>
           )}
           <div className="reveal" style={{ display: "flex", alignItems: "center", gap: "14px", marginTop: "28px" }}>
-            <div className="av" style={{ width: "40px", height: "40px", fontSize: "13px" }}>
+            <div
+              style={{
+                width: "40px",
+                height: "40px",
+                fontSize: "13px",
+                borderRadius: "50%",
+                background: "var(--accent)",
+                color: "#fff",
+                display: "grid",
+                placeItems: "center",
+                fontWeight: 700,
+                fontFamily: "var(--display)",
+                flex: "none",
+              }}
+            >
               {post.author_initials || "DW"}
             </div>
             <div>
@@ -108,8 +122,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       </section>
 
-      {post.cover_image && (
-        <section className="wrap reveal" style={{ marginBottom: "8px" }}>
+      <section className="wrap" style={{ marginBottom: "8px" }}>
+        {post.cover_image ? (
           <div
             style={{
               width: "100%",
@@ -121,13 +135,42 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               backgroundPosition: "center",
             }}
           />
-        </section>
-      )}
+        ) : (
+          // Branded fallback banner when a post has no cover image
+          <div
+            style={{
+              width: "100%",
+              minHeight: "240px",
+              borderRadius: "18px",
+              border: "1px solid var(--line)",
+              background:
+                "linear-gradient(135deg, var(--accent-soft) 0%, var(--paper) 52%, #dde9ff 100%)",
+              display: "grid",
+              placeItems: "center",
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--mono)",
+                fontSize: "12.5px",
+                letterSpacing: ".22em",
+                textTransform: "uppercase",
+                color: "var(--ink-2)",
+                opacity: 0.7,
+              }}
+            >
+              {post.tag || "Digital Web Weaver"}
+            </span>
+          </div>
+        )}
+      </section>
 
       {/* ===== CONTENT ===== */}
-      <section className="sec">
+      <section className="sec" style={{ paddingTop: "48px" }}>
         <div className="wrap" style={{ maxWidth: "760px" }}>
-          <div className="post-content reveal" dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="post-content" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </section>
 

@@ -595,7 +595,7 @@ details.faq .fq-body{font-size:15px;color:var(--muted);line-height:1.66;padding:
 .load-more-wrap{text-align:center;margin-top:44px}
 
 /* ===== ARTICLE / POST CONTENT (rendered Markdown) ===== */
-.post-content{font-size:16.5px;line-height:1.78;color:var(--muted)}
+.post-content{font-size:16.5px;line-height:1.78;color:var(--ink-2)}
 .post-content>*+*{margin-top:22px}
 .post-content h1,.post-content h2,.post-content h3,.post-content h4{font-family:var(--display);color:var(--ink);font-weight:600;letter-spacing:-.02em;line-height:1.25;margin-top:42px;margin-bottom:6px}
 .post-content h1{font-size:clamp(1.6rem,3vw,2.2rem)}
