@@ -67,22 +67,61 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const allPosts = await getPublishedPosts(4);
   const related = allPosts.filter((p) => p.id !== post.id).slice(0, 3);
 
-  const jsonLd = {
+  // ── Extract FAQs from the article body for FAQPage schema (AEO / AI answers) ──
+  // Markdown pattern: a "## ...FAQ/Frequently asked questions" heading, then
+  // **Question?** lines each followed by an answer paragraph.
+  const stripMd = (s: string) =>
+    s
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // links -> text
+      .replace(/[*_`#>]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  function extractFaqs(md: string) {
+    const faqs: { q: string; a: string }[] = [];
+    const sec = md.match(/^#{2,3}\s+.*(?:frequently asked questions|faqs?).*$([\s\S]*?)(?=^#{2,3}\s|$(?![\s\S]))/im);
+    const block = sec ? sec[1] : "";
+    if (!block) return faqs;
+    const re = /\*\*(.+?)\*\*\s*\n+([\s\S]*?)(?=\n\s*\*\*|\n*$)/g;
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(block)) !== null) {
+      const q = stripMd(m[1]);
+      const a = stripMd(m[2]);
+      if (q && a) faqs.push({ q, a });
+    }
+    return faqs;
+  }
+  const faqs = extractFaqs(post.content || "");
+  const wordCount = (post.content || "").trim().split(/\s+/).filter(Boolean).length;
+
+  const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
+    name: post.title,
     description: post.seo_description || post.excerpt || undefined,
-    image: post.cover_image || undefined,
+    image: post.cover_image || `${SITE_URL}/og-image.png`,
     datePublished: post.published_at || post.created_at,
     dateModified: post.updated_at,
+    wordCount,
+    inLanguage: "en",
+    articleSection: post.tag || undefined,
+    keywords: post.tag || undefined,
+    url: `${SITE_URL}/blog/${post.slug}/`,
     author: {
-      "@type": "Person",
+      "@type": "Organization",
       name: post.author_name || "Digital Web Weaver",
+      url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
       name: "Digital Web Weaver",
       url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/icon-512.png`,
+        width: 512,
+        height: 512,
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -90,9 +129,36 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog/` },
+      { "@type": "ListItem", position: 3, name: post.title, item: `${SITE_URL}/blog/${post.slug}/` },
+    ],
+  };
+
+  const faqSchema =
+    faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }
+      : null;
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      )}
 
       {/* ===== HERO ===== */}
       <section className="page-hero" style={{ paddingBottom: "40px" }}>
