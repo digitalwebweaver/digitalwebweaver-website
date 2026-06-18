@@ -108,9 +108,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     keywords: post.tag || undefined,
     url: `${SITE_URL}/blog/${post.slug}/`,
     author: {
-      "@type": "Organization",
-      name: post.author_name || "Digital Web Weaver",
-      url: SITE_URL,
+      "@type": "Person",
+      name: post.author_name || "Kamlesh Nishad",
     },
     publisher: {
       "@type": "Organization",
