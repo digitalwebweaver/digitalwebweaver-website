@@ -110,6 +110,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     author: {
       "@type": "Person",
       name: post.author_name || "Kamlesh Nishad",
+      url: "https://www.linkedin.com/in/kamleshnishad/",
+      sameAs: ["https://www.linkedin.com/in/kamleshnishad/"],
+      worksFor: { "@type": "Organization", name: "Digital Web Weaver", url: SITE_URL },
     },
     publisher: {
       "@type": "Organization",
@@ -197,7 +200,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               {post.author_initials || "DW"}
             </div>
             <div>
-              <div style={{ fontWeight: 600, fontSize: "14px" }}>{post.author_name || "Digital Web Weaver"}</div>
+              <div style={{ fontWeight: 600, fontSize: "14px" }}>
+                <a
+                  href="https://www.linkedin.com/in/kamleshnishad/"
+                  target="_blank"
+                  rel="author noopener noreferrer"
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  {post.author_name || "Kamlesh Nishad"}
+                </a>
+              </div>
               <div style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "var(--faint)", letterSpacing: ".08em" }}>
                 {post.read_minutes} min read &nbsp;·&nbsp; {formatPostDate(post.published_at)}
               </div>
