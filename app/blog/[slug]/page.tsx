@@ -44,7 +44,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 
-  const html = await marked.parse(post.content || "");
+  const rawHtml = await marked.parse(post.content || "");
+
+  // Build a table of contents from the article's <h2> headings and give each
+  // heading an id so the sidebar links can jump to it.
+  const slugifyHeading = (s: string) =>
+    s
+      .toLowerCase()
+      .replace(/<[^>]+>/g, "")
+      .replace(/&[^;]+;/g, "")
+      .replace(/[^a-z0-9\s-]/g, "")
+      .trim()
+      .replace(/\s+/g, "-");
+  const toc: { id: string; text: string }[] = [];
+  const html = rawHtml.replace(/<h2>([\s\S]*?)<\/h2>/g, (_m, inner) => {
+    const text = inner.replace(/<[^>]+>/g, "").trim();
+    const id = slugifyHeading(text);
+    if (id) toc.push({ id, text });
+    return `<h2 id="${id}">${inner}</h2>`;
+  });
+
   const allPosts = await getPublishedPosts(4);
   const related = allPosts.filter((p) => p.id !== post.id).slice(0, 3);
 
@@ -167,10 +186,36 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         )}
       </section>
 
-      {/* ===== CONTENT ===== */}
+      {/* ===== CONTENT + SIDEBAR ===== */}
       <section className="sec" style={{ paddingTop: "48px" }}>
-        <div className="wrap" style={{ maxWidth: "760px" }}>
-          <div className="post-content" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="wrap">
+          <div className="post-layout">
+            <article className="post-content" dangerouslySetInnerHTML={{ __html: html }} />
+
+            <aside className="post-side">
+              {toc.length >= 3 && (
+                <nav className="post-toc">
+                  <span className="eyebrow">On this page</span>
+                  <ul>
+                    {toc.map((h) => (
+                      <li key={h.id}>
+                        <a href={`#${h.id}`}>{h.text}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              )}
+
+              <div className="post-cta-card">
+                <span className="eyebrow">Let&apos;s build</span>
+                <h3>Have a project in mind?</h3>
+                <p>Get a free consultation and a clear estimate from our senior engineers — within 24 hours.</p>
+                <Link href="/contact/" className="btn btn-primary">
+                  Start a project <span className="arr">↗</span>
+                </Link>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
