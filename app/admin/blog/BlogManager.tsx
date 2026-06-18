@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import AdminTopBar from "../AdminTopBar";
 import { slugify } from "@/lib/slug";
+import ImageUploadField from "../ImageUploadField";
 
 interface Post {
   id: string;
@@ -362,8 +363,13 @@ export default function BlogManager({ posts }: { posts: Post[] }) {
                   />
                 </Field>
 
-                <Field label="Cover image URL (optional)">
-                  <input style={inputStyle} value={draft.coverImage} onChange={(e) => updateDraft("coverImage", e.target.value)} placeholder="https://…" />
+                <Field label="Cover image (optional — paste a URL or upload)">
+                  <ImageUploadField
+                    value={draft.coverImage}
+                    onChange={(url) => updateDraft("coverImage", url)}
+                    folder="blog"
+                    inputStyle={inputStyle}
+                  />
                 </Field>
 
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>

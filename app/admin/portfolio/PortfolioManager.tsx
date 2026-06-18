@@ -6,6 +6,7 @@ import AdminTopBar from "../AdminTopBar";
 import { slugify } from "@/lib/slug";
 import type { Project, ProjectMetric } from "@/lib/projects";
 import { PORTFOLIO_ICONS, PORTFOLIO_ICON_KEYS, renderIcon } from "@/lib/portfolioIcons";
+import ImageUploadField from "../ImageUploadField";
 
 // Categories mirror the public PortfolioFilters tags (minus "All projects").
 const CATEGORIES = [
@@ -519,8 +520,13 @@ export default function PortfolioManager({ projects }: { projects: Project[] }) 
                   </label>
                 </div>
 
-                <Field label="Cover image URL (optional — used on the detail page)">
-                  <input style={inputStyle} value={draft.coverImage} onChange={(e) => updateDraft("coverImage", e.target.value)} placeholder="https://…" />
+                <Field label="Cover image (optional — paste a URL or upload; used on the detail page)">
+                  <ImageUploadField
+                    value={draft.coverImage}
+                    onChange={(url) => updateDraft("coverImage", url)}
+                    folder="portfolio"
+                    inputStyle={inputStyle}
+                  />
                 </Field>
 
                 <div style={{ borderTop: "1px solid #2a2620", paddingTop: 16, display: "grid", gap: 16 }}>
