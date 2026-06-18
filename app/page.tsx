@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import StatsCounter from "@/components/home/StatsCounter";
 import CodePanelAnimator from "@/components/home/CodePanelAnimator";
 import JsonLd from "@/components/seo/JsonLd";
+import FaqSection from "@/components/sections/FaqSection";
 
 const TechStackTabs = dynamic(() => import("@/components/home/TechStackTabs"));
 
@@ -56,6 +57,53 @@ const localBusinessSchema = {
     "ERP Development",
   ],
   parentOrganization: { "@id": "https://digitalwebweaver.com/#organization" },
+};
+
+const HOME_FAQ = [
+  {
+    q: "What does Digital Web Weaver do?",
+    a: "Digital Web Weaver is a senior software engineering studio. We build custom websites, web applications, mobile apps, SaaS platforms, ERP/CRM systems, and AI automation — from idea to production — for businesses in India and worldwide.",
+  },
+  {
+    q: "Where is Digital Web Weaver located?",
+    a: "We are based in Vadodara, Gujarat, India (207/208 Sanket Heights, Sunpharma Road, Atladra, Vadodara 390012), and serve clients across India, the United Kingdom, South Africa, and Ivory Coast.",
+  },
+  {
+    q: "How much does it cost to build a website or app?",
+    a: "A business website typically costs ₹25,000–₹2,00,000, while web apps and custom software start around ₹2,00,000 and scale with complexity. We send a clear, itemised estimate within 24 hours of understanding your project.",
+  },
+  {
+    q: "What technologies do you work with?",
+    a: "We build with React, Next.js, Node.js, Python, Laravel, Vue, React Native, Flutter, PostgreSQL, AWS, and modern AI/LLM stacks — choosing the right tools for each project rather than forcing a template.",
+  },
+  {
+    q: "Do you work with international and remote clients?",
+    a: "Yes. We work remotely with clients across the UK, South Africa, West Africa, and beyond, with clear communication, documented code, and full source-code ownership handed to you.",
+  },
+  {
+    q: "How experienced is the team?",
+    a: "Digital Web Weaver has been building production software since 2013, with 200+ systems shipped across e-commerce, healthcare, fintech, education, logistics, and more.",
+  },
+];
+
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: HOME_FAQ.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+const speakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  url: "https://digitalwebweaver.com/",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".faq-q", ".faq-a"],
+  },
 };
 
 export const metadata: Metadata = {
@@ -390,6 +438,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ===== FAQ ===== */}
+      <JsonLd data={homeFaqSchema} />
+      <JsonLd data={speakableSchema} />
+      <FaqSection
+        eyebrow="FAQ"
+        heading="Questions, answered"
+        body="The things businesses most often ask us before starting a project."
+        items={HOME_FAQ}
+      />
 
       {/* ===== CTA ===== */}
       <section id="contact">

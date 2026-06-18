@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": "https://digitalwebweaver.com/#localbusiness",
+  "@id": "https://digitalwebweaver.com/#localbusiness-surat",
   name: "Digital Web Weaver",
   image: "https://digitalwebweaver.com/icon-512.png",
   url: "https://digitalwebweaver.com/web-design-surat/",

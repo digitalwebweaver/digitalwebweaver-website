@@ -6,5 +6,6 @@ export const metadata: Metadata = {
   description: data.meta.description,
   alternates: { canonical: "/solutions/cybersecurity/" },
   openGraph: { url: "/solutions/cybersecurity/", type: "website" },
+  robots: { index: false, follow: true },
 };
 export default function Page() { return <ServicePage data={data} />; }

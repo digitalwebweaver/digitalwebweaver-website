@@ -11,9 +11,31 @@ export const metadata: Metadata = {
   openGraph: { url: "/products/", type: "website" },
 };
 
+const PRODUCTS_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Ready-Made Software Products",
+  url: "https://digitalwebweaver.com/products/",
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: readyApps.map((app, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "SoftwareApplication",
+        name: app.name,
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web, iOS, Android",
+        url: `https://digitalwebweaver.com${app.href.replace(/\/$/, "")}/`,
+      },
+    })),
+  },
+};
+
 export default function AppsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(PRODUCTS_SCHEMA) }} />
       {/* ===== HERO ===== */}
       <section className="page-hero">
         <div className="wrap">

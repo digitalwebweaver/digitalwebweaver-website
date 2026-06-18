@@ -16,8 +16,24 @@ export const metadata: Metadata = {
 
 export default async function PortfolioPage() {
   const projects = await getPublishedProjects();
+  const portfolioSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Portfolio & Case Studies",
+    url: "https://digitalwebweaver.com/portfolio/",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: projects.map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: p.title,
+        url: `https://digitalwebweaver.com/portfolio/${p.slug}/`,
+      })),
+    },
+  };
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }} />
       {/* ===== HERO ===== */}
       <section className="page-hero">
         <div className="wrap">

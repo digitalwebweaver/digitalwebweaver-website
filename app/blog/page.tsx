@@ -19,8 +19,24 @@ export default async function BlogPage() {
   const posts = await getPublishedPosts();
   const [featured, ...rest] = posts;
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Digital Web Weaver Blog",
+    url: "https://digitalwebweaver.com/blog/",
+    publisher: { "@id": "https://digitalwebweaver.com/#organization" },
+    blogPost: posts.map((p) => ({
+      "@type": "BlogPosting",
+      headline: p.title,
+      url: `https://digitalwebweaver.com/blog/${p.slug}/`,
+      datePublished: p.published_at || p.created_at,
+      author: { "@type": "Person", name: p.author_name || "Kamlesh Nishad" },
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       {/* ===== HERO ===== */}
       <section className="page-hero" style={{ paddingBottom: "56px" }}>
         <div className="wrap">

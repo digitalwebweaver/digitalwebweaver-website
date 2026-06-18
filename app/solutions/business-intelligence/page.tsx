@@ -6,5 +6,6 @@ export const metadata: Metadata = {
   description: data.meta.description,
   alternates: { canonical: "/solutions/business-intelligence/" },
   openGraph: { url: "/solutions/business-intelligence/", type: "website" },
+  robots: { index: false, follow: true },
 };
 export default function Page() { return <ServicePage data={data} />; }

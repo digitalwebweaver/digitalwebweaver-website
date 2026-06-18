@@ -19,12 +19,19 @@ const organizationSchema = {
         height: 512,
       },
       foundingDate: "2013-03-18",
+      founder: {
+        "@type": "Person",
+        name: "Kamlesh Nishad",
+        jobTitle: "CEO & Founder",
+        url: "https://www.linkedin.com/in/kamleshnishad/",
+        sameAs: ["https://www.linkedin.com/in/kamleshnishad/"],
+      },
       contactPoint: {
         "@type": "ContactPoint",
         email: "info@digitalwebweaver.com",
         telephone: "+91-9712515105",
         contactType: "customer service",
-        availableLanguage: ["English", "Hindi", "Gujarati"],
+        availableLanguage: ["English", "Hindi", "Gujarati", "French"],
       },
       address: {
         "@type": "PostalAddress",

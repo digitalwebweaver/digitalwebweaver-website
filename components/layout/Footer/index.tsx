@@ -109,6 +109,9 @@ export default function Footer() {
             <Link href="/web-design-surat/"><span className="tagdot"></span>Surat</Link>
             <Link href="/web-design-rajkot/"><span className="tagdot"></span>Rajkot</Link>
             <Link href="/web-design-gujarat/"><span className="tagdot"></span>Gujarat</Link>
+            <Link href="/software-development-company-uk/"><span className="tagdot"></span>United Kingdom</Link>
+            <Link href="/software-development-company-south-africa/"><span className="tagdot"></span>South Africa</Link>
+            <Link href="/agence-developpement-web-abidjan/"><span className="tagdot"></span>Abidjan (FR)</Link>
           </div>
 
           <div className="foot-col">

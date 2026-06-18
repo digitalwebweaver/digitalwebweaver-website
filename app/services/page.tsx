@@ -31,9 +31,26 @@ const SERVICES = [
   { icon: "🏗️", label: "SaaS Development", href: "/saas-development/" },
 ];
 
+const SERVICES_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Software Development Services",
+  url: "https://digitalwebweaver.com/services/",
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: SERVICES.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: s.label,
+      url: `https://digitalwebweaver.com${s.href}`,
+    })),
+  },
+};
+
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICES_SCHEMA) }} />
       <section className="hero sec">
         <div className="wrap">
           <span className="eyebrow">All Services</span>

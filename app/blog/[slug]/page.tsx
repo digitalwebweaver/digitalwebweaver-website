@@ -129,6 +129,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       "@type": "WebPage",
       "@id": `${SITE_URL}/blog/${post.slug}/`,
     },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".lead", ".faq-q", ".faq-a"],
+    },
   };
 
   const breadcrumbSchema = {

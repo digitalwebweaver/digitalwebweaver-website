@@ -10,9 +10,31 @@ export const metadata: Metadata = {
   openGraph: { url: "/about/", type: "website" },
 };
 
+const ABOUT_SCHEMA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      url: "https://digitalwebweaver.com/about/",
+      name: "About Digital Web Weaver",
+      mainEntity: { "@id": "https://digitalwebweaver.com/#organization" },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://digitalwebweaver.com/#kamlesh",
+      name: "Kamlesh Nishad",
+      jobTitle: "CEO & Founder",
+      worksFor: { "@id": "https://digitalwebweaver.com/#organization" },
+      url: "https://www.linkedin.com/in/kamleshnishad/",
+      sameAs: ["https://www.linkedin.com/in/kamleshnishad/"],
+    },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ABOUT_SCHEMA) }} />
       {/* ===== HERO ===== */}
       <section className="page-hero">
         <div className="wrap">
