@@ -47,6 +47,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // ── Homepage ──────────────────────────────────────────────────────────────
     url("/", 1.0, "weekly"),
 
+    // ── Tools / lead magnets ──────────────────────────────────────────────────
+    url("/cost-estimator/", 0.85, "monthly"),
+
     // ── Primary local + core service pages ───────────────────────────────────
     url("/web-design-vadodara/", 0.9),
     url("/web-design-gujarat/", 0.9),
