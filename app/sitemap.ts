@@ -116,7 +116,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url("/rideeasy/", 0.65),
     url("/schoolhub/", 0.65),
     url("/clinicflow/", 0.65),
-    url("/vetcare/", 0.65),
+    url("/vetcare/", 0.75),
     url("/salonbook/", 0.65),
     url("/pesttrack/", 0.65),
     url("/chemsupply/", 0.65),
