@@ -1,7 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import type { Metadata } from "next";
 
 const DEMO_HREF = "/contact/";
 
@@ -135,8 +134,27 @@ const FAQS = [
 export default function SolarFlowPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeFeature, setActiveFeature] = useState("crm");
+  const [activeStage, setActiveStage] = useState(0);
+  const [stageAuto, setStageAuto] = useState(true);
+  const [formName, setFormName] = useState("");
+  const [formPhone, setFormPhone] = useState("");
+  const [formCompany, setFormCompany] = useState("");
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const activeTab = FEATURES.find(f => f.id === activeFeature)!;
+
+  useEffect(() => {
+    if (!stageAuto) return;
+    const t = setInterval(() => {
+      setActiveStage(s => (s + 1) % SUBSIDY_STAGES.length);
+    }, 1800);
+    return () => clearInterval(t);
+  }, [stageAuto]);
+
+  function handleFormSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setFormSubmitted(true);
+  }
 
   return (
     <>
@@ -185,16 +203,58 @@ export default function SolarFlowPage() {
               </div>
             </div>
 
-            <div className="page-visual reveal">
-              <div className="pv-blob" />
-              {/* Solar panel icon */}
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                <circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>
-              </svg>
-              <div className="pv-badge">
-                <div className="pvb-n">₹78k</div>
-                <div className="pvb-l">Subsidy protected</div>
-              </div>
+            {/* Lead form */}
+            <div className="reveal" style={{ background: "var(--paper)", border: "1px solid var(--line)", borderRadius: 16, padding: "32px 28px", boxShadow: "0 8px 40px rgba(0,0,0,.08)", alignSelf: "flex-start" }}>
+              {formSubmitted ? (
+                <div style={{ textAlign: "center", padding: "20px 0" }}>
+                  <div style={{ fontSize: 44, marginBottom: 16 }}>✅</div>
+                  <h3 style={{ marginBottom: 8, color: "var(--ink)" }}>We'll reach out within 24 hours</h3>
+                  <p style={{ color: "var(--muted)", fontSize: 14 }}>Our team will contact you at <strong>{formPhone}</strong> to schedule your demo.</p>
+                </div>
+              ) : (
+                <>
+                  <div style={{ fontWeight: 700, fontSize: 19, color: "var(--ink)", marginBottom: 4 }}>Book a free demo</div>
+                  <p style={{ fontSize: 13.5, color: "var(--muted)", marginBottom: 22, lineHeight: 1.5 }}>See the subsidy tracker, Smart Quote &amp; AI assistants live. No commitment.</p>
+                  <form onSubmit={handleFormSubmit} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                    <div>
+                      <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "var(--ink-2)", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.08em" }}>Your name *</label>
+                      <input
+                        required
+                        type="text"
+                        placeholder="Kamlesh Patel"
+                        value={formName}
+                        onChange={e => setFormName(e.target.value)}
+                        style={{ width: "100%", padding: "10px 14px", border: "1px solid var(--line)", borderRadius: 8, fontSize: 14, color: "var(--ink)", background: "var(--paper-2)", outline: "none", boxSizing: "border-box" }}
+                      />
+                    </div>
+                    <div>
+                      <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "var(--ink-2)", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.08em" }}>WhatsApp / Phone *</label>
+                      <input
+                        required
+                        type="tel"
+                        placeholder="+91 98765 43210"
+                        value={formPhone}
+                        onChange={e => setFormPhone(e.target.value)}
+                        style={{ width: "100%", padding: "10px 14px", border: "1px solid var(--line)", borderRadius: 8, fontSize: 14, color: "var(--ink)", background: "var(--paper-2)", outline: "none", boxSizing: "border-box" }}
+                      />
+                    </div>
+                    <div>
+                      <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "var(--ink-2)", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.08em" }}>Company name</label>
+                      <input
+                        type="text"
+                        placeholder="Meetsun Renewables"
+                        value={formCompany}
+                        onChange={e => setFormCompany(e.target.value)}
+                        style={{ width: "100%", padding: "10px 14px", border: "1px solid var(--line)", borderRadius: 8, fontSize: 14, color: "var(--ink)", background: "var(--paper-2)", outline: "none", boxSizing: "border-box" }}
+                      />
+                    </div>
+                    <button type="submit" className="btn btn-primary" style={{ width: "100%", justifyContent: "center", marginTop: 4, fontSize: 15 }}>
+                      Book my demo ↗
+                    </button>
+                    <p style={{ fontSize: 12, color: "var(--muted)", textAlign: "center", margin: 0 }}>No spam. We'll contact you within 24 hours.</p>
+                  </form>
+                </>
+              )}
             </div>
           </div>
 
@@ -269,27 +329,27 @@ export default function SolarFlowPage() {
       </section>
 
       {/* ── HOW IT WORKS ─────────────────────────────────────────── */}
-      <section className="sec" id="how-it-works">
+      <section className="sec" id="how-it-works" style={{ background: "var(--paper-2)" }}>
         <div className="wrap">
-          <div className="sec-head reveal">
-            <div>
-              <span className="eyebrow">How it works</span>
-              <h2 style={{ marginTop: 18 }}>From bill snap to subsidy credited — four steps</h2>
-            </div>
-            <p>The entire solar sales and project lifecycle, done in SolarFlow.</p>
+          <div style={{ textAlign: "center", marginBottom: 48 }} className="reveal">
+            <span className="eyebrow">How it works</span>
+            <h2 style={{ marginTop: 14, maxWidth: 600, margin: "14px auto 0" }}>From bill snap to subsidy credited</h2>
           </div>
-          <div className="psteps reveal">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }} className="reveal">
             {[
-              { n: "01", h: "Snap the bill", d: "Upload the customer's electricity bill photo. AI extracts consumer number, sanctioned load, and units. Smart Quote recommends kW, calculates subsidy, and builds the proposal — you confirm and send." },
-              { n: "02", h: "Get a subsidy-ready quote signed", d: "Branded PDF with BOM, PM Surya Ghar subsidy, net cost, and EMI options. The Net-Meter Pre-Check validates compliance before you survey. Win the job with confidence." },
-              { n: "03", h: "Track it through every subsidy stage", d: "6-stage state machine from GEDA approval to MGVCL net-metering to subsidy credited. SLA timers on every stage. Compliance checklist. ALMM validation. Nothing drops." },
-              { n: "04", h: "Service it for life", d: "Underproduction Sentinel watches every system. Auto-raises a ticket before the customer notices. AMC contracts, service tickets, and warranty tracking — all in one place." },
-            ].map(s => (
-              <div key={s.n} className="pstep">
-                <div className="pn">{s.n}</div>
+              { n: "01", icon: "📸", h: "Snap the bill", d: "Upload the customer's electricity bill photo. AI extracts consumer number, sanctioned load, and units — recommends the right kW, calculates PM Surya Ghar subsidy, builds the proposal. You confirm and send." },
+              { n: "02", icon: "📄", h: "Get a subsidy-ready quote signed", d: "Branded PDF with BOM, PM Surya Ghar subsidy, net cost, and EMI options. Net-Meter Pre-Check validates compliance before you survey. Win the job before competitors finish quoting." },
+              { n: "03", icon: "📊", h: "Track every subsidy stage", d: "6-stage state machine from GEDA approval to MGVCL net-metering to subsidy credited. SLA timers on every stage. ALMM validation. Compliance checklist. Nothing drops." },
+              { n: "04", icon: "🔧", h: "Service it for life", d: "Underproduction Sentinel watches every system. Auto-raises a ticket before the customer notices. AMC contracts, service tickets, and warranty — all in one place." },
+            ].map((s, i) => (
+              <div key={s.n} style={{ background: "var(--paper)", border: "1px solid var(--line)", borderRadius: 14, padding: "28px 24px", display: "flex", gap: 18, alignItems: "flex-start" }}>
+                <div style={{ flexShrink: 0 }}>
+                  <div style={{ width: 48, height: 48, borderRadius: 12, background: i === 0 || i === 2 ? "var(--ink)" : "var(--accent)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>{s.icon}</div>
+                  <div style={{ fontSize: 11, fontWeight: 700, fontFamily: "var(--mono)", color: "var(--muted)", marginTop: 8, textAlign: "center" }}>{s.n}</div>
+                </div>
                 <div>
-                  <h3>{s.h}</h3>
-                  <p>{s.d}</p>
+                  <h3 style={{ fontSize: 16, fontWeight: 700, color: "var(--ink)", marginBottom: 10, lineHeight: 1.3 }}>{s.h}</h3>
+                  <p style={{ margin: 0, fontSize: 14, color: "var(--muted)", lineHeight: 1.65 }}>{s.d}</p>
                 </div>
               </div>
             ))}
@@ -337,24 +397,52 @@ export default function SolarFlowPage() {
             <p style={{ color: "rgba(255,255,255,.65)" }}>Six stages. SLA timers on every one. A 'needs attention' alert list so nothing stalls in silence.</p>
           </div>
 
-          {/* Pipeline visual */}
+          {/* Animated pipeline */}
           <div className="reveal" style={{ overflowX: "auto", paddingBottom: 8 }}>
             <div style={{ display: "flex", gap: 0, minWidth: 600, position: "relative" }}>
-              {SUBSIDY_STAGES.map((s, i) => (
-                <div key={s.n} style={{ flex: 1, position: "relative" }}>
-                  {/* Connector line */}
-                  {i < SUBSIDY_STAGES.length - 1 && (
-                    <div style={{ position: "absolute", top: 28, left: "50%", width: "100%", height: 2, background: "linear-gradient(to right, var(--accent), rgba(236,65,23,.3))", zIndex: 0 }} />
-                  )}
-                  <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "0 8px" }}>
-                    <div style={{ width: 56, height: 56, borderRadius: "50%", background: i === 5 ? "var(--accent)" : "rgba(255,255,255,.08)", border: "2px solid " + (i === 5 ? "var(--accent)" : "rgba(255,255,255,.2)"), display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px", fontSize: 13, fontWeight: 700, fontFamily: "var(--mono)", color: i === 5 ? "#fff" : "rgba(255,255,255,.7)" }}>
-                      {s.n}
+              {SUBSIDY_STAGES.map((s, i) => {
+                const isActive = i === activeStage;
+                const isPast = i < activeStage;
+                return (
+                  <div key={s.n} style={{ flex: 1, position: "relative", cursor: "pointer" }}
+                    onClick={() => { setActiveStage(i); setStageAuto(false); }}>
+                    {/* Connector line */}
+                    {i < SUBSIDY_STAGES.length - 1 && (
+                      <div style={{ position: "absolute", top: 27, left: "50%", width: "100%", height: 2, zIndex: 0,
+                        background: isPast || isActive ? "var(--accent)" : "rgba(255,255,255,.12)",
+                        transition: "background 0.5s ease" }} />
+                    )}
+                    <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "0 8px" }}>
+                      <div style={{
+                        width: 56, height: 56, borderRadius: "50%", margin: "0 auto 12px",
+                        display: "flex", alignItems: "center", justifyContent: "center",
+                        fontSize: 13, fontWeight: 700, fontFamily: "var(--mono)",
+                        transition: "all 0.4s ease",
+                        background: isActive ? "var(--accent)" : isPast ? "rgba(236,65,23,.25)" : "rgba(255,255,255,.06)",
+                        border: "2px solid " + (isActive ? "var(--accent)" : isPast ? "rgba(236,65,23,.5)" : "rgba(255,255,255,.18)"),
+                        color: isActive ? "#fff" : isPast ? "rgba(236,65,23,.9)" : "rgba(255,255,255,.55)",
+                        boxShadow: isActive ? "0 0 0 6px rgba(236,65,23,.2)" : "none",
+                        transform: isActive ? "scale(1.12)" : "scale(1)",
+                      }}>
+                        {isPast && !isActive ? "✓" : s.n}
+                      </div>
+                      <div style={{ fontSize: 12, fontWeight: 600, lineHeight: 1.4, whiteSpace: "pre-line", marginBottom: 6, transition: "color 0.4s",
+                        color: isActive ? "var(--accent)" : isPast ? "rgba(255,255,255,.7)" : "rgba(255,255,255,.45)" }}>{s.label}</div>
+                      <div style={{ fontSize: 11, color: isActive ? "rgba(255,255,255,.7)" : "rgba(255,255,255,.3)", lineHeight: 1.3, transition: "color 0.4s" }}>{s.note}</div>
                     </div>
-                    <div style={{ fontSize: 12, fontWeight: 600, color: i === 5 ? "var(--accent)" : "rgba(255,255,255,.85)", lineHeight: 1.4, whiteSpace: "pre-line", marginBottom: 6 }}>{s.label}</div>
-                    <div style={{ fontSize: 11, color: "rgba(255,255,255,.45)", lineHeight: 1.3 }}>{s.note}</div>
                   </div>
+                );
+              })}
+            </div>
+            {/* Active stage detail */}
+            <div style={{ marginTop: 28, padding: "18px 24px", background: "rgba(236,65,23,.1)", border: "1px solid rgba(236,65,23,.3)", borderRadius: 10, minHeight: 56, transition: "all 0.3s ease" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <div style={{ width: 28, height: 28, borderRadius: "50%", background: "var(--accent)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, fontWeight: 700, color: "#fff", flexShrink: 0 }}>{SUBSIDY_STAGES[activeStage].n}</div>
+                <div>
+                  <div style={{ fontWeight: 700, color: "#fff", fontSize: 14 }}>{SUBSIDY_STAGES[activeStage].label.replace("\n", " ")}</div>
+                  <div style={{ fontSize: 13, color: "rgba(255,255,255,.6)", marginTop: 2 }}>{SUBSIDY_STAGES[activeStage].note} · Click any stage to explore</div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
 
@@ -542,44 +630,6 @@ export default function SolarFlowPage() {
                 <p style={{ margin: 0, fontSize: 14, color: "var(--muted)", lineHeight: 1.6 }}>{p.win}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── SOCIAL PROOF ─────────────────────────────────────────── */}
-      <section className="dark sec">
-        <div className="wrap">
-          <div className="sec-head reveal">
-            <div>
-              <span className="eyebrow on-dark">Trusted by</span>
-              <h2 style={{ marginTop: 18, color: "var(--on-dark)" }}>Already running in Vadodara</h2>
-            </div>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }} className="reveal">
-            <div style={{ background: "rgba(255,255,255,.06)", border: "1px solid rgba(255,255,255,.12)", borderRadius: 14, padding: "32px 28px" }}>
-              <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 16 }}>Pilot partner</div>
-              <div style={{ fontWeight: 700, fontSize: 22, color: "#fff", marginBottom: 6 }}>Meetsun Renewable Technology</div>
-              <div style={{ fontSize: 14, color: "rgba(255,255,255,.5)", marginBottom: 20 }}>Vadodara, Gujarat · GEDA-empanelled solar installer</div>
-              <div className="quote" style={{ background: "transparent", border: "none", padding: 0, margin: 0 }}>
-                <div className="stars" style={{ marginBottom: 12 }}>★★★★★</div>
-                <p style={{ color: "rgba(255,255,255,.8)", fontSize: 15, lineHeight: 1.7, marginBottom: 16 }}>
-                  "The Net-Meter Pre-Check alone saved us from two MGVCL rejections in the first month. The quote time dropped from half a day to under 15 minutes. This is what we needed."
-                </p>
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <div style={{ width: 40, height: 40, borderRadius: "50%", background: "var(--accent)", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, color: "#fff", fontSize: 14 }}>MR</div>
-                  <div>
-                    <div style={{ fontWeight: 600, color: "#fff", fontSize: 14 }}>Meetsun Renewables Team</div>
-                    <div style={{ fontSize: 13, color: "rgba(255,255,255,.45)" }}>Director · Vadodara</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div style={{ background: "rgba(255,255,255,.04)", border: "1px dashed rgba(255,255,255,.15)", borderRadius: 14, padding: "32px 28px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", gap: 16 }}>
-              <div style={{ fontSize: 32 }}>🌍</div>
-              <div style={{ fontWeight: 700, fontSize: 18, color: "rgba(255,255,255,.8)" }}>South Africa rollout</div>
-              <p style={{ color: "rgba(255,255,255,.45)", fontSize: 14, lineHeight: 1.6, maxWidth: 300 }}>Expanding to South African solar installers in 2025. POPIA compliance, Rand (R) currency, and local DISCOM configurations included.</p>
-              <Link href={DEMO_HREF} className="btn btn-primary" style={{ marginTop: 8 }}>Join the early access list ↗</Link>
-            </div>
           </div>
         </div>
       </section>
