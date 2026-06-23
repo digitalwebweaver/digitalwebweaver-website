@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import FormCard from "@/components/sections/FormCard";
 
 const DEMO_HREF = "/contact/";
 
@@ -136,10 +137,6 @@ export default function SolarFlowPage() {
   const [activeFeature, setActiveFeature] = useState("crm");
   const [activeStage, setActiveStage] = useState(0);
   const [stageAuto, setStageAuto] = useState(true);
-  const [formName, setFormName] = useState("");
-  const [formPhone, setFormPhone] = useState("");
-  const [formCompany, setFormCompany] = useState("");
-  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const activeTab = FEATURES.find(f => f.id === activeFeature)!;
 
@@ -151,10 +148,6 @@ export default function SolarFlowPage() {
     return () => clearInterval(t);
   }, [stageAuto]);
 
-  function handleFormSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setFormSubmitted(true);
-  }
 
   return (
     <>
@@ -204,57 +197,15 @@ export default function SolarFlowPage() {
             </div>
 
             {/* Lead form */}
-            <div className="reveal" style={{ background: "var(--paper)", border: "1px solid var(--line)", borderRadius: 16, padding: "32px 28px", boxShadow: "0 8px 40px rgba(0,0,0,.08)", alignSelf: "flex-start" }}>
-              {formSubmitted ? (
-                <div style={{ textAlign: "center", padding: "20px 0" }}>
-                  <div style={{ fontSize: 44, marginBottom: 16 }}>✅</div>
-                  <h3 style={{ marginBottom: 8, color: "var(--ink)" }}>We'll reach out within 24 hours</h3>
-                  <p style={{ color: "var(--muted)", fontSize: 14 }}>Our team will contact you at <strong>{formPhone}</strong> to schedule your demo.</p>
-                </div>
-              ) : (
-                <>
-                  <div style={{ fontWeight: 700, fontSize: 19, color: "var(--ink)", marginBottom: 4 }}>Book a free demo</div>
-                  <p style={{ fontSize: 13.5, color: "var(--muted)", marginBottom: 22, lineHeight: 1.5 }}>See the subsidy tracker, Smart Quote &amp; AI assistants live. No commitment.</p>
-                  <form onSubmit={handleFormSubmit} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-                    <div>
-                      <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "var(--ink-2)", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.08em" }}>Your name *</label>
-                      <input
-                        required
-                        type="text"
-                        placeholder="Kamlesh Patel"
-                        value={formName}
-                        onChange={e => setFormName(e.target.value)}
-                        style={{ width: "100%", padding: "10px 14px", border: "1px solid var(--line)", borderRadius: 8, fontSize: 14, color: "var(--ink)", background: "var(--paper-2)", outline: "none", boxSizing: "border-box" }}
-                      />
-                    </div>
-                    <div>
-                      <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "var(--ink-2)", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.08em" }}>WhatsApp / Phone *</label>
-                      <input
-                        required
-                        type="tel"
-                        placeholder="+91 98765 43210"
-                        value={formPhone}
-                        onChange={e => setFormPhone(e.target.value)}
-                        style={{ width: "100%", padding: "10px 14px", border: "1px solid var(--line)", borderRadius: 8, fontSize: 14, color: "var(--ink)", background: "var(--paper-2)", outline: "none", boxSizing: "border-box" }}
-                      />
-                    </div>
-                    <div>
-                      <label style={{ display: "block", fontSize: 12, fontWeight: 600, color: "var(--ink-2)", marginBottom: 6, textTransform: "uppercase", letterSpacing: "0.08em" }}>Company name</label>
-                      <input
-                        type="text"
-                        placeholder="Meetsun Renewables"
-                        value={formCompany}
-                        onChange={e => setFormCompany(e.target.value)}
-                        style={{ width: "100%", padding: "10px 14px", border: "1px solid var(--line)", borderRadius: 8, fontSize: 14, color: "var(--ink)", background: "var(--paper-2)", outline: "none", boxSizing: "border-box" }}
-                      />
-                    </div>
-                    <button type="submit" className="btn btn-primary" style={{ width: "100%", justifyContent: "center", marginTop: 4, fontSize: 15 }}>
-                      Book my demo ↗
-                    </button>
-                    <p style={{ fontSize: 12, color: "var(--muted)", textAlign: "center", margin: 0 }}>No spam. We'll contact you within 24 hours.</p>
-                  </form>
-                </>
-              )}
+            <div className="reveal">
+              <FormCard
+                variant="demo"
+                tag="Book a demo"
+                heading="See SolarFlow live"
+                sub="Subsidy tracker, Smart Quote & AI assistants — 30-min walkthrough, free."
+                submitLabel="Book my demo"
+                note="No commitment · We respond within 24 hours"
+              />
             </div>
           </div>
 
@@ -555,7 +506,7 @@ export default function SolarFlowPage() {
               <span className="eyebrow">Outcomes</span>
               <h2 style={{ marginTop: 18 }}>What changes when you run on SolarFlow</h2>
             </div>
-            <p>Directional results from the Meetsun Renewable Technology pilot, Vadodara.</p>
+            <p>Based on early pilot results from Gujarat-based solar installers.</p>
           </div>
           <div className="stats reveal" style={{ marginBottom: 48 }}>
             <div className="stat"><div className="num">~3 hrs</div><div className="lab">saved per quote</div></div>

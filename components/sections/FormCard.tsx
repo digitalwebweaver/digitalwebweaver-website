@@ -7,7 +7,7 @@ interface Props {
   sub?: string;
   submitLabel?: string;
   note?: string;
-  variant?: "service" | "hire";
+  variant?: "service" | "hire" | "demo";
 }
 
 export default function FormCard({
@@ -105,6 +105,41 @@ export default function FormCard({
             <div className="fc-group">
               <label>Describe your project</label>
               <textarea rows={3} placeholder="What it does, who uses it, any tech preferences..." value={fields.description} onChange={(e) => set("description", e.target.value)} />
+            </div>
+          </>
+        ) : variant === "demo" ? (
+          <>
+            <div className="fc-row">
+              <div className="fc-group">
+                <label>Name</label>
+                <input type="text" placeholder="Your name" required value={fields.name} onChange={(e) => set("name", e.target.value)} />
+              </div>
+              <div className="fc-group">
+                <label>Work email</label>
+                <input type="email" placeholder="you@company.com" required value={fields.email} onChange={(e) => set("email", e.target.value)} />
+              </div>
+            </div>
+            <div className="fc-group">
+              <label>WhatsApp / Phone</label>
+              <input type="tel" placeholder="+91 98765 43210" value={fields.phone} onChange={(e) => set("phone", e.target.value)} />
+            </div>
+            <div className="fc-group">
+              <label>Company name</label>
+              <input type="text" placeholder="Your solar company" value={fields.service} onChange={(e) => set("service", e.target.value)} />
+            </div>
+            <div className="fc-group">
+              <label>Monthly installs</label>
+              <select value={fields.timeline} onChange={(e) => set("timeline", e.target.value)}>
+                <option>1–10 installs / month</option>
+                <option>10–50 installs / month</option>
+                <option>50–200 installs / month</option>
+                <option>200+ installs / month</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div className="fc-group">
+              <label>What would you like to see?</label>
+              <textarea rows={2} placeholder="e.g. Smart Quote, subsidy tracker, Net-Meter Pre-Check…" value={fields.description} onChange={(e) => set("description", e.target.value)} />
             </div>
           </>
         ) : (
