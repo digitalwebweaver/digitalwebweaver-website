@@ -216,7 +216,7 @@ export default function Header() {
 
               {/* ══ READY APPS DROPDOWN ══ */}
               <div className="nav-item has-drop">
-                <a href="#">Ready Apps {chevSvg}</a>
+                <a href="#">Our Products {chevSvg}</a>
                 <div className="drop-menu apps-menu">
                   <Link className="apps-lnk" href="/educore">
                     <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3L2 8l10 5 10-5-10-5z"/><path d="M6 10v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
@@ -281,6 +281,10 @@ export default function Header() {
                   <Link className="apps-lnk" href="/callmate-ai">
                     <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/><circle cx="18" cy="6" r="3"/></svg></div>
                     <div className="apps-lnk-txt"><span className="apps-lnk-short">CallMate AI</span><span className="apps-lnk-full">AI Voice Calling for Business</span></div>
+                  </Link>
+                  <Link className="apps-lnk" href="/solarflow/">
+                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+                    <div className="apps-lnk-txt"><span className="apps-lnk-short">SolarFlow</span><span className="apps-lnk-full">ERP + CRM for Solar Installers</span></div>
                   </Link>
                 </div>
               </div>

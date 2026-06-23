@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const crumbs = (name: string) => [
   { label: "Home", href: "/" },
-  { label: "Ready Apps", href: "/products/" },
+  { label: "Our Products", href: "/products/" },
   { label: name },
 ];
 
@@ -103,7 +103,7 @@ export const chatflowAi: ServicePageData = {
     heading: "See it handle a real customer conversation before you decide anything",
     body: "We'll set up a live chat demo using your products, services, and FAQs — so you can see exactly how it would talk to your customers.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free live chat demo", "Live in 2–3 weeks", "24/7 customer coverage"],
   },
   related: [
@@ -210,7 +210,7 @@ export const telecare: ServicePageData = {
     heading: "See a virtual consultation run end-to-end — booking to e-prescription",
     body: "Book a walkthrough configured around your specialities and consultation style — see exactly how TeleCare would extend your practice.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free 30-minute walkthrough", "Live in 5–7 weeks", "One record, virtual & in-person"],
   },
   related: [
@@ -317,7 +317,7 @@ export const insuredesk: ServicePageData = {
     heading: "InsureDesk Insurance CRM — Stop Losing Renewals to a Missed Reminder",
     body: "We'll walk through a real policy lifecycle — from lead to renewal — in InsureDesk, configured around your agency's product lines and team.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free workflow walkthrough", "Live in 4–6 weeks", "Automated renewal reminders"],
   },
   related: [
@@ -424,7 +424,7 @@ export const callmateAi: ServicePageData = {
     heading: "Hear it handle a real business call before you decide anything",
     body: "We'll set up a live demo call using your business's actual information and FAQs — so you can hear exactly how it would sound to your customers.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free live call demo", "Live in 3–4 weeks", "24/7 call coverage"],
   },
   related: [

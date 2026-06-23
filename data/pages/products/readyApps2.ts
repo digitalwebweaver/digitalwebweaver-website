@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const crumbs = (name: string) => [
   { label: "Home", href: "/" },
-  { label: "Ready Apps", href: "/products/" },
+  { label: "Our Products", href: "/products/" },
   { label: name },
 ];
 
@@ -103,7 +103,7 @@ export const rideeasy: ServicePageData = {
     heading: "Stop renting your fleet's visibility from someone else's app",
     body: "We'll walk a live ride through the rider, driver, and dispatch apps — branded with your fleet's identity — so you see exactly what your riders would experience.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free live walkthrough", "Live in 6–8 weeks", "Zero commission to us"],
   },
   related: [
@@ -210,7 +210,7 @@ export const schoolhub: ServicePageData = {
     heading: "Give your school the organised, connected feel parents notice",
     body: "Book a walkthrough configured around your school's grades, fee structure, and communication style — see exactly how SchoolHub would run your day-to-day.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free 30-minute walkthrough", "Live in 5–7 weeks", "Branded parent & staff app"],
   },
   related: [
@@ -317,7 +317,7 @@ export const clinicflow: ServicePageData = {
     heading: "See a patient visit move from booking to billing — in one system",
     body: "Book a walkthrough configured around your clinic's departments and workflow — see exactly how ClinicFlow would run your daily operations.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free 30-minute walkthrough", "Live in 5–6 weeks", "One record across your clinic"],
   },
   related: [
@@ -424,7 +424,7 @@ export const vetcare: ServicePageData = {
     heading: "Give every pet a connected record — and every owner a reason to return",
     body: "Book a walkthrough configured around your practice's services and patient flow — see exactly how VetCare would run your daily operations.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free 30-minute walkthrough", "Live in 4–6 weeks", "Automated vaccination reminders"],
   },
   related: [

@@ -28,7 +28,7 @@ const SECTIONS = [
   },
   {
     id: "apps",
-    head: "Ready Apps",
+    head: "Our Products",
     links: [
       { label: "EduCore — Learning Management System", href: "/educore" },
       { label: "SolarOps — ERP for Solar Panel Installer", href: "/solarops" },
@@ -46,6 +46,7 @@ const SECTIONS = [
       { label: "TeleCare — Telemedicine for Clinics / Hospitals", href: "/telecare" },
       { label: "InsureDesk — Insurance Management CRM", href: "/insuredesk" },
       { label: "CallMate AI — AI Voice Calling for Business", href: "/callmate-ai" },
+      { label: "SolarFlow — ERP + CRM for Solar Installers", href: "/solarflow/" },
     ],
   },
   {

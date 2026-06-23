@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const crumbs = (name: string) => [
   { label: "Home", href: "/" },
-  { label: "Ready Apps", href: "/products/" },
+  { label: "Our Products", href: "/products/" },
   { label: name },
 ];
 
@@ -103,7 +103,7 @@ export const salonbook: ServicePageData = {
     heading: "Give your front desk the polish your styling chairs already have",
     body: "Book a walkthrough configured around your services and team — see exactly how SalonBook would run your salon's daily flow.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free 30-minute walkthrough", "Live in 3–5 weeks", "Fully branded to your salon"],
   },
   related: [
@@ -210,7 +210,7 @@ export const pesttrack: ServicePageData = {
     heading: "Stop losing renewals to a missed reminder",
     body: "We'll walk through a real job — from booking to completion to the next scheduled visit — in PestTrack, configured around your operation.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free workflow walkthrough", "Live in 3–5 weeks", "Field + office in one system"],
   },
   related: [
@@ -317,7 +317,7 @@ export const chemsupply: ServicePageData = {
     heading: "Put traceability and compliance at the centre of your operations",
     body: "We'll walk through an order — from purchase to dispatch, with batch and compliance data attached — in ChemSupply, configured around your product categories.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free workflow walkthrough", "Live in 6–8 weeks", "Built-in batch traceability"],
   },
   related: [
@@ -424,7 +424,7 @@ export const clinicvoiceAi: ServicePageData = {
     heading: "Hear it handle a real patient call before you decide anything",
     body: "We'll set up a live demo call using your clinic's actual services and FAQs — so you can hear exactly how it would sound to your patients.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free live call demo", "Live in 3–4 weeks", "24/7 patient call coverage"],
   },
   related: [

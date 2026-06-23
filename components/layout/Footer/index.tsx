@@ -118,7 +118,7 @@ export default function Footer() {
             <h5>Company</h5>
             <Link href="/about/"><span className="tagdot"></span>About us</Link>
             <Link href="/portfolio/"><span className="tagdot"></span>Our work</Link>
-            <Link href="/products/"><span className="tagdot"></span>Ready Apps</Link>
+            <Link href="/products/"><span className="tagdot"></span>Our Products</Link>
             <Link href="/cost-estimator/"><span className="tagdot"></span>Cost estimator</Link>
             <Link href="/blog/"><span className="tagdot"></span>Blog</Link>
             <Link href="/careers/"><span className="tagdot"></span>Careers</Link>

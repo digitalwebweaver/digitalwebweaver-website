@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const crumbs = (name: string) => [
   { label: "Home", href: "/" },
-  { label: "Ready Apps", href: "/products/" },
+  { label: "Our Products", href: "/products/" },
   { label: name },
 ];
 
@@ -103,7 +103,7 @@ export const educore: ServicePageData = {
     heading: "Stop juggling five tools. Start teaching from one platform.",
     body: "Book a live walkthrough on your own course content — no generic demo, no pressure. We'll show you exactly how EduCore would look as your platform.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free 30-minute walkthrough", "Live in 4–6 weeks", "100% white-labelled"],
   },
   related: [
@@ -210,7 +210,7 @@ export const solarops: ServicePageData = {
     heading: "See your next installation tracked from survey to commissioning",
     body: "We'll walk through a real project lifecycle in SolarOps — live, with your workflow in mind. No generic sales demo.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free workflow walkthrough", "Live in 5–7 weeks", "Field + office in one system"],
   },
   related: [
@@ -317,7 +317,7 @@ export const glowdesk: ServicePageData = {
     heading: "Give your front desk the same polish as your treatment rooms",
     body: "Book a walkthrough configured around your services and client journey — see exactly how GlowDesk would run your clinic.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free 30-minute walkthrough", "Live in 4–5 weeks", "Fully branded to your clinic"],
   },
   related: [
@@ -424,7 +424,7 @@ export const quickbite: ServicePageData = {
     heading: "Stop paying a third of every order to someone else's app",
     body: "We'll walk a live order through the customer, restaurant, and driver apps — branded with your restaurant's identity — so you can see exactly what your customers would experience.",
     primaryCta: { label: "Book a free demo", href: "/contact" },
-    secondaryCta: { label: "See all Ready Apps", href: "/products" },
+    secondaryCta: { label: "See all Our Products", href: "/products" },
     meta: ["Free live walkthrough", "Live in 6–8 weeks", "Zero commission to us"],
   },
   related: [
