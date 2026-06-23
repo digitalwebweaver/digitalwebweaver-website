@@ -125,6 +125,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url("/telecare/", 0.65),
     url("/insuredesk/", 0.65),
     url("/callmate-ai/", 0.65),
+    url("/solarflow/", 0.8),
 
     // ── New service pages (Phase 6) ───────────────────────────────────────────
     url("/custom-software-development/", 0.85),

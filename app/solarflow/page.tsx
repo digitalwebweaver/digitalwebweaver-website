@@ -286,7 +286,7 @@ export default function SolarFlowPage() {
             <span className="eyebrow">How it works</span>
             <h2 style={{ marginTop: 14, maxWidth: 600, margin: "14px auto 0" }}>From bill snap to subsidy credited</h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }} className="reveal">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }} className="reveal">
             {[
               { n: "01", icon: "📸", h: "Snap the bill", d: "Upload the customer's electricity bill photo. AI extracts consumer number, sanctioned load, and units — recommends the right kW, calculates PM Surya Ghar subsidy, builds the proposal. You confirm and send." },
               { n: "02", icon: "📄", h: "Get a subsidy-ready quote signed", d: "Branded PDF with BOM, PM Surya Ghar subsidy, net cost, and EMI options. Net-Meter Pre-Check validates compliance before you survey. Win the job before competitors finish quoting." },
@@ -349,8 +349,8 @@ export default function SolarFlowPage() {
           </div>
 
           {/* Animated pipeline */}
-          <div className="reveal" style={{ overflowX: "auto", paddingBottom: 8 }}>
-            <div style={{ display: "flex", gap: 0, minWidth: 600, position: "relative" }}>
+          <div className="reveal" style={{ overflowX: "auto", paddingBottom: 8, WebkitOverflowScrolling: "touch" as "touch" }}>
+            <div style={{ display: "flex", gap: 0, minWidth: "min(600px, 100%)", position: "relative" }}>
               {SUBSIDY_STAGES.map((s, i) => {
                 const isActive = i === activeStage;
                 const isPast = i < activeStage;
@@ -398,7 +398,7 @@ export default function SolarFlowPage() {
           </div>
 
           {/* Net-Meter Pre-Check callout */}
-          <div className="reveal" style={{ marginTop: 40, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+          <div className="reveal" style={{ marginTop: 40, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
             <div style={{ background: "rgba(255,255,255,.05)", border: "1px solid rgba(236,65,23,.3)", borderRadius: 12, padding: "24px 28px" }}>
               <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 10 }}>⚡ Net-Meter Pre-Check (AI)</div>
               <p style={{ color: "rgba(255,255,255,.8)", fontSize: 15, lineHeight: 1.6, margin: 0 }}>
