@@ -202,19 +202,23 @@ export default function HireDedicatedClient() {
             </div>
             <p>We don&apos;t place generalists. Every engineer we deploy is a specialist in their domain.</p>
           </div>
-          <div className="chip-grid reveal">
-            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="9" /><path d="M9 8h2v8M13 8l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" /></svg><span>React</span></div>
-            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M6 12l6-6 6 6-6 6z" /></svg><span>Vue.js</span></div>
-            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeLinejoin="round" /></svg><span>Angular</span></div>
-            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M8 6L3 12l5 6M16 6l5 6-5 6" strokeLinecap="round" strokeLinejoin="round" /></svg><span>Node.js</span></div>
-            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.8 1-6.3L3 8.9 9 8z" strokeLinejoin="round" /></svg><span>Python</span></div>
-            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M9 9h6M9 12h6M9 15h4" strokeLinecap="round" /></svg><span>Laravel</span></div>
-            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="6" y="2" width="12" height="20" rx="3" /><path d="M11 18h2" strokeLinecap="round" /></svg><span>React Native</span></div>
-            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" strokeLinejoin="round" /></svg><span>Flutter</span></div>
-            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 9l9-6 9 6v9a2 2 0 01-2 2H5a2 2 0 01-2-2z" /><path d="M9 21V13h6v8" /></svg><span>AWS</span></div>
-            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" /></svg><span>DevOps</span></div>
-            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" strokeLinecap="round" /></svg><span>AI / ML</span></div>
-            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5v6c0 1.7 4 3 9 3s9-1.3 9-3V5M3 11v6c0 1.7 4 3 9 3s9-1.3 9-3v-6" /></svg><span>PostgreSQL</span></div>
+          <div className="chips reveal">
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="9" /><path d="M9 8h2v8M13 8l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" /></svg>React</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M6 12l6-6 6 6-6 6z" /></svg>Vue.js</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeLinejoin="round" /></svg>Angular</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M8 6L3 12l5 6M16 6l5 6-5 6" strokeLinecap="round" strokeLinejoin="round" /></svg>Node.js</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.8 1-6.3L3 8.9 9 8z" strokeLinejoin="round" /></svg>Python</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M9 9h6M9 12h6M9 15h4" strokeLinecap="round" /></svg>Laravel</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="6" y="2" width="12" height="20" rx="3" /><path d="M11 18h2" strokeLinecap="round" /></svg>React Native</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" strokeLinejoin="round" /></svg>Flutter</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 9l9-6 9 6v9a2 2 0 01-2 2H5a2 2 0 01-2-2z" /><path d="M9 21V13h6v8" /></svg>AWS</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" /></svg>DevOps</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" strokeLinecap="round" /></svg>AI / ML</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5v6c0 1.7 4 3 9 3s9-1.3 9-3V5M3 11v6c0 1.7 4 3 9 3s9-1.3 9-3v-6" /></svg>PostgreSQL</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4" strokeLinecap="round"/></svg>TypeScript</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>Docker</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2" strokeLinecap="round"/></svg>FastAPI</div>
+            <div className="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round"/></svg>GraphQL</div>
           </div>
         </div>
       </section>
@@ -230,63 +234,37 @@ export default function HireDedicatedClient() {
             <p>We&apos;ve built a pipeline that gets vetted senior engineers productive on your codebase fast.</p>
           </div>
           <div className="psteps reveal">
-            <div className="ps">
-              <div className="ps-n">01</div>
-              <div>
-                <h4>Tell us what you need — 30 min</h4>
-                <p>A short call to understand your stack, team size, and the role you need to fill. We confirm availability within a few hours.</p>
-              </div>
+            <div className="pstep">
+              <h4>Tell us what you need — 30 min</h4>
+              <p>A short call to understand your stack, team size, and the role you need to fill. We confirm availability within a few hours.</p>
             </div>
-            <div className="ps">
-              <div className="ps-n">02</div>
-              <div>
-                <h4>We shortlist 3 profiles — 24 hrs</h4>
-                <p>We pick senior engineers from our bench who match your tech stack and domain. You get CVs, GitHub links, and a short video intro from each.</p>
-              </div>
+            <div className="pstep">
+              <h4>We shortlist 3 profiles — 24 hrs</h4>
+              <p>We pick senior engineers from our bench who match your tech stack and domain. You get CVs, GitHub links, and a short video intro from each.</p>
             </div>
-            <div className="ps">
-              <div className="ps-n">03</div>
-              <div>
-                <h4>You interview and select — 48 hrs</h4>
-                <p>Brief 30-minute technical chat with each candidate. You choose who joins. If you&apos;re not satisfied, we replace them free of charge.</p>
-              </div>
+            <div className="pstep">
+              <h4>You interview and select — 48 hrs</h4>
+              <p>Brief 30-minute technical chat with each candidate. You choose who joins. If you&apos;re not satisfied, we replace them free of charge.</p>
             </div>
-            <div className="ps">
-              <div className="ps-n">04</div>
-              <div>
-                <h4>Onboarding and first sprint — 72 hrs</h4>
-                <p>We handle all onboarding admin. Your new engineer is in your Slack, your Jira, and shipping code within three business days.</p>
-              </div>
+            <div className="pstep">
+              <h4>Onboarding and first sprint — 72 hrs</h4>
+              <p>We handle all onboarding admin. Your new engineer is in your Slack, your Jira, and shipping code within three business days.</p>
             </div>
           </div>
-          <div className="standards reveal" style={{ marginTop: 54 }}>
-            <div className="std">
-              <div className="std-ic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" /><circle cx="12" cy="12" r="9" />
-                </svg>
+          <div className="reveal" style={{ marginTop: 54, background: "var(--ink)", borderRadius: 18, padding: "32px 36px", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 0 }}>
+            {[
+              { icon: <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />, extra: <circle cx="12" cy="12" r="9" />, title: "Free replacement", body: "If it isn't working in the first 30 days, we replace the engineer at no cost — no questions asked." },
+              { icon: <path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" strokeLinejoin="round" />, extra: null, title: "NDA on day one", body: "Every engagement starts with a signed NDA. Your IP, codebase, and business logic are protected from day one." },
+              { icon: <path d="M4 17l6-6 4 4 6-7" strokeLinecap="round" strokeLinejoin="round" />, extra: null, title: "Time-tracked billing", body: "Transparent daily logs, weekly reports, and end-of-month invoices. You see every hour — no black-box billing." },
+            ].map((s, i) => (
+              <div key={s.title} style={{ padding: "20px 28px", borderRight: i < 2 ? "1px solid var(--line-dark)" : undefined }}>
+                <div style={{ width: 38, height: 38, borderRadius: 10, background: "rgba(236,23,99,.15)", display: "grid", placeItems: "center", color: "var(--accent)", marginBottom: 14 }}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width={18} height={18}>{s.icon}{s.extra}</svg>
+                </div>
+                <div style={{ fontFamily: "var(--display)", fontSize: 16, fontWeight: 600, color: "var(--on-dark)", marginBottom: 8 }}>{s.title}</div>
+                <p style={{ fontSize: 13.5, color: "var(--on-dark-muted)", lineHeight: 1.6 }}>{s.body}</p>
               </div>
-              <h5>Free replacement</h5>
-              <p>If it isn&apos;t working in the first 30 days, we replace the engineer at no cost — no questions asked.</p>
-            </div>
-            <div className="std">
-              <div className="std-ic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <h5>NDA on day one</h5>
-              <p>Every engagement starts with a signed NDA. Your IP, codebase, and business logic are protected from day one.</p>
-            </div>
-            <div className="std">
-              <div className="std-ic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 17l6-6 4 4 6-7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <h5>Time-tracked billing</h5>
-              <p>Transparent daily logs, weekly reports, and end-of-month invoices. You see every hour — no black-box billing.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -300,21 +278,27 @@ export default function HireDedicatedClient() {
               <h2 style={{ marginTop: 18 }}>Senior engineers, not<br />agency headcount</h2>
             </div>
           </div>
-          <div className="comp-wrap reveal">
-            <table className="comp">
-              <thead>
-                <tr><th></th><th>Digital Web Weaver engineers</th><th>Typical agency</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Seniority level</td><td><span className="ct">5+ yrs minimum</span></td><td><span className="cx">Mixed — juniors common</span></td></tr>
-                <tr><td>Time to first deploy</td><td><span className="ct">72 hours</span></td><td><span className="cx">2–4 weeks</span></td></tr>
-                <tr><td>Code quality standards</td><td><span className="ct">PR reviews, typed, tested</span></td><td><span className="cx">Inconsistent</span></td></tr>
-                <tr><td>Communication</td><td><span className="ct">Direct access, daily updates</span></td><td><span className="cx">Via account manager</span></td></tr>
-                <tr><td>Replacement guarantee</td><td><span className="ct">30-day free replacement</span></td><td><span className="cx">Often paid or unavailable</span></td></tr>
-                <tr><td>NDA &amp; IP protection</td><td><span className="ct">Signed on day one</span></td><td><span className="cx">Sometimes, on request</span></td></tr>
-                <tr><td>Billing transparency</td><td><span className="ct">Daily logs + weekly reports</span></td><td><span className="cx">Monthly black-box invoice</span></td></tr>
-              </tbody>
-            </table>
+          <div className="cmp reveal">
+            <div className="cmp-row cmp-head">
+              <div className="cmp-cell feat"></div>
+              <div className="cmp-cell mid">Digital Web Weaver</div>
+              <div className="cmp-cell right">Typical agency</div>
+            </div>
+            {[
+              { feat: "Seniority level", us: "5+ yrs minimum", them: "Mixed — juniors common" },
+              { feat: "Time to first deploy", us: "72 hours", them: "2–4 weeks" },
+              { feat: "Code quality", us: "PR reviews, typed, tested", them: "Inconsistent" },
+              { feat: "Communication", us: "Direct access, daily updates", them: "Via account manager" },
+              { feat: "Replacement guarantee", us: "30-day free replacement", them: "Often paid or unavailable" },
+              { feat: "NDA & IP protection", us: "Signed on day one", them: "Sometimes, on request" },
+              { feat: "Billing transparency", us: "Daily logs + weekly reports", them: "Monthly black-box invoice" },
+            ].map((r) => (
+              <div key={r.feat} className="cmp-row">
+                <div className="cmp-cell feat">{r.feat}</div>
+                <div className="cmp-cell mid"><span className="yes">✓</span> {r.us}</div>
+                <div className="cmp-cell right"><span className="no">✗</span> {r.them}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
