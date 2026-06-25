@@ -443,7 +443,7 @@ export const gujarat: ServicePageData = {
   meta: {
     title: "Web Development Company in Gujarat, India",
     description:
-      "Digital Web Weaver — web development company serving businesses across Gujarat. Custom websites, mobile apps, SaaS platforms, ERP systems, and AI solutions for Vadodara, Ahmedabad, Surat, Rajkot, and beyond.",
+      "Web development company serving Gujarat businesses — custom websites, mobile apps, SaaS, ERP, and AI solutions across Vadodara, Ahmedabad, Surat, and Rajkot.",
   },
   hero: {
     eyebrow: "Web Development · Gujarat",

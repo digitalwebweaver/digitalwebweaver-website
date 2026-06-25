@@ -54,7 +54,7 @@ const localBusinessSchema = {
 export const metadata: Metadata = {
   title: "Web Development Company in Vadodara, Gujarat",
   description:
-    "Digital Web Weaver — leading web development company in Vadodara, Gujarat. Custom websites, web apps, e-commerce and mobile apps built by senior engineers for local and global clients.",
+    "Leading web development company in Vadodara. Custom websites, web apps, e-commerce, and mobile apps built by senior engineers for Vadodara businesses and global clients.",
   alternates: { canonical: "/web-design-vadodara/" },
   openGraph: { url: "/web-design-vadodara/", type: "website" },
 };

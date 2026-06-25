@@ -3,9 +3,9 @@ import Link from "next/link";
 import CountStat from "@/components/ui/CountStat";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us — Software Development Studio India",
   description:
-    "We're a senior engineering studio that's been building high-performance software, SaaS platforms, and AI systems since 2013. Meet the team.",
+    "Senior engineering studio building software, SaaS platforms, and AI systems since 2013. Based in India, serving clients across UK, South Africa, and beyond.",
   alternates: { canonical: "/about/" },
   openGraph: { url: "/about/", type: "website" },
 };

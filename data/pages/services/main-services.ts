@@ -1,7 +1,7 @@
 import type { ServicePageData } from "@/lib/types";
 
 export const saasDevelopment: ServicePageData = {
-  meta: { title: "SaaS Development Company — Build Your SaaS Product", description: "Custom SaaS development with multi-tenant architecture, subscription billing, SSO, and scalable cloud infrastructure." },
+  meta: { title: "SaaS Development Company India", description: "Custom SaaS development with multi-tenant architecture, subscription billing, SSO, and scalable cloud infrastructure. Ship your SaaS in weeks." },
   hero: { eyebrow: "SaaS Development", heading: "SaaS Development Built to Scale from Day One", lead: "We architect and build multi-tenant SaaS platforms with subscription billing, team management, SSO, and the features that turn trials into paying customers.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "SaaS Development" }],
     marqueeItems: ["Multi-tenancy","Subscription billing","React","Node.js","PostgreSQL","AWS","Stripe","OAuth 2.0","REST APIs","Webhooks","CI/CD","Feature flags"],
     stats: [{ value: "8–12wk", label: "MVP Delivery" }, { value: "Multi-Tenant", label: "Architecture" }, { value: "Stripe", label: "Billing Built-In" }] },
@@ -186,7 +186,7 @@ export const cloudDevOps: ServicePageData = {
 };
 
 export const aiAutomation: ServicePageData = {
-  meta: { title: "AI & Automation Development — Replace Manual Work With Intelligence", description: "AI development services: LLM integrations, chatbots, document processing, predictive analytics, ML pipelines, and workflow automation." },
+  meta: { title: "AI & Automation Development Services India", description: "AI development services: LLM integrations, chatbots, document processing, predictive analytics, ML pipelines, and workflow automation for businesses." },
   hero: { eyebrow: "AI & Automation", heading: "AI Automation That Replaces Real Manual Work", lead: "We build AI-powered systems that actually work in production — from LLM copilots and document processing to predictive analytics and workflow automation.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "AI & Automation" }],
     marqueeItems: ["OpenAI","Anthropic Claude","LangChain","RAG pipelines","Vector databases","Pinecone","Document extraction","OCR","Fine-tuning","Whisper","Gemini"],
     stats: [{ value: "LLM", label: "Integrations" }, { value: "Python", label: "ML Stack" }, { value: "Production", label: "Proven" }] },
@@ -244,7 +244,7 @@ export const openSourceDevelopment: ServicePageData = {
 };
 
 export const webDevelopment: ServicePageData = {
-  meta: { title: "Web Development Services — High-Performance Websites & Apps", description: "Full-spectrum web development: marketing sites, web portals, web apps, and API backends. React, Next.js, Node.js, and TypeScript." },
+  meta: { title: "Web Development Services India", description: "Full-spectrum web development: marketing sites, web portals, web apps, and API backends. React, Next.js, Node.js, and TypeScript. India-based team." },
   hero: { eyebrow: "Web Development", heading: "Web Development for High-Performance Websites & Web Apps", lead: "From marketing sites to complex web applications — we engineer fast, accessible, and scalable web solutions with modern technology.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Web Development" }],
     marqueeItems: ["React","Next.js","Vue.js","TypeScript","Node.js","Python","Laravel","Django","PostgreSQL","MongoDB","AWS","Vercel"],
     stats: [{ value: "150+", label: "Web Projects" }, { value: "Core Web", label: "Vitals Focus" }, { value: "TypeScript", label: "First" }] },

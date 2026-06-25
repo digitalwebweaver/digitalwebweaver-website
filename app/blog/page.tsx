@@ -8,9 +8,9 @@ import { getPublishedPosts, formatPostDate, gradientClass } from "@/lib/posts";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Blog & Insights",
+  title: "Software Development Blog",
   description:
-    "Ideas, engineering notes, and perspectives from the Digital Web Weaver team — on software, systems, and building things that last.",
+    "Web development, SaaS, AI, and mobile app insights from the Digital Web Weaver team — practical engineering for founders and product teams.",
   alternates: { canonical: "/blog/" },
   openGraph: { url: "/blog/", type: "website" },
 };

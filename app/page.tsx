@@ -107,8 +107,8 @@ const speakableSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Custom Software Development Company India | Digital Web Weaver",
-  description: "Digital Web Weaver is a custom software development company in India building enterprise software, SaaS platforms, mobile apps, and AI solutions. 200+ projects delivered since 2013.",
+  title: "Custom Software Development Company in India",
+  description: "Custom software development company in India — enterprise software, SaaS platforms, mobile apps, and AI solutions. 200+ projects delivered since 2013.",
   alternates: { canonical: "/" },
   openGraph: { url: "/", type: "website" },
 };
