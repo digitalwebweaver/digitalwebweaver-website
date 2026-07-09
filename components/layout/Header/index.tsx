@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import MobileMenu from "./MobileMenu";
 
 /* ── Engineering service categories & links ── */
@@ -68,6 +68,7 @@ export default function Header() {
   const [mobileOpen,  setMobileOpen]  = useState(false);
   const [engOpen,     setEngOpen]     = useState(false);
   const [activeCat,   setActiveCat]   = useState("web");
+  const engRef = useRef<HTMLDivElement>(null);
 
   /* scroll → glassy header */
   useEffect(() => {
@@ -76,14 +77,18 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* body-scroll lock + ESC to close */
+  /* ESC + click-outside to close Engineering dropdown */
   useEffect(() => {
-    document.body.style.overflow = engOpen ? "hidden" : "";
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setEngOpen(false); };
-    if (engOpen) window.addEventListener("keydown", onKey);
+    if (!engOpen) return;
+    const onKey   = (e: KeyboardEvent)  => { if (e.key === "Escape") setEngOpen(false); };
+    const onClick = (e: MouseEvent) => {
+      if (engRef.current && !engRef.current.contains(e.target as Node)) setEngOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    document.addEventListener("mousedown", onClick);
     return () => {
       window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
+      document.removeEventListener("mousedown", onClick);
     };
   }, [engOpen]);
 
@@ -108,8 +113,8 @@ export default function Header() {
 
             <div className="nav-links">
 
-              {/* ── ENGINEERING → fullscreen overlay trigger ── */}
-              <div className="nav-item">
+              {/* ── ENGINEERING → tabbed dropdown ── */}
+              <div className="nav-item eng-nav-item" ref={engRef}>
                 <button
                   className="eng-trigger"
                   onClick={() => setEngOpen(v => !v)}
@@ -118,6 +123,49 @@ export default function Header() {
                 >
                   Engineering {chevSvg}
                 </button>
+
+                {/* Dropdown sits inside nav-item, absolutely positioned below button */}
+                <div
+                  className={`eng-drop${engOpen ? " open" : ""}`}
+                  role="dialog"
+                  aria-modal="true"
+                  aria-label="Engineering services"
+                  aria-hidden={!engOpen}
+                >
+                  <div className="eng-drop-body">
+                    <div className="eng-vtabs">
+                      {ENG_CATS.map(cat => (
+                        <button
+                          key={cat.id}
+                          className={`eng-vtab${activeCat === cat.id ? " active" : ""}`}
+                          onMouseEnter={() => setActiveCat(cat.id)}
+                          onClick={() => setActiveCat(cat.id)}
+                        >
+                          {cat.label}
+                          <svg className="eng-vtab-arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                            <path d="M2 6h8M7 3l3 3-3 3"/>
+                          </svg>
+                        </button>
+                      ))}
+                    </div>
+                    <div className="eng-vcontent">
+                      <div key={activeCat} className="eng-items-grid">
+                        {currentCat.items.map(item => (
+                          <Link key={item.href + item.name} className="eng-item" href={item.href} onClick={closeEng}>
+                            <span className="eng-item-name">{item.name}</span>
+                            <span className="eng-item-desc">{item.desc}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="eng-drop-bar">
+                    <Link className="eng-fs-pill" href="/products/"      onClick={closeEng}>Products →</Link>
+                    <Link className="eng-fs-pill" href="/ai-automation/" onClick={closeEng}>AI Solutions →</Link>
+                    <Link className="eng-fs-pill" href="/services/"      onClick={closeEng}>All Services →</Link>
+                    <Link className="eng-fs-pill primary" href="/contact/" onClick={closeEng}>Start a Project ↗</Link>
+                  </div>
+                </div>
               </div>
 
               {/* ── STACK dropdown ── */}
@@ -191,14 +239,6 @@ export default function Header() {
             </div>
 
             <div className="nav-cta">
-              {engOpen && (
-                <button className="eng-close-btn" onClick={closeEng} aria-label="Close Engineering menu">
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
-                    <line x1="3" y1="3" x2="13" y2="13"/>
-                    <line x1="13" y1="3" x2="3" y2="13"/>
-                  </svg>
-                </button>
-              )}
               <Link href="/contact/" className="btn btn-primary">Start a project <span className="arr">↗</span></Link>
               <button className="hamburger" id="burger" aria-label="Menu" onClick={() => setMobileOpen(v => !v)}>
                 <span/><span/><span/>
@@ -207,58 +247,6 @@ export default function Header() {
           </nav>
         </div>
       </header>
-
-      {/* ══ ENGINEERING TABBED DROP PANEL ══ */}
-      {engOpen && <div className="eng-drop-backdrop" onClick={closeEng} aria-hidden="true" />}
-      <div
-        className={`eng-drop${engOpen ? " open" : ""}`}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Engineering services"
-        aria-hidden={!engOpen}
-      >
-        {/* Vertical tabs + content */}
-        <div className="eng-drop-body">
-
-          {/* LEFT – vertical tab list */}
-          <div className="eng-vtabs">
-            {ENG_CATS.map(cat => (
-              <button
-                key={cat.id}
-                className={`eng-vtab${activeCat === cat.id ? " active" : ""}`}
-                onMouseEnter={() => setActiveCat(cat.id)}
-                onClick={() => setActiveCat(cat.id)}
-              >
-                {cat.label}
-                <svg className="eng-vtab-arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                  <path d="M2 6h8M7 3l3 3-3 3"/>
-                </svg>
-              </button>
-            ))}
-          </div>
-
-          {/* RIGHT – items for active tab */}
-          <div className="eng-vcontent">
-            <div key={activeCat} className="eng-items-grid">
-              {currentCat.items.map(item => (
-                <Link key={item.href + item.name} className="eng-item" href={item.href} onClick={closeEng}>
-                  <span className="eng-item-name">{item.name}</span>
-                  <span className="eng-item-desc">{item.desc}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-        </div>
-
-        {/* Bottom bar */}
-        <div className="eng-drop-bar">
-          <Link className="eng-fs-pill" href="/products/"      onClick={closeEng}>Explore Products →</Link>
-          <Link className="eng-fs-pill" href="/ai-automation/" onClick={closeEng}>AI Solutions →</Link>
-          <Link className="eng-fs-pill" href="/services/"      onClick={closeEng}>All Services →</Link>
-          <Link className="eng-fs-pill primary" href="/contact/" onClick={closeEng}>Start a Project ↗</Link>
-        </div>
-      </div>
 
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
     </>
