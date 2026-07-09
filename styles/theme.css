@@ -25,7 +25,7 @@
   --ease:cubic-bezier(.22,1,.36,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{
   background:var(--paper);
   color:var(--ink);
@@ -123,7 +123,7 @@ header:has(.nav-item.has-mega:hover){background:var(--paper);border-bottom:1px s
 .hero h1 .light{font-weight:300;font-family:var(--body);letter-spacing:-.03em}
 .hero-sub{font-size:18.5px;color:var(--muted);max-width:480px;margin:26px 0 34px;line-height:1.65}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
-.hero-trust{display:flex;align-items:center;gap:20px;font-size:13.5px;color:var(--faint)}
+.hero-trust{display:flex;align-items:center;gap:8px 16px;font-size:13.5px;color:var(--faint);flex-wrap:wrap}
 .hero-trust .stars{color:var(--accent);letter-spacing:2px}
 .hero-trust b{color:var(--ink);font-weight:600}
 .divider-dot{width:4px;height:4px;border-radius:50%;background:var(--line);}
