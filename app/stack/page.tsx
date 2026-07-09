@@ -180,7 +180,7 @@ export default function StackPage() {
             <span style={{ fontWeight: 300, fontFamily: "var(--body)" }}>chosen for your project, not ours</span>
           </h1>
           <p className="hero-sub" style={{ maxWidth: 540 }}>
-            We pick the right tool for each job — not the trendiest one. Here's the full stack we use across web, mobile, cloud, and AI projects, and why we chose each one.
+            We pick the right tool for each job — not the trendiest one. Here&apos;s the full stack we use across web, mobile, cloud, and AI projects, and why we chose each one.
           </p>
           <div className="hero-actions">
             <Link href="/contact/" className="btn btn-primary">

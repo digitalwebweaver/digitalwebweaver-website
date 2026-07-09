@@ -25,7 +25,7 @@ export default function VisitorTracker() {
   const pathname = usePathname();
   const sessionIdRef = useRef("");
   const pageViewIdRef = useRef<string | null>(null);
-  const enteredAtRef = useRef(Date.now());
+  const enteredAtRef = useRef(0);
   const isFirstRef = useRef(true);
 
   function flushPing() {
