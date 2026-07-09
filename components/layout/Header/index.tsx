@@ -217,29 +217,38 @@ export default function Header() {
         aria-label="Engineering services"
         aria-hidden={!engOpen}
       >
-        {/* Tab row */}
-        <div className="eng-tabs">
-          {ENG_CATS.map(cat => (
-            <button
-              key={cat.id}
-              className={`eng-tab${activeCat === cat.id ? " active" : ""}`}
-              onClick={() => setActiveCat(cat.id)}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
+        {/* Vertical tabs + content */}
+        <div className="eng-drop-body">
 
-        {/* Items grid for active tab */}
-        <div className="eng-drop-inner">
-          <div key={activeCat} className="eng-items-grid">
-            {currentCat.items.map(item => (
-              <Link key={item.href + item.name} className="eng-item" href={item.href} onClick={closeEng}>
-                <span className="eng-item-name">{item.name}</span>
-                <span className="eng-item-desc">{item.desc}</span>
-              </Link>
+          {/* LEFT – vertical tab list */}
+          <div className="eng-vtabs">
+            {ENG_CATS.map(cat => (
+              <button
+                key={cat.id}
+                className={`eng-vtab${activeCat === cat.id ? " active" : ""}`}
+                onMouseEnter={() => setActiveCat(cat.id)}
+                onClick={() => setActiveCat(cat.id)}
+              >
+                {cat.label}
+                <svg className="eng-vtab-arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <path d="M2 6h8M7 3l3 3-3 3"/>
+                </svg>
+              </button>
             ))}
           </div>
+
+          {/* RIGHT – items for active tab */}
+          <div className="eng-vcontent">
+            <div key={activeCat} className="eng-items-grid">
+              {currentCat.items.map(item => (
+                <Link key={item.href + item.name} className="eng-item" href={item.href} onClick={closeEng}>
+                  <span className="eng-item-name">{item.name}</span>
+                  <span className="eng-item-desc">{item.desc}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
         </div>
 
         {/* Bottom bar */}
