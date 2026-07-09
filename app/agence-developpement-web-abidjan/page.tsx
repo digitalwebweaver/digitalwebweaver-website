@@ -10,40 +10,28 @@ export const metadata: Metadata = {
   openGraph: { url: "/agence-developpement-web-abidjan/", type: "website", locale: "fr_FR" },
 };
 
-const localBusinessSchema = {
+// Geo-targeted Service schema: India-based studio SERVING Ivory Coast, not an
+// Abidjan-local business — avoids the LocalBusiness/foreign-address mismatch
+// while keeping areaServed + serviceType signals. Provider = the India org.
+const geoServiceSchema = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": "https://digitalwebweaver.com/#localbusiness-ci",
-  name: "Digital Web Weaver",
-  image: "https://digitalwebweaver.com/icon-512.png",
+  "@type": "Service",
+  "@id": "https://digitalwebweaver.com/agence-developpement-web-abidjan/#service",
+  name: "Agence de Développement Web pour la Côte d'Ivoire",
+  serviceType: "Software Development",
   url: "https://digitalwebweaver.com/agence-developpement-web-abidjan/",
-  email: "info@digitalwebweaver.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Vadodara",
-    addressRegion: "Gujarat",
-    postalCode: "390012",
-    addressCountry: "IN",
-  },
+  provider: { "@id": "https://digitalwebweaver.com/#organization" },
   areaServed: [
     { "@type": "Country", name: "Ivory Coast" },
     { "@type": "City", name: "Abidjan" },
   ],
-  serviceType: [
-    "Développement Web Côte d'Ivoire",
-    "Agence de Développement Web Abidjan",
-    "Développement Logiciel Sur Mesure Abidjan",
-    "Équipe de Développement Dédiée Côte d'Ivoire",
-    "Développement E-commerce Abidjan",
-  ],
   availableLanguage: ["French", "English"],
-  parentOrganization: { "@id": "https://digitalwebweaver.com/#organization" },
 };
 
 export default function AgenceDeveloppementWebAbidjanPage() {
   return (
     <div lang="fr">
-      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={geoServiceSchema} />
       <ServicePage data={data} />
     </div>
   );

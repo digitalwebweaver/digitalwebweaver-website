@@ -10,40 +10,28 @@ export const metadata: Metadata = {
   openGraph: { url: "/software-development-company-uk/", type: "website" },
 };
 
-const localBusinessSchema = {
+// Geo-targeted Service schema: we are an India-based studio SERVING the UK, not
+// a UK-local business — this avoids the LocalBusiness/foreign-address mismatch
+// while keeping areaServed + serviceType signals. Provider = the India org.
+const geoServiceSchema = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": "https://digitalwebweaver.com/#localbusiness-uk",
-  name: "Digital Web Weaver",
-  image: "https://digitalwebweaver.com/icon-512.png",
+  "@type": "Service",
+  "@id": "https://digitalwebweaver.com/software-development-company-uk/#service",
+  name: "Software Development Company for UK Businesses",
+  serviceType: "Software Development",
   url: "https://digitalwebweaver.com/software-development-company-uk/",
-  email: "info@digitalwebweaver.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Vadodara",
-    addressRegion: "Gujarat",
-    postalCode: "390012",
-    addressCountry: "IN",
-  },
+  provider: { "@id": "https://digitalwebweaver.com/#organization" },
   areaServed: [
     { "@type": "Country", name: "United Kingdom" },
     { "@type": "City", name: "London" },
   ],
-  serviceType: [
-    "Software Development UK",
-    "Bespoke Software Development London",
-    "Outsourced Development Team UK",
-    "Dedicated Developers UK",
-    "E-commerce Development UK",
-  ],
   availableLanguage: ["English"],
-  parentOrganization: { "@id": "https://digitalwebweaver.com/#organization" },
 };
 
 export default function SoftwareDevelopmentCompanyUkPage() {
   return (
     <>
-      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={geoServiceSchema} />
       <ServicePage data={data} />
     </>
   );

@@ -10,41 +10,29 @@ export const metadata: Metadata = {
   openGraph: { url: "/software-development-company-south-africa/", type: "website" },
 };
 
-const localBusinessSchema = {
+// Geo-targeted Service schema: India-based studio SERVING South Africa, not a
+// ZA-local business — avoids the LocalBusiness/foreign-address mismatch while
+// keeping areaServed + serviceType signals. Provider = the India org.
+const geoServiceSchema = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": "https://digitalwebweaver.com/#localbusiness-za",
-  name: "Digital Web Weaver",
-  image: "https://digitalwebweaver.com/icon-512.png",
+  "@type": "Service",
+  "@id": "https://digitalwebweaver.com/software-development-company-south-africa/#service",
+  name: "Software Development Company for South African Businesses",
+  serviceType: "Software Development",
   url: "https://digitalwebweaver.com/software-development-company-south-africa/",
-  email: "info@digitalwebweaver.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Vadodara",
-    addressRegion: "Gujarat",
-    postalCode: "390012",
-    addressCountry: "IN",
-  },
+  provider: { "@id": "https://digitalwebweaver.com/#organization" },
   areaServed: [
     { "@type": "Country", name: "South Africa" },
     { "@type": "City", name: "Johannesburg" },
     { "@type": "City", name: "Cape Town" },
   ],
-  serviceType: [
-    "Software Development South Africa",
-    "Bespoke Software Development Johannesburg",
-    "Outsourced Development Team South Africa",
-    "Dedicated Developers South Africa",
-    "E-commerce Development South Africa",
-  ],
   availableLanguage: ["English"],
-  parentOrganization: { "@id": "https://digitalwebweaver.com/#organization" },
 };
 
 export default function SoftwareDevelopmentCompanySouthAfricaPage() {
   return (
     <>
-      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={geoServiceSchema} />
       <ServicePage data={data} />
     </>
   );
