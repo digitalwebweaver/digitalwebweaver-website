@@ -77,21 +77,24 @@ const display = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["600", "700"],
+  preload: true,
 });
 
 const body = Hanken_Grotesk({
   subsets: ["latin"],
   variable: "--font-body",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
+  display: "optional",
+  weight: ["300", "400", "500"],
+  preload: false,
 });
 
 const mono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-  display: "swap",
-  weight: ["400", "600", "700"],
+  display: "optional",
+  weight: ["400", "600"],
+  preload: false,
 });
 
 export const metadata: Metadata = {
