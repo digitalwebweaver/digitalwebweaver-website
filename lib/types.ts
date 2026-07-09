@@ -42,10 +42,27 @@ export interface Crumb {
   href?: string;
 }
 
+// A run of inline prose: a plain string, or a contextual link.
+export type ProseInline = string | { text: string; href: string };
+
+export interface ProseBlock {
+  h3?: string;
+  // A paragraph as ordered inline runs, so contextual links can be woven in.
+  p: ProseInline[];
+}
+
 export interface ServicePageData {
   meta: {
     title: string;
     description: string;
+  };
+  // Long-form editorial prose (250-400 words) rendered under the hero for
+  // topical depth, featured-snippet eligibility, and contextual internal links.
+  prose?: {
+    eyebrow?: string;
+    heading: string;
+    blocks: ProseBlock[];
+    dark?: boolean;
   };
   hero: {
     eyebrow?: string;

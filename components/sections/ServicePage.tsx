@@ -1,6 +1,7 @@
 import type { ServicePageData } from "@/lib/types";
 import ServiceHero from "./ServiceHero";
 import MarqueeBand from "./MarqueeBand";
+import ProseSection from "./ProseSection";
 import ServiceGrid from "./ServiceGrid";
 import CapGrid from "./CapGrid";
 import ProcessSection from "./ProcessSection";
@@ -25,7 +26,7 @@ const AREA_SERVED = [
 ];
 
 export default function ServicePage({ data }: { data: ServicePageData }) {
-  const { hero, services, capabilities, process, stack, why, faq, cta, cases, testimonials, related } = data;
+  const { hero, prose, services, capabilities, process, stack, why, faq, cta, cases, testimonials, related } = data;
 
   // ── Product detection ─────────────────────────────────────────────────────
   // Ready-made SaaS product pages carry a "Ready Apps" (/products/) breadcrumb.
@@ -109,6 +110,14 @@ export default function ServicePage({ data }: { data: ServicePageData }) {
         localBadge={hero.localBadge}
       />
       <MarqueeBand items={hero.marqueeItems} />
+      {prose && (
+        <ProseSection
+          eyebrow={prose.eyebrow}
+          heading={prose.heading}
+          blocks={prose.blocks}
+          dark={prose.dark}
+        />
+      )}
       {services && (
         <ServiceGrid
           eyebrow={services.eyebrow}

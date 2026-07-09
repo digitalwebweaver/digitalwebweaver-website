@@ -56,6 +56,15 @@
 .eng-pill svg{width:12px;height:12px;color:var(--accent);flex-shrink:0;transition:color .14s}
 .eng-pill:hover svg{color:#fff}
 
+/* ── Long-form prose section (SEO depth block) ── */
+.prose-body{max-width:74ch;margin-top:28px;display:flex;flex-direction:column;gap:22px}
+.prose-block h3{font-size:19px;font-weight:600;color:var(--ink);letter-spacing:-.02em;margin-bottom:10px}
+.prose-block p{font-size:16.5px;line-height:1.72;color:var(--muted)}
+.dark .prose-block h3{color:var(--on-dark)}
+.dark .prose-block p{color:var(--on-dark-muted)}
+.prose-link{color:var(--accent);text-decoration:none;font-weight:500;border-bottom:1px solid rgba(236,23,99,.28);transition:border-color .15s,color .15s}
+.prose-link:hover{border-bottom-color:var(--accent)}
+
 /* ── Simple dropdowns (Stack / Solutions / About) ── */
 .nav-item.has-drop{position:relative}
 .drop-menu{position:absolute;top:calc(100% + 2px);left:-10px;min-width:232px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:6px;box-shadow:0 16px 44px rgba(22,20,15,.11),0 2px 8px rgba(22,20,15,.06);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .18s,transform .18s,visibility 0s .15s;z-index:9999;pointer-events:none}

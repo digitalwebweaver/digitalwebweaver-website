@@ -245,6 +245,41 @@ export const openSourceDevelopment: ServicePageData = {
 
 export const webDevelopment: ServicePageData = {
   meta: { title: "Web Development Company India | React & Next.js Experts", description: "Full-spectrum web development: marketing sites, web portals, web apps, and API backends. React, Next.js, Node.js, and TypeScript. India-based team." },
+  prose: {
+    eyebrow: "Why Digital Web Weaver",
+    heading: "A web development company built for outcomes, not templates",
+    blocks: [
+      {
+        p: [
+          "Digital Web Weaver is a web development company based in India, delivering websites and web applications for founders and enterprises across India, the UK, South Africa, and beyond. We don't drag-and-drop page builders or ship recycled themes — every project is custom-coded on a modern stack, architected for the traffic, integrations, and growth you actually expect. Whether you need a fast marketing site that ranks or a complex ",
+          { text: "custom web application", href: "/custom-web-apps/" },
+          " with dashboards, roles, and real-time data, the same senior engineers own it end to end.",
+        ],
+      },
+      {
+        h3: "Full-stack expertise across the modern web",
+        p: [
+          "Our teams build with React, Next.js, and TypeScript on the front end, backed by Node.js, Laravel, and Python services on the back end. That range means we can take a product from a research-driven ",
+          { text: "UI/UX design", href: "/ui-ux-design/" },
+          " through to a production ",
+          { text: "SaaS platform", href: "/saas-development/" },
+          " with subscription billing and multi-tenancy — or stand up a high-converting ",
+          { text: "e-commerce store", href: "/ecommerce-development/" },
+          " with secure payments and inventory sync. Need to scale the team instead? You can ",
+          { text: "hire dedicated React and Node.js developers", href: "/react-developer/" },
+          " who plug straight into your workflow.",
+        ],
+      },
+      {
+        h3: "Engineered for performance, SEO, and scale",
+        p: [
+          "Every site we ship targets Core Web Vitals from day one — server-rendered pages, optimised assets, and Lighthouse scores above 90 — because speed is both a ranking factor and a conversion lever. We build SEO in at the architecture level with structured data, clean semantic markup, and canonical URLs, then deploy on resilient cloud infrastructure with CI/CD and monitoring. Local to Gujarat and looking for a partner nearby? Explore our ",
+          { text: "web design services in Vadodara", href: "/web-design-vadodara/" },
+          ", or tell us what you're building and we'll scope it within 24 hours.",
+        ],
+      },
+    ],
+  },
   hero: { eyebrow: "Web Development", heading: "Web Development for High-Performance Websites & Web Apps", lead: "From marketing sites to complex web applications — we engineer fast, accessible, and scalable web solutions with modern technology.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Web Development" }],
     marqueeItems: ["React","Next.js","Vue.js","TypeScript","Node.js","Python","Laravel","Django","PostgreSQL","MongoDB","AWS","Vercel"],
     stats: [{ value: "150+", label: "Web Projects" }, { value: "Core Web", label: "Vitals Focus" }, { value: "TypeScript", label: "First" }] },
