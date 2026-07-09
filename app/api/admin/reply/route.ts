@@ -3,8 +3,6 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { supabaseAdmin } from "@/lib/supabase";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 async function requireAuth() {
   const cookieStore = await cookies();
   const session = cookieStore.get("admin_session")?.value;
@@ -16,6 +14,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const { inquiryId, to, subject, message, attachments } = await req.json();
 
