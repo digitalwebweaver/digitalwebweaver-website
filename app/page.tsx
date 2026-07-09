@@ -126,7 +126,8 @@ export default function HomePage() {
               <span className="eyebrow reveal">Senior engineering studio · est. 2013</span>
               <h1 style={{ marginTop: 22 }}>
                 <span className="hw" style={{ animationDelay: ".05s" }}>We build </span>
-                <span className="hw accent" style={{ animationDelay: ".2s" }}>high-performance</span>
+                <span className="hw accent" style={{ animationDelay: ".2s" }}>high-</span>
+                <span className="hw accent" style={{ animationDelay: ".28s" }}>performance</span>
                 <span className="hw" style={{ animationDelay: ".38s" }}> software </span>
                 <span className="hw light" style={{ animationDelay: ".54s" }}>that ships and scales.</span>
               </h1>

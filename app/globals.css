@@ -56,14 +56,21 @@
 .eng-pill svg{width:12px;height:12px;color:var(--accent);flex-shrink:0;transition:color .14s}
 .eng-pill:hover svg{color:#fff}
 
-/* ── Long-form prose section (SEO depth block) ── */
-.prose-body{max-width:74ch;margin-top:28px;display:flex;flex-direction:column;gap:22px}
+/* ── Long-form prose section (SEO depth block) — editorial 2-col ── */
+.prose-grid{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start}
+.prose-head{position:sticky;top:96px}
+.prose-head h2{font-size:clamp(1.6rem,2.5vw,2.15rem);line-height:1.1;letter-spacing:-.02em;margin-top:14px;text-wrap:balance}
+.prose-body{display:flex;flex-direction:column;gap:22px}
 .prose-block h3{font-size:19px;font-weight:600;color:var(--ink);letter-spacing:-.02em;margin-bottom:10px}
-.prose-block p{font-size:16.5px;line-height:1.72;color:var(--muted)}
+.prose-block p{font-size:16.5px;line-height:1.72;color:var(--muted);max-width:68ch}
 .dark .prose-block h3{color:var(--on-dark)}
 .dark .prose-block p{color:var(--on-dark-muted)}
 .prose-link{color:var(--accent);text-decoration:none;font-weight:500;border-bottom:1px solid rgba(236,23,99,.28);transition:border-color .15s,color .15s}
 .prose-link:hover{border-bottom-color:var(--accent)}
+@media(max-width:900px){
+  .prose-grid{grid-template-columns:1fr;gap:20px}
+  .prose-head{position:static}
+}
 
 /* ── Simple dropdowns (Stack / Solutions / About) ── */
 .nav-item.has-drop{position:relative}
