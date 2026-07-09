@@ -9,7 +9,7 @@ const crumbs = (name: string) => [
 // ───────────────────────────── EduCore ─────────────────────────────
 export const educore: ServicePageData = {
   meta: {
-    title: "EduCore — Learning Management System for Institutes & Academies",
+    title: "EduCore — Learning Management System",
     description:
       "EduCore is a ready-to-launch Learning Management System for coaching institutes, colleges, and corporate academies — courses, live classes, quizzes, certificates, and fee collection in one platform.",
   },
@@ -116,7 +116,7 @@ export const educore: ServicePageData = {
 // ───────────────────────────── SolarOps ─────────────────────────────
 export const solarops: ServicePageData = {
   meta: {
-    title: "SolarOps — ERP for Solar Panel Installers & EPC Companies",
+    title: "SolarOps — Solar Panel Installer ERP",
     description:
       "SolarOps is a ready-to-deploy ERP for solar installers — site surveys, quotations, project tracking, inventory, subsidy paperwork, and AMC scheduling in one system.",
   },
@@ -223,7 +223,7 @@ export const solarops: ServicePageData = {
 // ───────────────────────────── GlowDesk ─────────────────────────────
 export const glowdesk: ServicePageData = {
   meta: {
-    title: "GlowDesk — Software for Aesthetic & Cosmetic Clinics",
+    title: "GlowDesk — Aesthetic Clinic Management Software",
     description:
       "GlowDesk is ready-to-launch clinic software for aesthetic and cosmetic practices — appointment booking, treatment plans, before/after galleries, billing, and automated follow-ups.",
   },
@@ -330,7 +330,7 @@ export const glowdesk: ServicePageData = {
 // ───────────────────────────── QuickBite ─────────────────────────────
 export const quickbite: ServicePageData = {
   meta: {
-    title: "QuickBite — Food Delivery App for Restaurants & Cloud Kitchens",
+    title: "QuickBite — Food Delivery App Software",
     description:
       "QuickBite is a ready-to-launch food delivery app suite — customer ordering app, restaurant dashboard, and delivery partner app with real-time tracking and your own branding.",
   },

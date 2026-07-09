@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Vue.js Developer — Hire Expert Vue 3 Developers",
+    title: "Hire Expert Vue.js 3 Developers",
     description: "Hire Vue.js developers for progressive web apps, admin dashboards, and Nuxt 3 SSR apps. Vue 3 Composition API and TypeScript experts.",
   },
   hero: {

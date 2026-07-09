@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "PHP Developer — Hire Expert PHP Web Developers",
+    title: "Hire Expert PHP Web Developers",
     description: "Hire PHP developers for Laravel apps, WordPress plugins, e-commerce platforms, and legacy PHP modernisation. Clean, tested, modern PHP 8.",
   },
   hero: {

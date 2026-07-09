@@ -149,14 +149,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // ── Company pages ─────────────────────────────────────────────────────────
     url("/about/", 0.7),
+    url("/stack/", 0.6),
     url("/portfolio/", 0.75, "weekly"),
     url("/blog/", 0.7, "weekly"),
     url("/contact/", 0.7, "yearly"),
     url("/products/", 0.65),
+    url("/manchify/", 0.7),
     url("/partnership/", 0.6),
     url("/careers/", 0.6),
 
-    // EXCLUDED (noindex): /privacy-policy/, /stack/*, /solutions/*
+    // EXCLUDED (noindex): /privacy-policy/, /solutions/*
 
     ...projectEntries,
     ...postEntries,

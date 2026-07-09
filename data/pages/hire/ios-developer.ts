@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "iOS Developer — Hire Expert iOS App Developers",
+    title: "Hire Expert iOS App Developers",
     description: "Hire iOS developers for native Swift apps, App Store deployment, SwiftUI interfaces, and Apple ecosystem integrations.",
   },
   hero: {

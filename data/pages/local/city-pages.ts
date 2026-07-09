@@ -6,7 +6,7 @@ import type { ServicePageData } from "@/lib/types";
 // —————————————————————————————————————————————————————————————————————————————
 export const ahmedabad: ServicePageData = {
   meta: {
-    title: "Web Development Company in Ahmedabad, Gujarat",
+    title: "Web Development Company, Ahmedabad",
     description:
       "Digital Web Weaver — web development company serving Ahmedabad businesses. Custom websites, mobile apps, SaaS, ERP, and AI solutions built by senior engineers. Free consultation.",
   },
@@ -151,7 +151,7 @@ export const ahmedabad: ServicePageData = {
 // —————————————————————————————————————————————————————————————————————————————
 export const surat: ServicePageData = {
   meta: {
-    title: "Web Development Company in Surat, Gujarat",
+    title: "Web Development Company, Surat",
     description:
       "Digital Web Weaver — web development company serving Surat. Custom websites, e-commerce platforms, ERP systems, and mobile apps for diamond, textile, and trading businesses in Surat.",
   },
@@ -296,7 +296,7 @@ export const surat: ServicePageData = {
 // —————————————————————————————————————————————————————————————————————————————
 export const rajkot: ServicePageData = {
   meta: {
-    title: "Web Development Company in Rajkot, Gujarat",
+    title: "Web Development Company, Rajkot",
     description:
       "Digital Web Weaver — web development company serving Rajkot. Custom websites, ERP systems, B2B portals, and mobile apps for Rajkot's engineering, manufacturing, and SME businesses.",
   },
@@ -441,7 +441,7 @@ export const rajkot: ServicePageData = {
 // —————————————————————————————————————————————————————————————————————————————
 export const gujarat: ServicePageData = {
   meta: {
-    title: "Web Development Company in Gujarat, India",
+    title: "Web Development Company, Gujarat",
     description:
       "Web development company serving Gujarat businesses — custom websites, mobile apps, SaaS, ERP, and AI solutions across Vadodara, Ahmedabad, Surat, and Rajkot.",
   },
@@ -587,7 +587,7 @@ export const gujarat: ServicePageData = {
 // —————————————————————————————————————————————————————————————————————————————
 export const unitedKingdom: ServicePageData = {
   meta: {
-    title: "Software Development Company for UK Businesses",
+    title: "Software Development Company UK",
     description:
       "Digital Web Weaver — an offshore software development company serving the UK. Bespoke web development, custom software, and dedicated development teams at a fraction of UK agency rates.",
   },
@@ -742,7 +742,7 @@ export const unitedKingdom: ServicePageData = {
 // —————————————————————————————————————————————————————————————————————————————
 export const southAfrica: ServicePageData = {
   meta: {
-    title: "Software Development Company for South African Businesses",
+    title: "Software Development Company, South Africa",
     description:
       "Digital Web Weaver — an offshore software development company serving South Africa. Bespoke web development, custom software, and dedicated development teams at a fraction of local agency rates.",
   },
@@ -897,7 +897,7 @@ export const southAfrica: ServicePageData = {
 // —————————————————————————————————————————————————————————————————————————————
 export const ivoryCoast: ServicePageData = {
   meta: {
-    title: "Agence de Développement Web et Logiciel pour Abidjan, Côte d'Ivoire",
+    title: "Agence Développement Web Abidjan",
     description:
       "Digital Web Weaver — agence de développement web et logiciel pour les entreprises d'Abidjan et de Côte d'Ivoire. Sites web, applications sur mesure, e-commerce et équipes de développement dédiées à coût maîtrisé.",
   },

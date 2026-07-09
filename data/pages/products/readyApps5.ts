@@ -9,7 +9,7 @@ const crumbs = (name: string) => [
 // ───────────────────────────── Manchify ─────────────────────────────
 export const manchify: ServicePageData = {
   meta: {
-    title: "Manchify — Operations CRM & ERP for Event Management Companies",
+    title: "Manchify — Event Management CRM & ERP",
     description:
       "Manchify is the all-in-one operations platform for Indian event companies — leads, quotes, vendors, manpower, rentals, and GST invoicing in one place. WhatsApp-native, no-code, mobile-first.",
   },

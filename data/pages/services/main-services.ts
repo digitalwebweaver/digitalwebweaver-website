@@ -21,7 +21,7 @@ export const saasDevelopment: ServicePageData = {
 };
 
 export const crmErpSystems: ServicePageData = {
-  meta: { title: "Custom CRM & ERP Development — Business Systems That Work", description: "Custom CRM and ERP development: sales pipelines, inventory management, HR, finance modules, and ERP integration for enterprise operations." },
+  meta: { title: "Custom CRM & ERP Development", description: "Custom CRM and ERP development: sales pipelines, inventory management, HR, finance modules, and ERP integration for enterprise operations." },
   hero: { eyebrow: "CRM & ERP Systems", heading: "CRM & ERP Systems Built Around Your Business", lead: "We build custom CRM and ERP systems tailored to your workflows — eliminating the compromises of off-the-shelf software.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "CRM & ERP Systems" }],
     marqueeItems: ["Sales pipeline","Inventory management","HR & payroll","Finance & accounting","Customer portal","Reporting & BI","Multi-branch","Role-based access","API integrations","Audit logs"],
     stats: [{ value: "Custom", label: "No Compromises" }, { value: "Modular", label: "Architecture" }, { value: "ERP", label: "Integration" }] },
@@ -41,7 +41,7 @@ export const crmErpSystems: ServicePageData = {
 };
 
 export const mvpDevelopment: ServicePageData = {
-  meta: { title: "MVP Development — From Idea to Investor-Ready in 8–12 Weeks", description: "Lean MVP development for startups and founders. Ship a working product in 8–12 weeks with user-validated features and investor-ready demos." },
+  meta: { title: "MVP Development for Startups", description: "Lean MVP development for startups and founders. Ship a working product in 8–12 weeks with user-validated features and investor-ready demos." },
   hero: { eyebrow: "MVP Development", heading: "From Idea to Investor-Ready MVP in 8–12 Weeks", lead: "We build focused, fast MVPs that validate your assumptions, attract early users, and impress investors — without building everything at once.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "MVP Development" }],
     marqueeItems: ["Discovery","User stories","Figma prototype","API design","React","Node.js","PostgreSQL","Stripe","Auth","CI/CD","UAT","Launch"],
     stats: [{ value: "8–12wk", label: "Delivery" }, { value: "Lean", label: "Scope Discipline" }, { value: "Validated", label: "User-Tested" }] },
@@ -60,7 +60,7 @@ export const mvpDevelopment: ServicePageData = {
 };
 
 export const mobileAppDevelopment: ServicePageData = {
-  meta: { title: "Mobile App Development — iOS & Android for Real Users", description: "Native and cross-platform mobile app development: iOS Swift, Android Kotlin, React Native, and Flutter — App Store and Play Store delivery." },
+  meta: { title: "Mobile App Development — iOS & Android", description: "Native and cross-platform mobile app development: iOS Swift, Android Kotlin, React Native, and Flutter — App Store and Play Store delivery." },
   hero: { eyebrow: "Mobile App Development", heading: "Mobile App Development for iOS & Android at 60fps", lead: "We build native and cross-platform mobile apps with Swift, Kotlin, React Native, and Flutter — performant, store-approved, and loved by users.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Mobile App Development" }],
     marqueeItems: ["React Native","Flutter","Swift","Kotlin","Expo","Push notifications","Offline-first","BLE / GPS","App Store submission","Play Store submission","Deep links","In-app purchases"],
     stats: [{ value: "55+", label: "Apps Shipped" }, { value: "60fps", label: "Performance" }, { value: "4.8★", label: "Avg Rating" }] },
@@ -80,7 +80,7 @@ export const mobileAppDevelopment: ServicePageData = {
 };
 
 export const customWebApps: ServicePageData = {
-  meta: { title: "Custom Web Application Development — Portals, Dashboards & SaaS", description: "Custom web application development for portals, dashboards, internal tools, and SaaS products. React, Next.js, Node.js, and scalable cloud architecture." },
+  meta: { title: "Custom Web Application Development", description: "Custom web application development for portals, dashboards, internal tools, and SaaS products. React, Next.js, Node.js, and scalable cloud architecture." },
   hero: { eyebrow: "Custom Web Apps", heading: "Custom Web Applications Built to Scale", lead: "We build custom web apps — from internal tools and dashboards to customer-facing portals and SaaS products — that do exactly what off-the-shelf software can't.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Custom Web Apps" }],
     marqueeItems: ["React","Next.js","Vue.js","Node.js","Django","Laravel","PostgreSQL","Redis","REST APIs","GraphQL","WebSockets","Role-based auth"],
     stats: [{ value: "80+", label: "Web Apps" }, { value: "TypeScript", label: "End-to-End" }, { value: "Scalable", label: "Architecture" }] },
@@ -109,7 +109,7 @@ export const customWebApps: ServicePageData = {
 };
 
 export const ecommerceDevelopment: ServicePageData = {
-  meta: { title: "E-Commerce Development — Online Stores Built to Convert", description: "Custom e-commerce development: WooCommerce, headless commerce, payment gateways, inventory management, and conversion-optimised storefronts." },
+  meta: { title: "E-Commerce Development Services", description: "Custom e-commerce development: WooCommerce, headless commerce, payment gateways, inventory management, and conversion-optimised storefronts." },
   hero: { eyebrow: "E-Commerce Development", heading: "E-Commerce Development Built to Convert, Scale & Integrate", lead: "We build high-performance e-commerce storefronts — custom, WooCommerce, or headless — optimised for conversion, not just appearance.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "E-Commerce Development" }],
     marqueeItems: ["Shopify Plus","WooCommerce","Magento","Headless commerce","Stripe","Razorpay","PayPal","Multi-currency","Inventory sync","ERP integration","Subscription billing"],
     stats: [{ value: "+40%", label: "Avg Conversion" }, { value: "Headless", label: "Architecture" }, { value: "PCI-DSS", label: "Secure" }] },
@@ -128,7 +128,7 @@ export const ecommerceDevelopment: ServicePageData = {
 };
 
 export const uiUxDesign: ServicePageData = {
-  meta: { title: "UI/UX Design Services — Product Design That Converts", description: "Product design services: UX research, Figma wireframes, interactive prototypes, design systems, and accessibility audits for web and mobile." },
+  meta: { title: "UI/UX Design & Product Design Services", description: "Product design services: UX research, Figma wireframes, interactive prototypes, design systems, and accessibility audits for web and mobile." },
   hero: { eyebrow: "UI/UX Design", heading: "UI/UX Design That Users Love — and Businesses Can Measure", lead: "We design interfaces grounded in user research and business goals — from wireframes and prototypes to full design systems and developer handoffs.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "UI/UX Design" }],
     marqueeItems: ["User research","Usability testing","Figma","Design systems","Prototyping","Accessibility (WCAG)","Mobile-first","Design tokens","UX audit","Heuristic analysis","A/B testing"],
     stats: [{ value: "WCAG 2.1", label: "Accessible" }, { value: "Figma", label: "Delivered" }, { value: "95+", label: "Usability Score" }] },
@@ -157,7 +157,7 @@ export const uiUxDesign: ServicePageData = {
 };
 
 export const cloudDevOps: ServicePageData = {
-  meta: { title: "Cloud & DevOps Services — Infrastructure That Scales", description: "Cloud and DevOps: AWS/GCP/Azure infrastructure, CI/CD pipelines, Kubernetes, monitoring, cost optimisation, and site reliability engineering." },
+  meta: { title: "Cloud & DevOps Services", description: "Cloud and DevOps: AWS/GCP/Azure infrastructure, CI/CD pipelines, Kubernetes, monitoring, cost optimisation, and site reliability engineering." },
   hero: { eyebrow: "Cloud & DevOps", heading: "Cloud & DevOps Infrastructure That Scales With Your Product", lead: "We design, build, and manage cloud infrastructure that's automated, monitored, secure, and cost-optimised — so your team can focus on the product.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Cloud & DevOps" }],
     marqueeItems: ["AWS","GCP","Terraform","Docker","Kubernetes","GitHub Actions","ArgoCD","Prometheus","Grafana","ELK Stack","CloudFront","RDS"],
     stats: [{ value: "99.9%", label: "Uptime SLA" }, { value: "AWS/GCP", label: "Multi-Cloud" }, { value: "IaC", label: "Everything" }] },
@@ -215,7 +215,7 @@ export const aiAutomation: ServicePageData = {
 };
 
 export const openSourceDevelopment: ServicePageData = {
-  meta: { title: "WordPress & WooCommerce Development — Custom Themes & Plugins", description: "Custom WordPress, WooCommerce, and Magento development: themes, plugins, e-commerce extensions, and performance optimisation." },
+  meta: { title: "WordPress & WooCommerce Development", description: "Custom WordPress, WooCommerce, and Magento development: themes, plugins, e-commerce extensions, and performance optimisation." },
   hero: { eyebrow: "Open-Source Development", heading: "WordPress, WooCommerce & Magento Done Right", lead: "We build custom WordPress themes, WooCommerce extensions, and Magento customisations — performant, secure, and maintained properly.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Open-Source Development" }],
     marqueeItems: ["WordPress","WooCommerce","Magento 2","Custom plugins","ACF","Gutenberg blocks","REST API","WP CLI","Multisite","WPML","WP Engine"],
     stats: [{ value: "100+", label: "WP Projects" }, { value: "Custom", label: "Plugins" }, { value: "90+", label: "PageSpeed" }] },
@@ -274,7 +274,7 @@ export const webDevelopment: ServicePageData = {
 };
 
 export const webDesignVadodara: ServicePageData = {
-  meta: { title: "#1 Web Design Company in Vadodara, Gujarat — Digital Web Weaver", description: "Best web design company in Vadodara. Custom websites, e-commerce, and web applications for local Vadodara businesses. Call us today." },
+  meta: { title: "Web Design Company, Vadodara", description: "Best web design company in Vadodara. Custom websites, e-commerce, and web applications for local Vadodara businesses. Call us today." },
   hero: { eyebrow: "Vadodara Web Design", heading: "#1 Web Design Company in Vadodara, Gujarat", lead: "We help Vadodara businesses grow online with custom websites, e-commerce stores, and web applications — delivered fast, built to last.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Web Design Vadodara" }], stats: [{ value: "50+", label: "Vadodara Clients" }, { value: "Local", label: "Agency" }, { value: "5★", label: "Rated" }] },
   services: { eyebrow: "Services", heading: "Web Services for Vadodara Businesses", items: [{ icon: "🌐", title: "Business Websites", desc: "Professional websites that represent your Vadodara business online." }, { icon: "🛒", title: "E-Commerce Stores", desc: "WooCommerce and custom shops for local businesses selling online." }, { icon: "📱", title: "Mobile-First Design", desc: "Websites optimised for the mobile users that dominate Vadodara traffic." }, { icon: "🔍", title: "Local SEO", desc: "Rank on Google for 'web design Vadodara' and local search terms." }, { icon: "🏪", title: "Restaurant & Hotel Websites", desc: "F&B and hospitality websites with menus, bookings, and reviews." }, { icon: "💼", title: "Corporate Sites", desc: "Professional corporate presence for Vadodara enterprises." }] },
   capabilities: { eyebrow: "Why Us", heading: "Why Vadodara Businesses Choose Us", dark: true, items: [{ icon: "🏙️", title: "Local Presence", desc: "We're based in India and understand the local market intimately." }, { icon: "⚡", title: "Fast Delivery", desc: "Most business websites delivered in 2–3 weeks." }, { icon: "📱", title: "Mobile Optimised", desc: "60%+ of Indian traffic is mobile — we build for it first." }, { icon: "🔍", title: "SEO Included", desc: "Local SEO, meta tags, and Google Business Profile setup." }, { icon: "🔧", title: "Ongoing Support", desc: "Updates, hosting, and maintenance handled for you." }, { icon: "💰", title: "Competitive Pricing", desc: "Agency quality at local prices — no hidden costs." }] },

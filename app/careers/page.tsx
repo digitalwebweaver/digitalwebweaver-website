@@ -3,16 +3,33 @@ import Link from "next/link";
 import CountStat from "@/components/ui/CountStat";
 
 export const metadata: Metadata = {
-  title: "Careers",
+  title: "Remote Software Engineering Careers",
   description:
-    "Join Digital Web Weaver — a senior engineering studio that ships 200+ real systems a year. Build meaningful software with a team that cares about craft.",
+    "Join Digital Web Weaver — a senior engineering studio shipping production software across India, UK, and South Africa. Remote-first, async culture.",
   alternates: { canonical: "/careers/" },
   openGraph: { url: "/careers/", type: "website" },
+};
+
+const CAREERS_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  url: "https://digitalwebweaver.com/careers/",
+  name: "Careers at Digital Web Weaver",
+  description: "Senior software engineering jobs at Digital Web Weaver — remote-first, async culture, shipping production software across India, UK, and South Africa.",
+  isPartOf: { "@id": "https://digitalwebweaver.com/#website" },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://digitalwebweaver.com/" },
+      { "@type": "ListItem", position: 2, name: "Careers", item: "https://digitalwebweaver.com/careers/" },
+    ],
+  },
 };
 
 export default function CareersPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(CAREERS_SCHEMA) }} />
       {/* ===== HERO ===== */}
       <section className="page-hero">
         <div className="wrap">

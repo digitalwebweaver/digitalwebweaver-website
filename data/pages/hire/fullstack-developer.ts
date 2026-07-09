@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Full Stack Developer — Hire Expert Full Stack Engineers",
+    title: "Hire Expert Full Stack Engineers",
     description: "Hire full stack developers who own the entire product — React frontends, Node.js/Python backends, databases, and cloud deployments.",
   },
   hero: {

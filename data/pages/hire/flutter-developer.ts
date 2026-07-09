@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Flutter Developer — Hire Expert Flutter & Dart Developers",
+    title: "Hire Expert Flutter & Dart Developers",
     description: "Hire Flutter developers for beautiful, high-performance cross-platform apps on iOS, Android, web, and desktop with a single Dart codebase.",
   },
   hero: {

@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "DevOps Engineer — Hire Expert DevOps & Cloud Engineers From India",
+    title: "Hire Expert DevOps & Cloud Engineers",
     description: "Hire DevOps engineers for CI/CD pipelines, Kubernetes orchestration, AWS/GCP/Azure infrastructure, and site reliability engineering.",
   },
   hero: {

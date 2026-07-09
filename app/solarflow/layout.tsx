@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SolarFlow — Solar ERP + CRM Software for Gujarat Installers | PM Surya Ghar Subsidy Tracker",
+  title: { absolute: "SolarFlow — Solar ERP & CRM for Gujarat Installers" },
   description:
-    "SolarFlow is India's only ERP + CRM built for solar installers in Gujarat. Track PM Surya Ghar → GEDA → MGVCL subsidy lifecycle, auto-validate ALMM panels, generate GST invoices, and quote in minutes. Trusted in Vadodara.",
+    "Solar ERP + CRM for Gujarat installers. Track PM Surya Ghar → GEDA → MGVCL subsidy lifecycle, validate ALMM panels, GST invoicing. Trusted in Vadodara.",
   keywords: [
     "solar ERP software Gujarat",
     "solar CRM Gujarat",

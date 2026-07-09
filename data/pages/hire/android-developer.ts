@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Android Developer — Hire Expert Android App Developers",
+    title: "Hire Expert Android App Developers",
     description: "Hire Android developers for native Kotlin apps, Google Play submission, Jetpack Compose UIs, and Android ecosystem integrations.",
   },
   hero: {

@@ -9,7 +9,7 @@ const crumbs = (name: string) => [
 // ───────────────────────────── RideEasy ─────────────────────────────
 export const rideeasy: ServicePageData = {
   meta: {
-    title: "RideEasy — Cab Booking System for Taxi & Fleet Operators",
+    title: "RideEasy — Cab Booking System",
     description:
       "RideEasy is a ready-to-launch cab booking platform — rider app, driver app, and dispatch dashboard with live tracking, fare estimation, and payments — branded as your own.",
   },
@@ -116,7 +116,7 @@ export const rideeasy: ServicePageData = {
 // ───────────────────────────── SchoolHub ─────────────────────────────
 export const schoolhub: ServicePageData = {
   meta: {
-    title: "SchoolHub — School Management System for K-12 Institutions",
+    title: "SchoolHub — School Management System",
     description:
       "SchoolHub is a ready-to-deploy school management system — admissions, attendance, timetables, fee collection, exams, and parent communication in one branded platform.",
   },
@@ -223,7 +223,7 @@ export const schoolhub: ServicePageData = {
 // ───────────────────────────── ClinicFlow ─────────────────────────────
 export const clinicflow: ServicePageData = {
   meta: {
-    title: "ClinicFlow — Clinic Management System for Doctors & Multi-Specialty Practices",
+    title: "ClinicFlow — Clinic Management System",
     description:
       "ClinicFlow is a ready-to-launch clinic management system — appointment scheduling, EMR, billing, pharmacy, and patient communication in one branded platform.",
   },
@@ -330,9 +330,9 @@ export const clinicflow: ServicePageData = {
 // ───────────────────────────── VetCare ─────────────────────────────
 export const vetcare: ServicePageData = {
   meta: {
-    title: "VetCare — Veterinary Practice Management System for South African Clinics",
+    title: "VetCare — Veterinary Practice Software",
     description:
-      "VetCare is an all-in-one practice management system built for South African veterinary clinics. Appointments, patient records, SARS-compliant billing, WhatsApp communication, stock control — and it keeps working through loadshedding.",
+      "VetCare: practice management for South African vet clinics. Appointments, patient records, SARS-compliant billing, WhatsApp comms, stock control — loadshedding-proof.",
   },
   hero: {
     eyebrow: "VetCare",

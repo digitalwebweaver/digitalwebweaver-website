@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "React Developer — Hire Expert React.js Developers",
+    title: "Hire Expert React.js Developers",
     description:
       "Hire experienced React developers for SPAs, dashboards, and enterprise apps. Fast, scalable, modern frontends built with React 18+ and TypeScript.",
   },

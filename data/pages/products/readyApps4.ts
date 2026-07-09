@@ -9,7 +9,7 @@ const crumbs = (name: string) => [
 // ───────────────────────────── ChatFlow AI ─────────────────────────────
 export const chatflowAi: ServicePageData = {
   meta: {
-    title: "ChatFlow AI — WhatsApp Automation for Support & Sales",
+    title: "ChatFlow AI — WhatsApp Automation",
     description:
       "ChatFlow AI is a ready-to-deploy WhatsApp automation agent — handles enquiries, bookings, order updates, and follow-ups automatically on your business WhatsApp number.",
   },
@@ -116,7 +116,7 @@ export const chatflowAi: ServicePageData = {
 // ───────────────────────────── TeleCare ─────────────────────────────
 export const telecare: ServicePageData = {
   meta: {
-    title: "TeleCare — Telemedicine Platform for Clinics & Hospitals",
+    title: "TeleCare — Telemedicine Platform",
     description:
       "TeleCare is a ready-to-launch telemedicine platform — video consultations, e-prescriptions, patient records, appointment scheduling, and payments in one branded system.",
   },
@@ -223,7 +223,7 @@ export const telecare: ServicePageData = {
 // ───────────────────────────── InsureDesk ─────────────────────────────
 export const insuredesk: ServicePageData = {
   meta: {
-    title: "InsureDesk — CRM for Insurance Agencies & Brokers",
+    title: "InsureDesk — Insurance Agency CRM",
     description:
       "InsureDesk is a ready-to-launch CRM for insurance agencies — lead management, policy tracking, renewal reminders, claims follow-up, and client communication in one platform.",
   },
@@ -330,7 +330,7 @@ export const insuredesk: ServicePageData = {
 // ───────────────────────────── CallMate AI ─────────────────────────────
 export const callmateAi: ServicePageData = {
   meta: {
-    title: "CallMate AI — AI Voice Calling Agent for Businesses",
+    title: "CallMate AI — Business AI Calling Agent",
     description:
       "CallMate AI is a ready-to-deploy AI voice agent for businesses — handles inbound enquiries, books appointments, makes follow-up calls, and qualifies leads automatically.",
   },

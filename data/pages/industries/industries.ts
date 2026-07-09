@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 export const healthcare: ServicePageData = {
   meta: {
-    title: "Healthcare Software Development — HIPAA-Compliant Solutions",
+    title: "Healthcare Software Development",
     description: "HIPAA-compliant healthcare software: EHR/EMR, patient portals, telemedicine apps, HL7/FHIR integrations, and medical device connectivity.",
   },
   hero: {
@@ -89,7 +89,7 @@ export const healthcare: ServicePageData = {
 
 export const fintech: ServicePageData = {
   meta: {
-    title: "FinTech Software Development — Built to Comply, Built to Scale",
+    title: "FinTech Software Development",
     description: "FinTech development for payment processing, lending platforms, KYC/AML, PCI-DSS compliance, open banking APIs, and trading dashboards.",
   },
   hero: {
@@ -181,7 +181,7 @@ export const fintech: ServicePageData = {
 
 export const edtech: ServicePageData = {
   meta: {
-    title: "EdTech Software Development — Platforms That Teach at Scale",
+    title: "EdTech Software Development",
     description: "EdTech development for LMS platforms, live class tools, assessment engines, student analytics, and mobile learning apps.",
   },
   hero: {
@@ -273,7 +273,7 @@ export const edtech: ServicePageData = {
 
 export const logistics: ServicePageData = {
   meta: {
-    title: "Logistics & Supply Chain Software Development",
+    title: "Logistics Software Development",
     description: "Custom logistics and supply chain software: fleet management, shipment tracking, warehouse management, route optimisation, and ERP integration.",
   },
   hero: {
@@ -365,7 +365,7 @@ export const logistics: ServicePageData = {
 
 export const manufacturing: ServicePageData = {
   meta: {
-    title: "Manufacturing Software Development — Industry 4.0 Solutions",
+    title: "Manufacturing Software Development",
     description: "Manufacturing software: MES/MRP systems, IoT integration, quality control, production scheduling, and Industry 4.0 digital transformation.",
   },
   hero: {
@@ -457,7 +457,7 @@ export const manufacturing: ServicePageData = {
 
 export const realEstate: ServicePageData = {
   meta: {
-    title: "PropTech & Real Estate Software Development",
+    title: "Real Estate Software Development",
     description: "Real estate software: property listing platforms, agent CRM, virtual tours, lease management, and PropTech mobile apps.",
   },
   hero: {
@@ -549,7 +549,7 @@ export const realEstate: ServicePageData = {
 
 export const retailEcommerce: ServicePageData = {
   meta: {
-    title: "Retail & E-Commerce Software Development",
+    title: "Retail & E-Commerce Development",
     description: "Custom retail and e-commerce development: omnichannel platforms, POS integration, loyalty programs, recommendation engines, and headless commerce.",
   },
   hero: {
@@ -640,7 +640,7 @@ export const retailEcommerce: ServicePageData = {
 
 export const saasStartups: ServicePageData = {
   meta: {
-    title: "SaaS & Startup Development — Ship Fast, Scale Smart",
+    title: "SaaS & Startup Software Development",
     description: "SaaS and startup development: lean MVP delivery, multi-tenant architecture, subscription billing, growth features, and investor-ready products.",
   },
   hero: {

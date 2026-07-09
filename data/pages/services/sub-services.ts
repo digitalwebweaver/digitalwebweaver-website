@@ -26,7 +26,7 @@ const mk = (
 });
 
 export const apiDevelopment: ServicePageData = {
-  meta: { title: "API Development Services — REST & GraphQL APIs", description: "Custom REST, GraphQL, and WebSocket API development with OAuth/JWT auth, OpenAPI documentation, versioning, and performance optimisation." },
+  meta: { title: "REST & GraphQL API Development Services", description: "Custom REST, GraphQL, and WebSocket API development with OAuth/JWT auth, OpenAPI documentation, versioning, and performance optimisation." },
   hero: { eyebrow: "API Development", heading: "API Development Services for Every Integration — Web to Mobile", lead: "We design and build secure, documented, versioned APIs using REST, GraphQL, and WebSocket patterns — ready for any client to consume.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Services", href: "/services/" }, { label: "API Development" }] },
   services: { variant: "svc", eyebrow: "What We Build", heading: "API Development Services", items: [{ icon: "🔌", title: "REST APIs", desc: "CRUD-based resource APIs with proper status codes and error handling." }, { icon: "🔷", title: "GraphQL APIs", desc: "Flexible query APIs with schema, resolvers, and subscriptions." }, { icon: "⚡", title: "WebSocket APIs", desc: "Real-time bidirectional APIs for live data and chat." }, { icon: "🔒", title: "Auth & Security", desc: "OAuth 2.0, JWT, API keys, rate limiting, and IP allowlisting." }, { icon: "📖", title: "OpenAPI Docs", desc: "Swagger/Redoc auto-generated documentation with examples." }, { icon: "🔄", title: "API Versioning", desc: "URL, header, and content-type versioning strategies." }] },
   capabilities: { eyebrow: "Technical Depth", heading: "API Capabilities", dark: true, items: [{ icon: "🔌", title: "Express & Fastify", desc: "Production-grade Node.js API frameworks." }, { icon: "🔷", title: "Apollo Server", desc: "GraphQL with resolvers, dataloaders, and subscriptions." }, { icon: "🧪", title: "Contract Testing", desc: "Pact and Dredd for API contract verification." }, { icon: "📊", title: "Performance", desc: "Response caching, pagination, and database query optimisation." }, { icon: "🔒", title: "Security", desc: "Input validation, SQL injection prevention, CORS, and CSP." }, { icon: "📈", title: "Observability", desc: "Structured logging, tracing, and endpoint latency monitoring." }] },
@@ -38,7 +38,7 @@ export const apiDevelopment: ServicePageData = {
 };
 
 export const apiIntegrations: ServicePageData = mk(
-  "api-integrations", "API Integration Services — Connect Your Business Systems", "Connect payment gateways, CRMs, ERPs, and third-party APIs with custom middleware, webhook management, and error handling.",
+  "api-integrations", "API & Third-Party Integration Services", "Connect payment gateways, CRMs, ERPs, and third-party APIs with custom middleware, webhook management, and error handling.",
   "API Integrations", "API Integration Services That Connect Every System You Rely On",
   "We integrate third-party APIs, payment gateways, CRMs, and ERPs into your applications — reliably, with proper error handling and monitoring.",
   [
@@ -52,7 +52,7 @@ export const apiIntegrations: ServicePageData = mk(
 );
 
 export const corporateWebsites: ServicePageData = mk(
-  "corporate-websites", "Corporate Website Development — Lead Generation & Brand", "Professional corporate websites designed to convert visitors into leads. CMS integration, SEO structure, performance optimisation.",
+  "corporate-websites", "Corporate Website Development Services", "Professional corporate websites designed to convert visitors into leads. CMS integration, SEO structure, performance optimisation.",
   "Corporate Websites", "Corporate Website Development Designed to Convert Visitors into Leads",
   "We build professional, fast, and SEO-optimised corporate websites that represent your brand and capture qualified leads.",
   [
@@ -66,7 +66,7 @@ export const corporateWebsites: ServicePageData = mk(
 );
 
 export const databaseDesign: ServicePageData = mk(
-  "database-design", "Database Design & Architecture — Scale & Speed", "Database design for relational and NoSQL systems: schema design, indexing, query optimisation, migrations, and sharding strategies.",
+  "database-design", "Database Design, Schema & Optimisation", "Database design for relational and NoSQL systems: schema design, indexing, query optimisation, migrations, and sharding strategies.",
   "Database Design", "Database Design & Architecture Built for Scale and Speed",
   "We design database schemas, optimise queries, and architect data layers for performance, integrity, and future scale.",
   [
@@ -80,7 +80,7 @@ export const databaseDesign: ServicePageData = mk(
 );
 
 export const enterpriseApplications: ServicePageData = mk(
-  "enterprise-applications", "Enterprise Application Development — Scale Across Teams", "Enterprise application development: large-scale systems with role-based access, workflow automation, SSO, multi-tenant architecture, and compliance.",
+  "enterprise-applications", "Enterprise Application Development", "Enterprise application development: large-scale systems with role-based access, workflow automation, SSO, multi-tenant architecture, and compliance.",
   "Enterprise Applications", "Enterprise Application Development That Scales Across Teams and Workflows",
   "We build large-scale enterprise applications with complex role hierarchies, workflow automation, SSO, and multi-tenant architectures.",
   [
@@ -94,7 +94,7 @@ export const enterpriseApplications: ServicePageData = mk(
 );
 
 export const iosDevelopment: ServicePageData = mk(
-  "ios-development", "iOS App Development — Native Swift & SwiftUI", "Native iOS app development with Swift, SwiftUI, and App Store submission. HIPAA, payment integrations, and enterprise iOS solutions.",
+  "ios-development", "iOS App Development — Native Swift", "Native iOS app development with Swift, SwiftUI, and App Store submission. HIPAA, payment integrations, and enterprise iOS solutions.",
   "iOS Development", "iOS App Development Built for Performance and App Store Launch",
   "We build polished, App Store-approved iOS apps with Swift and SwiftUI — delivered with TestFlight builds and full submission support.",
   [
@@ -108,7 +108,7 @@ export const iosDevelopment: ServicePageData = mk(
 );
 
 export const microservices: ServicePageData = mk(
-  "microservices", "Microservices Architecture — For Teams That Ship Fast", "Microservices design and implementation: service decomposition, API gateway, Docker/Kubernetes, event-driven architecture, and observability.",
+  "microservices", "Microservices Architecture Services", "Microservices design and implementation: service decomposition, API gateway, Docker/Kubernetes, event-driven architecture, and observability.",
   "Microservices", "Microservices Architecture for Teams That Ship Fast",
   "We design and build microservices architectures that scale independently, deploy continuously, and recover automatically.",
   [
@@ -122,7 +122,7 @@ export const microservices: ServicePageData = mk(
 );
 
 export const performanceOptimization: ServicePageData = mk(
-  "performance-optimization", "Performance Optimisation — Make Your App Fast", "Web performance optimisation: Core Web Vitals, database query tuning, Redis caching, image optimisation, and load testing.",
+  "performance-optimization", "Web Performance Optimisation Services", "Web performance optimisation: Core Web Vitals, database query tuning, Redis caching, image optimisation, and load testing.",
   "Performance Optimisation", "Performance Optimisation That Turns Slow into Fast",
   "We audit and fix performance bottlenecks — from Core Web Vitals and JavaScript bundles to slow queries and inefficient caching.",
   [
@@ -136,7 +136,7 @@ export const performanceOptimization: ServicePageData = mk(
 );
 
 export const progressiveWebApps: ServicePageData = mk(
-  "progressive-web-apps", "Progressive Web App Development — Native Feel Without Native Build", "PWA development: offline mode, push notifications, installable apps, service worker implementation, and Lighthouse optimisation.",
+  "progressive-web-apps", "Progressive Web App (PWA) Development", "PWA development: offline mode, push notifications, installable apps, service worker implementation, and Lighthouse optimisation.",
   "Progressive Web Apps", "Progressive Web App Development That Feels Native Without a Native Build",
   "We build Progressive Web Apps that install from the browser, work offline, and deliver native-like performance across all platforms.",
   [
@@ -150,7 +150,7 @@ export const progressiveWebApps: ServicePageData = mk(
 );
 
 export const appModernization: ServicePageData = mk(
-  "app-modernization", "App Modernisation — Legacy to Modern Without Big-Bang Rewrite", "Legacy application modernisation: strangler fig pattern, monolith to microservices, database migration, and UI modernisation.",
+  "app-modernization", "Legacy App Modernisation Services", "Legacy application modernisation: strangler fig pattern, monolith to microservices, database migration, and UI modernisation.",
   "App Modernisation", "App Modernisation — Modernise Legacy Systems Without the Big-Bang Rewrite",
   "We modernise legacy applications incrementally — using the strangler fig pattern to reduce risk while continuously delivering new value.",
   [

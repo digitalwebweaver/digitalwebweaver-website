@@ -3,9 +3,9 @@ import Link from "next/link";
 import ServicesFaq from "./ServicesFaq";
 
 export const metadata: Metadata = {
-  title: "Software Development Services — Web, Mobile, AI, Cloud & SaaS | Digital Web Weaver",
+  title: "Web, Mobile & AI Software Development Services",
   description:
-    "Full-spectrum custom software development services: React & Next.js, Node.js, Python, mobile apps, SaaS, MVPs, AI automation, cloud/DevOps, UI/UX design, and enterprise systems — delivered across India, UK, and South Africa.",
+    "Custom software development for web, mobile, SaaS, AI, and cloud — delivered by a senior engineering studio across India, UK, and South Africa.",
   alternates: { canonical: "/services/" },
   openGraph: { url: "/services/", type: "website" },
 };

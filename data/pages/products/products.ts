@@ -8,7 +8,7 @@ const mk = (title: string, desc: string, eyebrow: string, heading: string, lead:
 });
 
 export const foodDeliveryApp = mk(
-  "Food Delivery App Development — Customer, Restaurant & Driver Apps",
+  "Food Delivery App Development",
   "Custom food delivery app with customer ordering, restaurant dashboard, and delivery partner app. Built in 8 weeks with real-time tracking.",
   "Food Delivery App", "Custom Food Delivery App — Built in 8 Weeks",
   "We build complete three-sided food delivery ecosystems: customer app, restaurant management dashboard, and delivery partner app with real-time tracking.",
@@ -24,7 +24,7 @@ export const foodDeliveryApp = mk(
   ["Customer App","Restaurant Dashboard","Driver App","React Native","Real-time Tracking","Stripe","Razorpay","Google Maps","Firebase","iOS & Android"]);
 
 export const laundryManagementSystem = mk(
-  "Laundry Management System — Order Tracking & Delivery",
+  "Laundry Management System",
   "Laundry business software with order tracking, pickup/delivery scheduling, customer app, and admin panel for laundry operations.",
   "Laundry Management", "Laundry Management System for Modern Laundry Businesses",
   "We build complete laundry management software: customer booking app, driver tracking, admin panel, and automated notifications.",
@@ -40,7 +40,7 @@ export const laundryManagementSystem = mk(
   ["Customer App","Driver App","QR Tracking","React Native","Slot Scheduling","Stripe","Firebase","White-label","Multi-branch"]);
 
 export const inventoryManagementSystem = mk(
-  "Inventory Management System Development — Stock & Warehouse",
+  "Inventory Management System Development",
   "Custom inventory management software: stock tracking, purchase orders, multi-warehouse, barcode/QR support, and accounting integration.",
   "Inventory System", "Custom Inventory Management System for Your Business",
   "We build inventory management systems with real-time stock tracking, purchase orders, barcode scanning, and multi-warehouse support.",
@@ -56,7 +56,7 @@ export const inventoryManagementSystem = mk(
   ["Multi-warehouse","Barcode scanning","QR codes","Shopify sync","WooCommerce","QuickBooks","Purchase orders","ABC analysis","FIFO / LIFO"]);
 
 export const learningManagementSystem = mk(
-  "Learning Management System (LMS) Development",
+  "Learning Management System Development",
   "Custom LMS with course builder, video hosting, student management, progress tracking, quizzes, certificates, and multi-instructor support.",
   "LMS Platform", "Custom Learning Management System for Your Training Needs",
   "We build feature-rich LMS platforms with video courses, assessments, progress tracking, certificates, and multi-instructor support.",
@@ -72,7 +72,7 @@ export const learningManagementSystem = mk(
 );
 
 export const codeigniterDevelopment = mk(
-  "CodeIgniter Development Company India — CI4 Experts",
+  "CodeIgniter Development Company",
   "CodeIgniter development services: custom CI4 apps, legacy CI2/CI3 to CI4 migration, REST APIs, and module development.",
   "CodeIgniter Development", "CodeIgniter Development — From Legacy to CI4",
   "We build and maintain CodeIgniter applications — from new CI4 projects to legacy CI2/CI3 migration and REST API development.",
@@ -88,7 +88,7 @@ export const codeigniterDevelopment = mk(
   ["CodeIgniter 4","CI4 REST API","CI3 migration","PHP 8.2","JWT auth","Query builder","PHPUnit","Docker","Redis cache","CSRF protection"]);
 
 export const wpLogisticsCourierPlugin = mk(
-  "CourierPress — WordPress Logistics & Courier Tracking Plugin",
+  "CourierPress — WordPress Courier Tracking Plugin",
   "CourierPress is a WordPress plugin for logistics businesses: shipment tracking, courier assignment, customer notifications, and admin panel.",
   "CourierPress Plugin", "CourierPress — WordPress Logistics Tracking Plugin",
   "CourierPress is our commercial WordPress plugin for logistics and courier businesses — shipment tracking, driver assignment, and customer notifications.",
@@ -104,7 +104,7 @@ export const wpLogisticsCourierPlugin = mk(
   ["WordPress","WooCommerce","Shipment tracking","Driver assignment","Email/SMS alerts","Admin panel","Label printing","REST API","PHP 8"]);
 
 export const wpCourierTrackingPlugin = mk(
-  "WordPress Courier Tracking Plugin — Embeddable Tracking Widget",
+  "WordPress Courier Tracking Plugin",
   "Standalone WordPress courier tracking plugin with embeddable tracking widget, shipment status pages, and multi-courier support.",
   "Courier Tracking Plugin", "WordPress Courier Tracking Plugin",
   "Our standalone WordPress courier tracking plugin lets customers track shipments directly on your website — no redirect to third-party sites.",

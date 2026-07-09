@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import PartnershipClient from "./PartnershipClient";
 
+const SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Partnership Programme — Digital Web Weaver",
+  url: "https://digitalwebweaver.com/partnership/",
+  description: "Referral, reseller, and technology partner programmes. Grow your business by connecting clients with a senior software engineering studio.",
+  isPartOf: { "@id": "https://digitalwebweaver.com/#website" },
+};
+
 export const metadata: Metadata = {
   title: "Partnership Programme",
   description:
@@ -10,5 +19,10 @@ export const metadata: Metadata = {
 };
 
 export default function PartnershipPage() {
-  return <PartnershipClient />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
+      <PartnershipClient />
+    </>
+  );
 }

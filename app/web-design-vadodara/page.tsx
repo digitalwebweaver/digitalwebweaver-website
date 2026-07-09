@@ -52,7 +52,7 @@ const localBusinessSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Web Development Company in Vadodara, Gujarat",
+  title: "Web Development Company, Vadodara",
   description:
     "Leading web development company in Vadodara. Custom websites, web apps, e-commerce, and mobile apps built by senior engineers for Vadodara businesses and global clients.",
   alternates: { canonical: "/web-design-vadodara/" },

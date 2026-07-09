@@ -8,7 +8,7 @@ import type { ServicePageData } from "@/lib/types";
 // ─────────────────────────────────────────────────────────────────────────────
 export const customSoftwareDevelopment: ServicePageData = {
   meta: {
-    title: "Custom Software Development Company India",
+    title: "Custom Software Development Company",
     description:
       "Custom software development company in India. We build bespoke business software — ERP, CRM, workflow automation, portals, and SaaS — that fits your processes exactly. Senior engineers. Fixed price.",
   },
@@ -418,7 +418,7 @@ export const websiteDevelopment: ServicePageData = {
 // ─────────────────────────────────────────────────────────────────────────────
 export const webApplicationDevelopment: ServicePageData = {
   meta: {
-    title: "Web Application Development Company India",
+    title: "Web Application Development Company",
     description:
       "Web application development company in India. We build complex web apps — SaaS platforms, business portals, dashboards, multi-user systems, and enterprise web applications. Senior engineers. Fixed price.",
   },

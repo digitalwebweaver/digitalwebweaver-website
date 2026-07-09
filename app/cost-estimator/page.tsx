@@ -8,9 +8,9 @@ export const dynamic = "force-dynamic";
 const SITE = "https://digitalwebweaver.com";
 
 export const metadata: Metadata = {
-  title: "Software & Website Cost Calculator — Free Instant Estimate",
+  title: "Free Software & App Cost Estimator",
   description:
-    "How much does a website, app, or custom software cost? Use our free calculator for an instant project estimate in your currency — then get a free consultation and a wireframe of your idea.",
+    "Use our free calculator for an instant software, website, or app estimate in your currency — then get a free consultation and a wireframe of your idea.",
   alternates: { canonical: "/cost-estimator/" },
   openGraph: { url: "/cost-estimator/", type: "website" },
 };

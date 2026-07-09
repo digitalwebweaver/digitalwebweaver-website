@@ -9,7 +9,7 @@ const crumbs = (name: string) => [
 // ───────────────────────────── SalonBook ─────────────────────────────
 export const salonbook: ServicePageData = {
   meta: {
-    title: "SalonBook — Salon & Spa Management System",
+    title: "SalonBook — Salon & Spa Management",
     description:
       "SalonBook is a ready-to-launch salon management system — online booking, staff scheduling, billing, packages, and client follow-ups in one branded platform.",
   },
@@ -116,7 +116,7 @@ export const salonbook: ServicePageData = {
 // ───────────────────────────── PestTrack ─────────────────────────────
 export const pesttrack: ServicePageData = {
   meta: {
-    title: "PestTrack — CRM for Pest Control Service Businesses",
+    title: "PestTrack — Pest Control CRM Software",
     description:
       "PestTrack is a ready-to-launch CRM for pest control companies — job scheduling, technician routing, service history, contracts, and automated reminders in one platform.",
   },
@@ -223,7 +223,7 @@ export const pesttrack: ServicePageData = {
 // ───────────────────────────── ChemSupply ─────────────────────────────
 export const chemsupply: ServicePageData = {
   meta: {
-    title: "ChemSupply — ERP for Chemical Suppliers & Distributors",
+    title: "ChemSupply — Chemical Supplier ERP",
     description:
       "ChemSupply is a ready-to-deploy ERP for chemical suppliers — inventory with batch/expiry tracking, compliance documentation, order management, and distributor portals.",
   },
@@ -330,7 +330,7 @@ export const chemsupply: ServicePageData = {
 // ───────────────────────────── ClinicVoice AI ─────────────────────────────
 export const clinicvoiceAi: ServicePageData = {
   meta: {
-    title: "ClinicVoice AI — AI Voice Agent for Clinics & Hospitals",
+    title: "ClinicVoice AI — Clinic AI Voice Agent",
     description:
       "ClinicVoice AI is a ready-to-deploy AI voice calling agent for clinics — handles appointment booking, reminders, FAQs, and follow-up calls automatically, in your clinic's voice.",
   },
