@@ -1,20 +1,5 @@
 import type { NextConfig } from "next";
 
-// NOTE: `redirects()` is NOT supported with `output: "export"`.
-// All 301 redirects below must be configured at the hosting/CDN layer:
-//
-// Nginx:
-//   rewrite ^/apps/?$ /products/ permanent;
-//   rewrite ^/vue-developer/?$ /vuejs-developer/ permanent;
-//   rewrite ^/artificial-intelligence-development/?$ /ai-automation/ permanent;
-//   rewrite ^/open-source-development/?$ /wordpress-development/ permanent;
-//
-// Cloudflare Pages (_redirects file in /out):
-//   /apps/*  /products/:splat  301
-//   /vue-developer/  /vuejs-developer/  301
-//   /artificial-intelligence-development/  /ai-automation/  301
-//   /open-source-development/  /wordpress-development/  301
-
 const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
@@ -23,6 +8,16 @@ const nextConfig: NextConfig = {
   },
   compiler: {
     removeConsole: { exclude: ["error", "warn"] },
+  },
+  // Server-side 301 redirects (consolidates backlink equity; replaces the old
+  // client-side JS redirects that served empty pages to crawlers).
+  async redirects() {
+    return [
+      { source: "/apps", destination: "/products/", permanent: true },
+      { source: "/vue-developer", destination: "/vuejs-developer/", permanent: true },
+      { source: "/artificial-intelligence-development", destination: "/ai-automation/", permanent: true },
+      { source: "/open-source-development", destination: "/wordpress-development/", permanent: true },
+    ];
   },
 };
 

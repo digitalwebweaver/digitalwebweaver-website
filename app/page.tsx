@@ -202,48 +202,48 @@ export default function HomePage() {
             <p>One partner for every layer of your product — from first sketch to global scale.</p>
           </div>
           <div className="svc-grid">
-            <div className="svc reveal">
+            <Link href="/web-development/" className="svc reveal">
               <span className="idx">01</span>
               <div className="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M8 6L3 12l5 6M16 6l5 6-5 6" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
               <h3>Web &amp; SaaS platforms</h3>
               <p>Robust, scalable products built on modern stacks — from MVP to enterprise-grade systems serving millions.</p>
               <div className="svc-tags"><span>Next.js</span><span>Node</span><span>Postgres</span></div>
-            </div>
-            <div className="svc reveal">
+            </Link>
+            <Link href="/mobile-app-development/" className="svc reveal">
               <span className="idx">02</span>
               <div className="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2" strokeLinecap="round"/></svg></div>
               <h3>Mobile applications</h3>
               <p>Native-feeling iOS and Android apps from a single codebase, with offline-first sync and real-time updates.</p>
               <div className="svc-tags"><span>React Native</span><span>Swift</span></div>
-            </div>
-            <div className="svc reveal">
+            </Link>
+            <Link href="/ai-automation/" className="svc reveal">
               <span className="idx">03</span>
               <div className="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" strokeLinecap="round"/></svg></div>
               <h3>AI &amp; automation</h3>
               <p>LLM-powered features, retrieval pipelines, and workflow automation wired safely into your real systems.</p>
               <div className="svc-tags"><span>LLM</span><span>RAG</span><span>Agents</span></div>
-            </div>
-            <div className="svc reveal">
+            </Link>
+            <Link href="/cloud-devops/" className="svc reveal">
               <span className="idx">04</span>
               <div className="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-6 9 6v9a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 21V13h6v8"/></svg></div>
               <h3>Cloud &amp; DevOps</h3>
               <p>CI/CD, infrastructure-as-code, and observability so deploys are boring and uptime stays above the line.</p>
               <div className="svc-tags"><span>AWS</span><span>K8s</span><span>Terraform</span></div>
-            </div>
-            <div className="svc reveal">
+            </Link>
+            <Link href="/ui-ux-design/" className="svc reveal">
               <span className="idx">05</span>
               <div className="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div>
               <h3>Product design</h3>
               <p>Interfaces that feel inevitable — research, design systems, and prototypes validated before a line is written.</p>
               <div className="svc-tags"><span>UX</span><span>Figma</span><span>Systems</span></div>
-            </div>
-            <div className="svc reveal">
+            </Link>
+            <Link href="/hire-dedicated-resource/" className="svc reveal">
               <span className="idx">06</span>
               <div className="si"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M2 12h20" strokeLinecap="round"/><circle cx="12" cy="12" r="9"/></svg></div>
               <h3>Embedded teams</h3>
               <p>Drop a senior squad into your org — dedicated engineers and a tech lead who own outcomes, not tickets.</p>
               <div className="svc-tags"><span>Staff aug</span><span>Tech lead</span></div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
