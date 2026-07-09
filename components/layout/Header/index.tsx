@@ -222,9 +222,9 @@ export default function Header() {
                     <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3L2 8l10 5 10-5-10-5z"/><path d="M6 10v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
                     <div className="apps-lnk-txt"><span className="apps-lnk-short">EduCore</span><span className="apps-lnk-full">Learning Management System</span></div>
                   </Link>
-                  <Link className="apps-lnk" href="/solarops">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">SolarOps</span><span className="apps-lnk-full">ERP for Solar Panel Installer</span></div>
+                  <Link className="apps-lnk" href="/manchify">
+                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></div>
+                    <div className="apps-lnk-txt"><span className="apps-lnk-short">Manchify</span><span className="apps-lnk-full">CRM + ERP for Event Companies</span></div>
                   </Link>
                   <Link className="apps-lnk" href="/glowdesk">
                     <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l2 5 5 .8-3.6 3.6.9 5.6L12 14.5 7.7 17l.9-5.6L5 7.8 10 7z"/></svg></div>

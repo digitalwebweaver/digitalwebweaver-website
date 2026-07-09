@@ -31,7 +31,7 @@ const SECTIONS = [
     head: "Our Products",
     links: [
       { label: "EduCore — Learning Management System", href: "/educore" },
-      { label: "SolarOps — ERP for Solar Panel Installer", href: "/solarops" },
+      { label: "Manchify — CRM + ERP for Event Companies", href: "/manchify" },
       { label: "GlowDesk — Software for Aesthetic Clinic", href: "/glowdesk" },
       { label: "QuickBite — Food Delivery App", href: "/quickbite" },
       { label: "RideEasy — Cab Booking System", href: "/rideeasy" },
