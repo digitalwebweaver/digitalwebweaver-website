@@ -173,9 +173,9 @@ export const fintech: ServicePageData = {
     { label: "AI & Automation", href: "/ai-automation/", desc: "Fraud detection, document processing, and ML-powered credit scoring." },
   ],
   cases: [
-    { tag: "FinTech · UK", title: "BNPL checkout integration for a retail platform", desc: "PCI-DSS-compliant BNPL checkout added to an e-commerce platform serving 120k customers. 3-step credit decision in under 2 seconds.", metrics: [], stack: ["Stripe", "PCI-DSS", "Node.js"], bgClass: "c1" },
-    { tag: "Lending · India", title: "MSME lending platform — 10,000 loans disbursed", desc: "Loan origination, scoring, and collections platform for an NBFC. Integrated with bureau APIs (CIBIL, Experian) and bank NACH for auto-debit.", metrics: [], stack: ["Node.js", "PostgreSQL", "NACH"], bgClass: "c2" },
-    { tag: "Open Banking · UAE", title: "Multi-bank aggregation dashboard for a wealth app", desc: "PSD2/open-banking-style account aggregation for a UAE digital wealth app. 8 bank connections, real-time net-worth view, and spending analytics.", metrics: [], stack: ["Plaid", "OAuth 2.0", "React Native"], bgStyle: "linear-gradient(140deg,#dde4f0,#c4cfe0)" },
+    { tag: "FinTech · UK", title: "BNPL checkout integration for a retail platform", desc: "PCI-DSS-compliant BNPL checkout added to an e-commerce platform serving 120k customers. 3-step credit decision in under 2 seconds.", metrics: [{ value: "120k", label: "Customers served" }, { value: "<2s", label: "Credit decision" }], stack: ["Stripe", "PCI-DSS", "Node.js"], bgClass: "c1" },
+    { tag: "Lending · India", title: "MSME lending platform — 10,000 loans disbursed", desc: "Loan origination, scoring, and collections platform for an NBFC. Integrated with bureau APIs (CIBIL, Experian) and bank NACH for auto-debit.", metrics: [{ value: "10,000", label: "Loans disbursed" }, { value: "2 bureaus", label: "CIBIL & Experian" }], stack: ["Node.js", "PostgreSQL", "NACH"], bgClass: "c2" },
+    { tag: "Open Banking · UAE", title: "Multi-bank aggregation dashboard for a wealth app", desc: "PSD2/open-banking-style account aggregation for a UAE digital wealth app. 8 bank connections, real-time net-worth view, and spending analytics.", metrics: [{ value: "8", label: "Bank connections" }], stack: ["Plaid", "OAuth 2.0", "React Native"], bgStyle: "linear-gradient(140deg,#dde4f0,#c4cfe0)" },
   ]
 };
 
@@ -265,9 +265,9 @@ export const edtech: ServicePageData = {
     { label: "Mobile App Development", href: "/mobile-app-development/", desc: "iOS and Android learning apps with offline-first course downloads." },
   ],
   cases: [
-    { tag: "EdTech · UK", title: "University virtual classroom — 50,000 students", desc: "LiveKit-based virtual classroom deployed across 3 UK university campuses. HD video for 200 concurrent users per session, recording to S3, and LMS grade sync.", metrics: [], stack: ["LiveKit", "WebRTC", "AWS S3"], bgClass: "c1" },
-    { tag: "Online Learning · India", title: "B2C coding bootcamp LMS — ₹5 Cr revenue year 1", desc: "Full-stack LMS with video lessons, coding challenges, mentor sessions, and a certificate system. 12,000 active learners in year 1.", metrics: [], stack: ["React", "Node.js", "PostgreSQL"], bgClass: "c2" },
-    { tag: "Corporate L&D · UAE", title: "White-label e-learning platform for 40 enterprises", desc: "SCORM-compatible white-label LMS licensed to 40 enterprise clients for employee onboarding. SAML SSO, custom branding per tenant, xAPI reporting.", metrics: [], stack: ["SCORM", "xAPI", "SAML SSO"], bgStyle: "linear-gradient(140deg,#f5eedd,#ecdcc4)" },
+    { tag: "EdTech · UK", title: "University virtual classroom — 50,000 students", desc: "LiveKit-based virtual classroom deployed across 3 UK university campuses. HD video for 200 concurrent users per session, recording to S3, and LMS grade sync.", metrics: [{ value: "50,000", label: "Students reached" }, { value: "200", label: "Concurrent per session" }], stack: ["LiveKit", "WebRTC", "AWS S3"], bgClass: "c1" },
+    { tag: "Online Learning · India", title: "B2C coding bootcamp LMS — ₹5 Cr revenue year 1", desc: "Full-stack LMS with video lessons, coding challenges, mentor sessions, and a certificate system. 12,000 active learners in year 1.", metrics: [{ value: "₹5 Cr", label: "Revenue year 1" }, { value: "12,000", label: "Active learners" }], stack: ["React", "Node.js", "PostgreSQL"], bgClass: "c2" },
+    { tag: "Corporate L&D · UAE", title: "White-label e-learning platform for 40 enterprises", desc: "SCORM-compatible white-label LMS licensed to 40 enterprise clients for employee onboarding. SAML SSO, custom branding per tenant, xAPI reporting.", metrics: [{ value: "40", label: "Enterprise clients" }], stack: ["SCORM", "xAPI", "SAML SSO"], bgStyle: "linear-gradient(140deg,#f5eedd,#ecdcc4)" },
   ]
 };
 
@@ -357,9 +357,9 @@ export const logistics: ServicePageData = {
     { label: "Web Application Development", href: "/web-application-development/", desc: "Real-time tracking portals, dispatch dashboards, and driver management apps." },
   ],
   cases: [
-    { tag: "3PL · India", title: "Real-time fleet tracking — 600 vehicles", desc: "GPS tracking platform for a pan-India logistics operator. Live vehicle positions, trip history, driver analytics, and dispatch console. Handles 50k events/minute at peak.", metrics: [], stack: ["TimescaleDB", "WebSockets", "React"], bgClass: "c1" },
-    { tag: "Last-mile · UK", title: "Courier delivery app — 5,000 active drivers", desc: "React Native driver app with offline-first architecture, ePOD signatures, and live route updates. Customer tracking portal and operations dashboard built in parallel.", metrics: [], stack: ["React Native", "SQLite", "Node.js"], bgClass: "c2" },
-    { tag: "E-commerce · UAE", title: "Same-day delivery platform — launch in 10 weeks", desc: "End-to-end same-day delivery platform: customer app, driver app, merchant portal, and operations dashboard. OSRM route optimisation and Stripe payment integration.", metrics: [], stack: ["OSRM", "React Native", "Stripe"], bgStyle: "linear-gradient(140deg,#e8f0e8,#d0e0d0)" },
+    { tag: "3PL · India", title: "Real-time fleet tracking — 600 vehicles", desc: "GPS tracking platform for a pan-India logistics operator. Live vehicle positions, trip history, driver analytics, and dispatch console. Handles 50k events/minute at peak.", metrics: [{ value: "600", label: "Vehicles tracked" }, { value: "50k/min", label: "Peak events" }], stack: ["TimescaleDB", "WebSockets", "React"], bgClass: "c1" },
+    { tag: "Last-mile · UK", title: "Courier delivery app — 5,000 active drivers", desc: "React Native driver app with offline-first architecture, ePOD signatures, and live route updates. Customer tracking portal and operations dashboard built in parallel.", metrics: [{ value: "5,000", label: "Active drivers" }], stack: ["React Native", "SQLite", "Node.js"], bgClass: "c2" },
+    { tag: "E-commerce · UAE", title: "Same-day delivery platform — launch in 10 weeks", desc: "End-to-end same-day delivery platform: customer app, driver app, merchant portal, and operations dashboard. OSRM route optimisation and Stripe payment integration.", metrics: [{ value: "10 wks", label: "Zero to launch" }], stack: ["OSRM", "React Native", "Stripe"], bgStyle: "linear-gradient(140deg,#e8f0e8,#d0e0d0)" },
   ]
 };
 
@@ -449,9 +449,9 @@ export const manufacturing: ServicePageData = {
     { label: "Web Application Development", href: "/web-application-development/", desc: "OEE dashboards, production analytics, and operator interface applications." },
   ],
   cases: [
-    { tag: "Automotive parts · India", title: "Real-time OEE dashboard for 8-line factory", desc: "IoT integration collecting data from 45 machines via MQTT, feeding a live OEE dashboard. Downtime categorisation reduced mean time to repair by 38%.", metrics: [], stack: ["MQTT", "TimescaleDB", "React"], bgClass: "c1" },
-    { tag: "Pharma · UK", title: "Batch traceability system for GMP compliance", desc: "Full batch trace from raw material to finished product for a pharmaceutical manufacturer. Supports 21 CFR Part 11 electronic signatures and audit trails.", metrics: [], stack: ["PostgreSQL", "Node.js", "React"], bgClass: "c2" },
-    { tag: "FMCG · UAE", title: "MES for 3-shift production facility", desc: "Production order management, machine allocation, and shift handover system for a food manufacturer. Integrated with SAP for material consumption and stock updates.", metrics: [], stack: ["SAP", "Node.js", "React"], bgStyle: "linear-gradient(140deg,#f0ece4,#dfd8c8)" },
+    { tag: "Automotive parts · India", title: "Real-time OEE dashboard for 8-line factory", desc: "IoT integration collecting data from 45 machines via MQTT, feeding a live OEE dashboard. Downtime categorisation reduced mean time to repair by 38%.", metrics: [{ value: "38%", label: "MTTR reduction" }, { value: "45", label: "Machines connected" }], stack: ["MQTT", "TimescaleDB", "React"], bgClass: "c1" },
+    { tag: "Pharma · UK", title: "Batch traceability system for GMP compliance", desc: "Full batch trace from raw material to finished product for a pharmaceutical manufacturer. Supports 21 CFR Part 11 electronic signatures and audit trails.", metrics: [{ value: "21 CFR Pt 11", label: "Compliance standard" }], stack: ["PostgreSQL", "Node.js", "React"], bgClass: "c2" },
+    { tag: "FMCG · UAE", title: "MES for 3-shift production facility", desc: "Production order management, machine allocation, and shift handover system for a food manufacturer. Integrated with SAP for material consumption and stock updates.", metrics: [{ value: "3-shift", label: "Production coverage" }], stack: ["SAP", "Node.js", "React"], bgStyle: "linear-gradient(140deg,#f0ece4,#dfd8c8)" },
   ]
 };
 
@@ -541,9 +541,9 @@ export const realEstate: ServicePageData = {
     { label: "Mobile App Development", href: "/mobile-app-development/", desc: "iOS and Android apps for property search, agent tools, and virtual tours." },
   ],
   cases: [
-    { tag: "PropTech · India", title: "Property marketplace — 80,000 listings", desc: "Full-stack property portal with Elasticsearch-powered search, Mapbox map layers, and a CRM for 200 registered agents. RERA compliance documents auto-generated on listing.", metrics: [], stack: ["Elasticsearch", "Mapbox", "React"], bgClass: "c1" },
-    { tag: "Property management · UK", title: "Multi-tenancy lease management platform", desc: "Digital lease management for a UK property management company with 2,500 tenancies. DocuSign workflows, Stripe rent collection, and automated renewal reminders.", metrics: [], stack: ["DocuSign", "Stripe", "Node.js"], bgClass: "c2" },
-    { tag: "Real estate investment · UAE", title: "Investor dashboard for 12-property portfolio", desc: "Portfolio dashboard with live rental yield, occupancy, and maintenance cost tracking for a Dubai-based property investment group. Stripe integration for owner distributions.", metrics: [], stack: ["React", "PostgreSQL", "Stripe"], bgStyle: "linear-gradient(140deg,#ece8e0,#ddd6c8)" },
+    { tag: "PropTech · India", title: "Property marketplace — 80,000 listings", desc: "Full-stack property portal with Elasticsearch-powered search, Mapbox map layers, and a CRM for 200 registered agents. RERA compliance documents auto-generated on listing.", metrics: [{ value: "80,000", label: "Listings" }, { value: "200", label: "Registered agents" }], stack: ["Elasticsearch", "Mapbox", "React"], bgClass: "c1" },
+    { tag: "Property management · UK", title: "Multi-tenancy lease management platform", desc: "Digital lease management for a UK property management company with 2,500 tenancies. DocuSign workflows, Stripe rent collection, and automated renewal reminders.", metrics: [{ value: "2,500", label: "Tenancies managed" }], stack: ["DocuSign", "Stripe", "Node.js"], bgClass: "c2" },
+    { tag: "Real estate investment · UAE", title: "Investor dashboard for 12-property portfolio", desc: "Portfolio dashboard with live rental yield, occupancy, and maintenance cost tracking for a Dubai-based property investment group. Stripe integration for owner distributions.", metrics: [{ value: "12", label: "Property portfolio" }], stack: ["React", "PostgreSQL", "Stripe"], bgStyle: "linear-gradient(140deg,#ece8e0,#ddd6c8)" },
   ]
 };
 
@@ -633,8 +633,8 @@ export const retailEcommerce: ServicePageData = {
     { label: "WordPress Development", href: "/wordpress-development/", desc: "WooCommerce stores with Indian payment gateways and custom product types." },
   ],
   cases: [
-    { tag: "Omnichannel · India", title: "ShopNest Omnichannel Platform", desc: "Headless Next.js storefront + custom OMS + POS integration for a mid-size fashion retailer. Unified inventory, real-time order routing, and a mobile-first buying experience.", metrics: [], stack: ["Next.js", "Node.js", "Stripe"], bgClass: "c1" },
-    { tag: "Inventory · UK", title: "RetailFlow Inventory Sync", desc: "Real-time multi-warehouse inventory across 5 storefronts and 2 marketplaces. Automated reorder logic, webhook-driven updates, and zero overselling across all channels.", metrics: [], stack: ["Node.js", "PostgreSQL", "AWS"], bgClass: "c2" },
+    { tag: "Omnichannel · India", title: "ShopNest Omnichannel Platform", desc: "Headless Next.js storefront + custom OMS + POS integration for a mid-size fashion retailer. Unified inventory, real-time order routing, and a mobile-first buying experience.", metrics: [{ value: "3-in-1", label: "Storefront, OMS & POS" }], stack: ["Next.js", "Node.js", "Stripe"], bgClass: "c1" },
+    { tag: "Inventory · UK", title: "RetailFlow Inventory Sync", desc: "Real-time multi-warehouse inventory across 5 storefronts and 2 marketplaces. Automated reorder logic, webhook-driven updates, and zero overselling across all channels.", metrics: [{ value: "5", label: "Storefronts synced" }, { value: "2", label: "Marketplaces" }], stack: ["Node.js", "PostgreSQL", "AWS"], bgClass: "c2" },
   ]
 };
 
@@ -724,7 +724,7 @@ export const saasStartups: ServicePageData = {
     { label: "Web Application Development", href: "/web-application-development/", desc: "Complex web apps for post-MVP growth — portals, dashboards, and APIs." },
   ],
   cases: [
-    { tag: "AI SaaS · Global", title: "Launchpad AI — Pitch Deck Analyser", desc: "AI-powered pitch deck analyser built from 0 to launch in 9 weeks. Raised $1.2M seed using the product demo. Stack: Next.js, Python, OpenAI, PostgreSQL.", metrics: [], stack: ["Next.js", "Python", "OpenAI"], bgClass: "c1" },
-    { tag: "B2B SaaS · UK", title: "Growlabs — Lead Enrichment SaaS", desc: "Lead enrichment SaaS with usage-based billing, Stripe metering, and API for 3rd-party integrations. 10× API throughput improvement over initial prototype.", metrics: [], stack: ["Node.js", "Stripe", "PostgreSQL"], bgClass: "c2" },
+    { tag: "AI SaaS · Global", title: "Launchpad AI — Pitch Deck Analyser", desc: "AI-powered pitch deck analyser built from 0 to launch in 9 weeks. Raised $1.2M seed using the product demo. Stack: Next.js, Python, OpenAI, PostgreSQL.", metrics: [{ value: "9 wks", label: "Zero to launch" }, { value: "$1.2M", label: "Seed raised" }], stack: ["Next.js", "Python", "OpenAI"], bgClass: "c1" },
+    { tag: "B2B SaaS · UK", title: "Growlabs — Lead Enrichment SaaS", desc: "Lead enrichment SaaS with usage-based billing, Stripe metering, and API for 3rd-party integrations. 10× API throughput improvement over initial prototype.", metrics: [{ value: "10x", label: "API throughput" }], stack: ["Node.js", "Stripe", "PostgreSQL"], bgClass: "c2" },
   ]
 };
