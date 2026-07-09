@@ -7,7 +7,8 @@ const mk = (
   eyebrow: string,
   heading: string,
   lead: string,
-  svcs: { icon: string; title: string; desc: string }[]
+  svcs: { icon: string; title: string; desc: string }[],
+  faqItems?: { q: string; a: string }[]
 ): ServicePageData => ({
   meta: { title, description: desc },
   hero: {
@@ -22,6 +23,7 @@ const mk = (
     heading: `${eyebrow} Services`,
     items: svcs,
   },
+  ...(faqItems?.length ? { faq: { heading: `${eyebrow} FAQ`, items: faqItems } } : {}),
   cta: { heading: `Start Your ${eyebrow} Project`, body: "Let's discuss your requirements and provide a free estimate." },
 });
 
@@ -48,6 +50,12 @@ export const apiIntegrations: ServicePageData = mk(
     { icon: "🚚", title: "Shipping APIs", desc: "FedEx, UPS, DHL, and custom courier integration." },
     { icon: "🔔", title: "Webhooks", desc: "Inbound and outbound webhook management with retry logic." },
     { icon: "📊", title: "Analytics APIs", desc: "GA4, Mixpanel, and custom event ingestion." },
+  ],
+  [
+    { q: "Which payment gateways do you integrate?", a: "We integrate Stripe, Razorpay, PayPal, Braintree, and local gateways like CCAvenue. We handle webhooks, refunds, and PCI-compliant flows." },
+    { q: "How long does a typical API integration take?", a: "A single gateway integration takes 3–7 days. Complex ERP or multi-system integrations typically take 2–4 weeks depending on the third-party API quality." },
+    { q: "How do you handle webhook security?", a: "We validate webhook signatures (e.g. Stripe's Svix or custom HMAC), use queue-based retry logic, and store raw payloads for replay and debugging." },
+    { q: "Can you integrate with our legacy ERP?", a: "Yes — we've integrated with SAP, Tally, and custom ERPs using SOAP, REST, and file-based data exchange. We build middleware adapters where needed." },
   ]
 );
 
@@ -62,6 +70,12 @@ export const corporateWebsites: ServicePageData = mk(
     { icon: "🌍", title: "Multi-Language", desc: "i18n content management for international markets." },
     { icon: "📱", title: "Mobile-First", desc: "Responsive design prioritising mobile user experience." },
     { icon: "⚡", title: "Performance", desc: "90+ Lighthouse scores for speed and conversion impact." },
+  ],
+  [
+    { q: "Which CMS do you use?", a: "We most commonly build with Next.js + headless CMS (Sanity, Contentful, or Strapi) for performance. For marketing-led sites we also deliver WordPress with a custom theme." },
+    { q: "How long does a corporate website take?", a: "A standard 10–15 page corporate website typically takes 4–6 weeks from kick-off to launch, including design, development, and content integration." },
+    { q: "Is the website mobile-friendly?", a: "Yes — we build mobile-first by default. All sites are tested across iOS, Android, and tablet viewports, and we target 90+ Lighthouse mobile scores." },
+    { q: "Do you handle SEO setup?", a: "Yes — every site ships with structured data (JSON-LD), XML sitemap, meta tags, Open Graph, canonical URLs, and Core Web Vitals optimisation included." },
   ]
 );
 
@@ -76,6 +90,12 @@ export const databaseDesign: ServicePageData = mk(
     { icon: "⚡", title: "Query Optimisation", desc: "Explain plans, index tuning, and slow query elimination." },
     { icon: "📊", title: "Data Warehousing", desc: "OLAP schema design for analytics and BI workloads." },
     { icon: "🔀", title: "Sharding & Partitioning", desc: "Horizontal scale strategies for high-volume tables." },
+  ],
+  [
+    { q: "PostgreSQL or MySQL — which should I use?", a: "PostgreSQL for most new projects — it has better JSON support, window functions, and extensibility. MySQL remains a good choice for read-heavy workloads with well-understood schemas." },
+    { q: "Can you optimise an existing slow database?", a: "Yes — we run EXPLAIN ANALYZE on slow queries, audit missing indexes, identify N+1 patterns, and implement caching layers. Most databases see 3–10× improvement after a tuning engagement." },
+    { q: "How do you handle schema migrations without downtime?", a: "We use expand-contract migrations: add columns before removing old ones, use feature flags, and run Flyway or Liquibase with rollback scripts. Online DDL tools like gh-ost handle large table changes." },
+    { q: "When should I use NoSQL instead of SQL?", a: "NoSQL (MongoDB, DynamoDB) fits when your data is document-shaped, access patterns are known upfront, or you need horizontal write scaling. For relational data with complex queries, SQL wins every time." },
   ]
 );
 
@@ -90,6 +110,12 @@ export const enterpriseApplications: ServicePageData = mk(
     { icon: "🔑", title: "SSO & SAML", desc: "Enterprise SSO via Okta, Auth0, or Microsoft Entra." },
     { icon: "🏗️", title: "Multi-Tenant Architecture", desc: "Data isolation, tenant management, and custom branding." },
     { icon: "📋", title: "Audit & Compliance", desc: "Full audit logs, GDPR controls, and compliance reporting." },
+  ],
+  [
+    { q: "Can you integrate with our existing SSO provider?", a: "Yes — we implement SAML 2.0 and OIDC with Okta, Microsoft Entra (Azure AD), Auth0, and Google Workspace. Existing identity providers are connected without disrupting your user accounts." },
+    { q: "How do you handle multi-tenant data isolation?", a: "We support row-level isolation (shared schema with tenant_id), schema-per-tenant, and database-per-tenant — each with trade-offs in cost, complexity, and compliance. We recommend based on your regulatory and scale requirements." },
+    { q: "What compliance standards do you build for?", a: "We build for GDPR, HIPAA (data handling patterns), SOC 2 Type II logging requirements, and ISO 27001 controls. Compliance is designed into the architecture, not bolted on later." },
+    { q: "How long does enterprise application development take?", a: "Most enterprise systems take 4–12 months for the core platform depending on complexity. We deliver in phases — auth and core modules first — so you have working software at every milestone." },
   ]
 );
 
@@ -104,6 +130,12 @@ export const iosDevelopment: ServicePageData = mk(
     { icon: "🔔", title: "Push Notifications", desc: "APNS, rich notifications, and notification extensions." },
     { icon: "🗺️", title: "Maps & Location", desc: "MapKit, CoreLocation, and geofencing." },
     { icon: "🔄", title: "App Modernisation", desc: "UIKit to SwiftUI migration and Objective-C rewrites." },
+  ],
+  [
+    { q: "Do you build for both iPhone and iPad?", a: "Yes — we design and develop universal apps targeting both form factors with adaptive layouts using SwiftUI's size classes. iPad-specific layouts are included when required." },
+    { q: "How long does App Store review take?", a: "Apple's review typically takes 1–3 days for new submissions and 24 hours for updates. We handle all submission materials — screenshots, descriptions, privacy disclosures, and export compliance." },
+    { q: "Do you also build the Android version?", a: "Yes — we can build the Android counterpart natively (Kotlin/Jetpack Compose) or cross-platform with React Native. Cross-platform suits most apps; we recommend native when performance or platform-specific features demand it." },
+    { q: "Can you integrate HealthKit or ARKit?", a: "Yes — we have experience with HealthKit (health data permissions and HIPAA handling), ARKit (AR features), Core ML (on-device inference), and other Apple frameworks." },
   ]
 );
 
@@ -118,6 +150,12 @@ export const microservices: ServicePageData = mk(
     { icon: "🐳", title: "Container Orchestration", desc: "Docker and Kubernetes for service lifecycle management." },
     { icon: "📊", title: "Service Mesh", desc: "Istio or Linkerd for observability and traffic management." },
     { icon: "🔄", title: "Saga Pattern", desc: "Distributed transaction management across services." },
+  ],
+  [
+    { q: "When should I use microservices instead of a monolith?", a: "Start with a monolith. Move to microservices when different parts of the system need to scale independently, teams are working on the same codebase and blocking each other, or deployment frequency requires service-level independence." },
+    { q: "Which message broker do you recommend?", a: "Kafka for high-throughput event streaming and audit logs. RabbitMQ for simpler task queues and routing. We help choose based on your message volume, ordering requirements, and operational complexity tolerance." },
+    { q: "How do you handle distributed transactions?", a: "We implement the Saga pattern with choreography or orchestration depending on the complexity. Compensating transactions handle rollbacks. We avoid distributed transactions where possible by designing around eventual consistency." },
+    { q: "Do you set up the Kubernetes infrastructure?", a: "Yes — we provision and configure Kubernetes clusters (EKS, GKE, or bare-metal), set up Helm charts, ingress controllers, horizontal pod autoscaling, and CI/CD pipelines for each service." },
   ]
 );
 
@@ -132,6 +170,12 @@ export const performanceOptimization: ServicePageData = mk(
     { icon: "📦", title: "Bundle Optimisation", desc: "Tree-shaking, code splitting, and lazy loading." },
     { icon: "🖼️", title: "Image Optimisation", desc: "WebP conversion, responsive images, and CDN delivery." },
     { icon: "📊", title: "Load Testing", desc: "k6 and Locust load tests to find breaking points." },
+  ],
+  [
+    { q: "What Core Web Vitals score can you achieve?", a: "We target LCP under 2.5s, CLS under 0.1, and INP under 200ms — the thresholds Google considers 'Good'. Most sites reach these after our optimisation engagement." },
+    { q: "How do you identify performance bottlenecks?", a: "We start with a Lighthouse audit, WebPageTest waterfall analysis, and database slow-query logs. We profile JavaScript execution with Chrome DevTools and run EXPLAIN ANALYZE on slow queries to find the biggest wins first." },
+    { q: "Will optimisation break existing functionality?", a: "No — we use regression tests and staging environments before any changes go live. Optimisations like lazy loading, code splitting, and caching are additive and non-breaking by design." },
+    { q: "How long does a performance audit take?", a: "An initial audit report takes 2–3 days. The full optimisation engagement (audit → fix → test → deploy) typically runs 2–4 weeks depending on the number of issues found." },
   ]
 );
 
@@ -146,6 +190,12 @@ export const progressiveWebApps: ServicePageData = mk(
     { icon: "⚡", title: "App Shell Architecture", desc: "Instant loads with shell caching and dynamic content fetch." },
     { icon: "📱", title: "Cross-Platform", desc: "One codebase for Android, iOS (Safari), and desktop." },
     { icon: "🔬", title: "Lighthouse Targets", desc: "PWA checklist, 90+ performance, and full installability." },
+  ],
+  [
+    { q: "Can a PWA replace a native iOS or Android app?", a: "For most apps — yes. PWAs handle offline mode, push notifications, and home screen install. The exceptions are apps needing deep hardware access (Bluetooth, NFC, background audio) where native is still required." },
+    { q: "Do PWAs work on iOS Safari?", a: "Yes, with some limitations. Safari supports service workers, offline caching, and home screen installation. Web Push on iOS requires iOS 16.4+. We design PWAs to degrade gracefully on older Safari versions." },
+    { q: "Will my PWA appear in the Google Play Store or App Store?", a: "Google Play accepts PWAs via TWA (Trusted Web Activity) — we package and submit them. Apple's App Store does not accept PWAs directly, but the installed home screen experience on iOS 16.4+ is near-native." },
+    { q: "How is a PWA different from a regular responsive website?", a: "A PWA adds a service worker (offline caching, background sync), a Web App Manifest (installability, splash screen), and push notifications. The user can install it to their home screen and use it without internet." },
   ]
 );
 
@@ -160,5 +210,11 @@ export const appModernization: ServicePageData = mk(
     { icon: "🎨", title: "UI Modernisation", desc: "Old PHP/jQuery frontends migrated to React." },
     { icon: "⚡", title: "Zero-Downtime", desc: "Feature flags and parallel-run strategies for safe migration." },
     { icon: "🧪", title: "Regression Testing", desc: "Snapshot tests and e2e coverage before decommissioning legacy." },
+  ],
+  [
+    { q: "Do you rewrite from scratch or migrate incrementally?", a: "Incrementally — almost always. Big-bang rewrites take too long and introduce new bugs. We use the strangler fig pattern to replace legacy routes one by one while the old system stays live, reducing risk at every step." },
+    { q: "How do you ensure zero downtime during migration?", a: "We run the old and new systems in parallel, use feature flags to route traffic, and deploy behind a proxy that switches at the route level. The legacy system only goes dark after the new path is proven stable." },
+    { q: "Can you modernise a PHP monolith?", a: "Yes — PHP modernisation is one of our most common engagements. We migrate jQuery/Blade UIs to React, refactor business logic from controllers into services, and incrementally extract APIs that mobile or third-party clients can consume." },
+    { q: "What is the strangler fig pattern?", a: "It's a migration strategy where a new system is built around the legacy one. New routes go to the new system; legacy routes stay on the old one. Over time, the legacy system is 'strangled' until only the new system remains — no big cutover needed." },
   ]
 );
