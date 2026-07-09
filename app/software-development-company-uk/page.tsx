@@ -18,12 +18,18 @@ const geoServiceSchema = {
   "@type": "Service",
   "@id": "https://digitalwebweaver.com/software-development-company-uk/#service",
   name: "Software Development Company for UK Businesses",
-  serviceType: "Software Development",
   url: "https://digitalwebweaver.com/software-development-company-uk/",
   provider: { "@id": "https://digitalwebweaver.com/#organization" },
   areaServed: [
     { "@type": "Country", name: "United Kingdom" },
     { "@type": "City", name: "London" },
+  ],
+  serviceType: [
+    "Software Development UK",
+    "Bespoke Software Development London",
+    "Outsourced Development Team UK",
+    "Dedicated Developers UK",
+    "E-commerce Development UK",
   ],
   availableLanguage: ["English"],
 };

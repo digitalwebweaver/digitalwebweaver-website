@@ -18,12 +18,18 @@ const geoServiceSchema = {
   "@type": "Service",
   "@id": "https://digitalwebweaver.com/agence-developpement-web-abidjan/#service",
   name: "Agence de Développement Web pour la Côte d'Ivoire",
-  serviceType: "Software Development",
   url: "https://digitalwebweaver.com/agence-developpement-web-abidjan/",
   provider: { "@id": "https://digitalwebweaver.com/#organization" },
   areaServed: [
     { "@type": "Country", name: "Ivory Coast" },
     { "@type": "City", name: "Abidjan" },
+  ],
+  serviceType: [
+    "Développement Web Côte d'Ivoire",
+    "Agence de Développement Web Abidjan",
+    "Développement Logiciel Sur Mesure Abidjan",
+    "Équipe de Développement Dédiée Côte d'Ivoire",
+    "Développement E-commerce Abidjan",
   ],
   availableLanguage: ["French", "English"],
 };

@@ -18,13 +18,19 @@ const geoServiceSchema = {
   "@type": "Service",
   "@id": "https://digitalwebweaver.com/software-development-company-south-africa/#service",
   name: "Software Development Company for South African Businesses",
-  serviceType: "Software Development",
   url: "https://digitalwebweaver.com/software-development-company-south-africa/",
   provider: { "@id": "https://digitalwebweaver.com/#organization" },
   areaServed: [
     { "@type": "Country", name: "South Africa" },
     { "@type": "City", name: "Johannesburg" },
     { "@type": "City", name: "Cape Town" },
+  ],
+  serviceType: [
+    "Software Development South Africa",
+    "Bespoke Software Development Johannesburg",
+    "Outsourced Development Team South Africa",
+    "Dedicated Developers South Africa",
+    "E-commerce Development South Africa",
   ],
   availableLanguage: ["English"],
 };
