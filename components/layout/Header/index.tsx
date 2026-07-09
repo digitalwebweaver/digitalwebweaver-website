@@ -67,6 +67,7 @@ export default function Header() {
   const [scrolled,    setScrolled]    = useState(false);
   const [mobileOpen,  setMobileOpen]  = useState(false);
   const [engOpen,     setEngOpen]     = useState(false);
+  const [activeCat,   setActiveCat]   = useState("web");
 
   /* scroll → glassy header */
   useEffect(() => {
@@ -92,6 +93,7 @@ export default function Header() {
     </svg>
   );
 
+  const currentCat = ENG_CATS.find(c => c.id === activeCat)!;
   const closeEng = () => setEngOpen(false);
 
   return (
@@ -206,10 +208,8 @@ export default function Header() {
         </div>
       </header>
 
-      {/* ══ ENGINEERING MEGA-MENU DROP PANEL ══ */}
-      {engOpen && (
-        <div className="eng-drop-backdrop" onClick={closeEng} aria-hidden="true" />
-      )}
+      {/* ══ ENGINEERING TABBED DROP PANEL ══ */}
+      {engOpen && <div className="eng-drop-backdrop" onClick={closeEng} aria-hidden="true" />}
       <div
         className={`eng-drop${engOpen ? " open" : ""}`}
         role="dialog"
@@ -217,23 +217,36 @@ export default function Header() {
         aria-label="Engineering services"
         aria-hidden={!engOpen}
       >
-        <div className="eng-drop-inner">
+        {/* Tab row */}
+        <div className="eng-tabs">
           {ENG_CATS.map(cat => (
-            <div key={cat.id} className="eng-col">
-              <div className="eng-col-head">{cat.label}</div>
-              {cat.items.map(item => (
-                <Link key={item.href + item.name} className="eng-item" href={item.href} onClick={closeEng}>
-                  <span className="eng-item-name">{item.name}</span>
-                  <span className="eng-item-desc">{item.desc}</span>
-                </Link>
-              ))}
-            </div>
+            <button
+              key={cat.id}
+              className={`eng-tab${activeCat === cat.id ? " active" : ""}`}
+              onClick={() => setActiveCat(cat.id)}
+            >
+              {cat.label}
+            </button>
           ))}
         </div>
+
+        {/* Items grid for active tab */}
+        <div className="eng-drop-inner">
+          <div key={activeCat} className="eng-items-grid">
+            {currentCat.items.map(item => (
+              <Link key={item.href + item.name} className="eng-item" href={item.href} onClick={closeEng}>
+                <span className="eng-item-name">{item.name}</span>
+                <span className="eng-item-desc">{item.desc}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom bar */}
         <div className="eng-drop-bar">
-          <Link className="eng-fs-pill" href="/products/"     onClick={closeEng}>Explore Products →</Link>
+          <Link className="eng-fs-pill" href="/products/"      onClick={closeEng}>Explore Products →</Link>
           <Link className="eng-fs-pill" href="/ai-automation/" onClick={closeEng}>AI Solutions →</Link>
-          <Link className="eng-fs-pill" href="/services/"     onClick={closeEng}>All Services →</Link>
+          <Link className="eng-fs-pill" href="/services/"      onClick={closeEng}>All Services →</Link>
           <Link className="eng-fs-pill primary" href="/contact/" onClick={closeEng}>Start a Project ↗</Link>
         </div>
       </div>
