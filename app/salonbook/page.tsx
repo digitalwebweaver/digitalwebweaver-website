@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePage from "@/components/sections/ServicePage";
 import { salonbook as data } from "@/data/pages/products/readyApps3";
 export const metadata: Metadata = {
-  title: data.meta.title,
+  title: { absolute: data.meta.title },
   description: data.meta.description,
   alternates: { canonical: "/salonbook/" },
   openGraph: { url: "/salonbook/", type: "website" },

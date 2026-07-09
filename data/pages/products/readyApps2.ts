@@ -9,9 +9,9 @@ const crumbs = (name: string) => [
 // ───────────────────────────── RideEasy ─────────────────────────────
 export const rideeasy: ServicePageData = {
   meta: {
-    title: "RideEasy — Cab Booking System",
+    title: "RideEasy – Cab Booking & Fleet App Software | India",
     description:
-      "RideEasy is a ready-to-launch cab booking platform — rider app, driver app, and dispatch dashboard with live tracking, fare estimation, and payments — branded as your own.",
+      "RideEasy is a ready-to-launch cab booking platform — rider app, driver app, and dispatch dashboard with live tracking and payments. Get a free demo in 24 hours.",
   },
   hero: {
     eyebrow: "RideEasy",
@@ -116,9 +116,9 @@ export const rideeasy: ServicePageData = {
 // ───────────────────────────── SchoolHub ─────────────────────────────
 export const schoolhub: ServicePageData = {
   meta: {
-    title: "SchoolHub — School Management System",
+    title: "SchoolHub – School Management System Software | India",
     description:
-      "SchoolHub is a ready-to-deploy school management system — admissions, attendance, timetables, fee collection, exams, and parent communication in one branded platform.",
+      "SchoolHub is a ready-to-deploy school management system — admissions, attendance, timetables, fee collection, and exams in one branded platform. Book a free demo.",
   },
   hero: {
     eyebrow: "SchoolHub",
@@ -223,7 +223,7 @@ export const schoolhub: ServicePageData = {
 // ───────────────────────────── ClinicFlow ─────────────────────────────
 export const clinicflow: ServicePageData = {
   meta: {
-    title: "ClinicFlow — Clinic Management System",
+    title: "ClinicFlow – Clinic Management System Software | India",
     description:
       "ClinicFlow is a ready-to-launch clinic management system — appointment scheduling, EMR, billing, pharmacy, and patient communication in one branded platform.",
   },
@@ -330,9 +330,9 @@ export const clinicflow: ServicePageData = {
 // ───────────────────────────── VetCare ─────────────────────────────
 export const vetcare: ServicePageData = {
   meta: {
-    title: "VetCare — Veterinary Practice Software",
+    title: "VetCare – Vet Practice Management Software | South Africa",
     description:
-      "VetCare: practice management for South African vet clinics. Appointments, patient records, SARS-compliant billing, WhatsApp comms, stock control — loadshedding-proof.",
+      "VetCare is practice management software for South African vet clinics — appointments, SARS billing, WhatsApp reminders, stock control. Book a free demo.",
   },
   hero: {
     eyebrow: "VetCare",

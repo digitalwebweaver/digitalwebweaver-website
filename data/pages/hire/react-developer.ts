@@ -2,9 +2,9 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Hire Expert React.js Developers",
+    title: "Hire React.js Developers | India, UK & Global Teams",
     description:
-      "Hire experienced React developers for SPAs, dashboards, and enterprise apps. Fast, scalable, modern frontends built with React 18+ and TypeScript.",
+      "Hire React.js developers in India for SPAs, dashboards, and enterprise apps built with React 18+ and TypeScript. Get a free quote in 24 hours.",
   },
   hero: {
     eyebrow: "React Development",

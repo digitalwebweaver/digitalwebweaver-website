@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePage from "@/components/sections/ServicePage";
 import { codeigniterDevelopment as data } from "@/data/pages/products/products";
 export const metadata: Metadata = {
-  title: data.meta.title,
+  title: { absolute: data.meta.title },
   description: data.meta.description,
   alternates: { canonical: "/codeigniter-development/" },
   openGraph: { url: "/codeigniter-development/", type: "website" },

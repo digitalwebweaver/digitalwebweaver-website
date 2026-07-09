@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePage from "@/components/sections/ServicePage";
 import { ecommerceDevelopment as data } from "@/data/pages/services/main-services";
 export const metadata: Metadata = {
-  title: data.meta.title,
+  title: { absolute: data.meta.title },
   description: data.meta.description,
   alternates: { canonical: "/ecommerce-development/" },
   openGraph: { url: "/ecommerce-development/", type: "website" },

@@ -2,8 +2,8 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Hire Expert React Native Developers",
-    description: "Hire React Native developers for cross-platform iOS and Android apps with shared codebase, Expo, and native module integrations.",
+    title: "Hire React Native Developers | India, UK & Global",
+    description: "Hire React Native developers for cross-platform iOS and Android apps with shared codebase, Expo, and native modules. Get matched in 48 hours, no lock-in.",
   },
   hero: {
     eyebrow: "React Native Development",

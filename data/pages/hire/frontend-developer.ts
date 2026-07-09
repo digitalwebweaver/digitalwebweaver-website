@@ -2,8 +2,8 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Hire Expert Frontend UI Engineers",
-    description: "Hire frontend developers for pixel-perfect, accessible, high-performance UIs. React, Vue, Angular, TypeScript, and modern CSS specialists.",
+    title: "Hire Frontend Developers | React, Vue & Angular Experts",
+    description: "Hire frontend developers in India for pixel-perfect, accessible, high-performance UIs in React, Vue, and Angular. Get a free quote in 24 hours.",
   },
   hero: {
     eyebrow: "Frontend Development",

@@ -4,7 +4,7 @@ import ServicePage from "@/components/sections/ServicePage";
 import { customSoftwareDevelopment as data } from "@/data/pages/services/missing-services";
 
 export const metadata: Metadata = {
-  title: data.meta.title,
+  title: { absolute: data.meta.title },
   description: data.meta.description,
   alternates: { canonical: "/custom-software-development/" },
   openGraph: { url: "/custom-software-development/", type: "website" },

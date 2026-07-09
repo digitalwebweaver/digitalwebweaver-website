@@ -2,8 +2,8 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Hire Expert DevOps & Cloud Engineers",
-    description: "Hire DevOps engineers for CI/CD pipelines, Kubernetes orchestration, AWS/GCP/Azure infrastructure, and site reliability engineering.",
+    title: "Hire DevOps Engineers | AWS, Azure, GCP & Kubernetes",
+    description: "Hire DevOps engineers for CI/CD pipelines, Kubernetes orchestration, and AWS/GCP/Azure infrastructure, plus SRE. Get matched with vetted talent in 48 hours.",
   },
   hero: {
     eyebrow: "DevOps Engineering",

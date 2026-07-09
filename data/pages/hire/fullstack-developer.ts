@@ -2,8 +2,8 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Hire Expert Full Stack Engineers",
-    description: "Hire full stack developers who own the entire product — React frontends, Node.js/Python backends, databases, and cloud deployments.",
+    title: "Hire Full Stack Developers | React, Node.js & Global Teams",
+    description: "Hire full stack developers who own the product end-to-end — React frontends, Node.js/Python backends, databases, and cloud deployments. Get matched in 48 hours.",
   },
   hero: {
     eyebrow: "Full Stack Development",

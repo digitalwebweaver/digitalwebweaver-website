@@ -9,9 +9,9 @@ const crumbs = (name: string) => [
 // ───────────────────────────── ChatFlow AI ─────────────────────────────
 export const chatflowAi: ServicePageData = {
   meta: {
-    title: "ChatFlow AI — WhatsApp Automation",
+    title: "ChatFlow AI – WhatsApp Business Automation Software",
     description:
-      "ChatFlow AI is a ready-to-deploy WhatsApp automation agent — handles enquiries, bookings, order updates, and follow-ups automatically on your business WhatsApp number.",
+      "ChatFlow AI is a ready-to-deploy WhatsApp automation agent that handles enquiries, bookings, and order updates on your business number. Get a free demo.",
   },
   hero: {
     eyebrow: "ChatFlow AI",
@@ -116,9 +116,9 @@ export const chatflowAi: ServicePageData = {
 // ───────────────────────────── TeleCare ─────────────────────────────
 export const telecare: ServicePageData = {
   meta: {
-    title: "TeleCare — Telemedicine Platform",
+    title: "TeleCare – Telemedicine Platform Software for India",
     description:
-      "TeleCare is a ready-to-launch telemedicine platform — video consultations, e-prescriptions, patient records, appointment scheduling, and payments in one branded system.",
+      "TeleCare is a ready-to-launch telemedicine platform with video consultations, e-prescriptions, patient records, and appointment scheduling in one branded system.",
   },
   hero: {
     eyebrow: "TeleCare",
@@ -223,9 +223,9 @@ export const telecare: ServicePageData = {
 // ───────────────────────────── InsureDesk ─────────────────────────────
 export const insuredesk: ServicePageData = {
   meta: {
-    title: "InsureDesk — Insurance Agency CRM",
+    title: "InsureDesk – Insurance Agency CRM Software for India",
     description:
-      "InsureDesk is a ready-to-launch CRM for insurance agencies — lead management, policy tracking, renewal reminders, claims follow-up, and client communication in one platform.",
+      "InsureDesk is a ready-to-launch CRM for insurance agencies with policy tracking, renewal reminders, and claims follow-up in one platform. Get a free demo.",
   },
   hero: {
     eyebrow: "InsureDesk",
@@ -330,9 +330,9 @@ export const insuredesk: ServicePageData = {
 // ───────────────────────────── CallMate AI ─────────────────────────────
 export const callmateAi: ServicePageData = {
   meta: {
-    title: "CallMate AI — Business AI Calling Agent",
+    title: "CallMate AI – 24/7 AI Calling Agent for Businesses",
     description:
-      "CallMate AI is a ready-to-deploy AI voice agent for businesses — handles inbound enquiries, books appointments, makes follow-up calls, and qualifies leads automatically.",
+      "CallMate AI is a ready-to-deploy AI voice agent for businesses that answers calls, books appointments, and qualifies leads automatically, 24/7. Get a free demo.",
   },
   hero: {
     eyebrow: "CallMate AI",

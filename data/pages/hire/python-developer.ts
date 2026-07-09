@@ -2,8 +2,8 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Hire Expert Python Developers",
-    description: "Hire Python developers for web apps, data engineering, ML pipelines, automation scripts, and APIs. Django, FastAPI, and scientific Python.",
+    title: "Hire Python Developers | Django, AI & Data Experts",
+    description: "Hire Python developers for web apps, data engineering, ML pipelines, and automation with Django, FastAPI, and PyTorch. Get a free quote in 24 hours.",
   },
   hero: {
     eyebrow: "Python Development",

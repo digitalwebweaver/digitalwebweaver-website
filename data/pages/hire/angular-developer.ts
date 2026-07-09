@@ -2,8 +2,8 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Hire Expert Angular Developers",
-    description: "Hire Angular developers for enterprise SPAs, dashboards, and large-scale frontend applications. Angular 17+, RxJS, NgRx, and TypeScript experts.",
+    title: "Hire Angular Developers | Enterprise Apps, India & UK",
+    description: "Hire Angular developers in India for enterprise SPAs, dashboards, and large-scale apps using Angular 17+, RxJS, and NgRx. Get a free quote in 24 hours.",
   },
   hero: {
     eyebrow: "Angular Development",

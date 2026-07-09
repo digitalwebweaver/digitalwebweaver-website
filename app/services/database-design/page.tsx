@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePage from "@/components/sections/ServicePage";
 import { databaseDesign as data } from "@/data/pages/services/sub-services";
 export const metadata: Metadata = {
-  title: data.meta.title,
+  title: { absolute: data.meta.title },
   description: data.meta.description,
   alternates: { canonical: "/services/database-design/" },
   openGraph: { url: "/services/database-design/", type: "website" },

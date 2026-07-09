@@ -4,7 +4,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { gujarat as data } from "@/data/pages/local/city-pages";
 
 export const metadata: Metadata = {
-  title: data.meta.title,
+  title: { absolute: data.meta.title },
   description: data.meta.description,
   alternates: { canonical: "/web-design-gujarat/" },
   openGraph: { url: "/web-design-gujarat/", type: "website" },

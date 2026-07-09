@@ -6,9 +6,9 @@ import type { ServicePageData } from "@/lib/types";
 // —————————————————————————————————————————————————————————————————————————————
 export const ahmedabad: ServicePageData = {
   meta: {
-    title: "Web Development Company, Ahmedabad",
+    title: "Web Design Ahmedabad | Websites, Apps & ERP Systems",
     description:
-      "Digital Web Weaver — web development company serving Ahmedabad businesses. Custom websites, mobile apps, SaaS, ERP, and AI solutions built by senior engineers. Free consultation.",
+      "Web design company in Ahmedabad building custom websites, e-commerce, ERP, and mobile apps. Senior engineers, fixed pricing. Free consultation in 24 hours.",
   },
   hero: {
     eyebrow: "Web Development · Ahmedabad",
@@ -151,9 +151,9 @@ export const ahmedabad: ServicePageData = {
 // —————————————————————————————————————————————————————————————————————————————
 export const surat: ServicePageData = {
   meta: {
-    title: "Web Development Company, Surat",
+    title: "Web Design Surat | Websites, E-commerce & ERP Systems",
     description:
-      "Digital Web Weaver — web development company serving Surat. Custom websites, e-commerce platforms, ERP systems, and mobile apps for diamond, textile, and trading businesses in Surat.",
+      "Web design company in Surat building websites, e-commerce, and ERP for diamond, textile, and trading businesses. Senior engineers. Free quote in 24 hours.",
   },
   hero: {
     eyebrow: "Web Development · Surat",
@@ -296,9 +296,9 @@ export const surat: ServicePageData = {
 // —————————————————————————————————————————————————————————————————————————————
 export const rajkot: ServicePageData = {
   meta: {
-    title: "Web Development Company, Rajkot",
+    title: "Web Design Rajkot | Websites, ERP & B2B Portals",
     description:
-      "Digital Web Weaver — web development company serving Rajkot. Custom websites, ERP systems, B2B portals, and mobile apps for Rajkot's engineering, manufacturing, and SME businesses.",
+      "Web design company in Rajkot building websites, ERP systems, and B2B portals for engineering and manufacturing SMEs. Senior engineers. Free quote in 24 hours.",
   },
   hero: {
     eyebrow: "Web Development · Rajkot",
@@ -441,9 +441,9 @@ export const rajkot: ServicePageData = {
 // —————————————————————————————————————————————————————————————————————————————
 export const gujarat: ServicePageData = {
   meta: {
-    title: "Web Development Company, Gujarat",
+    title: "Web Design Gujarat | Websites, Apps & ERP Solutions",
     description:
-      "Web development company serving Gujarat businesses — custom websites, mobile apps, SaaS, ERP, and AI solutions across Vadodara, Ahmedabad, Surat, and Rajkot.",
+      "Web design company serving Gujarat — custom websites, mobile apps, SaaS, ERP, and AI solutions across Vadodara, Ahmedabad, Surat & Rajkot. Free quote in 24 hours.",
   },
   hero: {
     eyebrow: "Web Development · Gujarat",
@@ -587,9 +587,9 @@ export const gujarat: ServicePageData = {
 // —————————————————————————————————————————————————————————————————————————————
 export const unitedKingdom: ServicePageData = {
   meta: {
-    title: "Software Development Company UK",
+    title: "Software Development Company UK | Offshore Dev Teams",
     description:
-      "Digital Web Weaver — an offshore software development company serving the UK. Bespoke web development, custom software, and dedicated development teams at a fraction of UK agency rates.",
+      "Software development company for UK businesses — bespoke web apps, custom software, and dedicated teams at a fraction of UK agency rates. Free quote in 24 hours.",
   },
   hero: {
     eyebrow: "Software Development · United Kingdom",
@@ -742,9 +742,9 @@ export const unitedKingdom: ServicePageData = {
 // —————————————————————————————————————————————————————————————————————————————
 export const southAfrica: ServicePageData = {
   meta: {
-    title: "Software Development Company, South Africa",
+    title: "Software Development Company South Africa | Offshore Teams",
     description:
-      "Digital Web Weaver — an offshore software development company serving South Africa. Bespoke web development, custom software, and dedicated development teams at a fraction of local agency rates.",
+      "Software development company for South African businesses — bespoke apps, custom software, and dedicated teams with same-time-zone overlap. Free quote in 24 hours.",
   },
   hero: {
     eyebrow: "Software Development · South Africa",
@@ -897,9 +897,9 @@ export const southAfrica: ServicePageData = {
 // —————————————————————————————————————————————————————————————————————————————
 export const ivoryCoast: ServicePageData = {
   meta: {
-    title: "Agence Développement Web Abidjan",
+    title: "Software Development Company Ivory Coast | Abidjan Agency",
     description:
-      "Digital Web Weaver — agence de développement web et logiciel pour les entreprises d'Abidjan et de Côte d'Ivoire. Sites web, applications sur mesure, e-commerce et équipes de développement dédiées à coût maîtrisé.",
+      "Agence de développement web et logiciel pour Abidjan et la Côte d'Ivoire. Sites web sur mesure, e-commerce et équipes dédiées à coût maîtrisé. Devis gratuit en 24h.",
   },
   hero: {
     eyebrow: "Développement Logiciel · Côte d'Ivoire",

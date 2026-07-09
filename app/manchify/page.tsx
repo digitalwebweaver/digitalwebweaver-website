@@ -3,7 +3,7 @@ import ServicePage from "@/components/sections/ServicePage";
 import { manchify as data } from "@/data/pages/products/readyApps5";
 
 export const metadata: Metadata = {
-  title: data.meta.title,
+  title: { absolute: data.meta.title },
   description: data.meta.description,
   alternates: { canonical: "/manchify/" },
   openGraph: { url: "/manchify/", type: "website" },

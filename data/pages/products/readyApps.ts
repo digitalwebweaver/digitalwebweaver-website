@@ -9,9 +9,9 @@ const crumbs = (name: string) => [
 // ───────────────────────────── EduCore ─────────────────────────────
 export const educore: ServicePageData = {
   meta: {
-    title: "EduCore — Learning Management System",
+    title: "EduCore – Learning Management System Software | India",
     description:
-      "EduCore is a ready-to-launch Learning Management System for coaching institutes, colleges, and corporate academies — courses, live classes, quizzes, certificates, and fee collection in one platform.",
+      "EduCore is a ready-to-launch Learning Management System for institutes and academies — courses, quizzes, certificates, and fee collection. Book a free demo today.",
   },
   hero: {
     eyebrow: "EduCore",
@@ -116,9 +116,9 @@ export const educore: ServicePageData = {
 // ───────────────────────────── SolarOps ─────────────────────────────
 export const solarops: ServicePageData = {
   meta: {
-    title: "SolarOps — Solar Panel Installer ERP",
+    title: "SolarOps – Solar Panel Installer ERP Software | India",
     description:
-      "SolarOps is a ready-to-deploy ERP for solar installers — site surveys, quotations, project tracking, inventory, subsidy paperwork, and AMC scheduling in one system.",
+      "SolarOps is a ready-to-deploy ERP for solar installers — site surveys, quotations, inventory, subsidy paperwork, and AMC scheduling. Get a free demo in 24 hours.",
   },
   hero: {
     eyebrow: "SolarOps",
@@ -223,9 +223,9 @@ export const solarops: ServicePageData = {
 // ───────────────────────────── GlowDesk ─────────────────────────────
 export const glowdesk: ServicePageData = {
   meta: {
-    title: "GlowDesk — Aesthetic Clinic Management Software",
+    title: "GlowDesk – Aesthetic Clinic Management Software | India",
     description:
-      "GlowDesk is ready-to-launch clinic software for aesthetic and cosmetic practices — appointment booking, treatment plans, before/after galleries, billing, and automated follow-ups.",
+      "GlowDesk is ready-to-launch software for aesthetic clinics — booking, treatment plans, before/after galleries, billing, and follow-ups. Book a free demo.",
   },
   hero: {
     eyebrow: "GlowDesk",
@@ -330,9 +330,9 @@ export const glowdesk: ServicePageData = {
 // ───────────────────────────── QuickBite ─────────────────────────────
 export const quickbite: ServicePageData = {
   meta: {
-    title: "QuickBite — Food Delivery App Software",
+    title: "QuickBite – Food Delivery App Software | Zero Commission",
     description:
-      "QuickBite is a ready-to-launch food delivery app suite — customer ordering app, restaurant dashboard, and delivery partner app with real-time tracking and your own branding.",
+      "QuickBite is a ready-to-launch food delivery app suite — customer app, restaurant dashboard, and driver app with live tracking. Launch your own branded app today.",
   },
   hero: {
     eyebrow: "QuickBite",

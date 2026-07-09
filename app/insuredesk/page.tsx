@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePage from "@/components/sections/ServicePage";
 import { insuredesk as data } from "@/data/pages/products/readyApps4";
 export const metadata: Metadata = {
-  title: data.meta.title,
+  title: { absolute: data.meta.title },
   description: data.meta.description,
   alternates: { canonical: "/insuredesk/" },
   openGraph: { url: "/insuredesk/", type: "website" },

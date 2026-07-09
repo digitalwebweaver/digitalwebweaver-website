@@ -9,7 +9,7 @@ const crumbs = (name: string) => [
 // ───────────────────────────── SalonBook ─────────────────────────────
 export const salonbook: ServicePageData = {
   meta: {
-    title: "SalonBook — Salon & Spa Management",
+    title: "SalonBook – Salon & Spa Management Software for India",
     description:
       "SalonBook is a ready-to-launch salon management system — online booking, staff scheduling, billing, packages, and client follow-ups in one branded platform.",
   },
@@ -116,9 +116,9 @@ export const salonbook: ServicePageData = {
 // ───────────────────────────── PestTrack ─────────────────────────────
 export const pesttrack: ServicePageData = {
   meta: {
-    title: "PestTrack — Pest Control CRM Software",
+    title: "PestTrack – Pest Control CRM & Scheduling Software",
     description:
-      "PestTrack is a ready-to-launch CRM for pest control companies — job scheduling, technician routing, service history, contracts, and automated reminders in one platform.",
+      "PestTrack is a ready-to-launch pest control CRM with job scheduling, technician routing, AMC contracts, and automated client reminders. Book a free demo.",
   },
   hero: {
     eyebrow: "PestTrack",
@@ -223,9 +223,9 @@ export const pesttrack: ServicePageData = {
 // ───────────────────────────── ChemSupply ─────────────────────────────
 export const chemsupply: ServicePageData = {
   meta: {
-    title: "ChemSupply — Chemical Supplier ERP",
+    title: "ChemSupply – Chemical Supplier ERP Software for India",
     description:
-      "ChemSupply is a ready-to-deploy ERP for chemical suppliers — inventory with batch/expiry tracking, compliance documentation, order management, and distributor portals.",
+      "ChemSupply is a ready-to-deploy ERP for chemical suppliers with batch/expiry tracking, compliance documentation, and distributor portals. Get a free demo.",
   },
   hero: {
     eyebrow: "ChemSupply",
@@ -330,9 +330,9 @@ export const chemsupply: ServicePageData = {
 // ───────────────────────────── ClinicVoice AI ─────────────────────────────
 export const clinicvoiceAi: ServicePageData = {
   meta: {
-    title: "ClinicVoice AI — Clinic AI Voice Agent",
+    title: "ClinicVoice AI – AI Voice Agent for Clinics, India",
     description:
-      "ClinicVoice AI is a ready-to-deploy AI voice calling agent for clinics — handles appointment booking, reminders, FAQs, and follow-up calls automatically, in your clinic's voice.",
+      "ClinicVoice AI is a ready-to-deploy AI voice agent for clinics that books appointments, sends reminders, and answers FAQs automatically, 24/7. Get a free demo.",
   },
   hero: {
     eyebrow: "ClinicVoice AI",

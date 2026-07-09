@@ -2,8 +2,8 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Hire Expert .NET Developers | C# & ASP.NET Core",
-    description: "Hire .NET developers for enterprise APIs, ASP.NET Core web apps, microservices, and cloud-native systems built with C#, EF Core, and Azure.",
+    title: "Hire .NET Developers India | C#, ASP.NET Core & Azure",
+    description: "Hire .NET developers for enterprise APIs, ASP.NET Core apps, microservices, and cloud-native systems built with C#, EF Core, and Azure. Get matched in 48 hours.",
   },
   hero: {
     eyebrow: ".NET Development",

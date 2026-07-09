@@ -4,7 +4,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { ivoryCoast as data } from "@/data/pages/local/city-pages";
 
 export const metadata: Metadata = {
-  title: data.meta.title,
+  title: { absolute: data.meta.title },
   description: data.meta.description,
   alternates: { canonical: "/agence-developpement-web-abidjan/" },
   openGraph: { url: "/agence-developpement-web-abidjan/", type: "website", locale: "fr_FR" },

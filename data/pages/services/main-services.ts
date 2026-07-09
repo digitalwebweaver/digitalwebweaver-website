@@ -1,7 +1,7 @@
 import type { ServicePageData } from "@/lib/types";
 
 export const saasDevelopment: ServicePageData = {
-  meta: { title: "SaaS Development Company India", description: "Custom SaaS development with multi-tenant architecture, subscription billing, SSO, and scalable cloud infrastructure. Ship your SaaS in weeks." },
+  meta: { title: "SaaS Development Company India | Multi-Tenant & Cloud-Native", description: "Custom SaaS development with multi-tenant architecture, subscription billing, SSO, and scalable cloud infrastructure. Ship your SaaS in weeks." },
   hero: { eyebrow: "SaaS Development", heading: "SaaS Development Built to Scale from Day One", lead: "We architect and build multi-tenant SaaS platforms with subscription billing, team management, SSO, and the features that turn trials into paying customers.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "SaaS Development" }],
     marqueeItems: ["Multi-tenancy","Subscription billing","React","Node.js","PostgreSQL","AWS","Stripe","OAuth 2.0","REST APIs","Webhooks","CI/CD","Feature flags"],
     stats: [{ value: "8–12wk", label: "MVP Delivery" }, { value: "Multi-Tenant", label: "Architecture" }, { value: "Stripe", label: "Billing Built-In" }] },
@@ -21,7 +21,7 @@ export const saasDevelopment: ServicePageData = {
 };
 
 export const crmErpSystems: ServicePageData = {
-  meta: { title: "Custom CRM & ERP Development", description: "Custom CRM and ERP development: sales pipelines, inventory management, HR, finance modules, and ERP integration for enterprise operations." },
+  meta: { title: "Custom CRM & ERP Development Company | India & Global", description: "Custom CRM and ERP development company building sales pipelines, inventory management, HR, and finance modules for enterprise operations. Get a free quote." },
   hero: { eyebrow: "CRM & ERP Systems", heading: "CRM & ERP Systems Built Around Your Business", lead: "We build custom CRM and ERP systems tailored to your workflows — eliminating the compromises of off-the-shelf software.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "CRM & ERP Systems" }],
     marqueeItems: ["Sales pipeline","Inventory management","HR & payroll","Finance & accounting","Customer portal","Reporting & BI","Multi-branch","Role-based access","API integrations","Audit logs"],
     stats: [{ value: "Custom", label: "No Compromises" }, { value: "Modular", label: "Architecture" }, { value: "ERP", label: "Integration" }] },
@@ -41,7 +41,7 @@ export const crmErpSystems: ServicePageData = {
 };
 
 export const mvpDevelopment: ServicePageData = {
-  meta: { title: "MVP Development for Startups", description: "Lean MVP development for startups and founders. Ship a working product in 8–12 weeks with user-validated features and investor-ready demos." },
+  meta: { title: "MVP Development Company India | Launch in 8-12 Weeks", description: "Lean MVP development for startups and founders in India, UK, and beyond. Ship a working, user-validated product in 8–12 weeks with investor-ready demos." },
   hero: { eyebrow: "MVP Development", heading: "From Idea to Investor-Ready MVP in 8–12 Weeks", lead: "We build focused, fast MVPs that validate your assumptions, attract early users, and impress investors — without building everything at once.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "MVP Development" }],
     marqueeItems: ["Discovery","User stories","Figma prototype","API design","React","Node.js","PostgreSQL","Stripe","Auth","CI/CD","UAT","Launch"],
     stats: [{ value: "8–12wk", label: "Delivery" }, { value: "Lean", label: "Scope Discipline" }, { value: "Validated", label: "User-Tested" }] },
@@ -60,7 +60,7 @@ export const mvpDevelopment: ServicePageData = {
 };
 
 export const mobileAppDevelopment: ServicePageData = {
-  meta: { title: "Mobile App Development — iOS & Android", description: "Native and cross-platform mobile app development: iOS Swift, Android Kotlin, React Native, and Flutter — App Store and Play Store delivery." },
+  meta: { title: "Mobile App Development Company | iOS, Android & React Native", description: "Native and cross-platform mobile app development: iOS Swift, Android Kotlin, React Native, and Flutter — App Store and Play Store delivery. Get a free quote." },
   hero: { eyebrow: "Mobile App Development", heading: "Mobile App Development for iOS & Android at 60fps", lead: "We build native and cross-platform mobile apps with Swift, Kotlin, React Native, and Flutter — performant, store-approved, and loved by users.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Mobile App Development" }],
     marqueeItems: ["React Native","Flutter","Swift","Kotlin","Expo","Push notifications","Offline-first","BLE / GPS","App Store submission","Play Store submission","Deep links","In-app purchases"],
     stats: [{ value: "55+", label: "Apps Shipped" }, { value: "60fps", label: "Performance" }, { value: "4.8★", label: "Avg Rating" }] },
@@ -80,7 +80,7 @@ export const mobileAppDevelopment: ServicePageData = {
 };
 
 export const customWebApps: ServicePageData = {
-  meta: { title: "Custom Web Application Development", description: "Custom web application development for portals, dashboards, internal tools, and SaaS products. React, Next.js, Node.js, and scalable cloud architecture." },
+  meta: { title: "Custom Web Application Development | React & Next.js India", description: "Custom web application development for portals, dashboards, internal tools, and SaaS products. React, Next.js, Node.js, and scalable cloud architecture." },
   hero: { eyebrow: "Custom Web Apps", heading: "Custom Web Applications Built to Scale", lead: "We build custom web apps — from internal tools and dashboards to customer-facing portals and SaaS products — that do exactly what off-the-shelf software can't.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Custom Web Apps" }],
     marqueeItems: ["React","Next.js","Vue.js","Node.js","Django","Laravel","PostgreSQL","Redis","REST APIs","GraphQL","WebSockets","Role-based auth"],
     stats: [{ value: "80+", label: "Web Apps" }, { value: "TypeScript", label: "End-to-End" }, { value: "Scalable", label: "Architecture" }] },
@@ -109,7 +109,7 @@ export const customWebApps: ServicePageData = {
 };
 
 export const ecommerceDevelopment: ServicePageData = {
-  meta: { title: "E-Commerce Development Services", description: "Custom e-commerce development: WooCommerce, headless commerce, payment gateways, inventory management, and conversion-optimised storefronts." },
+  meta: { title: "E-Commerce Development Company India | WooCommerce & Headless", description: "Custom e-commerce development: WooCommerce, headless commerce, payment gateways, inventory management, and conversion-optimised storefronts." },
   hero: { eyebrow: "E-Commerce Development", heading: "E-Commerce Development Built to Convert, Scale & Integrate", lead: "We build high-performance e-commerce storefronts — custom, WooCommerce, or headless — optimised for conversion, not just appearance.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "E-Commerce Development" }],
     marqueeItems: ["Shopify Plus","WooCommerce","Magento","Headless commerce","Stripe","Razorpay","PayPal","Multi-currency","Inventory sync","ERP integration","Subscription billing"],
     stats: [{ value: "+40%", label: "Avg Conversion" }, { value: "Headless", label: "Architecture" }, { value: "PCI-DSS", label: "Secure" }] },
@@ -128,7 +128,7 @@ export const ecommerceDevelopment: ServicePageData = {
 };
 
 export const uiUxDesign: ServicePageData = {
-  meta: { title: "UI/UX Design & Product Design Services", description: "Product design services: UX research, Figma wireframes, interactive prototypes, design systems, and accessibility audits for web and mobile." },
+  meta: { title: "UI/UX Design Company India | Figma & Product Design Experts", description: "UI/UX design services: user research, Figma wireframes, interactive prototypes, design systems, and accessibility audits for web and mobile products." },
   hero: { eyebrow: "UI/UX Design", heading: "UI/UX Design That Users Love — and Businesses Can Measure", lead: "We design interfaces grounded in user research and business goals — from wireframes and prototypes to full design systems and developer handoffs.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "UI/UX Design" }],
     marqueeItems: ["User research","Usability testing","Figma","Design systems","Prototyping","Accessibility (WCAG)","Mobile-first","Design tokens","UX audit","Heuristic analysis","A/B testing"],
     stats: [{ value: "WCAG 2.1", label: "Accessible" }, { value: "Figma", label: "Delivered" }, { value: "95+", label: "Usability Score" }] },
@@ -157,7 +157,7 @@ export const uiUxDesign: ServicePageData = {
 };
 
 export const cloudDevOps: ServicePageData = {
-  meta: { title: "Cloud & DevOps Services", description: "Cloud and DevOps: AWS/GCP/Azure infrastructure, CI/CD pipelines, Kubernetes, monitoring, cost optimisation, and site reliability engineering." },
+  meta: { title: "Cloud & DevOps Company India | AWS, GCP & Kubernetes Experts", description: "Cloud and DevOps: AWS/GCP/Azure infrastructure, CI/CD pipelines, Kubernetes, monitoring, cost optimisation, and site reliability engineering." },
   hero: { eyebrow: "Cloud & DevOps", heading: "Cloud & DevOps Infrastructure That Scales With Your Product", lead: "We design, build, and manage cloud infrastructure that's automated, monitored, secure, and cost-optimised — so your team can focus on the product.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Cloud & DevOps" }],
     marqueeItems: ["AWS","GCP","Terraform","Docker","Kubernetes","GitHub Actions","ArgoCD","Prometheus","Grafana","ELK Stack","CloudFront","RDS"],
     stats: [{ value: "99.9%", label: "Uptime SLA" }, { value: "AWS/GCP", label: "Multi-Cloud" }, { value: "IaC", label: "Everything" }] },
@@ -186,7 +186,7 @@ export const cloudDevOps: ServicePageData = {
 };
 
 export const aiAutomation: ServicePageData = {
-  meta: { title: "AI & Automation Development Services India", description: "AI development services: LLM integrations, chatbots, document processing, predictive analytics, ML pipelines, and workflow automation for businesses." },
+  meta: { title: "AI & Automation Company India | LLM Integration Experts", description: "AI development services: LLM integrations, chatbots, document processing, predictive analytics, ML pipelines, and workflow automation for businesses." },
   hero: { eyebrow: "AI & Automation", heading: "AI Automation That Replaces Real Manual Work", lead: "We build AI-powered systems that actually work in production — from LLM copilots and document processing to predictive analytics and workflow automation.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "AI & Automation" }],
     marqueeItems: ["OpenAI","Anthropic Claude","LangChain","RAG pipelines","Vector databases","Pinecone","Document extraction","OCR","Fine-tuning","Whisper","Gemini"],
     stats: [{ value: "LLM", label: "Integrations" }, { value: "Python", label: "ML Stack" }, { value: "Production", label: "Proven" }] },
@@ -244,7 +244,7 @@ export const openSourceDevelopment: ServicePageData = {
 };
 
 export const webDevelopment: ServicePageData = {
-  meta: { title: "Web Development Services India", description: "Full-spectrum web development: marketing sites, web portals, web apps, and API backends. React, Next.js, Node.js, and TypeScript. India-based team." },
+  meta: { title: "Web Development Company India | React & Next.js Experts", description: "Full-spectrum web development: marketing sites, web portals, web apps, and API backends. React, Next.js, Node.js, and TypeScript. India-based team." },
   hero: { eyebrow: "Web Development", heading: "Web Development for High-Performance Websites & Web Apps", lead: "From marketing sites to complex web applications — we engineer fast, accessible, and scalable web solutions with modern technology.", breadcrumbs: [{ label: "Home", href: "/" }, { label: "Web Development" }],
     marqueeItems: ["React","Next.js","Vue.js","TypeScript","Node.js","Python","Laravel","Django","PostgreSQL","MongoDB","AWS","Vercel"],
     stats: [{ value: "150+", label: "Web Projects" }, { value: "Core Web", label: "Vitals Focus" }, { value: "TypeScript", label: "First" }] },

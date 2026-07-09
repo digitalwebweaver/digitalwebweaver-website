@@ -2,8 +2,8 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Hire Expert Laravel PHP Developers",
-    description: "Hire Laravel developers for web apps, REST APIs, SaaS platforms, and e-commerce backends. Laravel 11, Livewire, Inertia.js, and Filament experts.",
+    title: "Hire Laravel Developers | PHP Experts for India & UK",
+    description: "Hire Laravel developers for web apps, REST APIs, SaaS platforms, and e-commerce backends using Laravel 11, Livewire, and Filament. Free quote in 24 hours.",
   },
   hero: {
     eyebrow: "Laravel Development",

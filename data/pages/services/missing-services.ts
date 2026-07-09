@@ -8,9 +8,9 @@ import type { ServicePageData } from "@/lib/types";
 // ─────────────────────────────────────────────────────────────────────────────
 export const customSoftwareDevelopment: ServicePageData = {
   meta: {
-    title: "Custom Software Development Company",
+    title: "Custom Software Development Company India | ERP & CRM",
     description:
-      "Custom software development company in India. We build bespoke business software — ERP, CRM, workflow automation, portals, and SaaS — that fits your processes exactly. Senior engineers. Fixed price.",
+      "Custom software development company in India. We build bespoke ERP, CRM, portals, and SaaS that fit your workflow exactly. Fixed price, senior engineers only.",
   },
   hero: {
     eyebrow: "Custom Software Development",
@@ -213,9 +213,9 @@ export const customSoftwareDevelopment: ServicePageData = {
 // ─────────────────────────────────────────────────────────────────────────────
 export const websiteDevelopment: ServicePageData = {
   meta: {
-    title: "Website Development Company India",
+    title: "Website Development Company India | Fast, Custom Sites",
     description:
-      "Professional website development company in India. We build business websites that look great, load fast, and rank on Google. Custom design, no templates. Starting from ₹30,000.",
+      "Website development company in India. We build fast, custom business websites that rank on Google — no templates. Starting from ₹30,000, get a free quote.",
   },
   hero: {
     eyebrow: "Website Development",
@@ -418,9 +418,9 @@ export const websiteDevelopment: ServicePageData = {
 // ─────────────────────────────────────────────────────────────────────────────
 export const webApplicationDevelopment: ServicePageData = {
   meta: {
-    title: "Web Application Development Company",
+    title: "Web Application Development Company | India & Global",
     description:
-      "Web application development company in India. We build complex web apps — SaaS platforms, business portals, dashboards, multi-user systems, and enterprise web applications. Senior engineers. Fixed price.",
+      "Web application development company in India. We build SaaS platforms, dashboards, and enterprise web apps with senior engineers at a fixed price.",
   },
   hero: {
     eyebrow: "Web Application Development",
@@ -622,9 +622,9 @@ export const webApplicationDevelopment: ServicePageData = {
 // ─────────────────────────────────────────────────────────────────────────────
 export const wordpressDevelopment: ServicePageData = {
   meta: {
-    title: "WordPress Development Company India",
+    title: "WordPress Development Company India | Custom Themes",
     description:
-      "WordPress development company in India. Custom WordPress websites, WooCommerce stores, headless WordPress, custom plugins, and performance optimisation. No templates — built from scratch.",
+      "WordPress development company in India. Custom WordPress sites, WooCommerce stores, and headless builds — no templates, no page builders, ever.",
   },
   hero: {
     eyebrow: "WordPress Development",
@@ -826,9 +826,9 @@ export const wordpressDevelopment: ServicePageData = {
 // ─────────────────────────────────────────────────────────────────────────────
 export const shopifyDevelopment: ServicePageData = {
   meta: {
-    title: "Shopify Development Company India",
+    title: "Shopify Development Company India | Custom Themes & Apps",
     description:
-      "Shopify development company in India. Custom Shopify stores, Shopify Plus, custom apps, theme development, and WooCommerce to Shopify migration. Conversion-focused design. Senior engineers.",
+      "Shopify development company in India. Custom Shopify themes, apps, and Shopify Plus builds designed to convert. Get a free store audit today.",
   },
   hero: {
     eyebrow: "Shopify Development",

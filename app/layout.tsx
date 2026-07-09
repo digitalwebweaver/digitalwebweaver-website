@@ -99,6 +99,10 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
+    // Custom/hub pages set short titles and rely on this brand suffix.
+    // Data-driven service pages set their own 50-60 char SEO titles via
+    // `title: { absolute: ... }`, which bypasses this template so the brand
+    // isn't double-appended past the ~60-char SERP truncation point.
     default: "Digital Web Weaver — Web Development & Software Agency",
     template: "%s | Digital Web Weaver",
   },

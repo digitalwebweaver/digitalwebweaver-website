@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Hire Expert AI Engineers | LLM, RAG & ML Systems",
+    title: "Hire AI Engineers | LLM, RAG, ML & Agent Development",
     description: "Hire AI engineers to build LLM apps, RAG pipelines, AI agents, chatbots, and production ML systems with OpenAI, Anthropic, LangChain, and vector databases.",
   },
   hero: {

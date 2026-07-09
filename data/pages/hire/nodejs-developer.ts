@@ -2,8 +2,8 @@ import type { ServicePageData } from "@/lib/types";
 
 const data: ServicePageData = {
   meta: {
-    title: "Hire Expert Node.js Backend Developers",
-    description: "Hire Node.js developers for REST APIs, microservices, real-time apps, and scalable backend systems built with TypeScript and Express/Fastify.",
+    title: "Hire Node.js Developers | India, UK & Global Teams",
+    description: "Hire Node.js developers for REST APIs, microservices, and real-time apps built with TypeScript, Express, and Fastify. Get a free quote in 24 hours.",
   },
   hero: {
     eyebrow: "Node.js Development",
