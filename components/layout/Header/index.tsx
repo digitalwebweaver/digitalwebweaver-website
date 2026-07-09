@@ -114,10 +114,14 @@ export default function Header() {
             <div className="nav-links">
 
               {/* ── ENGINEERING → tabbed dropdown ── */}
-              <div className="nav-item eng-nav-item" ref={engRef}>
+              <div
+                className="nav-item eng-nav-item"
+                ref={engRef}
+                onMouseEnter={() => setEngOpen(true)}
+                onMouseLeave={() => setEngOpen(false)}
+              >
                 <button
                   className="eng-trigger"
-                  onClick={() => setEngOpen(v => !v)}
                   aria-expanded={engOpen}
                   aria-haspopup="dialog"
                 >
