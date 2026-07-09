@@ -2,6 +2,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import {
+  SiReact, SiNodedotjs, SiPhp, SiLaravel, SiVuedotjs, SiAngular,
+  SiDotnet, SiPython, SiApple, SiAndroid,
+} from "react-icons/si";
+import {
+  LuGlobe, LuCode, LuShoppingCart, LuPenTool, LuSmartphone,
+  LuBuilding2, LuContact, LuCloud, LuWorkflow, LuBraces,
+  LuLayers, LuRefreshCw, LuServer, LuBoxes, LuDatabase, LuWaypoints, LuGauge,
+  LuBrainCircuit,
+} from "react-icons/lu";
 import MobileMenu from "./MobileMenu";
 
 /* ── Engineering service categories & links ── */
@@ -10,58 +20,58 @@ const ENG_CATS = [
     id: "web",
     label: "Web Development",
     items: [
-      { icon: "🏢", name: "Corporate Websites",      desc: "Business presence & brand sites",       href: "/web-development/" },
-      { icon: "🧩", name: "Custom Web Apps",         desc: "Bespoke application builds",             href: "/custom-web-apps/" },
-      { icon: "🛒", name: "E-Commerce Development",  desc: "Shopify, WooCommerce & custom stores",  href: "/ecommerce-development/" },
-      { icon: "🎨", name: "UI / UX Design",          desc: "Research-driven interface design",       href: "/ui-ux-design/" },
-      { icon: "📱", name: "Progressive Web Apps",    desc: "App-like web experiences",              href: "/services/progressive-web-apps/" },
+      { Icon: LuGlobe,        name: "Corporate Websites",      desc: "Business presence & brand sites",       href: "/web-development/" },
+      { Icon: LuCode,         name: "Custom Web Apps",         desc: "Bespoke application builds",             href: "/custom-web-apps/" },
+      { Icon: LuShoppingCart, name: "E-Commerce Development",  desc: "Shopify, WooCommerce & custom stores",  href: "/ecommerce-development/" },
+      { Icon: LuPenTool,      name: "UI / UX Design",          desc: "Research-driven interface design",       href: "/ui-ux-design/" },
+      { Icon: LuSmartphone,   name: "Progressive Web Apps",    desc: "App-like web experiences",              href: "/services/progressive-web-apps/" },
     ],
   },
   {
     id: "software",
     label: "Custom Software",
     items: [
-      { icon: "🏗️", name: "Enterprise Applications", desc: "Large-scale mission-critical systems",   href: "/services/enterprise-applications/" },
-      { icon: "📇", name: "CRM / ERP Systems",       desc: "Operations & relationship management",   href: "/crm-erp-systems/" },
-      { icon: "☁️", name: "SaaS App Development",    desc: "Multi-tenant product development",       href: "/saas-development/" },
-      { icon: "⚙️", name: "Business Automation",     desc: "Workflow & process automation",          href: "/ai-automation/" },
-      { icon: "🔌", name: "API Development",         desc: "RESTful & GraphQL interfaces",           href: "/services/api-development/" },
+      { Icon: LuBuilding2, name: "Enterprise Applications", desc: "Large-scale mission-critical systems",   href: "/services/enterprise-applications/" },
+      { Icon: LuContact,   name: "CRM / ERP Systems",       desc: "Operations & relationship management",   href: "/crm-erp-systems/" },
+      { Icon: LuCloud,     name: "SaaS App Development",    desc: "Multi-tenant product development",       href: "/saas-development/" },
+      { Icon: LuWorkflow,  name: "Business Automation",     desc: "Workflow & process automation",          href: "/ai-automation/" },
+      { Icon: LuBraces,    name: "API Development",         desc: "RESTful & GraphQL interfaces",           href: "/services/api-development/" },
     ],
   },
   {
     id: "mobile",
     label: "Mobile Development",
     items: [
-      { icon: "🍎", name: "iOS Applications",        desc: "Swift & SwiftUI native apps",            href: "/mobile-app-development/" },
-      { icon: "🤖", name: "Android Applications",    desc: "Kotlin & Jetpack Compose",              href: "/mobile-app-development/" },
-      { icon: "🔀", name: "Cross-Platform Apps",     desc: "Flutter & React Native builds",          href: "/react-native-developer/" },
-      { icon: "🔄", name: "App Modernization",       desc: "Legacy rebuild & migration",             href: "/services/app-modernization/" },
+      { Icon: SiApple,     name: "iOS Applications",        desc: "Swift & SwiftUI native apps",            href: "/mobile-app-development/" },
+      { Icon: SiAndroid,   name: "Android Applications",    desc: "Kotlin & Jetpack Compose",              href: "/mobile-app-development/" },
+      { Icon: LuLayers,    name: "Cross-Platform Apps",     desc: "Flutter & React Native builds",          href: "/react-native-developer/" },
+      { Icon: LuRefreshCw, name: "App Modernization",       desc: "Legacy rebuild & migration",             href: "/services/app-modernization/" },
     ],
   },
   {
     id: "arch",
     label: "System Architecture",
     items: [
-      { icon: "☁️", name: "Cloud-Native Systems",    desc: "AWS, GCP & Azure architecture",          href: "/cloud-devops/" },
-      { icon: "🧱", name: "Microservices",           desc: "Distributed system design",              href: "/services/microservices/" },
-      { icon: "🗄️", name: "Database Design",         desc: "Schema, indexing & optimization",        href: "/stack/databases/" },
-      { icon: "🔗", name: "API Integrations",        desc: "Third-party service connections",        href: "/services/api-integrations/" },
-      { icon: "🚀", name: "Performance Optimization",desc: "Audit, tuning & scaling",               href: "/services/performance-optimization/" },
+      { Icon: LuServer,    name: "Cloud-Native Systems",    desc: "AWS, GCP & Azure architecture",          href: "/cloud-devops/" },
+      { Icon: LuBoxes,     name: "Microservices",           desc: "Distributed system design",              href: "/services/microservices/" },
+      { Icon: LuDatabase,  name: "Database Design",         desc: "Schema, indexing & optimization",        href: "/stack/databases/" },
+      { Icon: LuWaypoints, name: "API Integrations",        desc: "Third-party service connections",        href: "/services/api-integrations/" },
+      { Icon: LuGauge,     name: "Performance Optimization",desc: "Audit, tuning & scaling",               href: "/services/performance-optimization/" },
     ],
   },
   {
     id: "hire",
     label: "Hire Dedicated",
     items: [
-      { icon: "🟢", name: "Node.js Developer",       desc: "Backend & real-time systems",            href: "/nodejs-developer/" },
-      { icon: "🐘", name: "PHP Developer",           desc: "WordPress, Laravel & Symfony",           href: "/php-developer/" },
-      { icon: "🅰️", name: "Angular Developer",        desc: "Enterprise front-end builds",            href: "/angular-developer/" },
-      { icon: "⚛️", name: "React Developer",          desc: "Modern UI development",                  href: "/react-developer/" },
-      { icon: "🎯", name: "Laravel Developer",        desc: "Elegant PHP framework expert",           href: "/laravel-developer/" },
-      { icon: "💚", name: "Vue.js Developer",         desc: "Progressive framework builds",           href: "/vuejs-developer/" },
-      { icon: "🔷", name: ".NET Developer",           desc: "C# & ASP.NET Core systems",              href: "/dotnet-developer/" },
-      { icon: "🐍", name: "Python Developer",         desc: "Django, FastAPI & data apps",            href: "/python-developer/" },
-      { icon: "🧠", name: "AI Engineer",              desc: "LLM, RAG & ML systems",                  href: "/ai-engineer/" },
+      { Icon: SiNodedotjs, name: "Node.js Developer",       desc: "Backend & real-time systems",            href: "/nodejs-developer/" },
+      { Icon: SiPhp,       name: "PHP Developer",           desc: "WordPress, Laravel & Symfony",           href: "/php-developer/" },
+      { Icon: SiAngular,   name: "Angular Developer",       desc: "Enterprise front-end builds",            href: "/angular-developer/" },
+      { Icon: SiReact,     name: "React Developer",         desc: "Modern UI development",                  href: "/react-developer/" },
+      { Icon: SiLaravel,   name: "Laravel Developer",       desc: "Elegant PHP framework expert",           href: "/laravel-developer/" },
+      { Icon: SiVuedotjs,  name: "Vue.js Developer",        desc: "Progressive framework builds",           href: "/vuejs-developer/" },
+      { Icon: SiDotnet,    name: ".NET Developer",          desc: "C# & ASP.NET Core systems",              href: "/dotnet-developer/" },
+      { Icon: SiPython,    name: "Python Developer",        desc: "Django, FastAPI & data apps",            href: "/python-developer/" },
+      { Icon: LuBrainCircuit, name: "AI Engineer",          desc: "LLM, RAG & ML systems",                  href: "/ai-engineer/" },
     ],
   },
 ];
@@ -159,7 +169,7 @@ export default function Header() {
                       <div key={activeCat} className="eng-items-grid">
                         {currentCat.items.map(item => (
                           <Link key={item.href + item.name} className="eng-item" href={item.href} onClick={closeEng}>
-                            <span className="eng-item-ic" aria-hidden="true">{item.icon}</span>
+                            <span className="eng-item-ic" aria-hidden="true"><item.Icon /></span>
                             <span className="eng-item-txt">
                               <span className="eng-item-name">{item.name}</span>
                               <span className="eng-item-desc">{item.desc}</span>
