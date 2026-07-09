@@ -6,6 +6,15 @@ const data: ServicePageData = {
     description:
       "Hire React.js developers in India for SPAs, dashboards, and enterprise apps built with React 18+ and TypeScript. Get a free quote in 24 hours.",
   },
+  prose: {
+    eyebrow: "Why React, done right",
+    heading: "Hire React Developers Who Own the Whole Frontend",
+    blocks: [
+      { p: ["Teams that want to hire React developers usually don't need another pair of hands typing JSX — they need engineers who can reason about component architecture, rendering strategy, and state before a single feature lands. That's the difference here. We're a Vadodara-based studio delivering to clients across India, the UK, South Africa, and Ivory Coast, and every React engagement starts with a design system and a component tree, not a pile of untyped components. Whether you're building a data-heavy dashboard, a customer-facing SPA, or a ", { text: "complex web application portal", href: "/web-application-development/" }, ", we ship React 18 and TypeScript that stays maintainable long after launch."] },
+      { h3: "Frontend that fits the rest of your stack", p: ["React rarely lives alone. Our developers pair naturally with ", { text: "Node.js backend engineers", href: "/nodejs-developer/" }, " to close the loop on APIs, auth, and real-time data, so you're not stitching together mismatched contracts. When the product is a subscription platform, we bring the same team into full ", { text: "SaaS development", href: "/saas-development/" }, ", handling billing flows, multi-tenancy, and role-based dashboards end to end. And because we design the interface layer deliberately — Tailwind, shadcn/ui, Radix, and a tokenised design system in Storybook — the ", { text: "UI/UX work", href: "/ui-ux-design/" }, " and the code never drift apart."] },
+      { h3: "Senior engineering, not just React syntax", p: ["Performance and correctness are defaults, not add-ons. Every app we hand over targets 90+ Core Web Vitals, ships with Jest, Vitest, RTL, and Playwright coverage, and follows OWASP practices for CSP, HTTPS, and input sanitisation. We also handle the harder cases — migrating legacy jQuery, AngularJS, or class-component React to modern functional code, or extending an existing React codebase into ", { text: "cross-platform mobile", href: "/mobile-app-development/" }, " with React Native. If you want to see how this plays out in real projects, browse our ", { text: "recent work", href: "/portfolio/" }, ", or ", { text: "tell us about your stack and timeline", href: "/contact/" }, " and we'll map out the right approach."] },
+    ],
+  },
   hero: {
     eyebrow: "React Development",
     heading: "React Developers Who Ship Fast, Scalable UIs",

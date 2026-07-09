@@ -12,6 +12,15 @@ export const customSoftwareDevelopment: ServicePageData = {
     description:
       "Custom software development company in India. We build bespoke ERP, CRM, portals, and SaaS that fit your workflow exactly. Fixed price, senior engineers only.",
   },
+  prose: {
+    eyebrow: "Bespoke Software",
+    heading: "A custom software development company India teams trust to replace off-the-shelf tools",
+    blocks: [
+      { p: ["As a custom software development company India businesses turn to when generic products stop fitting, we build systems for teams that have outgrown spreadsheets, disconnected SaaS subscriptions, and rigid ", { text: "off-the-shelf ERP and CRM tools", href: "/crm-erp-systems/" }, ". This service is for founders and operations leaders who need software shaped around their exact workflow — not a packaged product they have to bend their team around. What makes our approach different is scope discipline: we map your real processes, including the edge cases and exceptions that vendors ignore, then commit to a fixed price before a line of code is written. Every project is staffed with senior engineers only, and you own the source code, database, and IP outright."] },
+      { h3: "When bespoke beats buying", p: ["Custom software earns its cost when your process is non-standard or depends on deep integration. We build systems around how your sales, inventory, and finance teams actually work, then connect them to the tools you already run — Tally, Zoho, WhatsApp, payment gateways, and GST portals — consolidating everything into one source of truth. For products aimed at your own customers, that same engineering extends into ", { text: "multi-tenant SaaS platforms", href: "/saas-development/" }, " with subscription billing and role-based access, or ", { text: "complex web applications and portals", href: "/web-application-development/" }, " where clients, partners, and dealers log in to transact. The goal is always the same: replace manual work and fragmented subscriptions with software you fully control."] },
+      { h3: "India base, global delivery", p: ["We work from Vadodara and deliver to clients across India, the UK, South Africa, and Ivory Coast, building on a stack we choose for the job — Laravel and PostgreSQL for data-heavy back ends, React and Node.js for the interface, deployed to infrastructure you own. If you need to validate an idea first, we can ship a lean MVP before committing to a full build; if you are replacing an ageing system, we migrate your data with zero downtime and train your team through go-live. Every engineer on your project has years of production experience, so you get maintainable code and honest timelines rather than surprises. ", { text: "Tell us what your business needs", href: "/contact/" }, " and we will scope it, or see the kind of ", { text: "systems we have already built", href: "/portfolio/" }, "."] },
+    ],
+  },
   hero: {
     eyebrow: "Custom Software Development",
     heading: "Bespoke Software Built Around Your Business",
@@ -216,6 +225,15 @@ export const websiteDevelopment: ServicePageData = {
     title: "Website Development Company India | Fast, Custom Sites",
     description:
       "Website development company in India. We build fast, custom business websites that rank on Google — no templates. Starting from ₹30,000, get a free quote.",
+  },
+  prose: {
+    eyebrow: "Why it works",
+    heading: "What to expect from a website development company in India that engineers, not assembles",
+    blocks: [
+      { p: ["As a website development company in India, we work mostly with founders and marketing leads who are tired of template sites that look generic and load slowly. What makes our approach different is that a business website is engineered, not assembled — every page is coded from an approved Figma design, tuned for a sub-two-second load, and structured so Google can read it from launch day. We are based in Vadodara and deliver for clients across India, the UK, South Africa, and Ivory Coast, which means your project is handled by senior people who treat a marketing site with the same rigour as a production application."] },
+      { h3: "The same engineering discipline as our larger builds", p: ["Because we also handle heavier ", { text: "web development", href: "/web-development/" }, " — React, Next.js, and API-driven front ends — your website inherits that discipline: clean, maintainable code with no proprietary page-builder lock-in. When a content team needs to publish without touching code, we wire in a CMS, and for content-first sites we build custom ", { text: "WordPress without Elementor or bloated themes", href: "/wordpress-development/" }, ". That means the site you launch now can grow with the business instead of trapping you in a rebuild the moment your needs change."] },
+      { h3: "Design, speed, and a site you actually own", p: ["Every build starts with real ", { text: "UI/UX design", href: "/ui-ux-design/" }, " rather than a stock layout, mapped to your brand and the way your customers actually buy — more than 70% of them on a phone. For businesses in Gujarat we also offer local ", { text: "web design in Vadodara", href: "/web-design-vadodara/" }, " with the on-page and technical SEO that helps you surface in nearby searches. You own the code, the CMS, and the domain outright, so changing developers is never a hostage situation. When you are ready, ", { text: "tell us what you need", href: "/contact/" }, " and we will send a fixed-price quote within 24 hours."] },
+    ],
   },
   hero: {
     eyebrow: "Website Development",

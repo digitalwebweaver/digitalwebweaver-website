@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire Node.js Developers | India, UK & Global Teams",
     description: "Hire Node.js developers for REST APIs, microservices, and real-time apps built with TypeScript, Express, and Fastify. Get a free quote in 24 hours.",
   },
+  prose: {
+    eyebrow: "Backend Engineering Depth",
+    heading: "Hire Node.js Developers Who Understand the Whole System",
+    blocks: [
+      { p: ["When teams hire Node.js developers, they usually need more than someone who can wire up an Express route — they need an engineer who reasons about event loops, backpressure, and database contention under real traffic. That is where we focus. Our Vadodara-based engineers deliver to clients across India, the UK, South Africa, and Ivory Coast, and every service ships fully typed in TypeScript with tests, structured logging, and an OpenAPI contract from day one. This suits founders shipping an ", { text: "MVP", href: "/mvp-development/" }, " as much as it suits established teams migrating a legacy monolith toward ", { text: "microservices", href: "/services/microservices/" }, " without a risky rewrite."] },
+      { h3: "APIs Built for the Frontend That Consumes Them", p: ["A Node.js backend rarely lives alone. We design ", { text: "REST and GraphQL APIs", href: "/services/api-development/" }, " with the client in mind — versioned, rate-limited, and documented so a ", { text: "React frontend", href: "/react-developer/" }, " team or a mobile app can integrate without guesswork. Whether the goal is a ", { text: "SaaS platform", href: "/saas-development/" }, " with multi-tenant auth or a real-time layer using WebSockets and Redis pub/sub for horizontal scaling, we build the data contracts first and let the implementation follow. That discipline is why our services drop cleanly into existing products instead of forcing everything around them."] },
+      { h3: "Performance, Security, and Operations Included", p: ["Fast code that falls over in production is not fast. Our engineers profile hot paths, fix indexing and connection-pooling issues, and instrument services with OpenTelemetry so you can see where time goes. Security is standard, not an add-on — input validation, JWT and OAuth 2.0 auth, and OWASP-aligned defences ship by default. We containerise with Docker and Kubernetes, wire up CI/CD, and hand over dashboards your team can actually read. If you want to see the range of ", { text: "custom software", href: "/custom-software-development/" }, " we have delivered, browse our ", { text: "portfolio", href: "/portfolio/" }, ", or ", { text: "tell us about your stack", href: "/contact/" }, " and we will map out the right approach."] },
+    ],
+  },
   hero: {
     eyebrow: "Node.js Development",
     heading: "Node.js Backend Developers Who Build for Scale",
