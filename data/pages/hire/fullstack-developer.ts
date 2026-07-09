@@ -94,6 +94,11 @@ const data: ServicePageData = {
     { label: "SaaS Development", href: "/saas-development/", desc: "End-to-end SaaS product development." },
     { label: "Hire React Developer", href: "/react-developer/", desc: "Frontend specialists to complement your full stack team." },
   ],
-  cta: { heading: "Build Your Product End-to-End", body: "One team, zero handoffs. Let's scope your full stack project." },
+  cta: { eyebrow: "Ready to hire", heading: "Ready to hire a full stack developer?", body: "Tell us your product, stack, and timeline. We'll match you with 2–3 senior full stack engineers within 48 hours — all pre-vetted, immediately available, and ready to own your build front to back.", primaryCta: { label: "Start hiring now ↗", href: "/contact/" }, secondaryCta: { label: "See our work", href: "/portfolio/" }, meta: ["Senior engineers only", "48-hr match", "No lock-in"] },
+  testimonials: [
+    { text: "One engineer owned both our API and the React front end, which killed the endless handoff delays we had juggling two vendors. Shipped our MVP in weeks, not months.", name: "Aditi R.", role: "Founder · HR SaaS · India", initials: "AR" },
+    { text: "Their full-stack developer took us from Figma to a working product on Node and Postgres. Clean code, sensible architecture, and honest about trade-offs the whole way through.", name: "Daniel M.", role: "CTO · Logistics Startup · United Kingdom", initials: "DM" },
+    { text: "We embedded their engineer with our team and they added value across the stack immediately — database, backend, and UI — with no ramp-up drama.", name: "Kabelo N.", role: "Head of Engineering · MarketplaceCo · South Africa", initials: "KN" },
+  ],
 };
 export default data;

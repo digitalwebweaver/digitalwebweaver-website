@@ -10,6 +10,15 @@ export const ahmedabad: ServicePageData = {
     description:
       "Web design company in Ahmedabad building custom websites, e-commerce, ERP, and mobile apps. Senior engineers, fixed pricing. Free consultation in 24 hours.",
   },
+  prose: {
+    eyebrow: "Web Design · Ahmedabad",
+    heading: "A web design company in Ahmedabad, built on real Gujarat presence",
+    blocks: [
+      { p: ["If you run a business in Ahmedabad — a textile export house in Naroda, an IT firm on SG Highway, a fintech startup in GIFT City, or an MSME manufacturer in GIDC — you want a ", { text: "web design company in Ahmedabad", href: "/website-development/" }, " that understands both the technology and the local market. Digital Web Weaver is genuinely a Gujarat team: our studio is in Vadodara, roughly 110 km from Ahmedabad, close enough for in-person discovery workshops, kickoff meetings, and project reviews whenever they matter. Day to day we work remotely over video calls, WhatsApp, and email — which keeps your costs down — but we are never a faceless agency five time zones away. We speak English, Hindi, and Gujarati, and the senior engineer you brief is the one who builds your product."] },
+      { h3: "Websites, e-commerce, and systems for Ahmedabad businesses", p: ["Most Ahmedabad clients start with a fast, mobile-first business website, then grow into deeper work. We build conversion-focused sites and handle full ", { text: "web development", href: "/web-development/" }, " when a marketing site is not enough. For textile traders and D2C brands, our ", { text: "e-commerce development", href: "/ecommerce-development/" }, " ships stores with Razorpay, GST invoicing, and WhatsApp order flows. For manufacturers and distributors drowning in spreadsheets, we design ", { text: "custom ERP and CRM systems", href: "/crm-erp-systems/" }, " built exactly around your purchase, inventory, and production processes — at a fraction of SAP or Oracle cost."] },
+      { h3: "Design that respects your users and your budget", p: ["Good design is not decoration; it is how a visitor decides to trust you. Our ", { text: "UI/UX design", href: "/ui-ux-design/" }, " work starts with your actual customers — a wholesale buyer comparing MOQs, a patient booking an appointment, an investor reviewing a GIFT City fintech product — and shapes every screen around that decision. Pricing is fixed and quoted upfront, so there are no surprises after the kickoff. Whether you need a five-page site or a multi-crore platform, you get senior engineers, honest timelines, and a team you can actually meet. See ", { text: "our recent work", href: "/portfolio/" }, ", or tell us about your Ahmedabad project and we will reply within 24 hours."] },
+    ],
+  },
   hero: {
     eyebrow: "Web Development · Ahmedabad",
     heading: "Web Development Company Serving Ahmedabad",
@@ -154,6 +163,15 @@ export const surat: ServicePageData = {
     title: "Web Design Surat | Websites, E-commerce & ERP Systems",
     description:
       "Web design company in Surat building websites, e-commerce, and ERP for diamond, textile, and trading businesses. Senior engineers. Free quote in 24 hours.",
+  },
+  prose: {
+    eyebrow: "Web Development · Surat",
+    heading: "Web Development Company Serving Surat",
+    blocks: [
+      { p: ["If you run a diamond trading house, a textile or saree label, or an SME manufacturing unit in Surat, you need a web design company in Surat that understands how fast your business moves and how your buyers actually place orders. We are a Vadodara-based studio of senior engineers, and we serve Surat clients primarily remotely — video calls, screen-sharing, and shared boards for day-to-day work — with on-site visits for kickoff and key milestones on larger projects. That is the honest arrangement: no local storefront, but a real team a short drive away that treats Surat work as a core market, not an afterthought. We build ", { text: "custom websites and portals", href: "/web-development/" }, " that look right, load fast, and turn browsers into enquiries."] },
+      { h3: "Built for how Surat trades", p: ["Surat runs on wholesale relationships and high catalogue volume, so we design around that. For diamond and textile traders we build dealer and B2B portals with tiered pricing, order tracking, and GST-compliant invoicing. For fashion and saree brands going direct to consumers, we build ", { text: "e-commerce stores", href: "/ecommerce-development/" }, " with Razorpay, COD, WhatsApp order alerts, and large fabric catalogues — on ", { text: "Shopify", href: "/shopify-development/" }, " when speed matters, or fully custom when you need tighter control. Every layout starts with clean, mobile-first ", { text: "UI/UX design", href: "/ui-ux-design/" }, " because most of your buyers are on a phone."] },
+      { h3: "One partner, from website to back office", p: ["Good design is only half the job. Many Surat SMEs outgrow their website and start needing purchase orders, inventory, dispatch, and reporting in one place — so we also build ", { text: "custom ERP and CRM systems", href: "/crm-erp-systems/" }, " that plug into the same platform. Most websites launch in three to four weeks and complex platforms in eight to twelve, all at a fixed price agreed upfront. If you would like to see the kind of work we ship, browse our ", { text: "portfolio", href: "/portfolio/" }, ", or tell us about your Surat project and we will send a free quote within 24 hours."] },
+    ],
   },
   hero: {
     eyebrow: "Web Development · Surat",
@@ -300,6 +318,15 @@ export const rajkot: ServicePageData = {
     description:
       "Web design company in Rajkot building websites, ERP systems, and B2B portals for engineering and manufacturing SMEs. Senior engineers. Free quote in 24 hours.",
   },
+  prose: {
+    eyebrow: "Web Design · Rajkot",
+    heading: "A web design company in Rajkot that builds for industry",
+    blocks: [
+      { p: ["If you run an engineering, auto-parts, or manufacturing business in Saurashtra, you need more than a brochure site — you need digital infrastructure that reflects how you actually work. As a ", "web design company in Rajkot", ", Digital Web Weaver builds professional websites, B2B dealer portals, and ", { text: "custom software", href: "/custom-software-development/" }, " for the region's SMEs and exporters. To be honest about geography: our studio is in Vadodara, and we serve Rajkot clients remotely for day-to-day work, with on-site visits for kickoff and milestone meetings on larger projects. Most manufacturing teams prefer that rhythm — it saves travel and keeps decisions moving."] },
+      { h3: "Websites that win buyers, not just visitors", p: ["A Rajkot manufacturer's website has one real job: help Indian and international buyers find you and trust you. We design fast, mobile-first sites with clean ", { text: "UI/UX", href: "/ui-ux-design/" }, " and structured product catalogues, then back them with the kind of ", { text: "web development", href: "/web-development/" }, " that ranks — proper SEO, compliance documents, and enquiry forms that route straight to your sales team. If you sell online as well, we can extend the same site into a full ", { text: "ecommerce store", href: "/ecommerce-development/" }, " without starting over."] },
+      { h3: "Software built around your shop floor", p: ["Where we differ from a typical design agency is the engineering behind the pixels. Rajkot's strength is production, so we build ", { text: "custom ERP and CRM systems", href: "/crm-erp-systems/" }, " that handle raw-material inventory, job cards, dispatch, GST invoicing, and multi-currency export quotations — one platform instead of scattered spreadsheets and Tally add-ons. It is the same senior-engineer approach we bring to clients across ", { text: "Gujarat", href: "/web-design-gujarat/" }, ". If you're weighing a new website or replacing a manual process, take a look at our recent ", { text: "work", href: "/portfolio/" }, " or ", { text: "book a free consultation", href: "/contact/" }, " — we'll give you a straight estimate within 48 hours."] },
+    ],
+  },
   hero: {
     eyebrow: "Web Development · Rajkot",
     heading: "Web Development Company Serving Rajkot",
@@ -444,6 +471,15 @@ export const gujarat: ServicePageData = {
     title: "Web Design Gujarat | Websites, Apps & ERP Solutions",
     description:
       "Web design company serving Gujarat — custom websites, mobile apps, SaaS, ERP, and AI solutions across Vadodara, Ahmedabad, Surat & Rajkot. Free quote in 24 hours.",
+  },
+  prose: {
+    eyebrow: "Web Development · Gujarat",
+    heading: "A web development company in Gujarat that builds like a partner",
+    blocks: [
+      { p: ["If you're searching for a web development company in Gujarat that treats your project like more than a ticket, Digital Web Weaver is headquartered right here in Vadodara. We're a genuinely local team — not a distant agency reselling your brief to someone else — building websites, custom software, and apps for businesses across the state. Day-to-day we collaborate remotely over video calls and WhatsApp; for larger projects we travel to your site for the kickoff and key milestones. Whether you're in Ahmedabad, Surat, or Rajkot, you get senior engineers who share your timezone and speak Gujarati, Hindi, and English."] },
+      { h3: "Full-stack delivery, not just pretty pages", p: ["Most Gujarat businesses don't need a brochure site — they need software that runs the business. Our ", { text: "web development", href: "/web-development/" }, " work spans marketing sites, complex ", { text: "custom web apps", href: "/custom-web-apps/" }, ", and online stores wired for Razorpay, GST, and WhatsApp. If your operations still live in spreadsheets, our ", { text: "CRM and ERP systems", href: "/crm-erp-systems/" }, " replace the manual overhead — with one team owning design, build, and launch, so nothing falls through the cracks between vendors."] },
+      { h3: "Rooted in Gujarat, ready across the state", p: ["We've built software for manufacturers, textile traders, healthcare providers, and startups from Ahmedabad to Surat and Rajkot, so we understand the industries, the pace of decisions, and the value of trust in a business relationship — knowledge that makes every project faster and more accurate. See the kind of work we ship in our ", { text: "portfolio", href: "/portfolio/" }, ", or ", { text: "tell us about your project", href: "/contact/" }, " for a free consultation and a written quote within 24 hours."] },
+    ],
   },
   hero: {
     eyebrow: "Web Development · Gujarat",
@@ -590,6 +626,15 @@ export const unitedKingdom: ServicePageData = {
     title: "Software Development Company UK | Offshore Dev Teams",
     description:
       "Software development company for UK businesses — bespoke web apps, custom software, and dedicated teams at a fraction of UK agency rates. Free quote in 24 hours.",
+  },
+  prose: {
+    eyebrow: "Software Development · United Kingdom",
+    heading: "A software development partner built for UK businesses",
+    blocks: [
+      { p: ["If you are searching for a ", { text: "software development company", href: "/custom-software-development/" }, " that serves the UK without London agency price tags, here is the honest version: Digital Web Weaver is based in Vadodara, India — not the UK. We work as an offshore development partner for UK founders, agencies, and SMEs, and we are upfront about it because it is exactly why our clients choose us. Our working hours overlap comfortably with GMT and BST, our engineers are fluent English communicators, and we have shipped ", { text: "web applications", href: "/web-development/" }, ", internal tools, and ", { text: "SaaS products", href: "/saas-development/" }, " for British companies who wanted senior talent at 50-70% less than a local studio charges."] },
+      { h3: "What an offshore partner should feel like", p: ["Distance only becomes a problem when communication is an afterthought. We run daily standups during UK hours, keep a live project board, and give you a single point of contact who actually knows your codebase — not a rotating support queue. Whether you need a ", { text: "custom web app", href: "/custom-web-apps/" }, " for an internal process, a ", { text: "mobile app", href: "/mobile-app-development/" }, " to sit alongside it, or ", { text: "dedicated developers", href: "/hire-dedicated-resource/" }, " who plug into your existing team, you get the same calibre of engineering you would expect from a UK agency, minus the overhead that inflates their day rates."] },
+      { h3: "Built for how UK companies actually operate", p: ["We understand the practical details that matter here — VAT-compliant invoicing, GBP and multi-currency payments, Stripe and PayPal integration, and connections to tools like Xero and QuickBooks. That grounding runs through everything from ", { text: "e-commerce platforms", href: "/ecommerce-development/" }, " for retailers to ", { text: "AI-powered automation", href: "/ai-automation/" }, " that trims manual work out of your operations. NDAs and fixed-price contracts are standard, so you always know what you are committing to before a line of code is written. If offshore done properly sounds like the model you have been looking for, ", { text: "tell us about your project", href: "/contact/" }, " — a technical consultation and a clear quote come free."] },
+    ],
   },
   hero: {
     eyebrow: "Software Development · United Kingdom",
@@ -746,6 +791,15 @@ export const southAfrica: ServicePageData = {
     description:
       "Software development company for South African businesses — bespoke apps, custom software, and dedicated teams with same-time-zone overlap. Free quote in 24 hours.",
   },
+  prose: {
+    eyebrow: "Offshore Development · South Africa",
+    heading: "A Software Development Company South African Businesses Can Rely On",
+    blocks: [
+      { p: ["Looking for a software development company in South Africa that delivers senior-level engineering without the local agency price tag? Digital Web Weaver is an India-based studio that partners with South African businesses remotely — we do not run a Johannesburg or Cape Town office, and we are upfront about that. What you get instead is an offshore team that works in near-real-time with your day: India sits about 3.5 hours ahead of SAST, so most of your afternoon overlaps with ours. This page is for founders, product owners, and operations leads across South Africa who want ", { text: "custom software development", href: "/custom-software-development/" }, " built by people who actually pick up the phone."] },
+      { h3: "How the remote partnership works", p: ["Every conversation happens in clear, professional English, over video calls and shared project tools rather than across a boardroom table. You can engage us for a fixed-scope build or ", { text: "hire dedicated developers", href: "/hire-dedicated-resource/" }, " who slot into your existing team and join standups during South African working hours. Whether you need a ", { text: "web application", href: "/web-application-development/" }, " to retire a tangle of spreadsheets, an internal tool, or a customer-facing portal, the engineers who scope your project are the ones who write the code — no quiet handoff to juniors once the contract is signed."] },
+      { h3: "Built for the South African market", p: ["We build with local realities in mind — ", { text: "e-commerce platforms", href: "/ecommerce-development/" }, " wired to PayFast, Yoco, and Ozow with ZAR pricing, along with ", { text: "SaaS products", href: "/saas-development/" }, " and FinTech MVPs designed to scale once you have found product-market fit, all aligned to POPIA data-protection practices. Most South African clients save 50–70% against local agency rates while working with engineers who have five or more years behind them. If that sounds like the partner you have been after, tell us about your project on our ", { text: "contact page", href: "/contact/" }, " and we will send a fixed-price quote within 48 hours."] },
+    ],
+  },
   hero: {
     eyebrow: "Software Development · South Africa",
     heading: "Software Development Company for South African Businesses",
@@ -900,6 +954,15 @@ export const ivoryCoast: ServicePageData = {
     title: "Software Development Company Ivory Coast | Abidjan Agency",
     description:
       "Agence de développement web et logiciel pour Abidjan et la Côte d'Ivoire. Sites web sur mesure, e-commerce et équipes dédiées à coût maîtrisé. Devis gratuit en 24h.",
+  },
+  prose: {
+    eyebrow: "Développement Web · Abidjan",
+    heading: "Agence de développement web à Abidjan",
+    blocks: [
+      { p: ["Vous cherchez une agence de développement web à Abidjan capable de livrer un site professionnel, une plateforme e-commerce ou une application métier sans exploser votre budget ? Digital Web Weaver accompagne les entreprises, PME et startups ivoiriennes qui veulent un partenaire technique fiable et réactif. Soyons transparents dès le départ : notre équipe d'ingénieurs est basée en Inde et nous ne disposons pas de bureau physique à Abidjan. Nous travaillons entièrement à distance avec nos clients en Côte d'Ivoire, en français comme en anglais, via appels vidéo, outils de gestion de projet et points d'avancement réguliers. Cette organisation nous permet de proposer une réelle expertise à un coût nettement plus compétitif que les agences locales ou européennes, tout en gardant une communication claire et un suivi rigoureux à chaque étape du projet."] },
+      { h3: "Des services adaptés aux besoins des entreprises ivoiriennes", p: ["Que votre projet soit un site vitrine soigné, une boutique en ligne ou une solution logicielle complète, nous couvrons toute la chaîne. Notre équipe conçoit des sites en ", { text: "développement web sur mesure", href: "/web-development/" }, ", des ", { text: "boutiques e-commerce", href: "/ecommerce-development/" }, " pensées pour vendre, ainsi que des ", { text: "applications web métier", href: "/custom-web-apps/" }, " qui automatisent vos processus internes. Nous soignons chaque interface grâce à un travail de ", { text: "design UI/UX", href: "/ui-ux-design/" }, " centré sur vos utilisateurs, pour que votre présence en ligne inspire confiance et transforme réellement vos visiteurs en clients. Notre expérience avec des clients en Afrique de l'Ouest nous a appris à composer avec les réalités du terrain, notamment les usages mobiles très majoritaires et les contraintes de connexion."] },
+      { h3: "Une collaboration à distance simple et transparente", p: ["Travailler avec une équipe offshore ne doit rien avoir de compliqué. Dès le premier échange, nous clarifions le périmètre, le calendrier et le budget, sans jargon ni coûts cachés. Vous pouvez engager un projet complet ou ", { text: "recruter une ressource dédiée", href: "/hire-dedicated-resource/" }, " qui s'intègre à votre équipe pour la durée de votre choix. Le fuseau horaire indien joue en votre faveur : une partie du travail avance pendant votre nuit et vous retrouvez des avancées concrètes chaque matin. Vous voulez avancer ? Découvrez nos réalisations sur notre ", { text: "portfolio", href: "/portfolio/" }, " ou parlez-nous directement de votre projet via notre page de ", { text: "contact", href: "/contact/" }, " pour recevoir un devis gratuit sous 24 heures."] },
+    ],
   },
   hero: {
     eyebrow: "Développement Logiciel · Côte d'Ivoire",

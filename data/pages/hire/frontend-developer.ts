@@ -94,6 +94,11 @@ const data: ServicePageData = {
     { label: "Web Application Development", href: "/web-application-development/", desc: "Complex web apps with polished frontends." },
     { label: "Hire React Developer", href: "/react-developer/", desc: "React specialists for component-heavy UIs." },
   ],
-  cta: { heading: "Build a Frontend That Stands Out", body: "Let's review your designs and scope your frontend project." },
+  cta: { eyebrow: "Ready to hire", heading: "Ready to hire a frontend developer?", body: "Tell us your stack, designs, and timeline. We'll match you with 2–3 senior frontend engineers within 48 hours — all pre-vetted, immediately available, and ready to ship pixel-perfect, accessible UI.", primaryCta: { label: "Start hiring now ↗", href: "/contact/" }, secondaryCta: { label: "See our work", href: "/portfolio/" }, meta: ["Senior engineers only", "48-hr match", "No lock-in"] },
+  testimonials: [
+    { text: "The developer they placed rebuilt our dashboard in React and finally made it feel fast. Clean component architecture, proper accessibility, and an interface that matched our Figma exactly. Our internal team picked up the codebase without friction.", name: "Neha K.", role: "Product Lead · Analytics SaaS · India", initials: "NK" },
+    { text: "We needed someone senior to own our migration to Next.js. Their engineer led it end to end — no juniors, no hand-holding — and our Lighthouse scores climbed across the board.", name: "James P.", role: "Engineering Manager · FinTech · United Kingdom", initials: "JP" },
+    { text: "Pixel-perfect implementation and genuinely useful in design reviews — they flagged UX issues we'd missed and shipped a polished, responsive interface right on schedule.", name: "Ravi S.", role: "Founder · D2C Marketplace · India", initials: "RS" },
+  ],
 };
 export default data;
