@@ -10,55 +10,58 @@ const ENG_CATS = [
     id: "web",
     label: "Web Development",
     items: [
-      { name: "Corporate Websites",      desc: "Business presence & brand sites",       href: "/web-development/" },
-      { name: "Custom Web Apps",         desc: "Bespoke application builds",             href: "/custom-web-apps/" },
-      { name: "E-Commerce Development",  desc: "Shopify, WooCommerce & custom stores",  href: "/ecommerce-development/" },
-      { name: "UI / UX Design",          desc: "Research-driven interface design",       href: "/ui-ux-design/" },
-      { name: "Progressive Web Apps",    desc: "App-like web experiences",              href: "/services/progressive-web-apps/" },
+      { icon: "🏢", name: "Corporate Websites",      desc: "Business presence & brand sites",       href: "/web-development/" },
+      { icon: "🧩", name: "Custom Web Apps",         desc: "Bespoke application builds",             href: "/custom-web-apps/" },
+      { icon: "🛒", name: "E-Commerce Development",  desc: "Shopify, WooCommerce & custom stores",  href: "/ecommerce-development/" },
+      { icon: "🎨", name: "UI / UX Design",          desc: "Research-driven interface design",       href: "/ui-ux-design/" },
+      { icon: "📱", name: "Progressive Web Apps",    desc: "App-like web experiences",              href: "/services/progressive-web-apps/" },
     ],
   },
   {
     id: "software",
     label: "Custom Software",
     items: [
-      { name: "Enterprise Applications", desc: "Large-scale mission-critical systems",   href: "/services/enterprise-applications/" },
-      { name: "CRM / ERP Systems",       desc: "Operations & relationship management",   href: "/crm-erp-systems/" },
-      { name: "SaaS App Development",    desc: "Multi-tenant product development",       href: "/saas-development/" },
-      { name: "Business Automation",     desc: "Workflow & process automation",          href: "/ai-automation/" },
-      { name: "API Development",         desc: "RESTful & GraphQL interfaces",           href: "/services/api-development/" },
+      { icon: "🏗️", name: "Enterprise Applications", desc: "Large-scale mission-critical systems",   href: "/services/enterprise-applications/" },
+      { icon: "📇", name: "CRM / ERP Systems",       desc: "Operations & relationship management",   href: "/crm-erp-systems/" },
+      { icon: "☁️", name: "SaaS App Development",    desc: "Multi-tenant product development",       href: "/saas-development/" },
+      { icon: "⚙️", name: "Business Automation",     desc: "Workflow & process automation",          href: "/ai-automation/" },
+      { icon: "🔌", name: "API Development",         desc: "RESTful & GraphQL interfaces",           href: "/services/api-development/" },
     ],
   },
   {
     id: "mobile",
     label: "Mobile Development",
     items: [
-      { name: "iOS Applications",        desc: "Swift & SwiftUI native apps",            href: "/mobile-app-development/" },
-      { name: "Android Applications",    desc: "Kotlin & Jetpack Compose",              href: "/mobile-app-development/" },
-      { name: "Cross-Platform Apps",     desc: "Flutter & React Native builds",          href: "/react-native-developer/" },
-      { name: "App Modernization",       desc: "Legacy rebuild & migration",             href: "/services/app-modernization/" },
+      { icon: "🍎", name: "iOS Applications",        desc: "Swift & SwiftUI native apps",            href: "/mobile-app-development/" },
+      { icon: "🤖", name: "Android Applications",    desc: "Kotlin & Jetpack Compose",              href: "/mobile-app-development/" },
+      { icon: "🔀", name: "Cross-Platform Apps",     desc: "Flutter & React Native builds",          href: "/react-native-developer/" },
+      { icon: "🔄", name: "App Modernization",       desc: "Legacy rebuild & migration",             href: "/services/app-modernization/" },
     ],
   },
   {
     id: "arch",
     label: "System Architecture",
     items: [
-      { name: "Cloud-Native Systems",    desc: "AWS, GCP & Azure architecture",          href: "/cloud-devops/" },
-      { name: "Microservices",           desc: "Distributed system design",              href: "/services/microservices/" },
-      { name: "Database Design",         desc: "Schema, indexing & optimization",        href: "/stack/databases/" },
-      { name: "API Integrations",        desc: "Third-party service connections",        href: "/services/api-integrations/" },
-      { name: "Performance Optimization",desc: "Audit, tuning & scaling",               href: "/services/performance-optimization/" },
+      { icon: "☁️", name: "Cloud-Native Systems",    desc: "AWS, GCP & Azure architecture",          href: "/cloud-devops/" },
+      { icon: "🧱", name: "Microservices",           desc: "Distributed system design",              href: "/services/microservices/" },
+      { icon: "🗄️", name: "Database Design",         desc: "Schema, indexing & optimization",        href: "/stack/databases/" },
+      { icon: "🔗", name: "API Integrations",        desc: "Third-party service connections",        href: "/services/api-integrations/" },
+      { icon: "🚀", name: "Performance Optimization",desc: "Audit, tuning & scaling",               href: "/services/performance-optimization/" },
     ],
   },
   {
     id: "hire",
     label: "Hire Dedicated",
     items: [
-      { name: "Node.js Developer",       desc: "Backend & real-time systems",            href: "/nodejs-developer/" },
-      { name: "PHP Developer",           desc: "WordPress, Laravel & Symfony",           href: "/php-developer/" },
-      { name: "Angular Developer",       desc: "Enterprise front-end builds",            href: "/angular-developer/" },
-      { name: "React Developer",         desc: "Modern UI development",                  href: "/react-developer/" },
-      { name: "Laravel Developer",       desc: "Elegant PHP framework expert",           href: "/laravel-developer/" },
-      { name: "Vue.js Developer",        desc: "Progressive framework builds",           href: "/vuejs-developer/" },
+      { icon: "🟢", name: "Node.js Developer",       desc: "Backend & real-time systems",            href: "/nodejs-developer/" },
+      { icon: "🐘", name: "PHP Developer",           desc: "WordPress, Laravel & Symfony",           href: "/php-developer/" },
+      { icon: "🅰️", name: "Angular Developer",        desc: "Enterprise front-end builds",            href: "/angular-developer/" },
+      { icon: "⚛️", name: "React Developer",          desc: "Modern UI development",                  href: "/react-developer/" },
+      { icon: "🎯", name: "Laravel Developer",        desc: "Elegant PHP framework expert",           href: "/laravel-developer/" },
+      { icon: "💚", name: "Vue.js Developer",         desc: "Progressive framework builds",           href: "/vuejs-developer/" },
+      { icon: "🔷", name: ".NET Developer",           desc: "C# & ASP.NET Core systems",              href: "/dotnet-developer/" },
+      { icon: "🐍", name: "Python Developer",         desc: "Django, FastAPI & data apps",            href: "/python-developer/" },
+      { icon: "🧠", name: "AI Engineer",              desc: "LLM, RAG & ML systems",                  href: "/ai-engineer/" },
     ],
   },
 ];
@@ -156,8 +159,11 @@ export default function Header() {
                       <div key={activeCat} className="eng-items-grid">
                         {currentCat.items.map(item => (
                           <Link key={item.href + item.name} className="eng-item" href={item.href} onClick={closeEng}>
-                            <span className="eng-item-name">{item.name}</span>
-                            <span className="eng-item-desc">{item.desc}</span>
+                            <span className="eng-item-ic" aria-hidden="true">{item.icon}</span>
+                            <span className="eng-item-txt">
+                              <span className="eng-item-name">{item.name}</span>
+                              <span className="eng-item-desc">{item.desc}</span>
+                            </span>
                           </Link>
                         ))}
                       </div>

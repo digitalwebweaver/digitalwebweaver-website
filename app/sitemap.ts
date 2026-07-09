@@ -79,6 +79,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url("/laravel-developer/", 0.8),
     url("/php-developer/", 0.8),
     url("/python-developer/", 0.8),
+    url("/dotnet-developer/", 0.8),
+    url("/ai-engineer/", 0.8),
     url("/flutter-developer/", 0.75),
     url("/react-native-developer/", 0.75),
     url("/android-developer/", 0.75),

@@ -24,6 +24,9 @@ const SECTIONS = [
       { label: "Laravel Developer", href: "/laravel-developer/" },
       { label: "PHP Developer", href: "/php-developer/" },
       { label: "Angular Developer", href: "/angular-developer/" },
+      { label: ".NET Developer", href: "/dotnet-developer/" },
+      { label: "Python Developer", href: "/python-developer/" },
+      { label: "AI Engineer", href: "/ai-engineer/" },
     ],
   },
   {
