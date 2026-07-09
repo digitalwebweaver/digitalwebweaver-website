@@ -4,15 +4,88 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import MobileMenu from "./MobileMenu";
 
-export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+/* ── Engineering service categories & links ── */
+const ENG_CATS = [
+  {
+    id: "web",
+    label: "Web Development",
+    items: [
+      { name: "Corporate Websites",      desc: "Business presence & brand sites",       href: "/web-development/" },
+      { name: "Custom Web Apps",         desc: "Bespoke application builds",             href: "/custom-web-apps/" },
+      { name: "E-Commerce Development",  desc: "Shopify, WooCommerce & custom stores",  href: "/ecommerce-development/" },
+      { name: "UI / UX Design",          desc: "Research-driven interface design",       href: "/ui-ux-design/" },
+      { name: "Progressive Web Apps",    desc: "App-like web experiences",              href: "/services/progressive-web-apps/" },
+    ],
+  },
+  {
+    id: "software",
+    label: "Custom Software",
+    items: [
+      { name: "Enterprise Applications", desc: "Large-scale mission-critical systems",   href: "/services/enterprise-applications/" },
+      { name: "CRM / ERP Systems",       desc: "Operations & relationship management",   href: "/crm-erp-systems/" },
+      { name: "SaaS App Development",    desc: "Multi-tenant product development",       href: "/saas-development/" },
+      { name: "Business Automation",     desc: "Workflow & process automation",          href: "/ai-automation/" },
+      { name: "API Development",         desc: "RESTful & GraphQL interfaces",           href: "/services/api-development/" },
+    ],
+  },
+  {
+    id: "mobile",
+    label: "Mobile Development",
+    items: [
+      { name: "iOS Applications",        desc: "Swift & SwiftUI native apps",            href: "/mobile-app-development/" },
+      { name: "Android Applications",    desc: "Kotlin & Jetpack Compose",              href: "/mobile-app-development/" },
+      { name: "Cross-Platform Apps",     desc: "Flutter & React Native builds",          href: "/react-native-developer/" },
+      { name: "App Modernization",       desc: "Legacy rebuild & migration",             href: "/services/app-modernization/" },
+    ],
+  },
+  {
+    id: "arch",
+    label: "System Architecture",
+    items: [
+      { name: "Cloud-Native Systems",    desc: "AWS, GCP & Azure architecture",          href: "/cloud-devops/" },
+      { name: "Microservices",           desc: "Distributed system design",              href: "/services/microservices/" },
+      { name: "Database Design",         desc: "Schema, indexing & optimization",        href: "/stack/databases/" },
+      { name: "API Integrations",        desc: "Third-party service connections",        href: "/services/api-integrations/" },
+      { name: "Performance Optimization",desc: "Audit, tuning & scaling",               href: "/services/performance-optimization/" },
+    ],
+  },
+  {
+    id: "hire",
+    label: "Hire Dedicated",
+    items: [
+      { name: "Node.js Developer",       desc: "Backend & real-time systems",            href: "/nodejs-developer/" },
+      { name: "PHP Developer",           desc: "WordPress, Laravel & Symfony",           href: "/php-developer/" },
+      { name: "Angular Developer",       desc: "Enterprise front-end builds",            href: "/angular-developer/" },
+      { name: "React Developer",         desc: "Modern UI development",                  href: "/react-developer/" },
+      { name: "Laravel Developer",       desc: "Elegant PHP framework expert",           href: "/laravel-developer/" },
+      { name: "Vue.js Developer",        desc: "Progressive framework builds",           href: "/vuejs-developer/" },
+    ],
+  },
+];
 
+export default function Header() {
+  const [scrolled,    setScrolled]    = useState(false);
+  const [mobileOpen,  setMobileOpen]  = useState(false);
+  const [engOpen,     setEngOpen]     = useState(false);
+  const [activeCat,   setActiveCat]   = useState("web");
+
+  /* scroll → glassy header */
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  /* body-scroll lock + ESC to close */
+  useEffect(() => {
+    document.body.style.overflow = engOpen ? "hidden" : "";
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setEngOpen(false); };
+    if (engOpen) window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [engOpen]);
 
   const chevSvg = (
     <svg className="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
@@ -20,173 +93,35 @@ export default function Header() {
     </svg>
   );
 
+  const currentCat = ENG_CATS.find(c => c.id === activeCat);
+
+  const closeEng = () => setEngOpen(false);
+
   return (
     <>
       <header id="hdr" className={scrolled ? "scrolled" : ""}>
         <div className="wrap">
           <nav className="nav">
+            {/* ── Logo ── */}
             <Link href="/" className="brand brand-logo">
               <Image src="/logo.png" alt="Digital Web Weaver" width={391} height={152} priority />
             </Link>
 
             <div className="nav-links">
 
-              {/* ══ ENGINEERING MEGA ══ */}
-              <div className="nav-item has-eng">
-                <a href="#services">Engineering {chevSvg}</a>
-                <div className="eng-mega">
-                  <div className="eng-top">
-
-                    {/* Col 1 · Web Development */}
-                    <div className="eng-col">
-                      <div className="eng-col-hd">
-                        <div className="eng-col-hd-ic">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
-                        </div>
-                        <span className="eng-col-hd-txt">Web<br/>Development</span>
-                      </div>
-                      <Link className="eng-lnk" href="/web-development/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div>
-                        Corporate Websites
-                      </Link>
-                      <Link className="eng-lnk" href="/custom-web-apps/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M8 6L3 12l5 6M16 6l5 6-5 6"/></svg></div>
-                        Custom Web Apps
-                      </Link>
-                      <Link className="eng-lnk" href="/ecommerce-development/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M3 3h3l2.5 12h11"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg></div>
-                        E-Commerce Dev
-                      </Link>
-                      <Link className="eng-lnk" href="/ui-ux-design/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 7h6M7 12h10M9 17h6"/></svg></div>
-                        UI / UX Design
-                      </Link>
-                      <Link className="eng-lnk" href="/services/progressive-web-apps/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M12 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M12 2v6h6"/></svg></div>
-                        Progressive Web Apps <span className="eng-soon">Soon</span>
-                      </Link>
-                    </div>
-
-                    {/* Col 2 · Custom Software */}
-                    <div className="eng-col">
-                      <div className="eng-col-hd">
-                        <div className="eng-col-hd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div>
-                        <span className="eng-col-hd-txt">Custom<br/>Software</span>
-                      </div>
-                      <Link className="eng-lnk" href="/services/enterprise-applications/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-                        Enterprise Applications
-                      </Link>
-                      <Link className="eng-lnk" href="/crm-erp-systems/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M3 9l9-6 9 6v9a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 21V13h6v8"/></svg></div>
-                        CRM / ERP Systems
-                      </Link>
-                      <Link className="eng-lnk" href="/saas-development/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18"/></svg></div>
-                        SaaS App Development
-                      </Link>
-                      <Link className="eng-lnk" href="/ai-automation/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 2.8 1-6.3L3 8.9 9 8z"/></svg></div>
-                        Business Automation
-                      </Link>
-                      <Link className="eng-lnk" href="/services/api-development/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M8 6L3 12l5 6M16 6l5 6-5 6"/></svg></div>
-                        API Development
-                      </Link>
-                    </div>
-
-                    {/* Col 3 · Mobile Development */}
-                    <div className="eng-col">
-                      <div className="eng-col-hd">
-                        <div className="eng-col-hd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div>
-                        <span className="eng-col-hd-txt">Mobile<br/>Development</span>
-                      </div>
-                      <Link className="eng-lnk" href="/mobile-app-development/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M12 2a7 7 0 00-4 13v3h8v-3a7 7 0 00-4-13z"/><path d="M12 2v2M9 21h6"/></svg></div>
-                        iOS Applications
-                      </Link>
-                      <Link className="eng-lnk" href="/mobile-app-development/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M5 17l2-2h10l2 2M3 21h18M7 15V9a5 5 0 0110 0v6"/></svg></div>
-                        Android Applications
-                      </Link>
-                      <Link className="eng-lnk" href="/react-native-developer/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18"/></svg></div>
-                        Cross-Platform Apps
-                      </Link>
-                      <Link className="eng-lnk" href="/services/app-modernization/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M3 9h18M9 21V9"/><path d="M15 15l3-3-3-3"/></svg></div>
-                        App Modernization
-                      </Link>
-                    </div>
-
-                    {/* Col 4 · System Architecture */}
-                    <div className="eng-col">
-                      <div className="eng-col-hd">
-                        <div className="eng-col-hd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="9" height="9" rx="1.5"/><rect x="13" y="2" width="9" height="9" rx="1.5"/><rect x="2" y="13" width="9" height="9" rx="1.5"/><rect x="13" y="13" width="9" height="9" rx="1.5"/></svg></div>
-                        <span className="eng-col-hd-txt">System<br/>Architecture</span>
-                      </div>
-                      <Link className="eng-lnk" href="/cloud-devops/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg></div>
-                        Cloud-Native Systems
-                      </Link>
-                      <Link className="eng-lnk" href="/services/microservices/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><path d="M7 12h5M12 7v5"/></svg></div>
-                        Microservices
-                      </Link>
-                      <Link className="eng-lnk" href="/stack/databases/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.6 3 3 7 3s7-1.4 7-3V6"/><path d="M5 12c0 1.6 3 3 7 3s7-1.4 7-3"/></svg></div>
-                        Database Design
-                      </Link>
-                      <Link className="eng-lnk" href="/services/api-integrations/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="6" cy="12" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 11l6-3.5M9 13l6 3.5"/></svg></div>
-                        API Integrations
-                      </Link>
-                      <Link className="eng-lnk" href="/services/performance-optimization/">
-                        <div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M3 3v18h18"/><path d="M7 15l3-3 3 2 4-5"/></svg></div>
-                        Performance Optim.
-                      </Link>
-                    </div>
-
-                    {/* Col 5 · Hire Dedicated */}
-                    <div className="eng-col">
-                      <div className="eng-col-hd">
-                        <div className="eng-col-hd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-                        <span className="eng-col-hd-txt">Hire<br/>Dedicated</span>
-                      </div>
-                      <Link className="eng-lnk" href="/nodejs-developer/"><div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M12 3L4 7v5c0 5 3.6 9.7 8 10.9C16.4 21.7 20 17 20 12V7z"/></svg></div>Node.js Developer</Link>
-                      <Link className="eng-lnk" href="/php-developer/"><div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M8 6L3 12l5 6M16 6l5 6-5 6"/></svg></div>PHP Developer</Link>
-                      <Link className="eng-lnk" href="/angular-developer/"><div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M12 2l9 4-1.5 13L12 22l-7.5-3L3 6z"/><path d="M9 14l3-7 3 7M10.5 12h3"/></svg></div>Angular Developer</Link>
-                      <Link className="eng-lnk" href="/react-developer/"><div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="4"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(120 12 12)"/></svg></div>React Developer</Link>
-                      <Link className="eng-lnk" href="/laravel-developer/"><div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M3 9l9-6 9 6v9a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 21V13h6v8"/></svg></div>Laravel Developer</Link>
-                      <Link className="eng-lnk" href="/vuejs-developer/"><div className="eng-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M2 4l10 16L22 4h-4l-6 10L8 4z"/></svg></div>Vue.js Developer</Link>
-                    </div>
-
-                  </div>
-
-                  {/* Bottom pill bar */}
-                  <div className="eng-bar">
-                    <span className="eng-bar-lbl">Quick access</span>
-                    <Link className="eng-pill" href="/products/">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><rect x="14" y="14" width="7" height="7" rx="1.2"/></svg>
-                      Explore Products →
-                    </Link>
-                    <Link className="eng-pill" href="/ai-automation/">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
-                      AI Solutions →
-                    </Link>
-                    <Link className="eng-pill" href="/contact/">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                      Start a Project →
-                    </Link>
-                    <Link className="eng-pill" href="/services/" style={{ marginLeft: "auto" }}>
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
-                      All Services →
-                    </Link>
-                  </div>
-                </div>
+              {/* ── ENGINEERING → fullscreen overlay trigger ── */}
+              <div className="nav-item">
+                <button
+                  className="eng-trigger"
+                  onClick={() => setEngOpen(v => !v)}
+                  aria-expanded={engOpen}
+                  aria-haspopup="dialog"
+                >
+                  Engineering {chevSvg}
+                </button>
               </div>
 
-              {/* ══ STACK DROPDOWN ══ */}
+              {/* ── STACK dropdown ── */}
               <div className="nav-item has-drop">
                 <a href="/stack/">Stack {chevSvg}</a>
                 <div className="drop-menu">
@@ -201,7 +136,7 @@ export default function Header() {
                 </div>
               </div>
 
-              {/* ══ SOLUTIONS DROPDOWN ══ */}
+              {/* ── SOLUTIONS dropdown ── */}
               <div className="nav-item has-drop">
                 <a href="/solutions/">Solutions {chevSvg}</a>
                 <div className="drop-menu">
@@ -214,82 +149,31 @@ export default function Header() {
                 </div>
               </div>
 
-              {/* ══ READY APPS DROPDOWN ══ */}
+              {/* ── OUR PRODUCTS dropdown ── */}
               <div className="nav-item has-drop">
                 <a href="#">Our Products {chevSvg}</a>
                 <div className="drop-menu apps-menu">
-                  <Link className="apps-lnk" href="/educore">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3L2 8l10 5 10-5-10-5z"/><path d="M6 10v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">EduCore</span><span className="apps-lnk-full">Learning Management System</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/manchify">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">Manchify</span><span className="apps-lnk-full">CRM + ERP for Event Companies</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/glowdesk">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l2 5 5 .8-3.6 3.6.9 5.6L12 14.5 7.7 17l.9-5.6L5 7.8 10 7z"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">GlowDesk</span><span className="apps-lnk-full">Software for Aesthetic Clinic</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/quickbite">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M7 2v8a2 2 0 01-4 0V2M5 10v12M19 2c-2 0-3.5 2-3.5 5.5S17 13 19 13v9"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">QuickBite</span><span className="apps-lnk-full">Food Delivery App</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/rideeasy">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 17V12l2.5-5h13L21 12v5"/><path d="M5 17a2 2 0 11-4 .01A2 2 0 015 17zM23 17a2 2 0 11-4 .01 2 2 0 014-.01zM5 17h14"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">RideEasy</span><span className="apps-lnk-full">Cab Booking System</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/schoolhub">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">SchoolHub</span><span className="apps-lnk-full">School Management System</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/clinicflow">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">ClinicFlow</span><span className="apps-lnk-full">Clinic Management System</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/vetcare">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="7" cy="7" r="1.6"/><circle cx="12" cy="5" r="1.6"/><circle cx="17" cy="7" r="1.6"/><circle cx="19" cy="12" r="1.6"/><path d="M9 21c-2 0-3.5-1.6-3.5-3.5S8 14 12 14s6.5 1.6 6.5 3.5S14 21 12 21z"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">VetCare</span><span className="apps-lnk-full">Veterinary Clinic Management System</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/salonbook">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.5 15.5M8.5 8.5L20 20"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">SalonBook</span><span className="apps-lnk-full">Salon Management System</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/pesttrack">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="13" r="5"/><path d="M9 9L7 6M15 9l2-3M9 18l-2 3M15 18l2 3M4 13H1M23 13h-3"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">PestTrack</span><span className="apps-lnk-full">Pest Control CRM</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/chemsupply">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 2v6L4 18a2 2 0 002 3h12a2 2 0 002-3l-5-10V2"/><path d="M9 2h6M6 16h12"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">ChemSupply</span><span className="apps-lnk-full">ERP for Chemical Supplier</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/clinicvoice-ai">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/><path d="M16 3c1.5 1 2.5 2.5 2.5 4.5"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">ClinicVoice AI</span><span className="apps-lnk-full">AI Agent Voice Calling for Clinics</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/chatflow-ai">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 10h8M8 13h5"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">ChatFlow AI</span><span className="apps-lnk-full">AI Agent WhatsApp Automation</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/telecare">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="14" height="12" rx="2"/><path d="M16 9l6-3.5v11L16 13"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">TeleCare</span><span className="apps-lnk-full">Telemedicine for Clinics / Hospitals</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/insuredesk">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">InsureDesk</span><span className="apps-lnk-full">Insurance Management CRM</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/callmate-ai">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/><circle cx="18" cy="6" r="3"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">CallMate AI</span><span className="apps-lnk-full">AI Voice Calling for Business</span></div>
-                  </Link>
-                  <Link className="apps-lnk" href="/solarflow/">
-                    <div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
-                    <div className="apps-lnk-txt"><span className="apps-lnk-short">SolarFlow</span><span className="apps-lnk-full">ERP + CRM for Solar Installers</span></div>
-                  </Link>
+                  <Link className="apps-lnk" href="/educore"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3L2 8l10 5 10-5-10-5z"/><path d="M6 10v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">EduCore</span><span className="apps-lnk-full">Learning Management System</span></div></Link>
+                  <Link className="apps-lnk" href="/manchify"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">Manchify</span><span className="apps-lnk-full">CRM + ERP for Event Companies</span></div></Link>
+                  <Link className="apps-lnk" href="/glowdesk"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l2 5 5 .8-3.6 3.6.9 5.6L12 14.5 7.7 17l.9-5.6L5 7.8 10 7z"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">GlowDesk</span><span className="apps-lnk-full">Software for Aesthetic Clinic</span></div></Link>
+                  <Link className="apps-lnk" href="/quickbite"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M7 2v8a2 2 0 01-4 0V2M5 10v12M19 2c-2 0-3.5 2-3.5 5.5S17 13 19 13v9"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">QuickBite</span><span className="apps-lnk-full">Food Delivery App</span></div></Link>
+                  <Link className="apps-lnk" href="/rideeasy"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 17V12l2.5-5h13L21 12v5"/><path d="M5 17a2 2 0 11-4 .01A2 2 0 015 17zM23 17a2 2 0 11-4 .01 2 2 0 014-.01zM5 17h14"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">RideEasy</span><span className="apps-lnk-full">Cab Booking System</span></div></Link>
+                  <Link className="apps-lnk" href="/schoolhub"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">SchoolHub</span><span className="apps-lnk-full">School Management System</span></div></Link>
+                  <Link className="apps-lnk" href="/clinicflow"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">ClinicFlow</span><span className="apps-lnk-full">Clinic Management System</span></div></Link>
+                  <Link className="apps-lnk" href="/vetcare"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="7" cy="7" r="1.6"/><circle cx="12" cy="5" r="1.6"/><circle cx="17" cy="7" r="1.6"/><circle cx="19" cy="12" r="1.6"/><path d="M9 21c-2 0-3.5-1.6-3.5-3.5S8 14 12 14s6.5 1.6 6.5 3.5S14 21 12 21z"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">VetCare</span><span className="apps-lnk-full">Veterinary Clinic Management System</span></div></Link>
+                  <Link className="apps-lnk" href="/salonbook"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.5 15.5M8.5 8.5L20 20"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">SalonBook</span><span className="apps-lnk-full">Salon Management System</span></div></Link>
+                  <Link className="apps-lnk" href="/pesttrack"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="13" r="5"/><path d="M9 9L7 6M15 9l2-3M9 18l-2 3M15 18l2 3M4 13H1M23 13h-3"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">PestTrack</span><span className="apps-lnk-full">Pest Control CRM</span></div></Link>
+                  <Link className="apps-lnk" href="/chemsupply"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9 2v6L4 18a2 2 0 002 3h12a2 2 0 002-3l-5-10V2"/><path d="M9 2h6M6 16h12"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">ChemSupply</span><span className="apps-lnk-full">ERP for Chemical Supplier</span></div></Link>
+                  <Link className="apps-lnk" href="/clinicvoice-ai"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/><path d="M16 3c1.5 1 2.5 2.5 2.5 4.5"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">ClinicVoice AI</span><span className="apps-lnk-full">AI Agent Voice Calling for Clinics</span></div></Link>
+                  <Link className="apps-lnk" href="/chatflow-ai"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 10h8M8 13h5"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">ChatFlow AI</span><span className="apps-lnk-full">AI Agent WhatsApp Automation</span></div></Link>
+                  <Link className="apps-lnk" href="/telecare"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="14" height="12" rx="2"/><path d="M16 9l6-3.5v11L16 13"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">TeleCare</span><span className="apps-lnk-full">Telemedicine for Clinics / Hospitals</span></div></Link>
+                  <Link className="apps-lnk" href="/insuredesk"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">InsureDesk</span><span className="apps-lnk-full">Insurance Management CRM</span></div></Link>
+                  <Link className="apps-lnk" href="/callmate-ai"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/><circle cx="18" cy="6" r="3"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">CallMate AI</span><span className="apps-lnk-full">AI Voice Calling for Business</span></div></Link>
+                  <Link className="apps-lnk" href="/solarflow/"><div className="apps-lnk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div><div className="apps-lnk-txt"><span className="apps-lnk-short">SolarFlow</span><span className="apps-lnk-full">ERP + CRM for Solar Installers</span></div></Link>
                 </div>
               </div>
 
-              {/* ══ ABOUT DROPDOWN ══ */}
+              {/* ── ABOUT dropdown ── */}
               <div className="nav-item has-drop">
                 <a href="/about/">About {chevSvg}</a>
                 <div className="drop-menu">
@@ -308,6 +192,14 @@ export default function Header() {
             </div>
 
             <div className="nav-cta">
+              {engOpen && (
+                <button className="eng-close-btn" onClick={closeEng} aria-label="Close Engineering menu">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                    <line x1="3" y1="3" x2="13" y2="13"/>
+                    <line x1="13" y1="3" x2="3" y2="13"/>
+                  </svg>
+                </button>
+              )}
               <Link href="/contact/" className="btn btn-primary">Start a project <span className="arr">↗</span></Link>
               <button className="hamburger" id="burger" aria-label="Menu" onClick={() => setMobileOpen(v => !v)}>
                 <span/><span/><span/>
@@ -315,9 +207,73 @@ export default function Header() {
             </div>
           </nav>
         </div>
-
-        <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
       </header>
+
+      {/* ══ ENGINEERING FULLSCREEN OVERLAY ══
+          Sits outside <header> as a sibling so no stacking-context issues.
+          position:fixed, top:74px fills the viewport below the nav. */}
+      <div
+        className={`eng-fs-overlay${engOpen ? " open" : ""}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Engineering services"
+        aria-hidden={!engOpen}
+      >
+        <div className="eng-fs-body">
+
+          {/* LEFT – dark category panel */}
+          <div className="eng-fs-left">
+            <span className="eng-fs-eyebrow">Engineering Services</span>
+            <div className="eng-fs-divider" />
+            <div className="eng-fs-cats">
+              {ENG_CATS.map(cat => (
+                <button
+                  key={cat.id}
+                  className={`eng-fs-cat${activeCat === cat.id ? " active" : ""}`}
+                  onClick={() => setActiveCat(cat.id)}
+                >
+                  <svg className="eng-fs-arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <path d="M3 7h8M8 4l3 3-3 3"/>
+                  </svg>
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT – service links, keyed on activeCat to retrigger animation */}
+          <div className="eng-fs-right">
+            <div key={activeCat} className="eng-fs-svc-grid">
+              {currentCat?.items.map((item, i) => (
+                <Link
+                  key={item.href + item.name}
+                  className="eng-fs-svc"
+                  href={item.href}
+                  style={{ animationDelay: `${i * 38}ms` }}
+                  onClick={closeEng}
+                >
+                  <span className="eng-fs-svc-dot" />
+                  <div>
+                    <div className="eng-fs-svc-name">{item.name}</div>
+                    <div className="eng-fs-svc-desc">{item.desc}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+        </div>
+
+        {/* BOTTOM BAR */}
+        <div className="eng-fs-bar">
+          <Link className="eng-fs-pill" href="/products/"    onClick={closeEng}>Explore Products →</Link>
+          <Link className="eng-fs-pill" href="/ai-automation/" onClick={closeEng}>AI Solutions →</Link>
+          <Link className="eng-fs-pill" href="/services/"    onClick={closeEng}>All Services →</Link>
+          <Link className="eng-fs-pill primary" href="/contact/" onClick={closeEng}>Start a Project ↗</Link>
+        </div>
+      </div>
+
+      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
     </>
   );
 }
