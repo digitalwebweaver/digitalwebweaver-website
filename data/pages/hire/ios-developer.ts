@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire iOS App Developers | Swift, SwiftUI Experts",
     description: "Hire iOS developers for native Swift and SwiftUI apps with seamless App Store deployment and Apple ecosystem integrations. Get matched in 48 hours.",
   },
+  prose: {
+    eyebrow: "iOS Development",
+    heading: "Hire iOS Developers Who Ship App Store-Ready Apps",
+    blocks: [
+      { p: ["When you hire iOS developers from Digital Web Weaver, you get engineers who write native Swift and SwiftUI — not cross-platform shortcuts that fight the Apple ecosystem. We are built for founders and product teams who need an App Store presence that passes review on first submission and holds a 60fps bar under real device load. From our base in Vadodara, India, we deliver to clients across the UK, South Africa, and Ivory Coast, aligning to your timezone with daily TestFlight builds. If you also need Android or a shared codebase, our ", { text: "React Native developers", href: "/react-native-developer/" }, " and broader ", { text: "mobile app development", href: "/mobile-app-development/" }, " teams sit one desk over."] },
+      { h3: "Native Swift, built for the whole Apple stack", p: ["Our iOS work leans on SwiftUI and UIKit with Combine and async/await, backed by StoreKit 2 for subscriptions, HealthKit for regulated health data, and APNS for rich push. We profile with Instruments and cover every screen from iPhone SE to iPad Pro, following the Human Interface Guidelines so nothing feels ported. Apps rarely stand alone, so we build the backend too — whether that is a set of ", { text: "REST and GraphQL APIs", href: "/services/api-development/" }, ", CloudKit and Firebase sync, or a full ", { text: "custom software platform", href: "/custom-software-development/" }, " behind the app."] },
+      { h3: "From prototype to first-submission approval", p: ["We start with Figma prototypes, move through Swift feature sprints with XCTest and XCUITest coverage, then handle screenshot prep, metadata, and App Review compliance end to end. Deep knowledge of the review guidelines is why our submissions clear on the first pass instead of bouncing. For early-stage teams, we can wrap this into a lean ", { text: "MVP build", href: "/mvp-development/" }, " that reaches TestFlight fast. Tell us about your App Store project on our ", { text: "contact page", href: "/contact/" }, ", or browse the ", { text: "portfolio", href: "/portfolio/" }, " to see how we ship."] },
+    ],
+  },
   hero: {
     eyebrow: "iOS Development",
     heading: "iOS Developers Who Build App Store-Ready Apps",

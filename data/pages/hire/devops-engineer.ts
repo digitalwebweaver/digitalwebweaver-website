@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire DevOps Engineers | AWS, Azure, GCP & Kubernetes",
     description: "Hire DevOps engineers for CI/CD pipelines, Kubernetes orchestration, and AWS/GCP/Azure infrastructure, plus SRE. Get matched with vetted talent in 48 hours.",
   },
+  prose: {
+    eyebrow: "DevOps Engineering",
+    heading: "Hire DevOps Engineers Who Make Deployment Boring",
+    blocks: [
+      { p: ["Hire DevOps engineers who treat deployment as a solved problem, not a recurring emergency. This is for teams already shipping production software — SaaS platforms, web apps, and APIs — who are tired of console click-ops, brittle release scripts, and infrastructure only one person understands. The differentiator is discipline: every pipeline ships with SAST and secret scanning built in, and every piece of infrastructure lives as code that gets reviewed and version-controlled. We work from a Vadodara base and deliver to teams across India, the UK, South Africa, and Ivory Coast, so time zones never become the bottleneck."] },
+      { h3: "CI/CD, Kubernetes, and infrastructure as code", p: ["Our engineers build automated pipelines on GitHub Actions, GitLab CI, and ArgoCD, containerise services with Docker and Helm, and run them on EKS, GKE, or ECS Fargate depending on what the workload actually needs. Everything — networking, IAM, databases, DNS — is provisioned through Terraform or Pulumi, so environments spin up in minutes instead of tribal memory. If you are decomposing a monolith into ", { text: "microservices", href: "/services/microservices/" }, " or standing up ", { text: "managed cloud infrastructure", href: "/cloud-devops/" }, " across AWS, GCP, and Azure, we design the state layout, RBAC, and zero-downtime rollout strategy before writing a single manifest."] },
+      { h3: "Observability and cost control from day one", p: ["Metrics, logs, traces, and alerts get configured before launch, not after the first incident. We wire up Prometheus, Grafana, Loki, and PagerDuty with SLO dashboards so latency regressions surface before customers feel them — the same foundation that keeps a ", { text: "scalable SaaS platform", href: "/saas-development/" }, " or a high-traffic ", { text: "web application", href: "/web-application-development/" }, " reliable under load. Alongside that, we right-size instances, analyse spot and reserved capacity, and cut cloud bills that quietly grew out of control. When you are ready to make releases uneventful, ", { text: "tell us what you are running", href: "/contact/" }, " and we will match you with a senior engineer within 48 hours."] },
+    ],
+  },
   hero: {
     eyebrow: "DevOps Engineering",
     heading: "DevOps Engineers Who Make Deployment Boring (In a Good Way)",

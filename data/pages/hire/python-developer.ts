@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire Python Developers | Django, AI & Data Experts",
     description: "Hire Python developers for web apps, data engineering, ML pipelines, and automation with Django, FastAPI, and PyTorch. Get a free quote in 24 hours.",
   },
+  prose: {
+    eyebrow: "Python Development",
+    heading: "Hire Python Developers for Web, Data, and AI",
+    blocks: [
+      { p: ["When you hire Python developers, you are usually hiring for one of three jobs at once: a backend that holds up under load, a data pipeline that does not silently corrupt, and increasingly an ML or LLM layer wired into both. Our engineers work across all three. This page is for founders and engineering leads who need senior Python people who write typed, tested code — not freelancers who ship fragile scripts. We are based in Vadodara, India, and deliver to teams across the UK, South Africa, Ivory Coast, and beyond, matching your working hours rather than forcing async-only handoffs."] },
+      { h3: "Django and FastAPI backends that scale", p: ["Most projects start with a framework decision. We reach for Django when you want batteries-included admin, auth, and ORM, and FastAPI when the work is API-first or ML-adjacent and async throughput matters. Either way the output is the same: full type hints, mypy checks, and a pytest suite targeting 80%+ coverage. That discipline is what makes our ", { text: "web application development", href: "/web-application-development/" }, " and ", { text: "custom API development", href: "/services/api-development/" }, " hold up in production. Python microservices here talk to your existing Node or PHP backend over REST, gRPC, or a queue — so hiring Python does not mean rewriting everything, and pairing them with a ", { text: "React developer", href: "/react-developer/" }, " gives you a clean full-stack team."] },
+      { h3: "Data engineering and production ML", p: ["Python's real advantage is the data and AI ecosystem, and we use it end to end — pandas and polars for transforms, dbt and Airflow for orchestration, and PyTorch, scikit-learn, and LangChain when models enter the picture. We deploy those models as FastAPI servers or on SageMaker and Vertex AI, with sane ", { text: "database design", href: "/services/database-design/" }, " underneath and Celery handling retries and scheduled jobs. If your goal is a data-driven product or an ", { text: "AI and automation", href: "/ai-automation/" }, " layer over your existing systems, that is exactly the work our Python engineers do daily. Tell us what you are building on the ", { text: "contact page", href: "/contact/" }, " and we will match you with two or three senior profiles within 48 hours."] },
+    ],
+  },
   hero: {
     eyebrow: "Python Development",
     heading: "Python Developers for Web, Data & AI",

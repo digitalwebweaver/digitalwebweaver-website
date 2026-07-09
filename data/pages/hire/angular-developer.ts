@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire Angular Developers | Enterprise Apps, India & UK",
     description: "Hire Angular developers in India for enterprise SPAs, dashboards, and large-scale apps using Angular 17+, RxJS, and NgRx. Get a free quote in 24 hours.",
   },
+  prose: {
+    eyebrow: "Angular Development",
+    heading: "Hire Angular Developers Who Build for Scale",
+    blocks: [
+      { p: ["When you hire Angular developers, you are usually not chasing a quick prototype — you are committing to a framework built for structure, and you need engineers who respect that. Our team in Vadodara, India delivers Angular work to clients across the UK, South Africa, and Ivory Coast, and we specialise in the projects Angular was designed for: large ", { text: "enterprise applications", href: "/services/enterprise-applications/" }, " with strict TypeScript, dependency injection, and a module tree planned before the first feature is written. If your codebase needs to survive team turnover and years of change, that discipline is the differentiator."] },
+      { h3: "State, reactivity, and testing done properly", p: ["Angular 17+ Signals, RxJS, and NgRx are where most projects live or die, and it is where our engineers go deep. We design feature stores, effects, selectors, and entity adapters so state stays predictable and time-travel debugging actually works. For data-heavy admin panels and ", { text: "CRM and ERP dashboards", href: "/crm-erp-systems/" }, ", we build role-based access, data grids, and HTTP interceptors that handle JWT refresh and errors consistently. Every deliverable ships with Jest unit tests and Cypress e2e coverage — typically 80%+ — because untested Angular is a liability, not a shortcut."] },
+      { h3: "Migration, SSR, and micro-frontends", p: ["Legacy AngularJS apps are a common reason teams call us. We use the ngUpgrade bridge and a strangler-fig approach to migrate incrementally, keeping the app in production the whole way. We also handle Angular Universal SSR for SEO and ", { text: "first-paint performance", href: "/services/performance-optimization/" }, ", and module federation for ", { text: "micro-frontend architectures", href: "/services/microservices/" }, " that let multiple teams ship independently. If you are still weighing frameworks, our ", { text: "React developers", href: "/react-developer/" }, " can talk through the trade-offs honestly. Tell us your stack and timeline on the ", { text: "contact page", href: "/contact/" }, " and we will match you with senior Angular engineers within 48 hours."] },
+    ],
+  },
   hero: {
     eyebrow: "Angular Development",
     heading: "Angular Developers for Enterprise-Scale Applications",

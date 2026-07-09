@@ -5,6 +5,15 @@ export const healthcare: ServicePageData = {
     title: "Healthcare Software Development | HIPAA-Compliant India",
     description: "HIPAA-compliant healthcare software: EHR/EMR systems, patient portals, telemedicine apps, HL7/FHIR integrations, and medical device connectivity for clinics.",
   },
+  prose: {
+    eyebrow: "Healthcare Software Development",
+    heading: "A Healthcare Software Development Company Built Around Compliance",
+    blocks: [
+      { p: ["Digital Web Weaver is a healthcare software development company based in Vadodara, India, delivering EHR systems, patient portals, and telemedicine platforms to clinics and health systems across India, the UK, South Africa, and Ivory Coast. We build for the three groups that actually depend on clinical software — patients, clinicians, and compliance officers — which is why HIPAA safeguards, HL7/FHIR interoperability, and audit trails are architected in from the first sprint rather than bolted on after a failed security review. Our differentiator is engineering discipline: PHI encryption, role-based access control, and de-identified synthetic data in every non-production environment are non-negotiable defaults, not upsells."] },
+      { h3: "EHR, Telemedicine, and Interoperable Platforms", p: ["From ", { text: "custom EHR and EMR systems", href: "/custom-software-development/" }, " with role-based access to secure ", { text: "patient-facing web applications", href: "/web-application-development/" }, " for scheduling, lab results, and messaging, we ship software that fits real clinical workflows. Telemedicine builds run on WebRTC video with e-prescription flows, while our ", { text: "HL7 and FHIR API integrations", href: "/services/api-integrations/" }, " connect to Epic, Cerner, and Allscripts through SMART on FHIR R4 endpoints — so patient data moves between systems without vendor lock-in or brittle point-to-point hacks."] },
+      { h3: "Compliance-First, Cloud-Ready Engineering", p: ["Every platform runs on HIPAA-eligible infrastructure. Our ", { text: "cloud and DevOps practice", href: "/cloud-devops/" }, " provisions AWS GovCloud, Azure Health, and GCP Healthcare API environments with PHI encrypted at rest using AES-256 and in transit over TLS 1.3, backed by pen testing and a HIPAA checklist sign-off before launch. Backends built in Node.js and Python surface FHIR-powered analytics for clinicians and administrators, and our India base with global delivery keeps costs sane without cutting corners on security. If you are scoping an EHR, a patient portal, or a device-integration platform, ", { text: "tell us what you are building", href: "/contact/" }, " and we will map the compliance and architecture path with you."] },
+    ],
+  },
   hero: {
     eyebrow: "Healthcare Tech",
     heading: "Healthcare Software Built for Patients, Clinicians & Compliance",
@@ -91,6 +100,15 @@ export const fintech: ServicePageData = {
   meta: {
     title: "FinTech Software Development | PCI-DSS Compliant India",
     description: "FinTech software development for payment processing, lending platforms, KYC/AML, PCI-DSS compliance, open banking APIs, and trading dashboards. Free quote in 24 hrs.",
+  },
+  prose: {
+    eyebrow: "FinTech Solutions",
+    heading: "FinTech Software Built to Comply, Built to Scale",
+    blocks: [
+      { p: ["As a FinTech software development company based in Vadodara, India, with delivery across the UK, South Africa, and Ivory Coast, we build for teams that answer to regulators: payment processors, lenders, and wealth platforms where a failed audit is not an option. What sets us apart is that compliance drives the architecture rather than trailing behind it. We tokenise cardholder data at the edge so it never touches our application servers, targeting PCI-DSS SAQ-A and SAQ-A-EP scope from the first commit, and we map applicable regimes (RBI, FCA, PSD2) during discovery instead of at launch."] },
+      { h3: "Payment, Lending, and Open Banking Systems", p: ["We engineer Stripe, Razorpay, and Plaid integrations, loan origination platforms wired into bureau APIs like CIBIL and Experian, and PSD2-compliant open banking flows for account aggregation. Complex trading dashboards and multi-user portals ship as ", { text: "web application development", href: "/web-application-development/" }, " projects, while multi-tenant products with usage-based billing ship as ", { text: "FinTech SaaS platforms", href: "/saas-development/" }, ". When your product must talk to core banking systems such as Mambu or Temenos, our ", { text: "API integration work", href: "/services/api-integrations/" }, " keeps those connections secure, versioned, and fully audited."] },
+      { h3: "Real-Time Data and Fraud Prevention", p: ["Financial data moves fast, so we build event-driven backends with WebSocket market feeds, Kafka, and CQRS patterns for sub-second updates on Node.js and Python. Fraud prevention is not bolted on afterwards. We embed ", { text: "ML-powered anomaly detection", href: "/ai-automation/" }, " and rule engines that flag suspicious activity before a transaction settles, backed by VPC isolation, WAF, and immutable audit logging. If you are scoping a compliant payment, lending, or wealth platform, ", { text: "tell us what you are building", href: "/contact/" }, " and we will map the regulatory requirements with you before a line of code is written."] },
+    ],
   },
   hero: {
     eyebrow: "FinTech Solutions",
@@ -184,6 +202,15 @@ export const edtech: ServicePageData = {
     title: "EdTech Software Development Company | LMS & Learning India",
     description: "EdTech software development for LMS platforms, live class tools, assessment engines, student analytics, and mobile learning apps for schools and enterprises.",
   },
+  prose: {
+    eyebrow: "EdTech Solutions",
+    heading: "EdTech Software Development Built for How People Learn",
+    blocks: [
+      { p: ["Digital Web Weaver is an EdTech software development company that builds LMS platforms, live classroom tools, assessment engines, and mobile learning apps for schools, universities, and corporate training teams. Based in Vadodara, India, we deliver to clients across the UK, South Africa, and Ivory Coast. What sets us apart is a video-first, standards-driven approach: SCORM 1.2/2004, xAPI, and LTI are baked in from day one, so content from major publishers plugs straight into your platform. We've shipped virtual classrooms serving 50,000 university students and B2C bootcamp platforms carrying 12,000 active learners — production systems under real exam-day load, not prototypes."] },
+      { h3: "Video and live learning that holds up at scale", p: ["Live video is where most learning platforms fall over. We architect around AWS MediaConvert encoding, CloudFront delivery, and adaptive bitrate streaming so a recorded lecture or live session plays cleanly even on patchy rural connections. Live classes run on WebRTC and Agora with interactive whiteboards, breakout rooms, and session recording to S3. Because enrolment and exam periods spike hard, we build on disciplined ", { text: "cloud and DevOps", href: "/cloud-devops/" }, " foundations — autoscaling infrastructure that we load-test to 10,000+ concurrent learners before a single student logs in."] },
+      { h3: "Mobile, AI, and platforms built to grow", p: ["Learners aren't tied to a desk, so we build offline-first ", { text: "mobile learning apps", href: "/mobile-app-development/" }, " in React Native and Flutter that let students download courses and sync progress once they reconnect. For platforms serving many institutions at once, our ", { text: "multi-tenant SaaS development", href: "/saas-development/" }, " handles per-tenant branding, SAML SSO, and subscription billing, while ", { text: "AI automation", href: "/ai-automation/" }, " drives adaptive learning paths and personalised recommendations from real engagement signals. Every build ships with granular learning analytics so instructional designers can see exactly where learners stall. Whether you're launching a single course or licensing a white-label LMS to forty enterprises, ", { text: "tell us what you're building", href: "/contact/" }, " and we'll map the learner journey with you."] },
+    ],
+  },
   hero: {
     eyebrow: "EdTech Solutions",
     heading: "EdTech Platforms That Teach at Scale",
@@ -275,6 +302,15 @@ export const logistics: ServicePageData = {
   meta: {
     title: "Logistics Software Development | Fleet & Tracking India",
     description: "Custom logistics and supply chain software: fleet management, shipment tracking, warehouse management, route optimisation, and ERP integration.",
+  },
+  prose: {
+    eyebrow: "Logistics Tech",
+    heading: "Logistics Software Built for Real-Time Operations",
+    blocks: [
+      { p: ["As a logistics software development company based in Vadodara, India, Digital Web Weaver builds fleet management, real-time shipment tracking, and route optimisation systems for 3PLs, couriers, and supply chain operators across India, the UK, South Africa, and beyond. What sets us apart is depth in real-time engineering — WebSocket location streaming, Kafka event pipelines, and TimescaleDB time-series storage that handle tens of thousands of GPS events per minute without buckling. We don't bolt a generic dashboard onto your operation; we map your dispatch, warehouse, and last-mile workflows first, then build around exactly how your fleet moves."] },
+      { h3: "Driver apps, tracking, and route intelligence", p: ["Our driver apps are offline-first React Native builds with background sync, e-signature capture, and live route updates — engineered for field conditions where mobile connectivity drops out. Behind them, we design ", { text: "custom logistics software", href: "/custom-software-development/" }, " for TMS, WMS, and fleet operations, wiring dispatch consoles and customer-facing tracking portals into a single real-time picture. Route optimisation runs on Google OR-Tools and OSRM, and we apply ", { text: "AI-driven automation", href: "/ai-automation/" }, " to demand forecasting and multi-stop planning that trims empty miles and fuel spend."] },
+      { h3: "Integrations and infrastructure built to scale", p: ["Logistics never runs in isolation, so we connect your platform to the wider supply chain through EDI X12, EDIFACT, and modern REST APIs, and integrate ", { text: "ERP systems", href: "/crm-erp-systems/" }, " like SAP and Oracle for inventory, procurement, and finance. Everything ships on ", { text: "scalable cloud infrastructure", href: "/cloud-devops/" }, " — Kubernetes, IoT Core, and event streaming that comfortably absorbs millions of tracking events a day, including cold-chain sensor telemetry with threshold alerting. From our India base we deliver globally, with the same engineers carrying the work from architecture through phased go-live. ", { text: "Tell us how your operation runs", href: "/contact/" }, " and we'll scope the build."] },
+    ],
   },
   hero: {
     eyebrow: "Logistics Tech",
@@ -368,6 +404,15 @@ export const manufacturing: ServicePageData = {
     title: "Manufacturing Software Development | MES, IoT & Industry 4.0",
     description: "Manufacturing software development: MES/MRP systems, IoT integration, quality control, production scheduling, and Industry 4.0 transformation for factories.",
   },
+  prose: {
+    eyebrow: "Manufacturing Tech",
+    heading: "A Manufacturing Software Development Company Built for the Shop Floor",
+    blocks: [
+      { p: ["Digital Web Weaver is a manufacturing software development company that builds MES, MRP, quality-control, and IoT platforms for factories moving toward Industry 4.0. We work with automotive, pharma, and FMCG manufacturers who need machine data turned into decisions — not another dashboard nobody trusts. From our base in Vadodara, India, we deliver to plants across India, the UK, South Africa, and the Gulf, pairing ", { text: "custom software development", href: "/custom-software-development/" }, " with real industrial-protocol experience so the system matches how your lines actually run."] },
+      { h3: "Machine connectivity that survives the shop floor", p: ["Most manufacturing projects fail at the edge, where PLCs, SCADA, and legacy machines refuse to talk. We integrate over OPC-UA, MQTT, and Modbus, stream telemetry into TimescaleDB or InfluxDB, and surface real-time OEE and downtime root-cause in ", { text: "production web applications", href: "/web-application-development/" }, " designed for gloves, poor lighting, and speed. On top of that data we layer Python and ML models for predictive maintenance — vibration, temperature, and current-signature anomaly detection on rotating machinery — and support on-premise, edge, and air-gapped deployments where the cloud isn't an option."] },
+      { h3: "ERP integration, analytics, and traceability", p: ["Shop-floor software only pays off when it closes the loop with the back office. We build bidirectional ", { text: "ERP and MRP integrations", href: "/crm-erp-systems/" }, " — SAP RFC/BAPI for ECC, OData for S/4HANA — syncing material master, production orders, and goods movements, and we add batch traceability robust enough for 21 CFR Part 11 audit trails. Where repetitive planning and reporting drain your team, we introduce ", { text: "AI-driven automation", href: "/ai-automation/" }, " to flag yield drift and schedule capacity before it bites. If you're ready to modernise MES, connect your machines, or tighten ERP sync, ", { text: "tell us about your plant", href: "/contact/" }, " and we'll map a practical path to go-live."] },
+    ],
+  },
   hero: {
     eyebrow: "Manufacturing Tech",
     heading: "Manufacturing Software for Industry 4.0",
@@ -459,6 +504,15 @@ export const realEstate: ServicePageData = {
   meta: {
     title: "Real Estate Software Development Company | PropTech India",
     description: "Real estate software development: property listing platforms, agent CRM, virtual tours, lease management, and PropTech mobile apps for agencies and investors.",
+  },
+  prose: {
+    eyebrow: "PropTech Engineering",
+    heading: "Real Estate Software That Runs From Listing to Closing",
+    blocks: [
+      { p: ["Digital Web Weaver is a real estate software development company that builds property technology end to end — from map-based listing search to digital closing. We work with agencies, brokerages, property managers, and investors who need software that handles real MLS and RETS data, RERA-compliant documents, and high-traffic listing pages — not a templated brochure site. Based in Vadodara, India, we deliver globally across the UK, South Africa, and Ivory Coast, pairing genuine PropTech domain knowledge with the engineering depth to wire Mapbox, Elasticsearch, DocuSign, Matterport, and Stripe into a single coherent platform rather than a pile of disconnected plugins."] },
+      { h3: "Listing Platforms Built for Search and Scale", p: ["A property portal lives or dies on search. We build ", { text: "web application development", href: "/web-application-development/" }, " around Elasticsearch and geospatial data — polygon draw, map clustering, and sub-second filtering across tens of thousands of listings. Because most buyers arrive from Google, every listing detail page is server-rendered with structured data, and we treat performance optimisation as a core requirement, not an afterthought, so Core Web Vitals hold steady even while live MLS and IDX feeds sync in the background. The same architecture powers virtual tours, saved-search alerts, and lead capture without slowing the map down."] },
+      { h3: "CRM, Leasing, and Apps Agents Actually Use", p: ["Closing deals needs more than listings. We build an ", { text: "agent CRM and deal-pipeline system", href: "/crm-erp-systems/" }, " with lead tracking, client communication, and DocuSign-backed lease signing tied to Stripe rent collection and tenant portals. Agents work away from their desks, so we ship ", { text: "iOS and Android apps", href: "/mobile-app-development/" }, " for on-the-go listing management and 360° tours, and layer in ", { text: "AI automation", href: "/ai-automation/" }, " for lead scoring and automated property valuation using comparable-sales data. Tell us what your pipeline looks like and ", { text: "we'll scope the build with you", href: "/contact/" }, "."] },
+    ],
   },
   hero: {
     eyebrow: "PropTech Solutions",
@@ -552,6 +606,15 @@ export const retailEcommerce: ServicePageData = {
     title: "Retail & E-Commerce Development | Headless Commerce India",
     description: "Custom retail and e-commerce development: omnichannel platforms, POS integration, loyalty programs, recommendation engines, and headless commerce.",
   },
+  prose: {
+    eyebrow: "Retail & E-Commerce",
+    heading: "Retail and E-Commerce Software Built to Sell and Scale",
+    blocks: [
+      { p: ["Retail and e-commerce software development is what we do for merchants who have outgrown off-the-shelf carts — mid-size retailers running online, mobile, and in-store channels that no longer talk to each other. Our differentiator is engineering, not templates: we build headless Next.js storefronts backed by Shopify, WooCommerce, or Medusa, wired to real-time inventory and POS. We work from a base in Vadodara, India, with delivery across the UK, South Africa, and Ivory Coast, so a store built here holds up under real load and real transaction volume."] },
+      { h3: "Headless commerce and omnichannel that stays in sync", p: ["A storefront is only as good as the systems behind it. We connect physical and online stores through POS integrations and keep stock accurate across warehouses so you never oversell. Whether you need a bespoke ", { text: "custom e-commerce build", href: "/ecommerce-development/" }, " or a tailored ", { text: "Shopify store", href: "/shopify-development/" }, ", we handle checkout, payment gateways like Stripe and Razorpay, and the ", { text: "API integrations", href: "/services/api-integrations/" }, " that tie your ERP, marketplaces, and fulfilment into one order flow. That is what turns a good-looking site into an operation that runs itself."] },
+      { h3: "Conversion, personalisation, and speed", p: ["Traffic that does not convert is wasted spend, so we design checkout flows to cut abandonment and optimise Core Web Vitals for the page speed that shoppers and search engines both reward. On top of that we layer ", { text: "AI-powered recommendations", href: "/ai-automation/" }, " that measurably lift average order value, plus loyalty programs and mobile commerce apps to keep customers coming back. If you are ready to build a platform that sells more and operates smarter, ", { text: "tell us about your store", href: "/contact/" }, " and we will map the build."] },
+    ],
+  },
   hero: {
     eyebrow: "Retail & E-Commerce",
     heading: "Retail Software That Sells More and Operates Smarter",
@@ -642,6 +705,15 @@ export const saasStartups: ServicePageData = {
   meta: {
     title: "SaaS & Startup Software Development | MVP Experts India",
     description: "SaaS and startup development: lean MVP delivery, multi-tenant architecture, subscription billing, growth features, and investor-ready products.",
+  },
+  prose: {
+    eyebrow: "SaaS & Startups",
+    heading: "Software Development for SaaS Startups",
+    blocks: [
+      { p: ["Software development for SaaS startups is a different discipline from building a brochure site — the architecture you choose in week one either survives your Series A or forces a painful rewrite. We build for founders and small product teams who need an investor-ready product fast: our team ships a working ", { text: "MVP", href: "/mvp-development/" }, " in 8–12 weeks, instrumented for product analytics from day one and structured so it scales instead of stalls. We are based in Vadodara, India, and deliver to startups across the UK, South Africa, and Ivory Coast — with the timezone overlap and weekly demos that keep a lean roadmap honest."] },
+      { h3: "Multi-tenant architecture and billing that scale", p: ["The unglamorous decisions are what decide whether your SaaS survives growth. We design proper tenant isolation — schema-per-tenant or row-level security — before your first user signs up, and wire Stripe Billing for flat-rate, per-seat, usage-based, or hybrid pricing. Our ", { text: "SaaS development", href: "/saas-development/" }, " practice pairs that with deliberate ", { text: "database design", href: "/services/database-design/" }, " and auto-scaling infrastructure, so you are not firefighting Postgres or rate limits the week your traffic finally arrives. Next.js, Node.js, Auth0, and PostHog are the defaults — chosen because they let a small team move fast without technical debt."] },
+      { h3: "From MVP to measured growth", p: ["Speed only counts if you can measure what happens next. We ship with event tracking baked in, then iterate on real activation and retention data rather than guesswork. When your roadmap calls for smarter features, we fold in ", { text: "AI automation", href: "/ai-automation/" }, " — LLM assistants, enrichment pipelines, and workflow automation — the same way we built a pitch-deck analyser and a lead-enrichment platform for founders abroad. See how those shipped in our ", { text: "portfolio", href: "/portfolio/" }, ", or tell us what you're building and we'll scope your MVP."] },
+    ],
   },
   hero: {
     eyebrow: "SaaS & Startups",

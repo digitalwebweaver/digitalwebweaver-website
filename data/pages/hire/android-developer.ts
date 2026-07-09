@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire Android App Developers | Kotlin & Jetpack Compose",
     description: "Hire Android developers skilled in Kotlin, Jetpack Compose, and Google Play launches. Serving India, UK, South Africa, and Ivory Coast. Free quote in 24 hours.",
   },
+  prose: {
+    eyebrow: "Android Development",
+    heading: "Hire Android Developers Who Ship Native Kotlin",
+    blocks: [
+      { p: ["When you hire Android developers from our Vadodara studio, you get native Kotlin engineers who write Jetpack Compose UI, not template-driven contractors padding a Gradle file. This is for product teams that need a Play Store app to feel fast on a mid-range phone in Abidjan and a flagship in London alike — 60fps animations, offline-first data, and a codebase that survives the next SDK bump. We build native-first, so Compose, Coroutines, and Room are the default rather than a bolt-on, and our ", { text: "broader mobile app development practice", href: "/mobile-app-development/" }, " backs every engagement with design, QA, and release strategy from a single India base delivering to the UK, South Africa, and Ivory Coast."] },
+      { h3: "Native depth, not cross-platform shortcuts", p: ["We reach for native Kotlin when performance, hardware access, and long-term maintainability matter — Health Connect for ", { text: "healthcare apps", href: "/healthcare/" }, ", Maps SDK and geofencing for location tracking, Play Billing and Google Pay for ", { text: "e-commerce checkout flows", href: "/ecommerce-development/" }, ". Architecture is Clean Architecture with MVVM, Hilt for injection, and Flow for reactive streams, all covered by JUnit, Espresso, and Compose UI tests. When a shared codebase genuinely fits the budget, we say so and can staff ", { text: "React Native engineers", href: "/react-native-developer/" }, " instead — but we won't sell you cross-platform to paper over a native problem."] },
+      { h3: "From Figma to Play Store, and iOS too", p: ["Every build runs through Firebase Test Lab across 20+ physical device configs, ships secured with Keystore, biometrics, and certificate pinning, and reaches production with store listings tuned to avoid Play policy rejections. If you also need the App Store, our ", { text: "native iOS team", href: "/ios-developer/" }, " works in parallel so both platforms stay in feature lockstep. Browse our ", { text: "recent work", href: "/portfolio/" }, " to see the standard, or ", { text: "tell us about your app", href: "/contact/" }, " and we'll scope the first sprint with a free quote inside 24 hours."] },
+    ],
+  },
   hero: {
     eyebrow: "Android Development",
     heading: "Android Developers Who Build for 3 Billion Devices",

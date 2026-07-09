@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire Full Stack Developers | React, Node.js & Global Teams",
     description: "Hire full stack developers who own the product end-to-end — React frontends, Node.js/Python backends, databases, and cloud deployments. Get matched in 48 hours.",
   },
+  prose: {
+    eyebrow: "Full Stack Development",
+    heading: "Hire Full Stack Developers Who Own the Whole Product",
+    blocks: [
+      { p: ["When you hire full stack developers from Digital Web Weaver, you get engineers who carry a feature from Figma to production without waiting on a separate frontend or backend team. This is for founders and product leaders who are tired of handoff delays and finger-pointing between layers. Our differentiator is simple: one team writes the React UI, the Node.js or Python API, the PostgreSQL schema, and the Docker deployment — with TypeScript shared end-to-end so contract bugs between client and server never make it to staging. We are based in Vadodara, India, and deliver to teams across the UK, South Africa, and Ivory Coast on their working hours."] },
+      { h3: "One team, every layer of the stack", p: ["Full stack for us means real depth at each level, not a generalist who dabbles. Our engineers build ", { text: "React and Next.js frontends", href: "/react-developer/" }, " with SSR and design systems, back them with type-safe REST and GraphQL ", { text: "APIs", href: "/services/api-development/" }, ", and design the ", { text: "PostgreSQL and Redis data layer", href: "/services/database-design/" }, " underneath. Because the same team owns infra, cloud and DevOps decisions — AWS, Terraform, GitHub Actions CI/CD — happen alongside the code instead of after it. That unified ownership is why ", { text: "web application development", href: "/web-application-development/" }, " ships faster here: there is no queue between the person who designed the interface and the person deploying it."] },
+      { h3: "Built for products that need to scale", p: ["We staff a single developer for focused builds and a small team of two to four engineers for larger platforms — multi-tenant ", { text: "SaaS products", href: "/saas-development/" }, " with auth, Stripe billing, and team management, or custom shops with payments and inventory. Every layer ships with tests, from Jest units to Playwright end-to-end runs, and every release passes a security review against OWASP practices. Our average engineer has seven-plus years of experience, so architecture and trade-offs are discussed openly before scope changes, not after. If you want to see how this works on a real product, ", { text: "tell us what you are building", href: "/contact/" }, " and we will scope it end-to-end."] },
+    ],
+  },
   hero: {
     eyebrow: "Full Stack Development",
     heading: "Full Stack Developers Who Own the Whole Product",

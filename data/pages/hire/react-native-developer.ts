@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire React Native Developers | India, UK & Global",
     description: "Hire React Native developers for cross-platform iOS and Android apps with shared codebase, Expo, and native modules. Get matched in 48 hours, no lock-in.",
   },
+  prose: {
+    eyebrow: "React Native Development",
+    heading: "Hire React Native Developers Who Ship Native-Feeling Apps",
+    blocks: [
+      { p: ["Hire React Native developers when you need one team to ship polished iOS and Android apps from a single codebase — not two native builds slowly drifting apart. This is for product teams that want cross-platform economics without the wrapper-app feel. Our engineers work in TypeScript with Expo's managed workflow, sharing 90%+ of code while keeping platform-aware gestures, navigation, and animation. We're based in Vadodara, India and deliver to clients across the UK, South Africa, and Ivory Coast — senior engineers only, matched to your stack rather than dropped in cold."] },
+      { h3: "Native performance, not a web wrapper", p: ["React Native's New Architecture changed what cross-platform can do, and we build on it. The JSI-based Fabric renderer and TurboModules give synchronous native calls, so lists scroll at 60fps and heavy UI stays responsive. When JavaScript hits a wall, our developers drop into custom native modules in Swift or Kotlin. Offline-first apps use MMKV and WatermelonDB for local storage, with biometrics and Keychain for secure credentials. If your product also runs a React web front end, we set up a monorepo so business logic, hooks, and API layers are shared with your ", { text: "React developers", href: "/react-developer/" }, " instead of rewritten twice."] },
+      { h3: "Ship faster with Expo and EAS", p: ["Speed comes from tooling. We use EAS Build and EAS Submit to automate signing, provisioning, and store uploads, and Expo Updates to push fixes over the air without waiting on App Store review. Every app ships with a real test harness — Jest, React Native Testing Library, and Detox for end-to-end flows — so releases stay predictable as the codebase grows. If you're still weighing frameworks, we're candid about when ", { text: "Flutter", href: "/flutter-developer/" }, " fits better, and we scope each engagement as part of our broader ", { text: "mobile app development", href: "/mobile-app-development/" }, " work. Tell us what you're building and ", { text: "get matched with a React Native engineer in 48 hours", href: "/contact/" }, "."] },
+    ],
+  },
   hero: {
     eyebrow: "React Native Development",
     heading: "React Native Developers — One Codebase. iOS & Android. Native Feel.",

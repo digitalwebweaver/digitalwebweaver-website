@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire PHP Developers | Laravel Experts for India & UK",
     description: "Hire PHP developers for Laravel apps, WordPress sites, e-commerce platforms, and legacy PHP 8 modernisation. Get a free quote within 24 hours.",
   },
+  prose: {
+    eyebrow: "PHP Development",
+    heading: "Hire PHP Developers Who Ship Modern, Tested Code",
+    blocks: [
+      { p: ["When you hire PHP developers from our Vadodara team, you get engineers who write typed PHP 8.3, not the tangled procedural code that gives the language a bad name. We work with product teams and founders across India, the UK, South Africa, and Ivory Coast who need Laravel and Symfony applications built properly the first time — service classes, DTOs, and a test suite you can actually trust. The differentiator is discipline: every feature ships test-first with Pest or PHPUnit, and PHPStan runs on every commit. You get senior engineers on real problems, delivered from India with timezone overlap that suits European and African clients."] },
+      { h3: "Laravel, WordPress, and legacy modernisation", p: ["Most of our PHP work falls into three buckets. We build full-stack ", { text: "Laravel applications", href: "/laravel-developer/" }, " with Eloquent, queues, Sanctum auth, and Octane for throughput. We do deep ", { text: "WordPress and WooCommerce development", href: "/wordpress-development/" }, " at the hooks-and-filters level — custom plugins, payment gateways, and multisite setups. And we modernise tired PHP 5/7 codebases to PHP 8 incrementally, so you keep shipping while the architecture improves. When a project needs a clean HTTP surface, our ", { text: "REST and GraphQL API work", href: "/services/api-development/" }, " gives your frontend or mobile clients a contract they can build against."] },
+      { h3: "Performance and security as standard", p: ["Speed and safety are not add-ons. We ship OWASP-compliant code — parameterised queries, CSRF and XSS protection — and treat ", { text: "query and cache optimisation", href: "/services/performance-optimization/" }, " as part of the definition of done, using Opcache, Redis, and Horizon to keep response times low under load. For larger products we pair PHP backends with ", { text: "custom web application", href: "/custom-web-apps/" }, " architecture and Dockerised deployments via Forge or Ploi. Tell us what you're building and we'll ", { text: "scope it with you", href: "/contact/" }, ", or browse ", { text: "our recent work", href: "/portfolio/" }, " to see how we approach real projects."] },
+    ],
+  },
   hero: {
     eyebrow: "PHP Development",
     heading: "PHP Developers Who Write Modern, Clean Code",

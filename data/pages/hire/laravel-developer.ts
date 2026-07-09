@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire Laravel Developers | PHP Experts for India & UK",
     description: "Hire Laravel developers for web apps, REST APIs, SaaS platforms, and e-commerce backends using Laravel 11, Livewire, and Filament. Free quote in 24 hours.",
   },
+  prose: {
+    eyebrow: "Laravel Engineering",
+    heading: "Hire Laravel Developers Who Own the Whole Stack",
+    blocks: [
+      { p: ["When you hire Laravel developers from our Vadodara base, you get engineers who treat Laravel 11 and PHP 8.3 as a primary craft — not a fallback skill picked up between other frameworks. We work with founders and engineering leads across India, the UK, South Africa, and Ivory Coast who need production-grade PHP: clean Eloquent models, tested controllers, and a codebase the next developer can actually maintain. The differentiator is discipline — Pest coverage above 80%, OWASP-aware security reviews, and a service layer that holds up as your product scales. It's the same rigour we bring to every ", { text: "custom software", href: "/custom-software-development/" }, " build we ship."] },
+      { h3: "From REST APIs to full SaaS platforms", p: ["Most engagements start with a backend that has to earn trust. We build versioned REST APIs with Sanctum authentication and resource controllers — the kind of ", { text: "API layer", href: "/services/api-development/" }, " your mobile and front-end teams can build against without surprises. From there we scale into full ", { text: "SaaS platforms", href: "/saas-development/" }, " with billing, multi-tenancy, and Filament admin panels that turn complex data into interfaces your operations team actually enjoys using. Whether the front end is Livewire, Inertia.js, or a separate React app, the Laravel core stays clean, typed, and covered by tests."] },
+      { h3: "Migrations, performance, and long-term ownership", p: ["Much of our work is rescuing Laravel and legacy PHP codebases that grew faster than their tests. We audit for N+1 queries, missing indexes, and mass-assignment risks, then work through a prioritised plan — the same ", { text: "performance tuning", href: "/services/performance-optimization/" }, " and queue work with Horizon and Redis that keeps apps responsive under real load. Because we're India-based with delivery across four countries, you get senior review at rates that make ongoing ownership sustainable, not a one-off sprint. When you're ready, ", { text: "tell us your stack and timeline", href: "/contact/" }, " and we'll map the right team."] },
+    ],
+  },
   hero: {
     eyebrow: "Laravel Development",
     heading: "Laravel Developers Who Build Production-Grade PHP Apps",

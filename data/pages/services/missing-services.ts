@@ -440,6 +440,15 @@ export const webApplicationDevelopment: ServicePageData = {
     description:
       "Web application development company in India. We build SaaS platforms, dashboards, and enterprise web apps with senior engineers at a fixed price.",
   },
+  prose: {
+    eyebrow: "Web Application Development",
+    heading: "A web application development company built for real business complexity",
+    blocks: [
+      { p: ["As a web application development company based in Vadodara, we build the software layer where your business logic actually lives — multi-tenant platforms, role-based portals, and data-heavy dashboards, not brochure sites. This service is for founders and operations teams whose product or internal system has outgrown a simple website and now needs authentication, real workflows, and the ability to scale. Our differentiator is senior-only staffing and architecture discipline: we design for the load you will carry in two years — proper database indexing, caching layers, and horizontal scaling — before a line of code is written, then commit to a fixed price on a defined scope."] },
+      { h3: "Engineering for genuine complexity", p: ["The applications we ship handle permissions, concurrency, and security the way production actually demands. We build ", { text: "multi-tenant SaaS platforms", href: "/saas-development/" }, " with subscription billing and feature flags, and connect them to the wider ecosystem through ", { text: "REST and GraphQL API backends", href: "/services/api-development/" }, ". Real-time features — live dashboards, notifications, collaborative editing — run on WebSockets and Redis pub/sub. Our engineers work across React and Node.js on the front and back end, with Python and PostgreSQL behind data-intensive tools, and OWASP-aligned validation, structured logging, and Sentry error tracking configured before launch rather than bolted on afterwards."] },
+      { h3: "India base, global delivery", p: ["We work from India and deliver to clients across the UK, South Africa, and Ivory Coast, deploying to cloud infrastructure you own — AWS, GCP, or Azure — with ", { text: "CI/CD pipelines and staging environments", href: "/cloud-devops/" }, " in place from the first sprint. If you are still validating the idea, we can ship a ", { text: "lean MVP in a matter of weeks", href: "/mvp-development/" }, " before committing to the full build; if you are inheriting an ageing codebase, we start with an audit and extend rather than rewrite. Every project is staffed with senior engineers and a direct line to the person building it — no layers, no finger-pointing. ", { text: "Tell us what you are planning to build", href: "/contact/" }, " and we will review the architecture with you."] },
+    ],
+  },
   hero: {
     eyebrow: "Web Application Development",
     heading: "Complex Web Applications Built by Senior Engineers",
@@ -644,6 +653,15 @@ export const wordpressDevelopment: ServicePageData = {
     description:
       "WordPress development company in India. Custom WordPress sites, WooCommerce stores, and headless builds — no templates, no page builders, ever.",
   },
+  prose: {
+    eyebrow: "Why it works",
+    heading: "What you get from a WordPress development company in India that codes themes by hand",
+    blocks: [
+      { p: ["As a WordPress development company in India, we work with founders, marketing teams, and agencies who are done fighting slow, plugin-heavy sites and want WordPress built the way an engineer would build it. The differentiator is simple: no Divi, no Elementor, no ThemeForest template. Every theme is hand-coded in OOP PHP with custom Gutenberg blocks, so your editors can publish freely while the front end stays lean enough to clear 90+ on Core Web Vitals. We are based in Vadodara and deliver for clients across India, the UK, South Africa, and Ivory Coast, with senior developers on every project rather than juniors assembling page builders."] },
+      { h3: "WooCommerce, custom plugins, and headless when it fits", p: ["Most of our WordPress work splits into three shapes. For stores, we build ", { text: "WooCommerce and wider ecommerce systems", href: "/ecommerce-development/" }, " with Razorpay, PayU, and Stripe checkout, GST-compliant invoicing, and custom product types instead of a pile of paid add-ons. When the plugin directory has nothing that fits, we write purpose-built plugins in clean, secure code. And when the front end needs to be faster than PHP templating allows, we run WordPress headless as a CMS behind a Next.js or React app — the same ", { text: "modern web development", href: "/web-development/" }, " stack we use on our larger builds, powered by the WP REST API or WPGraphQL."] },
+      { h3: "Fast, secure, and yours to keep", p: ["Speed is treated as an engineering requirement, not a plugin you install and hope for. We handle image optimisation, critical CSS, deferred JavaScript, caching, and CDN setup as part of the build, and offer standalone ", { text: "performance and Core Web Vitals work", href: "/services/performance-optimization/" }, " for slow or compromised sites that need rescuing. Security is hardened the same way — minimal plugins, forced 2FA, locked-down permissions, and a documented, commented codebase any developer can pick up in an afternoon. You own the theme, the code, and the hosting outright. When you are ready, ", { text: "tell us about your WordPress project", href: "/contact/" }, " and we will send an honest estimate within 24 hours."] },
+    ],
+  },
   hero: {
     eyebrow: "WordPress Development",
     heading: "Custom WordPress Development — No Templates, No Shortcuts",
@@ -847,6 +865,15 @@ export const shopifyDevelopment: ServicePageData = {
     title: "Shopify Development Company India | Custom Themes & Apps",
     description:
       "Shopify development company in India. Custom Shopify themes, apps, and Shopify Plus builds designed to convert. Get a free store audit today.",
+  },
+  prose: {
+    eyebrow: "Shopify Development",
+    heading: "A Shopify Development Company India Trusts to Convert",
+    blocks: [
+      { p: ["As a Shopify development company in India serving founders across India, the UK, South Africa, and Ivory Coast, we build for brands that treat their storefront as a revenue engine — not a checkbox. The differentiator is simple: every store ships with a bespoke Liquid theme designed around your products and margins, not a lightly edited free theme that a thousand competitors also run. If you have outgrown a template or a slow, app-bloated store, this is ", { text: "conversion-focused ecommerce development", href: "/ecommerce-development/" }, " done by engineers who read your analytics before they touch a line of code."] },
+      { h3: "Built for the Indian checkout, ready for global sales", p: ["We set up Razorpay natively so your customers pay the way they actually pay in India — UPI, net banking, wallets, cards, EMI, and COD — with proper GST invoicing, order webhooks, and clean refund handling wired in from day one. Because most Shopify stores lose buyers to load time, we pair that with disciplined ", { text: "page speed and Core Web Vitals work", href: "/services/performance-optimization/" }, " and thoughtful ", { text: "product-page and checkout UX", href: "/ui-ux-design/" }, ", so the store feels fast on the mid-range Android phones that dominate Indian traffic and converts across every market you sell into."] },
+      { h3: "From custom apps to Shopify Plus and beyond", p: ["When an off-the-shelf app cannot handle your workflow, we build private and public Shopify apps in Node.js with Polaris and webhooks — the same ", { text: "Node.js engineering", href: "/nodejs-developer/" }, " we apply to any integration-heavy build. For high-volume brands we implement Shopify Plus: checkout extensibility, Shopify Functions for custom discount and shipping logic, B2B wholesale, and Flow automation. We also handle full WooCommerce and Magento migrations with 301 redirect mapping that protects your search rankings. If you want a store built to scale, ", { text: "tell us about your project", href: "/contact/" }, " or ", { text: "see the stores we have shipped", href: "/portfolio/" }, "."] },
+    ],
   },
   hero: {
     eyebrow: "Shopify Development",

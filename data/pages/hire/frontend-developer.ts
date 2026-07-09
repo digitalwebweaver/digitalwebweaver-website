@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire Frontend Developers | React, Vue & Angular Experts",
     description: "Hire frontend developers in India for pixel-perfect, accessible, high-performance UIs in React, Vue, and Angular. Get a free quote in 24 hours.",
   },
+  prose: {
+    eyebrow: "Frontend Development",
+    heading: "Hire Frontend Developers Who Ship Interfaces That Perform",
+    blocks: [
+      { p: ["When you hire frontend developers from Digital Web Weaver, you get engineers who treat the browser as an engineering problem, not a coat of paint. We are a Vadodara-based team delivering to India, the UK, South Africa, and Ivory Coast, and we build pixel-perfect, accessible interfaces in React 18, Vue 3, and Next.js with TypeScript throughout. This page is for product teams, agencies, and founders who have a Figma file or a slow legacy UI and need it turned into something fast, maintainable, and correct. Our differentiator is measurable: 95+ average Lighthouse scores and WCAG 2.1 AA compliance are the baseline we start from, not a stretch goal we bolt on at the end."] },
+      { h3: "From Figma handoff to a real design system", p: ["We take Figma as the source of truth, extract tokens for spacing and typography, and build component libraries in Storybook with Chromatic visual regression and Vitest interaction tests. That means your buttons, forms, and layouts behave consistently across every screen instead of drifting over time. When the frontend is the surface of something larger, our developers sit alongside our ", { text: "web application development", href: "/web-application-development/" }, " team, and if you want the interaction design refined before a line of code, our ", { text: "UI/UX design", href: "/ui-ux-design/" }, " practice can shape the flows first. Need a single framework specialist instead of a full pod? You can hire a dedicated ", { text: "React developer", href: "/react-developer/" }, " directly."] },
+      { h3: "Performance and accessibility as standard practice", p: ["Every build ships through Lighthouse CI with Core Web Vitals budgets, lazy loading, and bundle splitting via Vite, so users on slow connections in any of our delivery regions get a fast first paint. Accessibility is built in from the first component: ARIA, keyboard navigation, and contrast are audited, not assumed. If you already have a live product bleeding conversions to a sluggish interface, our ", { text: "performance optimisation", href: "/services/performance-optimization/" }, " work targets the exact bottlenecks with real profiling data. Send us your designs or your current URL and we will scope the frontend work and quote within 24 hours — start a ", { text: "conversation with us", href: "/contact/" }, " whenever you are ready."] },
+    ],
+  },
   hero: {
     eyebrow: "Frontend Development",
     heading: "Frontend Developers Who Make UIs That Delight",

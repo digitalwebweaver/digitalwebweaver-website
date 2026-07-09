@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire .NET Developers India | C#, ASP.NET Core & Azure",
     description: "Hire .NET developers for enterprise APIs, ASP.NET Core apps, microservices, and cloud-native systems built with C#, EF Core, and Azure. Get matched in 48 hours.",
   },
+  prose: {
+    eyebrow: "Hire .NET Developers",
+    heading: "Hire .NET Developers for Enterprise-Grade Systems",
+    blocks: [
+      { p: ["Hire .NET developers who ship secure, high-performance systems rather than proof-of-concept code. Digital Web Weaver is a Vadodara, India engineering team delivering to clients across India, the UK, South Africa, and Ivory Coast, and this page is for organisations that need mission-critical backends in C#, ASP.NET Core, and the modern .NET 8 ecosystem. Our differentiator is senior-only engineers working in clean, domain-driven architecture — the kind of code that survives security audits, load spikes, and the next three years of feature work."] },
+      { h3: "APIs and Microservices Built to Scale", p: ["Most .NET work we take on lives in the backend: versioned REST and gRPC ", { text: "API development", href: "/services/api-development/" }, ", EF Core and Dapper data layers, and distributed ", { text: "microservices", href: "/services/microservices/" }, " coordinated with .NET Aspire, Dapr, and message queues. We have untangled EF Core N+1 bottlenecks, rewritten data layers with compiled queries, and executed WebForms-to-ASP.NET Core migrations without downtime. Whether you are powering a SaaS product or a heavyweight ", { text: "enterprise application", href: "/services/enterprise-applications/" }, ", the API contracts are documented and the tests — xUnit, integration, and load — are real."] },
+      { h3: "Azure-Native and Secure by Design", p: ["We design for the cloud from day one — App Service, Functions, Service Bus, and Cosmos DB — backed by ", { text: "cloud and DevOps", href: "/cloud-devops/" }, " pipelines that ship to Azure through GitHub Actions, with health checks, Serilog, and OpenTelemetry dashboards for observability. Auth, encryption, and OWASP-aligned hardening are built into every layer, not bolted on before launch, and we can maintain or migrate legacy .NET Framework 4.x systems on an incremental strangler-fig path. Tell us your stack, timeline, and budget and we will ", { text: "match you with senior .NET engineers", href: "/contact/" }, " within 48 hours — pre-vetted, immediately available, and ready to ship."] },
+    ],
+  },
   hero: {
     eyebrow: ".NET Development",
     heading: ".NET Developers Who Build Enterprise-Grade Systems",

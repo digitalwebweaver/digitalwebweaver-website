@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire Flutter Developers | Cross-Platform Apps India",
     description: "Hire Flutter developers to build fast, cross-platform apps for iOS, Android, web, and desktop from one Dart codebase. Get a free quote in 24 hours.",
   },
+  prose: {
+    eyebrow: "Flutter Development",
+    heading: "Hire Flutter Developers for One Codebase, Every Platform",
+    blocks: [
+      { p: ["When you hire Flutter developers from our Vadodara team, you get engineers who ship a single Dart codebase to iOS, Android, web, and desktop without the visual drift that plagues cross-platform work. This is for founders and product leads who want native-feeling UI on every screen but refuse to maintain three separate codebases. Flutter is our focus, not a side skill: we work in Riverpod and BLoC, render on the Impeller engine for jank-free animations, and wire apps to Firebase for auth, Firestore, and crash reporting. From our India base we deliver to teams across the UK, South Africa, and Ivory Coast, syncing on your working hours."] },
+      { h3: "Native UI without the native cost", p: ["Flutter renders its own pixels, so a shopping flow or telemedicine screen looks identical on an iPhone and a low-end Android — and it stays that way as you scale. Our developers build platform-adaptive widgets, custom painters, and Rive or Lottie animations rather than dropping in stock components. Because the same team can also handle your ", { text: "mobile app development", href: "/mobile-app-development/" }, " roadmap and the companion ", { text: "web application development", href: "/web-application-development/" }, " surface, your product stays consistent from phone to browser instead of splintering across vendors."] },
+      { h3: "Engineers who fit your stack, not just your sprint", p: ["State management is where most Flutter projects rot, so we match you with people who have shipped production Riverpod and BLoC apps before — testable, compile-safe architecture that new hires can actually read. If your Flutter frontend needs a backend, we pair it with ", { text: "SaaS development", href: "/saas-development/" }, " and clean ", { text: "API development", href: "/services/api-development/" }, " so the whole product ships as one system. Weighing your options first? Compare the trade-offs with our ", { text: "React Native developers", href: "/react-native-developer/" }, ". When you are ready, ", { text: "tell us what you are building", href: "/contact/" }, " and we will get started."] },
+    ],
+  },
   hero: {
     eyebrow: "Flutter Development",
     heading: "Flutter Developers Who Build Apps That Run Everywhere, Look Native",

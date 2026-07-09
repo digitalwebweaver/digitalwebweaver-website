@@ -5,6 +5,15 @@ const data: ServicePageData = {
     title: "Hire AI Engineers | LLM, RAG, ML & Agent Development",
     description: "Hire AI engineers to build LLM apps, RAG pipelines, AI agents, chatbots, and production ML systems with OpenAI, Anthropic, LangChain, and vector databases.",
   },
+  prose: {
+    eyebrow: "AI Engineering",
+    heading: "Hire AI Engineers Who Ship Real Intelligence",
+    blocks: [
+      { p: ["When you hire AI engineers from Digital Web Weaver, you get people who treat large language models as production systems — not weekend demos. We're built for teams that have a promising GPT or Claude prototype (or just a sharp idea) and need it to become accurate, observable, and cost-controlled before it reaches real users. From our base in Vadodara, India, we deliver to companies across India, the UK, South Africa, and Ivory Coast, and our difference is discipline: golden eval sets, guardrails, and token budgets are part of the build, not an afterthought once the bill arrives."] },
+      { h3: "RAG, agents, and evaluation you can trust", p: ["Most of what we ship is retrieval-augmented generation over private data, tool-using agents with function calling and human fallback, and semantic search on Pinecone, Qdrant, or pgvector. We measure quality with real evaluation sets and LLM-as-judge testing, so \"is the AI actually good?\" has a number behind it. Because a lot of that work lives in Python, our AI engineers pair naturally with a ", { text: "dedicated Python developer", href: "/python-developer/" }, " for the data and ML plumbing, and slot AI into broader ", { text: "business process automation", href: "/ai-automation/" }, " when the goal is to remove human toil rather than add another chatbot."] },
+      { h3: "Built to run, not just to impress", p: ["Production is where most AI projects quietly fail, so it's where we start. We wrap models in FastAPI services with streaming responses, caching, and prompt versioning, and expose them through clean ", { text: "API endpoints", href: "/services/api-development/" }, " your existing product can consume — whether that product is an internal tool or a customer-facing ", { text: "SaaS platform", href: "/saas-development/" }, ". Caching, model routing, and smart selection routinely cut LLM spend 50–70%, and observability is baked in from day one so regressions surface before your users do. Tell us your use case and data, and we'll show you ", { text: "what production AI actually looks like", href: "/portfolio/" }, "."] },
+    ],
+  },
   hero: {
     eyebrow: "AI Engineering",
     heading: "AI Engineers Who Ship Production-Grade Intelligence",
