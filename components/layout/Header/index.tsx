@@ -67,7 +67,6 @@ export default function Header() {
   const [scrolled,    setScrolled]    = useState(false);
   const [mobileOpen,  setMobileOpen]  = useState(false);
   const [engOpen,     setEngOpen]     = useState(false);
-  const [activeCat,   setActiveCat]   = useState("web");
 
   /* scroll → glassy header */
   useEffect(() => {
@@ -92,8 +91,6 @@ export default function Header() {
       <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
-
-  const currentCat = ENG_CATS.find(c => c.id === activeCat);
 
   const closeEng = () => setEngOpen(false);
 
@@ -209,66 +206,34 @@ export default function Header() {
         </div>
       </header>
 
-      {/* ══ ENGINEERING FULLSCREEN OVERLAY ══
-          Sits outside <header> as a sibling so no stacking-context issues.
-          position:fixed, top:74px fills the viewport below the nav. */}
+      {/* ══ ENGINEERING MEGA-MENU DROP PANEL ══ */}
+      {engOpen && (
+        <div className="eng-drop-backdrop" onClick={closeEng} aria-hidden="true" />
+      )}
       <div
-        className={`eng-fs-overlay${engOpen ? " open" : ""}`}
+        className={`eng-drop${engOpen ? " open" : ""}`}
         role="dialog"
         aria-modal="true"
         aria-label="Engineering services"
         aria-hidden={!engOpen}
       >
-        <div className="eng-fs-body">
-
-          {/* LEFT – dark category panel */}
-          <div className="eng-fs-left">
-            <span className="eng-fs-eyebrow">Engineering Services</span>
-            <div className="eng-fs-divider" />
-            <div className="eng-fs-cats">
-              {ENG_CATS.map(cat => (
-                <button
-                  key={cat.id}
-                  className={`eng-fs-cat${activeCat === cat.id ? " active" : ""}`}
-                  onClick={() => setActiveCat(cat.id)}
-                >
-                  <svg className="eng-fs-arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                    <path d="M3 7h8M8 4l3 3-3 3"/>
-                  </svg>
-                  {cat.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* RIGHT – service links, keyed on activeCat to retrigger animation */}
-          <div className="eng-fs-right">
-            <div key={activeCat} className="eng-fs-svc-grid">
-              {currentCat?.items.map((item, i) => (
-                <Link
-                  key={item.href + item.name}
-                  className="eng-fs-svc"
-                  href={item.href}
-                  style={{ animationDelay: `${i * 38}ms` }}
-                  onClick={closeEng}
-                >
-                  <span className="eng-fs-svc-dot" />
-                  <div>
-                    <div className="eng-fs-svc-name">{item.name}</div>
-                    <div className="eng-fs-svc-desc">{item.desc}</div>
-                  </div>
+        <div className="eng-drop-inner">
+          {ENG_CATS.map(cat => (
+            <div key={cat.id} className="eng-col">
+              <div className="eng-col-head">{cat.label}</div>
+              {cat.items.map(item => (
+                <Link key={item.href + item.name} className="eng-item" href={item.href} onClick={closeEng}>
+                  <span className="eng-item-name">{item.name}</span>
+                  <span className="eng-item-desc">{item.desc}</span>
                 </Link>
               ))}
             </div>
-          </div>
-
+          ))}
         </div>
-
-        {/* BOTTOM BAR */}
-        <div className="eng-fs-bar">
-          <Link className="eng-fs-pill" href="/products/"    onClick={closeEng}>Explore Products →</Link>
+        <div className="eng-drop-bar">
+          <Link className="eng-fs-pill" href="/products/"     onClick={closeEng}>Explore Products →</Link>
           <Link className="eng-fs-pill" href="/ai-automation/" onClick={closeEng}>AI Solutions →</Link>
-          <Link className="eng-fs-pill" href="/services/"    onClick={closeEng}>All Services →</Link>
+          <Link className="eng-fs-pill" href="/services/"     onClick={closeEng}>All Services →</Link>
           <Link className="eng-fs-pill primary" href="/contact/" onClick={closeEng}>Start a Project ↗</Link>
         </div>
       </div>

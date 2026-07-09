@@ -84,9 +84,9 @@ const display = Bricolage_Grotesque({
 const body = Hanken_Grotesk({
   subsets: ["latin"],
   variable: "--font-body",
-  display: "optional",
+  display: "swap",
   weight: ["300", "400", "500"],
-  preload: false,
+  preload: true,
 });
 
 const mono = JetBrains_Mono({
