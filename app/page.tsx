@@ -124,8 +124,11 @@ export default function HomePage() {
           <div className="hero-grid">
             <div className="hero-copy">
               <span className="eyebrow reveal">Senior engineering studio · est. 2013</span>
-              <h1 className="reveal" style={{ marginTop: 22 }}>
-                We build <span className="accent">high-performance</span> software <span className="light">that ships and scales.</span>
+              <h1 style={{ marginTop: 22 }}>
+                <span className="hw" style={{ animationDelay: ".05s" }}>We build </span>
+                <span className="hw accent" style={{ animationDelay: ".2s" }}>high-performance</span>
+                <span className="hw" style={{ animationDelay: ".38s" }}> software </span>
+                <span className="hw light" style={{ animationDelay: ".54s" }}>that ships and scales.</span>
               </h1>
               <p className="hero-sub reveal">
                 A small team of senior engineers and designers building production-grade web platforms, SaaS products, and AI systems — for founders and enterprises who care about how things are made.
