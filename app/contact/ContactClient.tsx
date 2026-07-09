@@ -470,7 +470,7 @@ export default function ContactClient() {
       <section className="sec" style={{ background: "var(--paper-2)", paddingTop: "64px", paddingBottom: "64px" }}>
         <div className="wrap">
           <div className="faq-layout">
-            <div className="faq-aside reveal">
+            <div className="faq-aside">
               <span className="eyebrow">FAQ</span>
               <h2 style={{ marginTop: "18px", fontSize: "clamp(1.9rem,3.4vw,2.7rem)" }}>
                 Common <span className="accent">questions</span>
@@ -480,7 +480,7 @@ export default function ContactClient() {
                 Send an enquiry <span className="arr">↗</span>
               </a>
             </div>
-            <div className="faq-list reveal">
+            <div className="faq-list">
               <details className="faq" open>
                 <summary>
                   How quickly will you respond?{" "}

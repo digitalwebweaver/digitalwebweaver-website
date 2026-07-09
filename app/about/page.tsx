@@ -66,18 +66,20 @@ export default function AboutPage() {
             </div>
             <div className="page-visual reveal">
               <div className="pv-blob"></div>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.3"
-              >
-                <path
-                  d="M8 6L3 12l5 6M16 6l5 6-5 6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <div className="pv-terminal">
+                <div className="pvt-bar">
+                  <span className="pvt-dot" style={{ background: "#FF5F57" }} />
+                  <span className="pvt-dot" style={{ background: "#FEBC2E" }} />
+                  <span className="pvt-dot" style={{ background: "#28C840" }} />
+                  <span className="pvt-fname">studio.ts</span>
+                </div>
+                <div className="pvt-body">
+                  <div className="pvt-line"><span className="pvt-k">const</span> team = <span className="pvt-n">50</span>+ engineers;</div>
+                  <div className="pvt-line"><span className="pvt-k">const</span> shipped = <span className="pvt-n">200</span>+ systems;</div>
+                  <div className="pvt-line pvt-comment">{"// since 2013, Vadodara → world"}</div>
+                  <div className="pvt-line"><span className="pvt-k">export default</span> <span className="pvt-fn">craft</span>();</div>
+                </div>
+              </div>
               <div className="pv-badge">
                 <div className="pvb-n">8+</div>
                 <div className="pvb-l">Years building</div>

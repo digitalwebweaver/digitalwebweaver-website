@@ -576,6 +576,17 @@ details.faq .fq-body{font-size:15px;color:var(--muted);line-height:1.66;padding:
 .page-visual .pv-badge{position:absolute;bottom:22px;right:22px;background:var(--paper);border-radius:14px;padding:16px 20px;box-shadow:0 20px 40px -20px rgba(0,0,0,.3);z-index:3}
 .page-visual .pv-badge .pvb-n{font-family:var(--display);font-size:2.2rem;font-weight:700;line-height:1}
 .page-visual .pv-badge .pvb-l{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-top:4px}
+.pv-terminal{width:80%;background:#16140c;border-radius:12px;overflow:hidden;position:relative;z-index:2;box-shadow:0 24px 48px -12px rgba(0,0,0,.45)}
+.pvt-bar{background:rgba(255,255,255,.07);padding:10px 14px;display:flex;align-items:center;gap:6px}
+.pvt-dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+.pvt-fname{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.28);letter-spacing:.04em;margin-left:8px}
+.pvt-body{padding:14px 16px 18px;font-family:var(--mono);font-size:11.5px;line-height:2;color:rgba(255,255,255,.5)}
+.pvt-line{white-space:nowrap}
+.pvt-k{color:#C792EA}
+.pvt-s{color:#C3E88D}
+.pvt-n{color:#F78C6C}
+.pvt-fn{color:#82AAFF}
+.pvt-comment{color:rgba(255,255,255,.28);font-style:italic}
 
 /* ===== TEAM CARDS ===== */
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
