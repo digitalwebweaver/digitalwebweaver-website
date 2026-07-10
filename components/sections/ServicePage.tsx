@@ -110,14 +110,6 @@ export default function ServicePage({ data }: { data: ServicePageData }) {
         localBadge={hero.localBadge}
       />
       <MarqueeBand items={hero.marqueeItems} />
-      {prose && (
-        <ProseSection
-          eyebrow={prose.eyebrow}
-          heading={prose.heading}
-          blocks={prose.blocks}
-          dark={prose.dark}
-        />
-      )}
       {services && (
         <ServiceGrid
           eyebrow={services.eyebrow}
@@ -167,6 +159,14 @@ export default function ServicePage({ data }: { data: ServicePageData }) {
         />
       )}
       {testimonials && <Testimonials items={testimonials} />}
+      {prose && (
+        <ProseSection
+          eyebrow={prose.eyebrow}
+          heading={prose.heading}
+          blocks={prose.blocks}
+          dark={prose.dark}
+        />
+      )}
       {faq && (
         <FaqSection
           eyebrow={faq.eyebrow}
