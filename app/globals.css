@@ -57,7 +57,7 @@
 .eng-pill:hover svg{color:#fff}
 
 /* ── Utility top bar (accent strip above the nav; collapses on scroll) ── */
-.topbar{background:var(--accent);color:#fff;overflow:hidden;height:38px;transition:height .35s var(--ease),opacity .3s ease}
+.topbar{background:#E71862;color:#fff;overflow:hidden;height:38px;transition:height .35s var(--ease),opacity .3s ease}
 #hdr.scrolled .topbar{height:0;opacity:0}
 .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:38px}
 .topbar-links{display:flex;align-items:center;gap:22px}
