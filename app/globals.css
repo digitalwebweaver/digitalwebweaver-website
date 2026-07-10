@@ -56,6 +56,26 @@
 .eng-pill svg{width:12px;height:12px;color:var(--accent);flex-shrink:0;transition:color .14s}
 .eng-pill:hover svg{color:#fff}
 
+/* ── Utility top bar (accent strip above the nav; collapses on scroll) ── */
+.topbar{background:var(--accent);color:#fff;overflow:hidden;height:38px;transition:height .35s var(--ease),opacity .3s ease}
+#hdr.scrolled .topbar{height:0;opacity:0}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;height:38px}
+.topbar-links{display:flex;align-items:center;gap:22px}
+.topbar-links a{font-size:12.5px;font-weight:500;color:rgba(255,255,255,.9);text-decoration:none;transition:color .15s;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.topbar-links a:hover{color:#fff}
+.tb-arr{font-size:11px}
+.topbar-contact{display:flex;align-items:center;gap:22px}
+.topbar-contact a{font-size:12.5px;font-weight:600;color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:7px;transition:opacity .15s;white-space:nowrap}
+.topbar-contact a:hover{opacity:.85}
+.topbar-contact svg{width:14px;height:14px;flex-shrink:0}
+@media(max-width:860px){.topbar{display:none}}
+/* taller header on desktop (topbar visible) needs extra hero clearance */
+@media(min-width:861px){
+  .hero{padding-top:170px}
+  .svc-hero{padding-top:152px}
+  .page-hero{padding-top:152px}
+}
+
 /* ── Related services grid (was unstyled — labels ran into descriptions) ── */
 .rel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
 .rel-card{position:relative;display:flex;flex-direction:column;gap:6px;padding:19px 22px;padding-right:44px;border:1px solid var(--line);border-radius:14px;background:var(--paper);text-decoration:none;transition:border-color .15s,background .15s,box-shadow .15s}

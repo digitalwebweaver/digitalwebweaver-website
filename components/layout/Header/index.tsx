@@ -117,6 +117,26 @@ export default function Header() {
   return (
     <>
       <header id="hdr" className={scrolled ? "scrolled" : ""}>
+        {/* ── Utility top bar (collapses on scroll) ── */}
+        <div className="topbar">
+          <div className="wrap topbar-inner">
+            <div className="topbar-links">
+              <Link href="/portfolio/">Case Studies</Link>
+              <Link href="/careers/">Careers</Link>
+              <Link href="/hire-dedicated-resource/">Hire an Expert <span className="tb-arr">↗</span></Link>
+            </div>
+            <div className="topbar-contact">
+              <a href="tel:+919712515105">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
+                +91 97125 15105
+              </a>
+              <a href="https://wa.me/919712515105" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.7 14.2c-.2.7-1.2 1.3-1.7 1.3-.4 0-1 .1-3.4-.9-2.8-1.2-4.6-4.1-4.8-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.3c-.2.2-.3.4-.2.7.2.4.8 1.4 1.7 2.2 1.2 1 2.1 1.4 2.5 1.5.2.1.5.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.2.1.9-.1 1.5z"/></svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
         <div className="wrap">
           <nav className="nav">
             {/* ── Logo ── */}
