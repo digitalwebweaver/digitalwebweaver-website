@@ -73,10 +73,14 @@ const organizationSchema = {
   ],
 };
 
+// Display + mono use `optional`: the browser shows the real font when it loads
+// in time (preloaded, so it usually does) or a size-matched fallback with NO
+// jarring mid-render swap. Prevents the heading/eyebrow "flash to wrong font"
+// on first (uncached) load. Body stays `swap` so paragraph text is never hidden.
 const display = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-display",
-  display: "swap",
+  display: "optional",
   weight: ["600", "700"],
   preload: true,
 });
@@ -94,7 +98,7 @@ const mono = JetBrains_Mono({
   variable: "--font-mono",
   display: "optional",
   weight: ["400", "600"],
-  preload: false,
+  preload: false, // minor label font — not worth an extra preload request
 });
 
 export const metadata: Metadata = {
