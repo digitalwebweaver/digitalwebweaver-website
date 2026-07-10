@@ -126,6 +126,35 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Offices */}
+        <div className="foot-offices">
+          <span className="fo-label">Our Offices</span>
+          <div className="fo-grid">
+            <a className="fo-card" href="tel:+919712515105">
+              <span className="fo-flag" aria-hidden="true">🇮🇳</span>
+              <span className="fo-info">
+                <span className="fo-country">India <em>Development Studio</em></span>
+                <span className="fo-addr">207/208 Sanket Heights, Sunpharma Road, Atladra, Vadodara 390012, Gujarat</span>
+                <span className="fo-phone">+91 97125 15105</span>
+              </span>
+            </a>
+            <a className="fo-card" href="tel:+27760460763">
+              <span className="fo-flag" aria-hidden="true">🇿🇦</span>
+              <span className="fo-info">
+                <span className="fo-country">South Africa <em>Sales</em></span>
+                <span className="fo-phone">+27 76 046 0763</span>
+              </span>
+            </a>
+            <a className="fo-card" href="tel:+2550757876064">
+              <span className="fo-flag" aria-hidden="true">🇨🇮</span>
+              <span className="fo-info">
+                <span className="fo-country">Ivory Coast <em>Sales</em></span>
+                <span className="fo-phone">+255 0757876064</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
         {/* Certifications */}
         <div className="foot-certs">
           <span className="cl">Compliance</span>
