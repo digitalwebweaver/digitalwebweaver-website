@@ -87,12 +87,23 @@
 .topbar-contact a{font-size:12.5px;font-weight:600;color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:7px;transition:opacity .15s;white-space:nowrap}
 .topbar-contact a:hover{opacity:.85}
 .topbar-contact svg{width:14px;height:14px;flex-shrink:0}
-@media(max-width:860px){.topbar{display:none}}
-/* taller header on desktop (topbar visible) needs extra hero clearance */
+.tb-wa{display:none} /* WhatsApp shown only on mobile */
+/* Desktop: topbar shows quick links + phone + Contact Us; taller header needs clearance */
 @media(min-width:861px){
   .hero{padding-top:170px}
   .svc-hero{padding-top:152px}
   .page-hero{padding-top:152px}
+}
+/* Mobile: slim topbar with only phone + WhatsApp, centered */
+@media(max-width:860px){
+  .topbar-links{display:none}
+  .tb-contact-link{display:none}
+  .tb-wa{display:inline-flex}
+  .topbar-inner{justify-content:center}
+  .topbar-contact{gap:24px}
+  .hero{padding-top:150px}
+  .svc-hero{padding-top:140px}
+  .page-hero{padding-top:140px}
 }
 
 /* ── Related services grid (was unstyled — labels ran into descriptions) ── */
