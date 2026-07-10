@@ -258,7 +258,7 @@ export default function HireDedicatedClient() {
               { icon: <path d="M4 17l6-6 4 4 6-7" strokeLinecap="round" strokeLinejoin="round" />, extra: null, title: "Time-tracked billing", body: "Transparent daily logs, weekly reports, and end-of-month invoices. You see every hour — no black-box billing." },
             ].map((s, i) => (
               <div key={s.title} style={{ padding: "20px 28px", borderRight: i < 2 ? "1px solid var(--line-dark)" : undefined }}>
-                <div style={{ width: 38, height: 38, borderRadius: 10, background: "rgba(236,23,99,.15)", display: "grid", placeItems: "center", color: "var(--accent)", marginBottom: 14 }}>
+                <div style={{ width: 38, height: 38, borderRadius: 10, background: "rgba(231,24,98,.15)", display: "grid", placeItems: "center", color: "var(--accent)", marginBottom: 14 }}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width={18} height={18}>{s.icon}{s.extra}</svg>
                 </div>
                 <div style={{ fontFamily: "var(--display)", fontSize: 16, fontWeight: 600, color: "var(--on-dark)", marginBottom: 8 }}>{s.title}</div>
