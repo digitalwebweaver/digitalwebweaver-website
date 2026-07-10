@@ -145,11 +145,11 @@ export default function Footer() {
                 <span className="fo-phone">+27 76 046 0763</span>
               </span>
             </a>
-            <a className="fo-card" href="tel:+2550757876064">
+            <a className="fo-card" href="tel:+2250757876064">
               <span className="fo-flag" aria-hidden="true">🇨🇮</span>
               <span className="fo-info">
                 <span className="fo-country">Ivory Coast <em>Sales</em></span>
-                <span className="fo-phone">+255 0757876064</span>
+                <span className="fo-phone">+225 0757876064</span>
               </span>
             </a>
           </div>
