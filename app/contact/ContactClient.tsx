@@ -451,13 +451,31 @@ export default function ContactClient() {
 
               <div style={{ marginTop: "24px", paddingTop: "24px", borderTop: "1px solid var(--line-dark)" }}>
                 <p style={{ fontFamily: "var(--mono)", fontSize: "10px", letterSpacing: ".1em", textTransform: "uppercase", color: "var(--on-dark-muted)", marginBottom: "14px" }}>
-                  Offices
+                  Our Offices
                 </p>
-                <div style={{ fontSize: "13.5px", color: "var(--on-dark-muted)", lineHeight: 1.9 }}>
-                  <div>📍 Vadodara, India (HQ)</div>
-                  <div>📍 London, United Kingdom</div>
-                  <div>📍 Cape Town, South Africa</div>
-                  <div>📍 New York, United States</div>
+                <div className="fo-grid" style={{ gridTemplateColumns: "1fr" }}>
+                  <a className="fo-card" href="tel:+919712515105">
+                    <span className="fo-flag" aria-hidden="true">🇮🇳</span>
+                    <span className="fo-info">
+                      <span className="fo-country">India <em>Development Studio</em></span>
+                      <span className="fo-addr">207/208 Sanket Heights, Sunpharma Road, Atladra, Vadodara 390012, Gujarat</span>
+                      <span className="fo-phone">+91 97125 15105</span>
+                    </span>
+                  </a>
+                  <a className="fo-card" href="tel:+27760460763">
+                    <span className="fo-flag" aria-hidden="true">🇿🇦</span>
+                    <span className="fo-info">
+                      <span className="fo-country">South Africa <em>Sales</em></span>
+                      <span className="fo-phone">+27 76 046 0763</span>
+                    </span>
+                  </a>
+                  <a className="fo-card" href="tel:+2250757876064">
+                    <span className="fo-flag" aria-hidden="true">🇨🇮</span>
+                    <span className="fo-info">
+                      <span className="fo-country">Ivory Coast <em>Sales</em></span>
+                      <span className="fo-phone">+225 0757876064</span>
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
