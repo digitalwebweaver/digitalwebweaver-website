@@ -56,6 +56,12 @@
 .eng-pill svg{width:12px;height:12px;color:var(--accent);flex-shrink:0;transition:color .14s}
 .eng-pill:hover svg{color:#fff}
 
+/* ── Contact form step buttons (base btn styles were dark-on-dark → invisible) ── */
+.contact-form-wrap .step-next{background:var(--accent);color:#fff;border:none}
+.contact-form-wrap .step-next:hover{background:#c31350;color:#fff;transform:translateY(-2px)}
+.contact-form-wrap .step-back{background:transparent;color:var(--on-dark);border:1px solid rgba(255,255,255,.28)}
+.contact-form-wrap .step-back:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.55);color:#fff}
+
 /* ── Utility top bar (accent strip above the nav; collapses on scroll) ── */
 .topbar{background:var(--accent);color:#fff;overflow:hidden;height:38px;transition:height .35s var(--ease),opacity .3s ease}
 #hdr.scrolled .topbar{height:0;opacity:0}
