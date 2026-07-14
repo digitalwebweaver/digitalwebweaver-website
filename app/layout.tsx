@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import SiteChrome from "@/components/layout/SiteChrome";
 import JsonLd from "@/components/seo/JsonLd";
 import "./globals.css";
@@ -156,6 +157,7 @@ export default function RootLayout({
       <body>
         <JsonLd data={organizationSchema} />
         <SiteChrome>{children}</SiteChrome>
+        <SpeedInsights />
       </body>
     </html>
   );
