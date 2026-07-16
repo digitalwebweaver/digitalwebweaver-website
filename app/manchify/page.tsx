@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ServicePage from "@/components/sections/ServicePage";
 import { manchify as data } from "@/data/pages/products/readyApps5";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: { absolute: data.meta.title },
   description: data.meta.description,

@@ -101,6 +101,7 @@ const mono = JetBrains_Mono({
   preload: false, // minor label font — not worth an extra preload request
 });
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: {
     // Custom/hub pages set short titles and rely on this brand suffix.

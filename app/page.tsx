@@ -106,6 +106,7 @@ const speakableSchema = {
   },
 };
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Custom Software Development Company in India",
   description: "Custom software development company in India — enterprise software, SaaS platforms, mobile apps, and AI solutions. 200+ projects delivered since 2013.",

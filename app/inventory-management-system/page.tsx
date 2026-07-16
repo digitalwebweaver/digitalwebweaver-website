@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ServicePage from "@/components/sections/ServicePage";
 import { inventoryManagementSystem as data } from "@/data/pages/products/products";
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: { absolute: data.meta.title },
   description: data.meta.description,

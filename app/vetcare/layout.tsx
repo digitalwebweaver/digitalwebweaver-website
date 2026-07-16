@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "VetCare — Veterinary Practice Management Software for South Africa | Loadshedding-Proof, WhatsApp-Native",
   description:

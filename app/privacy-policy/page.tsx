@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy Policy for Digital Web Weaver. How we collect, use, and protect your data.",

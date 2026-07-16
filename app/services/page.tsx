@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ServicesFaq from "./ServicesFaq";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Web, Mobile & AI Software Development Services",
   description:

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: { absolute: "SolarFlow — Solar ERP & CRM for Gujarat Installers" },
   description:

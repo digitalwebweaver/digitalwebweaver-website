@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CountStat from "@/components/ui/CountStat";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Remote Software Engineering Careers",
   description:

@@ -6,6 +6,7 @@ import { getPublishedProjects } from "@/lib/projects";
 
 export const dynamic = "force-dynamic";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Portfolio & Case Studies",
   description:

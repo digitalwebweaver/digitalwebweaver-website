@@ -3,6 +3,7 @@ import ServicePage from "@/components/sections/ServicePage";
 import JsonLd from "@/components/seo/JsonLd";
 import { rajkot as data } from "@/data/pages/local/city-pages";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: { absolute: data.meta.title },
   description: data.meta.description,

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContactClient from "./ContactClient";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Free Project Consultation & Quote",
   description:

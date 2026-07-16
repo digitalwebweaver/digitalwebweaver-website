@@ -11,6 +11,7 @@ const SCHEMA = {
   areaServed: ["India", "United Kingdom", "South Africa"],
 };
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Hire Dedicated Developers India",
   description:

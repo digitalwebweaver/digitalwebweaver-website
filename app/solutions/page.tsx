@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Solutions — Built Around Your Goals",
   description: "Industry and domain solutions: cybersecurity, business intelligence, e-commerce, healthcare, fintech, and more.",

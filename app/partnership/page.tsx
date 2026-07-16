@@ -10,6 +10,7 @@ const SCHEMA = {
   isPartOf: { "@id": "https://digitalwebweaver.com/#website" },
 };
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Partnership Programme",
   description:

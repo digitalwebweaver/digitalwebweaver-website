@@ -7,6 +7,7 @@ export const dynamic = "force-dynamic";
 
 const SITE = "https://digitalwebweaver.com";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Free Software & App Cost Estimator",
   description:

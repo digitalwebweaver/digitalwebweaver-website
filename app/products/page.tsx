@@ -3,6 +3,7 @@ import Link from "next/link";
 import CountStat from "@/components/ui/CountStat";
 import { readyApps } from "@/data/pages/products/readyAppsList";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Ready-Made Software Products",
   description:

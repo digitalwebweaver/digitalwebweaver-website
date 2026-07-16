@@ -51,6 +51,7 @@ const localBusinessSchema = {
   parentOrganization: { "@id": "https://digitalwebweaver.com/#organization" },
 };
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Web Development Company, Vadodara",
   description:

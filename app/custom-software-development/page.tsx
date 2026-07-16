@@ -3,6 +3,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import ServicePage from "@/components/sections/ServicePage";
 import { customSoftwareDevelopment as data } from "@/data/pages/services/missing-services";
 
+export const revalidate = 3600;
 export const metadata: Metadata = {
   title: { absolute: data.meta.title },
   description: data.meta.description,
