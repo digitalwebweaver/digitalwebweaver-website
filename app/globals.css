@@ -726,13 +726,21 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .office-list h4 { font-weight:700; font-size:16px; color:var(--text); }
 .office-list p { font-size:15px; color:var(--muted); line-height:1.55; margin-top:3px; }
 
-/* ---- Theme toggle (floating) ---- */
+/* ---- Theme toggle ----
+   Lives at the foot of the activity bar column (same spot as
+   .activitybar__geo, which sits right above it via its own
+   margin-top:auto) rather than floating over page content. Positioned by
+   viewport, not by DOM nesting, since the activity bar itself is
+   per-page markup (remounts on navigation) while this is a persistent
+   Shell-level component — centering on --activity-w keeps it aligned
+   with that column regardless. */
 .theme-toggle {
   position: fixed;
-  right: 22px;
-  bottom: 46px;
-  width: 44px;
-  height: 44px;
+  left: calc(var(--activity-w) / 2);
+  transform: translateX(-50%);
+  bottom: 14px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -744,8 +752,14 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
   z-index: 60;
   transition: color .18s ease, border-color .18s ease, background-color .18s ease, transform .18s ease, box-shadow .18s ease;
 }
-.theme-toggle:hover { border-color:var(--pink); color:var(--pink); transform:translateY(-2px); }
-.theme-toggle:active { transform:translateY(0); }
+.theme-toggle:hover { border-color:var(--pink); color:var(--pink); transform:translateX(-50%) translateY(-2px); }
+.theme-toggle:active { transform:translateX(-50%) translateY(0); }
 @media (max-width:900px){
-  .theme-toggle { right:16px; bottom:42px; width:40px; height:40px; }
+  /* Activity bar is hidden below this width, so there's no column to
+     align with — bottom-left collides with left-aligned content (form
+     fields, text) more than bottom-right tends to, so fall back to the
+     original floating bottom-right spot instead. */
+  .theme-toggle { left:auto; right:16px; bottom:42px; transform:none; width:40px; height:40px; }
+  .theme-toggle:hover { transform:translateY(-2px); }
+  .theme-toggle:active { transform:translateY(0); }
 }
