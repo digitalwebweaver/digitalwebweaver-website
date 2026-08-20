@@ -6,54 +6,13 @@
    ============================================================ */
 
 /* ---- Design tokens ----
-   Dark is the bare :root (default, no data-theme needed). Light lives in
-   [data-theme="light"] below — same token names, so every rule elsewhere
-   in this file that reads var(--x) already theme-switches for free. The
-   *-rgb triplets exist only so rgba() glows/washes can ride the same
-   swap instead of staying pinned to one theme's hue. */
+   Light is now the bare :root (default, no data-theme needed) — same
+   token names either way, so every rule elsewhere in this file that reads
+   var(--x) already theme-switches for free. Dark lives in
+   [data-theme="dark"] as the explicit opt-in. The *-rgb triplets exist
+   only so rgba() glows/washes can ride the same swap instead of staying
+   pinned to one theme's hue. */
 :root {
-  --bg:#0d1117;
-  --panel:#161b22;
-  --panel-2:#1c222b;
-  --panel-hi:#1c2230;
-  --border:#21262d;
-  --border-2:#30363d;
-  --line:#484f58;
-
-  --text:#e6edf3;
-  --text-2:#c9d1d9;
-  --text-3:#adbac7;
-  --muted:#8b949e;
-  --muted-2:#6e7681;
-  --dim:#484f58;
-
-  --pink:#ff5c8a;
-  --pink-hi:#ff85a8;
-  --pink-soft:#ff7ba6;
-  --teal:#56d4c4;
-  --green:#9ad17f;
-  --yellow:#e3b341;
-  --red:#f8817f;
-
-  --pink-rgb:255,92,138;
-  --teal-rgb:86,212,196;
-  --green-rgb:154,209,127;
-  --yellow-rgb:227,179,65;
-  --red-rgb:248,129,127;
-
-  --mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
-  --sans: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-
-  --pad-x:56px;
-  --pad-y:44px;
-  --sidebar-w:264px;
-  --activity-w:52px;
-}
-
-/* Light theme. Accents are darkened (not just inverted) so they clear
-   WCAG AA both as text-on-page AND as the bg-with-var(--bg)-text badge
-   pattern used throughout (.chip.is-active, .pipe__dot, etc). */
-[data-theme="light"] {
   --bg:#ffffff;
   --panel:#f6f8fa;
   --panel-2:#eef1f4;
@@ -82,6 +41,46 @@
   --green-rgb:75,124,51;
   --yellow-rgb:150,107,31;
   --red-rgb:200,50,63;
+
+  --mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sans: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  --pad-x:56px;
+  --pad-y:44px;
+  --sidebar-w:264px;
+  --activity-w:52px;
+}
+
+/* Dark theme — explicit opt-in via the toggle, no longer the default. */
+[data-theme="dark"] {
+  --bg:#0d1117;
+  --panel:#161b22;
+  --panel-2:#1c222b;
+  --panel-hi:#1c2230;
+  --border:#21262d;
+  --border-2:#30363d;
+  --line:#484f58;
+
+  --text:#e6edf3;
+  --text-2:#c9d1d9;
+  --text-3:#adbac7;
+  --muted:#8b949e;
+  --muted-2:#6e7681;
+  --dim:#484f58;
+
+  --pink:#ff5c8a;
+  --pink-hi:#ff85a8;
+  --pink-soft:#ff7ba6;
+  --teal:#56d4c4;
+  --green:#9ad17f;
+  --yellow:#e3b341;
+  --red:#f8817f;
+
+  --pink-rgb:255,92,138;
+  --teal-rgb:86,212,196;
+  --green-rgb:154,209,127;
+  --yellow-rgb:227,179,65;
+  --red-rgb:248,129,127;
 }
 
 /* Theme-change fade — scoped to the few properties that actually shift,

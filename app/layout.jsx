@@ -5,12 +5,12 @@ import JsonLd from "@/components/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import "./globals.css";
 
-// Dark is the default (matches the bare :root tokens), so this only ever
-// needs to *add* data-theme="light" when that's what's stored — nothing
-// to do on the (default) dark path. Runs as the first thing in <body>,
-// which blocks parsing of everything after it, so it beats first paint
-// without needing a custom <head> injection.
-const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('dww-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();`;
+// Light is the default (matches the bare :root tokens), so this only ever
+// needs to *add* data-theme="dark" when that's what's stored — nothing to
+// do on the (default) light path. Runs as the first thing in <body>, which
+// blocks parsing of everything after it, so it beats first paint without
+// needing a custom <head> injection.
+const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('dww-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();`;
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -42,7 +42,7 @@ export const metadata = {
   robots: { index: true, follow: true },
 };
 
-export const viewport = { themeColor: "#0d1117", width: "device-width", initialScale: 1 };
+export const viewport = { themeColor: "#ffffff", width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }) {
   return (
