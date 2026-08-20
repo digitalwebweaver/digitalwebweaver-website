@@ -2,7 +2,92 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import NavLink from "./NavLink";
+import MegaMenu from "./MegaMenu";
 import { siteNav } from "@/lib/siteNav";
+
+const SERVICES_MENU = [
+  {
+    title: "Web & Design",
+    items: [
+      { label: "Web Development", href: "/web-development/", icon: "code", desc: "Marketing sites to complex web apps" },
+      { label: "Custom Web Apps", href: "/custom-web-apps/", icon: "layers", desc: "Portals, dashboards, internal tools" },
+      { label: "E-Commerce", href: "/ecommerce-development/", icon: "cart", desc: "Storefronts built to convert" },
+      { label: "UI / UX Design", href: "/ui-ux-design/", icon: "palette", desc: "Research, systems, prototypes" },
+    ],
+  },
+  {
+    title: "Platform & Cloud",
+    items: [
+      { label: "Mobile Apps", href: "/mobile-app-development/", icon: "phone", desc: "Native iOS, Android, cross-platform" },
+      { label: "AI & Automation", href: "/ai-automation/", icon: "cpu", desc: "LLM features & workflow automation" },
+      { label: "Cloud & DevOps", href: "/cloud-devops/", icon: "cloud", desc: "CI/CD, infra-as-code, uptime" },
+      { label: "Progressive Web Apps", href: "/services/progressive-web-apps/", icon: "wifi", desc: "Installable, offline-capable web apps" },
+      { label: "Custom Software", href: "/custom-software-development/", icon: "box", desc: "Bespoke ERP, CRM & portals" },
+    ],
+  },
+  {
+    title: "Solutions",
+    items: [
+      { label: "MVP Development", href: "/mvp-development/", icon: "zap", desc: "Validate your idea in weeks" },
+      { label: "SaaS Products", href: "/saas-development/", icon: "layers", desc: "Multi-tenant, billing, growth-ready" },
+      { label: "ERP Systems", href: "/crm-erp-systems/", icon: "database", desc: "Business systems that fit your ops" },
+      { label: "Business Intelligence", href: "/solutions/business-intelligence/", icon: "chart", desc: "Dashboards & data pipelines" },
+      { label: "Cybersecurity Audit", href: "/solutions/cybersecurity/", icon: "shield", desc: "Infra hardening & compliance review" },
+    ],
+  },
+];
+
+const HIRE_MENU = [
+  {
+    title: "Engagement",
+    items: [
+      { label: "Hire Dedicated Team", href: "/hire-dedicated-resource/", icon: "users", desc: "Senior engineers, embedded with you" },
+    ],
+  },
+  {
+    title: "By stack",
+    items: [
+      { label: "React / Next.js", href: "/react-developer/", badge: "teal" },
+      { label: "Node.js", href: "/nodejs-developer/", badge: "green" },
+      { label: "Laravel / PHP", href: "/laravel-developer/", badge: "pink" },
+      { label: "Python / Django", href: "/python-developer/", badge: "yellow" },
+      { label: "MySQL / PostgreSQL", href: "/stack/databases/", badge: "teal" },
+      { label: "AWS / Cloud", href: "/stack/aws/", badge: "yellow" },
+    ],
+  },
+];
+
+const PRODUCTS_MENU = [
+  { title: "Healthcare & Clinics", items: [
+    { label: "GlowDesk", href: "/glowdesk/", badge: "teal", desc: "Bookings, treatment plans & billing" },
+    { label: "ClinicFlow", href: "/clinicflow/", badge: "teal", desc: "Appointments, EMR, billing & pharmacy" },
+    { label: "VetCare", href: "/vetcare/", badge: "teal", desc: "Records for veterinary practices" },
+    { label: "TeleCare", href: "/telecare/", badge: "teal", desc: "Video consults & e-prescriptions" },
+    { label: "ClinicVoice AI", href: "/clinicvoice-ai/", badge: "teal", desc: "AI voice agent for clinic bookings" },
+  ] },
+  { title: "Education", items: [
+    { label: "EduCore", href: "/educore/", badge: "yellow", desc: "LMS with courses & certificates" },
+    { label: "SchoolHub", href: "/schoolhub/", badge: "yellow", desc: "Admissions, attendance, fees & exams" },
+  ] },
+  { title: "AI Agents", items: [
+    { label: "ChatFlow AI", href: "/chatflow-ai/", badge: "pink", desc: "WhatsApp automation for enquiries" },
+    { label: "CallMate AI", href: "/callmate-ai/", badge: "pink", desc: "AI voice agent for calls & leads" },
+  ] },
+  { title: "Field Service & ERP", items: [
+    { label: "SolarFlow", href: "/solarflow/", badge: "green", desc: "ERP for solar installers" },
+    { label: "ChemSupply", href: "/chemsupply/", badge: "green", desc: "Batch/expiry tracking & compliance" },
+    { label: "PestTrack", href: "/pesttrack/", badge: "green", desc: "Job scheduling & technician routing" },
+    { label: "Manchify", href: "/manchify/", badge: "green", desc: "Leads, quotes & vendors for events" },
+  ] },
+  { title: "Food & Mobility", items: [
+    { label: "QuickBite", href: "/quickbite/", badge: "teal", desc: "Food delivery app suite" },
+    { label: "RideEasy", href: "/rideeasy/", badge: "teal", desc: "Cab booking, rider to dispatch" },
+    { label: "SalonBook", href: "/salonbook/", badge: "teal", desc: "Online booking & staff scheduling" },
+  ] },
+  { title: "Sales & CRM", items: [
+    { label: "InsureDesk", href: "/insuredesk/", badge: "pink", desc: "Lead & policy management" },
+  ] },
+];
 
 function activeGroupId(pathname) {
   for (const group of siteNav.groups) {
@@ -79,13 +164,12 @@ export default function Shell({ children }) {
       <header className="topbar">
         <button className="hamburger" aria-label="Open menu" onClick={() => setDrawerOpen((v) => !v)}>☰</button>
         <span className="topbar__lights"><span className="dot dot--red"></span><span className="dot dot--amber"></span><span className="dot dot--green"></span></span>
-        <NavLink href="/" style={{ display: "flex", alignItems: "center", gap: "8px", flexShrink: 0, textDecoration: "none" }}>
-          <span style={{ width: "9px", height: "9px", borderRadius: "2px", background: "#ff5c8a", transform: "rotate(45deg)", flexShrink: 0 }}></span>
-          <span className="mono" style={{ fontSize: "12.5px", fontWeight: 700, letterSpacing: "0.16em", color: "#e6edf3", whiteSpace: "nowrap" }}>DIGITAL WEB WEAVER</span>
-        </NavLink>
         <span className="topbar__crumb mono">digital-web-weaver — <b>workspace</b></span>
         <div className="topbar__right mono">
           <nav className="topbar__nav" aria-label="Quick links">
+            <MegaMenu label="Services" href="/services/" columns={SERVICES_MENU} footerLabel="View all services" footerHref="/services/" />
+            <MegaMenu label="Products" href="/products/" columns={PRODUCTS_MENU} footerLabel="View all products" footerHref="/products/" />
+            <MegaMenu label="Hire Resource" href="/hire-dedicated-resource/" columns={HIRE_MENU} footerLabel="Talk to us" footerHref="/hire-dedicated-resource/" />
             <NavLink href="/about/">About</NavLink>
             <NavLink href="/portfolio/">Portfolio</NavLink>
           </nav>
@@ -99,6 +183,15 @@ export default function Shell({ children }) {
           <NavLink href="/" style={{ display: "flex", alignItems: "center", gap: "10px", padding: "16px 16px 15px", borderBottom: "1px solid #21262d", textDecoration: "none" }}>
             <img src="/assets/dww-logo.png" alt="Digital Web Weaver" style={{ height: "46px", width: "auto", display: "block" }} />
           </NavLink>
+          {/* Desktop has the topbar mega menu for this; on the mobile drawer
+              that's hidden, so give touch users a same jump to the 4 pages
+              people actually look for, instead of only the full folder tree. */}
+          <nav className="sidebar__quick" aria-label="Quick links">
+            <NavLink href="/services/" className="chip">Services</NavLink>
+            <NavLink href="/products/" className="chip">Products</NavLink>
+            <NavLink href="/hire-dedicated-resource/" className="chip">Hire</NavLink>
+            <NavLink href="/contact/" className="chip">Contact</NavLink>
+          </nav>
           <div className="sidebar__title">Explorer — DWW</div>
           <nav className="tree">
             <NavLink href={siteNav.root.href} className={`tree__row${pathname === "/" ? " is-active" : ""}`}>

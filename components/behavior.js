@@ -15,6 +15,16 @@ export function initDWW() {
      folder tree, click-to-scroll) lives in components/Shell.jsx
      instead, because Shell mounts once for the whole session — binding
      it here would only ever work for the first page visited.
+
+     Cleanup note: every addEventListener call below is paired with an
+     entry in `teardown`, and the returned cleanup function runs all of
+     them. This isn't just tidiness — React 18 Strict Mode deliberately
+     mounts effects twice in dev (mount → cleanup → mount again) to
+     surface exactly this class of bug. Without a complete teardown, the
+     second mount adds a second set of listeners on top of the first, so
+     a single click fires the FAQ/pipeline/tab toggle twice and the two
+     calls cancel each other out — the feature looks completely dead
+     even though the handler code itself is correct.
      ============================================================ */
 
   "use strict";
@@ -22,6 +32,12 @@ export function initDWW() {
 
   var content = document.querySelector(".content");
   var observers = [];
+  var teardown = [];
+
+  function on(el, event, handler) {
+    el.addEventListener(event, handler);
+    teardown.push(function () { el.removeEventListener(event, handler); });
+  }
 
   /* ---- Scrollspy: highlight active section in activity bar + tabs ---- */
   var sections = Array.prototype.slice.call(document.querySelectorAll(".content section[id]"));
@@ -68,14 +84,14 @@ export function initDWW() {
         if (match) { i++; var idx = c.querySelector(".stack-cell__idx"); if (idx) idx.textContent = ("0" + i).slice(-2); }
       });
     }
-    tabs.forEach(function (t) { t.addEventListener("click", function () { showCat(t.getAttribute("data-cat")); }); });
+    tabs.forEach(function (t) { on(t, "click", function () { showCat(t.getAttribute("data-cat")); }); });
     var first = stackWrap.querySelector(".stack-tab");
     if (first) showCat(first.getAttribute("data-cat"));
   }
 
   /* ---- Tech-stack icon fallback (letter badge if brand logo fails) ---- */
   document.querySelectorAll(".stack-cell__logo img").forEach(function (img) {
-    img.addEventListener("error", function () {
+    on(img, "error", function () {
       img.style.display = "none";
       var f = img.nextElementSibling;
       if (f) f.style.display = "flex";
@@ -99,13 +115,13 @@ export function initDWW() {
       if (fill) fill.style.width = "calc((100% - 40px) * " + (total > 1 ? idx / (total - 1) : 0) + ")";
       panels.forEach(function (pn) { pn.hidden = parseInt(pn.getAttribute("data-step-panel"), 10) !== idx; });
     }
-    pipes.forEach(function (p, i) { p.addEventListener("click", function () { selectStep(i); }); });
+    pipes.forEach(function (p, i) { on(p, "click", function () { selectStep(i); }); });
     selectStep(0);
   }
 
   /* ---- FAQ accordion ---- */
   document.querySelectorAll(".faq__q").forEach(function (q) {
-    q.addEventListener("click", function () {
+    on(q, "click", function () {
       var item = q.closest(".faq__item");
       var open = item.classList.toggle("is-open");
       var sign = q.querySelector(".sign");
@@ -117,7 +133,7 @@ export function initDWW() {
   document.querySelectorAll("[data-form]").forEach(function (form) {
     var card = form.closest(".formcard");
     var success = card ? card.querySelector(".form__success") : null;
-    form.addEventListener("submit", function (e) {
+    on(form, "submit", function (e) {
       e.preventDefault();
       var nameField = form.querySelector('[name="name"]');
       if (success) {
@@ -131,14 +147,17 @@ export function initDWW() {
       }
     });
     var reset = success ? success.querySelector(".s-reset") : null;
-    if (reset) reset.addEventListener("click", function () {
-      form.reset(); success.hidden = true; form.hidden = false;
-    });
+    if (reset) {
+      on(reset, "click", function () {
+        form.reset(); success.hidden = true; form.hidden = false;
+      });
+    }
   });
 
-  // Called on unmount (page navigation) so observers don't pile up across
-  // an SPA session — see Interactions.jsx.
+  // Called on unmount (page navigation, or React Strict Mode's dev-only
+  // double-invoke) so nothing from this mount survives into the next one.
   return function cleanup() {
     observers.forEach(function (o) { o.disconnect(); });
+    teardown.forEach(function (off) { off(); });
   };
 }

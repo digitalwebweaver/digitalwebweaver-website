@@ -91,6 +91,28 @@ export default function Page() {
             <Link className="mono" href="/portfolio/" style={{"fontSize":"13px","whiteSpace":"nowrap"}}>see client case studies ↗</Link>
           </div>
 
+          <div style={{marginTop:"26px",border:"1px solid var(--border)",background:"#0a0e13",overflow:"hidden",boxShadow:"0 12px 40px -18px rgba(0,0,0,0.7)"}}>
+            <div style={{display:"flex",alignItems:"center",gap:"8px",padding:"11px 16px",background:"var(--panel)",borderBottom:"1px solid var(--border)"}}>
+              <span style={{display:"flex",gap:"7px"}}><span style={{width:"12px",height:"12px",borderRadius:"50%",background:"#ff5f57"}}></span><span style={{width:"12px",height:"12px",borderRadius:"50%",background:"#febc2e"}}></span><span style={{width:"12px",height:"12px",borderRadius:"50%",background:"#28c840"}}></span></span>
+              <span className="mono" style={{marginLeft:"8px",fontSize:"12.5px",color:"var(--muted)"}}>dww@studio: ~/products</span>
+              <span className="mono" style={{marginLeft:"auto",fontSize:"11.5px",color:"var(--muted-2)"}}>zsh</span>
+            </div>
+            <div className="mono" style={{padding:"20px 22px",fontSize:"13.5px",lineHeight:1.55}}>
+              <div style={{color:"var(--text-2)"}}><span style={{color:"var(--teal)"}}>$</span> dww search <span style={{color:"var(--text)"}}>--catalog</span></div>
+              <div style={{color:"var(--muted-2)",marginTop:"4px"}}>resolving <span style={{color:"var(--yellow)"}}>17</span> products across 6 categories…</div>
+              <div style={{marginTop:"14px",display:"grid",gridTemplateColumns:"minmax(0,1fr) minmax(0,1fr)",gap:"2px 40px"}}>
+                <div style={{display:"flex",alignItems:"baseline",gap:"10px",padding:"4px 8px"}}><span style={{color:"var(--green)",flexShrink:0}}>✓</span><span style={{color:"#7ee0d0",whiteSpace:"nowrap"}}>healthcare-clinics</span><span style={{color:"var(--muted-2)",flex:1,textAlign:"right",whiteSpace:"nowrap"}}>5 products</span></div>
+                <div style={{display:"flex",alignItems:"baseline",gap:"10px",padding:"4px 8px"}}><span style={{color:"var(--green)",flexShrink:0}}>✓</span><span style={{color:"#7ee0d0",whiteSpace:"nowrap"}}>education</span><span style={{color:"var(--muted-2)",flex:1,textAlign:"right",whiteSpace:"nowrap"}}>2 products</span></div>
+                <div style={{display:"flex",alignItems:"baseline",gap:"10px",padding:"4px 8px"}}><span style={{color:"var(--green)",flexShrink:0}}>✓</span><span style={{color:"#7ee0d0",whiteSpace:"nowrap"}}>ai-agents</span><span style={{color:"var(--muted-2)",flex:1,textAlign:"right",whiteSpace:"nowrap"}}>2 products</span></div>
+                <div style={{display:"flex",alignItems:"baseline",gap:"10px",padding:"4px 8px"}}><span style={{color:"var(--green)",flexShrink:0}}>✓</span><span style={{color:"#7ee0d0",whiteSpace:"nowrap"}}>field-service-erp</span><span style={{color:"var(--muted-2)",flex:1,textAlign:"right",whiteSpace:"nowrap"}}>4 products</span></div>
+                <div style={{display:"flex",alignItems:"baseline",gap:"10px",padding:"4px 8px"}}><span style={{color:"var(--green)",flexShrink:0}}>✓</span><span style={{color:"#7ee0d0",whiteSpace:"nowrap"}}>food-mobility</span><span style={{color:"var(--muted-2)",flex:1,textAlign:"right",whiteSpace:"nowrap"}}>3 products</span></div>
+                <div style={{display:"flex",alignItems:"baseline",gap:"10px",padding:"4px 8px"}}><span style={{color:"var(--green)",flexShrink:0}}>✓</span><span style={{color:"#7ee0d0",whiteSpace:"nowrap"}}>sales-crm</span><span style={{color:"var(--muted-2)",flex:1,textAlign:"right",whiteSpace:"nowrap"}}>1 product</span></div>
+              </div>
+              <div style={{marginTop:"16px",color:"var(--green)"}}>+ 17 products indexed <span style={{color:"var(--muted-2)"}}>· 0 vulnerabilities · white-label ready</span></div>
+              <div style={{marginTop:"4px",color:"var(--text-2)"}}><span style={{color:"var(--teal)"}}>$</span> <span className="caret"></span></div>
+            </div>
+          </div>
+
           <div style={{"marginTop":"36px"}}>
             <span className="badge" style={{"color":"var(--teal)"}}>HEALTHCARE &amp; CLINICS</span>
             <div className="grid grid-3 stagger" style={{"marginTop":"18px"}}>

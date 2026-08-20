@@ -93,6 +93,7 @@ export default function Page() {
             <div className="svc"><div className="svc__num">04</div><div className="svc__title">Fee Collection &amp; Reminders</div><p className="svc__body">Online payments with instalment plans, receipt generation, dues tracking, and automated reminders to parents.</p><div className="svc__foot"><span>fees.ts</span></div></div>
             <div className="svc"><div className="svc__num">05</div><div className="svc__title">Exams &amp; Report Cards</div><p className="svc__body">Exam scheduling, mark entry, and auto-generated report cards formatted to match your school's existing structure.</p><div className="svc__foot"><span>exams.ts</span></div></div>
             <div className="svc"><div className="svc__num">06</div><div className="svc__title">Parent &amp; Staff Communication</div><p className="svc__body">Push notifications for notices, circulars, homework, and event updates — delivered through your school's branded app.</p><div className="svc__foot"><span>comms.ts</span></div></div>
+            <div className="svc"><div className="svc__num">07</div><div className="svc__title">Staff Management</div><p className="svc__body">Staff records, role assignments, and leave balances in one place — payroll-ready without a separate spreadsheet.</p><div className="svc__foot"><span>staff.ts</span></div></div>
           </div>
         </section>
 

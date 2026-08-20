@@ -38,36 +38,36 @@ export default function Footer() {
             <span><span className="mono" style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "10px", letterSpacing: "0.1em", color: "var(--muted-2)" }}>HEAD OFFICE <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#9ad17f" }}></span><span style={{ color: "#9ad17f", letterSpacing: "0.04em" }}>open</span></span><span style={{ display: "block", fontSize: "13px", lineHeight: 1.55, color: "#adbac7", marginTop: "3px" }}>207/208 Sanket Heights, Sunpharma Road,<br />Atladra, Vadodara 390012, Gujarat · India</span></span>
           </a>
         </div>
-        <div className="mono">
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "11.5px", letterSpacing: "0.12em", color: "var(--text)", marginBottom: "14px" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#56d4c4" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>services/</div>
+        <nav className="mono" aria-label="Services">
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "11.5px", letterSpacing: "0.12em", color: "var(--text)", marginBottom: "14px" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#56d4c4" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>services/</div>
           <div style={{ borderLeft: "1px solid var(--border)", paddingLeft: "14px", display: "flex", flexDirection: "column" }}>
             {servicesCol.map((item, i) => (
               <NavLink key={item.href} href={item.href} className="ft-link" style={{ display: "flex", alignItems: "center", gap: "8px", padding: "5px 0", fontSize: "14px", textDecoration: "none", "--h": "#56d4c4" }}>
-                <span style={{ color: "#30363d" }}>{i === servicesCol.length - 1 ? "└" : "├"}</span>{item.label}
+                <span style={{ color: "#30363d" }} aria-hidden="true">{i === servicesCol.length - 1 ? "└" : "├"}</span>{item.label}
               </NavLink>
             ))}
           </div>
-        </div>
-        <div className="mono">
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "11.5px", letterSpacing: "0.12em", color: "var(--text)", marginBottom: "14px" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ff5c8a" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>locations/</div>
+        </nav>
+        <nav className="mono" aria-label="Locations">
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "11.5px", letterSpacing: "0.12em", color: "var(--text)", marginBottom: "14px" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ff5c8a" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>locations/</div>
           <div style={{ borderLeft: "1px solid var(--border)", paddingLeft: "14px", display: "flex", flexDirection: "column" }}>
             {locationsCol.map((item, i) => (
               <NavLink key={item.href} href={item.href} className="ft-link" style={{ display: "flex", alignItems: "center", gap: "8px", padding: "5px 0", fontSize: "14px", textDecoration: "none", "--h": "#ff5c8a" }}>
-                <span style={{ color: "#30363d" }}>{i === locationsCol.length - 1 ? "└" : "├"}</span>{item.label}
+                <span style={{ color: "#30363d" }} aria-hidden="true">{i === locationsCol.length - 1 ? "└" : "├"}</span>{item.label}
               </NavLink>
             ))}
           </div>
-        </div>
-        <div className="mono">
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "11.5px", letterSpacing: "0.12em", color: "var(--text)", marginBottom: "14px" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e3b341" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 16v-4M12 8h.01"></path></svg>company/</div>
+        </nav>
+        <nav className="mono" aria-label="Company">
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "11.5px", letterSpacing: "0.12em", color: "var(--text)", marginBottom: "14px" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e3b341" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 16v-4M12 8h.01"></path></svg>company/</div>
           <div style={{ borderLeft: "1px solid var(--border)", paddingLeft: "14px", display: "flex", flexDirection: "column" }}>
             {companyCol.map((item, i) => (
               <NavLink key={item.href} href={item.href} className="ft-link" style={{ display: "flex", alignItems: "center", gap: "8px", padding: "5px 0", fontSize: "14px", textDecoration: "none", "--h": "#e3b341" }}>
-                <span style={{ color: "#30363d" }}>{i === companyCol.length - 1 ? "└" : "├"}</span>{item.label}
+                <span style={{ color: "#30363d" }} aria-hidden="true">{i === companyCol.length - 1 ? "└" : "├"}</span>{item.label}
               </NavLink>
             ))}
           </div>
-        </div>
+        </nav>
       </div>
       <div className="mono" style={{ marginTop: "30px", display: "flex", alignItems: "center", flexWrap: "wrap", gap: 0, fontSize: "12px", color: "var(--text-2)", border: "1px solid var(--border)", borderRadius: "7px", overflow: "hidden" }}>
         <span style={{ display: "flex", alignItems: "center", gap: "7px", background: "#56d4c4", color: "#08292a", fontWeight: 700, padding: "8px 14px" }}><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="6" r="2.5"></circle><circle cx="6" cy="18" r="2.5"></circle><circle cx="18" cy="8" r="2.5"></circle><path d="M6 8.5v7M8.5 6H14a4 4 0 0 1 4 4v.5"></path></svg>main</span>

@@ -133,12 +133,37 @@ export default function Page() {
           <p className="eyebrow">// journey.md <span className="c">// eight years of focused work</span></p>
           <h2 className="title mono">Eight years of focused work</h2>
           <p className="subtitle">From a two-person team to a global studio — built one great project at a time.</p>
-          <div className="grid grid-3 stagger">
-            <div className="cap cap--top"><div className="eyebrow" style={{"color":"var(--pink)"}}>2013 · THE BEGINNING</div><div className="cap__title" style={{"marginTop":"10px"}}>Two people, one rule</div><p className="cap__body">Started as a freelance pair with a single principle: never ship code we wouldn't run ourselves. First 20 projects, all referred. Zero advertising.</p></div>
-            <div className="cap cap--teal"><div className="eyebrow" style={{"color":"var(--teal)"}}>2015 · FIRST ENTERPRISE CLIENT</div><div className="cap__title" style={{"marginTop":"10px"}}>Going beyond MVPs</div><p className="cap__body">Landed our first enterprise engagement — a custom ERP for a mid-size manufacturer. Grew the team to six. Established the code review and architecture review processes we still use today.</p></div>
-            <div className="cap cap--yellow"><div className="eyebrow" style={{"color":"var(--yellow)"}}>2017 · GOING FULL-STACK</div><div className="cap__title" style={{"marginTop":"10px"}}>A real studio</div><p className="cap__body">Expanded to a senior team of designers and engineers serving clients across four continents. Team grew to fifteen. Moved into dedicated offices in Vadodara and London.</p></div>
-            <div className="cap cap--green"><div className="eyebrow" style={{"color":"var(--green)"}}>2020 · SAAS &amp; AI FOCUS</div><div className="cap__title" style={{"marginTop":"10px"}}>Deeper, not wider</div><p className="cap__body">Doubled down on product engineering. Shipped our 100th platform and our first AI features into production systems. Established specialist tracks for mobile, cloud, and AI/ML.</p></div>
-            <div className="cap cap--top"><div className="eyebrow" style={{"color":"var(--pink)"}}>2026 · TODAY</div><div className="cap__title" style={{"marginTop":"10px"}}>A global partner</div><p className="cap__body">200+ systems shipped. 50+ engineers. 15 countries — with an active presence in South Africa, London, and Abidjan alongside our Vadodara base. A 90% client-retention rate and zero failed delivery timelines. Still growing — still senior-only.</p></div>
+          <div className="gitlog">
+            <div className="gitlog__commit">
+              <span className="gitlog__dot"></span>
+              <div className="gitlog__meta"><span className="gitlog__hash">a3f9c21</span><span className="gitlog__date">2013 · the beginning</span></div>
+              <div className="gitlog__title">Two people, one rule</div>
+              <p className="gitlog__body">Started as a freelance pair with a single principle: never ship code we wouldn't run ourselves. First 20 projects, all referred. Zero advertising.</p>
+            </div>
+            <div className="gitlog__commit">
+              <span className="gitlog__dot"></span>
+              <div className="gitlog__meta"><span className="gitlog__hash">7b2e841</span><span className="gitlog__date">2015 · first enterprise client</span></div>
+              <div className="gitlog__title">Going beyond MVPs</div>
+              <p className="gitlog__body">Landed our first enterprise engagement — a custom ERP for a mid-size manufacturer. Grew the team to six. Established the code review and architecture review processes we still use today.</p>
+            </div>
+            <div className="gitlog__commit">
+              <span className="gitlog__dot"></span>
+              <div className="gitlog__meta"><span className="gitlog__hash">e91d3f0</span><span className="gitlog__date">2017 · going full-stack</span></div>
+              <div className="gitlog__title">A real studio</div>
+              <p className="gitlog__body">Expanded to a senior team of designers and engineers serving clients across four continents. Team grew to fifteen. Moved into dedicated offices in Vadodara and London.</p>
+            </div>
+            <div className="gitlog__commit">
+              <span className="gitlog__dot"></span>
+              <div className="gitlog__meta"><span className="gitlog__hash">c4a8b62</span><span className="gitlog__date">2020 · SaaS &amp; AI focus</span></div>
+              <div className="gitlog__title">Deeper, not wider</div>
+              <p className="gitlog__body">Doubled down on product engineering. Shipped our 100th platform and our first AI features into production systems. Established specialist tracks for mobile, cloud, and AI/ML.</p>
+            </div>
+            <div className="gitlog__commit is-head">
+              <span className="gitlog__dot"></span>
+              <div className="gitlog__meta"><span className="gitlog__hash">HEAD</span><span className="gitlog__branch">main</span><span className="gitlog__date">2026 · today</span></div>
+              <div className="gitlog__title">A global partner</div>
+              <p className="gitlog__body">200+ systems shipped. 50+ engineers. 15 countries — with an active presence in South Africa, London, and Abidjan alongside our Vadodara base. A 90% client-retention rate and zero failed delivery timelines. Still growing — still senior-only.</p>
+            </div>
           </div>
           <div className="panel-note">
             <div className="panel-note__lbl">THE_JOURNEY_SO_FAR</div>
