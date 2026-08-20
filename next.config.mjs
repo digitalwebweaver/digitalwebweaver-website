@@ -1,6 +1,6 @@
 /** @type {import("next").NextConfig} */
 const nextConfig = {
-  output: "export",        // static HTML export — SEO-friendly, host anywhere
+  // no "output: export" — /api/lead needs a server runtime (Vercel provides this)
   trailingSlash: true,
   images: { unoptimized: true }
 };

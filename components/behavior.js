@@ -220,22 +220,55 @@ export function initDWW() {
     typeTimers.push(setTimeout(tick, 400)); // brief pause before typing starts
   });
 
-  /* ---- Lead form (mock submit) ---- */
+  /* ---- Lead form ---- */
   document.querySelectorAll("[data-form]").forEach(function (form) {
     var card = form.closest(".formcard");
     var success = card ? card.querySelector(".form__success") : null;
+    var submitBtn = form.querySelector('[type="submit"]');
+    var submitLabel = submitBtn ? submitBtn.textContent : "";
+    var errorEl = null;
+
+    function showError(msg) {
+      if (!errorEl) {
+        errorEl = document.createElement("p");
+        errorEl.className = "form__error";
+        form.appendChild(errorEl);
+      }
+      errorEl.textContent = msg;
+    }
+
     on(form, "submit", function (e) {
       e.preventDefault();
       var nameField = form.querySelector('[name="name"]');
-      if (success) {
-        var slot = success.querySelector("[data-name-slot]");
-        if (slot) {
-          var n = nameField && nameField.value.trim();
-          slot.textContent = n ? ", " + n.split(" ")[0] : "";
-        }
-        form.hidden = true;
-        success.hidden = false;
-      }
+      var data = Object.fromEntries(new FormData(form).entries());
+      data.page = window.location.pathname;
+
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending…"; }
+      if (errorEl) errorEl.textContent = "";
+
+      fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+        .then(function (res) { if (!res.ok) throw new Error("request failed"); })
+        .then(function () {
+          if (success) {
+            var slot = success.querySelector("[data-name-slot]");
+            if (slot) {
+              var n = nameField && nameField.value.trim();
+              slot.textContent = n ? ", " + n.split(" ")[0] : "";
+            }
+            form.hidden = true;
+            success.hidden = false;
+          }
+        })
+        .catch(function () {
+          showError("Something went wrong sending this — please try again, or email info@digitalwebweaver.com directly.");
+        })
+        .finally(function () {
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = submitLabel; }
+        });
     });
     var reset = success ? success.querySelector(".s-reset") : null;
     if (reset) {
