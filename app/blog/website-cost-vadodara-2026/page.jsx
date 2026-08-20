@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { blogPostingSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "What Does a Website Really Cost in Vadodara? 2026 Guide" },
@@ -12,6 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={blogPostingSchema({ headline: "What Does a Website Actually Cost in Vadodara? A 2026 Reality Check", description: "Confused by ₹8,000 to ₹8,00,000 website quotes in Vadodara? Here's an honest 2026 breakdown of what websites actually cost and what drives the price.", href: "/blog/website-cost-vadodara-2026/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Post">⌂</button>
       <button className="activitybar__btn" data-scroll="s-article" data-target="s-article" title="Article">≡</button>

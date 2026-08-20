@@ -43,7 +43,7 @@ export default function Page() {
             </div>
             <div className="hero__stats">
               <div className="hero__stat"><b style={{"color":"var(--pink)"}}>200+</b><span>projects delivered</span></div>
-              <div className="hero__stat"><b style={{"color":"var(--teal)"}}>8yrs</b><span>in business</span></div>
+              <div className="hero__stat"><b style={{"color":"var(--teal)"}}>12yrs</b><span>in business</span></div>
               <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>150+</b><span>trusted clients</span></div>
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function Page() {
         <section className="stat-strip">
           <div className="stat-cell"><div className="big" style={{"color":"var(--pink)"}}>200+</div><div className="lbl">PROJECTS_DELIVERED</div><div className="sub">▲ since 2013</div></div>
           <div className="stat-cell"><div className="big" style={{"color":"var(--teal)"}}>SR</div><div className="lbl">ENGINEER_LEVEL</div><div className="sub">▲ senior only</div></div>
-          <div className="stat-cell"><div className="big" style={{"color":"var(--yellow)"}}>8yrs</div><div className="lbl">IN_BUSINESS</div><div className="sub">▲ since 2013</div></div>
+          <div className="stat-cell"><div className="big" style={{"color":"var(--yellow)"}}>12yrs</div><div className="lbl">IN_BUSINESS</div><div className="sub">▲ since 2013</div></div>
           <div className="stat-cell"><div className="big" style={{"color":"var(--pink)"}}>150+</div><div className="lbl">TRUSTED_CLIENTS</div><div className="sub">▲ India · UK · US · Global</div></div>
         </section>
 

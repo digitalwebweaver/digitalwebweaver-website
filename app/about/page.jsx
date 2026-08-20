@@ -41,7 +41,7 @@ export default function Page() {
               <Link className="btn btn--ghost" href="/careers/">We're hiring</Link>
             </div>
             <div className="hero__stats">
-              <div className="hero__stat"><b style={{"color":"var(--pink)"}}>8+</b><span>years building</span></div>
+              <div className="hero__stat"><b style={{"color":"var(--pink)"}}>12+</b><span>years building</span></div>
               <div className="hero__stat"><b style={{"color":"var(--teal)"}}>200+</b><span>systems shipped</span></div>
               <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>50+</b><span>expert engineers</span></div>
             </div>
@@ -70,7 +70,7 @@ export default function Page() {
           <p className="eyebrow">// our-story.md <span className="c">// craft over shortcuts</span></p>
           <h2 className="title mono">Started with a belief — craft over shortcuts</h2>
           <p className="subtitle" style={{"maxWidth":"760px"}}>Digital Web Weaver began as a two-person partnership with a single operating rule: never ship code we wouldn't stake our own reputation on. Every client was a referral. Every project was over-delivered.</p>
-          <p className="subtitle" style={{"maxWidth":"760px","marginTop":"14px"}}>Eight years on, that principle has never changed. We've grown to a senior team of fifty-plus engineers, designers, and architects. We work across mobile, cloud, AI, and enterprise — but we still take every engagement as if our name is on the line. Because it is.</p>
+          <p className="subtitle" style={{"maxWidth":"760px","marginTop":"14px"}}>Twelve years on, that principle has never changed. We've grown to a senior team of fifty-plus engineers, designers, and architects. We work across mobile, cloud, AI, and enterprise — but we still take every engagement as if our name is on the line. Because it is.</p>
           <ul className="check-list" style={{"maxWidth":"680px"}}>
             <li><span className="plus">+</span><span>Senior-only team — no juniors hidden behind the contract</span></li>
             <li><span className="plus">+</span><span>Every project has a dedicated tech lead and full code ownership</span></li>
@@ -130,8 +130,8 @@ export default function Page() {
         </section>
 
         <section id="s-journey" className="section reveal">
-          <p className="eyebrow">// journey.md <span className="c">// eight years of focused work</span></p>
-          <h2 className="title mono">Eight years of focused work</h2>
+          <p className="eyebrow">// journey.md <span className="c">// twelve years of focused work</span></p>
+          <h2 className="title mono">Twelve years of focused work</h2>
           <p className="subtitle">From a two-person team to a global studio — built one great project at a time.</p>
           <div className="gitlog">
             <div className="gitlog__commit">
@@ -175,7 +175,7 @@ export default function Page() {
           <p className="eyebrow">// recognition.md</p>
           <h2 className="title mono">Recognition</h2>
           <div className="mono" style={{ marginTop: "22px", display: "flex", alignItems: "center", flexWrap: "wrap", gap: 0, fontSize: "13px", color: "var(--text-2)", border: "1px solid var(--border)", borderRadius: "7px", overflow: "hidden" }}>
-            <span style={{ display: "flex", alignItems: "center", gap: "7px", background: "var(--yellow)", color: "#2b2205", fontWeight: 700, padding: "10px 16px" }}>★ 4.9/5 Clutch</span>
+            <span style={{ display: "flex", alignItems: "center", gap: "7px", background: "var(--yellow)", color: "#2b2205", fontWeight: 700, padding: "10px 16px" }}>★ 4.9/5 average</span>
             <span style={{ padding: "10px 16px", borderRight: "1px solid var(--border)", display: "flex", alignItems: "center", gap: "7px" }}><span style={{ color: "var(--teal)" }}>✓</span>ISO 27001 aligned</span>
             <span style={{ padding: "10px 16px", borderRight: "1px solid var(--border)", display: "flex", alignItems: "center", gap: "7px" }}><span style={{ color: "var(--teal)" }}>✓</span>SOC 2 Type II</span>
             <span style={{ padding: "10px 16px", borderRight: "1px solid var(--border)", display: "flex", alignItems: "center", gap: "7px" }}><span style={{ color: "var(--teal)" }}>✓</span>GDPR aligned</span>

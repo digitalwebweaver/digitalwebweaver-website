@@ -1,17 +1,20 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "MVP Development Company India | Launch in 8-12 Weeks — Digital Web Weaver" },
-  description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and clean architecture ready for technical due diligence. 150+ clients, 4.9/5 on Clutch.",
+  description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and clean architecture ready for technical due diligence. 150+ clients, 4.9/5 average client rating.",
   alternates: { canonical: "/mvp-development/" },
-  openGraph: { title: "MVP Development Company India | Launch in 8-12 Weeks — Digital Web Weaver", description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and clean architecture ready for technical due diligence. 150+ clients, 4.9/5 on Clutch.", url: "/mvp-development/", type: "website" }
+  openGraph: { title: "MVP Development Company India | Launch in 8-12 Weeks — Digital Web Weaver", description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and clean architecture ready for technical due diligence. 150+ clients, 4.9/5 average client rating.", url: "/mvp-development/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
+    <JsonLd data={serviceSchema({ name: "MVP Development", description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and clean architecture ready for technical due diligence. 150+ clients, 4.9/5 average client rating.", href: "/mvp-development/" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What's included">⚙</button>
@@ -44,7 +47,7 @@ export default function Page() {
             <div className="hero__stats">
               <div className="hero__stat"><b style={{"color":"var(--pink)"}}>8–12wk</b><span>idea to launch</span></div>
               <div className="hero__stat"><b style={{"color":"var(--teal)"}}>150+</b><span>clients served</span></div>
-              <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>4.9/5</b><span>Clutch rating</span></div>
+              <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>4.9/5</b><span>average rating</span></div>
             </div>
             <div className="trust">
               <p className="trust__label">// India · UK · US · Global</p>

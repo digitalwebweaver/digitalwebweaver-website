@@ -44,7 +44,7 @@ export default function Page() {
             <div className="hero__stats">
               <div className="hero__stat"><b style={{"color":"var(--pink)"}}>200+</b><span>projects delivered</span></div>
               <div className="hero__stat"><b style={{"color":"var(--teal)"}}>Sr</b><span>senior engineers only</span></div>
-              <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>8yr</b><span>in business</span></div>
+              <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>12yr</b><span>in business</span></div>
             </div>
             <div className="trust">
               <p className="trust__label">// coverage</p>
@@ -89,7 +89,7 @@ export default function Page() {
 
         <section className="stat-strip">
           <div className="stat-cell"><div className="big" style={{"color":"var(--pink)"}}>200+</div><div className="lbl">PROJECTS_DELIVERED</div><div className="sub">▲ for UK &amp; global clients</div></div>
-          <div className="stat-cell"><div className="big" style={{"color":"var(--teal)"}}>8yr</div><div className="lbl">IN_BUSINESS</div><div className="sub">▲ senior engineers only</div></div>
+          <div className="stat-cell"><div className="big" style={{"color":"var(--teal)"}}>12yr</div><div className="lbl">IN_BUSINESS</div><div className="sub">▲ senior engineers only</div></div>
           <div className="stat-cell"><div className="big" style={{"color":"var(--yellow)"}}>50-70%</div><div className="lbl">COST_SAVINGS</div><div className="sub">▲ vs UK agency rates</div></div>
           <div className="stat-cell"><div className="big" style={{"color":"var(--pink)"}}>GMT</div><div className="lbl">HOURS_OVERLAP</div><div className="sub">▲ GMT/BST working hours</div></div>
         </section>

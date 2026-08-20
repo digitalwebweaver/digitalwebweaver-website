@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "SaaS Development Company India | Multi-Tenant & Cloud-Native — Digital Web Weaver" },
@@ -12,6 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={serviceSchema({ name: "SaaS Products", description: "Multi-tenant SaaS platforms built to scale — subscription billing, SSO, product analytics, and architecture that survives Series A growth. 150+ clients served.", href: "/saas-development/" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Services">⚙</button>

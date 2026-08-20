@@ -44,7 +44,7 @@ export default function Page() {
             <div className="hero__stats">
               <div className="hero__stat"><b style={{color:"var(--pink)"}}>+40%</b><span>avg conversion lift</span></div>
               <div className="hero__stat"><b style={{color:"var(--teal)"}}>150+</b><span>clients trust us</span></div>
-              <div className="hero__stat"><b style={{color:"var(--yellow)"}}>4.9/5</b><span>Clutch rating</span></div>
+              <div className="hero__stat"><b style={{color:"var(--yellow)"}}>4.9/5</b><span>average rating</span></div>
             </div>
           </div>
           <div className="formcard" id="estimate">

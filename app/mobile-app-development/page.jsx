@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Mobile App Development Company | iOS, Android & React Native — Digital Web Weaver" },
@@ -12,6 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={serviceSchema({ name: "Mobile Apps", description: "Native iOS and Android apps, React Native, and Flutter builds profiled for 60fps. 55+ apps shipped, 4.8★ average rating, end-to-end App Store and Play Store submission.", href: "/mobile-app-development/" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Services">⚙</button>

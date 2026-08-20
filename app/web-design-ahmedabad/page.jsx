@@ -43,8 +43,8 @@ export default function Page() {
             </div>
             <div className="hero__stats">
               <div className="hero__stat"><b style={{"color":"var(--pink)"}}>200+</b><span>projects delivered</span></div>
-              <div className="hero__stat"><b style={{"color":"var(--teal)"}}>8yrs</b><span>years in business</span></div>
-              <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>4.9</b><span>Clutch rating</span></div>
+              <div className="hero__stat"><b style={{"color":"var(--teal)"}}>12yrs</b><span>years in business</span></div>
+              <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>4.9</b><span>average rating</span></div>
             </div>
           </div>
           <div className="formcard" id="estimate">

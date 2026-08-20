@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { blogPostingSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "WordPress or Custom-Built? The Honest Answer for Your Site | Digital Web Weaver" },
@@ -12,6 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={blogPostingSchema({ headline: "WordPress or Custom-Built? The Honest Answer for Your Business Website", description: "WordPress or a custom-coded website? Here's the honest comparison — cost, speed, security, and scale — so you pick the right one for your business in 2026.", href: "/blog/wordpress-vs-custom-website/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-article" data-target="s-article" title="Article">❯</button>

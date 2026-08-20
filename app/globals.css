@@ -5,7 +5,12 @@
    external fonts.googleapis.com round-trip.
    ============================================================ */
 
-/* ---- Design tokens ---- */
+/* ---- Design tokens ----
+   Dark is the bare :root (default, no data-theme needed). Light lives in
+   [data-theme="light"] below — same token names, so every rule elsewhere
+   in this file that reads var(--x) already theme-switches for free. The
+   *-rgb triplets exist only so rgba() glows/washes can ride the same
+   swap instead of staying pinned to one theme's hue. */
 :root {
   --bg:#0d1117;
   --panel:#161b22;
@@ -30,6 +35,12 @@
   --yellow:#e3b341;
   --red:#f8817f;
 
+  --pink-rgb:255,92,138;
+  --teal-rgb:86,212,196;
+  --green-rgb:154,209,127;
+  --yellow-rgb:227,179,65;
+  --red-rgb:248,129,127;
+
   --mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   --sans: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 
@@ -37,6 +48,47 @@
   --pad-y:44px;
   --sidebar-w:264px;
   --activity-w:52px;
+}
+
+/* Light theme. Accents are darkened (not just inverted) so they clear
+   WCAG AA both as text-on-page AND as the bg-with-var(--bg)-text badge
+   pattern used throughout (.chip.is-active, .pipe__dot, etc). */
+[data-theme="light"] {
+  --bg:#ffffff;
+  --panel:#f6f8fa;
+  --panel-2:#eef1f4;
+  --panel-hi:#eaf1fb;
+  --border:#d0d7de;
+  --border-2:#afb8c1;
+  --line:#8c959f;
+
+  --text:#1f2328;
+  --text-2:#3d444d;
+  --text-3:#59616a;
+  --muted:#6e7781;
+  --muted-2:#8c959f;
+  --dim:#b7c0c8;
+
+  --pink:#d6336c;
+  --pink-hi:#a61e4d;
+  --pink-soft:#c2255c;
+  --teal:#0f8a7a;
+  --green:#4b7c33;
+  --yellow:#966b1f;
+  --red:#c8323f;
+
+  --pink-rgb:214,51,108;
+  --teal-rgb:15,138,122;
+  --green-rgb:75,124,51;
+  --yellow-rgb:150,107,31;
+  --red-rgb:200,50,63;
+}
+
+/* Theme-change fade — scoped to the few properties that actually shift,
+   short enough not to feel laggy on hover states (more specific rules
+   with their own transition win over this by specificity). */
+*, *::before, *::after {
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
 }
 
 /* ---- Reset ---- */
@@ -98,11 +150,26 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .topbar__nav > a { font-size:12.5px; color:var(--text-3); text-decoration:none; transition:color .15s ease; }
 .topbar__nav > a:hover { color:var(--pink); }
 
-/* Mega menu — hover-driven dropdown off a topbar trigger. The panel sits
-   at top:100% with no margin/offset gap (only its own padding), so the
-   cursor never crosses dead space between trigger and panel — a real gap
-   there would fire mouseleave before reaching the dropdown. */
+/* Mega menu — hover-driven dropdown off a topbar trigger. The panel now
+   sits 12px below the topbar for breathing room, which would normally
+   reopen the "real gap fires mouseleave before the cursor reaches the
+   panel" problem — so ::after bridges that exact gap with an invisible,
+   hover target scoped to the TRIGGER's own width, not the panel's — a
+   wider bridge sized to the panel (up to 900px for cols4) overlaps
+   neighboring triggers' bridges in the topbar and steals their hover,
+   which is exactly the bug this replaced. Panels are wider than their
+   triggers, but that's fine: the user only needs to cross the 12px gap
+   once, typically straight down from the trigger, and is then inside the
+   panel's own (wide) hitbox and free to move sideways within it. */
 .megamenu-wrap { position:relative; height:100%; display:flex; align-items:center; }
+.megamenu-wrap::after {
+  content:"";
+  position:absolute;
+  top:100%;
+  left:0;
+  right:0;
+  height:12px;
+}
 .megamenu-trigger { display:flex; align-items:center; gap:5px; font-size:12.5px; color:var(--text-3); text-decoration:none; transition:color .15s ease; }
 .megamenu-trigger:hover, .megamenu-trigger.is-active { color:var(--pink); }
 .megamenu-trigger .chev { font-size:8px; transition:transform .18s ease; display:inline-block; }
@@ -114,11 +181,11 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
    internally instead of overflowing the viewport. Width scales in a
    fixed per-column increment (~220px) so cols2/cols3/cols4 feel like one
    consistent system instead of three arbitrarily-sized panels. */
-.megamenu { position:absolute; top:100%; left:50%; transform:translateX(-50%) translateY(-6px); background:var(--panel); border:1px solid var(--border-2); border-top:2px solid var(--pink); box-shadow:0 24px 60px -16px rgba(0,0,0,.65); opacity:0; visibility:hidden; pointer-events:none; transition:opacity .18s ease, transform .18s ease, visibility .18s linear; z-index:100; padding:22px 24px 0; display:grid; gap:22px 28px; align-content:start; max-height:calc(100vh - 60px); overflow-y:auto; overscroll-behavior:contain; }
+.megamenu { position:absolute; top:calc(100% + 12px); left:50%; transform:translateX(-50%) translateY(-6px); background:var(--panel); border:1px solid var(--border-2); border-top:2px solid var(--pink); border-radius:8px; box-shadow:0 24px 60px -16px rgba(0,0,0,.65); opacity:0; visibility:hidden; pointer-events:none; transition:opacity .18s ease, transform .18s ease, visibility .18s linear; z-index:100; padding:22px 24px 0; display:grid; gap:22px 28px; align-content:start; max-height:calc(100vh - 72px); overflow-y:auto; overscroll-behavior:contain; }
 .megamenu.is-open { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); pointer-events:auto; }
-.megamenu.cols2 { grid-template-columns:1fr 1fr; width:min(460px, calc(100vw - 40px)); }
-.megamenu.cols3 { grid-template-columns:1fr 1fr 1fr; width:min(680px, calc(100vw - 40px)); }
-.megamenu.cols4 { grid-template-columns:1fr 1fr 1fr 1fr; width:min(900px, calc(100vw - 40px)); }
+.megamenu.cols2 { grid-template-columns:1fr 1fr; width:min(640px, calc(100vw - 40px)); }
+.megamenu.cols3 { grid-template-columns:1fr 1fr 1fr; width:min(1100px, calc(100vw - 40px)); }
+.megamenu.cols4 { grid-template-columns:1fr 1fr 1fr 1fr; width:min(1420px, calc(100vw - 40px)); }
 .megamenu__col h4 { font-size:11px; letter-spacing:.1em; color:var(--muted-2); font-weight:400; font-family:var(--mono); text-transform:uppercase; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--border); }
 .megamenu__item { display:flex; align-items:flex-start; gap:10px; padding:7px 0; text-decoration:none; }
 .megamenu__ico { flex-shrink:0; width:20px; height:20px; display:flex; align-items:center; justify-content:center; color:var(--teal); margin-top:1px; transition:color .15s ease, transform .15s ease; }
@@ -132,6 +199,20 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .megamenu__foot { grid-column:1/-1; margin:4px -24px 0; padding:14px 24px; background:var(--bg); border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
 .megamenu__foot .mono { font-size:11px; color:var(--muted-2); }
 .megamenu__foot a { font-size:12.5px; font-weight:700; color:var(--pink); text-decoration:none; font-family:var(--mono); }
+/* Simple dropdown — same trigger/bridge system as the mega menu, but a
+   single narrow list for triggers with too few items (Hire Resource: 7)
+   to justify multi-column treatment. */
+.simplemenu { position:absolute; top:calc(100% + 12px); left:50%; transform:translateX(-50%) translateY(-6px); background:var(--panel); border:1px solid var(--border-2); border-top:2px solid var(--pink); border-radius:8px; box-shadow:0 24px 60px -16px rgba(0,0,0,.65); opacity:0; visibility:hidden; pointer-events:none; transition:opacity .18s ease, transform .18s ease, visibility .18s linear; z-index:100; padding:10px; width:240px; }
+.simplemenu.is-open { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); pointer-events:auto; }
+.simplemenu__item { display:flex; align-items:center; gap:11px; padding:9px 10px; border-radius:6px; text-decoration:none; transition:background-color .12s ease; }
+.simplemenu__item:hover { background:var(--panel-2); }
+.simplemenu__ico { flex-shrink:0; width:20px; height:20px; display:flex; align-items:center; justify-content:center; color:var(--teal); }
+.simplemenu__ico img { width:18px; height:18px; display:block; }
+.simplemenu__label { font-size:13.5px; color:var(--text-2); font-weight:600; }
+.simplemenu__item:hover .simplemenu__label { color:var(--pink); }
+.simplemenu__foot { margin-top:4px; padding:10px 10px 4px; border-top:1px solid var(--border); }
+.simplemenu__foot a { font-size:12.5px; font-weight:700; color:var(--pink); text-decoration:none; font-family:var(--mono); }
+
 .topbar__phone { font-size:12.5px; color:var(--muted); }
 .topbar__cta { font-size:12.5px; color:var(--bg); background:var(--pink); padding:6px 14px; font-weight:700; white-space:nowrap; }
 .topbar__cta:hover { color:var(--bg); filter:brightness(1.08); }
@@ -193,9 +274,15 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .content { flex:1; overflow-y:auto; background:var(--bg); }
 
 /* Status bar */
-.statusbar { height:30px; background:var(--pink); color:var(--bg); display:flex; align-items:center; padding:0 16px; gap:18px; flex-shrink:0; font-family:var(--mono); font-size:12px; }
+.statusbar { height:30px; background:var(--pink); color:var(--bg); display:flex; align-items:center; padding:0 16px; gap:18px; flex-shrink:0; font-family:var(--mono); font-size:12px; overflow:hidden; white-space:nowrap; }
 .statusbar b { font-weight:700; }
-.statusbar__spacer { margin-left:auto; }
+.statusbar__spacer { margin-left:auto; overflow:hidden; text-overflow:ellipsis; }
+@media (max-width:480px){
+  /* Keep the live/uptime status (the one piece with real information) and
+     drop the purely decorative editor-chrome trailing it, rather than
+     letting it overflow or truncate mid-word on narrow phones. */
+  .statusbar > span:not(.statusbar__spacer) { display:none; }
+}
 
 /* Mobile drawer backdrop */
 .backdrop { display:none; position:fixed; inset:0; background:rgba(0,0,0,.55); z-index:40; }
@@ -322,8 +409,8 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .reviews-grid { display:grid; grid-template-columns:repeat(3,1fr); }
 .review-cell:last-child { border-right:none !important; }
 .ind-line:hover { background:var(--panel); }
-.ft-link { color:#adbac7; transition:color .13s ease, transform .13s ease; }
-.ft-link:hover { color:var(--h, #adbac7); transform:translateX(3px); }
+.ft-link { color:var(--text-3); transition:color .13s ease, transform .13s ease; }
+.ft-link:hover { color:var(--h, var(--text-3)); transform:translateX(3px); }
 .ft-contact { transition:color .14s ease, border-color .14s ease; }
 
 /* Studio image */
@@ -342,7 +429,7 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .pipe__dot { width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:15px; background:var(--bg); color:var(--muted-2); border:2px solid var(--border-2); transition:all .2s ease; font-family:var(--mono); }
 .pipe__label { font-size:13px; font-weight:700; color:var(--muted); transition:color .2s ease; font-family:var(--mono); }
 .pipe.is-done .pipe__dot { background:var(--teal); color:var(--bg); border-color:var(--teal); }
-.pipe.is-current .pipe__dot { background:var(--pink); color:var(--bg); border-color:var(--pink); transform:scale(1.12); box-shadow:0 0 0 4px rgba(255,92,138,.18); }
+.pipe.is-current .pipe__dot { background:var(--pink); color:var(--bg); border-color:var(--pink); transform:scale(1.12); box-shadow:0 0 0 4px rgba(var(--pink-rgb),.18); }
 .pipe.is-current .pipe__label { color:var(--text); }
 .pipe-detail { margin-top:30px; border:1px solid var(--border); background:var(--panel); display:grid; grid-template-columns:1.25fr 1fr; }
 .pipe-detail__left { padding:30px 32px; border-right:1px solid var(--border); }
@@ -369,7 +456,7 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .gitlog__commit:nth-child(4n+2) .gitlog__dot { border-color:var(--teal); }
 .gitlog__commit:nth-child(4n+3) .gitlog__dot { border-color:var(--yellow); }
 .gitlog__commit:nth-child(4n) .gitlog__dot { border-color:var(--green); }
-.gitlog__commit.is-head .gitlog__dot { background:var(--pink); border-color:var(--pink); box-shadow:0 0 0 4px rgba(255,92,138,.18); }
+.gitlog__commit.is-head .gitlog__dot { background:var(--pink); border-color:var(--pink); box-shadow:0 0 0 4px rgba(var(--pink-rgb),.18); }
 .gitlog__meta { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; font-family:var(--mono); }
 .gitlog__hash { color:var(--teal); font-size:13px; font-weight:700; }
 .gitlog__date { color:var(--muted-2); font-size:12.5px; }
@@ -451,8 +538,8 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .compare__row { border-bottom:1px solid var(--border); font-size:14px; background:var(--bg); }
 .compare__row:last-child { border-bottom:none; }
 .compare__row .c-cap { padding:14px 22px; color:var(--text-2); }
-.compare__row .c-dww { padding:14px 22px; text-align:center; color:var(--green); font-weight:600; background:rgba(154,209,127,.08); border-left:2px solid var(--green); }
-.compare__row .c-typ { padding:14px 22px; text-align:center; color:var(--red); background:rgba(248,129,127,.05); }
+.compare__row .c-dww { padding:14px 22px; text-align:center; color:var(--green); font-weight:600; background:rgba(var(--green-rgb),.08); border-left:2px solid var(--green); }
+.compare__row .c-typ { padding:14px 22px; text-align:center; color:var(--red); background:rgba(var(--red-rgb),.05); }
 
 /* FAQ */
 .faq { margin-top:20px; border:1px solid var(--border); }
@@ -610,7 +697,7 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .activitybar__toggle-wrap { position:relative; }
 .activitybar__toggle { border-left:2px solid var(--pink); color:var(--text); font-size:18px; width:var(--activity-w); height:42px; font-family:var(--mono); margin-bottom:6px; }
 .activitybar__toggle.is-off { border-left-color:transparent; color:var(--muted-2); }
-@keyframes dww-pulse-ring { 0%{ box-shadow:0 0 0 0 rgba(255,92,138,.55); } 70%{ box-shadow:0 0 0 10px rgba(255,92,138,0); } 100%{ box-shadow:0 0 0 0 rgba(255,92,138,0); } }
+@keyframes dww-pulse-ring { 0%{ box-shadow:0 0 0 0 rgba(var(--pink-rgb),.55); } 70%{ box-shadow:0 0 0 10px rgba(var(--pink-rgb),0); } 100%{ box-shadow:0 0 0 0 rgba(var(--pink-rgb),0); } }
 .activitybar__toggle.hint { border-radius:7px; animation:dww-pulse-ring 1.6s ease-out infinite; }
 @keyframes dww-bob { 0%,100%{ transform:translateX(0); } 50%{ transform:translateX(-5px); } }
 /* top:70px (not 50%-centered on the toggle button) so this clears the
@@ -639,3 +726,27 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .office-list .oi { font-family:var(--mono); font-size:18px; line-height:1.2; }
 .office-list h4 { font-weight:700; font-size:16px; color:var(--text); }
 .office-list p { font-size:15px; color:var(--muted); line-height:1.55; margin-top:3px; }
+
+/* ---- Theme toggle (floating) ---- */
+.theme-toggle {
+  position: fixed;
+  right: 22px;
+  bottom: 46px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--panel);
+  border: 1px solid var(--border-2);
+  color: var(--teal);
+  box-shadow: 0 10px 28px -8px rgba(0,0,0,.5);
+  z-index: 60;
+  transition: color .18s ease, border-color .18s ease, background-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.theme-toggle:hover { border-color:var(--pink); color:var(--pink); transform:translateY(-2px); }
+.theme-toggle:active { transform:translateY(0); }
+@media (max-width:900px){
+  .theme-toggle { right:16px; bottom:42px; width:40px; height:40px; }
+}

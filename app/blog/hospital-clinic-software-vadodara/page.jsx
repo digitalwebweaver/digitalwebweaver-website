@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { blogPostingSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Still Running Your Clinic on Paper? It's Costing You | Vadodara" },
@@ -12,6 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={blogPostingSchema({ headline: "Still Running Your Clinic on Paper Files? It's Costing You More Than You Think", description: "Paper files and registers are quietly costing Vadodara clinics time and money. Here's how hospital management software fixes it — features, cost, and a free demo.", href: "/blog/hospital-clinic-software-vadodara/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Post">⌂</button>
       <button className="activitybar__btn" data-scroll="s-article" data-target="s-article" title="Article">≡</button>

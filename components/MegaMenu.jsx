@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import NavLink from "./NavLink";
 import MenuIcon from "./MenuIcon";
+import { useClampedDropdown } from "./useClampedDropdown";
 
 // Hover-driven dropdown. The panel sits at top:100% with zero gap (breathing
 // room comes from its own padding, not margin/offset) so the mouse never
@@ -10,6 +11,8 @@ import MenuIcon from "./MenuIcon";
 export default function MegaMenu({ label, href, columns, footerLabel, footerHref }) {
   const [open, setOpen] = useState(false);
   const closeTimer = useRef(null);
+  const panelRef = useRef(null);
+  const clampOffset = useClampedDropdown(panelRef, open);
 
   function openNow() {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -31,7 +34,13 @@ export default function MegaMenu({ label, href, columns, footerLabel, footerHref
       >
         {label}<span className="chev" aria-hidden="true">▾</span>
       </NavLink>
-      <div className={`megamenu${open ? " is-open" : ""} cols${Math.min(columns.length, 4)}`} role="menu" aria-label={`${label} menu`}>
+      <div
+        ref={panelRef}
+        className={`megamenu${open ? " is-open" : ""} cols${Math.min(columns.length, 4)}`}
+        role="menu"
+        aria-label={`${label} menu`}
+        style={clampOffset ? { transform: `translateX(calc(-50% + ${clampOffset}px)) translateY(${open ? "0" : "-6px"})` } : undefined}
+      >
         {columns.map((col) => (
           <div className="megamenu__col" key={col.title}>
             <h4>{col.title}</h4>

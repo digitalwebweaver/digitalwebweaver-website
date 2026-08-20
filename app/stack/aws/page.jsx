@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "AWS & Cloud Infrastructure — Our Cloud Stack | Digital Web Weaver" },
@@ -12,6 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={serviceSchema({ name: "Hire AWS / Cloud Engineers", description: "AWS, GCP, and Azure cloud architecture: EC2, ECS, Lambda, RDS, EKS and more. Multi-region HA, auto-scaling, security baselines, and cost optimisation. India-based senior team.", href: "/stack/aws/" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="AWS services">⚙</button>
@@ -44,7 +47,7 @@ export default function Page() {
             <div className="hero__stats">
               <div className="hero__stat"><b style={{"color":"var(--pink)"}}>150+</b><span>clients trusted</span></div>
               <div className="hero__stat"><b style={{"color":"var(--teal)"}}>3</b><span>clouds — AWS/GCP/Azure</span></div>
-              <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>4.9/5</b><span>Clutch rating</span></div>
+              <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>4.9/5</b><span>average rating</span></div>
             </div>
           </div>
           <div className="formcard" id="estimate">

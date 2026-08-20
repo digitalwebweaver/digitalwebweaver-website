@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Cybersecurity Audits & Penetration Testing Company India | OWASP, Code Review & Compliance — Digital Web Weaver" },
@@ -12,6 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={serviceSchema({ name: "Cybersecurity Audit", description: "Penetration tests, OWASP Top 10 audits, code security reviews, and GDPR/HIPAA compliance checks — a detailed report with prioritised remediation steps. India-based senior team.", href: "/solutions/cybersecurity/" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Services">⚙</button>

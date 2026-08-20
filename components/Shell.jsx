@@ -3,7 +3,39 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import NavLink from "./NavLink";
 import MegaMenu from "./MegaMenu";
+import SimpleMenu from "./SimpleMenu";
+import JsonLd from "./JsonLd";
 import { siteNav } from "@/lib/siteNav";
+import { breadcrumbSchema } from "@/lib/schema";
+
+function titleCaseSlug(slug) {
+  return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+}
+
+// siteNav group labels ("products/", "engineering/") are styled for the
+// file-tree UI, not meant as display text — clean them up for schema, which
+// machines read, not the sidebar.
+function cleanGroupLabel(label) {
+  const clean = label.replace(/\/$/, "");
+  return clean.charAt(0).toUpperCase() + clean.slice(1);
+}
+
+// Derived from the same siteNav data that already drives the sidebar/footer,
+// so it can't drift out of sync with the real route tree. Pages curated into
+// a nav group get their real label; blog posts (not individually curated)
+// fall back to a slug-derived label rather than nothing.
+function breadcrumbItems(pathname) {
+  if (pathname === "/") return [{ label: "Home", href: "/" }];
+  for (const group of siteNav.groups) {
+    const item = group.items.find((i) => i.href === pathname);
+    if (item) return [{ label: "Home", href: "/" }, { label: cleanGroupLabel(group.label), href: null }, { label: item.label, href: pathname }];
+  }
+  if (pathname.startsWith("/blog/") && pathname !== "/blog/") {
+    const slug = pathname.replace(/^\/blog\/|\/$/g, "");
+    return [{ label: "Home", href: "/" }, { label: "Blog", href: "/blog/" }, { label: titleCaseSlug(slug), href: pathname }];
+  }
+  return [{ label: "Home", href: "/" }, { label: titleCaseSlug(pathname.replace(/^\/|\/$/g, "")), href: pathname }];
+}
 
 const SERVICES_MENU = [
   {
@@ -37,24 +69,14 @@ const SERVICES_MENU = [
   },
 ];
 
-const HIRE_MENU = [
-  {
-    title: "Engagement",
-    items: [
-      { label: "Hire Dedicated Team", href: "/hire-dedicated-resource/", icon: "users", desc: "Senior engineers, embedded with you" },
-    ],
-  },
-  {
-    title: "By stack",
-    items: [
-      { label: "React / Next.js", href: "/react-developer/", badge: "teal" },
-      { label: "Node.js", href: "/nodejs-developer/", badge: "green" },
-      { label: "Laravel / PHP", href: "/laravel-developer/", badge: "pink" },
-      { label: "Python / Django", href: "/python-developer/", badge: "yellow" },
-      { label: "MySQL / PostgreSQL", href: "/stack/databases/", badge: "teal" },
-      { label: "AWS / Cloud", href: "/stack/aws/", badge: "yellow" },
-    ],
-  },
+const HIRE_ITEMS = [
+  { label: "Hire Dedicated Team", href: "/hire-dedicated-resource/", icon: "users" },
+  { label: "React / Next.js", href: "/react-developer/", logo: "react" },
+  { label: "Node.js", href: "/nodejs-developer/", logo: "nodedotjs" },
+  { label: "Laravel / PHP", href: "/laravel-developer/", logo: "laravel" },
+  { label: "Python / Django", href: "/python-developer/", logo: "python" },
+  { label: "MySQL / PostgreSQL", href: "/stack/databases/", logo: "postgresql" },
+  { label: "AWS / Cloud", href: "/stack/aws/", icon: "cloud" },
 ];
 
 const PRODUCTS_MENU = [
@@ -159,8 +181,11 @@ export default function Shell({ children }) {
     });
   }
 
+  const crumbs = breadcrumbItems(pathname);
+
   return (
     <div className="ide">
+      {crumbs.length > 1 && <JsonLd data={breadcrumbSchema(crumbs)} />}
       <header className="topbar">
         <button className="hamburger" aria-label="Open menu" onClick={() => setDrawerOpen((v) => !v)}>☰</button>
         <span className="topbar__lights"><span className="dot dot--red"></span><span className="dot dot--amber"></span><span className="dot dot--green"></span></span>
@@ -169,7 +194,7 @@ export default function Shell({ children }) {
           <nav className="topbar__nav" aria-label="Quick links">
             <MegaMenu label="Services" href="/services/" columns={SERVICES_MENU} footerLabel="View all services" footerHref="/services/" />
             <MegaMenu label="Products" href="/products/" columns={PRODUCTS_MENU} footerLabel="View all products" footerHref="/products/" />
-            <MegaMenu label="Hire Resource" href="/hire-dedicated-resource/" columns={HIRE_MENU} footerLabel="Talk to us" footerHref="/hire-dedicated-resource/" />
+            <SimpleMenu label="Hire Resource" href="/hire-dedicated-resource/" items={HIRE_ITEMS} footerLabel="Talk to us" footerHref="/hire-dedicated-resource/" />
             <NavLink href="/about/">About</NavLink>
             <NavLink href="/portfolio/">Portfolio</NavLink>
           </nav>
@@ -180,8 +205,8 @@ export default function Shell({ children }) {
 
       <div className="body">
         <aside className={`sidebar scroll${collapsed ? " is-collapsed" : ""}${drawerOpen ? " is-open" : ""}`} aria-label="Explorer">
-          <NavLink href="/" style={{ display: "flex", alignItems: "center", gap: "10px", padding: "16px 16px 15px", borderBottom: "1px solid #21262d", textDecoration: "none" }}>
-            <img src="/assets/dww-logo.png" alt="Digital Web Weaver" style={{ height: "46px", width: "auto", display: "block" }} />
+          <NavLink href="/" style={{ display: "flex", alignItems: "center", gap: "10px", padding: "16px 16px 15px", borderBottom: "1px solid var(--border)", textDecoration: "none" }}>
+            <img src="/assets/dww-logo.png" alt="Digital Web Weaver" width="118" height="46" style={{ height: "46px", width: "auto", display: "block" }} />
           </NavLink>
           {/* Desktop has the topbar mega menu for this; on the mobile drawer
               that's hidden, so give touch users a same jump to the 4 pages

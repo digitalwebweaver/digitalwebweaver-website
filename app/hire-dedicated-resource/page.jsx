@@ -1,5 +1,7 @@
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Hire Dedicated Developers India | Digital Web Weaver" },
@@ -11,6 +13,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={serviceSchema({ name: "Hire Dedicated Team", description: "Hire dedicated developers from India. Scale your team with vetted full-stack, mobile, AI, and DevOps engineers — flexible 1-to-12 month engagements, deployed in 72 hours.", href: "/hire-dedicated-resource/" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-models" data-target="s-models" title="Models &amp; pricing">◈</button>

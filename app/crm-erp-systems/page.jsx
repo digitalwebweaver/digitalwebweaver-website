@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Custom CRM & ERP Development Company | India & Global — Digital Web Weaver" },
@@ -12,6 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={serviceSchema({ name: "ERP Systems", description: "Custom CRM and ERP systems built around your workflows — sales pipeline, inventory, HR, finance, and BI in one connected system. 150+ clients, operating since 2013.", href: "/crm-erp-systems/" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Modules">⚙</button>
@@ -43,7 +46,7 @@ export default function Page() {
             </div>
             <div className="hero__stats">
               <div className="hero__stat"><b style={{"color":"var(--pink)"}}>150+</b><span>clients trusted</span></div>
-              <div className="hero__stat"><b style={{"color":"var(--teal)"}}>4.9/5</b><span>Clutch rating</span></div>
+              <div className="hero__stat"><b style={{"color":"var(--teal)"}}>4.9/5</b><span>average rating</span></div>
               <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>2013</b><span>building since</span></div>
             </div>
             <div className="trust">

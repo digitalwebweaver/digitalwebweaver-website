@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { softwareApplicationSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "GlowDesk — Aesthetic Clinic Management Software | Digital Web Weaver" },
@@ -12,6 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={softwareApplicationSchema({ name: "GlowDesk", description: "GlowDesk brings booking, treatment plans, before/after galleries, consent forms, billing, and automated follow-ups into one branded system for aesthetic clinics.", href: "/glowdesk/", review: { author: "Dr. Anjali Mistry", body: "Our no-show rate used to eat into nearly a fifth of our schedule. The automated reminders alone paid for the system in the first month — and the before/after galleries have become a real selling point in consultations." } })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

@@ -43,7 +43,7 @@ export default function Page() {
             </div>
             <div className="hero__stats">
               <div className="hero__stat"><b style={{"color":"var(--pink)"}}>200+</b><span>projects delivered</span></div>
-              <div className="hero__stat"><b style={{"color":"var(--teal)"}}>8yr</b><span>in business</span></div>
+              <div className="hero__stat"><b style={{"color":"var(--teal)"}}>12yr</b><span>in business</span></div>
               <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>150+</b><span>clients served</span></div>
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function Page() {
 
         <section className="stat-strip">
           <div className="stat-cell"><div className="big" style={{"color":"var(--pink)"}}>200+</div><div className="lbl">PROJECTS_DELIVERED</div><div className="sub">▲ across Gujarat &amp; beyond</div></div>
-          <div className="stat-cell"><div className="big" style={{"color":"var(--teal)"}}>8yr</div><div className="lbl">IN_BUSINESS</div><div className="sub">▲ serving Gujarat since 2013</div></div>
+          <div className="stat-cell"><div className="big" style={{"color":"var(--teal)"}}>12yr</div><div className="lbl">IN_BUSINESS</div><div className="sub">▲ serving Gujarat since 2013</div></div>
           <div className="stat-cell"><div className="big" style={{"color":"var(--yellow)"}}>150+</div><div className="lbl">CLIENTS_SERVED</div><div className="sub">▲ SMEs to enterprises</div></div>
           <div className="stat-cell"><div className="big" style={{"color":"var(--pink)"}}>4</div><div className="lbl">SERVICE_AREAS</div><div className="sub">▲ Vadodara·Ahmedabad·Surat·Rajkot</div></div>
         </section>
@@ -105,7 +105,7 @@ export default function Page() {
             <div className="cap cap--top"><div className="eyebrow" style={{"color":"var(--pink)"}}>01 · LOCAL</div><div className="cap__title" style={{"marginTop":"10px"}}>Built and rooted in Gujarat</div><p className="cap__body">Our studio is in Vadodara, Gujarat. We understand the local business culture, the industries, the pace of decision-making, and the value of trust in a business relationship. We're not a distant vendor — we're your neighbours.</p></div>
             <div className="cap cap--top"><div className="eyebrow" style={{"color":"var(--pink)"}}>02 · LANGUAGE</div><div className="cap__title" style={{"marginTop":"10px"}}>We speak your language</div><p className="cap__body">Our team works in Gujarati, Hindi, and English. Business requirements can be explained in the language you think in — not the language you translate into for a vendor.</p></div>
             <div className="cap cap--top"><div className="eyebrow" style={{"color":"var(--pink)"}}>03 · IN-HOUSE</div><div className="cap__title" style={{"marginTop":"10px"}}>No juniors, no outsourcing</div><p className="cap__body">100% of our work is done by our in-house senior engineering team. We don't sub-contract. The engineers you meet are the engineers who build your product.</p></div>
-            <div className="cap cap--top"><div className="eyebrow" style={{"color":"var(--pink)"}}>04 · SINCE 2013</div><div className="cap__title" style={{"marginTop":"10px"}}>Serving Gujarat since 2013</div><p className="cap__body">Over eight years, we've built software for manufacturers, traders, healthcare providers, retailers, and startups across Gujarat — institutional knowledge that makes us faster and more accurate on every project.</p></div>
+            <div className="cap cap--top"><div className="eyebrow" style={{"color":"var(--pink)"}}>04 · SINCE 2013</div><div className="cap__title" style={{"marginTop":"10px"}}>Serving Gujarat since 2013</div><p className="cap__body">Over twelve years, we've built software for manufacturers, traders, healthcare providers, retailers, and startups across Gujarat — institutional knowledge that makes us faster and more accurate on every project.</p></div>
           </div>
         </section>
 

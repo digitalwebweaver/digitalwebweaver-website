@@ -85,7 +85,7 @@ export default function Page() {
             <a className="cap cap--teal link" href="mailto:info@digitalwebweaver.com"><div className="cap__head"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg><span className="cap__title">Email us</span></div><div className="cap__body">info@digitalwebweaver.com</div><div className="cap__meta">Best for detailed briefs</div><div className="cap__go">Send email ↗</div></a>
             <a className="cap cap--teal link" href="tel:+919712515105"><div className="cap__head"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg><span className="cap__title">Call us</span></div><div className="cap__body">+91 97125 15105</div><div className="cap__meta">Mon–Sat · 10:00–19:00 IST</div><div className="cap__go">Call now ↗</div></a>
             <a className="cap cap--teal link" href="https://wa.me/919722915105"><div className="cap__head"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.8-.8L3 20l1-4.2a8.4 8.4 0 0 1-.8-3.8A8.4 8.4 0 0 1 11.5 3 8.4 8.4 0 0 1 21 11.5z"></path></svg><span className="cap__title">WhatsApp</span></div><div className="cap__body">+91 97229 15105</div><div className="cap__meta">Fastest for quick questions</div><div className="cap__go">Chat now ↗</div></a>
-            <a className="cap cap--teal link" href="https://maps.google.com/?q=Sanket+Heights+Sunpharma+Road+Vadodara"><div className="cap__head"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span className="cap__title">Visit us</span></div><div className="cap__body">Vadodara, Gujarat, India</div><div className="cap__meta">By appointment</div><div className="cap__go">Get directions ↗</div></a>
+            <a className="cap cap--teal link" href="https://www.google.com/maps?cid=11665016648672561459" target="_blank" rel="noopener"><div className="cap__head"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span className="cap__title">Visit us</span></div><div className="cap__body">Vadodara, Gujarat, India</div><div className="cap__meta">By appointment</div><div className="cap__go">Get directions ↗</div></a>
           </div>
         </section>
 
@@ -111,6 +111,15 @@ export default function Page() {
               <div className="k">];</div>
               <div className="cmt" style={{"marginTop":"10px"}}>// serving 15 countries · English + Hindi + Gujarati</div>
             </div>
+          </div>
+          <div className="code" style={{"gridColumn":"1 / -1","marginTop":"8px"}}>
+            <div className="code__head"><span className="fn">map.embed</span><span className="mut">— Vadodara HQ</span></div>
+            <iframe
+              title="Digital Web Weaver — Vadodara studio location"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=73.1529186%2C22.2755213%2C73.1729186%2C22.2855213&layer=mapnik&marker=22.2805213%2C73.1629186"
+              style={{"width":"100%","height":"320px","border":"0","display":"block"}}
+              loading="lazy"
+            ></iframe>
           </div>
         </section>
 

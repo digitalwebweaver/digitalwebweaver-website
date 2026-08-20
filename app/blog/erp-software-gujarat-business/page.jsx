@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { blogPostingSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Outgrown Tally? What an ERP Can Do for Your Gujarat Business — Digital Web Weaver" },
@@ -12,6 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={blogPostingSchema({ headline: "Your Business Outgrew Tally. Here's What an ERP Can Actually Do for It", description: "Your business outgrew Tally and spreadsheets. Here's what ERP software really does for Gujarat SMEs, what it costs in 2026, and custom vs ready-made.", href: "/blog/erp-software-gujarat-business/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-article" data-target="s-article" title="Article">§</button>

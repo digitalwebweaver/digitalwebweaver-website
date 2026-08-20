@@ -99,7 +99,7 @@ export default function Page() {
         <section id="s-industries" className="section reveal">
           <p className="eyebrow">// industries served — regulated, high-stakes sectors</p>
           <h2 className="title mono">Industry depth</h2>
-          <p className="subtitle">Eight years of shipping into regulated, high-stakes industries — domain expertise across sectors.</p>
+          <p className="subtitle">Twelve years of shipping into regulated, high-stakes industries — domain expertise across sectors.</p>
           <div className="btn-row" style={{"marginTop":"22px","gap":"8px"}}>
             <span className="tag">E-commerce</span>
             <span className="tag">HealthTech</span>
