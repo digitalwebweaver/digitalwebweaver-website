@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Digital Web Weaver — React (Next.js) template
 
-## Getting Started
+An SEO-friendly React port of the Digital Web Weaver IDE-themed marketing site,
+built with **Next.js (App Router)**. Four pages — Home, Web Development, Hire
+Dedicated, and Contact — share one stylesheet and one behaviour module.
 
-First, run the development server:
+## Requirements
+- Node.js 18.17+ (or 20+)
+
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install       # install dependencies
+npm run dev       # start dev server → http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build a static, SEO-ready site
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build     # outputs a fully static site to ./out
+npx serve out     # preview the production build locally
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The build uses `output: "export"`, so `./out` is plain static HTML/CSS/JS you
+can drop on any host (Netlify, Vercel, S3, GitHub Pages, nginx…). Every page is
+pre-rendered to HTML at build time, so crawlers get full content with no JS.
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  layout.jsx            root layout + site-wide <head> metadata
+  globals.css           the shared stylesheet (design tokens + components)
+  page.jsx              Home                      → /
+  web-development/      Web Development service    → /web-development
+  hire-dedicated/       Hire Dedicated             → /hire-dedicated
+  contact/              Contact                    → /contact
+  sitemap.js            generates /sitemap.xml
+  robots.js             generates /robots.txt
+components/
+  Interactions.jsx      client component that boots the UI behaviour
+  behavior.js           drawer, scrollspy, tabs, pipeline, FAQ, forms, sidebar toggle
+public/assets/          images
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## SEO notes
+- Per-page `title`, `description`, canonical URL and Open Graph tags via the
+  App Router `metadata` export (see the top of each `page.jsx`).
+- Site-wide defaults + `metadataBase`, Twitter card and `robots` live in
+  `app/layout.jsx`. **Change the domain** in `layout.jsx`, `sitemap.js` and
+  `robots.js` to your own before deploying.
+- `sitemap.xml` and `robots.txt` are generated automatically.
+- Semantic HTML, descriptive `alt` text, and explicit image dimensions are kept
+  from the source for good Core Web Vitals.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Editing content
+Each page's markup lives directly in its `page.jsx` as JSX. Styling is entirely
+in `app/globals.css` (CSS custom properties at `:root`). Interactive behaviour
+is in `components/behavior.js`.

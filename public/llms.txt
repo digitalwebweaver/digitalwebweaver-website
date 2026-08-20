@@ -1,0 +1,32 @@
+# Digital Web Weaver
+
+> A senior engineering studio building high-performance web platforms, SaaS products, mobile apps, and AI systems since 2013. Headquartered in Vadodara, Gujarat, India, working with clients across India, the UK, and South Africa.
+
+Digital Web Weaver is a senior-only engineering team (no juniors) delivering custom software development, a catalog of pre-built SaaS products, and dedicated-resource hiring. Founded 2013.
+
+## Services
+
+- [Web Development](https://digitalwebweaver.com/web-development/): Marketing sites to complex web applications
+- [Custom Web Apps](https://digitalwebweaver.com/custom-web-apps/): Portals, dashboards, internal tools
+- [E-Commerce Development](https://digitalwebweaver.com/ecommerce-development/): Storefronts built to convert
+- [UI/UX Design](https://digitalwebweaver.com/ui-ux-design/): Research, systems, prototypes
+- [Mobile App Development](https://digitalwebweaver.com/mobile-app-development/): Native iOS, Android, cross-platform
+- [AI & Automation](https://digitalwebweaver.com/ai-automation/): LLM features and workflow automation
+- [Cloud & DevOps](https://digitalwebweaver.com/cloud-devops/): CI/CD, infrastructure-as-code, uptime
+- [Custom Software Development](https://digitalwebweaver.com/custom-software-development/): Bespoke ERP, CRM, and portals
+- [MVP Development](https://digitalwebweaver.com/mvp-development/): Validate an idea in weeks
+- [SaaS Development](https://digitalwebweaver.com/saas-development/): Multi-tenant, billing, growth-ready products
+- [CRM & ERP Systems](https://digitalwebweaver.com/crm-erp-systems/): Business systems fit to real operations
+- [Hire Dedicated Resource](https://digitalwebweaver.com/hire-dedicated-resource/): Senior engineers embedded with your team
+
+## Products
+
+Digital Web Weaver also builds and sells pre-built SaaS products for specific industries — full catalog at [/products/](https://digitalwebweaver.com/products/), including [GlowDesk](https://digitalwebweaver.com/glowdesk/) (aesthetic clinic booking), [ClinicFlow](https://digitalwebweaver.com/clinicflow/) (clinic management), [SchoolHub](https://digitalwebweaver.com/schoolhub/) (school administration), [SolarFlow](https://digitalwebweaver.com/solarflow/) (solar installer ERP), and [EduCore](https://digitalwebweaver.com/educore/) (LMS).
+
+## Company
+
+- [About](https://digitalwebweaver.com/about/): Company history, team, and operating principles
+- [Portfolio](https://digitalwebweaver.com/portfolio/): Case studies of shipped work
+- [Blog](https://digitalwebweaver.com/blog/): Guides on software costs, timelines, and technology choices for Indian and African SMEs
+- [Contact](https://digitalwebweaver.com/contact/): Address, phone, and enquiry form
+- [Cost Estimator](https://digitalwebweaver.com/cost-estimator/): Interactive project pricing tool
