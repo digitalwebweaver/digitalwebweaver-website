@@ -63,8 +63,8 @@ export default function Page() {
               <p className="form__title">Tell us about your project</p>
               <p className="form__lead">Free consultation. SAST/IST overlap — just 3.5 hours apart. Response within 24 hours.</p>
               <div className="field-row">
-                <div className="field"><label className="label">NAME</label><input className="input" name="name" placeholder="Your name" /></div>
-                <div className="field"><label className="label">WORK EMAIL</label><input className="input" name="email" type="email" placeholder="you@company.com" /></div>
+                <div className="field"><label className="label">NAME *</label><input className="input" name="name" placeholder="Your name" required /></div>
+                <div className="field"><label className="label">WORK EMAIL *</label><input className="input" name="email" type="email" placeholder="you@company.com" required /></div>
               </div>
               <div className="field-row">
                 <div className="field"><label className="label">WHAT DO YOU NEED?</label>

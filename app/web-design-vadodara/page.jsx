@@ -63,8 +63,8 @@ export default function Page() {
               <p className="form__title">Tell us about your business</p>
               <p className="form__lead">In-person at our Vadodara studio, or online — we'll scope your project and reply within 24 hours.</p>
               <div className="field-row">
-                <div className="field"><label className="label">NAME</label><input className="input" name="name" placeholder="Your name" /></div>
-                <div className="field"><label className="label">PHONE / WHATSAPP</label><input className="input" name="phone" type="tel" placeholder="+91 …" /></div>
+                <div className="field"><label className="label">NAME *</label><input className="input" name="name" placeholder="Your name" required /></div>
+                <div className="field"><label className="label">PHONE / WHATSAPP</label><input className="input" name="phone" type="tel" placeholder="+91 …" required /></div>
               </div>
               <div className="field-row">
                 <div className="field"><label className="label">BUSINESS TYPE</label>

@@ -53,8 +53,8 @@ export default function Page() {
               <p className="form__title">See a product in action</p>
               <p className="form__lead">Book a 30-minute demo — we'll walk you through the fit and give you a fixed deployment quote.</p>
               <div className="field-row">
-                <div className="field"><label className="label">NAME</label><input className="input" name="name" placeholder="Your name" /></div>
-                <div className="field"><label className="label">WORK EMAIL</label><input className="input" name="email" type="email" placeholder="you@company.com" /></div>
+                <div className="field"><label className="label">NAME *</label><input className="input" name="name" placeholder="Your name" required /></div>
+                <div className="field"><label className="label">WORK EMAIL *</label><input className="input" name="email" type="email" placeholder="you@company.com" required /></div>
               </div>
               <div className="field-row">
                 <div className="field"><label className="label">WHICH PRODUCT INTERESTS YOU?</label>

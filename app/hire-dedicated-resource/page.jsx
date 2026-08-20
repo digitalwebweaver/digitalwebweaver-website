@@ -61,8 +61,8 @@ export default function Page() {
               <p className="form__title">Match me with an engineer</p>
               <p className="form__lead">Tell us what you need. We'll shortlist 3 profiles within 24 hours.</p>
               <div className="field-row">
-                <div className="field first"><label className="label">YOUR NAME</label><input className="input" name="name" placeholder="Your name" /></div>
-                <div className="field first"><label className="label">WORK EMAIL</label><input className="input" name="email" type="email" placeholder="you@company.com" /></div>
+                <div className="field first"><label className="label">YOUR NAME *</label><input className="input" name="name" placeholder="Your name" required /></div>
+                <div className="field first"><label className="label">WORK EMAIL *</label><input className="input" name="email" type="email" placeholder="you@company.com" required /></div>
               </div>
               <div className="field-row">
                 <div className="field"><label className="label">ROLE NEEDED</label>

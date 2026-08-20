@@ -65,8 +65,8 @@ export default function Page() {
               <p className="form__title">See SolarFlow in action</p>
               <p className="form__lead">Book a 30-minute live demo — we'll map it to your install pipeline and subsidy workflow.</p>
               <div className="field-row">
-                <div className="field"><label className="label">NAME</label><input className="input" name="name" placeholder="Your name" /></div>
-                <div className="field"><label className="label">WORK EMAIL</label><input className="input" name="email" type="email" placeholder="you@installer.com" /></div>
+                <div className="field"><label className="label">NAME *</label><input className="input" name="name" placeholder="Your name" required /></div>
+                <div className="field"><label className="label">WORK EMAIL *</label><input className="input" name="email" type="email" placeholder="you@installer.com" required /></div>
               </div>
               <div className="field-row">
                 <div className="field"><label className="label">COMPANY / INSTALLER NAME</label><input className="input" name="company" placeholder="Your company" /></div>

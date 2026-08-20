@@ -57,8 +57,8 @@ export default function Page() {
               <p className="form__title">See GlowDesk in action</p>
               <p className="form__lead">Book a 30-minute walkthrough mapped to your clinic's client journey.</p>
               <div className="field-row">
-                <div className="field"><label className="label">NAME</label><input className="input" name="name" placeholder="Your name" /></div>
-                <div className="field"><label className="label">WORK EMAIL</label><input className="input" name="email" type="email" placeholder="you@clinic.com" /></div>
+                <div className="field"><label className="label">NAME *</label><input className="input" name="name" placeholder="Your name" required /></div>
+                <div className="field"><label className="label">WORK EMAIL *</label><input className="input" name="email" type="email" placeholder="you@clinic.com" required /></div>
               </div>
               <div className="field-row">
                 <div className="field"><label className="label">CLINIC TYPE</label>

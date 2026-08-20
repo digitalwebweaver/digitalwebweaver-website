@@ -61,8 +61,8 @@ export default function Page() {
               <p className="form__title">Parlez-nous de votre projet</p>
               <p className="form__lead">Décrivez votre besoin — nous vous envoyons une portée et un devis sous 24h, gratuitement.</p>
               <div className="field-row">
-                <div className="field"><label className="label">NOM</label><input className="input" name="name" placeholder="Votre nom" /></div>
-                <div className="field"><label className="label">E-MAIL PROFESSIONNEL</label><input className="input" name="email" type="email" placeholder="vous@entreprise.com" /></div>
+                <div className="field"><label className="label">NOM *</label><input className="input" name="name" placeholder="Votre nom" required /></div>
+                <div className="field"><label className="label">E-MAIL PROFESSIONNEL *</label><input className="input" name="email" type="email" placeholder="vous@entreprise.com" required /></div>
               </div>
               <div className="field-row">
                 <div className="field"><label className="label">TYPE DE BESOIN</label>

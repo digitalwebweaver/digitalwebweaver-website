@@ -56,8 +56,8 @@ export default function Page() {
               <p className="form__title">See ChemSupply in action</p>
               <p className="form__lead">Book a 30-minute demo — we'll show you exactly how it fits your inventory and compliance workflow.</p>
               <div className="field-row">
-                <div className="field"><label className="label">NAME</label><input className="input" name="name" placeholder="Your name" /></div>
-                <div className="field"><label className="label">WORK EMAIL</label><input className="input" name="email" type="email" placeholder="you@company.com" /></div>
+                <div className="field"><label className="label">NAME *</label><input className="input" name="name" placeholder="Your name" required /></div>
+                <div className="field"><label className="label">WORK EMAIL *</label><input className="input" name="email" type="email" placeholder="you@company.com" required /></div>
               </div>
               <div className="field-row">
                 <div className="field"><label className="label">COMPANY NAME</label><input className="input" name="company" placeholder="Your company" /></div>

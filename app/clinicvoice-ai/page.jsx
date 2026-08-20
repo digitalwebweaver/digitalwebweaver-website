@@ -56,8 +56,8 @@ export default function Page() {
               <p className="form__title">Hear the agent answer a call</p>
               <p className="form__lead">Book a 30-minute demo — we'll show you the voice agent handling a real call flow for your clinic.</p>
               <div className="field-row">
-                <div className="field"><label className="label">NAME</label><input className="input" name="name" placeholder="Your name" /></div>
-                <div className="field"><label className="label">WORK EMAIL</label><input className="input" name="email" type="email" placeholder="you@clinic.com" /></div>
+                <div className="field"><label className="label">NAME *</label><input className="input" name="name" placeholder="Your name" required /></div>
+                <div className="field"><label className="label">WORK EMAIL *</label><input className="input" name="email" type="email" placeholder="you@clinic.com" required /></div>
               </div>
               <div className="field-row">
                 <div className="field"><label className="label">CLINIC / PRACTICE NAME</label><input className="input" name="clinic" placeholder="Your clinic" /></div>
