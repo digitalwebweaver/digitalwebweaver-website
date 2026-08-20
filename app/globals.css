@@ -113,6 +113,11 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 @keyframes dww-blink { 0%,49%{opacity:1;} 50%,100%{opacity:0;} }
 .caret { display:inline-block; width:9px; height:17px; background:var(--teal); vertical-align:-3px; animation:dww-blink 1.05s steps(1) infinite; }
 .caret-pink { display:inline-block; width:10px; height:19px; background:var(--pink); vertical-align:-4px; margin-left:2px; animation:dww-blink 1.05s steps(1) infinite; }
+/* Solid, non-blinking — used while the typewriter effect is actively
+   revealing characters, so it reads as "in use" rather than "idle
+   waiting" (which is what the blinking .caret communicates once typing
+   finishes and it's just sitting at the end of the content). */
+.caret.typing { animation:none; opacity:1; }
 
 /* ---- Reveal on scroll ---- */
 @keyframes dww-reveal { from{opacity:0; transform:translateY(28px);} to{opacity:1; transform:none;} }

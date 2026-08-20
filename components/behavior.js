@@ -129,6 +129,97 @@ export function initDWW() {
     });
   });
 
+  /* ---- Typewriter effect (decorative code panels, e.g. homepage hero) ----
+     Opt-in via [data-typewriter] rather than every .code panel sitewide.
+     Walks the server-rendered markup's real DOM structure (not a string
+     regex) so the existing per-token syntax-highlight spans (.kw/.fnn/
+     .num/.str/.cmt/...) stay intact at every reveal step instead of
+     flashing unstyled text — the reveal budget is a character count of
+     visible text, and at each tick we re-walk the tree emitting whatever
+     tags/text fall within that budget, closing anything still open. */
+  function escapeHtml(s) {
+    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+  function countChars(node) {
+    if (node.nodeType === 3) return node.nodeValue.length;
+    if (node.nodeType !== 1) return 0;
+    var n = 0;
+    for (var i = 0; i < node.childNodes.length; i++) n += countChars(node.childNodes[i]);
+    return n;
+  }
+  // Renders as much of `node`'s subtree as fits in `budget` visible
+  // characters. Returns the HTML produced and how much budget is left.
+  function renderNode(node, budget) {
+    if (budget <= 0) return { html: "", remaining: 0 };
+    if (node.nodeType === 3) {
+      var text = node.nodeValue;
+      if (text.length <= budget) return { html: escapeHtml(text), remaining: budget - text.length };
+      return { html: escapeHtml(text.slice(0, budget)), remaining: 0 };
+    }
+    if (node.nodeType !== 1) return { html: "", remaining: budget };
+    var tag = node.tagName.toLowerCase();
+    var html = "<" + tag + (node.className ? ' class="' + node.className + '"' : "") + ">";
+    var remaining = budget;
+    for (var i = 0; i < node.childNodes.length && remaining > 0; i++) {
+      var res = renderNode(node.childNodes[i], remaining);
+      html += res.html;
+      remaining = res.remaining;
+    }
+    html += "</" + tag + ">";
+    return { html: html, remaining: remaining };
+  }
+
+  var typeTimers = [];
+  var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll("[data-typewriter]").forEach(function (el) {
+    if (reducedMotion) return; // server-rendered content is already there — leave it static
+    var original = el.cloneNode(true);
+    var rootChildren = Array.prototype.slice.call(original.childNodes);
+    var total = countChars(original);
+    if (!total) return;
+
+    // Character index at which each root-level child (a .ln span or a
+    // line-content span, alternating) finishes — used to add a short
+    // pause after a full line completes, like a real Enter keystroke,
+    // rather than a flat per-character rate throughout.
+    var boundaries = [];
+    var running = 0;
+    rootChildren.forEach(function (child, i) {
+      running += countChars(child);
+      boundaries.push({ at: running, lineEnd: i % 2 === 1 });
+    });
+
+    // Cleared lazily on the first real tick, not here — React Strict
+    // Mode's dev-only double-invoke runs this whole setup once as a
+    // throwaway mount, cleans it up (cancelling the timer below) before
+    // it ever fires, then runs it again for real. Clearing el.innerHTML
+    // synchronously here would wipe the source content during that
+    // throwaway first pass with nothing yet queued to restore it, so the
+    // second (real) mount would clone an already-empty element.
+    var revealed = 0;
+    var started = false;
+    function tick() {
+      if (!started) { started = true; el.innerHTML = ""; }
+      revealed++;
+      if (revealed >= total) {
+        el.innerHTML = original.innerHTML; // exact server-rendered markup, no reconstruction drift
+        return;
+      }
+      var html = "";
+      var remaining = revealed;
+      for (var i = 0; i < rootChildren.length && remaining > 0; i++) {
+        var res = renderNode(rootChildren[i], remaining);
+        html += res.html;
+        remaining = res.remaining;
+      }
+      el.innerHTML = html + '<span class="caret typing"></span>';
+      var boundary = boundaries.filter(function (b) { return b.at === revealed; })[0];
+      var delay = boundary ? (boundary.lineEnd ? 130 : 40) : 16;
+      typeTimers.push(setTimeout(tick, delay));
+    }
+    typeTimers.push(setTimeout(tick, 400)); // brief pause before typing starts
+  });
+
   /* ---- Lead form (mock submit) ---- */
   document.querySelectorAll("[data-form]").forEach(function (form) {
     var card = form.closest(".formcard");
@@ -159,5 +250,6 @@ export function initDWW() {
   return function cleanup() {
     observers.forEach(function (o) { o.disconnect(); });
     teardown.forEach(function (off) { off(); });
+    typeTimers.forEach(function (t) { clearTimeout(t); });
   };
 }

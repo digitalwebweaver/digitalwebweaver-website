@@ -49,7 +49,7 @@ export default function Page() {
           </div>
           <div className="code">
             <div className="code__head"><span className="fn">deploy.ts</span><span className="mut">— production</span></div>
-            <div className="code__body">
+            <div className="code__body" data-typewriter>
               <span className="ln">1</span><span className="cmt">// 0 downtime · canary rollout</span>
               <span className="ln">2</span><span className="kw">export async function <span className="fnn">deploy</span>(build) &#123;</span>
               <span className="ln">3</span><span className="txt">  const tests = await <span className="fnn">runSuite</span>(<span className="num">1247</span>);</span>
