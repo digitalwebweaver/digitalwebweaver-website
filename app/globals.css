@@ -146,7 +146,7 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .topbar__lights { display:flex; gap:7px; flex-shrink:0; }
 .dot { width:12px; height:12px; border-radius:50%; display:inline-block; }
 .dot--red{ background:#ff5f56; } .dot--amber{ background:#ffbd2e; } .dot--green{ background:#27c93f; }
-.topbar__logo { height:26px; width:auto; }
+.topbar__logo { display:none; align-items:center; height:32px; background:#f5f7fa; border-radius:7px; padding:4px 9px; box-shadow:0 0 0 1px rgba(255,255,255,.06); flex-shrink:0; }
 .topbar__crumb { font-size:12.5px; color:var(--muted-2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .topbar__crumb b { color:var(--text-3); font-weight:400; }
 .topbar__right { margin-left:auto; display:flex; gap:16px; align-items:center; }
@@ -649,6 +649,10 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
   .activitybar { display:none; }
   .hamburger { display:inline-flex; }
   .topbar__nav { display:none; }
+  /* Sidebar's own logo is now hidden behind the drawer, so show one
+     in the topbar instead, swapped in for the crumb text. */
+  .topbar__logo { display:flex; }
+  .topbar__crumb { display:none; }
   .sidebar {
     position:fixed; top:40px; bottom:0; left:0; z-index:50;
     width:min(82vw,300px); transform:translateX(-100%);
@@ -689,17 +693,16 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
   .hero__h1 { font-size:29px; } .hero__h1.big { font-size:30px; }
   .code__body { font-size:12.5px; }
   .pipe__label { font-size:11px; }
-  .topbar__crumb { display:none; }
+  .topbar__phone-text { display:none; }
+  .topbar__phone { font-size:16px; }
   .footer__grid, .footer__grid.g3 { grid-template-columns:1fr; }
   .cta__h, .cta__h.sm { font-size:25px; }
 }
 
 
 /* ============================================================
-   REACT PORT ADDITIONS — logo pill · explorer toggle · hint
+   REACT PORT ADDITIONS — explorer toggle · hint
    ============================================================ */
-.topbar__logo { height:32px; background:#f5f7fa; border-radius:7px; padding:4px 9px; box-shadow:0 0 0 1px rgba(255,255,255,.06); }
-
 .activitybar__toggle-wrap { position:relative; }
 .activitybar__toggle { border-left:2px solid var(--pink); color:var(--text); font-size:18px; width:var(--activity-w); height:42px; font-family:var(--mono); margin-bottom:6px; }
 .activitybar__toggle.is-off { border-left-color:transparent; color:var(--muted-2); }

@@ -189,6 +189,9 @@ export default function Shell({ children }) {
       <header className="topbar">
         <button className="hamburger" aria-label="Open menu" onClick={() => setDrawerOpen((v) => !v)}>☰</button>
         <span className="topbar__lights"><span className="dot dot--red"></span><span className="dot dot--amber"></span><span className="dot dot--green"></span></span>
+        <NavLink href="/" className="topbar__logo" aria-label="Digital Web Weaver — home">
+          <img src="/assets/dww-logo.png" alt="Digital Web Weaver" width="118" height="46" style={{ height: "22px", width: "auto", display: "block" }} />
+        </NavLink>
         <span className="topbar__crumb mono">digital-web-weaver — <b>workspace</b></span>
         <div className="topbar__right mono">
           <nav className="topbar__nav" aria-label="Quick links">
@@ -198,7 +201,7 @@ export default function Shell({ children }) {
             <NavLink href="/about/">About</NavLink>
             <NavLink href="/portfolio/">Portfolio</NavLink>
           </nav>
-          <a className="topbar__phone" href="tel:+919712515105">+91 97125 15105</a>
+          <a className="topbar__phone" href="tel:+919712515105"><span aria-hidden="true">📞</span><span className="topbar__phone-text"> +91 97125 15105</span></a>
           <a className="topbar__cta" href="#s-contact" data-scroll="s-contact">▶ Run project</a>
         </div>
       </header>
