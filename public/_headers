@@ -1,8 +1,6 @@
-# Netlify / Cloudflare Pages read this file from the deploy output root.
-# next.config.mjs's own headers() is a no-op under output:"export" (static
-# export has no server runtime to apply it), so this is the only place these
-# can actually be set for this site. Copied into out/_headers at build time
-# since it lives in public/.
+# Vercel reads headers from vercel.json, not this file — this exists only
+# as a fallback for Netlify/Cloudflare Pages if the site is ever migrated
+# off Vercel. Keep it in sync with vercel.json's headers block.
 #
 # script-src needs 'unsafe-inline': Next.js App Router emits its own inline
 # hydration-bootstrap scripts (self.__next_f.push(...) RSC payloads) whose
@@ -19,4 +17,4 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; img-src 'self' data: https://cdn.simpleicons.org; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://vercel.live; connect-src 'self' https://vercel.live wss://vercel.live; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https://cdn.simpleicons.org; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://vercel.live; connect-src 'self' https://vercel.live wss://vercel.live; frame-src https://www.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'

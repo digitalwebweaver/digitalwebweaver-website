@@ -88,7 +88,7 @@ export default function Page() {
             <div className="code__head"><span className="fn">map.embed</span><span className="mut">— Vadodara HQ</span></div>
             <iframe
               title="Digital Web Weaver — Vadodara studio location"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=73.1529186%2C22.2755213%2C73.1729186%2C22.2855213&layer=mapnik&marker=22.2805213%2C73.1629186"
+              src="https://www.google.com/maps?q=22.2805213,73.1629186&z=15&output=embed"
               style={{"width":"100%","height":"320px","border":"0","display":"block"}}
               loading="lazy"
             ></iframe>
