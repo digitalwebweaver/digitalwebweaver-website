@@ -161,7 +161,7 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
    reopen the "real gap fires mouseleave before the cursor reaches the
    panel" problem — so ::after bridges that exact gap with an invisible,
    hover target scoped to the TRIGGER's own width, not the panel's — a
-   wider bridge sized to the panel (up to 900px for cols4) overlaps
+   wider bridge sized to the panel (up to 1100px for cols3) overlaps
    neighboring triggers' bridges in the topbar and steals their hover,
    which is exactly the bug this replaced. Panels are wider than their
    triggers, but that's fine: the user only needs to cross the 12px gap
@@ -185,13 +185,16 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
    future content change makes this, the panel now clips to whatever
    vertical space is actually available below the topbar and scrolls
    internally instead of overflowing the viewport. Width scales in a
-   fixed per-column increment (~220px) so cols2/cols3/cols4 feel like one
-   consistent system instead of three arbitrarily-sized panels. */
-.megamenu { position:absolute; top:calc(100% + 12px); left:50%; transform:translateX(-50%) translateY(-6px); background:var(--panel); border:1px solid var(--border-2); border-top:2px solid var(--pink); border-radius:8px; box-shadow:0 24px 60px -16px rgba(0,0,0,.65); opacity:0; visibility:hidden; pointer-events:none; transition:opacity .18s ease, transform .18s ease, visibility .18s linear; z-index:100; padding:22px 24px 0; display:grid; gap:22px 28px; align-content:start; max-height:calc(100vh - 72px); overflow-y:auto; overscroll-behavior:contain; }
+   fixed per-column increment (~220px) so cols2/cols3 feel like one
+   consistent system. Column count is capped at 3 even when a menu has
+   more categories than that (see MegaMenu.jsx) — a 4th+ column made
+   the panel too wide, and mismatched category lengths (e.g. one
+   5-item column next to a 1-item column) looked ragged; 3 columns
+   with categories ordered by size keeps row heights close together. */
+.megamenu { position:absolute; top:calc(100% + 12px); left:50%; transform:translateX(-50%) translateY(-6px); background:var(--panel); border:1px solid var(--border-2); border-top:2px solid var(--pink); border-radius:0; box-shadow:0 24px 60px -16px rgba(0,0,0,.65); opacity:0; visibility:hidden; pointer-events:none; transition:opacity .18s ease, transform .18s ease, visibility .18s linear; z-index:100; padding:22px 24px 0; display:grid; gap:22px 28px; align-content:start; max-height:calc(100vh - 72px); overflow-y:auto; overscroll-behavior:contain; }
 .megamenu.is-open { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); pointer-events:auto; }
 .megamenu.cols2 { grid-template-columns:1fr 1fr; width:min(640px, calc(100vw - 40px)); }
 .megamenu.cols3 { grid-template-columns:1fr 1fr 1fr; width:min(1100px, calc(100vw - 40px)); }
-.megamenu.cols4 { grid-template-columns:1fr 1fr 1fr 1fr; width:min(1420px, calc(100vw - 40px)); }
 .megamenu__col h4 { font-size:11px; letter-spacing:.1em; color:var(--muted-2); font-weight:400; font-family:var(--mono); text-transform:uppercase; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--border); }
 .megamenu__item { display:flex; align-items:flex-start; gap:10px; padding:7px 0; text-decoration:none; }
 .megamenu__ico { flex-shrink:0; width:20px; height:20px; display:flex; align-items:center; justify-content:center; color:var(--teal); margin-top:1px; transition:color .15s ease, transform .15s ease; }
@@ -208,7 +211,7 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 /* Simple dropdown — same trigger/bridge system as the mega menu, but a
    single narrow list for triggers with too few items (Hire Resource: 7)
    to justify multi-column treatment. */
-.simplemenu { position:absolute; top:calc(100% + 12px); left:50%; transform:translateX(-50%) translateY(-6px); background:var(--panel); border:1px solid var(--border-2); border-top:2px solid var(--pink); border-radius:8px; box-shadow:0 24px 60px -16px rgba(0,0,0,.65); opacity:0; visibility:hidden; pointer-events:none; transition:opacity .18s ease, transform .18s ease, visibility .18s linear; z-index:100; padding:10px; width:240px; }
+.simplemenu { position:absolute; top:calc(100% + 12px); left:50%; transform:translateX(-50%) translateY(-6px); background:var(--panel); border:1px solid var(--border-2); border-top:2px solid var(--pink); border-radius:0; box-shadow:0 24px 60px -16px rgba(0,0,0,.65); opacity:0; visibility:hidden; pointer-events:none; transition:opacity .18s ease, transform .18s ease, visibility .18s linear; z-index:100; padding:10px; width:240px; }
 .simplemenu.is-open { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); pointer-events:auto; }
 .simplemenu__item { display:flex; align-items:center; gap:11px; padding:9px 10px; border-radius:6px; text-decoration:none; transition:background-color .12s ease; }
 .simplemenu__item:hover { background:var(--panel-2); }

@@ -36,7 +36,7 @@ export default function MegaMenu({ label, href, columns, footerLabel, footerHref
       </NavLink>
       <div
         ref={panelRef}
-        className={`megamenu${open ? " is-open" : ""} cols${Math.min(columns.length, 4)}`}
+        className={`megamenu${open ? " is-open" : ""} cols${Math.min(columns.length, 3)}`}
         role="menu"
         aria-label={`${label} menu`}
         style={clampOffset ? { transform: `translateX(calc(-50% + ${clampOffset}px)) translateY(${open ? "0" : "-6px"})` } : undefined}

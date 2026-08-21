@@ -79,6 +79,9 @@ const HIRE_ITEMS = [
   { label: "AWS / Cloud", href: "/stack/aws/", icon: "cloud" },
 ];
 
+// Ordered so a 3-column grid lands two balanced rows (5/4/3 items,
+// then 2/2/1) instead of wrapping 6 mismatched-height categories
+// naively — see MegaMenu's column cap.
 const PRODUCTS_MENU = [
   { title: "Healthcare & Clinics", items: [
     { label: "GlowDesk", href: "/glowdesk/", badge: "teal", desc: "Bookings, treatment plans & billing" },
@@ -86,14 +89,6 @@ const PRODUCTS_MENU = [
     { label: "VetCare", href: "/vetcare/", badge: "teal", desc: "Records for veterinary practices" },
     { label: "TeleCare", href: "/telecare/", badge: "teal", desc: "Video consults & e-prescriptions" },
     { label: "ClinicVoice AI", href: "/clinicvoice-ai/", badge: "teal", desc: "AI voice agent for clinic bookings" },
-  ] },
-  { title: "Education", items: [
-    { label: "EduCore", href: "/educore/", badge: "yellow", desc: "LMS with courses & certificates" },
-    { label: "SchoolHub", href: "/schoolhub/", badge: "yellow", desc: "Admissions, attendance, fees & exams" },
-  ] },
-  { title: "AI Agents", items: [
-    { label: "ChatFlow AI", href: "/chatflow-ai/", badge: "pink", desc: "WhatsApp automation for enquiries" },
-    { label: "CallMate AI", href: "/callmate-ai/", badge: "pink", desc: "AI voice agent for calls & leads" },
   ] },
   { title: "Field Service & ERP", items: [
     { label: "SolarFlow", href: "/solarflow/", badge: "green", desc: "ERP for solar installers" },
@@ -105,6 +100,14 @@ const PRODUCTS_MENU = [
     { label: "QuickBite", href: "/quickbite/", badge: "teal", desc: "Food delivery app suite" },
     { label: "RideEasy", href: "/rideeasy/", badge: "teal", desc: "Cab booking, rider to dispatch" },
     { label: "SalonBook", href: "/salonbook/", badge: "teal", desc: "Online booking & staff scheduling" },
+  ] },
+  { title: "Education", items: [
+    { label: "EduCore", href: "/educore/", badge: "yellow", desc: "LMS with courses & certificates" },
+    { label: "SchoolHub", href: "/schoolhub/", badge: "yellow", desc: "Admissions, attendance, fees & exams" },
+  ] },
+  { title: "AI Agents", items: [
+    { label: "ChatFlow AI", href: "/chatflow-ai/", badge: "pink", desc: "WhatsApp automation for enquiries" },
+    { label: "CallMate AI", href: "/callmate-ai/", badge: "pink", desc: "AI voice agent for calls & leads" },
   ] },
   { title: "Sales & CRM", items: [
     { label: "InsureDesk", href: "/insuredesk/", badge: "pink", desc: "Lead & policy management" },
