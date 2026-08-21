@@ -121,13 +121,20 @@ function activeGroupId(pathname) {
 export default function Shell({ children }) {
   const pathname = usePathname();
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const [openGroups, setOpenGroups] = useState(() => new Set([activeGroupId(pathname)].filter(Boolean)));
 
   // Close the mobile drawer whenever the route changes (client-side nav).
   useEffect(() => {
     setDrawerOpen(false);
   }, [pathname]);
+
+  // Drives the "open the explorer" hint (pulsing toggle button + arrow) via
+  // pure CSS instead of a one-time dismiss-on-click flag, so the hint
+  // correctly reappears if the sidebar is collapsed again later.
+  useEffect(() => {
+    document.documentElement.classList.toggle("explorer-open", !collapsed);
+  }, [collapsed]);
 
   // Shell mounts once for the whole session (it lives in layout, not in
   // {children}), so this effect binds exactly once. Delegation is used
@@ -153,9 +160,6 @@ export default function Shell({ children }) {
       const toggleBtn = e.target.closest("[data-explorer-toggle]");
       if (toggleBtn) {
         setCollapsed((c) => !c);
-        toggleBtn.classList.remove("hint");
-        const hint = toggleBtn.parentElement && toggleBtn.parentElement.querySelector(".menu-hint");
-        if (hint) hint.classList.add("is-hidden");
       }
     }
     document.addEventListener("click", onClick);
