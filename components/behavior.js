@@ -220,6 +220,21 @@ export function initDWW() {
     typeTimers.push(setTimeout(tick, 400)); // brief pause before typing starts
   });
 
+  /* ---- Project carousel arrow buttons ---- */
+  document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
+    var track = carousel.querySelector("[data-carousel-track]");
+    var prev = carousel.querySelector("[data-carousel-prev]");
+    var next = carousel.querySelector("[data-carousel-next]");
+    if (!track) return;
+    function scrollByCard(dir) {
+      var card = track.querySelector(".work-mini");
+      var step = card ? card.getBoundingClientRect().width + 16 : 280;
+      track.scrollBy({ left: dir * step, behavior: "smooth" });
+    }
+    if (prev) on(prev, "click", function () { scrollByCard(-1); });
+    if (next) on(next, "click", function () { scrollByCard(1); });
+  });
+
   /* ---- Lead form ---- */
   document.querySelectorAll("[data-form]").forEach(function (form) {
     var card = form.closest(".formcard");
