@@ -192,7 +192,7 @@ export default function Shell({ children }) {
         <NavLink href="/" className="topbar__logo" aria-label="Digital Web Weaver — home">
           <img src="/assets/dww-logo.png" alt="Digital Web Weaver" width="118" height="46" style={{ height: "22px", width: "auto", display: "block" }} />
         </NavLink>
-        <span className="topbar__crumb mono">digital-web-weaver — <b>workspace</b></span>
+        <NavLink href="/" className="topbar__crumb mono" aria-label="Digital Web Weaver — home">digital-web-weaver — <b>workspace</b></NavLink>
         <div className="topbar__right mono">
           <nav className="topbar__nav" aria-label="Quick links">
             <MegaMenu label="Services" href="/services/" columns={SERVICES_MENU} footerLabel="View all services" footerHref="/services/" />

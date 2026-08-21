@@ -147,8 +147,10 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .dot { width:12px; height:12px; border-radius:50%; display:inline-block; }
 .dot--red{ background:#ff5f56; } .dot--amber{ background:#ffbd2e; } .dot--green{ background:#27c93f; }
 .topbar__logo { display:none; align-items:center; height:32px; background:#f5f7fa; border-radius:7px; padding:4px 9px; box-shadow:0 0 0 1px rgba(255,255,255,.06); flex-shrink:0; }
-.topbar__crumb { font-size:12.5px; color:var(--muted-2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.topbar__crumb { font-size:12.5px; color:var(--muted-2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; transition:color .15s ease; }
 .topbar__crumb b { color:var(--text-3); font-weight:400; }
+.topbar__crumb:hover { color:var(--pink); }
+.topbar__crumb:hover b { color:var(--pink); }
 .topbar__right { margin-left:auto; display:flex; gap:16px; align-items:center; }
 .topbar__nav { display:flex; align-items:center; gap:16px; padding-right:16px; border-right:1px solid var(--border-2); }
 .topbar__nav > a { font-size:12.5px; color:var(--text-3); text-decoration:none; transition:color .15s ease; }
