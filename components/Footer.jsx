@@ -37,6 +37,17 @@ export default function Footer() {
             </span>
             <span><span className="mono" style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "10px", letterSpacing: "0.1em", color: "var(--muted-2)" }}>HEAD OFFICE <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "var(--green)" }}></span><span style={{ color: "var(--green)", letterSpacing: "0.04em" }}>open</span></span><span style={{ display: "block", fontSize: "13px", lineHeight: 1.55, color: "var(--text-3)", marginTop: "3px" }}>207/208 Sanket Heights, Sunpharma Road,<br />Atladra, Vadodara 390012, Gujarat · India</span></span>
           </a>
+          <div style={{ display: "flex", gap: "9px", marginTop: "14px" }}>
+            <a href="https://www.facebook.com/digitalwebweaver" target="_blank" rel="noopener" aria-label="Digital Web Weaver on Facebook" style={{ width: "32px", height: "32px", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid var(--border)", background: "var(--panel)", borderRadius: "7px", color: "var(--text-3)" }}>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3.5 1.5-3.5 3.5V11H8v3h2.5v7h3v-7H16l.5-3h-3V9.5c0-.3.2-.5.5-.5z"/></svg>
+            </a>
+            <a href="https://in.linkedin.com/company/digital-web-weaver" target="_blank" rel="noopener" aria-label="Digital Web Weaver on LinkedIn" style={{ width: "32px", height: "32px", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid var(--border)", background: "var(--panel)", borderRadius: "7px", color: "var(--text-3)" }}>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4a2 2 0 110 4 2 2 0 010-4zM3 9h2v12H3zM9 9h2v2c.5-1 2-2 3.5-2 3 0 3.5 2 3.5 4.5V21h-2v-6c0-1.5-.5-2.5-2-2.5s-2 1-2 2.5v6H9z"/></svg>
+            </a>
+            <a href="https://x.com/dwebweaver" target="_blank" rel="noopener" aria-label="Digital Web Weaver on X" style={{ width: "32px", height: "32px", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid var(--border)", background: "var(--panel)", borderRadius: "7px", color: "var(--text-3)" }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-5 7H1l8-9L1 2h6l4.5 6z"/></svg>
+            </a>
+          </div>
         </div>
         <nav className="mono" aria-label="Services">
           <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "11.5px", letterSpacing: "0.12em", color: "var(--text)", marginBottom: "14px" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>services/</div>
