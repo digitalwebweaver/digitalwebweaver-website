@@ -43,13 +43,13 @@ export default function Page() {
             <div className="hero__stats">
               <div className="hero__stat"><b style={{"color":"var(--pink)"}}>12+</b><span>years building</span></div>
               <div className="hero__stat"><b style={{"color":"var(--teal)"}}>200+</b><span>systems shipped</span></div>
-              <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>50+</b><span>expert engineers</span></div>
+              <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>20+</b><span>expert engineers</span></div>
             </div>
           </div>
           <div className="code">
             <div className="code__head"><span className="fn">team.ts</span><span className="mut">— since 2013</span></div>
             <div className="code__body">
-              <span className="ln">1</span><span className="kw">const <span className="fnn">team</span> = <span className="num">50+</span> engineers;</span>
+              <span className="ln">1</span><span className="kw">const <span className="fnn">team</span> = <span className="num">20+</span> engineers;</span>
               <span className="ln">2</span><span className="kw">const <span className="fnn">shipped</span> = <span className="num">200+</span> systems;</span>
               <span className="ln">3</span><span className="cmt">// since 2013, Vadodara → world</span>
               <span className="ln">4</span><span className="kw">export default <span className="fnn">craft</span>();</span>
@@ -70,7 +70,7 @@ export default function Page() {
           <p className="eyebrow">// our-story.md <span className="c">// craft over shortcuts</span></p>
           <h2 className="title mono">Started with a belief — craft over shortcuts</h2>
           <p className="subtitle" style={{"maxWidth":"760px"}}>Digital Web Weaver began as a two-person partnership with a single operating rule: never ship code we wouldn't stake our own reputation on. Every client was a referral. Every project was over-delivered.</p>
-          <p className="subtitle" style={{"maxWidth":"760px","marginTop":"14px"}}>Twelve years on, that principle has never changed. We've grown to a senior team of fifty-plus engineers, designers, and architects. We work across mobile, cloud, AI, and enterprise — but we still take every engagement as if our name is on the line. Because it is.</p>
+          <p className="subtitle" style={{"maxWidth":"760px","marginTop":"14px"}}>Twelve years on, that principle has never changed. We've grown to a senior team of twenty-plus engineers, designers, and architects. We work across mobile, cloud, AI, and enterprise — but we still take every engagement as if our name is on the line. Because it is.</p>
           <div className="code" style={{"maxWidth":"680px","marginTop":"26px"}}>
             <div className="code__head"><span className="fn">philosophy.diff</span><span className="mut">— what changed, what didn't</span></div>
             <div className="diff">
@@ -110,7 +110,7 @@ export default function Page() {
           <h2 className="title mono">Senior engineers &amp; designers behind the work</h2>
           <p className="subtitle">No junior engineers behind the curtain. Every person you work with has shipped in production.</p>
           <div className="term-frame">
-            <div className="code__head"><span className="fn">$ git shortlog -sn --senior-only</span><span className="mut">— 19 contributors</span></div>
+            <div className="code__head"><span className="fn">$ git shortlog -sn --senior-only</span><span className="mut">— 20+ contributors</span></div>
             <div className="term-frame__pad">
               <div className="grid grid-3 stagger">
                 <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--pink)"}}>KA</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Kamlesh</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>CEO &amp; Founder</div></div></div><p className="cap__body">Founded Digital Web Weaver to bring senior-level engineering to businesses that deserve better than templated agencies. Leads strategy, client partnerships, and the studio's long-term vision.</p></div>
@@ -186,7 +186,7 @@ export default function Page() {
               <span className="gitlog__dot"></span>
               <div className="gitlog__meta"><span className="gitlog__hash">HEAD</span><span className="gitlog__branch">main</span><span className="gitlog__date">2026 · today</span></div>
               <div className="gitlog__title">A global partner</div>
-              <p className="gitlog__body">200+ systems shipped. 50+ engineers. 15 countries — with an active presence in South Africa, London, and Abidjan alongside our Vadodara base. A 90% client-retention rate and zero failed delivery timelines. Still growing — still senior-only.</p>
+              <p className="gitlog__body">200+ systems shipped. 20+ engineers. 15 countries — with an active presence in South Africa, London, and Abidjan alongside our Vadodara base. A 90% client-retention rate and zero failed delivery timelines. Still growing — still senior-only.</p>
             </div>
           </div>
           <div className="panel-note">

@@ -42,7 +42,7 @@ export default function Page() {
             <p className="hero__lead">Staff your team with pre-vetted, production-grade engineers from India — deployed in 72 hours. Full-time dedication, no agency overhead, no risk. You get the talent, we handle the rest.</p>
             <div className="hero__stats">
               <div className="hero__stat"><b style={{"color":"var(--pink)"}}>72h</b><span>to deploy</span></div>
-              <div className="hero__stat"><b style={{"color":"var(--teal)"}}>50+</b><span>engineers on bench</span></div>
+              <div className="hero__stat"><b style={{"color":"var(--teal)"}}>20+</b><span>engineers on bench</span></div>
               <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>97%</b><span>client retention</span></div>
             </div>
             <div className="trust">
@@ -86,7 +86,7 @@ export default function Page() {
 
         <section className="stat-strip">
           <div className="stat-cell"><div className="big" style={{"color":"var(--pink)"}}>72h</div><div className="lbl">TO_DEPLOY</div><div className="sub">▲ brief → first commit</div></div>
-          <div className="stat-cell"><div className="big" style={{"color":"var(--teal)"}}>50+</div><div className="lbl">ENGINEERS</div><div className="sub">▲ vetted · 5+ yrs each</div></div>
+          <div className="stat-cell"><div className="big" style={{"color":"var(--teal)"}}>20+</div><div className="lbl">ENGINEERS</div><div className="sub">▲ vetted · 5+ yrs each</div></div>
           <div className="stat-cell"><div className="big" style={{"color":"var(--yellow)"}}>97%</div><div className="lbl">RETENTION</div><div className="sub">▲ clients who re-hire</div></div>
           <div className="stat-cell"><div className="big" style={{"color":"var(--pink)"}}>30d</div><div className="lbl">FREE_TRIAL</div><div className="sub">▲ replace at no cost</div></div>
         </section>
