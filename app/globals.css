@@ -343,6 +343,14 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 .code__foot { border-top:1px solid var(--border); padding:11px 22px; display:flex; align-items:center; gap:9px; font-family:var(--mono); }
 .code__foot .live { width:8px; height:8px; border-radius:50%; background:#27c93f; } .code__foot span{ color:var(--green); font-size:12.5px; }
 
+.diff { font-family:var(--mono); font-size:14px; line-height:1.9; padding:18px 22px; }
+.diff__line { padding:2px 10px; border-radius:3px; }
+.diff__line--rem { background:rgba(var(--red-rgb),.07); color:var(--muted); text-decoration:line-through; text-decoration-color:var(--red); text-decoration-thickness:1px; }
+.diff__line--add { background:rgba(var(--green-rgb),.09); color:var(--text-2); }
+
+.term-frame { border:1px solid var(--border); background:var(--panel); margin-top:26px; }
+.term-frame__pad { padding:24px; }
+
 /* Stat strip */
 .stat-strip { display:grid; grid-template-columns:repeat(4,1fr); border-bottom:1px solid var(--border); }
 .stat-cell { padding:24px 28px; border-right:1px solid var(--border); font-family:var(--mono); }

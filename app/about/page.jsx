@@ -71,12 +71,18 @@ export default function Page() {
           <h2 className="title mono">Started with a belief — craft over shortcuts</h2>
           <p className="subtitle" style={{"maxWidth":"760px"}}>Digital Web Weaver began as a two-person partnership with a single operating rule: never ship code we wouldn't stake our own reputation on. Every client was a referral. Every project was over-delivered.</p>
           <p className="subtitle" style={{"maxWidth":"760px","marginTop":"14px"}}>Twelve years on, that principle has never changed. We've grown to a senior team of fifty-plus engineers, designers, and architects. We work across mobile, cloud, AI, and enterprise — but we still take every engagement as if our name is on the line. Because it is.</p>
-          <ul className="check-list" style={{"maxWidth":"680px"}}>
-            <li><span className="plus">+</span><span>Senior-only team — no juniors hidden behind the contract</span></li>
-            <li><span className="plus">+</span><span>Every project has a dedicated tech lead and full code ownership</span></li>
-            <li><span className="plus">+</span><span>Transparent weekly progress — you always know where things stand</span></li>
-            <li><span className="plus">+</span><span>90% of clients return for their next project</span></li>
-          </ul>
+          <div className="code" style={{"maxWidth":"680px","marginTop":"26px"}}>
+            <div className="code__head"><span className="fn">philosophy.diff</span><span className="mut">— what changed, what didn't</span></div>
+            <div className="diff">
+              <div className="diff__line diff__line--rem">- cutting corners to hit a deadline</div>
+              <div className="diff__line diff__line--rem">- junior hand-offs behind a senior's name</div>
+              <div className="diff__line diff__line--rem">- black-box progress, updates on request only</div>
+              <div className="diff__line diff__line--add">+ senior-only team, every single engagement</div>
+              <div className="diff__line diff__line--add">+ one dedicated tech lead, full code ownership</div>
+              <div className="diff__line diff__line--add">+ transparent weekly progress, always</div>
+              <div className="diff__line diff__line--add">+ 90% of clients return for their next project</div>
+            </div>
+          </div>
           <div style={{"display":"flex","gap":"8px","flexWrap":"wrap","marginTop":"22px"}}>
             <span className="tag">SaaS experts</span><span className="tag">Cloud-native</span><span className="tag">AI-ready</span><span className="tag">Full-stack</span><span className="tag">Mobile</span>
           </div>
@@ -85,11 +91,17 @@ export default function Page() {
         <section id="s-mission" className="section reveal">
           <p className="eyebrow">// mission.md <span className="c">// what drives us</span></p>
           <h2 className="title mono">Mission, vision &amp; values</h2>
-          <div className="grid grid-2 stagger">
-            <div className="cap cap--top"><div className="eyebrow" style={{"color":"var(--pink)"}}>🎯 MISSION</div><div className="cap__title" style={{"marginTop":"10px"}}>Our mission</div><p className="cap__body">To make world-class software engineering accessible to every ambitious team — from a two-person startup to a global enterprise — without the overhead of a large consultancy.</p></div>
-            <div className="cap cap--teal"><div className="eyebrow" style={{"color":"var(--teal)"}}>🔭 VISION</div><div className="cap__title" style={{"marginTop":"10px"}}>Our vision</div><p className="cap__body">A world where software is built with the same pride and permanence as great architecture — systems that outlast trends, scale without compromise, and earn the teams that rely on them.</p></div>
-            <div className="cap cap--green"><div className="eyebrow" style={{"color":"var(--green)"}}>⚖ VALUES</div><div className="cap__title" style={{"marginTop":"10px"}}>Our values</div><p className="cap__body">Craft over shortcuts. Honesty over comfort. Ownership over excuses. We write code as if the next engineer who reads it is a senior we respect — because they probably are.</p></div>
-            <div className="cap cap--yellow"><div className="eyebrow" style={{"color":"var(--yellow)"}}>👥 PEOPLE</div><div className="cap__title" style={{"marginTop":"10px"}}>Our people</div><p className="cap__body">Every engineer we hire has shipped production systems. No bootcamp hires on client projects. Our team reviews every engagement — which is why clients keep coming back.</p></div>
+          <div className="code" style={{"maxWidth":"760px"}}>
+            <div className="code__head"><span className="fn">studio.config.js</span><span className="mut">— what drives us</span></div>
+            <div className="loc">
+              <div className="k">export const <span className="fnn">studio</span> = &#123;</div>
+              <div style={{"paddingLeft":"18px"}}>mission: <span className="str">"World-class engineering, accessible to every ambitious team — from a two-person startup to a global enterprise, without the overhead of a large consultancy."</span>,</div>
+              <div style={{"paddingLeft":"18px"}}>vision: <span className="str">"Software built with the pride and permanence of great architecture — systems that outlast trends and earn the teams that rely on them."</span>,</div>
+              <div style={{"paddingLeft":"18px"}}>values: [<span className="yel">"craft over shortcuts"</span>, <span className="yel">"honesty over comfort"</span>, <span className="yel">"ownership over excuses"</span>],</div>
+              <div style={{"paddingLeft":"18px"}}>people: <span className="str">"Every hire has shipped production systems — no bootcamp hires on client work."</span>,</div>
+              <div className="k">&#125;;</div>
+              <div className="cmt" style={{"marginTop":"10px"}}>// reviewed every engagement — that's why clients return</div>
+            </div>
           </div>
         </section>
 
@@ -97,20 +109,25 @@ export default function Page() {
           <p className="eyebrow">// team.json <span className="c">// senior engineers &amp; designers behind the work</span></p>
           <h2 className="title mono">Senior engineers &amp; designers behind the work</h2>
           <p className="subtitle">No junior engineers behind the curtain. Every person you work with has shipped in production.</p>
-          <div className="grid grid-3 stagger">
-            <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--pink)"}}>KA</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Kamlesh</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>CEO &amp; Founder</div></div></div><p className="cap__body">Founded Digital Web Weaver to bring senior-level engineering to businesses that deserve better than templated agencies. Leads strategy, client partnerships, and the studio's long-term vision.</p></div>
-            <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--teal)"}}>AN</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Aniket</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Full Stack Developer</div></div></div><p className="cap__body">Builds end-to-end web applications across the modern stack — comfortable owning a feature from database schema to polished UI, and shipping it without hand-holding.</p></div>
-            <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--yellow)"}}>AJ</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Ajay</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Full Stack Developer · Node.js</div></div></div><p className="cap__body">Node.js specialist focused on APIs, services, and backend architecture that stay fast and reliable as products scale from first users to high traffic.</p></div>
-            <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--green)"}}>HA</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Harsh</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Full Stack Developer · Laravel</div></div></div><p className="cap__body">Laravel and PHP backend engineer who builds clean, maintainable systems — from custom CRMs and ERPs to client portals that teams actually enjoy using.</p></div>
-            <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--pink)"}}>SW</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Swati</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Full Stack Developer · PHP</div></div></div><p className="cap__body">PHP full-stack developer covering both sides of the stack, turning project requirements into working software with an eye for detail and code that's easy to extend.</p></div>
-            <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--teal)"}}>AR</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Arvind</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Business Development Executive</div></div></div><p className="cap__body">First point of contact for new partnerships — understands a client's goals early and connects them with the right team and approach to get there.</p></div>
-            <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--yellow)"}}>MA</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Maxime</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Regional Sales</div></div></div><p className="cap__body">Builds and manages regional client relationships, helping businesses outside India navigate working with an offshore team smoothly and confidently.</p></div>
-            <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--green)"}}>SA</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Sanjita</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Business Operations</div></div></div><p className="cap__body">Keeps projects, timelines, and internal operations running smoothly behind the scenes, so engineering teams can focus on shipping quality work.</p></div>
-            <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--pink)"}}>RA</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Rahul</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Business Analyst</div></div></div><p className="cap__body">Bridges client requirements and engineering execution — turning business goals into clear specs that the development team can build against with confidence.</p></div>
-          </div>
-          <div className="panel-note">
-            <div className="panel-note__lbl">+ 10 MORE</div>
-            <div className="panel-note__row"><div><span className="plus">+</span><span>10 more engineers, designers, and specialists across the team</span></div></div>
+          <div className="term-frame">
+            <div className="code__head"><span className="fn">$ git shortlog -sn --senior-only</span><span className="mut">— 19 contributors</span></div>
+            <div className="term-frame__pad">
+              <div className="grid grid-3 stagger">
+                <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--pink)"}}>KA</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Kamlesh</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>CEO &amp; Founder</div></div></div><p className="cap__body">Founded Digital Web Weaver to bring senior-level engineering to businesses that deserve better than templated agencies. Leads strategy, client partnerships, and the studio's long-term vision.</p></div>
+                <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--teal)"}}>AN</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Aniket</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Full Stack Developer</div></div></div><p className="cap__body">Builds end-to-end web applications across the modern stack — comfortable owning a feature from database schema to polished UI, and shipping it without hand-holding.</p></div>
+                <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--yellow)"}}>AJ</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Ajay</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Full Stack Developer · Node.js</div></div></div><p className="cap__body">Node.js specialist focused on APIs, services, and backend architecture that stay fast and reliable as products scale from first users to high traffic.</p></div>
+                <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--green)"}}>HA</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Harsh</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Full Stack Developer · Laravel</div></div></div><p className="cap__body">Laravel and PHP backend engineer who builds clean, maintainable systems — from custom CRMs and ERPs to client portals that teams actually enjoy using.</p></div>
+                <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--pink)"}}>SW</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Swati</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Full Stack Developer · PHP</div></div></div><p className="cap__body">PHP full-stack developer covering both sides of the stack, turning project requirements into working software with an eye for detail and code that's easy to extend.</p></div>
+                <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--teal)"}}>AR</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Arvind</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Business Development Executive</div></div></div><p className="cap__body">First point of contact for new partnerships — understands a client's goals early and connects them with the right team and approach to get there.</p></div>
+                <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--yellow)"}}>MA</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Maxime</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Regional Sales</div></div></div><p className="cap__body">Builds and manages regional client relationships, helping businesses outside India navigate working with an offshore team smoothly and confidently.</p></div>
+                <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--green)"}}>SA</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Sanjita</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Business Operations</div></div></div><p className="cap__body">Keeps projects, timelines, and internal operations running smoothly behind the scenes, so engineering teams can focus on shipping quality work.</p></div>
+                <div className="cap"><div style={{"display":"flex","alignItems":"center","gap":"13px"}}><div className="quote__avatar" style={{"background":"var(--pink)"}}>RA</div><div><div className="cap__title" style={{"fontSize":"16px"}}>Rahul</div><div className="mono" style={{"fontSize":"12px","color":"var(--muted-2)","marginTop":"2px"}}>Business Analyst</div></div></div><p className="cap__body">Bridges client requirements and engineering execution — turning business goals into clear specs that the development team can build against with confidence.</p></div>
+              </div>
+              <div className="panel-note">
+                <div className="panel-note__lbl">+ 10 MORE</div>
+                <div className="panel-note__row"><div><span className="plus">+</span><span>10 more engineers, designers, and specialists across the team</span></div></div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -118,15 +135,22 @@ export default function Page() {
           <p className="eyebrow">// culture.md <span className="c">// how we work</span></p>
           <h2 className="title mono">A culture built on ownership and deep craft</h2>
           <p className="subtitle" style={{"maxWidth":"760px"}}>We don't have project managers chasing engineers for status updates. Everyone owns their work end-to-end — from architecture to deployment to post-launch monitoring.</p>
-          <ul className="check-list" style={{"maxWidth":"680px"}}>
+          <div className="pipeline" style={{"marginTop":"38px"}}>
+            <div className="pipeline__track"></div>
+            <div className="pipeline__fill" style={{"width":"100%"}}></div>
+            <div className="pipeline__row">
+              <div className="pipe is-done"><span className="pipe__dot">◷</span><span className="pipe__label">Async-first</span></div>
+              <div className="pipe is-done"><span className="pipe__dot">✓</span><span className="pipe__label">Code review</span></div>
+              <div className="pipe is-done"><span className="pipe__dot">◈</span><span className="pipe__label">20% learning</span></div>
+              <div className="pipe is-done"><span className="pipe__dot">◍</span><span className="pipe__label">Remote-first</span></div>
+            </div>
+          </div>
+          <ul className="check-list" style={{"maxWidth":"680px","marginTop":"30px"}}>
             <li><span className="plus">+</span><span>Asynchronous-first communication — documentation over meetings</span></li>
             <li><span className="plus">+</span><span>Code review on every PR — standards maintained, always</span></li>
             <li><span className="plus">+</span><span>20% time each week for learning and open-source contribution</span></li>
             <li><span className="plus">+</span><span>Remote-first, timezone-flexible with offices in India &amp; UK</span></li>
           </ul>
-          <div style={{"display":"flex","gap":"8px","flexWrap":"wrap","marginTop":"22px"}}>
-            <span className="tag">Remote-first</span><span className="tag">Code reviews</span><span className="tag">Async culture</span><span className="tag">Learning budget</span>
-          </div>
         </section>
 
         <section id="s-journey" className="section reveal">
