@@ -12,16 +12,21 @@ import "./globals.css";
 // needing a custom <head> injection.
 const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('dww-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();`;
 
+// Only the weights actually used anywhere in globals.css or inline JSX
+// styles are declared here — 500 (mono) and 900 (sans) were shipped as
+// full self-hosted font files (every unicode-range subset) despite never
+// being applied to any element, adding weight to the render-blocking
+// font CSS for nothing.
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700", "800"],
   variable: "--font-mono",
   display: "swap",
 });
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800", "900"],
+  weight: ["400", "600", "700", "800"],
   variable: "--font-sans",
   display: "swap",
 });
