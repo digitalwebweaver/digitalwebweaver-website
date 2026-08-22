@@ -2,7 +2,7 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { softwareApplicationSchema } from "@/lib/schema";
+import { serviceSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "PestTrack — Pest Control CRM & Field Service Software | Digital Web Weaver" },
@@ -14,7 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-    <JsonLd data={softwareApplicationSchema({ name: "PestTrack", description: "PestTrack integrates job scheduling, technician routing, service history, AMC contracts, billing, and automated client reminders into one connected pest control CRM. Live in 3–5 weeks.", href: "/pesttrack/" })} />
+    <JsonLd data={serviceSchema({ name: "PestTrack", description: "PestTrack integrates job scheduling, technician routing, service history, AMC contracts, billing, and automated client reminders into one connected pest control CRM. Live in 3–5 weeks.", href: "/pesttrack/" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

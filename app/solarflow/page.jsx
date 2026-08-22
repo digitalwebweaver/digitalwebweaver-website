@@ -2,7 +2,7 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { softwareApplicationSchema } from "@/lib/schema";
+import { serviceSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "SolarFlow — Solar ERP & CRM for Gujarat Installers | Digital Web Weaver" },
@@ -14,7 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-    <JsonLd data={softwareApplicationSchema({ name: "SolarFlow", description: "SolarFlow manages the entire PM Surya Ghar → GEDA → MGVCL subsidy lifecycle, with AI that quotes, checks compliance, and watches every system you install. Never forfeit a subsidy again.", href: "/solarflow/" })} />
+    <JsonLd data={serviceSchema({ name: "SolarFlow", description: "SolarFlow manages the entire PM Surya Ghar → GEDA → MGVCL subsidy lifecycle, with AI that quotes, checks compliance, and watches every system you install. Never forfeit a subsidy again.", href: "/solarflow/" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-problem" data-target="s-problem" title="The problem">⚠</button>
