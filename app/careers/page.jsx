@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: { absolute: "Remote Software Engineering Careers | Digital Web Weaver" },
-  description: "Join a senior engineering studio, not a ticket factory. Remote-first, async-first, senior-only team building real systems with real ownership. 5 open roles.",
+  description: "Join a senior engineering studio, not a ticket factory. Remote-first, async-first team building real systems with real ownership. 4 open roles.",
   alternates: { canonical: "/careers/" },
-  openGraph: { title: "Remote Software Engineering Careers | Digital Web Weaver", description: "Join a senior engineering studio, not a ticket factory. Remote-first, async-first, senior-only team building real systems with real ownership. 5 open roles.", url: "/careers/", type: "website" }
+  openGraph: { title: "Remote Software Engineering Careers | Digital Web Weaver", description: "Join a senior engineering studio, not a ticket factory. Remote-first, async-first team building real systems with real ownership. 4 open roles.", url: "/careers/", type: "website" }
 };
 
 export default function Page() {
@@ -44,7 +44,7 @@ export default function Page() {
             <div className="hero__stats">
               <div className="hero__stat"><b style={{"color":"var(--pink)"}}>Remote</b><span>-first, always</span></div>
               <div className="hero__stat"><b style={{"color":"var(--teal)"}}>Async</b><span>-first work</span></div>
-              <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>Senior</b><span>engineers only</span></div>
+              <div className="hero__stat"><b style={{"color":"var(--yellow)"}}>Senior</b><span>-led team</span></div>
             </div>
           </div>
           <div className="code">
@@ -57,7 +57,7 @@ export default function Page() {
               <span className="ln">5</span><span className="txt">  realWork: <span className="num">true</span>,</span>
               <span className="ln">6</span><span className="txt">  offerWithin: <span className="str">"5 days"</span>,</span>
               <span className="ln">7</span><span className="kw">&#125;;</span>
-              <span className="ln">8</span><span className="cmt">// → clear comp · equity breakdown · start date</span>
+              <span className="ln">8</span><span className="cmt">// → clear next steps · start date</span>
               <span className="ln">9</span><span><span className="caret"></span></span>
             </div>
             <div className="code__foot"><span className="live"></span><span>Outcomes over attendance</span></div>
@@ -65,8 +65,8 @@ export default function Page() {
         </section>
 
         <section className="stat-strip">
-          <div className="stat-cell"><div className="big" style={{"color":"var(--pink)"}}>$1.5k</div><div className="lbl">LEARNING_BUDGET</div><div className="sub">▲ /year · courses &amp; books</div></div>
-          <div className="stat-cell"><div className="big" style={{"color":"var(--teal)"}}>$2k</div><div className="lbl">EQUIPMENT</div><div className="sub">▲ day-one hardware</div></div>
+          <div className="stat-cell"><div className="big" style={{"color":"var(--pink)"}}>20+</div><div className="lbl">TEAM_SIZE</div><div className="sub">▲ senior-led studio</div></div>
+          <div className="stat-cell"><div className="big" style={{"color":"var(--teal)"}}>12+</div><div className="lbl">YEARS_LIVE</div><div className="sub">▲ since 2013</div></div>
           <div className="stat-cell"><div className="big" style={{"color":"var(--yellow)"}}>4h</div><div className="lbl">CORE_OVERLAP</div><div className="sub">▲ flexible hours</div></div>
           <div className="stat-cell"><div className="big" style={{"color":"var(--pink)"}}>5d</div><div className="lbl">OFFER_TIME</div><div className="sub">▲ intro call → offer</div></div>
         </section>
@@ -80,58 +80,52 @@ export default function Page() {
             <div className="cap cap--green"><div className="eyebrow" style={{"color":"var(--green)"}}>🧩 CHALLENGE</div><div className="cap__title" style={{"marginTop":"10px"}}>Varied, hard problems</div><p className="cap__body">From LLM pipelines to embedded logistics systems — never the same problem twice.</p></div>
             <div className="cap cap--yellow"><div className="eyebrow" style={{"color":"var(--yellow)"}}>🎖 SENIORITY</div><div className="cap__title" style={{"marginTop":"10px"}}>A team of seniors</div><p className="cap__body">No huge junior pyramid below you — you work alongside people who've shipped before.</p></div>
             <div className="cap cap--top"><div className="eyebrow" style={{"color":"var(--pink)"}}>⏱ ASYNC</div><div className="cap__title" style={{"marginTop":"10px"}}>Async-first work</div><p className="cap__body">No all-day standups. Outcomes over attendance.</p></div>
-            <div className="cap cap--teal"><div className="eyebrow" style={{"color":"var(--teal)"}}>💰 PAY</div><div className="cap__title" style={{"marginTop":"10px"}}>Competitive pay</div><p className="cap__body">Market-leading salaries, benchmarked annually.</p></div>
+            <div className="cap cap--teal"><div className="eyebrow" style={{"color":"var(--teal)"}}>🌱 GROWTH</div><div className="cap__title" style={{"marginTop":"10px"}}>Learning on real work</div><p className="cap__body">20% of each week set aside for learning and open-source contribution — the same principle across the whole team.</p></div>
           </div>
         </section>
 
         <section id="s-benefits" className="section reveal">
-          <p className="eyebrow">// benefits.md</p>
-          <h2 className="title mono">Everything you'd expect. Plus some things you won't.</h2>
+          <p className="eyebrow">// how-we-work.md</p>
+          <h2 className="title mono">How the team actually works</h2>
           <ul className="check-list" style={{"maxWidth":"680px"}}>
             <li><span className="plus">+</span><span><b style={{"color":"var(--text)"}}>Remote-first</b> — work from anywhere.</span></li>
             <li><span className="plus">+</span><span><b style={{"color":"var(--text)"}}>Flexible hours</b> — core overlap of 4 hours for collaboration.</span></li>
-            <li><span className="plus">+</span><span><b style={{"color":"var(--text)"}}>Health &amp; wellness</b> — comprehensive health insurance for you and your family.</span></li>
-            <li><span className="plus">+</span><span><b style={{"color":"var(--text)"}}>Learning budget</b> — $1,500/year for courses, books, and conferences.</span></li>
-            <li><span className="plus">+</span><span><b style={{"color":"var(--text)"}}>Equipment allowance</b> — $2,000 day-one hardware allowance.</span></li>
-            <li><span className="plus">+</span><span><b style={{"color":"var(--text)"}}>Profit sharing</b> — annual profit-sharing distribution to all full-time employees.</span></li>
+            <li><span className="plus">+</span><span><b style={{"color":"var(--text)"}}>Async-first communication</b> — documentation over meetings.</span></li>
+            <li><span className="plus">+</span><span><b style={{"color":"var(--text)"}}>Code review on every PR</b> — standards maintained, always.</span></li>
+            <li><span className="plus">+</span><span><b style={{"color":"var(--text)"}}>20% learning time</b> — dedicated weekly time for learning and open-source contribution.</span></li>
           </ul>
         </section>
 
         <section id="s-roles" className="section reveal">
-          <p className="eyebrow">const openRoles = [ <span className="c">// we're hiring senior engineers</span></p>
-          <h2 className="title mono">We're hiring senior engineers</h2>
-          <p className="subtitle">No whiteboard algorithms. No trick questions. All roles are full-time and remote.</p>
+          <p className="eyebrow">const openRoles = [ <span className="c">// current openings</span></p>
+          <h2 className="title mono">Open roles</h2>
+          <p className="subtitle">No whiteboard algorithms. No trick questions.</p>
           <div className="grid grid-3 stagger">
             <div className="price">
-              <div className="price__head"><div className="price__kind" style={{"color":"var(--teal)"}}>FULL-TIME · REMOTE</div><div className="price__title">Senior Full-Stack Engineer</div><p className="price__body">React / Node — build and own production SaaS features end-to-end.</p><div className="price__amt"><b>5+ yrs</b><span>experience</span></div></div>
-              <ul className="price__list"><li><span className="ok">✓</span><span>Full-time · remote</span></li><li><span className="ok">✓</span><span>React / Node.js</span></li><li><span className="ok">✓</span><span>End-to-end feature ownership</span></li></ul>
-              <div className="price__foot"><a className="price__cta" href="mailto:info@digitalwebweaver.com?subject=Application%3A%20Senior%20Full-Stack%20Engineer" style={{"display":"block","textAlign":"center","background":"var(--pink)","color":"var(--bg)"}}>Apply ↗</a></div>
+              <div className="price__head"><div className="price__kind" style={{"color":"var(--teal)"}}>FULL-TIME · REMOTE</div><div className="price__title">Full Stack Developer</div><p className="price__body">PHP, CodeIgniter, Laravel — build and maintain full-stack features, from database schema to a polished UI.</p></div>
+              <ul className="price__list"><li><span className="ok">✓</span><span>Full-time · remote</span></li><li><span className="ok">✓</span><span>PHP · CodeIgniter · Laravel</span></li><li><span className="ok">✓</span><span>End-to-end feature ownership</span></li></ul>
+              <div className="price__foot"><a className="price__cta" href="mailto:info@digitalwebweaver.com?subject=Application%3A%20Full%20Stack%20Developer%20-%20PHP%2C%20CodeIgniter%2C%20Laravel" style={{"display":"block","textAlign":"center","background":"var(--pink)","color":"var(--bg)"}}>Apply ↗</a></div>
             </div>
             <div className="price">
-              <div className="price__head"><div className="price__kind" style={{"color":"var(--pink)"}}>FULL-TIME · REMOTE</div><div className="price__title">Lead Backend Engineer</div><p className="price__body">Python / Django / FastAPI — design and build high-throughput API services.</p><div className="price__amt"><b>6+ yrs</b><span>experience</span></div></div>
-              <ul className="price__list"><li><span className="ok">✓</span><span>Full-time · remote</span></li><li><span className="ok">✓</span><span>Python / Django / FastAPI</span></li><li><span className="ok">✓</span><span>High-throughput API design</span></li></ul>
-              <div className="price__foot"><a className="price__cta btn--ghost" href="mailto:info@digitalwebweaver.com?subject=Application%3A%20Lead%20Backend%20Engineer" style={{"display":"block","textAlign":"center","color":"var(--text)"}}>Apply ↗</a></div>
+              <div className="price__head"><div className="price__kind" style={{"color":"var(--pink)"}}>FULL-TIME · REMOTE</div><div className="price__title">Node.js Developer</div><p className="price__body">Build APIs, services, and backend architecture that stay fast and reliable as products scale.</p></div>
+              <ul className="price__list"><li><span className="ok">✓</span><span>Full-time · remote</span></li><li><span className="ok">✓</span><span>Node.js</span></li><li><span className="ok">✓</span><span>API &amp; backend architecture</span></li></ul>
+              <div className="price__foot"><a className="price__cta btn--ghost" href="mailto:info@digitalwebweaver.com?subject=Application%3A%20Node.js%20Developer" style={{"display":"block","textAlign":"center","color":"var(--text)"}}>Apply ↗</a></div>
             </div>
             <div className="price">
-              <div className="price__head"><div className="price__kind" style={{"color":"var(--yellow)"}}>FULL-TIME · REMOTE</div><div className="price__title">Senior Mobile Engineer</div><p className="price__body">React Native — ship production mobile apps to iOS and Android.</p><div className="price__amt"><b>4+ yrs</b><span>experience</span></div></div>
-              <ul className="price__list"><li><span className="ok">✓</span><span>Full-time · remote</span></li><li><span className="ok">✓</span><span>React Native</span></li><li><span className="ok">✓</span><span>iOS &amp; Android production apps</span></li></ul>
-              <div className="price__foot"><a className="price__cta btn--ghost" href="mailto:info@digitalwebweaver.com?subject=Application%3A%20Senior%20Mobile%20Engineer" style={{"display":"block","textAlign":"center","color":"var(--text)"}}>Apply ↗</a></div>
+              <div className="price__head"><div className="price__kind" style={{"color":"var(--yellow)"}}>INTERNSHIP · REMOTE</div><div className="price__title">Web Developer Intern</div><p className="price__body">Learn full-stack web development hands-on — real tasks, real code review, real mentorship.</p></div>
+              <ul className="price__list"><li><span className="ok">✓</span><span>Remote</span></li><li><span className="ok">✓</span><span>Hands-on mentorship</span></li><li><span className="ok">✓</span><span>Real production codebases</span></li></ul>
+              <div className="price__foot"><a className="price__cta btn--ghost" href="mailto:info@digitalwebweaver.com?subject=Application%3A%20Web%20Developer%20Intern" style={{"display":"block","textAlign":"center","color":"var(--text)"}}>Apply ↗</a></div>
             </div>
             <div className="price">
-              <div className="price__head"><div className="price__kind" style={{"color":"var(--teal)"}}>FULL-TIME · REMOTE</div><div className="price__title">DevOps / Platform Engineer</div><p className="price__body">Build and maintain CI/CD pipelines and Kubernetes clusters.</p><div className="price__amt"><b>4+ yrs</b><span>experience</span></div></div>
-              <ul className="price__list"><li><span className="ok">✓</span><span>Full-time · remote</span></li><li><span className="ok">✓</span><span>CI/CD · Kubernetes</span></li><li><span className="ok">✓</span><span>Platform &amp; infra ownership</span></li></ul>
-              <div className="price__foot"><a className="price__cta btn--ghost" href="mailto:info@digitalwebweaver.com?subject=Application%3A%20DevOps%20%2F%20Platform%20Engineer" style={{"display":"block","textAlign":"center","color":"var(--text)"}}>Apply ↗</a></div>
-            </div>
-            <div className="price">
-              <div className="price__head"><div className="price__kind" style={{"color":"var(--pink)"}}>FULL-TIME · REMOTE</div><div className="price__title">Product Designer</div><p className="price__body">Figma / Design Systems — design complex product interfaces from user research.</p><div className="price__amt"><b>3+ yrs</b><span>experience</span></div></div>
-              <ul className="price__list"><li><span className="ok">✓</span><span>Full-time · remote</span></li><li><span className="ok">✓</span><span>Figma · design systems</span></li><li><span className="ok">✓</span><span>User research → interface design</span></li></ul>
-              <div className="price__foot"><a className="price__cta btn--ghost" href="mailto:info@digitalwebweaver.com?subject=Application%3A%20Product%20Designer" style={{"display":"block","textAlign":"center","color":"var(--text)"}}>Apply ↗</a></div>
+              <div className="price__head"><div className="price__kind" style={{"color":"var(--teal)"}}>FULL-TIME · REMOTE</div><div className="price__title">Python Developer</div><p className="price__body">Build and maintain Python-based backend services, scripts, and automation across our systems.</p></div>
+              <ul className="price__list"><li><span className="ok">✓</span><span>Full-time · remote</span></li><li><span className="ok">✓</span><span>Python</span></li><li><span className="ok">✓</span><span>Backend &amp; automation</span></li></ul>
+              <div className="price__foot"><a className="price__cta btn--ghost" href="mailto:info@digitalwebweaver.com?subject=Application%3A%20Python%20Developer" style={{"display":"block","textAlign":"center","color":"var(--text)"}}>Apply ↗</a></div>
             </div>
           </div>
           <div className="panel-note">
             <div className="panel-note__lbl">DON'T SEE YOUR ROLE?</div>
             <div className="panel-note__row">
-              <div><span className="plus">+</span><span>We're always open to hearing from strong senior engineers.</span></div>
+              <div><span className="plus">+</span><span>We're always open to hearing from strong engineers.</span></div>
             </div>
             <div style={{"marginTop":"16px"}}><a className="btn btn--ghost" href="mailto:info@digitalwebweaver.com?subject=General%20Application">Send a general application ↗</a></div>
           </div>
@@ -162,8 +156,8 @@ export default function Page() {
             <div className="pipe-detail__term"><div className="t0">— terminal · stage output</div><div className="t1">$ dww hire --review</div><div className="t2">✓ walkthrough complete  ✓ team feedback collected</div><div className="t3">✓ stage complete<span className="caret"></span></div></div>
           </div>
           <div className="pipe-detail" data-step-panel="3" hidden>
-            <div className="pipe-detail__left"><div className="pipe-detail__step">STEP 04 / 04 · ◷ within 5 days</div><div className="pipe-detail__title">Offer</div><p className="pipe-detail__body">Clear comp, equity breakdown, and a start date — no negotiation games, no radio silence.</p><ul className="pipe-detail__list"><li><span className="ok">✓</span><span>Clear compensation breakdown</span></li><li><span className="ok">✓</span><span>Equity details, if applicable</span></li><li><span className="ok">✓</span><span>Offer within 5 days</span></li></ul></div>
-            <div className="pipe-detail__term"><div className="t0">— terminal · stage output</div><div className="t1">$ dww hire --offer</div><div className="t2">✓ comp finalised  ✓ offer sent  ✓ start date set</div><div className="t3">✓ stage complete<span className="caret"></span></div></div>
+            <div className="pipe-detail__left"><div className="pipe-detail__step">STEP 04 / 04 · ◷ within 5 days</div><div className="pipe-detail__title">Offer</div><p className="pipe-detail__body">A clear offer and a start date — no negotiation games, no radio silence.</p><ul className="pipe-detail__list"><li><span className="ok">✓</span><span>Clear next steps, in writing</span></li><li><span className="ok">✓</span><span>Straightforward start date</span></li><li><span className="ok">✓</span><span>Offer within 5 days</span></li></ul></div>
+            <div className="pipe-detail__term"><div className="t0">— terminal · stage output</div><div className="t1">$ dww hire --offer</div><div className="t2">✓ offer sent  ✓ start date set</div><div className="t3">✓ stage complete<span className="caret"></span></div></div>
           </div>
         </section>
 
@@ -172,9 +166,9 @@ export default function Page() {
           <div className="faq">
             <div className="faq__item"><button className="faq__q">Is Digital Web Weaver remote-first?<span className="sign">[+]</span></button><div className="faq__a"><p>Yes — remote-first with flexible hours and a 4-hour core overlap for collaboration. Work from anywhere.</p></div></div>
             <div className="faq__item"><button className="faq__q">Do you do whiteboard coding interviews?<span className="sign">[+]</span></button><div className="faq__a"><p>No. No whiteboard algorithms, no trick questions, no LeetCode. Instead you'll do a paid, 4-hour take-home based on a realistic problem from our actual work.</p></div></div>
-            <div className="faq__item"><button className="faq__q">What's the hiring process?<span className="sign">[+]</span></button><div className="faq__a"><p>Intro call (30 min) → paid take-home (4 hrs) → team review (60 min) → offer within 5 days, with a clear comp and equity breakdown.</p></div></div>
-            <div className="faq__item"><button className="faq__q">What benefits do you offer?<span className="sign">[+]</span></button><div className="faq__a"><p>Remote-first work, flexible hours, comprehensive health insurance, a $1,500/year learning budget, a $2,000 day-one equipment allowance, and annual profit sharing.</p></div></div>
-            <div className="faq__item"><button className="faq__q">I don't see a role that fits — can I still apply?<span className="sign">[+]</span></button><div className="faq__a"><p>Yes — send a general application to info@digitalwebweaver.com. We're always open to hearing from strong senior engineers.</p></div></div>
+            <div className="faq__item"><button className="faq__q">What's the hiring process?<span className="sign">[+]</span></button><div className="faq__a"><p>Intro call (30 min) → paid take-home (4 hrs) → team review (60 min) → offer within 5 days, with clear next steps at every stage.</p></div></div>
+            <div className="faq__item"><button className="faq__q">How does the team actually work?<span className="sign">[+]</span></button><div className="faq__a"><p>Remote-first with flexible hours, async-first communication, code review on every PR, and 20% of each week set aside for learning and open-source contribution.</p></div></div>
+            <div className="faq__item"><button className="faq__q">I don't see a role that fits — can I still apply?<span className="sign">[+]</span></button><div className="faq__a"><p>Yes — send a general application to info@digitalwebweaver.com. We're always open to hearing from strong engineers.</p></div></div>
           </div>
         </section>
 
