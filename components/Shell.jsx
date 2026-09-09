@@ -95,6 +95,7 @@ const PRODUCTS_MENU = [
     { label: "ChemSupply", href: "/chemsupply/", badge: "green", desc: "Batch/expiry tracking & compliance" },
     { label: "PestTrack", href: "/pesttrack/", badge: "green", desc: "Job scheduling & technician routing" },
     { label: "Manchify", href: "/manchify/", badge: "green", desc: "Leads, quotes & vendors for events" },
+    { label: "FabSuite", href: "/fabsuite/", badge: "green", desc: "Costing & cutting plans for fabricators" },
   ] },
   { title: "Food & Mobility", items: [
     { label: "QuickBite", href: "/quickbite/", badge: "teal", desc: "Food delivery app suite" },
