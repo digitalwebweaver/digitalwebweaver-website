@@ -19,6 +19,7 @@ export default function Page() {
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-problem" data-target="s-problem" title="The problem">⚠</button>
       <button className="activitybar__btn" data-scroll="s-workflow" data-target="s-workflow" title="How it works">❯</button>
+      <button className="activitybar__btn" data-scroll="s-screens" data-target="s-screens" title="Inside FabSuite">▦</button>
       <button className="activitybar__btn" data-scroll="s-coverage" data-target="s-coverage" title="What it covers">◈</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>
       <button className="activitybar__btn" data-scroll="s-pricing" data-target="s-pricing" title="Pricing">$</button>
@@ -132,6 +133,34 @@ export default function Page() {
           <div className="panel-note" style={{"marginTop":"34px"}}>
             <div className="panel-note__lbl">OPTIONAL · RUN THE SALES PIPELINE TOO</div>
             <p style={{"marginTop":"12px","fontSize":"14.5px",color:"var(--text-2)"}}>Capture a lead (phone, WhatsApp, walk-in, referral), log site-visit measurements, and track it through New Inquiry → Contacted → Site Visit → Quotation Sent → Negotiation → Won/Lost — with automatic follow-up reminders so nothing is forgotten. Convert a won lead straight into a project with one click.</p>
+          </div>
+        </section>
+
+        <section id="s-screens" className="section reveal">
+          <p className="eyebrow">// what your team actually sees</p>
+          <h2 className="title mono">Inside FabSuite</h2>
+          <p className="subtitle">Real screens from the live product — not mockups.</p>
+          <div className="grid grid-2 stagger">
+            <div className="shot">
+              <div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">Window &amp; Opening Designer</span></div>
+              <img className="shot__img" src="/assets/fabsuite-window-designer.png" alt="FabSuite's window and opening designer, showing a live to-scale technical drawing as a folding door is configured" width="1907" height="928" loading="lazy" decoding="async" />
+              <p className="shot__caption">Every opening gets a real, to-scale technical drawing automatically — no manual sketching.</p>
+            </div>
+            <div className="shot">
+              <div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">Cost Summary</span></div>
+              <img className="shot__img" src="/assets/fabsuite-cost-summary.png" alt="FabSuite's cost summary screen, showing profiles, accessories, glazing, labour, overhead, margin, and GST itemized to the paisa" width="1910" height="948" loading="lazy" decoding="async" />
+              <p className="shot__caption">Live, to-the-paisa costing — every category itemized, nothing hidden in a single total.</p>
+            </div>
+            <div className="shot">
+              <div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">Cutting Plan</span></div>
+              <img className="shot__img" src="/assets/fabsuite-cutting-plan.png" alt="FabSuite's cutting plan screen, showing bin-packed aluminium bars per profile code with a wastage percentage for each" width="1899" height="949" loading="lazy" decoding="async" />
+              <p className="shot__caption">Wastage you can actually see, bar by bar, before a single cut is made.</p>
+            </div>
+            <div className="shot">
+              <div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">Documents</span></div>
+              <img className="shot__img" src="/assets/fabsuite-documents.png" alt="FabSuite's documents screen, showing a downloadable customer quotation PDF and a list of internal-only reports" width="1900" height="947" loading="lazy" decoding="async" />
+              <p className="shot__caption">A shop-branded customer PDF, plus internal reports kept away from staff.</p>
+            </div>
           </div>
         </section>
 
