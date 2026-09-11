@@ -517,7 +517,7 @@ h1,h2,h3 { font-weight:800; color:var(--text); line-height:1.1; }
 
 /* Real product-screenshot cards — full, uncropped image (unlike .work__shot's
    fixed-height crop) since these are meant to be read, not just previewed. */
-.shot { display:flex; flex-direction:column; border:1px solid var(--border); background:var(--panel); overflow:hidden; }
+.shot { display:flex; flex-direction:column; min-width:0; border:1px solid var(--border); background:var(--panel); overflow:hidden; }
 .shot__img { width:100%; height:auto; display:block; border-bottom:1px solid var(--border); }
 .shot__caption { padding:16px 18px; font-size:14px; color:var(--muted); line-height:1.5; }
 .work__flag { position:absolute; top:12px; left:12px; font-size:11px; font-weight:700; background:var(--pink); color:var(--bg); padding:4px 9px; letter-spacing:.06em; font-family:var(--mono); }

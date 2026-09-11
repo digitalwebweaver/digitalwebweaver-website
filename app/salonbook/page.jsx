@@ -19,6 +19,7 @@ export default function Page() {
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>
       <button className="activitybar__btn" data-scroll="s-how" data-target="s-how" title="How it works">❯</button>
+      <button className="activitybar__btn" data-scroll="s-screens" data-target="s-screens" title="Inside SalonBook">▦</button>
       <button className="activitybar__btn" data-scroll="s-faq" data-target="s-faq" title="FAQ">?</button>
       <span className="activitybar__geo" title="India · UK · US">◍</span>
     </nav>
@@ -130,6 +131,34 @@ export default function Page() {
           <div className="panel-note">
             <div className="panel-note__lbl">WHATS_INCLUDED</div>
             <div className="panel-note__row"><div><span className="plus">+</span><span>Branded booking website / widget</span></div><div><span className="plus">+</span><span>Front-desk &amp; staff dashboard</span></div><div><span className="plus">+</span><span>Client mobile app</span></div><div><span className="plus">+</span><span>Loyalty &amp; package templates</span></div><div><span className="plus">+</span><span>Staff onboarding &amp; training</span></div><div><span className="plus">+</span><span>30 days post-launch support</span></div></div>
+          </div>
+        </section>
+
+        <section id="s-screens" className="section reveal">
+          <p className="eyebrow">// what your front desk actually sees</p>
+          <h2 className="title mono">Inside SalonBook</h2>
+          <p className="subtitle">Real screens from the live product — not mockups.</p>
+          <div className="grid grid-2 stagger">
+            <div className="shot">
+              <div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">Admin Overview</span></div>
+              <img className="shot__img" src="/assets/salonbook-dashboard.png" alt="SalonBook's admin overview dashboard, showing revenue, appointments, no-show rate, active staff, and low stock alerts at a glance" width="1918" height="881" loading="lazy" decoding="async" />
+              <p className="shot__caption">Revenue, appointments, no-shows, and stock alerts in one glance — no digging through reports.</p>
+            </div>
+            <div className="shot">
+              <div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">Book Appointment</span></div>
+              <img className="shot__img" src="/assets/salonbook-appointment.png" alt="SalonBook's appointment booking flow, showing service selection with live pricing and duration building up a running total" width="1908" height="880" loading="lazy" decoding="async" />
+              <p className="shot__caption">Services, stylist, and time in one guided flow — the total updates as you go.</p>
+            </div>
+            <div className="shot">
+              <div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">Quick Bill</span></div>
+              <img className="shot__img" src="/assets/salonbook-quick-bill.png" alt="SalonBook's Quick Bill screen, ringing up a walk-in with services, discounts, and a running total ready to charge" width="1912" height="891" loading="lazy" decoding="async" />
+              <p className="shot__caption">Ring up a walk-in or check out a booking in seconds, built for the front desk.</p>
+            </div>
+            <div className="shot">
+              <div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">Coupon Designer</span></div>
+              <img className="shot__img" src="/assets/salonbook-coupon.png" alt="SalonBook's coupon designer, showing a drag-and-drop editor for a branded discount coupon with a QR code" width="1913" height="888" loading="lazy" decoding="async" />
+              <p className="shot__caption">Design branded coupons with your own layout, QR code, and offer terms — no designer needed.</p>
+            </div>
           </div>
         </section>
 
