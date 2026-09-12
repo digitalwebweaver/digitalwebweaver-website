@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site Diagnostics — digitalwebweaver.com</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --bg: #f7f6f3;
+    --surface: #ffffff;
+    --surface-2: #f0efea;
+    --border: #e2e0d8;
+    --border-2: #d2cfc3;
+    --text: #1c1b17;
+    --text-2: #4b4a43;
+    --muted: #8a8879;
+
+    --accent: #b26a00;
+    --accent-soft: #f2e2c4;
+
+    --high: #b3261e;
+    --high-soft: #fbe4e2;
+    --med: #93650a;
+    --med-soft: #f6e6c8;
+    --low: #0f6e63;
+    --low-soft: #ddf0ec;
+    --good: #2f7a3d;
+    --good-soft: #e2f1e2;
+
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c0e0c;
+      --surface: #14170f;
+      --surface-2: #191c14;
+      --border: #2a2e22;
+      --border-2: #3a3f2e;
+      --text: #ecebe3;
+      --text-2: #b8b6a8;
+      --muted: #837f6d;
+
+      --accent: #e3a83b;
+      --accent-soft: #332815;
+
+      --high: #f2726b;
+      --high-soft: #2e1614;
+      --med: #e3b04f;
+      --med-soft: #2c2412;
+      --low: #6bd6c4;
+      --low-soft: #10201c;
+      --good: #86d194;
+      --good-soft: #142a17;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0c0e0c;
+    --surface: #14170f;
+    --surface-2: #191c14;
+    --border: #2a2e22;
+    --border-2: #3a3f2e;
+    --text: #ecebe3;
+    --text-2: #b8b6a8;
+    --muted: #837f6d;
+
+    --accent: #e3a83b;
+    --accent-soft: #332815;
+
+    --high: #f2726b;
+    --high-soft: #2e1614;
+    --med: #e3b04f;
+    --med-soft: #2c2412;
+    --low: #6bd6c4;
+    --low-soft: #10201c;
+    --good: #86d194;
+    --good-soft: #142a17;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 15.5px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px 90px;
+  }
+  ::selection { background: var(--accent-soft); }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .wrap { max-width: 880px; margin: 0 auto; }
+
+  /* ---- Masthead ---- */
+  .masthead {
+    padding: 56px 0 30px;
+    border-bottom: 1px solid var(--border);
+  }
+  .masthead__kicker {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .masthead__kicker .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  h1 {
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: 34px;
+    letter-spacing: -0.01em;
+    margin: 14px 0 10px;
+    text-wrap: balance;
+  }
+  .masthead__sub {
+    color: var(--text-2);
+    font-size: 16px;
+    max-width: 62ch;
+    margin: 0;
+  }
+  .masthead__meta {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .masthead__meta b { color: var(--text-2); font-weight: 500; }
+
+  /* ---- Scorecard strip ---- */
+  .scorecard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin: 28px 0 0;
+  }
+  .scorecard__cell {
+    background: var(--surface);
+    padding: 16px 18px;
+  }
+  .scorecard__label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .scorecard__count {
+    font-family: var(--mono);
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .scorecard__breakdown {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    font-variant-numeric: tabular-nums;
+  }
+  .scorecard__breakdown span { display: flex; align-items: center; gap: 4px; }
+  .scorecard__breakdown .sw { width: 7px; height: 7px; border-radius: 1px; }
+
+  /* ---- Nav rail ---- */
+  .jumpnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 22px 0 0;
+  }
+  .jumpnav a {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    text-decoration: none;
+    color: var(--text-2);
+    border: 1px solid var(--border);
+    padding: 7px 13px;
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .jumpnav a:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ---- Domain sections ---- */
+  .domain { margin-top: 58px; scroll-margin-top: 20px; }
+  .domain__head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--text);
+  }
+  .domain__num {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .domain__title {
+    font-family: var(--mono);
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .domain__note {
+    margin: 14px 0 24px;
+    font-size: 14.5px;
+    color: var(--text-2);
+    max-width: 68ch;
+  }
+
+  /* ---- Verified-good callout ---- */
+  .verified {
+    background: var(--good-soft);
+    border: 1px solid var(--good);
+    border-left-width: 3px;
+    padding: 14px 18px;
+    margin: 0 0 24px;
+    font-size: 13.5px;
+  }
+  .verified__lbl {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--good);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .verified ul { margin: 0; padding-left: 18px; }
+  .verified li { margin: 3px 0; color: var(--text-2); }
+
+  /* ---- Findings ---- */
+  .finding {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .finding:last-child { border-bottom: none; }
+  .sev {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 4px 0 4px 10px;
+    border-left: 3px solid;
+    height: fit-content;
+  }
+  .sev--high { border-color: var(--high); color: var(--high); }
+  .sev--med  { border-color: var(--med);  color: var(--med); }
+  .sev--low  { border-color: var(--low);  color: var(--low); }
+
+  .finding__title {
+    font-weight: 600;
+    font-size: 15.5px;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .finding__body { color: var(--text-2); margin: 0 0 10px; }
+  .finding__body:last-child { margin-bottom: 0; }
+  .finding__pages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .pg {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+    color: var(--text-2);
+  }
+
+  /* ---- Reconciliation table ---- */
+  .rtable-wrap { overflow-x: auto; margin: 26px 0 8px; border: 1px solid var(--border); }
+  table.rtable { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 13.5px; }
+  table.rtable th, table.rtable td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  table.rtable th {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--surface-2);
+    font-weight: 500;
+  }
+  table.rtable td { color: var(--text-2); vertical-align: top; }
+  table.rtable td:first-child { color: var(--text); font-weight: 500; }
+  table.rtable tr:last-child td { border-bottom: none; }
+  .conflict { font-family: var(--mono); font-size: 12.5px; }
+  .conflict b { color: var(--high); font-weight: 600; }
+
+  /* ---- Priority ladder (footer) ---- */
+  .ladder {
+    margin-top: 60px;
+    padding-top: 26px;
+    border-top: 2px solid var(--text);
+  }
+  .ladder__title { font-family: var(--mono); font-size: 21px; font-weight: 600; margin: 0 0 6px; }
+  .ladder__sub { color: var(--text-2); font-size: 14px; margin: 0 0 22px; }
+  .ladder ol { list-style: none; margin: 0; padding: 0; counter-reset: step; }
+  .ladder li {
+    counter-increment: step;
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .ladder li:last-child { border-bottom: none; }
+  .ladder li::before {
+    content: counter(step);
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    width: 26px; height: 26px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .ladder__text b { font-weight: 600; }
+  .ladder__text span { display: block; color: var(--muted); font-size: 13px; margin-top: 3px; }
+
+  footer.colophon {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 620px) {
+    .scorecard { grid-template-columns: repeat(2, 1fr); }
+    .finding { grid-template-columns: 1fr; gap: 8px; }
+    h1 { font-size: 26px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="masthead__kicker"><span class="dot"></span>digitalwebweaver.com — full-site diagnostics</p>
+    <h1>UI/UX, SEO, speed &amp; content audit</h1>
+    <p class="masthead__sub">Four independent passes across ~73 live pages — visual/theme consistency, technical SEO, Core Web Vitals, and content trust signals. Findings below are what actually held up after verification, not raw agent output.</p>
+    <div class="masthead__meta">
+      <span><b>Pages sampled</b> 22–73 per domain</span>
+      <span><b>Method</b> live production + local render, Lighthouse, Playwright</span>
+      <span><b>Date</b> 2026-08-22</span>
+    </div>
+
+    <div class="scorecard">
+      <div class="scorecard__cell">
+        <div class="scorecard__label">Content</div>
+        <div class="scorecard__count">14</div>
+        <div class="scorecard__breakdown">
+          <span><i class="sw" style="background:var(--high)"></i>5</span>
+          <span><i class="sw" style="background:var(--med)"></i>5</span>
+          <span><i class="sw" style="background:var(--low)"></i>4</span>
+        </div>
+      </div>
+      <div class="scorecard__cell">
+        <div class="scorecard__label">SEO</div>
+        <div class="scorecard__count">7</div>
+        <div class="scorecard__breakdown">
+          <span><i class="sw" style="background:var(--high)"></i>3</span>
+          <span><i class="sw" style="background:var(--med)"></i>2</span>
+          <span><i class="sw" style="background:var(--low)"></i>2</span>
+        </div>
+      </div>
+      <div class="scorecard__cell">
+        <div class="scorecard__label">Page speed</div>
+        <div class="scorecard__count">5</div>
+        <div class="scorecard__breakdown">
+          <span><i class="sw" style="background:var(--high)"></i>2</span>
+          <span><i class="sw" style="background:var(--med)"></i>3</span>
+        </div>
+      </div>
+      <div class="scorecard__cell">
+        <div class="scorecard__label">UI / UX</div>
+        <div class="scorecard__count">1</div>
+        <div class="scorecard__breakdown">
+          <span><i class="sw" style="background:var(--med)"></i>1</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="jumpnav">
+      <a href="#content">Content</a>
+      <a href="#seo">SEO</a>
+      <a href="#speed">Page speed</a>
+      <a href="#uiux">UI / UX</a>
+      <a href="#reconcile">Number conflicts</a>
+      <a href="#priority">Where to start</a>
+    </nav>
+  </header>
+
+  <!-- ============ CONTENT ============ -->
+  <section class="domain" id="content">
+    <div class="domain__head">
+      <span class="domain__num">01</span>
+      <h2 class="domain__title">Content</h2>
+    </div>
+    <p class="domain__note">This is where the audit found the most — and the most consequential. The recurring pattern: real, well-differentiated writing sitting next to unreconciled marketing numbers left over from earlier drafts.</p>
+
+    <div class="finding">
+      <span class="sev sev--high">High</span>
+      <div>
+        <p class="finding__title">Portfolio case studies read as fabricated</p>
+        <p class="finding__body">Nine "client" case studies use invented-looking domains (<code>erp.manufacturiq.io</code>, <code>pipeline.docai.dev</code>, <code>app.telehealth.us</code>) and testimonials attributed only to a first name plus initial. Worse: they're set in Australia, the US, and the UAE — markets that don't appear anywhere else on the site, which states India/UK/South Africa/Ivory Coast as the served countries. No case study links to a detail page or a verifiable client. This is the single biggest trust liability on the site.</p>
+        <div class="finding__pages"><span class="pg">/portfolio/</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--high">High</span>
+      <div>
+        <p class="finding__title">"Countries served" ranges from 4 to 15 depending on the page</p>
+        <p class="finding__body">About, Portfolio, and Contact all say <b>15 countries</b>. The Vadodara location page says <b>12+</b>. The real, stated served-market list is four countries (India, UK, South Africa, Ivory Coast). This is the same category of drift as the team-size number fixed earlier this session — legacy copy nobody reconciled. Full breakdown in the table below.</p>
+        <div class="finding__pages"><span class="pg">/about/</span><span class="pg">/portfolio/</span><span class="pg">/contact/</span><span class="pg">/web-design-vadodara/</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--high">High</span>
+      <div>
+        <p class="finding__title">Client retention is quoted as two different numbers</p>
+        <p class="finding__body">About page says 90% retention; Hire Dedicated Resource says 97%. A 4.9★ "Clutch" rating also appears on four pages with no linked Clutch profile anywhere — an unverifiable trust signal stated as fact.</p>
+        <div class="finding__pages"><span class="pg">/about/</span><span class="pg">/hire-dedicated-resource/</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--high">High</span>
+      <div>
+        <p class="finding__title">"20+ engineers on bench" contradicts the just-corrected team size</p>
+        <p class="finding__body">If the whole studio is ~20 senior engineers, a headline stat implying 20+ are sitting idle and available — on top of whoever is delivering client and product work — doesn't add up. This is very likely the same unreconciled "50+" pattern, just missed in the earlier pass because it says "20+" and reads as already-fixed.</p>
+        <div class="finding__pages"><span class="pg">/hire-dedicated-resource/</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--high">High</span>
+      <div>
+        <p class="finding__title">Blog has no author bio, and all four sampled posts share one publish date</p>
+        <p class="finding__body">Every post is byline-only ("Kamlesh Nishad," no role, no link) and dated exactly <b>June 18, 2026</b> — same day, same author. Reads as a single content batch rather than an ongoing publication, which undercuts the "12+ years of experience" story and is a real E-E-A-T gap for a firm selling engineering expertise.</p>
+        <div class="finding__pages"><span class="pg">/blog/*</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--med">Medium</span>
+      <div>
+        <p class="finding__title">GlowDesk, ClinicFlow, and PestTrack share a template with nouns swapped</p>
+        <p class="finding__body">Same FAQ phrasing, same stat-block layout, same four-step process, same cross-sell block. SolarFlow proves the studio can do better: real subsidy figures, named regulatory workflow stages, four distinctly-described AI assistants, three real pricing tiers. Worth bringing the healthcare-vertical products up to that bar.</p>
+        <div class="finding__pages"><span class="pg">/glowdesk/</span><span class="pg">/clinicflow/</span><span class="pg">/pesttrack/</span><span class="pg">↳ /solarflow/ (reference standard)</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--med">Medium</span>
+      <div>
+        <p class="finding__title">Testimonial attribution format is inconsistent</p>
+        <p class="finding__body">Product-page testimonials use full names and named clinics ("Dr. Anjali Mistry"). Company-level testimonials degrade to initials only ("James E."). Mixed practice reads as if some are real and others were written to sound real.</p>
+        <div class="finding__pages"><span class="pg">/about/</span><span class="pg">/portfolio/</span><span class="pg">vs. product pages</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--med">Medium</span>
+      <div>
+        <p class="finding__title">Location pages: strong differentiation, inconsistent stat blocks</p>
+        <p class="finding__body">Good news first: Vadodara, Ahmedabad, Surat, Rajkot, and Gujarat are genuinely well-differentiated by local industry (MSME/manufacturing, GIFT City fintech, diamond trading, auto-parts, statewide) — not templated city-name-swaps. But each page leads with a different set of stats, formatted three different ways ("12+ years" / "12yrs" / "12yr"), none of which agree with "founded 2013" (13 years as of 2026).</p>
+        <div class="finding__pages"><span class="pg">5 location pages</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--med">Medium</span>
+      <div>
+        <p class="finding__title">"Basic website" starting price varies with no stated reason</p>
+        <p class="finding__body">₹25–60k (blog, Vadodara), ₹40k+ (Ahmedabad), ₹30k+ (Rajkot), ₹35k+ (Surat), ₹30–80k (Gujarat) — plausible if it's a deliberate cost-of-living adjustment per city, worth a quick pass to confirm the variance is intentional rather than drift.</p>
+        <div class="finding__pages"><span class="pg">5 location pages</span><span class="pg">blog</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--med">Medium</span>
+      <div>
+        <p class="finding__title">Unsourced precision stats on industry pages</p>
+        <p class="finding__body">"80,000 listings indexed" (real-estate) and "94% extraction accuracy" (AI automation) are both tied to a single unlinked case study or no source at all — specific-sounding numbers with nothing backing them read as less credible than a rounder, honest figure would.</p>
+        <div class="finding__pages"><span class="pg">/real-estate/</span><span class="pg">/ai-automation/</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--low">Low</span>
+      <div>
+        <p class="finding__title">Phone and WhatsApp numbers differ, unexplained</p>
+        <p class="finding__body">+91 97125 15105 vs. +91 97229 15105 — used consistently everywhere, so almost certainly intentional (two separate lines), but nothing on the site says so. A visitor who notices may wonder if one is stale.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--low">Low</span>
+      <div>
+        <p class="finding__title">Blog archive is thin for a 13-year-old studio</p>
+        <p class="finding__body">Roughly a dozen posts, all dated 2026, none older. A few genuinely dated older posts (2023–24) would support the longevity story more credibly than an all-recent archive does.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--low">Low</span>
+      <div>
+        <p class="finding__title">Same compliance badges on every page regardless of relevance</p>
+        <p class="finding__body">SolarFlow (India-only, DPDP/POPIA-focused) still shows a generic "ISO 27001 · SOC 2 · GDPR aligned" footer alongside its own more relevant compliance content. Not wrong, just unfocused.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--low">Low</span>
+      <div>
+        <p class="finding__title">No deep-linkable case-study pages</p>
+        <p class="finding__body">The portfolio's nine cards have no detail pages behind them. Converting even two or three of the strongest into full case studies — named client, real screenshots, a dated timeline — would fix the fabrication concern above by replacing unverifiable claims with substantiated ones.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEO ============ -->
+  <section class="domain" id="seo">
+    <div class="domain__head">
+      <span class="domain__num">02</span>
+      <h2 class="domain__title">SEO</h2>
+    </div>
+    <p class="domain__note">Crawled all 73 sitemap URLs against both production and local source. The foundation is in genuinely good shape — the two real gaps are a broken subdomain and unclaimed rich-result opportunities.</p>
+
+    <div class="verified">
+      <span class="verified__lbl">Already solid — verified, not re-flagged</span>
+      <ul>
+        <li>Sitemap: all 73 URLs return 200, no redirect drift, no orphaned pages</li>
+        <li>Every page has a self-referencing canonical; no accidental noindex anywhere</li>
+        <li>Organization + BreadcrumbList JSON-LD valid and rendering on every page</li>
+        <li>All 17 product pages already carry SoftwareApplication schema</li>
+        <li>No duplicate titles or descriptions across any of the 73 pages — every one is hand-written and unique</li>
+      </ul>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--high">High</span>
+      <div>
+        <p class="finding__title">www.digitalwebweaver.com has a broken TLS certificate</p>
+        <p class="finding__body">DNS is correctly configured, but <code>https://www.digitalwebweaver.com</code> fails the TLS handshake outright (SNI/cert mismatch), and the plain-HTTP version 308-redirects into that same broken connection. Any backlink, old bookmark, or directory listing using the "www." form sends both users and crawlers to a dead end. This is a Vercel domain-settings fix, not a code change.</p>
+        <div class="finding__pages"><span class="pg">Vercel → Project → Domains</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--high">High</span>
+      <div>
+        <p class="finding__title">FAQPage schema is entirely missing, despite FAQ content on most pages</p>
+        <p class="finding__body">Real Q&amp;A content exists on the large majority of the 73 pages, but zero <code>FAQPage</code> markup exists anywhere in the codebase. This is free SERP rich-result space, and increasingly a signal AI answer engines specifically look for when deciding what to cite. Highest-value targets: the 8 location pages and the 17 product pages.</p>
+        <div class="finding__pages"><span class="pg">lib/schema.js</span><span class="pg">8 location pages</span><span class="pg">17 product pages</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--high">High</span>
+      <div>
+        <p class="finding__title">No LocalBusiness schema on individual location pages</p>
+        <p class="finding__body">The only geo-schema on the site is one global Organization block (Vadodara HQ) in the root layout. None of the 8 location-targeted pages carry their own scoped LocalBusiness/areaServed data — a missed signal for local-pack and "near me" style results on exactly the pages built to capture that intent.</p>
+        <div class="finding__pages"><span class="pg">8 location pages</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--med">Medium</span>
+      <div>
+        <p class="finding__title">56 of 73 titles run long enough to truncate in search results</p>
+        <p class="finding__body">Practical SERP budget is ~60 characters; the worst two offenders run 111–113. No duplication problem — every title is unique and well-written — this is purely a length issue causing mid-phrase truncation.</p>
+        <div class="finding__pages"><span class="pg">/solutions/business-intelligence/ (113 ch)</span><span class="pg">/solutions/cybersecurity/ (111 ch)</span><span class="pg">+54 more, 76–85 ch</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--med">Medium</span>
+      <div>
+        <p class="finding__title">53 of 73 meta descriptions exceed the ~155–160 character display budget</p>
+        <p class="finding__body">Range 114–205 characters, average 169. Descriptions are genuinely good, specific, hand-written copy — Google is just algorithmically rewriting the snippet on most of these pages instead of using the authored one, purely because of length.</p>
+        <div class="finding__pages"><span class="pg">/web-design-vadodara/ (205 ch)</span><span class="pg">+52 more</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--low">Low</span>
+      <div>
+        <p class="finding__title">The one French-language page doesn't override the page <code>lang</code> attribute</p>
+        <p class="finding__body">Root layout hardcodes <code>lang="en"</code> with no per-route override. Minor, but worth a <code>lang="fr"</code> override on this single standalone page for both accessibility and language-detection signals.</p>
+        <div class="finding__pages"><span class="pg">/agence-developpement-web-abidjan/</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--low">Low</span>
+      <div>
+        <p class="finding__title">CSP image allowlist is tight — fine now, worth remembering later</p>
+        <p class="finding__body">Not a defect today; Maps and the simpleicons.org CDN both already work. Just a note that any future image CDN (a CMS, a testimonial-avatar service) will silently break under the current allowlist until it's added.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE SPEED ============ -->
+  <section class="domain" id="speed">
+    <div class="domain__head">
+      <span class="domain__num">03</span>
+      <h2 class="domain__title">Page speed</h2>
+    </div>
+    <p class="domain__note">Live Lighthouse runs (mobile, throttled) against production. CLS is a non-issue everywhere — 0 to 0.013, far under the "good" threshold — and TTFB is excellent site-wide (10–121ms). The real story is render-blocking JS on two specific templates.</p>
+
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead>
+          <tr><th>Page</th><th>Score</th><th>LCP</th><th>TBT</th><th>CLS</th></tr>
+        </thead>
+        <tbody style="font-variant-numeric: tabular-nums;">
+          <tr><td>Homepage</td><td>92</td><td style="color:var(--med)">2.7s</td><td>210ms</td><td>0.013</td></tr>
+          <tr><td>Product page (/quickbite/)</td><td>96</td><td>1.9s</td><td>210ms</td><td>0</td></tr>
+          <tr><td>Blog post</td><td>95</td><td>2.2s</td><td>220ms</td><td>0</td></tr>
+          <tr><td>Location page (South Africa)</td><td>88</td><td>2.2s</td><td style="color:var(--high)">430ms</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--high">High</span>
+      <div>
+        <p class="finding__title">Homepage LCP (2.7s) misses the 2.5s "good" threshold — and it's a text element</p>
+        <p class="finding__body">The LCP element is the hero paragraph, not an image — already in the initial HTML, but delayed <b>1.28 seconds</b> by render blocking (TTFB is only 121ms). Main-thread work on this page hits 3.4s, the highest of any template tested, coinciding with the two largest JS chunks on the site. The homepage's typewriter-effect script is the likely gate: if it touches or rewrites the hero paragraph on mount, the text can't paint until the script initializes. Decoupling the two — let the hero text paint immediately regardless of when the typewriter script runs — is the single biggest lever available to fix this.</p>
+        <div class="finding__pages"><span class="pg">/ (homepage)</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--high">High</span>
+      <div>
+        <p class="finding__title">Location-page template runs 430ms of blocking time — 2× every other template</p>
+        <p class="finding__body">This is the lightest page tested by byte weight (369KB, 29 requests), yet has by far the worst Total Blocking Time. Since cost isn't proportional to bytes here, this points to CPU-bound JS execution — likely component hydration — specific to this template. Because location pages share one template, a fix here compounds across every one of them.</p>
+        <div class="finding__pages"><span class="pg">8 location pages (shared template)</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--med">Medium</span>
+      <div>
+        <p class="finding__title">Homepage ships the most first-load JS of any template — ~441KB compressed</p>
+        <p class="finding__body">Breakdown: 172.8KB + 123.4KB in shared/vendor chunks, plus a surprising 91.4KB of polyfills given the browserslist already targets a modern baseline (Chrome 64+/Safari 12+) — worth checking that Next's build isn't defaulting to broader legacy coverage than the config implies. The homepage's own page-specific code is only 6KB, so the weight to trim is in shared chunks, not homepage logic.</p>
+        <div class="finding__pages"><span class="pg">/ (homepage)</span><span class="pg">next.config.mjs</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--med">Medium</span>
+      <div>
+        <p class="finding__title">200–430ms of blocking time on every template points to a shared root cause</p>
+        <p class="finding__body">Since Shell, ThemeToggle, and the JSON-LD injection all mount on literally every route via the root layout, even a modest reduction there — deferring ThemeToggle hydration, lazy-mounting schema injection until after first paint — would compound across the whole site rather than needing a per-page fix.</p>
+        <div class="finding__pages"><span class="pg">app/layout.jsx</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--med">Medium</span>
+      <div>
+        <p class="finding__title">Local production build currently fails on one route</p>
+        <p class="finding__body">A local <code>npm run build</code> 500s on one South-Africa food-delivery blog post. Confirmed production-only unaffected (Vercel builds clean from a fresh checkout) — this is a local Windows-checkout cache issue, not a code bug, but it currently blocks any local Lighthouse/bundle auditing against this repo until cleared with a fresh <code>.next</code> + reinstall.</p>
+        <div class="finding__pages"><span class="pg">local checkout only</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UI/UX ============ -->
+  <section class="domain" id="uiux">
+    <div class="domain__head">
+      <span class="domain__num">04</span>
+      <h2 class="domain__title">UI / UX</h2>
+    </div>
+    <p class="domain__note">Judged against the site's own IDE-workspace theme, not generic conventions. The first automated pass over-reported — a stale dev-server cache produced console errors and a false "sidebar overflow on mobile" finding. Re-tested independently on a clean server across six pages at 375px: zero overflow, zero console errors, sidebar correctly off-canvas everywhere. That finding is retracted below, not included as real.</p>
+
+    <div class="verified">
+      <span class="verified__lbl">Already solid — verified, not re-flagged</span>
+      <ul>
+        <li>No desktop layout breakage across 8 pages at 1440px — consistent topbar/sidebar chrome, single H1 per page</li>
+        <li>No mobile horizontal overflow on any of 6 pages re-tested at 375px on a clean server</li>
+        <li>The file-tree/terminal/git-log visual language holds together consistently across the theme</li>
+      </ul>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--med">Medium</span>
+      <div>
+        <p class="finding__title">Tech-stack logo icons are missing alt text</p>
+        <p class="finding__body">React, Node.js, Laravel, Python, PostgreSQL, and similar stack-icon images consistently render with no <code>alt</code> attribute across every page checked. These identify real technologies — not decorative — so this is a genuine screen-reader gap, not a stylistic nit.</p>
+        <div class="finding__pages"><span class="pg">sitewide — tech-stack icon rows</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <span class="sev sev--low">Low</span>
+      <div>
+        <p class="finding__title">Not covered this pass</p>
+        <p class="finding__body">Contact-form focus states and inline-validation styling, and a dedicated color-contrast sweep, weren't reached in this round — worth a follow-up pass if accessibility is a priority beyond the alt-text finding above.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RECONCILIATION ============ -->
+  <section class="domain" id="reconcile">
+    <div class="domain__head">
+      <span class="domain__num">05</span>
+      <h2 class="domain__title">Numbers to reconcile in one pass</h2>
+    </div>
+    <p class="domain__note">Every inconsistent stat found across all four audits, gathered in one place — the same class of error as the team-size fix earlier this session, just not yet caught.</p>
+
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead>
+          <tr><th>Metric</th><th>Conflicting values</th><th>Where</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Countries served</td>
+            <td class="conflict"><b>15</b> / <b>12+</b> / 4 (actual)</td>
+            <td>About, Portfolio, Contact say 15 · Vadodara says 12+</td>
+          </tr>
+          <tr>
+            <td>Client retention</td>
+            <td class="conflict"><b>90%</b> / <b>97%</b></td>
+            <td>About vs. Hire Dedicated Resource</td>
+          </tr>
+          <tr>
+            <td>Years in business</td>
+            <td class="conflict">"12+ yrs" / "12yrs" / "12yr" vs. 13 (2026 − 2013)</td>
+            <td>All 5 location pages, About</td>
+          </tr>
+          <tr>
+            <td>Rating</td>
+            <td class="conflict">4.9 / 4.9★ / 4.9-of-5, all "Clutch," unlinked</td>
+            <td>4 pages, no source ever linked</td>
+          </tr>
+          <tr>
+            <td>Team / bench size</td>
+            <td class="conflict"><b>20+ engineers</b> vs. <b>20+ on bench</b></td>
+            <td>About (total team) vs. Hire page (implies idle capacity on top)</td>
+          </tr>
+          <tr>
+            <td>Clients served</td>
+            <td class="conflict">150+ (most pages) vs. 200+ systems (different metric, Portfolio)</td>
+            <td>Nearly every page</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ PRIORITY LADDER ============ -->
+  <section class="ladder" id="priority">
+    <h2 class="ladder__title">Where the effort should go first</h2>
+    <p class="ladder__sub">Ordered by trust/ranking impact versus effort — not strictly by severity tag above.</p>
+    <ol>
+      <li>
+        <div class="ladder__text">
+          <b>Fix the www subdomain's TLS cert in Vercel domain settings</b>
+          <span>Ten-minute fix, currently sends any "www." backlink or bookmark to a dead connection.</span>
+        </div>
+      </li>
+      <li>
+        <div class="ladder__text">
+          <b>Reconcile the six conflicting numbers above sitewide</b>
+          <span>Same pattern as the team-size fix already done — a single focused pass across a known list of pages.</span>
+        </div>
+      </li>
+      <li>
+        <div class="ladder__text">
+          <b>Address the portfolio case-study credibility problem</b>
+          <span>Either substantiate 2–3 of the nine with real, dated, linkable case-study pages, or scope the claims down to what's verifiable.</span>
+        </div>
+      </li>
+      <li>
+        <div class="ladder__text">
+          <b>Decouple the homepage hero text from the typewriter script's init path</b>
+          <span>Fixes the only Core Web Vitals "needs improvement" score on the site.</span>
+        </div>
+      </li>
+      <li>
+        <div class="ladder__text">
+          <b>Add FAQPage schema to the 8 location + 17 product pages</b>
+          <span>The FAQ copy already exists — this is markup-only work with real rich-result upside.</span>
+        </div>
+      </li>
+      <li>
+        <div class="ladder__text">
+          <b>Everything else</b>
+          <span>Title/description trimming, template differentiation on the clinic-vertical products, alt text on stack icons, and the location-page TBT investigation — real, but lower urgency than the five above.</span>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <footer class="colophon">
+    Compiled from four parallel audit passes (content, technical SEO, page speed, UI/UX) plus one independent re-verification. Full page-by-page evidence and raw Lighthouse JSON available on request.
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+SEO Schema Coverage Audit — Post-Fix Status
+Generated: 2026-09-12
+
+Total pages: 74
+Pages with JSON-LD schema: 73/74 (99%)
+Pages missing schema: 1 (homepage — covered by layout-level Organization + WebSite schema)
+
+====================================================================================================
+PAGE OVERVIEW
+====================================================================================================
+
+Schema type breakdown by page:
+  Organization + WebSite (layout-level)   : /, 50 pages that use serviceSchema/blogPostingSchema + get organization via layout
+  AboutPage                               : /about/
+  CollectionPage (blog)                   : /blog/
+  JobPosting (5 roles)                    : /careers/
+  ContactPage                             : /contact/
+  WebApp                                  : /cost-estimator/
+  Service (industry pages)                : /edtech/, /fintech/, /healthcare/, /logistics/, /real-estate/, /retail-ecommerce/
+  Service (service pages)                 : /services/
+  Service (international pages)           : /software-development-company-uk/, /software-development-company-south-africa/, /agence-developpement-web-abidjan/
+  Service (location pages)                : /web-design-vadodara/, /web-design-ahmedabad/, /web-design-surat/, /web-design-rajkot/, /web-design-gujarat/
+  LocalBusiness + Service (each)          : Same 5 location pages above
+  ItemList (portfolio)                    : /portfolio/
+  CollectionPage (products)               : /products/
+  WebPage                                 : /privacy-policy/
+
+All product pages (18)              : Service schema
+All blog posts (11)                 : BlogPosting schema
+All service/utility pages (~21)     : Service schema
+
+====================================================================================================
+REMAINING ISSUES (from earlier audit, not yet fixed)
+====================================================================================================
+
+Title tags over 60 chars (SERP truncation risk): ~66 pages
+  Worst offenders: Business Intelligence (113 chars), Cybersecurity (111 chars)
+No images on 72/74 pages
+No inline testimonials on any page

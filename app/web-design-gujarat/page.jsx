@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema, localBusinessSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Web Design Gujarat | Websites, Apps & ERP Solutions — Digital Web Weaver" },
@@ -12,6 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={[localBusinessSchema({ city: "gujarat", description: "Software development company serving all of Gujarat — from Ahmedabad and Surat to Rajkot and smaller industrial towns. Custom software, websites, and ERP for Gujarat's 3.6 million+ MSMEs." }), serviceSchema({ name: "Web Development Gujarat", description: "Senior engineers based in Vadodara building custom software for businesses across Gujarat — from Ahmedabad IT startups and GIFT City fintechs to Surat textile traders and Rajkot manufacturers.", href: "/web-design-gujarat/" })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What we build">⚙</button>

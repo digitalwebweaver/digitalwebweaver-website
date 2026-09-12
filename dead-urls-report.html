@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dead URL Inventory — digitalwebweaver.com</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --bg: #f7f6f3; --surface: #ffffff; --surface-2: #f0efea;
+    --border: #e2e0d8; --border-2: #d2cfc3;
+    --text: #1c1b17; --text-2: #4b4a43; --muted: #8a8879;
+    --accent: #b26a00; --accent-soft: #f2e2c4;
+    --high: #b3261e; --high-soft: #fbe4e2;
+    --med: #93650a; --med-soft: #f6e6c8;
+    --low: #5b7a63; --low-soft: #e6ede7;
+    --good: #2f7a3d; --good-soft: #e2f1e2;
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c0e0c; --surface: #14170f; --surface-2: #191c14;
+      --border: #2a2e22; --border-2: #3a3f2e;
+      --text: #ecebe3; --text-2: #b8b6a8; --muted: #837f6d;
+      --accent: #e3a83b; --accent-soft: #332815;
+      --high: #f2726b; --high-soft: #2e1614;
+      --med: #e3b04f; --med-soft: #2c2412;
+      --low: #8fbd9a; --low-soft: #16201a;
+      --good: #86d194; --good-soft: #142a17;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c0e0c; --surface: #14170f; --surface-2: #191c14;
+    --border: #2a2e22; --border-2: #3a3f2e;
+    --text: #ecebe3; --text-2: #b8b6a8; --muted: #837f6d;
+    --accent: #e3a83b; --accent-soft: #332815;
+    --high: #f2726b; --high-soft: #2e1614;
+    --med: #e3b04f; --med-soft: #2c2412;
+    --low: #8fbd9a; --low-soft: #16201a;
+    --good: #86d194; --good-soft: #142a17;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15.5px; line-height: 1.6; margin: 0; padding: 0 20px 90px; }
+  code { font-family: var(--mono); font-size: 0.92em; background: var(--surface-2); padding: 1px 6px; border-radius: 3px; color: var(--text-2); }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  .masthead { padding: 56px 0 30px; border-bottom: 1px solid var(--border); }
+  .kicker { font-family: var(--mono); font-size: 12.5px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 10px; }
+  .kicker .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  h1 { font-family: var(--mono); font-weight: 600; font-size: 32px; letter-spacing: -0.01em; margin: 14px 0 10px; text-wrap: balance; }
+  .sub { color: var(--text-2); font-size: 16px; max-width: 68ch; margin: 0; }
+  .meta { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px 22px; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+  .meta b { color: var(--text-2); font-weight: 500; }
+
+  .scorecard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin: 28px 0 0; }
+  .scorecard__cell { background: var(--surface); padding: 16px 18px; }
+  .scorecard__label { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .scorecard__count { font-family: var(--mono); font-size: 26px; font-weight: 600; margin-top: 6px; font-variant-numeric: tabular-nums; }
+
+  .domain { margin-top: 50px; }
+  .domain__head { display: flex; align-items: baseline; gap: 12px; padding-bottom: 12px; border-bottom: 2px solid var(--text); }
+  .sev-badge { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px; border-radius: 3px; }
+  .sev-badge.high { background: var(--high-soft); color: var(--high); }
+  .sev-badge.medium { background: var(--med-soft); color: var(--med); }
+  .sev-badge.low { background: var(--low-soft); color: var(--low); }
+  .domain__title { font-family: var(--mono); font-size: 20px; font-weight: 600; margin: 0; }
+  .domain__note { margin: 14px 0 22px; font-size: 14.5px; color: var(--text-2); max-width: 70ch; }
+
+  .finding { background: var(--high-soft); border: 1px solid var(--high); border-left-width: 3px; padding: 16px 20px; margin-bottom: 10px; }
+  .finding code { background: var(--surface); }
+  .finding p { margin: 6px 0 0; color: var(--text-2); font-size: 14px; }
+
+  table.rtable { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  table.rtable td, table.rtable th { text-align: left; padding: 9px 14px; border-bottom: 1px solid var(--border); }
+  table.rtable th { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); background: var(--surface-2); font-weight: 500; }
+  table.rtable tr:last-child td { border-bottom: none; }
+  .rtable-wrap { border: 1px solid var(--border); overflow-x: auto; }
+
+  .era-block { border: 1px solid var(--border); margin-bottom: 8px; }
+  .era-head { width: 100%; display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: var(--surface-2); border: none; cursor: pointer; font-family: var(--sans); font-size: 14px; color: var(--text); text-align: left; }
+  .era-name { font-weight: 600; flex: 1; }
+  .era-count { font-family: var(--mono); font-size: 12px; color: var(--muted); background: var(--surface); border: 1px solid var(--border); padding: 2px 8px; border-radius: 10px; }
+  .era-chev { color: var(--muted); transition: transform .15s ease; }
+  .era-block.open .era-chev { transform: rotate(180deg); }
+  .era-body { display: none; max-height: 360px; overflow-y: auto; }
+  .era-block.open .era-body { display: block; }
+  .lowrow td { color: var(--text-2); }
+
+  .filter-row { margin: 18px 0; }
+  #filterInput { width: 100%; padding: 10px 14px; font-family: var(--mono); font-size: 13.5px; border: 1px solid var(--border-2); background: var(--surface); color: var(--text); border-radius: 4px; }
+  #filterInput:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+
+  .verified { background: var(--good-soft); border: 1px solid var(--good); border-left-width: 3px; padding: 12px 18px; margin: 20px 0; font-size: 13.5px; color: var(--text-2); }
+
+  footer.colophon { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+  @media (max-width: 620px) { .scorecard { grid-template-columns: repeat(2, 1fr); } h1 { font-size: 24px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="kicker"><span class="dot"></span>digitalwebweaver.com — legacy URL audit</p>
+    <h1>Dead pages that might still be in Google's index</h1>
+    <p class="sub">This domain has been through several past lives — a WordPress hosting-affiliate blog, a domain-finder tool, two different design templates, and a portfolio site — before becoming the current software studio. This checks every URL the Internet Archive has ever recorded for this domain against what's actually live today.</p>
+    <div class="meta">
+      <span><b>Historical URLs found</b> 3,010 (Internet Archive)</span>
+      <span><b>Content-page candidates checked live</b> 412</span>
+      <span><b>Confirmed dead today</b> 403</span>
+    </div>
+
+    <div class="scorecard">
+      <div class="scorecard__cell"><div class="scorecard__label">Checked</div><div class="scorecard__count">412</div></div>
+      <div class="scorecard__cell"><div class="scorecard__label">Still live</div><div class="scorecard__count" style="color:var(--good)">9</div></div>
+      <div class="scorecard__cell"><div class="scorecard__label">Dead (404)</div><div class="scorecard__count" style="color:var(--high)">403</div></div>
+      <div class="scorecard__cell"><div class="scorecard__label">Worth fixing</div><div class="scorecard__count" style="color:var(--med)">11</div></div>
+    </div>
+
+    <div class="verified">
+      <b>Not urgent, for context:</b> Google naturally drops persistently-404ing URLs from its index over time on its own. Nothing below is a live security risk — the old WordPress/PHP backend behind most of these is completely gone, replaced by this site's current Next.js/Vercel infrastructure. This is a cleanup opportunity, not an emergency.
+    </div>
+  </header>
+
+  <section class="domain">
+    <div class="domain__head">
+      <span class="sev-badge high">High</span>
+      <h2 class="domain__title">Confirmed still indexed by Google — worth fixing</h2>
+    </div>
+    <p class="domain__note">This one isn't a guess — I independently confirmed it's actively showing up in Google search results right now, pointing at a page that returns a 404 today.</p>
+    <div class="finding"><code>/inventory-management-system/</code><p>Confirmed still indexed by Google right now — actively showing in search results for a page that no longer exists.</p></div>
+  </section>
+
+  <section class="domain">
+    <div class="domain__head">
+      <span class="sev-badge medium">Medium</span>
+      <h2 class="domain__title">Generic paths worth a redirect (10)</h2>
+    </div>
+    <p class="domain__note">Not confirmed still indexed, but these are the kind of short, memorable paths an old bookmark or backlink might still hit. Redirecting them to today's closest equivalent page is cheap insurance — costs one line in the redirect config, catches any stray traffic instead of showing a dead end.</p>
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead><tr><th>Dead URL</th><th>Why it's worth a redirect</th><th>Suggested target</th></tr></thead>
+        <tbody>
+          <tr><td><code>/about-company</code></td><td>Generic &quot;about&quot; path — redirect to /about/</td><td><code>/about/</code></td></tr>
+          <tr><td><code>/about-our-team/</code></td><td>Generic &quot;about&quot; path — redirect to /about/</td><td><code>/about/</code></td></tr>
+          <tr><td><code>/about-us</code></td><td>Generic &quot;about&quot; path — redirect to /about/</td><td><code>/about/</code></td></tr>
+          <tr><td><code>/contact-2/</code></td><td>Generic &quot;contact&quot; path — redirect to /contact/</td><td><code>/contact/</code></td></tr>
+          <tr><td><code>/news/</code></td><td>Generic &quot;news&quot; path — could redirect to /blog/</td><td><code>/blog/</code></td></tr>
+          <tr><td><code>/project</code></td><td>Old portfolio/project hub path — redirect to /portfolio/</td><td><code>/portfolio/</code></td></tr>
+          <tr><td><code>/projects</code></td><td>Old portfolio/project hub path — redirect to /portfolio/</td><td><code>/portfolio/</code></td></tr>
+          <tr><td><code>/sitemap/</code></td><td>Human-readable sitemap page — low traffic but cheap to redirect to /</td><td><code>/</code></td></tr>
+          <tr><td><code>/testimonial/</code></td><td>Generic &quot;testimonials&quot; path — could redirect to /about/ or /portfolio/</td><td><code>/about/</code></td></tr>
+          <tr><td><code>/testimonials</code></td><td>Generic &quot;testimonials&quot; path — could redirect to /about/ or /portfolio/</td><td><code>/about/</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="domain">
+    <div class="domain__head">
+      <span class="sev-badge low">Low</span>
+      <h2 class="domain__title">Safe to ignore (392)</h2>
+    </div>
+    <p class="domain__note">Grouped by which past version of the site they belonged to. None of these have any topical overlap with the current software studio — they're remnants of a completely different, defunct business identity (a hosting affiliate blog, a domain-reseller tool, old design templates). No action needed; Google will drop these from its index naturally as it continues to see them 404. Click a group to expand it, or use the filter below to search across all of them.</p>
+    <div class="filter-row">
+      <input type="text" id="filterInput" placeholder="Filter by path, e.g. &quot;wordpress&quot; or &quot;medicrown&quot;…" autocomplete="off">
+    </div>
+    
+  <div class="era-block">
+    <button class="era-head" data-toggle>
+      <span class="era-name">Other legacy page</span>
+      <span class="era-count">206</span>
+      <span class="era-chev">▾</span>
+    </button>
+    <div class="era-body">
+      <table class="rtable">
+        <tbody>
+          <tr class="lowrow"><td><code>/.well-known/nodeinfo</code></td></tr>
+          <tr class="lowrow"><td><code>/.well-known/openid-configuration</code></td></tr>
+          <tr class="lowrow"><td><code>/''</code></td></tr>
+          <tr class="lowrow"><td><code>/1rem%20+%200.025%20*%20((100vw%20-%20576px</code></td></tr>
+          <tr class="lowrow"><td><code>/229380-2/</code></td></tr>
+          <tr class="lowrow"><td><code>/229390-2/</code></td></tr>
+          <tr class="lowrow"><td><code>/3.15.1</code></td></tr>
+          <tr class="lowrow"><td><code>/8122-2/</code></td></tr>
+          <tr class="lowrow"><td><code>/about-us-basic</code></td></tr>
+          <tr class="lowrow"><td><code>/aliquam-erat-volutpat-2/</code></td></tr>
+          <tr class="lowrow"><td><code>/amc-software/</code></td></tr>
+          <tr class="lowrow"><td><code>/annual-management-contract/</code></td></tr>
+          <tr class="lowrow"><td><code>/apartment-management/</code></td></tr>
+          <tr class="lowrow"><td><code>/b2b-portal/</code></td></tr>
+          <tr class="lowrow"><td><code>/blog-2</code></td></tr>
+          <tr class="lowrow"><td><code>/blog-3-columns</code></td></tr>
+          <tr class="lowrow"><td><code>/blog-full-right-sidebar-with-frame/</code></td></tr>
+          <tr class="lowrow"><td><code>/blog-page/</code></td></tr>
+          <tr class="lowrow"><td><code>/c</code></td></tr>
+          <tr class="lowrow"><td><code>/cdn-cgi/l/email-protection</code></td></tr>
+          <tr class="lowrow"><td><code>/cgi-sys/suspendedpage.cgi</code></td></tr>
+          <tr class="lowrow"><td><code>/check</code></td></tr>
+          <tr class="lowrow"><td><code>/choosing-the-right-website-builder-wix-or-squarespace/</code></td></tr>
+          <tr class="lowrow"><td><code>/client/ekta-motor-training/</code></td></tr>
+          <tr class="lowrow"><td><code>/client/maximum-pest-control/</code></td></tr>
+          <tr class="lowrow"><td><code>/client/shivam-engitech/</code></td></tr>
+          <tr class="lowrow"><td><code>/client/transpower-electronics/</code></td></tr>
+          <tr class="lowrow"><td><code>/cms-ecommerce/</code></td></tr>
+          <tr class="lowrow"><td><code>/codeigniter-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/contact-us</code></td></tr>
+          <tr class="lowrow"><td><code>/contact-us-2/</code></td></tr>
+          <tr class="lowrow"><td><code>/contact-us-5/</code></td></tr>
+          <tr class="lowrow"><td><code>/contact-us-advanced/</code></td></tr>
+          <tr class="lowrow"><td><code>/content-writing/</code></td></tr>
+          <tr class="lowrow"><td><code>/cpanel</code></td></tr>
+          <tr class="lowrow"><td><code>/creative-water-features-and-exterior/</code></td></tr>
+          <tr class="lowrow"><td><code>/current_add.ep</code></td></tr>
+          <tr class="lowrow"><td><code>/current_add.fd</code></td></tr>
+          <tr class="lowrow"><td><code>/current_add.rf</code></td></tr>
+          <tr class="lowrow"><td><code>/current.cmp</code></td></tr>
+          <tr class="lowrow"><td><code>/current.cnt</code></td></tr>
+          <tr class="lowrow"><td><code>/current.fmt</code></td></tr>
+          <tr class="lowrow"><td><code>/current.id</code></td></tr>
+          <tr class="lowrow"><td><code>/current.mdm</code></td></tr>
+          <tr class="lowrow"><td><code>/current.plt</code></td></tr>
+          <tr class="lowrow"><td><code>/current.src</code></td></tr>
+          <tr class="lowrow"><td><code>/current.tct</code></td></tr>
+          <tr class="lowrow"><td><code>/current.trm</code></td></tr>
+          <tr class="lowrow"><td><code>/current.typ</code></td></tr>
+          <tr class="lowrow"><td><code>/custom-application-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/custom-crm-development</code></td></tr>
+          <tr class="lowrow"><td><code>/custom-ecommerce-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/customcrm</code></td></tr>
+          <tr class="lowrow"><td><code>/customer-support-digital-web-weaver/</code></td></tr>
+          <tr class="lowrow"><td><code>/cutom-crm-development</code></td></tr>
+          <tr class="lowrow"><td><code>/dd</code></td></tr>
+          <tr class="lowrow"><td><code>/digital-marketing-services/</code></td></tr>
+          <tr class="lowrow"><td><code>/digital-marketing/</code></td></tr>
+          <tr class="lowrow"><td><code>/digital-web-weaver-blog/</code></td></tr>
+          <tr class="lowrow"><td><code>/ecommerce-development-company-in-vadodara/</code></td></tr>
+          <tr class="lowrow"><td><code>/ecommerce-web-design-vadodara/</code></td></tr>
+          <tr class="lowrow"><td><code>/elementor-229384/</code></td></tr>
+          <tr class="lowrow"><td><code>/erp-development-service/</code></td></tr>
+          <tr class="lowrow"><td><code>/erp/</code></td></tr>
+          <tr class="lowrow"><td><code>/etiam-laoreet-sem-eget-eros-rhoncus-2/</code></td></tr>
+          <tr class="lowrow"><td><code>/etiam-laoreet-sem-eget-eros-rhoncus-3/</code></td></tr>
+          <tr class="lowrow"><td><code>/etiam-laoreet-sem-eget-eros-rhoncus-4/</code></td></tr>
+          <tr class="lowrow"><td><code>/etiam-laoreet-sem-eget-eros-rhoncus-5/</code></td></tr>
+          <tr class="lowrow"><td><code>/etiam-laoreet-sem-eget-eros-rhoncus/</code></td></tr>
+          <tr class="lowrow"><td><code>/event</code></td></tr>
+          <tr class="lowrow"><td><code>/folio/amazon-store-creator/</code></td></tr>
+          <tr class="lowrow"><td><code>/folio/davar-associates/</code></td></tr>
+          <tr class="lowrow"><td><code>/folio/fashion-model/</code></td></tr>
+          <tr class="lowrow"><td><code>/food-delivery-app-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/food-delivery-app-development1/</code></td></tr>
+          <tr class="lowrow"><td><code>/food-delivery-app/</code></td></tr>
+          <tr class="lowrow"><td><code>/free-analysis/</code></td></tr>
+          <tr class="lowrow"><td><code>/free-quote/</code></td></tr>
+          <tr class="lowrow"><td><code>/from-fast-food-to-fine-dining-the-best-food-delivery-apps-in-south-africa/</code></td></tr>
+          <tr class="lowrow"><td><code>/goodbye-to-conventional-marketing</code></td></tr>
+          <tr class="lowrow"><td><code>/google1d673943cb85a0a8.html</code></td></tr>
+          <tr class="lowrow"><td><code>/graphic-designing/</code></td></tr>
+          <tr class="lowrow"><td><code>/green-interior-design-inspiration/</code></td></tr>
+          <tr class="lowrow"><td><code>/grocery-app/</code></td></tr>
+          <tr class="lowrow"><td><code>/gst-billing-software</code></td></tr>
+          <tr class="lowrow"><td><code>/guest-post-service/</code></td></tr>
+          <tr class="lowrow"><td><code>/hello-world/</code></td></tr>
+          <tr class="lowrow"><td><code>/hire-nodejs-developer/</code></td></tr>
+          <tr class="lowrow"><td><code>/hire-php-developers/</code></td></tr>
+          <tr class="lowrow"><td><code>/home-2</code></td></tr>
+          <tr class="lowrow"><td><code>/home-alternative</code></td></tr>
+          <tr class="lowrow"><td><code>/hostel-management-system/</code></td></tr>
+          <tr class="lowrow"><td><code>/hostgator</code></td></tr>
+          <tr class="lowrow"><td><code>/how-and-why-register-a-private-domain/</code></td></tr>
+          <tr class="lowrow"><td><code>/how-to-choose-best-web-design-and-development-company</code></td></tr>
+          <tr class="lowrow"><td><code>/industrial-training</code></td></tr>
+          <tr class="lowrow"><td><code>/internet-service-provider/</code></td></tr>
+          <tr class="lowrow"><td><code>/iphone-app-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/job-dashboard</code></td></tr>
+          <tr class="lowrow"><td><code>/kamal-singh</code></td></tr>
+          <tr class="lowrow"><td><code>/laravel-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/laundry-app/</code></td></tr>
+          <tr class="lowrow"><td><code>/laundry-software/</code></td></tr>
+          <tr class="lowrow"><td><code>/leadpage-2/</code></td></tr>
+          <tr class="lowrow"><td><code>/learning-management-system/</code></td></tr>
+          <tr class="lowrow"><td><code>/library-management-system/</code></td></tr>
+          <tr class="lowrow"><td><code>/locations.kml</code></td></tr>
+          <tr class="lowrow"><td><code>/magento-e-commerce-solutions/</code></td></tr>
+          <tr class="lowrow"><td><code>/member/jessica-doe/</code></td></tr>
+          <tr class="lowrow"><td><code>/member/john-doe/</code></td></tr>
+          <tr class="lowrow"><td><code>/member/melinda-wolosky/</code></td></tr>
+          <tr class="lowrow"><td><code>/member/rick-edward-doe/</code></td></tr>
+          <tr class="lowrow"><td><code>/minimalist-design-furniture-2016/</code></td></tr>
+          <tr class="lowrow"><td><code>/minimalist-japanese-inspired-furniture/</code></td></tr>
+          <tr class="lowrow"><td><code>/mobile-app-development-company-in-vadodara/</code></td></tr>
+          <tr class="lowrow"><td><code>/new-home-decor-from-john-doerson/</code></td></tr>
+          <tr class="lowrow"><td><code>/nodejs-or-asp-net-core-which-offers-the-best-cross-platform-compatibility/</code></td></tr>
+          <tr class="lowrow"><td><code>/non-vestibulum-lacus-sociosqu/</code></td></tr>
+          <tr class="lowrow"><td><code>/on-demand-apps/</code></td></tr>
+          <tr class="lowrow"><td><code>/online-examination-software/</code></td></tr>
+          <tr class="lowrow"><td><code>/opencart-development-service/</code></td></tr>
+          <tr class="lowrow"><td><code>/our-clients/</code></td></tr>
+          <tr class="lowrow"><td><code>/our-portfolio</code></td></tr>
+          <tr class="lowrow"><td><code>/our-services</code></td></tr>
+          <tr class="lowrow"><td><code>/our-team/</code></td></tr>
+          <tr class="lowrow"><td><code>/partnership/</code></td></tr>
+          <tr class="lowrow"><td><code>/pharmacy-billing-software/</code></td></tr>
+          <tr class="lowrow"><td><code>/phonegap-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/photo-gallery</code></td></tr>
+          <tr class="lowrow"><td><code>/php-training-course-in-vadodara/</code></td></tr>
+          <tr class="lowrow"><td><code>/points-to-consider-for-designing-a-website-for-senior-citizen/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio_categories/logo/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio_categories/website/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio-2-columns-with-sidebar/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio-category/3d/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio-category/development/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio-category/digital/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio-category/identity/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio-category/mobile-app/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio-category/mockup/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio-category/sports/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio-category/strategy/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio-category/ui-ux/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio-category/visual/</code></td></tr>
+          <tr class="lowrow"><td><code>/ppc-google-adwords/</code></td></tr>
+          <tr class="lowrow"><td><code>/print-shop-order-management-software/</code></td></tr>
+          <tr class="lowrow"><td><code>/privacy-policy-2/</code></td></tr>
+          <tr class="lowrow"><td><code>/product/blog-html-template/</code></td></tr>
+          <tr class="lowrow"><td><code>/product/digital-html-template/</code></td></tr>
+          <tr class="lowrow"><td><code>/product/event-html-template/</code></td></tr>
+          <tr class="lowrow"><td><code>/product/hospital-management-system-vadodara</code></td></tr>
+          <tr class="lowrow"><td><code>/product/personal-portfolio-template/</code></td></tr>
+          <tr class="lowrow"><td><code>/product/psd-to-html/</code></td></tr>
+          <tr class="lowrow"><td><code>/product/school-management-software</code></td></tr>
+          <tr class="lowrow"><td><code>/psd-to-html/</code></td></tr>
+          <tr class="lowrow"><td><code>/python-development-company/</code></td></tr>
+          <tr class="lowrow"><td><code>/react-native-app-developement/</code></td></tr>
+          <tr class="lowrow"><td><code>/react-native-app-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/ready-made-software-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/reinterprets-the-classic-bookshelf/</code></td></tr>
+          <tr class="lowrow"><td><code>/restaurant-management/</code></td></tr>
+          <tr class="lowrow"><td><code>/school-lead-form/</code></td></tr>
+          <tr class="lowrow"><td><code>/school-mangement-erp/</code></td></tr>
+          <tr class="lowrow"><td><code>/script-customization</code></td></tr>
+          <tr class="lowrow"><td><code>/search-engine-optimization/</code></td></tr>
+          <tr class="lowrow"><td><code>/sed-elementum-massa-volutpat-2/</code></td></tr>
+          <tr class="lowrow"><td><code>/seocrawler/code-optimization/</code></td></tr>
+          <tr class="lowrow"><td><code>/seocrawler/demo2/portfolio-3-columns/</code></td></tr>
+          <tr class="lowrow"><td><code>/seocrawler/email-marketing/</code></td></tr>
+          <tr class="lowrow"><td><code>/seocrawler/monitoring-ranking</code></td></tr>
+          <tr class="lowrow"><td><code>/seocrawler/nap-syndication/</code></td></tr>
+          <tr class="lowrow"><td><code>/seocrawler/search-engine-marketing/</code></td></tr>
+          <tr class="lowrow"><td><code>/seocrawler/search-engine-optimization/</code></td></tr>
+          <tr class="lowrow"><td><code>/seocrawler/seo-support/</code></td></tr>
+          <tr class="lowrow"><td><code>/seocrawler/target-strategy</code></td></tr>
+          <tr class="lowrow"><td><code>/service/wordpress-website-optimization/</code></td></tr>
+          <tr class="lowrow"><td><code>/services-2</code></td></tr>
+          <tr class="lowrow"><td><code>/services/corporate-websites/</code></td></tr>
+          <tr class="lowrow"><td><code>/session.pgs</code></td></tr>
+          <tr class="lowrow"><td><code>/shop</code></td></tr>
+          <tr class="lowrow"><td><code>/should-you-use-wordpress-or-a-custom-tech-stack-for-website-design/</code></td></tr>
+          <tr class="lowrow"><td><code>/social-media-marketing/</code></td></tr>
+          <tr class="lowrow"><td><code>/sweet-seat-functional-seat-for-it-folks/</code></td></tr>
+          <tr class="lowrow"><td><code>/taxi-app/</code></td></tr>
+          <tr class="lowrow"><td><code>/terms-and-conditions/</code></td></tr>
+          <tr class="lowrow"><td><code>/test-page/</code></td></tr>
+          <tr class="lowrow"><td><code>/the-big-design-wall-likes-pictures/</code></td></tr>
+          <tr class="lowrow"><td><code>/things-to-remember-before-hiring-a-web-developer-for-your-website/</code></td></tr>
+          <tr class="lowrow"><td><code>/things-to-remember-before-hiring-a-web-developer-for-your-website/things-to-remember-before-hiring-a-web-developer/</code></td></tr>
+          <tr class="lowrow"><td><code>/training-management-software/</code></td></tr>
+          <tr class="lowrow"><td><code>/udata.uag</code></td></tr>
+          <tr class="lowrow"><td><code>/udata.vst</code></td></tr>
+          <tr class="lowrow"><td><code>/vehicle-management-system/</code></td></tr>
+          <tr class="lowrow"><td><code>/web-design-service</code></td></tr>
+          <tr class="lowrow"><td><code>/web-redesign/</code></td></tr>
+          <tr class="lowrow"><td><code>/web-solution/</code></td></tr>
+          <tr class="lowrow"><td><code>/website-design-package/</code></td></tr>
+          <tr class="lowrow"><td><code>/what-type-of-web-host-should-i-choose/</code></td></tr>
+          <tr class="lowrow"><td><code>/why-choose-between-macos-and-windows-how-to-have-both-on-your-mac-air/</code></td></tr>
+          <tr class="lowrow"><td><code>/woocommerce-solutions-2/</code></td></tr>
+          <tr class="lowrow"><td><code>/woocommerce-solutions/</code></td></tr>
+          <tr class="lowrow"><td><code>/wordpress</code></td></tr>
+          <tr class="lowrow"><td><code>/wordpress-logistics-courier-tracking-plugin/</code></td></tr>
+          <tr class="lowrow"><td><code>/wordpress-theme-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/wordpress-website-package/</code></td></tr>
+          <tr class="lowrow"><td><code>/zend-framework/</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="era-block">
+    <button class="era-head" data-toggle>
+      <span class="era-name">WordPress blog archive (hosting-affiliate era, 2013–2014)</span>
+      <span class="era-count">63</span>
+      <span class="era-chev">▾</span>
+    </button>
+    <div class="era-body">
+      <table class="rtable">
+        <tbody>
+          <tr class="lowrow"><td><code>/2013/11</code></td></tr>
+          <tr class="lowrow"><td><code>/2014/</code></td></tr>
+          <tr class="lowrow"><td><code>/2014/03/</code></td></tr>
+          <tr class="lowrow"><td><code>/2019/06/18/fullscreen-post/</code></td></tr>
+          <tr class="lowrow"><td><code>/2019/07/05/creativo-para-jovenes-a-designers-ui-ux-complete-checklist/</code></td></tr>
+          <tr class="lowrow"><td><code>/2019/07/05/definitive-guide-to-make-a-daily-more-productive-working-flow/</code></td></tr>
+          <tr class="lowrow"><td><code>/2019/07/05/organic-food-isnt-much-better-for-your-future-health/</code></td></tr>
+          <tr class="lowrow"><td><code>/2019/07/05/outdoor-work-a-designers-checklist-for-every-ux-project/</code></td></tr>
+          <tr class="lowrow"><td><code>/2019/07/05/standard/</code></td></tr>
+          <tr class="lowrow"><td><code>/2019/07/05/the-high-quality-architecture-solutions-from-a-silicon-valley/</code></td></tr>
+          <tr class="lowrow"><td><code>/2019/07/05/the-start-up-ultimate-guide-to-make-your-wordpress-journal/</code></td></tr>
+          <tr class="lowrow"><td><code>/2019/07/05/ways-of-lying-to-yourself-about-your-new-relationship/</code></td></tr>
+          <tr class="lowrow"><td><code>/2023/02/</code></td></tr>
+          <tr class="lowrow"><td><code>/2023/02/22/</code></td></tr>
+          <tr class="lowrow"><td><code>/2023/02/22/should-you-use-wordpress-or-a-custom-tech-stack-for-website-design/</code></td></tr>
+          <tr class="lowrow"><td><code>/2023/02/24/</code></td></tr>
+          <tr class="lowrow"><td><code>/2023/02/25/</code></td></tr>
+          <tr class="lowrow"><td><code>/2023/03/</code></td></tr>
+          <tr class="lowrow"><td><code>/2023/03/21/</code></td></tr>
+          <tr class="lowrow"><td><code>/2023/03/22/</code></td></tr>
+          <tr class="lowrow"><td><code>/2023/06/</code></td></tr>
+          <tr class="lowrow"><td><code>/author/admin/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/articles/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/articles/asides/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/articles/news/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/business-marketing/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/buying/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/buying/clothes/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/decoration/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/design-trends/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/furniture/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/marketing/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/markup/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/markup/media/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/personal/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/private-domain/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/stories/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/tech-tricks/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/uncategorized/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/web-hosting/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/webhosting-deals/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/website-designing/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/website/</code></td></tr>
+          <tr class="lowrow"><td><code>/category/wordpress-2/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/0-99-hosting/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/11-bluehost-hosting/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/articles/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/audio/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/best-bluegost-hosting/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/blog/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/bluehost-cyber-monday-deal/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/chat/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/content/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/css/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/gallery/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/logo/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/photo/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/pictures/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/portfolio/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/theme/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/wordpress-security/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/wordpress-tips/</code></td></tr>
+          <tr class="lowrow"><td><code>/tag/wordpress/</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="era-block">
+    <button class="era-head" data-toggle>
+      <span class="era-name">Individual old client-project page (pre-rebuild portfolio, unrelated to current business)</span>
+      <span class="era-count">61</span>
+      <span class="era-chev">▾</span>
+    </button>
+    <div class="era-body">
+      <table class="rtable">
+        <tbody>
+          <tr class="lowrow"><td><code>/portfolio/aaditya-academy</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/allen-walker-optimization/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/amazon-affiliate-store/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/anant-soft-computing</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/anonymous-feedback-tool/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/band-baja-barat/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/bond-me/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/brenich-marketing/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/british-tutors/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/cake-house/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/cape-multisport-club/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/chef-chrissy/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/claudia-zamora/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/closure-clean/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/davar-associates-logo/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/davar-residency</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/e-commerce-site-foodiogram-com</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/eastern-school-bahrain/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/easy-income-source/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/edge-international/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/ekta-motor-training/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/electronic-payment-solutions/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/embr-for-geo-design-and-research-pvt-ltd/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/emporium-tiles/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/first-corner-engineering-consultation/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/foodiogram-visiting-card/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/forceone-security/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/foya-fishing/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/fruitguru-london/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/gst-billing-software/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/guide-you-local/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/isha-graphics/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/jewellery-billing-software/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/logo-design-national-optics/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/mircohub/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/move-it-packers-and-mover/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/my-ideal-school-erp/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/national-optic</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/nilkanth-primary-school-app/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/om-guru-cast-private-ltd/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/page/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/page/2/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/pets-vets/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/prolife-physiotherapy-software/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/raj-packers</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/rajpackers</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/real-estate-rank-improve/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/red-wine/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/revolution-manufacturing/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/seo/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/shree-uma-cement-articles</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/shree-uma-cement-articles/shree-uma-cement-articles/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/sm-nutritions/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/transpower-electronics/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/we-green-energy/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/website/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/wordpress-logistics-courier-tracking-plugin</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/wordpress-website</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/wordpress-website-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/wrong-side-runner-game/</code></td></tr>
+          <tr class="lowrow"><td><code>/portfolio/your-family-dentist-2/</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="era-block">
+    <button class="era-head" data-toggle>
+      <span class="era-name">Old portfolio/photography template (mockup &amp; demo content)</span>
+      <span class="era-count">39</span>
+      <span class="era-chev">▾</span>
+    </button>
+    <div class="era-body">
+      <table class="rtable">
+        <tbody>
+          <tr class="lowrow"><td><code>/project-category/1-mobile-apps/</code></td></tr>
+          <tr class="lowrow"><td><code>/project-category/1-photography/</code></td></tr>
+          <tr class="lowrow"><td><code>/project-category/4-misc/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/amc-manager/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/aumhcs-website/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/book-cover-design/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/eastern-school-bahrain/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/edge-international/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/finance-gulf/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/fit-anisha-webiste/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/foundry-management-system/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/isha-graphics/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/legal-consulting-corporate-identity/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/macro-experiments/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/macro-reality/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/minimalist-app-mockup</code></td></tr>
+          <tr class="lowrow"><td><code>/project/modern-corporate-identity/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/moneyguru-website/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/music-app-mockup/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/my-ideal-school-erp/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/nilkanth-primary-school-app/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/nursing-college-management-mobile-app-south-africa/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/om-guru-cast-private-ltd/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/osma-website-design-psd-to-wordpress/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/page/2</code></td></tr>
+          <tr class="lowrow"><td><code>/project/peroni-pumps-india/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/portfolio-mobile-app/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/portraits-photoshoot</code></td></tr>
+          <tr class="lowrow"><td><code>/project/prolife-physiotherapy-software/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/service-abhidjan-web-and-mobile/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/ss-racket/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/summer-time-photoshoot/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/surfing-lifestyle/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/tgstore-website/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/transpower-electronics/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/weather-app/</code></td></tr>
+          <tr class="lowrow"><td><code>/project/world-photo-project/</code></td></tr>
+          <tr class="lowrow"><td><code>/slider/blog-slider</code></td></tr>
+          <tr class="lowrow"><td><code>/slider/home-page-slider</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="era-block">
+    <button class="era-head" data-toggle>
+      <span class="era-name">&quot;Medicrown&quot; template site (old design template, generic demo content)</span>
+      <span class="era-count">7</span>
+      <span class="era-chev">▾</span>
+    </button>
+    <div class="era-body">
+      <table class="rtable">
+        <tbody>
+          <tr class="lowrow"><td><code>/Medicrown</code></td></tr>
+          <tr class="lowrow"><td><code>/Medicrown/about.html</code></td></tr>
+          <tr class="lowrow"><td><code>/Medicrown/blog.html</code></td></tr>
+          <tr class="lowrow"><td><code>/Medicrown/contact.html</code></td></tr>
+          <tr class="lowrow"><td><code>/Medicrown/gallery.html</code></td></tr>
+          <tr class="lowrow"><td><code>/Medicrown/index.html</code></td></tr>
+          <tr class="lowrow"><td><code>/Medicrown/services.html</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="era-block">
+    <button class="era-head" data-toggle>
+      <span class="era-name">Old generic service-listing page (pre-rebuild agency template)</span>
+      <span class="era-count">6</span>
+      <span class="era-chev">▾</span>
+    </button>
+    <div class="era-body">
+      <table class="rtable">
+        <tbody>
+          <tr class="lowrow"><td><code>/advance-seo-company-vadodara/</code></td></tr>
+          <tr class="lowrow"><td><code>/advance-seo-services</code></td></tr>
+          <tr class="lowrow"><td><code>/advance-seo/</code></td></tr>
+          <tr class="lowrow"><td><code>/android-app-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/application-development/</code></td></tr>
+          <tr class="lowrow"><td><code>/cake-php/</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="era-block">
+    <button class="era-head" data-toggle>
+      <span class="era-name">Domain-finder tool (defunct 3rd-party-style tool, unrelated to current business)</span>
+      <span class="era-count">5</span>
+      <span class="era-chev">▾</span>
+    </button>
+    <div class="era-body">
+      <table class="rtable">
+        <tbody>
+          <tr class="lowrow"><td><code>/find-domain</code></td></tr>
+          <tr class="lowrow"><td><code>/find-domain/contact</code></td></tr>
+          <tr class="lowrow"><td><code>/find-domain/install</code></td></tr>
+          <tr class="lowrow"><td><code>/find-domain/page/about</code></td></tr>
+          <tr class="lowrow"><td><code>/find-domain/page/tos</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="era-block">
+    <button class="era-head" data-toggle>
+      <span class="era-name">WordPress hosting-affiliate blog post (unrelated to current business)</span>
+      <span class="era-count">3</span>
+      <span class="era-chev">▾</span>
+    </button>
+    <div class="era-body">
+      <table class="rtable">
+        <tbody>
+          <tr class="lowrow"><td><code>/10-wordpress-security-tips-to-protect-and-repair-your-wordpress-website</code></td></tr>
+          <tr class="lowrow"><td><code>/bluehost</code></td></tr>
+          <tr class="lowrow"><td><code>/bluehost-cyber-monday-deal-only-0-99month-web-hosting/</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="era-block">
+    <button class="era-head" data-toggle>
+      <span class="era-name">&quot;Sunbright&quot; template site (old design template, generic demo content)</span>
+      <span class="era-count">2</span>
+      <span class="era-chev">▾</span>
+    </button>
+    <div class="era-body">
+      <table class="rtable">
+        <tbody>
+          <tr class="lowrow"><td><code>/Sunbright/sample-page</code></td></tr>
+          <tr class="lowrow"><td><code>/Sunbright/services/stocks/types-of-stocks</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </section>
+
+  <footer class="colophon">
+    Source: the Internet Archive's CDX index for digitalwebweaver.com (3,010 historical URLs), cross-checked against live HTTP status on the current site, following full redirect chains. Generated as a one-time snapshot — re-run the check periodically since Google's actual index status can only be confirmed via Search Console's own Page Indexing report.
+  </footer>
+
+</div>
+<script>
+  document.querySelectorAll('[data-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btn.closest('.era-block').classList.toggle('open');
+    });
+  });
+  var filterInput = document.getElementById('filterInput');
+  filterInput.addEventListener('input', function () {
+    var q = filterInput.value.trim().toLowerCase();
+    document.querySelectorAll('.era-block').forEach(function (block) {
+      var rows = block.querySelectorAll('.lowrow');
+      var anyMatch = false;
+      rows.forEach(function (row) {
+        var match = !q || row.textContent.toLowerCase().indexOf(q) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) anyMatch = true;
+      });
+      if (q) {
+        block.classList.toggle('open', anyMatch);
+        block.style.display = anyMatch ? '' : 'none';
+      } else {
+        block.style.display = '';
+        block.classList.remove('open');
+      }
+    });
+  });
+</script>
+</body>
+</html>
