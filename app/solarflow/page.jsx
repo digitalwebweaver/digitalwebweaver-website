@@ -19,6 +19,7 @@ export default function Page() {
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-problem" data-target="s-problem" title="The problem">⚠</button>
       <button className="activitybar__btn" data-scroll="s-workflow" data-target="s-workflow" title="How it works">❯</button>
+      <button className="activitybar__btn" data-scroll="s-screens" data-target="s-screens" title="Inside SolarFlow">▦</button>
       <button className="activitybar__btn" data-scroll="s-ai" data-target="s-ai" title="AI assistants">◆</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>
       <button className="activitybar__btn" data-scroll="s-pricing" data-target="s-pricing" title="Pricing">$</button>
@@ -145,6 +146,34 @@ export default function Page() {
               <li><span className="plus mono">05</span><span>Net-meter inspection</span></li>
               <li><span className="plus mono">06</span><span>Subsidy credited</span></li>
             </ul>
+          </div>
+        </section>
+
+        <section id="s-screens" className="section reveal">
+          <p className="eyebrow">// what installers actually see</p>
+          <h2 className="title mono">Inside SolarFlow</h2>
+          <p className="subtitle">Real screens from the live product — not mockups.</p>
+          <div className="grid grid-2 stagger">
+            <div className="shot">
+              <div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">Dashboard</span></div>
+              <img className="shot__img" src="/assets/solarflow-dashboard.png" alt="SolarFlow's dashboard, showing active leads, revenue collected, projects in subsidy, SLA breaches, and open pipeline value" width="1904" height="888" loading="lazy" decoding="async" />
+              <p className="shot__caption">Leads, revenue, subsidy stage, and SLA breaches — the whole business at a glance.</p>
+            </div>
+            <div className="shot">
+              <div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">Project · Subsidy Lifecycle</span></div>
+              <img className="shot__img" src="/assets/solarflow-project.png" alt="SolarFlow's project screen, showing the 6-stage subsidy lifecycle tracker from registration through GEDA approval to subsidy credited, plus compliance checks" width="1920" height="890" loading="lazy" decoding="async" />
+              <p className="shot__caption">The 6-stage subsidy tracker, per project — with compliance checks like ALMM panels and sanctioned load built in.</p>
+            </div>
+            <div className="shot">
+              <div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">Inventory</span></div>
+              <img className="shot__img" src="/assets/solarflow-inventory.png" alt="SolarFlow's inventory screen, showing stock levels for panels, inverters, and BOS components with ALMM tags and reorder alerts" width="1920" height="890" loading="lazy" decoding="async" />
+              <p className="shot__caption">Stock, serials, and reorder alerts — with ALMM-listed components flagged automatically.</p>
+            </div>
+            <div className="shot">
+              <div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">Field App</span></div>
+              <img className="shot__img" src="/assets/solarflow-mobile.png" alt="SolarFlow's mobile field app, showing a technician's daily route, the Smart Quote AI bill scanner, and a subsidy lifecycle view on a customer's project" width="1107" height="747" loading="lazy" decoding="async" />
+              <p className="shot__caption">The same subsidy tracker and Smart Quote AI, on the mobile app your field team actually uses.</p>
+            </div>
           </div>
         </section>
 
