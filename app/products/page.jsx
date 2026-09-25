@@ -35,7 +35,7 @@ export default function Page() {
 
         <section id="s-hero" className="section section--split top">
           <div>
-            <p className="hero__meta">// products.ts · 17 ready-made products · deploy in weeks</p>
+            <p className="hero__meta">// products.ts · 19 ready-made products · deploy in weeks</p>
             <span className="badge">PRODUCT CATALOG</span>
             <h1 className="hero__h1">Launch faster with <span className="pink">pre-built</span> <span className="teal">software</span></h1>
             <p className="hero__lead">Skip months of boilerplate. Each product is production-ready, built on a modern stack, white-label ready, and deployed with your branding in 2–4 weeks.</p>
@@ -61,7 +61,7 @@ export default function Page() {
               </div>
               <div className="field-row">
                 <div className="field"><label className="label">WHICH PRODUCT INTERESTS YOU?</label>
-                <select className="select" name="product"><option>Not sure — show me a few</option><option>Healthcare &amp; clinics</option><option>Education (EduCore / SchoolHub)</option><option>AI voice &amp; automation agents</option><option>Field service &amp; ERP</option><option>Food, mobility &amp; booking</option><option>Sales &amp; CRM (InsureDesk)</option></select>
+                <select className="select" name="product"><option>Not sure — show me a few</option><option>Healthcare &amp; clinics</option><option>Education (EduCore / SchoolHub)</option><option>AI voice &amp; automation agents</option><option>Field service &amp; ERP</option><option>Food, mobility &amp; booking</option><option>Sales &amp; CRM (InsureDesk / EstateFlow)</option></select>
                 </div>
                 <div className="field"><label className="label">COMPANY / ORGANISATION</label><input className="input" name="company" placeholder="Your company" /></div>
               </div>
@@ -88,7 +88,7 @@ export default function Page() {
         <section id="s-catalog" className="section reveal">
           <div style={{"display":"flex","justifyContent":"space-between","alignItems":"flex-end","gap":"20px","flexWrap":"wrap"}}>
             <div>
-              <p className="eyebrow">const catalog = [ <span className="c">// 17 products across 6 categories</span></p>
+              <p className="eyebrow">const catalog = [ <span className="c">// 19 products across 6 categories</span></p>
               <h2 className="title mono">The product catalog</h2>
               <p className="subtitle">Custom speed, product quality. Every product below has been deployed in at least 5 real client environments — the edge cases are already found.</p>
             </div>
@@ -112,7 +112,7 @@ export default function Page() {
                 <div style={{display:"flex",alignItems:"baseline",gap:"10px",padding:"4px 8px"}}><span style={{color:"var(--green)",flexShrink:0}}>✓</span><span style={{color:"#7ee0d0",whiteSpace:"nowrap"}}>food-mobility</span><span style={{color:"var(--muted-2)",flex:1,textAlign:"right",whiteSpace:"nowrap"}}>3 products</span></div>
                 <div style={{display:"flex",alignItems:"baseline",gap:"10px",padding:"4px 8px"}}><span style={{color:"var(--green)",flexShrink:0}}>✓</span><span style={{color:"#7ee0d0",whiteSpace:"nowrap"}}>sales-crm</span><span style={{color:"var(--muted-2)",flex:1,textAlign:"right",whiteSpace:"nowrap"}}>1 product</span></div>
               </div>
-              <div style={{marginTop:"16px",color:"var(--green)"}}>+ 17 products indexed <span style={{color:"var(--muted-2)"}}>· 0 vulnerabilities · white-label ready</span></div>
+              <div style={{marginTop:"16px",color:"var(--green)"}}>+ 19 products indexed <span style={{color:"var(--muted-2)"}}>· 0 vulnerabilities · white-label ready</span></div>
               <div style={{marginTop:"4px",color:"var(--text-2)"}}><span style={{color:"var(--teal)"}}>$</span> <span className="caret"></span></div>
             </div>
           </div>
@@ -167,6 +167,7 @@ export default function Page() {
             <span className="badge" style={{"color":"var(--pink)"}}>SALES &amp; CRM</span>
             <div className="grid grid-3 stagger" style={{"marginTop":"18px"}}>
               <Link className="work" href="/insuredesk/"><div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">app.insuredesk.io</span></div><div className="work__pad"><div className="work__tag">CRM · INSURANCE</div><div className="work__title">InsureDesk</div><p className="work__desc">Ready-to-launch CRM for insurance agencies — lead management, policy tracking, renewal reminders, claims follow-up, and communication.</p><div className="work__stack"><span className="tag tag--y">React</span><span className="tag tag--y">Node.js</span><span className="tag tag--y">PostgreSQL</span></div><div className="work__view">Open product ↗</div></div></Link>
+              <Link className="work" href="/estateflow/"><div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">app.estateflow.io</span></div><div className="work__pad"><div className="work__tag">CRM · REAL ESTATE</div><div className="work__title">EstateFlow</div><p className="work__desc">Ready-to-deploy CRM for property developers — leads, site visits, negotiation, booking, collections and post-sales, with WhatsApp automation and RERA-aware compliance.</p><div className="work__stack"><span className="tag tag--y">React</span><span className="tag tag--y">Node.js</span><span className="tag tag--y">PostgreSQL</span></div><div className="work__view">Open product ↗</div></div></Link>
             </div>
           </div>
         </section>

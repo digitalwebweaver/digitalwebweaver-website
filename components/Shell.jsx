@@ -112,6 +112,7 @@ const PRODUCTS_MENU = [
   ] },
   { title: "Sales & CRM", items: [
     { label: "InsureDesk", href: "/insuredesk/", badge: "pink", desc: "Lead & policy management" },
+    { label: "EstateFlow", href: "/estateflow/", badge: "pink", desc: "CRM for builders & developers" },
   ] },
 ];
 
