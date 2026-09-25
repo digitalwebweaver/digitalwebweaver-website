@@ -66,6 +66,7 @@ export default function Page() {
                 </div>
               </div>
               <div className="field"><label className="label">BIGGEST SCHEDULING CHALLENGE?</label><textarea className="textarea" name="desc" rows="3" placeholder="Missed visits, AMC renewals, routing, billing…"></textarea></div>
+              <label className="form__consent"><input type="checkbox" name="consent" required /><span>I agree to Digital Web Weaver processing my details to respond to this enquiry, per the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
               <button className="form__submit" type="submit">Book my demo ↗</button>
               <p className="form__micro">Free demo · Fixed price &amp; timeline</p>
             </form>

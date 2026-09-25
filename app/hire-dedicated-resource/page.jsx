@@ -72,6 +72,7 @@ export default function Page() {
                 <select className="select" name="duration"><option>1–3 months</option><option>3–6 months</option><option>6–12 months</option><option>12+ months</option></select>
                 </div>
               </div>
+              <label className="form__consent"><input type="checkbox" name="consent" required /><span>I agree to Digital Web Weaver processing my details to respond to this enquiry, per the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
               <button className="form__submit" type="submit">See matched profiles ↗</button>
               <p className="form__micro">No commitment · NDA signed first · 24-hour shortlist</p>
             </form>

@@ -37,7 +37,7 @@ export async function POST(req) {
     const ip = getClientIp(req);
     const location = await getLocation(ip);
 
-    const { page: _page, ...formFields } = fields;
+    const { page: _page, consent, consentAt, consentNotice, ...formFields } = fields;
 
     await supabaseAdmin.from("inquiries").insert({
       source: "lead",
@@ -47,6 +47,9 @@ export async function POST(req) {
       page,
       ip,
       location,
+      consent: consent === true || consent === "true",
+      consent_at: consentAt || null,
+      consent_notice: consentNotice || null,
       raw: formFields,
     });
 

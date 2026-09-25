@@ -239,9 +239,20 @@ export function initDWW() {
 
     on(form, "submit", function (e) {
       e.preventDefault();
+      var consentBox = form.querySelector('[name="consent"]');
+      if (consentBox && !consentBox.checked) {
+        showError("Please check the consent box so we can process your details.");
+        consentBox.focus();
+        return;
+      }
       var nameField = form.querySelector('[name="name"]');
       var data = Object.fromEntries(new FormData(form).entries());
       data.page = window.location.pathname;
+      if (consentBox) {
+        data.consent = true;
+        data.consentAt = new Date().toISOString();
+        data.consentNotice = "privacy-policy-2026-09-25";
+      }
 
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending…"; }
       if (errorEl) errorEl.textContent = "";

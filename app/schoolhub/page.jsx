@@ -67,6 +67,7 @@ export default function Page() {
                 <select className="select" name="size"><option>Under 200</option><option>200–500</option><option>500–1,500</option><option>1,500+</option></select>
                 </div>
               </div>
+              <label className="form__consent"><input type="checkbox" name="consent" required /><span>I agree to Digital Web Weaver processing my details to respond to this enquiry, per the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
               <button className="form__submit" type="submit">Book my demo ↗</button>
               <p className="form__micro">Free demo · No commitment</p>
             </form>

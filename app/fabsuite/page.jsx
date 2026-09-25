@@ -71,6 +71,7 @@ export default function Page() {
                 <select className="select" name="fabricates"><option>Aluminium windows &amp; doors</option><option>uPVC windows &amp; doors</option><option>Both aluminium &amp; uPVC</option><option>Curtain wall / facades</option><option>Frameless glass</option></select>
                 </div>
               </div>
+              <label className="form__consent"><input type="checkbox" name="consent" required /><span>I agree to Digital Web Weaver processing my details to respond to this enquiry, per the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
               <button className="form__submit" type="submit">Start free trial ↗</button>
               <p className="form__micro">30-day free trial · No card required · Cancel any time</p>
             </form>

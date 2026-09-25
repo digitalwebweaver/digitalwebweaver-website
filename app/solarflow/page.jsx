@@ -75,6 +75,7 @@ export default function Page() {
                 <select className="select" name="volume"><option>Up to 50 installs / month</option><option>50–200 installs / month</option><option>200+ installs / month</option></select>
                 </div>
               </div>
+              <label className="form__consent"><input type="checkbox" name="consent" required /><span>I agree to Digital Web Weaver processing my details to respond to this enquiry, per the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
               <button className="form__submit" type="submit">Book a demo ↗</button>
               <p className="form__micro">No commitment · Gujarat solar native</p>
             </form>

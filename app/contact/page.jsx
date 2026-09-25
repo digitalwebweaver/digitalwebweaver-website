@@ -57,6 +57,7 @@ export default function Page() {
                 <div className="field"><label className="label">BUDGET RANGE</label><select className="select" name="budget"><option>Not sure yet</option><option>&lt; $5k</option><option>$5k – $15k</option><option>$15k – $50k</option><option>$50k+</option></select></div>
               </div>
               <div className="field"><label className="label">TELL US ABOUT THE PROJECT</label><textarea className="textarea" name="message" rows="4" placeholder="What are you building, and what does success look like?"></textarea></div>
+              <label className="form__consent"><input type="checkbox" name="consent" required /><span>I agree to Digital Web Weaver processing my details to respond to this enquiry, per the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
               <button className="form__submit" type="submit">▶ Send &amp; get my estimate</button>
               <p className="form__micro">Free consultation · 24-hour response · NDA on request</p>
             </form>

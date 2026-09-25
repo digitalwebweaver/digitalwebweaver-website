@@ -76,6 +76,7 @@ export default function Page() {
                 </div>
               </div>
               <div className="field"><label className="label">DÉCRIVEZ VOTRE PROJET</label><textarea className="textarea" name="desc" rows="3" placeholder="Ce qu'il fait, qui l'utilise, vos préférences techniques…"></textarea></div>
+              <label className="form__consent"><input type="checkbox" name="consent" required /><span>J&apos;accepte que Digital Web Weaver traite mes informations pour répondre à ma demande, conformément à la <a href="/privacy-policy/" target="_blank" rel="noopener">politique de confidentialité</a>.</span></label>
               <button className="form__submit" type="submit">Recevoir mon devis gratuit ↗</button>
               <p className="form__micro">Sans engagement · réponse sous 24h</p>
             </form>

@@ -78,6 +78,7 @@ export default function Page() {
                 </div>
               </div>
               <div className="field"><label className="label">TELL US ABOUT YOUR BUSINESS</label><textarea className="textarea" name="desc" rows="3" placeholder="What you sell, who your customers are, what you need online…"></textarea></div>
+              <label className="form__consent"><input type="checkbox" name="consent" required /><span>I agree to Digital Web Weaver processing my details to respond to this enquiry, per the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
               <button className="form__submit" type="submit">Request free consultation ↗</button>
               <p className="form__micro">In-person or online · Free · 24-hour response</p>
             </form>

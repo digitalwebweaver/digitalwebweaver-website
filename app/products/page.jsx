@@ -65,6 +65,7 @@ export default function Page() {
                 </div>
                 <div className="field"><label className="label">COMPANY / ORGANISATION</label><input className="input" name="company" placeholder="Your company" /></div>
               </div>
+              <label className="form__consent"><input type="checkbox" name="consent" required /><span>I agree to Digital Web Weaver processing my details to respond to this enquiry, per the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
               <button className="form__submit" type="submit">Book a demo ↗</button>
               <p className="form__micro">Free demo · Fixed price + timeline</p>
             </form>
