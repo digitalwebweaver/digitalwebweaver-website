@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "ClinicVoice AI — AI Voice Agent for Clinics | Digital Web Weaver" },
-  description: "ClinicVoice AI answers calls, books appointments, sends reminders, answers common questions, and follows up after visits — automatically, in a natural voice, around the clock.",
+  title: { absolute: "ClinicVoice AI — AI Voice Agent | Digital Web Weaver" },
+  description: "ClinicVoice AI answers calls, books appointments, sends reminders, and follows up after visits — automatically, in a natural voice, 24/7.",
   alternates: { canonical: "/clinicvoice-ai/" },
-  openGraph: { title: "ClinicVoice AI — AI Voice Agent for Clinics | Digital Web Weaver", description: "ClinicVoice AI answers calls, books appointments, sends reminders, answers common questions, and follows up after visits — automatically, in a natural voice, around the clock.", url: "/clinicvoice-ai/", type: "website" }
+  openGraph: { title: "ClinicVoice AI — AI Voice Agent | Digital Web Weaver", description: "ClinicVoice AI answers calls, books appointments, sends reminders, and follows up after visits — automatically, in a natural voice, 24/7.", url: "/clinicvoice-ai/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "ClinicVoice AI", description: "ClinicVoice AI answers calls, books appointments, sends reminders, answers common questions, and follows up after visits — automatically, in a natural voice, around the clock.", href: "/clinicvoice-ai/" })} />
+    <JsonLd data={[serviceSchema({ name: "ClinicVoice AI", description: "ClinicVoice AI answers calls, books appointments, sends reminders, answers common questions, and follows up after visits — automatically, in a natural voice, around the clock.", href: "/clinicvoice-ai/" }), faqPageSchema({ href: "/clinicvoice-ai/", items: [{ question: "Will patients realise they're talking to an AI?", answer: "The agent sounds natural and conversational using your clinic's tone — most callers experience smooth dialogue rather than rigid scripting." }, { question: "What happens with calls it genuinely can't handle?", answer: "Complex or sensitive calls transfer to staff with full context, so patients don't have to repeat information." }, { question: "Can it speak the languages our patients use?", answer: "Yes — it's configurable for multiple languages based on your patient base." }, { question: "Does it actually book appointments into our existing calendar?", answer: "Yes — it integrates directly with your scheduling system, checking real-time availability before confirming." }, { question: "How long does setup take before it can start answering calls?", answer: "Most clinics launch within 3–4 weeks, including agent training and system integration." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

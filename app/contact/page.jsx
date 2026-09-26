@@ -1,19 +1,19 @@
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { contactPageSchema } from "@/lib/schema";
+import { contactPageSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Contact Digital Web Weaver — free consultation in 24h" },
-  description: "Get in touch with Digital Web Weaver. Free technical consultation and an itemised estimate from senior engineers within 24 hours. Email, phone, or WhatsApp. Vadodara, India.",
+  description: "Get in touch with Digital Web Weaver — a free technical consultation and itemised estimate within 24 hours. Email, phone, or WhatsApp.",
   alternates: { canonical: "/contact/" },
-  openGraph: { title: "Contact Digital Web Weaver — free consultation in 24h", description: "Get in touch with Digital Web Weaver. Free technical consultation and an itemised estimate from senior engineers within 24 hours. Email, phone, or WhatsApp. Vadodara, India.", url: "/contact/", type: "website" }
+  openGraph: { title: "Contact Digital Web Weaver — free consultation in 24h", description: "Get in touch with Digital Web Weaver — a free technical consultation and itemised estimate within 24 hours. Email, phone, or WhatsApp.", url: "/contact/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={contactPageSchema()} />
+    <JsonLd data={[contactPageSchema(), faqPageSchema({ href: "/contact/", items: [{ question: "How fast will I hear back?", answer: "Within 24 hours on any working day — usually much sooner. A senior engineer, not a bot, reads every brief and replies with next steps." }, { question: "Is the consultation really free?", answer: "Yes. The first consultation call and the itemised estimate are completely free, with no obligation to proceed afterwards." }, { question: "Can you sign an NDA first?", answer: "Absolutely. If your project is sensitive, tell us in the brief and we'll send an NDA before you share any details." }] })]} />
     <nav className="activitybar mono" aria-label="Sections">
       <div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-form" data-target="s-form" title="Get in touch">⌂</button>

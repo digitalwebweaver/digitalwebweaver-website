@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Hire Laravel Developers | PHP Experts for India & UK — Digital Web Weaver" },
-  description: "Hire senior Laravel developers — production-grade PHP apps with Laravel 11, Livewire, Filament, and Pest test coverage. Matched with 2–3 pre-vetted profiles fast.",
+  title: { absolute: "Hire Laravel Developers — Digital Web Weaver" },
+  description: "Hire senior Laravel developers — production-grade PHP apps with Laravel 11, Livewire, Filament, and Pest test coverage.",
   alternates: { canonical: "/laravel-developer/" },
-  openGraph: { title: "Hire Laravel Developers | PHP Experts for India & UK — Digital Web Weaver", description: "Hire senior Laravel developers — production-grade PHP apps with Laravel 11, Livewire, Filament, and Pest test coverage. Matched with 2–3 pre-vetted profiles fast.", url: "/laravel-developer/", type: "website" }
+  openGraph: { title: "Hire Laravel Developers — Digital Web Weaver", description: "Hire senior Laravel developers — production-grade PHP apps with Laravel 11, Livewire, Filament, and Pest test coverage.", url: "/laravel-developer/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Hire Laravel / PHP Developers", description: "Hire senior Laravel developers — production-grade PHP apps with Laravel 11, Livewire, Filament, and Pest test coverage. Matched with 2–3 pre-vetted profiles fast.", href: "/laravel-developer/" })} />
+    <JsonLd data={[serviceSchema({ name: "Hire Laravel / PHP Developers", description: "Hire senior Laravel developers — production-grade PHP apps with Laravel 11, Livewire, Filament, and Pest test coverage. Matched with 2–3 pre-vetted profiles fast.", href: "/laravel-developer/" }), faqPageSchema({ href: "/laravel-developer/", items: [{ question: "Livewire or Inertia.js?", answer: "Livewire for server-centric apps with minimal JS. Inertia when you want React/Vue components with Laravel routing and no separate API." }, { question: "Can you deploy to Laravel Vapor?", answer: "Yes — serverless Laravel on AWS Lambda with Vapor. We handle environment config, queues, and file storage for serverless deployments." }, { question: "Do you build Filament admin panels?", answer: "Yes — Filament is our preferred Laravel admin solution. We build custom resources, widgets, and plugins." }, { question: "How long does a Laravel project take?", answer: "A core API with auth and CRUD takes 2–3 weeks. A full-featured SaaS with billing and an admin panel typically takes 2–4 months." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What we build">⚙</button>
@@ -251,7 +251,7 @@ export default function Page() {
         <section className="section reveal">
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-4">
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{ fontSize: "16px" }}>Web application development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Complex portals and dashboards built with Laravel.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{ fontSize: "16px" }}>Web application development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Complex portals and dashboards built with Laravel.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
             <Link className="svc" href="/custom-software-development/"><div className="svc__title" style={{ fontSize: "16px" }}>Custom software development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Bespoke ERP, CRM, portals, and workflow automation.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
             <Link className="svc" href="/crm-erp-systems/"><div className="svc__title" style={{ fontSize: "16px" }}>CRM &amp; ERP systems</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Business systems built on Laravel and Filament.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
             <Link className="svc" href="/nodejs-developer/"><div className="svc__title" style={{ fontSize: "16px" }}>Hire Node.js developer</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Backend engineers for event-driven services.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>

@@ -5,16 +5,16 @@ import JsonLd from "@/components/JsonLd";
 import { blogPostingSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "How to Pick a Web Development Company in Vadodara (2026) — Digital Web Weaver" },
-  description: "Dozens of web development companies in Vadodara, wildly different quotes. Here's how to choose the right one — the questions to ask and the red flags to run from.",
+  title: { absolute: "Choosing a Web Development Company in Vadodara" },
+  description: "Dozens of web development companies in Vadodara, wildly different quotes. Here's how to choose the right one — questions to ask, red flags to avoid.",
   alternates: { canonical: "/blog/choose-web-development-company-vadodara/" },
-  openGraph: { title: "How to Pick a Web Development Company in Vadodara (2026) — Digital Web Weaver", description: "Dozens of web development companies in Vadodara, wildly different quotes. Here's how to choose the right one — the questions to ask and the red flags to run from.", url: "/blog/choose-web-development-company-vadodara/", type: "website" }
+  openGraph: { title: "Choosing a Web Development Company in Vadodara", description: "Dozens of web development companies in Vadodara, wildly different quotes. Here's how to choose the right one — questions to ask, red flags to avoid.", url: "/blog/choose-web-development-company-vadodara/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={blogPostingSchema({ headline: "How to Pick a Web Development Company in Vadodara Without Getting Burned", description: "Dozens of web development companies in Vadodara, wildly different quotes. Here's how to choose the right one — the questions to ask and the red flags to run from.", href: "/blog/choose-web-development-company-vadodara/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })} />
+    <JsonLd data={[blogPostingSchema({ headline: "How to Pick a Web Development Company in Vadodara Without Getting Burned", description: "Dozens of web development companies in Vadodara, wildly different quotes. Here's how to choose the right one — the questions to ask and the red flags to run from.", href: "/blog/choose-web-development-company-vadodara/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-article" data-target="s-article" title="Article">§</button>

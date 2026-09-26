@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { blogPostingSchema } from "@/lib/schema";
+import { blogPostingSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Still Running Your Clinic on Paper? It's Costing You | Vadodara" },
-  description: "Paper files and registers are quietly costing Vadodara clinics time and money. Here's how hospital management software fixes it — features, cost, and a free demo.",
+  title: { absolute: "Still Running Your Clinic on Paper? It's Costing You" },
+  description: "Paper files and registers are quietly costing Vadodara clinics time and money. Here's how clinic software fixes it — features, cost, and a free demo.",
   alternates: { canonical: "/blog/hospital-clinic-software-vadodara/" },
-  openGraph: { title: "Still Running Your Clinic on Paper? It's Costing You | Vadodara", description: "Paper files and registers are quietly costing Vadodara clinics time and money. Here's how hospital management software fixes it — features, cost, and a free demo.", url: "/blog/hospital-clinic-software-vadodara/", type: "website" }
+  openGraph: { title: "Still Running Your Clinic on Paper? It's Costing You", description: "Paper files and registers are quietly costing Vadodara clinics time and money. Here's how clinic software fixes it — features, cost, and a free demo.", url: "/blog/hospital-clinic-software-vadodara/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={blogPostingSchema({ headline: "Still Running Your Clinic on Paper Files? It's Costing You More Than You Think", description: "Paper files and registers are quietly costing Vadodara clinics time and money. Here's how hospital management software fixes it — features, cost, and a free demo.", href: "/blog/hospital-clinic-software-vadodara/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })} />
+    <JsonLd data={[blogPostingSchema({ headline: "Still Running Your Clinic on Paper Files? It's Costing You More Than You Think", description: "Paper files and registers are quietly costing Vadodara clinics time and money. Here's how hospital management software fixes it — features, cost, and a free demo.", href: "/blog/hospital-clinic-software-vadodara/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" }), faqPageSchema({ href: "/blog/hospital-clinic-software-vadodara/", items: [{ question: "How much does clinic management software cost in Vadodara?", answer: "A focused clinic system typically starts around ₹1,50,000–₹4,00,000, while a full multi-department hospital setup costs more depending on the modules you need. We quote after understanding your clinic." }, { question: "We're a small single-doctor clinic. Is this overkill?", answer: "Not at all. You can start with just appointments, records, and billing, then add more only when you're ready. Small clinics often see the fastest payback." }, { question: "Can it send WhatsApp and SMS reminders?", answer: "Yes — automated reminders are a standard feature, and they're usually the first thing clinics notice making a difference." }, { question: "Will patient data be safe?", answer: "Yes. Role-based access, audit logs, encryption, and privacy controls are built in from the start." }, { question: "Can we see it before deciding?", answer: "Absolutely. We'll demo <Link href=\"/clinicflow/\">ClinicFlow</Link> and show how it would fit your clinic." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Post">⌂</button>
       <button className="activitybar__btn" data-scroll="s-article" data-target="s-article" title="Article">≡</button>

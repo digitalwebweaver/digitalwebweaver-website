@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "AI & Automation Company India | LLM Integration Experts — Digital Web Weaver" },
-  description: "AI-powered systems that work in production — LLM copilots, document processing, predictive analytics, and workflow automation. GPT-4, Claude, LangChain, RAG. India-based senior team.",
+  title: { absolute: "AI & Automation Company India — Digital Web Weaver" },
+  description: "AI-powered systems for production — LLM copilots, document processing, predictive analytics, workflow automation. GPT-4, Claude, LangChain, RAG.",
   alternates: { canonical: "/ai-automation/" },
-  openGraph: { title: "AI & Automation Company India | LLM Integration Experts — Digital Web Weaver", description: "AI-powered systems that work in production — LLM copilots, document processing, predictive analytics, and workflow automation. GPT-4, Claude, LangChain, RAG. India-based senior team.", url: "/ai-automation/", type: "website" }
+  openGraph: { title: "AI & Automation Company India — Digital Web Weaver", description: "AI-powered systems for production — LLM copilots, document processing, predictive analytics, workflow automation. GPT-4, Claude, LangChain, RAG.", url: "/ai-automation/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "AI & Automation", description: "AI-powered systems that work in production — LLM copilots, document processing, predictive analytics, and workflow automation. GPT-4, Claude, LangChain, RAG. India-based senior team.", href: "/ai-automation/" })} />
+    <JsonLd data={[serviceSchema({ name: "AI & Automation", description: "AI-powered systems that work in production — LLM copilots, document processing, predictive analytics, and workflow automation. GPT-4, Claude, LangChain, RAG. India-based senior team.", href: "/ai-automation/" }), faqPageSchema({ href: "/ai-automation/", items: [{ question: "Can AI actually replace our manual process?", answer: "For well-defined, repetitive tasks — yes. We scope realistically: pilot one process, measure ROI, then expand." }, { question: "How do you handle our proprietary data?", answer: "Options include private cloud LLMs, on-premise Ollama, fine-tuning with your data on isolated infrastructure, or using only anonymised data." }, { question: "What's a RAG pipeline?", answer: "Retrieval-Augmented Generation — an LLM answers questions by searching your documents first, so answers are grounded in your actual data." }, { question: "How long does an AI project take?", answer: "Prototype with measurable results: 3–6 weeks. Production system with monitoring and feedback loop: 2–4 months." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Services">⚙</button>
@@ -226,7 +226,7 @@ export default function Page() {
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{"fontSize":"16px"}}>SaaS development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Build AI features into a scalable SaaS product from day one.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>AI-powered dashboards, automation portals, and data pipelines.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>AI-powered dashboards, automation portals, and data pipelines.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/python-developer/"><div className="svc__title" style={{"fontSize":"16px"}}>Hire a Python developer</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Senior Python engineers for ML, data pipelines, and AI backend development.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
           </div>
         </section>

@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "SchoolHub — School Management System | Digital Web Weaver" },
-  description: "SchoolHub consolidates admissions, attendance, timetables, fee collection, exams, report cards, and parent communication into one branded platform. Live in 5–7 weeks.",
+  description: "SchoolHub consolidates admissions, attendance, timetables, fee collection, exams, report cards, and parent communication into one platform.",
   alternates: { canonical: "/schoolhub/" },
-  openGraph: { title: "SchoolHub — School Management System | Digital Web Weaver", description: "SchoolHub consolidates admissions, attendance, timetables, fee collection, exams, report cards, and parent communication into one branded platform. Live in 5–7 weeks.", url: "/schoolhub/", type: "website" }
+  openGraph: { title: "SchoolHub — School Management System | Digital Web Weaver", description: "SchoolHub consolidates admissions, attendance, timetables, fee collection, exams, report cards, and parent communication into one platform.", url: "/schoolhub/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "SchoolHub", description: "SchoolHub consolidates admissions, attendance, timetables, fee collection, exams, report cards, and parent communication into one branded platform. Live in 5–7 weeks.", href: "/schoolhub/" })} />
+    <JsonLd data={[serviceSchema({ name: "SchoolHub", description: "SchoolHub consolidates admissions, attendance, timetables, fee collection, exams, report cards, and parent communication into one branded platform. Live in 5–7 weeks.", href: "/schoolhub/" }), faqPageSchema({ href: "/schoolhub/", items: [{ question: "Can it match our existing report card and fee structures?", answer: "Yes — SchoolHub is configured to match your school's existing report card formats and fee structures." }, { question: "What are the teacher training requirements?", answer: "Most staff are comfortable within the first week. We run hands-on training sessions as part of the rollout." }, { question: "How do parents receive updates?", answer: "Through a branded mobile app that delivers notices, absence alerts, fee reminders, and report cards." }, { question: "Does it support multiple branches?", answer: "Yes — school groups and trusts with multiple branches get centralised oversight across all of them." }, { question: "How long does it take to go live?", answer: "5–7 weeks, including data migration and staff training." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

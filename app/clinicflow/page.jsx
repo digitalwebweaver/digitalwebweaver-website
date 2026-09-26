@@ -2,7 +2,7 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "ClinicFlow — Clinic Management System | Digital Web Weaver" },
@@ -14,7 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "ClinicFlow", description: "ClinicFlow brings appointment scheduling, EMR, billing, pharmacy, lab orders, and patient communication into one branded platform. Live in 5–6 weeks.", href: "/clinicflow/" })} />
+    <JsonLd data={[serviceSchema({ name: "ClinicFlow", description: "ClinicFlow brings appointment scheduling, EMR, billing, pharmacy, lab orders, and patient communication into one branded platform. Live in 5–6 weeks.", href: "/clinicflow/" }), faqPageSchema({ href: "/clinicflow/", items: [{ question: "Does it support multiple doctors and specialities?", answer: "Yes — ClinicFlow supports multiple doctors and specialities, with doctor-wise calendars and records built for multi-specialty clinics and polyclinic chains." }, { question: "How are existing patient records migrated?", answer: "Existing patient records are migrated as part of the implementation process, before your team is trained and the system goes live." }, { question: "Does it support insurance billing?", answer: "Yes — ClinicFlow includes insurance claim documentation alongside invoicing and payment tracking." }, { question: "Is patient data stored securely?", answer: "Yes — ClinicFlow is built with patient data in mind, with access controls and full audit trails." }, { question: "What is the timeline to go live?", answer: "Most clinics go live within 5–6 weeks, including configuration, migration, and training." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

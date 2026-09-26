@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Logistics Software Development | Fleet & Tracking India — Digital Web Weaver" },
-  description: "Fleet management, real-time shipment tracking, warehouse management, and route optimisation software for logistics and supply chain operators. India-based senior team.",
+  title: { absolute: "Logistics Software Development — Digital Web Weaver" },
+  description: "Fleet management, real-time shipment tracking, warehouse management, and route optimisation for logistics and supply chain operators.",
   alternates: { canonical: "/logistics/" },
-  openGraph: { title: "Logistics Software Development | Fleet & Tracking India — Digital Web Weaver", description: "Fleet management, real-time shipment tracking, warehouse management, and route optimisation software for logistics and supply chain operators. India-based senior team.", url: "/logistics/", type: "website" }
+  openGraph: { title: "Logistics Software Development — Digital Web Weaver", description: "Fleet management, real-time shipment tracking, warehouse management, and route optimisation for logistics and supply chain operators.", url: "/logistics/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Logistics Software Development", description: "We build fleet management, real-time shipment tracking, warehouse management, and route optimisation systems. GPS fleet control, ERP integration, trusted by 150+ clients.", href: "/logistics/" })} />
+    <JsonLd data={[serviceSchema({ name: "Logistics Software Development", description: "We build fleet management, real-time shipment tracking, warehouse management, and route optimisation systems. GPS fleet control, ERP integration, trusted by 150+ clients.", href: "/logistics/" }), faqPageSchema({ href: "/logistics/", items: [{ question: "Can you integrate with our existing TMS?", answer: "Yes — via REST APIs, EDI, or direct database integration depending on what your TMS supports." }, { question: "How do you handle GPS data at scale?", answer: "Event streaming with Kafka, time-series storage with TimescaleDB, and WebSocket delivery to dashboards." }, { question: "Do you support cold-chain monitoring?", answer: "Yes — IoT sensor integration for temperature, humidity, and shock with alerting when thresholds are breached." }, { question: "Can drivers use the app without internet?", answer: "Yes — offline-first React Native with background sync when connectivity is restored." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Solutions">⚙</button>
@@ -152,7 +152,7 @@ export default function Page() {
           <div className="grid grid-3">
             <Link className="svc" href="/custom-software-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Custom software development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Bespoke TMS, WMS, and fleet management software for logistics operations.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/crm-erp-systems/"><div className="svc__title" style={{"fontSize":"16px"}}>CRM &amp; ERP systems</div><p className="svc__body" style={{"fontSize":"13.5px"}}>ERP integration for logistics — inventory, procurement, and finance modules.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Real-time tracking portals, dispatch dashboards, and driver management apps.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Real-time tracking portals, dispatch dashboards, and driver management apps.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
           </div>
         </section>
 

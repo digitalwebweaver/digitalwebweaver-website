@@ -2,7 +2,7 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { jobPostingSchemas } from "@/lib/schema";
+import { jobPostingSchemas, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Remote Software Engineering Careers | Digital Web Weaver" },
@@ -14,7 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-    <JsonLd data={jobPostingSchemas()} />
+    <JsonLd data={[jobPostingSchemas(), faqPageSchema({ href: "/careers/", items: [{ question: "Is Digital Web Weaver remote-first?", answer: "Yes — remote-first with flexible hours and a 4-hour core overlap for collaboration. Work from anywhere." }, { question: "Do you do whiteboard coding interviews?", answer: "No. No whiteboard algorithms, no trick questions, no LeetCode. Instead you'll do a paid, 4-hour take-home based on a realistic problem from our actual work." }, { question: "What's the hiring process?", answer: "Intro call (30 min) → paid take-home (4 hrs) → team review (60 min) → offer within 5 days, with clear next steps at every stage." }, { question: "How does the team actually work?", answer: "Remote-first with flexible hours, async-first communication, code review on every PR, and 20% of each week set aside for learning and open-source contribution." }, { question: "I don't see a role that fits — can I still apply?", answer: "Yes — send a general application to info@digitalwebweaver.com. We're always open to hearing from strong engineers." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-culture" data-target="s-culture" title="Culture">⚙</button>

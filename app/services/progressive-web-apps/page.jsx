@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Progressive Web App Development Company | PWA Experts, India — Digital Web Weaver" },
-  description: "Installable, offline-first Progressive Web Apps with service worker caching, a Web App Manifest, and app-shell architecture. 90+ Lighthouse PWA scores. India-based senior team.",
+  title: { absolute: "Progressive Web App Development — Digital Web Weaver" },
+  description: "Installable, offline-first Progressive Web Apps with service worker caching, a Web App Manifest, and app-shell architecture. 90+ Lighthouse scores.",
   alternates: { canonical: "/services/progressive-web-apps/" },
-  openGraph: { title: "Progressive Web App Development Company | PWA Experts, India — Digital Web Weaver", description: "Installable, offline-first Progressive Web Apps with service worker caching, a Web App Manifest, and app-shell architecture. 90+ Lighthouse PWA scores. India-based senior team.", url: "/services/progressive-web-apps/", type: "website" }
+  openGraph: { title: "Progressive Web App Development — Digital Web Weaver", description: "Installable, offline-first Progressive Web Apps with service worker caching, a Web App Manifest, and app-shell architecture. 90+ Lighthouse scores.", url: "/services/progressive-web-apps/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Progressive Web Apps", description: "Installable, offline-first Progressive Web Apps with service worker caching, a Web App Manifest, and app-shell architecture. 90+ Lighthouse PWA scores. India-based senior team.", href: "/services/progressive-web-apps/" })} />
+    <JsonLd data={[serviceSchema({ name: "Progressive Web Apps", description: "Installable, offline-first Progressive Web Apps with service worker caching, a Web App Manifest, and app-shell architecture. 90+ Lighthouse PWA scores. India-based senior team.", href: "/services/progressive-web-apps/" }), faqPageSchema({ href: "/services/progressive-web-apps/", items: [{ question: "Can a PWA replace a native iOS or Android app?", answer: "For most apps — yes. PWAs handle offline mode, push notifications, and home screen install. The exceptions are apps needing deep hardware access (Bluetooth, NFC, background audio) where native is still required." }, { question: "Do PWAs work on iOS Safari?", answer: "Yes, with some limitations. Safari supports service workers, offline caching, and home screen installation. Web Push on iOS requires iOS 16.4+. We design PWAs to degrade gracefully on older Safari versions." }, { question: "Will my PWA appear in the Google Play Store or App Store?", answer: "Google Play accepts PWAs via TWA (Trusted Web Activity) — we package and submit them. Apple's App Store does not accept PWAs directly, but the installed home screen experience on iOS 16.4+ is near-native." }, { question: "How is a PWA different from a regular responsive website?", answer: "A PWA adds a service worker (offline caching, background sync), a Web App Manifest (installability, splash screen), and push notifications. The user can install it to their home screen and use it without internet." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Features">⚙</button>
@@ -134,7 +134,7 @@ export default function Page() {
         <section className="section reveal">
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-4">
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>SaaS platforms, portals, dashboards, and enterprise systems.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>SaaS platforms, portals, dashboards, and enterprise systems.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/mobile-app-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Mobile app development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Native iOS, Android, React Native, and Flutter builds.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/custom-software-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Custom software</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Bespoke ERP, CRM, portals, and workflow automation.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{"fontSize":"16px"}}>SaaS development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Multi-tenant SaaS with Stripe billing, SSO, and analytics.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>

@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Healthcare Software Development | HIPAA-Compliant India — Digital Web Weaver" },
+  title: { absolute: "Healthcare Software Development — Digital Web Weaver" },
   description: "We build HIPAA-compliant EHR systems, patient portals, telemedicine apps, and clinical analytics platforms — secure, interoperable, and built for care.",
   alternates: { canonical: "/healthcare/" },
-  openGraph: { title: "Healthcare Software Development | HIPAA-Compliant India — Digital Web Weaver", description: "We build HIPAA-compliant EHR systems, patient portals, telemedicine apps, and clinical analytics platforms — secure, interoperable, and built for care.", url: "/healthcare/", type: "website" }
+  openGraph: { title: "Healthcare Software Development — Digital Web Weaver", description: "We build HIPAA-compliant EHR systems, patient portals, telemedicine apps, and clinical analytics platforms — secure, interoperable, and built for care.", url: "/healthcare/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Healthcare Software Development", description: "We build HIPAA-compliant EHR systems, patient portals, telemedicine apps, and clinical analytics platforms. HL7/FHIR standards, 10+ health projects, trusted by 150+ clients.", href: "/healthcare/" })} />
+    <JsonLd data={[serviceSchema({ name: "Healthcare Software Development", description: "We build HIPAA-compliant EHR systems, patient portals, telemedicine apps, and clinical analytics platforms. HL7/FHIR standards, 10+ health projects, trusted by 150+ clients.", href: "/healthcare/" }), faqPageSchema({ href: "/healthcare/", items: [{ question: "Are you HIPAA compliant as a vendor?", answer: "Yes — we sign BAAs, implement required technical safeguards, and train our team on HIPAA privacy and security rules." }, { question: "Can you integrate with Epic or Cerner?", answer: "Yes — via FHIR R4 APIs. Epic, Cerner, and Allscripts all expose SMART on FHIR endpoints we can connect to." }, { question: "How do you handle PHI in development environments?", answer: "De-identified synthetic data only. PHI never leaves production environments, and strict access controls apply to all environments." }, { question: "Do you build for FDA-regulated medical devices?", answer: "We build companion apps and data platforms. FDA SaMD classification determines what regulatory pathway applies." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Solutions">⚙</button>
@@ -128,7 +128,7 @@ export default function Page() {
         <section className="section reveal">
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{fontSize:"16px"}}>Web application development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Secure portals, dashboards, and patient-facing web applications.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{fontSize:"16px"}}>Web application development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Secure portals, dashboards, and patient-facing web applications.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/custom-software-development/"><div className="svc__title" style={{fontSize:"16px"}}>Custom software development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Bespoke healthcare systems — EHR, clinic management, and patient workflows.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/mobile-app-development/"><div className="svc__title" style={{fontSize:"16px"}}>Mobile app development</div><p className="svc__body" style={{fontSize:"13.5px"}}>iOS and Android health apps with HealthKit and offline-first architecture.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
           </div>

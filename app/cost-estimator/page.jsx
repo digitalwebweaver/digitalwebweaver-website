@@ -2,7 +2,7 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { costEstimatorSchema } from "@/lib/schema";
+import { costEstimatorSchema, faqPageSchema } from "@/lib/schema";
 import CostEstimatorTool from "@/components/CostEstimatorTool";
 
 export const metadata = {
@@ -15,7 +15,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-    <JsonLd data={costEstimatorSchema()} />
+    <JsonLd data={[costEstimatorSchema(), faqPageSchema({ href: "/cost-estimator/", items: [{ question: "How much does it cost to build a website or app?", answer: "A business website typically starts around ₹19,999, while web apps, custom software, and SaaS platforms range from ₹49,999 to ₹15,00,000+ depending on scope, features, and design." }, { question: "How accurate is this estimate?", answer: "It's an indicative range based on your selections (project type, size, features, design, and timeline). Your exact, fixed quote comes after a short, free consultation where we understand the full scope." }, { question: "What's included in the price?", answer: "Clean custom code, a fast mobile-first build, SEO and analytics setup, testing, and full source-code ownership handed to you. We're a senior team — projects are built to last and scale." }, { question: "Do you work with international clients?", answer: "Yes. We work with clients across India, the UK, South Africa, the US, and West Africa. The estimate above is shown in your local currency, converted from our INR pricing at indicative rates." }, { question: "What do I get after submitting?", answer: "A free consultation plus a wireframe of your idea, and a clear fixed quote — usually within 24 hours." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-tool" data-target="s-tool" title="Estimator">$</button>

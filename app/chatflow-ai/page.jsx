@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "ChatFlow AI — WhatsApp Business Automation Software | Digital Web Weaver" },
-  description: "ChatFlow AI answers enquiries, books appointments, sends order updates, and follows up with customers automatically — on your business WhatsApp number, in your brand's voice, around the clock.",
+  title: { absolute: "ChatFlow AI — WhatsApp Automation | Digital Web Weaver" },
+  description: "ChatFlow AI answers enquiries, books appointments, sends order updates, and follows up with customers automatically — on your WhatsApp number.",
   alternates: { canonical: "/chatflow-ai/" },
-  openGraph: { title: "ChatFlow AI — WhatsApp Business Automation Software | Digital Web Weaver", description: "ChatFlow AI answers enquiries, books appointments, sends order updates, and follows up with customers automatically — on your business WhatsApp number, in your brand's voice, around the clock.", url: "/chatflow-ai/", type: "website" }
+  openGraph: { title: "ChatFlow AI — WhatsApp Automation | Digital Web Weaver", description: "ChatFlow AI answers enquiries, books appointments, sends order updates, and follows up with customers automatically — on your WhatsApp number.", url: "/chatflow-ai/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "ChatFlow AI", description: "ChatFlow AI answers enquiries, books appointments, sends order updates, and follows up with customers automatically — on your business WhatsApp number, in your brand's voice, around the clock.", href: "/chatflow-ai/" })} />
+    <JsonLd data={[serviceSchema({ name: "ChatFlow AI", description: "ChatFlow AI answers enquiries, books appointments, sends order updates, and follows up with customers automatically — on your business WhatsApp number, in your brand's voice, around the clock.", href: "/chatflow-ai/" }), faqPageSchema({ href: "/chatflow-ai/", items: [{ question: "Does it work with our existing WhatsApp Business number?", answer: "Yes — it works with your existing WhatsApp Business number via the official WhatsApp Business API." }, { question: "How are complex conversations handled?", answer: "The agent hands off to your team with full conversation context preserved, so customers don't repeat themselves." }, { question: "Can it take orders and payments?", answer: "Yes — it can share catalogues, take orders, and accept payments directly in-chat." }, { question: "Is it compliant with WhatsApp policies?", answer: "Yes — it adheres to WhatsApp Business API messaging policies and opt-in requirements." }, { question: "What's the timeline?", answer: "Most businesses are live within 2–3 weeks, including agent training and system integration." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

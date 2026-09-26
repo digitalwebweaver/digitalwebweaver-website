@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Custom CRM & ERP Development Company | India & Global — Digital Web Weaver" },
-  description: "Custom CRM and ERP systems built around your workflows — sales pipeline, inventory, HR, finance, and BI in one connected system. 150+ clients, operating since 2013.",
+  title: { absolute: "Custom CRM & ERP Development — Digital Web Weaver" },
+  description: "Custom CRM and ERP systems built around your workflows — sales pipeline, inventory, HR, finance, and BI in one system. 150+ clients since 2013.",
   alternates: { canonical: "/crm-erp-systems/" },
-  openGraph: { title: "Custom CRM & ERP Development Company | India & Global — Digital Web Weaver", description: "Custom CRM and ERP systems built around your workflows — sales pipeline, inventory, HR, finance, and BI in one connected system. 150+ clients, operating since 2013.", url: "/crm-erp-systems/", type: "website" }
+  openGraph: { title: "Custom CRM & ERP Development — Digital Web Weaver", description: "Custom CRM and ERP systems built around your workflows — sales pipeline, inventory, HR, finance, and BI in one system. 150+ clients since 2013.", url: "/crm-erp-systems/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "ERP Systems", description: "Custom CRM and ERP systems built around your workflows — sales pipeline, inventory, HR, finance, and BI in one connected system. 150+ clients, operating since 2013.", href: "/crm-erp-systems/" })} />
+    <JsonLd data={[serviceSchema({ name: "ERP Systems", description: "Custom CRM and ERP systems built around your workflows — sales pipeline, inventory, HR, finance, and BI in one connected system. 150+ clients, operating since 2013.", href: "/crm-erp-systems/" }), faqPageSchema({ href: "/crm-erp-systems/", items: [{ question: "Custom vs off-the-shelf — when to go custom?", answer: "When your workflows are non-standard, integration requirements are complex, or Salesforce/SAP license costs exceed custom build cost." }, { question: "Can you integrate our existing systems?", answer: "Yes — legacy databases, third-party APIs, and file-based EDI integrations are all part of our CRM/ERP delivery." }, { question: "How long does a CRM build take?", answer: "Core CRM with contacts, pipeline, and reporting: 8–12 weeks. Full ERP with multiple modules: 4–9 months." }, { question: "Can users configure workflows themselves?", answer: "Yes — we build workflow configuration UIs so business users can modify approval chains and automation rules without developer involvement." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Modules">⚙</button>
@@ -204,7 +204,7 @@ export default function Page() {
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-4">
             <Link className="svc" href="/custom-software-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Custom software</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Bespoke business software — portals, internal tools, and workflow automation.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Complex web portals, dashboards, and enterprise business applications.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Complex web portals, dashboards, and enterprise business applications.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <a className="svc" href="https://digitalwebweaver.com/manufacturing/"><div className="svc__title" style={{"fontSize":"16px"}}>Manufacturing</div><p className="svc__body" style={{"fontSize":"13.5px"}}>MES, IoT integration, and Industry 4.0 software for manufacturers.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
             <Link className="svc" href="/laravel-developer/"><div className="svc__title" style={{"fontSize":"16px"}}>Hire a Laravel developer</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Senior Laravel PHP engineers for CRM and ERP backend development.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
           </div>

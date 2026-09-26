@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Custom Web Application Development | React & Next.js India — Digital Web Weaver" },
-  description: "Custom web apps — portals, dashboards, internal tools, and SaaS products — built with React, Next.js, and Node.js. 80+ web apps delivered for 150+ clients across India, UK & US.",
+  title: { absolute: "Custom Web App Development — Digital Web Weaver" },
+  description: "Custom web apps — portals, dashboards, internal tools, SaaS products — built with React, Next.js, and Node.js. 80+ apps delivered for 150+ clients.",
   alternates: { canonical: "/custom-web-apps/" },
-  openGraph: { title: "Custom Web Application Development | React & Next.js India — Digital Web Weaver", description: "Custom web apps — portals, dashboards, internal tools, and SaaS products — built with React, Next.js, and Node.js. 80+ web apps delivered for 150+ clients across India, UK & US.", url: "/custom-web-apps/", type: "website" }
+  openGraph: { title: "Custom Web App Development — Digital Web Weaver", description: "Custom web apps — portals, dashboards, internal tools, SaaS products — built with React, Next.js, and Node.js. 80+ apps delivered for 150+ clients.", url: "/custom-web-apps/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Custom Web Apps", description: "Custom web apps — portals, dashboards, internal tools, and SaaS products — built with React, Next.js, and Node.js. 80+ web apps delivered for 150+ clients across India, UK & US.", href: "/custom-web-apps/" })} />
+    <JsonLd data={[serviceSchema({ name: "Custom Web Apps", description: "Custom web apps — portals, dashboards, internal tools, and SaaS products — built with React, Next.js, and Node.js. 80+ web apps delivered for 150+ clients across India, UK & US.", href: "/custom-web-apps/" }), faqPageSchema({ href: "/custom-web-apps/", items: [{ question: "When is a custom web app better than SaaS?", answer: "When workflows are unique, data is sensitive, or SaaS subscription costs would exceed the cost of a custom build within 2–3 years." }, { question: "Can you replace our Excel-based process?", answer: "Yes — we start with an analysis of the spreadsheets in use, then build a proper web app with validation, history, and reporting." }, { question: "Do you build multi-language apps?", answer: "Yes — i18n support via next-intl or react-i18next, RTL support, and CMS-managed translations are standard options." }, { question: "Can users customise their own dashboards?", answer: "Yes — configurable widgets, saved filters, and user-defined layouts are standard features we build into admin dashboards." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What we build">⚙</button>

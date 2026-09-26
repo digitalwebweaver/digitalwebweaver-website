@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "FinTech Software Development | PCI-DSS Compliant India — Digital Web Weaver" },
+  title: { absolute: "FinTech Software Development — Digital Web Weaver" },
   description: "We engineer PCI-DSS compliant payment systems, lending platforms, KYC/AML pipelines, and trading dashboards for regulated financial environments.",
   alternates: { canonical: "/fintech/" },
-  openGraph: { title: "FinTech Software Development | PCI-DSS Compliant India — Digital Web Weaver", description: "We engineer PCI-DSS compliant payment systems, lending platforms, KYC/AML pipelines, and trading dashboards for regulated financial environments.", url: "/fintech/", type: "website" }
+  openGraph: { title: "FinTech Software Development — Digital Web Weaver", description: "We engineer PCI-DSS compliant payment systems, lending platforms, KYC/AML pipelines, and trading dashboards for regulated financial environments.", url: "/fintech/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "FinTech Software Development", description: "We engineer PCI-DSS compliant payment systems, lending platforms, KYC/AML pipelines, and trading dashboards for regulated financial environments. SOC 2 aware, serving 150+ clients globally.", href: "/fintech/" })} />
+    <JsonLd data={[serviceSchema({ name: "FinTech Software Development", description: "We engineer PCI-DSS compliant payment systems, lending platforms, KYC/AML pipelines, and trading dashboards for regulated financial environments. SOC 2 aware, serving 150+ clients globally.", href: "/fintech/" }), faqPageSchema({ href: "/fintech/", items: [{ question: "Are you experienced with RBI or FCA regulations?", answer: "We've built for both RBI-regulated Indian FinTechs and FCA-authorised UK firms. Regulatory mapping is part of discovery." }, { question: "How do you handle payment card data?", answer: "We tokenise at the edge — cardholder data never touches our application servers. PCI-DSS SAQ-A or SAQ-A-EP compliance." }, { question: "Can you integrate with Open Banking APIs?", answer: "Yes — PSD2-compliant account aggregation and payment initiation via TrueLayer, Plaid, and direct bank APIs." }, { question: "Do you build for crypto or DeFi?", answer: "Yes — we build Web3 integrations, smart contract frontends, and crypto payment processing with Coinbase and BitPay." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Solutions">⚙</button>
@@ -141,7 +141,7 @@ export default function Page() {
         <section className="section reveal">
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{fontSize:"16px"}}>Web application development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Complex FinTech portals, trading dashboards, and multi-user platforms.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{fontSize:"16px"}}>Web application development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Complex FinTech portals, trading dashboards, and multi-user platforms.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{fontSize:"16px"}}>SaaS development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Multi-tenant FinTech SaaS with Stripe billing and SOC 2-ready architecture.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/ai-automation/"><div className="svc__title" style={{fontSize:"16px"}}>AI &amp; automation</div><p className="svc__body" style={{fontSize:"13.5px"}}>Fraud detection, document processing, and ML-powered credit scoring.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
           </div>

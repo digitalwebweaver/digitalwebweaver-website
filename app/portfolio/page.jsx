@@ -6,15 +6,15 @@ import { portfolioSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Portfolio & Case Studies | Digital Web Weaver" },
-  description: "200+ systems built. Real results, real clients — ERP, SaaS, healthtech, logistics, and AI case studies from a senior engineering studio. From two-person startups to global enterprises.",
+  description: "200+ systems built. Real results, real clients — ERP, SaaS, healthtech, logistics, and AI case studies from a senior engineering studio.",
   alternates: { canonical: "/portfolio/" },
-  openGraph: { title: "Portfolio & Case Studies | Digital Web Weaver", description: "200+ systems built. Real results, real clients — ERP, SaaS, healthtech, logistics, and AI case studies from a senior engineering studio. From two-person startups to global enterprises.", url: "/portfolio/", type: "website" }
+  openGraph: { title: "Portfolio & Case Studies | Digital Web Weaver", description: "200+ systems built. Real results, real clients — ERP, SaaS, healthtech, logistics, and AI case studies from a senior engineering studio.", url: "/portfolio/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={portfolioSchema()} />
+    <JsonLd data={[portfolioSchema()]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-work" data-target="s-work" title="Work">◈</button>

@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Cybersecurity Audits & Penetration Testing Company India | OWASP, Code Review & Compliance — Digital Web Weaver" },
-  description: "Penetration tests, OWASP Top 10 audits, code security reviews, and GDPR/HIPAA compliance checks — a detailed report with prioritised remediation steps. India-based senior team.",
+  title: { absolute: "Cybersecurity Audits & Pen Testing — Digital Web Weaver" },
+  description: "Penetration tests, OWASP Top 10 audits, code security reviews, and GDPR/HIPAA compliance checks with prioritised remediation steps.",
   alternates: { canonical: "/solutions/cybersecurity/" },
-  openGraph: { title: "Cybersecurity Audits & Penetration Testing Company India | OWASP, Code Review & Compliance — Digital Web Weaver", description: "Penetration tests, OWASP Top 10 audits, code security reviews, and GDPR/HIPAA compliance checks — a detailed report with prioritised remediation steps. India-based senior team.", url: "/solutions/cybersecurity/", type: "website" }
+  openGraph: { title: "Cybersecurity Audits & Pen Testing — Digital Web Weaver", description: "Penetration tests, OWASP Top 10 audits, code security reviews, and GDPR/HIPAA compliance checks with prioritised remediation steps.", url: "/solutions/cybersecurity/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Cybersecurity Audit", description: "Penetration tests, OWASP Top 10 audits, code security reviews, and GDPR/HIPAA compliance checks — a detailed report with prioritised remediation steps. India-based senior team.", href: "/solutions/cybersecurity/" })} />
+    <JsonLd data={[serviceSchema({ name: "Cybersecurity Audit", description: "Penetration tests, OWASP Top 10 audits, code security reviews, and GDPR/HIPAA compliance checks — a detailed report with prioritised remediation steps. India-based senior team.", href: "/solutions/cybersecurity/" }), faqPageSchema({ href: "/solutions/cybersecurity/", items: [{ question: "What's included in a penetration test?", answer: "Recon, automated scanning, manual exploitation of the OWASP Top 10, business logic testing, and a detailed report with CVSS scores and remediation steps." }, { question: "How long does a security audit take?", answer: "Web application pen test: 3–5 days. Full security audit with code review: 1–2 weeks. Depends on application scope." }, { question: "Do you provide a remediation retest?", answer: "Yes — after you fix reported vulnerabilities, we retest to confirm the fixes are effective. Included at no additional cost for critical/high findings." }, { question: "Can you audit our AWS infrastructure?", answer: "Yes — cloud configuration review covers IAM policies, S3 bucket permissions, security groups, and CIS Benchmark compliance." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Services">⚙</button>

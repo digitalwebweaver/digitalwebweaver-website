@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Manchify — Operations OS for Event Companies | Digital Web Weaver" },
+  title: { absolute: "Manchify — Operations OS for Events | Digital Web Weaver" },
   description: "Manchify is the Operations OS for Indian event companies — leads, quotes, events, vendors, manpower, rentals, and GST invoicing in one connected system.",
   alternates: { canonical: "/manchify/" },
-  openGraph: { title: "Manchify — Operations OS for Event Companies | Digital Web Weaver", description: "Manchify is the Operations OS for Indian event companies — leads, quotes, events, vendors, manpower, rentals, and GST invoicing in one connected system.", url: "/manchify/", type: "website" }
+  openGraph: { title: "Manchify — Operations OS for Events | Digital Web Weaver", description: "Manchify is the Operations OS for Indian event companies — leads, quotes, events, vendors, manpower, rentals, and GST invoicing in one connected system.", url: "/manchify/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Manchify", description: "Manchify is the Operations OS for Indian event companies — leads, quotes, events, vendors, manpower, rentals, and GST invoicing in one connected system.", href: "/manchify/" })} />
+    <JsonLd data={[serviceSchema({ name: "Manchify", description: "Manchify is the Operations OS for Indian event companies — leads, quotes, events, vendors, manpower, rentals, and GST invoicing in one connected system.", href: "/manchify/" }), faqPageSchema({ href: "/manchify/", items: [{ question: "Can I run multiple event types in one account?", answer: "Yes. Manchify supports six business presets and you can toggle the exact modules each team or event type needs." }, { question: "Does it handle Indian GST correctly?", answer: "Yes, and this is a core differentiator. Manchify handles CGST/SGST vs IGST routing automatically, flags unregistered vendor invoices for RCM, tracks ITC-at-risk amounts, and produces GSTR-ready export files." }, { question: "What if my team has no tech experience?", answer: "Manchify is no-code and mobile-first. Setup takes under 10 minutes. Your team marks attendance on their phone, your managers see P&L on a dashboard." }, { question: "How is it different from a spreadsheet or generic CRM?", answer: "A generic CRM handles leads; Manchify handles leads, quotes, vendors, manpower, rentals, invoicing, and GST in one connected system. No data re-entry between stages." }, { question: "What does the free trial include?", answer: "14 days of the Growth plan — 15 seats, vendors, manpower, rentals, WhatsApp sending, and full GST invoicing. No credit card required." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Modules">⚙</button>

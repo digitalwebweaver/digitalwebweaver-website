@@ -1,19 +1,19 @@
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Hire Dedicated Developers India | Digital Web Weaver" },
-  description: "Hire dedicated developers from India. Scale your team with vetted full-stack, mobile, AI, and DevOps engineers — flexible 1-to-12 month engagements, deployed in 72 hours.",
+  description: "Hire dedicated developers from India — vetted full-stack, mobile, AI, and DevOps engineers. Flexible 1–12 month engagements, deployed in 72 hours.",
   alternates: { canonical: "/hire-dedicated-resource/" },
-  openGraph: { title: "Hire Dedicated Developers India | Digital Web Weaver", description: "Hire dedicated developers from India. Scale your team with vetted full-stack, mobile, AI, and DevOps engineers — flexible 1-to-12 month engagements, deployed in 72 hours.", url: "/hire-dedicated-resource/", type: "website" }
+  openGraph: { title: "Hire Dedicated Developers India | Digital Web Weaver", description: "Hire dedicated developers from India — vetted full-stack, mobile, AI, and DevOps engineers. Flexible 1–12 month engagements, deployed in 72 hours.", url: "/hire-dedicated-resource/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Hire Dedicated Team", description: "Hire dedicated developers from India. Scale your team with vetted full-stack, mobile, AI, and DevOps engineers — flexible 1-to-12 month engagements, deployed in 72 hours.", href: "/hire-dedicated-resource/" })} />
+    <JsonLd data={[serviceSchema({ name: "Hire Dedicated Team", description: "Hire dedicated developers from India. Scale your team with vetted full-stack, mobile, AI, and DevOps engineers — flexible 1-to-12 month engagements, deployed in 72 hours.", href: "/hire-dedicated-resource/" }), faqPageSchema({ href: "/hire-dedicated-resource/", items: [{ question: "Are these engineers full-time dedicated to us?", answer: "Yes. When you hire through Digital Web Weaver, the engineer works exclusively on your project during the engagement hours — never split across multiple clients." }, { question: "What if the engineer isn't a good fit?", answer: "We offer a 30-day risk-free trial. If the engineer isn't meeting expectations within the first month, we replace them at no additional cost — no questions asked." }, { question: "Who owns the code and intellectual property?", answer: "You do, 100%. All code written during the engagement is your IP. Our contracts are explicit about this, and the NDA reinforces it from day one." }, { question: "What time zones do your engineers work in?", answer: "We primarily operate on IST (UTC+5:30) with a flexible 4-hour daily overlap with your local time. For US East Coast and UK clients this works seamlessly." }, { question: "What's the minimum engagement length?", answer: "Our minimum is 1 month, though engagements under 3 months rarely see the full benefit of onboarding investment. We recommend a 3-month minimum for best results." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-models" data-target="s-models" title="Models &amp; pricing">◈</button>

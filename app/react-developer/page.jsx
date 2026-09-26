@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Hire React.js Developers | India, UK & Global Teams — Digital Web Weaver" },
-  description: "Hire senior React.js developers — React 18, TypeScript, and Next.js engineers for SPAs, dashboards, and enterprise frontends. Matched with 2–3 pre-vetted profiles in 48 hours.",
+  title: { absolute: "Hire React.js Developers — Digital Web Weaver" },
+  description: "Hire senior React.js developers — React 18, TypeScript, and Next.js engineers for SPAs, dashboards, and enterprise frontends.",
   alternates: { canonical: "/react-developer/" },
-  openGraph: { title: "Hire React.js Developers | India, UK & Global Teams — Digital Web Weaver", description: "Hire senior React.js developers — React 18, TypeScript, and Next.js engineers for SPAs, dashboards, and enterprise frontends. Matched with 2–3 pre-vetted profiles in 48 hours.", url: "/react-developer/", type: "website" }
+  openGraph: { title: "Hire React.js Developers — Digital Web Weaver", description: "Hire senior React.js developers — React 18, TypeScript, and Next.js engineers for SPAs, dashboards, and enterprise frontends.", url: "/react-developer/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Hire React / Next.js Developers", description: "Hire senior React.js developers — React 18, TypeScript, and Next.js engineers for SPAs, dashboards, and enterprise frontends. Matched with 2–3 pre-vetted profiles in 48 hours.", href: "/react-developer/" })} />
+    <JsonLd data={[serviceSchema({ name: "Hire React / Next.js Developers", description: "Hire senior React.js developers — React 18, TypeScript, and Next.js engineers for SPAs, dashboards, and enterprise frontends. Matched with 2–3 pre-vetted profiles in 48 hours.", href: "/react-developer/" }), faqPageSchema({ href: "/react-developer/", items: [{ question: "Do you work with Next.js?", answer: "Yes — we build with Next.js daily. App Router, Server Components, SSG/ISR, and edge deployments are all in our wheelhouse." }, { question: "Can you migrate our legacy codebase?", answer: "Absolutely. We've migrated jQuery, AngularJS, and older React class-component apps to modern functional React with TypeScript." }, { question: "How long does a typical React project take?", answer: "A focused MVP takes 4–8 weeks. An enterprise dashboard or complex SPA typically takes 3–6 months depending on scope." }, { question: "Do you write tests?", answer: "Yes — unit tests with Jest/Vitest, component tests with RTL, and end-to-end tests with Playwright are part of every engagement." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What we build">⚙</button>
@@ -254,7 +254,7 @@ export default function Page() {
         <section className="section reveal">
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-4">
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{ fontSize: "16px" }}>Web application development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Complex portals and dashboards built with React.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{ fontSize: "16px" }}>Web application development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Complex portals and dashboards built with React.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{ fontSize: "16px" }}>SaaS development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>End-to-end SaaS product development.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
             <Link className="svc" href="/web-development/"><div className="svc__title" style={{ fontSize: "16px" }}>Web development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Full-stack web development services.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
             <Link className="svc" href="/nodejs-developer/"><div className="svc__title" style={{ fontSize: "16px" }}>Hire Node.js developer</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Backend engineers who pair perfectly with React.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>

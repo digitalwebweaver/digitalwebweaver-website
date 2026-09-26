@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "GlowDesk — Aesthetic Clinic Management Software | Digital Web Weaver" },
-  description: "GlowDesk brings booking, treatment plans, before/after galleries, consent forms, billing, and automated follow-ups into one branded system for aesthetic clinics.",
+  title: { absolute: "GlowDesk — Aesthetic Clinic Software | Digital Web Weaver" },
+  description: "GlowDesk brings booking, treatment plans, before/after galleries, consent forms, billing, and follow-ups into one system for aesthetic clinics.",
   alternates: { canonical: "/glowdesk/" },
-  openGraph: { title: "GlowDesk — Aesthetic Clinic Management Software | Digital Web Weaver", description: "GlowDesk brings booking, treatment plans, before/after galleries, consent forms, billing, and automated follow-ups into one branded system for aesthetic clinics.", url: "/glowdesk/", type: "website" }
+  openGraph: { title: "GlowDesk — Aesthetic Clinic Software | Digital Web Weaver", description: "GlowDesk brings booking, treatment plans, before/after galleries, consent forms, billing, and follow-ups into one system for aesthetic clinics.", url: "/glowdesk/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "GlowDesk", description: "GlowDesk brings booking, treatment plans, before/after galleries, consent forms, billing, and automated follow-ups into one branded system for aesthetic clinics.", href: "/glowdesk/", review: { author: "Dr. Anjali Mistry", body: "Our no-show rate used to eat into nearly a fifth of our schedule. The automated reminders alone paid for the system in the first month — and the before/after galleries have become a real selling point in consultations." } })} />
+    <JsonLd data={[serviceSchema({ name: "GlowDesk", description: "GlowDesk brings booking, treatment plans, before/after galleries, consent forms, billing, and automated follow-ups into one branded system for aesthetic clinics.", href: "/glowdesk/", review: { author: "Dr. Anjali Mistry", body: "Our no-show rate used to eat into nearly a fifth of our schedule. The automated reminders alone paid for the system in the first month — and the before/after galleries have become a real selling point in consultations." } }), faqPageSchema({ href: "/glowdesk/", items: [{ question: "Can it handle multi-session treatment packages?", answer: "Yes — build packages with a set number of sessions, track redemptions, and automatically prompt clients to book their next visit." }, { question: "Is client photo and medical data stored securely?", answer: "Yes. Photos and health records are stored with access-controlled permissions, visible only to authorised staff against each client's record." }, { question: "Can clients book and pay online without calling the front desk?", answer: "Yes — your branded booking page shows real-time availability, and clients can pay deposits or full amounts online during booking." }, { question: "Will it work across multiple clinic branches?", answer: "Yes. Multi-branch clinics get centralised reporting with per-location scheduling, staff, and inventory." }, { question: "How soon can we be live and taking bookings?", answer: "Most clinics are live within 4–5 weeks, including branding, data migration, and staff training." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

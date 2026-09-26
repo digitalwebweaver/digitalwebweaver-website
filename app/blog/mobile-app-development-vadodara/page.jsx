@@ -5,16 +5,16 @@ import JsonLd from "@/components/JsonLd";
 import { blogPostingSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Building an App in Vadodara? What It Really Takes & Costs — Digital Web Weaver" },
+  title: { absolute: "Building an App in Vadodara? Real Costs & Process" },
   description: "Thinking of building a mobile app in Vadodara? Here's what the process really involves, what it costs in 2026, and how to avoid wasting your budget.",
   alternates: { canonical: "/blog/mobile-app-development-vadodara/" },
-  openGraph: { title: "Building an App in Vadodara? What It Really Takes & Costs — Digital Web Weaver", description: "Thinking of building a mobile app in Vadodara? Here's what the process really involves, what it costs in 2026, and how to avoid wasting your budget.", url: "/blog/mobile-app-development-vadodara/", type: "website" }
+  openGraph: { title: "Building an App in Vadodara? Real Costs & Process", description: "Thinking of building a mobile app in Vadodara? Here's what the process really involves, what it costs in 2026, and how to avoid wasting your budget.", url: "/blog/mobile-app-development-vadodara/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={blogPostingSchema({ headline: "Thinking of Building an App in Vadodara? Here's What It Really Takes (and Costs)", description: "Thinking of building a mobile app in Vadodara? Here's what the process really involves, what it costs in 2026, and how to avoid wasting your budget.", href: "/blog/mobile-app-development-vadodara/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })} />
+    <JsonLd data={[blogPostingSchema({ headline: "Thinking of Building an App in Vadodara? Here's What It Really Takes (and Costs)", description: "Thinking of building a mobile app in Vadodara? Here's what the process really involves, what it costs in 2026, and how to avoid wasting your budget.", href: "/blog/mobile-app-development-vadodara/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-article" data-target="s-article" title="Article">§</button>

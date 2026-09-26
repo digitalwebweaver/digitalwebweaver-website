@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "AWS & Cloud Infrastructure — Our Cloud Stack | Digital Web Weaver" },
-  description: "AWS, GCP, and Azure cloud architecture: EC2, ECS, Lambda, RDS, EKS and more. Multi-region HA, auto-scaling, security baselines, and cost optimisation. India-based senior team.",
+  title: { absolute: "AWS & Cloud Infrastructure — Digital Web Weaver" },
+  description: "AWS, GCP, and Azure cloud architecture: EC2, ECS, Lambda, RDS, EKS and more. Multi-region HA, auto-scaling, and cost optimisation.",
   alternates: { canonical: "/stack/aws/" },
-  openGraph: { title: "AWS & Cloud Infrastructure — Our Cloud Stack | Digital Web Weaver", description: "AWS, GCP, and Azure cloud architecture: EC2, ECS, Lambda, RDS, EKS and more. Multi-region HA, auto-scaling, security baselines, and cost optimisation. India-based senior team.", url: "/stack/aws/", type: "website" }
+  openGraph: { title: "AWS & Cloud Infrastructure — Digital Web Weaver", description: "AWS, GCP, and Azure cloud architecture: EC2, ECS, Lambda, RDS, EKS and more. Multi-region HA, auto-scaling, and cost optimisation.", url: "/stack/aws/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Hire AWS / Cloud Engineers", description: "AWS, GCP, and Azure cloud architecture: EC2, ECS, Lambda, RDS, EKS and more. Multi-region HA, auto-scaling, security baselines, and cost optimisation. India-based senior team.", href: "/stack/aws/" })} />
+    <JsonLd data={[serviceSchema({ name: "Hire AWS / Cloud Engineers", description: "AWS, GCP, and Azure cloud architecture: EC2, ECS, Lambda, RDS, EKS and more. Multi-region HA, auto-scaling, security baselines, and cost optimisation. India-based senior team.", href: "/stack/aws/" }), faqPageSchema({ href: "/stack/aws/", items: [{ question: "AWS, GCP, or Azure — which do you recommend?", answer: "AWS for most projects — widest managed service selection and mature ecosystem. GCP for ML-heavy workloads. Azure for Microsoft-integrated enterprises." }, { question: "Can you migrate our on-premise servers to AWS?", answer: "Yes — lift-and-shift to EC2, re-platform to ECS/RDS, or re-architect to serverless. We scope the right approach per workload." }, { question: "Do you manage cloud costs?", answer: "Yes — we set up Cost Explorer alerts, right-size instances monthly, and identify Reserved Instance opportunities." }, { question: "Can you set up Kubernetes on AWS?", answer: "Yes — EKS with managed node groups, Helm charts, and autoscaler. Or ECS Fargate if K8s overhead isn't justified." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="AWS services">⚙</button>

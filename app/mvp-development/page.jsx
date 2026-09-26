@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "MVP Development Company India | Launch in 8-12 Weeks — Digital Web Weaver" },
-  description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and clean architecture ready for technical due diligence. 150+ clients, 4.9/5 average client rating.",
+  title: { absolute: "MVP Development India — Digital Web Weaver" },
+  description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and architecture ready for technical due diligence.",
   alternates: { canonical: "/mvp-development/" },
-  openGraph: { title: "MVP Development Company India | Launch in 8-12 Weeks — Digital Web Weaver", description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and clean architecture ready for technical due diligence. 150+ clients, 4.9/5 average client rating.", url: "/mvp-development/", type: "website" }
+  openGraph: { title: "MVP Development India — Digital Web Weaver", description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and architecture ready for technical due diligence.", url: "/mvp-development/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "MVP Development", description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and clean architecture ready for technical due diligence. 150+ clients, 4.9/5 average client rating.", href: "/mvp-development/" })} />
+    <JsonLd data={[serviceSchema({ name: "MVP Development", description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and clean architecture ready for technical due diligence. 150+ clients, 4.9/5 average client rating.", href: "/mvp-development/" }), faqPageSchema({ href: "/mvp-development/", items: [{ question: "What's included in an MVP?", answer: "Authentication, core user flow (the one thing that proves your value proposition), analytics, basic admin access, and production deployment." }, { question: "Can we add features later?", answer: "Yes — we design MVPs with a clean architecture specifically so features can be added without major rewrites." }, { question: "Do you sign NDAs?", answer: "Yes — we sign NDAs before any project discussions. Your idea is protected from the first conversation." }, { question: "What if we need mobile too?", answer: "We can add a React Native app in weeks 6–8 reusing the same backend API, typically adding 2–3 weeks." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What's included">⚙</button>
@@ -204,7 +204,7 @@ export default function Page() {
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{"fontSize":"16px"}}>SaaS development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Scale your validated MVP into a full multi-tenant SaaS platform.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Complex web apps with enterprise architecture for post-MVP growth.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Complex web apps with enterprise architecture for post-MVP growth.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/react-developer/"><div className="svc__title" style={{"fontSize":"16px"}}>Hire a React developer</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Senior React engineers to accelerate your MVP frontend delivery.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
           </div>
         </section>
