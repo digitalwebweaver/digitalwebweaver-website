@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "TeleCare — Telemedicine Platform | Digital Web Weaver" },
-  description: "TeleCare brings video consultations, e-prescriptions, patient records, appointment scheduling, and payments into one branded telemedicine platform. Live in 5–7 weeks.",
+  description: "TeleCare brings video consultations, e-prescriptions, patient records, scheduling, and payments into one branded telemedicine platform.",
   alternates: { canonical: "/telecare/" },
-  openGraph: { title: "TeleCare — Telemedicine Platform | Digital Web Weaver", description: "TeleCare brings video consultations, e-prescriptions, patient records, appointment scheduling, and payments into one branded telemedicine platform. Live in 5–7 weeks.", url: "/telecare/", type: "website" }
+  openGraph: { title: "TeleCare — Telemedicine Platform | Digital Web Weaver", description: "TeleCare brings video consultations, e-prescriptions, patient records, scheduling, and payments into one branded telemedicine platform.", url: "/telecare/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "TeleCare", description: "TeleCare brings video consultations, e-prescriptions, patient records, appointment scheduling, and payments into one branded telemedicine platform. Live in 5–7 weeks.", href: "/telecare/" })} />
+    <JsonLd data={[serviceSchema({ name: "TeleCare", description: "TeleCare brings video consultations, e-prescriptions, patient records, appointment scheduling, and payments into one branded telemedicine platform. Live in 5–7 weeks.", href: "/telecare/" }), faqPageSchema({ href: "/telecare/", items: [{ question: "Do virtual and in-person visits share the same patient record?", answer: "Yes — every consultation, virtual or in-person, is recorded in the same patient history." }, { question: "Can patients receive prescriptions immediately after a video call?", answer: "Yes — e-prescriptions are generated and sent to the patient's app right after the consultation ends." }, { question: "Is the video consultation platform secure?", answer: "Yes — consultations run on secure, access-controlled video infrastructure designed with patient privacy in mind." }, { question: "Can it support multiple doctors and specialities?", answer: "Yes — TeleCare supports multi-doctor, multi-department setups with individual scheduling and consultation types." }, { question: "How long does it take to launch?", answer: "Most clinics are live within 5–7 weeks, including configuration, data migration, and staff training." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

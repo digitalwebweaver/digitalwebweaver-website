@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Hire Python Developers | Django, AI & Data Experts — Digital Web Weaver" },
-  description: "Hire senior Python developers — Django and FastAPI backends, data pipelines, and ML/AI systems. Matched with 2–3 pre-vetted profiles in 48 hours, 14-day free replacement.",
+  title: { absolute: "Hire Python Developers — Digital Web Weaver" },
+  description: "Hire senior Python developers — Django and FastAPI backends, data pipelines, and ML/AI systems. Matched in 48 hours, 14-day free replacement.",
   alternates: { canonical: "/python-developer/" },
-  openGraph: { title: "Hire Python Developers | Django, AI & Data Experts — Digital Web Weaver", description: "Hire senior Python developers — Django and FastAPI backends, data pipelines, and ML/AI systems. Matched with 2–3 pre-vetted profiles in 48 hours, 14-day free replacement.", url: "/python-developer/", type: "website" }
+  openGraph: { title: "Hire Python Developers — Digital Web Weaver", description: "Hire senior Python developers — Django and FastAPI backends, data pipelines, and ML/AI systems. Matched in 48 hours, 14-day free replacement.", url: "/python-developer/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Hire Python / Django Developers", description: "Hire senior Python developers — Django and FastAPI backends, data pipelines, and ML/AI systems. Matched with 2–3 pre-vetted profiles in 48 hours, 14-day free replacement.", href: "/python-developer/" })} />
+    <JsonLd data={[serviceSchema({ name: "Hire Python / Django Developers", description: "Hire senior Python developers — Django and FastAPI backends, data pipelines, and ML/AI systems. Matched with 2–3 pre-vetted profiles in 48 hours, 14-day free replacement.", href: "/python-developer/" }), faqPageSchema({ href: "/python-developer/", items: [{ question: "Django or FastAPI for a new project?", answer: "FastAPI for API-first or ML-adjacent projects. Django when you need a full-stack framework with admin, auth, and ORM out of the box." }, { question: "Can you integrate Python with our existing Node.js or PHP backend?", answer: "Yes — Python microservices communicate over REST, gRPC, or message queues with any language backend." }, { question: "How do you handle large datasets?", answer: "polars for in-memory speed, Spark for distributed processing, dbt for transformation, and Airflow for orchestration." }, { question: "Can you deploy ML models to production?", answer: "Yes — FastAPI model servers, Triton Inference Server, SageMaker, or Vertex AI depending on your cloud and scale needs." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What we build">⚙</button>
@@ -253,7 +253,7 @@ export default function Page() {
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-4">
             <Link className="svc" href="/ai-automation/"><div className="svc__title" style={{ fontSize: "16px" }}>AI &amp; automation</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Intelligent automation powered by Python and ML.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{ fontSize: "16px" }}>Web application development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Python-powered web apps and APIs.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{ fontSize: "16px" }}>Web application development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Python-powered web apps and APIs.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{ fontSize: "16px" }}>SaaS development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>End-to-end SaaS product development.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
             <Link className="svc" href="/react-developer/"><div className="svc__title" style={{ fontSize: "16px" }}>Hire React developer</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Frontend engineers to pair with Python backends.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
           </div>

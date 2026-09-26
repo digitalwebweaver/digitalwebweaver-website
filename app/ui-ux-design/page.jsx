@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "UI/UX Design Company India | Figma & Product Design Experts — Digital Web Weaver" },
-  description: "UI/UX design grounded in user research and business goals — wireframes, prototypes, design systems, and developer handoffs. WCAG 2.1 AA, 95+ usability score, 150+ clients.",
+  title: { absolute: "UI/UX Design Company India — Digital Web Weaver" },
+  description: "UI/UX design grounded in user research and business goals — wireframes, prototypes, design systems, and developer handoffs. WCAG 2.1 AA.",
   alternates: { canonical: "/ui-ux-design/" },
-  openGraph: { title: "UI/UX Design Company India | Figma & Product Design Experts — Digital Web Weaver", description: "UI/UX design grounded in user research and business goals — wireframes, prototypes, design systems, and developer handoffs. WCAG 2.1 AA, 95+ usability score, 150+ clients.", url: "/ui-ux-design/", type: "website" }
+  openGraph: { title: "UI/UX Design Company India — Digital Web Weaver", description: "UI/UX design grounded in user research and business goals — wireframes, prototypes, design systems, and developer handoffs. WCAG 2.1 AA.", url: "/ui-ux-design/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "UI / UX Design", description: "UI/UX design grounded in user research and business goals — wireframes, prototypes, design systems, and developer handoffs. WCAG 2.1 AA, 95+ usability score, 150+ clients.", href: "/ui-ux-design/" })} />
+    <JsonLd data={[serviceSchema({ name: "UI / UX Design", description: "UI/UX design grounded in user research and business goals — wireframes, prototypes, design systems, and developer handoffs. WCAG 2.1 AA, 95+ usability score, 150+ clients.", href: "/ui-ux-design/" }), faqPageSchema({ href: "/ui-ux-design/", items: [{ question: "Can you redesign our existing product?", answer: "Yes — we start with a heuristic audit and user research to identify what to keep, improve, and remove before designing anything new." }, { question: "Do you build design systems?", answer: "Yes — component libraries with tokens, documentation, and Storybook integration are a core offering." }, { question: "How do you validate designs before development?", answer: "Moderated usability tests with Maze or Useberry — real users complete tasks on the Figma prototype before a single line of code is written." }, { question: "Can you work with our existing brand guidelines?", answer: "Yes — we extend your brand guidelines into a full UI component system consistent with your visual identity." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Services">⚙</button>
@@ -230,7 +230,7 @@ export default function Page() {
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
             <Link className="svc" href="/web-development/"><div className="svc__title" style={{fontSize:"16px"}}>Web development</div><p className="svc__body" style={{fontSize:"13.5px"}}>We implement our own designs — design and development in one team.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{fontSize:"16px"}}>Web application development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Complex web apps designed and engineered end-to-end.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{fontSize:"16px"}}>Web application development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Complex web apps designed and engineered end-to-end.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{fontSize:"16px"}}>SaaS development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Product design for SaaS onboarding, dashboards, and growth flows.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
           </div>
         </section>

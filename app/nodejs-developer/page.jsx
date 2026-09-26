@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Hire Node.js Developers | India, UK & Global Teams — Digital Web Weaver" },
+  title: { absolute: "Hire Node.js Developers — Digital Web Weaver" },
   description: "Hire senior Node.js developers — event-driven APIs, microservices, and real-time backends with TypeScript. Matched with 2–3 pre-vetted profiles in 48 hours.",
   alternates: { canonical: "/nodejs-developer/" },
-  openGraph: { title: "Hire Node.js Developers | India, UK & Global Teams — Digital Web Weaver", description: "Hire senior Node.js developers — event-driven APIs, microservices, and real-time backends with TypeScript. Matched with 2–3 pre-vetted profiles in 48 hours.", url: "/nodejs-developer/", type: "website" }
+  openGraph: { title: "Hire Node.js Developers — Digital Web Weaver", description: "Hire senior Node.js developers — event-driven APIs, microservices, and real-time backends with TypeScript. Matched with 2–3 pre-vetted profiles in 48 hours.", url: "/nodejs-developer/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Hire Node.js Developers", description: "Hire senior Node.js developers — event-driven APIs, microservices, and real-time backends with TypeScript. Matched with 2–3 pre-vetted profiles in 48 hours.", href: "/nodejs-developer/" })} />
+    <JsonLd data={[serviceSchema({ name: "Hire Node.js Developers", description: "Hire senior Node.js developers — event-driven APIs, microservices, and real-time backends with TypeScript. Matched with 2–3 pre-vetted profiles in 48 hours.", href: "/nodejs-developer/" }), faqPageSchema({ href: "/nodejs-developer/", items: [{ question: "Express vs Fastify — which do you recommend?", answer: "Fastify for new projects — it's roughly 2× faster than Express and has schema validation built in." }, { question: "Can you build a monolith and split it later?", answer: "Yes — we design monoliths with clear module boundaries from day one, so extracting a service later is a refactor, not a rewrite." }, { question: "Do you handle database migrations?", answer: "Yes — Prisma Migrate or Flyway for versioned, reproducible schema changes across every environment." }, { question: "What's your typical API delivery timeline?", answer: "A core REST API with auth, CRUD, and tests takes 2–4 weeks. A full backend platform typically takes 2–4 months." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What we build">⚙</button>
@@ -252,7 +252,7 @@ export default function Page() {
         <section className="section reveal">
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-4">
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{ fontSize: "16px" }}>Web application development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Complex portals and dashboards backed by Node.js.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{ fontSize: "16px" }}>Web application development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Complex portals and dashboards backed by Node.js.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{ fontSize: "16px" }}>SaaS development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>End-to-end SaaS product development.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
             <Link className="svc" href="/web-development/"><div className="svc__title" style={{ fontSize: "16px" }}>Web development</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Full-stack web development services.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>
             <Link className="svc" href="/react-developer/"><div className="svc__title" style={{ fontSize: "16px" }}>Hire React developer</div><p className="svc__body" style={{ fontSize: "13.5px" }}>Frontend engineers who pair perfectly with Node.js.</p><div className="mono" style={{ fontSize: "12px", color: "var(--pink)", marginTop: "12px" }}>open ↗</div></Link>

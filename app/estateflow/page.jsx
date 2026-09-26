@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "EstateFlow — Real Estate CRM for Builders & Developers | Digital Web Weaver" },
-  description: "EstateFlow runs the entire buyer journey for property developers — leads, site visits, negotiation, booking, collections and post-sales — with WhatsApp automation and RERA-aware compliance built in.",
+  title: { absolute: "EstateFlow — Real Estate CRM | Digital Web Weaver" },
+  description: "EstateFlow runs the buyer journey for developers — leads, visits, booking and post-sales — with WhatsApp automation and RERA compliance built in.",
   alternates: { canonical: "/estateflow/" },
-  openGraph: { title: "EstateFlow — Real Estate CRM for Builders & Developers | Digital Web Weaver", description: "EstateFlow runs the entire buyer journey for property developers — leads, site visits, negotiation, booking, collections and post-sales — with WhatsApp automation and RERA-aware compliance built in.", url: "/estateflow/", type: "website" }
+  openGraph: { title: "EstateFlow — Real Estate CRM | Digital Web Weaver", description: "EstateFlow runs the buyer journey for developers — leads, visits, booking and post-sales — with WhatsApp automation and RERA compliance built in.", url: "/estateflow/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "EstateFlow", description: "EstateFlow runs the entire buyer journey for property developers — leads, site visits, negotiation, booking, collections and post-sales — with WhatsApp automation and RERA-aware compliance built in.", href: "/estateflow/" })} />
+    <JsonLd data={[serviceSchema({ name: "EstateFlow", description: "EstateFlow runs the entire buyer journey for property developers — leads, site visits, negotiation, booking, collections and post-sales — with WhatsApp automation and RERA-aware compliance built in.", href: "/estateflow/" }), faqPageSchema({ href: "/estateflow/", items: [{ question: "Does EstateFlow enforce RERA Section 13?", answer: "Yes — receipts above 10% of the unit cost before a registered agreement are blocked automatically, and every quotation carries the project's RERA number." }, { question: "Can it handle multiple projects under different legal entities?", answer: "Yes — each project is mapped to its own legal entity, and receipts, GST and agreements are entity-aware from day one." }, { question: "Does the WhatsApp bot ever quote a price or discount?", answer: "No — pricing and discount questions are always handed to a person. The bot only answers from facts your team has approved in the knowledge base." }, { question: "How are channel partner disputes handled?", answer: "Every lead tag is timestamped with its validity window, and OTP-verified visits lock a partner's credit — disputes are resolved with the same evidence shown to both sides." }, { question: "Does it track TDS on buyer payments?", answer: "Yes — for units at or above ₹50 lakh, EstateFlow tracks the 1% TDS under Section 194-IA per instalment and flags missing challans before possession." }, { question: "What languages does it support?", answer: "Gujarati, Hindi and English — across templates, the WhatsApp bot, and the customer portal." }, { question: "Can we start with just the sales pipeline and add collections later?", answer: "Yes — EstateFlow is built in phases. Most developers start with the Sales Core tier and add closing, collections and post-sales as they're ready." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-problem" data-target="s-problem" title="The problem">⚠</button>

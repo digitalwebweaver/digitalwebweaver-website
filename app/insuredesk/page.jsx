@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "InsureDesk — Insurance Agency CRM Software | Digital Web Weaver" },
-  description: "InsureDesk consolidates lead management, policy tracking, renewal reminders, claims follow-up, and client communication into one connected CRM. Live in 4–6 weeks.",
+  title: { absolute: "InsureDesk — Insurance CRM | Digital Web Weaver" },
+  description: "InsureDesk consolidates lead management, policy tracking, renewal reminders, claims follow-up, and client communication into one CRM.",
   alternates: { canonical: "/insuredesk/" },
-  openGraph: { title: "InsureDesk — Insurance Agency CRM Software | Digital Web Weaver", description: "InsureDesk consolidates lead management, policy tracking, renewal reminders, claims follow-up, and client communication into one connected CRM. Live in 4–6 weeks.", url: "/insuredesk/", type: "website" }
+  openGraph: { title: "InsureDesk — Insurance CRM | Digital Web Weaver", description: "InsureDesk consolidates lead management, policy tracking, renewal reminders, claims follow-up, and client communication into one CRM.", url: "/insuredesk/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "InsureDesk", description: "InsureDesk consolidates lead management, policy tracking, renewal reminders, claims follow-up, and client communication into one connected CRM. Live in 4–6 weeks.", href: "/insuredesk/" })} />
+    <JsonLd data={[serviceSchema({ name: "InsureDesk", description: "InsureDesk consolidates lead management, policy tracking, renewal reminders, claims follow-up, and client communication into one connected CRM. Live in 4–6 weeks.", href: "/insuredesk/" }), faqPageSchema({ href: "/insuredesk/", items: [{ question: "Do you support multiple product lines?", answer: "Yes — InsureDesk supports configurable policy types for motor, health, and life insurance." }, { question: "How do renewal reminders work?", answer: "Reminders are automatically scheduled and sent via SMS, WhatsApp, or email ahead of each renewal date." }, { question: "Can multiple agents use the same system?", answer: "Yes — with individual portfolios and commission tracking per agent." }, { question: "What's the data migration process?", answer: "Existing client records, active policies, and renewal dates are imported as part of onboarding." }, { question: "What's the implementation timeline?", answer: "Most agencies go live within 4–6 weeks, including configuration and training." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

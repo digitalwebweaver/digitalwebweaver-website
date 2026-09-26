@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Retail & E-Commerce Development | Headless Commerce India — Digital Web Weaver" },
+  title: { absolute: "Retail & E-Commerce Development — Digital Web Weaver" },
   description: "Custom e-commerce, headless storefronts, POS integration, and retail analytics engineered for conversion. +40% average conversion lift, trusted by 150+ clients.",
   alternates: { canonical: "/retail-ecommerce/" },
-  openGraph: { title: "Retail & E-Commerce Development | Headless Commerce India — Digital Web Weaver", description: "Custom e-commerce, headless storefronts, POS integration, and retail analytics engineered for conversion. +40% average conversion lift, trusted by 150+ clients.", url: "/retail-ecommerce/", type: "website" }
+  openGraph: { title: "Retail & E-Commerce Development — Digital Web Weaver", description: "Custom e-commerce, headless storefronts, POS integration, and retail analytics engineered for conversion. +40% average conversion lift, trusted by 150+ clients.", url: "/retail-ecommerce/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Retail & E-Commerce Development", description: "We build headless commerce platforms, B2B wholesale portals, and retail management systems. 40% average conversion improvement, trusted by 150+ clients.", href: "/retail-ecommerce/" })} />
+    <JsonLd data={[serviceSchema({ name: "Retail & E-Commerce Development", description: "We build headless commerce platforms, B2B wholesale portals, and retail management systems. 40% average conversion improvement, trusted by 150+ clients.", href: "/retail-ecommerce/" }), faqPageSchema({ href: "/retail-ecommerce/", items: [{ question: "WooCommerce or Shopify for our store?", answer: "Shopify when you want speed and a managed platform; WooCommerce when you want full ownership of the codebase and hosting." }, { question: "What is headless commerce?", answer: "It separates the frontend from the commerce backend — a Next.js storefront consuming Shopify, WooCommerce, or Medusa through an API for speed and design freedom." }, { question: "Can you build a loyalty program?", answer: "Yes — points, tiers, referrals, and gamified reward systems, integrated directly into checkout and account flows." }, { question: "Do you integrate with ERPs?", answer: "Yes — SAP, NetSuite, and Odoo, keeping orders, stock, and customer data in sync with your storefront." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Solutions">⚙</button>
@@ -139,7 +139,7 @@ export default function Page() {
         <section className="section reveal">
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{fontSize:"16px"}}>Web application development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Retail portals, OMS dashboards, and multi-role back-office tools.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{fontSize:"16px"}}>Web application development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Retail portals, OMS dashboards, and multi-role back-office tools.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/ecommerce-development/"><div className="svc__title" style={{fontSize:"16px"}}>E-commerce development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Custom storefronts, WooCommerce, and headless commerce builds.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/custom-software-development/"><div className="svc__title" style={{fontSize:"16px"}}>Custom software development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Bespoke OMS, loyalty, and inventory systems built around your operations.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
           </div>

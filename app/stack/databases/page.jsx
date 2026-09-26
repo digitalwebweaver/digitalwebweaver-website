@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Database Technologies We Use — PostgreSQL, MongoDB, Redis & More | Digital Web Weaver" },
-  description: "Database architecture and engineering: PostgreSQL, MongoDB, Redis, Elasticsearch, ClickHouse and SQLite. Schema design, query optimisation, and zero-downtime migrations. India-based senior team.",
+  title: { absolute: "Database Technologies We Use — Digital Web Weaver" },
+  description: "Database architecture and engineering: PostgreSQL, MongoDB, Redis, Elasticsearch, ClickHouse and SQLite. Schema design and zero-downtime migrations.",
   alternates: { canonical: "/stack/databases/" },
-  openGraph: { title: "Database Technologies We Use — PostgreSQL, MongoDB, Redis & More | Digital Web Weaver", description: "Database architecture and engineering: PostgreSQL, MongoDB, Redis, Elasticsearch, ClickHouse and SQLite. Schema design, query optimisation, and zero-downtime migrations. India-based senior team.", url: "/stack/databases/", type: "website" }
+  openGraph: { title: "Database Technologies We Use — Digital Web Weaver", description: "Database architecture and engineering: PostgreSQL, MongoDB, Redis, Elasticsearch, ClickHouse and SQLite. Schema design and zero-downtime migrations.", url: "/stack/databases/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Hire MySQL / PostgreSQL Developers", description: "Database architecture and engineering: PostgreSQL, MongoDB, Redis, Elasticsearch, ClickHouse and SQLite. Schema design, query optimisation, and zero-downtime migrations. India-based senior team.", href: "/stack/databases/" })} />
+    <JsonLd data={[serviceSchema({ name: "Hire MySQL / PostgreSQL Developers", description: "Database architecture and engineering: PostgreSQL, MongoDB, Redis, Elasticsearch, ClickHouse and SQLite. Schema design, query optimisation, and zero-downtime migrations. India-based senior team.", href: "/stack/databases/" }), faqPageSchema({ href: "/stack/databases/", items: [{ question: "When do you choose PostgreSQL vs MongoDB?", answer: "PostgreSQL for structured relational data, complex queries, and transactions. MongoDB for flexible document data, rapid iteration, and embedded arrays." }, { question: "Why Redis over Memcached?", answer: "Redis supports data structures (lists, sets, sorted sets), pub/sub, persistence, and clustering. Memcached is pure cache with no additional features." }, { question: "When is ClickHouse the right choice?", answer: "When you need analytics over millions of rows — dashboards, time-series reporting, or log analysis. It's 10–100× faster than PostgreSQL for OLAP queries." }, { question: "How do you handle database migrations safely?", answer: "Schema changes via Prisma Migrate or Flyway. Expand-and-contract pattern for zero-downtime. All migrations tested in staging first." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Databases">⚙</button>

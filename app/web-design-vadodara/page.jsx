@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema, localBusinessSchema } from "@/lib/schema";
+import { serviceSchema, localBusinessSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Web Design Vadodara | Digital Web Weaver" },
-  description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps and custom web applications for Gujarat's manufacturers, retailers and startups. Free consultation, 24-hour response.",
+  description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps and web applications for Gujarat's manufacturers and retailers.",
   alternates: { canonical: "/web-design-vadodara/" },
-  openGraph: { title: "Web Design Vadodara | Digital Web Weaver", description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps and custom web applications for Gujarat's manufacturers, retailers and startups. Free consultation, 24-hour response.", url: "/web-design-vadodara/", type: "website" }
+  openGraph: { title: "Web Design Vadodara | Digital Web Weaver", description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps and web applications for Gujarat's manufacturers and retailers.", url: "/web-design-vadodara/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={[localBusinessSchema({ city: "vadodara", description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps, and custom web applications for Gujarat's manufacturers, retailers and startups." }), serviceSchema({ name: "Web Design & Development Vadodara", description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps, and custom web applications. 200+ projects delivered, 12+ years in Vadodara.", href: "/web-design-vadodara/" })]} />
+    <JsonLd data={[localBusinessSchema({ city: "vadodara", description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps, and custom web applications for Gujarat's manufacturers, retailers and startups." }), serviceSchema({ name: "Web Design & Development Vadodara", description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps, and custom web applications. 200+ projects delivered, 12+ years in Vadodara.", href: "/web-design-vadodara/" }), faqPageSchema({ href: "/web-design-vadodara/", items: [{ question: "How much does a website cost in Vadodara?", answer: "A small business website typically starts at ₹25,000–₹60,000 for a clean, custom-designed site with CMS. A WooCommerce e-commerce store runs ₹50,000–₹1,50,000 depending on products and features. A web application or SaaS product is scoped individually. We give fixed-price quotes — no surprises." }, { question: "Can we meet you in person in Vadodara?", answer: "Yes. We're based in Vadodara and welcome in-person meetings at our studio or your office. For the initial consultation, meeting face-to-face often makes scoping faster and clearer. WhatsApp and phone calls work for ongoing communication." }, { question: "Do you only work with Vadodara businesses?", answer: "No — around 60% of our clients are outside Vadodara, including companies in the UK, US, and other Indian cities. But we do prioritise serving local Vadodara businesses well and offer in-person project management that remote clients can't get." }, { question: "How long does a website take to build in Vadodara?", answer: "A business website typically takes 3–5 weeks from brief to launch. A WooCommerce store runs 5–8 weeks. A custom web application or mobile app is 10–20+ weeks. We give you a detailed, week-by-week milestone plan before starting." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What we build">⚙</button>

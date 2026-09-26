@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Software Development Company Ivory Coast | Abidjan Agency — Digital Web Weaver" },
-  description: "Agence de développement web et logiciel pour Abidjan et la Côte d'Ivoire. Sites sur mesure, applications métier, e-commerce avec Mobile Money, et équipes dédiées. Équipe francophone, ingénieurs seniors.",
+  title: { absolute: "Web Agency in Abidjan, Ivory Coast — Digital Web Weaver" },
+  description: "Agence de développement web pour Abidjan et la Côte d'Ivoire — sites sur mesure, e-commerce Mobile Money, équipe francophone d'ingénieurs seniors.",
   alternates: { canonical: "/agence-developpement-web-abidjan/" },
-  openGraph: { title: "Software Development Company Ivory Coast | Abidjan Agency — Digital Web Weaver", description: "Agence de développement web et logiciel pour Abidjan et la Côte d'Ivoire. Sites sur mesure, applications métier, e-commerce avec Mobile Money, et équipes dédiées. Équipe francophone, ingénieurs seniors.", url: "/agence-developpement-web-abidjan/", type: "website" }
+  openGraph: { title: "Web Agency in Abidjan, Ivory Coast — Digital Web Weaver", description: "Agence de développement web pour Abidjan et la Côte d'Ivoire — sites sur mesure, e-commerce Mobile Money, équipe francophone d'ingénieurs seniors.", url: "/agence-developpement-web-abidjan/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Agence de Développement Web Abidjan", description: "Agence de développement web et logiciel pour Abidjan et la Côte d'Ivoire. Sites sur mesure, applications métier, e-commerce avec Mobile Money, et équipes de développement dédiées. Équipe francophone, ingénieurs seniors.", href: "/agence-developpement-web-abidjan/" })} />
+    <JsonLd data={[serviceSchema({ name: "Agence de Développement Web Abidjan", description: "Agence de développement web et logiciel pour Abidjan et la Côte d'Ivoire. Sites sur mesure, applications métier, e-commerce avec Mobile Money, et équipes de développement dédiées. Équipe francophone, ingénieurs seniors.", href: "/agence-developpement-web-abidjan/" }), faqPageSchema({ href: "/agence-developpement-web-abidjan/", items: [{ question: "Travaillez-vous avec des entreprises basées à Abidjan à distance ?", answer: "Oui. Nous travaillons avec des clients à Abidjan et dans toute la Côte d'Ivoire entièrement à distance, avec une équipe francophone dédiée aux échanges quotidiens." }, { question: "Votre équipe parle-t-elle français ?", answer: "Oui. Nous disposons d'une équipe francophone pour les échanges avec nos clients, du cadrage du projet jusqu'à la livraison." }, { question: "Combien coûte un site web ou une application sur mesure ?", answer: "Un site professionnel démarre à 350 000 FCFA, une application web sur mesure à partir de 1 200 000 FCFA, et un développeur dédié à partir de 750 000 FCFA par mois." }, { question: "Pouvez-vous intégrer les paiements Mobile Money ?", answer: "Oui. Nous intégrons les principales solutions de paiement mobile ivoiriennes — Orange Money, MTN Mobile Money et Wave — dans vos projets e-commerce et applicatifs." }, { question: "Signez-vous des contrats et accords de confidentialité ?", answer: "Oui. Nous signons volontiers un accord de confidentialité (NDA) avant de discuter des détails de votre projet." }, { question: "Combien de temps faut-il pour développer ?", answer: "Un site web prend généralement 3 à 4 semaines ; une application sur mesure, 8 à 12 semaines, selon la complexité." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Aperçu">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Services">⚙</button>

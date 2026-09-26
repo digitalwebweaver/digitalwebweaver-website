@@ -6,15 +6,15 @@ import { blogCollectionSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Software Development Blog | Digital Web Weaver" },
-  description: "Engineering notes, product thinking, and honest takes on building software — from the team that ships 200+ systems a year. Web development, ERP, SaaS, AI automation, and more.",
+  description: "Engineering notes and honest takes on building software — from the team shipping 200+ systems a year. Web dev, ERP, SaaS, AI automation, and more.",
   alternates: { canonical: "/blog/" },
-  openGraph: { title: "Software Development Blog | Digital Web Weaver", description: "Engineering notes, product thinking, and honest takes on building software — from the team that ships 200+ systems a year. Web development, ERP, SaaS, AI automation, and more.", url: "/blog/", type: "website" }
+  openGraph: { title: "Software Development Blog | Digital Web Weaver", description: "Engineering notes and honest takes on building software — from the team shipping 200+ systems a year. Web dev, ERP, SaaS, AI automation, and more.", url: "/blog/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={blogCollectionSchema()} />
+    <JsonLd data={[blogCollectionSchema()]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-posts" data-target="s-posts" title="Posts">◈</button>

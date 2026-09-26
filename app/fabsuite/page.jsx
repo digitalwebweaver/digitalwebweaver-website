@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "FabSuite — Costing & Cutting-Plan Software for Fabricators | Digital Web Weaver" },
-  description: "FabSuite turns a customer's window/door measurements into a costed quotation and an optimized aluminium cutting plan — in minutes, not an evening with Excel. Built for aluminium & uPVC fabrication shops.",
+  title: { absolute: "FabSuite — Costing & Cutting Plans | Digital Web Weaver" },
+  description: "FabSuite turns window/door measurements into a costed quote and an optimized cutting plan — in minutes, not an evening with Excel.",
   alternates: { canonical: "/fabsuite/" },
-  openGraph: { title: "FabSuite — Costing & Cutting-Plan Software for Fabricators | Digital Web Weaver", description: "FabSuite turns a customer's window/door measurements into a costed quotation and an optimized aluminium cutting plan — in minutes, not an evening with Excel. Built for aluminium & uPVC fabrication shops.", url: "/fabsuite/", type: "website" }
+  openGraph: { title: "FabSuite — Costing & Cutting Plans | Digital Web Weaver", description: "FabSuite turns window/door measurements into a costed quote and an optimized cutting plan — in minutes, not an evening with Excel.", url: "/fabsuite/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "FabSuite", description: "FabSuite turns a customer's window/door measurements into a costed quotation and an optimized aluminium cutting plan — in minutes, not an evening with Excel. Built for aluminium & uPVC fabrication shops.", href: "/fabsuite/" })} />
+    <JsonLd data={[serviceSchema({ name: "FabSuite", description: "FabSuite turns a customer's window/door measurements into a costed quotation and an optimized aluminium cutting plan — in minutes, not an evening with Excel. Built for aluminium & uPVC fabrication shops.", href: "/fabsuite/" }), faqPageSchema({ href: "/fabsuite/", items: [{ question: "Do I need to install anything?", answer: "No — FabSuite is a web app. It works from a browser on a desktop in the office or a phone on the shop floor. Nothing to install, always the latest version." }, { question: "What if I already have my own cutting formulas?", answer: "That's exactly how it's built to work. FabSuite doesn't assume how a shop cuts — you enter your own formulas per window type once, and calibration mode lets you check them against a real historical job before you rely on them." }, { question: "Can my staff use it without seeing my margins?", answer: "Yes. Staff accounts can build and manage projects, leads, and quotes, but never see your rate card, margins, or billing — that's Owner-only." }, { question: "What happens to a quote if my rates change later?", answer: "Nothing — a finalized project's numbers are frozen the moment you lock it. Editing your rate card later never retroactively changes a price you already quoted." }, { question: "Is my data safe from other shops using FabSuite?", answer: "Yes — every shop gets its own fully isolated workspace. There's no cross-shop visibility, ever." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-problem" data-target="s-problem" title="The problem">⚠</button>

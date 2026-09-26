@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "EdTech Software Development Company | LMS & Learning India — Digital Web Weaver" },
-  description: "LMS platforms, live classroom tools, assessment engines, and mobile learning apps for schools, universities, and corporate training. India-based senior team, SCORM/xAPI ready.",
+  title: { absolute: "EdTech Software Development — Digital Web Weaver" },
+  description: "LMS platforms, live classroom tools, assessment engines, and mobile learning apps for schools, universities, and corporate training. SCORM/xAPI ready.",
   alternates: { canonical: "/edtech/" },
-  openGraph: { title: "EdTech Software Development Company | LMS & Learning India — Digital Web Weaver", description: "LMS platforms, live classroom tools, assessment engines, and mobile learning apps for schools, universities, and corporate training. India-based senior team, SCORM/xAPI ready.", url: "/edtech/", type: "website" }
+  openGraph: { title: "EdTech Software Development — Digital Web Weaver", description: "LMS platforms, live classroom tools, assessment engines, and mobile learning apps for schools, universities, and corporate training. SCORM/xAPI ready.", url: "/edtech/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "EdTech Software Development", description: "We build LMS platforms, live classroom tools, assessment engines, and mobile learning apps for schools, universities, and corporate training. SCORM compliant, serving 1M+ learners.", href: "/edtech/" })} />
+    <JsonLd data={[serviceSchema({ name: "EdTech Software Development", description: "We build LMS platforms, live classroom tools, assessment engines, and mobile learning apps for schools, universities, and corporate training. SCORM compliant, serving 1M+ learners.", href: "/edtech/" }), faqPageSchema({ href: "/edtech/", items: [{ question: "Can you integrate with existing content libraries?", answer: "Yes — SCORM, xAPI (Tin Can), and LTI standards allow content from major publishers to plug in to your LMS." }, { question: "How do you handle video at scale?", answer: "AWS MediaConvert for encoding, CloudFront for global CDN delivery, and adaptive bitrate streaming for variable connections." }, { question: "Do you build live proctoring features?", answer: "Yes — webcam monitoring, screen recording, and AI-based behaviour analysis integrated via Proctorio or custom builds." }, { question: "Can your platforms handle 10,000+ concurrent students?", answer: "Yes — we load-test with 10k concurrent users as standard. Autoscaling handles traffic spikes during exam periods." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Solutions">⚙</button>
@@ -151,7 +151,7 @@ export default function Page() {
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{"fontSize":"16px"}}>SaaS development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Multi-tenant LMS SaaS platforms with subscription billing and analytics.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Assessment engines, learning dashboards, and certification platforms.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Assessment engines, learning dashboards, and certification platforms.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/mobile-app-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Mobile app development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>iOS and Android learning apps with offline-first course downloads.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
           </div>
         </section>

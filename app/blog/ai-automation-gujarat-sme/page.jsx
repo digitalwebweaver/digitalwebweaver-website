@@ -5,16 +5,16 @@ import JsonLd from "@/components/JsonLd";
 import { blogPostingSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "AI Isn't Just for Big Tech: Automation for Gujarat SMEs | Digital Web Weaver" },
+  title: { absolute: "AI Isn't Just for Big Tech: Gujarat SME Automation" },
   description: "AI automation isn't only for big companies. Here are practical, affordable ways Gujarat SMEs can use AI in 2026 to cut busywork and save real hours each week.",
   alternates: { canonical: "/blog/ai-automation-gujarat-sme/" },
-  openGraph: { title: "AI Isn't Just for Big Tech: Automation for Gujarat SMEs | Digital Web Weaver", description: "AI automation isn't only for big companies. Here are practical, affordable ways Gujarat SMEs can use AI in 2026 to cut busywork and save real hours each week.", url: "/blog/ai-automation-gujarat-sme/", type: "website" }
+  openGraph: { title: "AI Isn't Just for Big Tech: Gujarat SME Automation", description: "AI automation isn't only for big companies. Here are practical, affordable ways Gujarat SMEs can use AI in 2026 to cut busywork and save real hours each week.", url: "/blog/ai-automation-gujarat-sme/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={blogPostingSchema({ headline: "AI Isn't Just for Big Tech: Practical Automation for Gujarat Businesses", description: "AI automation isn't only for big companies. Here are practical, affordable ways Gujarat SMEs can use AI in 2026 to cut busywork and save real hours each week.", href: "/blog/ai-automation-gujarat-sme/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })} />
+    <JsonLd data={[blogPostingSchema({ headline: "AI Isn't Just for Big Tech: Practical Automation for Gujarat Businesses", description: "AI automation isn't only for big companies. Here are practical, affordable ways Gujarat SMEs can use AI in 2026 to cut busywork and save real hours each week.", href: "/blog/ai-automation-gujarat-sme/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-article" data-target="s-article" title="Article">❯</button>

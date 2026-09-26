@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "VetCare — Veterinary Practice Management (South Africa) | Digital Web Weaver" },
-  description: "VetCare: appointments, patient records, stock, billing, and client WhatsApp in one affordable system — WhatsApp-first, SARS-ready, loadshedding-proof for South African vets.",
+  title: { absolute: "VetCare — Vet Practice Management | Digital Web Weaver" },
+  description: "VetCare: appointments, patient records, stock, billing, and client WhatsApp in one system — WhatsApp-first and loadshedding-proof for SA vets.",
   alternates: { canonical: "/vetcare/" },
-  openGraph: { title: "VetCare — Veterinary Practice Management (South Africa) | Digital Web Weaver", description: "VetCare: appointments, patient records, stock, billing, and client WhatsApp in one affordable system — WhatsApp-first, SARS-ready, loadshedding-proof for South African vets.", url: "/vetcare/", type: "website" }
+  openGraph: { title: "VetCare — Vet Practice Management | Digital Web Weaver", description: "VetCare: appointments, patient records, stock, billing, and client WhatsApp in one system — WhatsApp-first and loadshedding-proof for SA vets.", url: "/vetcare/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "VetCare", description: "VetCare: appointments, patient records, stock, billing, and client WhatsApp in one affordable system — WhatsApp-first, SARS-ready, loadshedding-proof for South African vets.", href: "/vetcare/" })} />
+    <JsonLd data={[serviceSchema({ name: "VetCare", description: "VetCare: appointments, patient records, stock, billing, and client WhatsApp in one affordable system — WhatsApp-first, SARS-ready, loadshedding-proof for South African vets.", href: "/vetcare/" }), faqPageSchema({ href: "/vetcare/", items: [{ question: "What happens during loadshedding?", answer: "Your data remains safe. VetCare is a full PWA — it installs like a native app, reads cached records offline, and queues every change until you're back online." }, { question: "Is billing SARS-compliant?", answer: "Yes — VetCare generates proper 15% VAT invoices with sequential numbers and SnapScan QR codes." }, { question: "Does it support WhatsApp?", answer: "Yes — with SMS fallback, editable message templates, automated reminders, and quiet-hours enforcement." }, { question: "How is data kept secure?", answer: "Clinic-level database isolation, 6 roles with 43 permissions, and full audit logging." }, { question: "What infrastructure is required?", answer: "VetCare runs on standard shared hosting — no expensive cloud subscriptions required." }, { question: "Is it mobile compatible?", answer: "Yes — VetCare is mobile-ready and installable as an app on Android and iOS devices." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

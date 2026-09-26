@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
+import { faqPageSchema } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
   title: { absolute: "Digital Web Weaver — Senior software engineering studio" },
@@ -12,6 +14,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
+    <JsonLd data={faqPageSchema({ href: "/", items: [{ question: "What does Digital Web Weaver do?", answer: "A senior software engineering studio. We build custom websites, web apps, mobile apps, SaaS platforms, ERP/CRM systems, and AI automation — idea to production — for businesses in India and worldwide." }, { question: "Where is Digital Web Weaver located?", answer: "Vadodara, Gujarat, India (207/208 Sanket Heights, Sunpharma Road, Atladra, Vadodara 390012), serving clients across India, the UK, South Africa, and Ivory Coast." }, { question: "How much does a website or app cost?", answer: "A business website typically runs ₹25,000–₹2,00,000; web apps and custom software start around ₹2,00,000 and scale with complexity. You get a clear itemised estimate within 24 hours." }, { question: "What technologies do you work with?", answer: "React, Next.js, Node.js, Python, Laravel, Vue, React Native, Flutter, PostgreSQL, AWS, and modern AI/LLM stacks — the right tool per project, never a forced template." }, { question: "Do you work with international & remote clients?", answer: "Yes — clients across the UK, South Africa, West Africa and beyond, with clear communication, documented code, and full source-code ownership handed to you." }] })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-home" data-target="s-home" title="Home">⌂</button>
       <button className="activitybar__btn" data-scroll="s-services" data-target="s-services" title="Services">⚙</button>

@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "CallMate AI — 24/7 AI Calling Agent for Businesses | Digital Web Weaver" },
-  description: "CallMate AI answers inbound calls, qualifies leads, books appointments, and makes follow-up and reminder calls automatically — in your brand's tone, around the clock.",
+  title: { absolute: "CallMate AI — AI Calling Agent | Digital Web Weaver" },
+  description: "CallMate AI answers inbound calls, qualifies leads, books appointments, and makes follow-up calls automatically — in your brand's tone, 24/7.",
   alternates: { canonical: "/callmate-ai/" },
-  openGraph: { title: "CallMate AI — 24/7 AI Calling Agent for Businesses | Digital Web Weaver", description: "CallMate AI answers inbound calls, qualifies leads, books appointments, and makes follow-up and reminder calls automatically — in your brand's tone, around the clock.", url: "/callmate-ai/", type: "website" }
+  openGraph: { title: "CallMate AI — AI Calling Agent | Digital Web Weaver", description: "CallMate AI answers inbound calls, qualifies leads, books appointments, and makes follow-up calls automatically — in your brand's tone, 24/7.", url: "/callmate-ai/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "CallMate AI", description: "CallMate AI answers inbound calls, qualifies leads, books appointments, and makes follow-up and reminder calls automatically — in your brand's tone, around the clock.", href: "/callmate-ai/" })} />
+    <JsonLd data={[serviceSchema({ name: "CallMate AI", description: "CallMate AI answers inbound calls, qualifies leads, books appointments, and makes follow-up and reminder calls automatically — in your brand's tone, around the clock.", href: "/callmate-ai/" }), faqPageSchema({ href: "/callmate-ai/", items: [{ question: "Will callers know they're speaking to an AI?", answer: "The agent is trained to sound natural and conversational using your business's tone and information — most callers experience it as a smooth, helpful conversation." }, { question: "What happens with calls it can't fully handle?", answer: "Complex or sensitive calls are transferred to your team with full context, so the caller never has to repeat themselves from scratch." }, { question: "Can it make outbound calls too, or only answer inbound?", answer: "Both — it can handle inbound enquiries and place outbound follow-up, reminder, or re-engagement calls." }, { question: "Does it work in the languages our customers use?", answer: "Yes — the agent can be configured for multiple languages based on your customer base." }, { question: "How long before it's live and answering our calls?", answer: "Most businesses are live within 3–4 weeks, including training the agent on your information and connecting it to your systems." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

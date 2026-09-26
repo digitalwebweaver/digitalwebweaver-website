@@ -5,16 +5,16 @@ import JsonLd from "@/components/JsonLd";
 import { productsSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Ready-Made Software Products | Launch in 2–4 Weeks — Digital Web Weaver" },
-  description: "17 production-ready software products — LMS, ERP, clinic software, delivery apps, and AI voice agents. White-label ready, deployed with your branding in 2–4 weeks.",
+  title: { absolute: "Ready-Made Software Products — Digital Web Weaver" },
+  description: "19 production-ready software products — LMS, ERP, clinic software, delivery apps, and AI voice agents. White-label ready in 2–4 weeks.",
   alternates: { canonical: "/products/" },
-  openGraph: { title: "Ready-Made Software Products | Launch in 2–4 Weeks — Digital Web Weaver", description: "17 production-ready software products — LMS, ERP, clinic software, delivery apps, and AI voice agents. White-label ready, deployed with your branding in 2–4 weeks.", url: "/products/", type: "website" }
+  openGraph: { title: "Ready-Made Software Products — Digital Web Weaver", description: "19 production-ready software products — LMS, ERP, clinic software, delivery apps, and AI voice agents. White-label ready in 2–4 weeks.", url: "/products/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={productsSchema()} />
+    <JsonLd data={[productsSchema()]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-catalog" data-target="s-catalog" title="Catalog">▤</button>

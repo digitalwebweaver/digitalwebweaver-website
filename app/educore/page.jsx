@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "EduCore — Learning Management System | Digital Web Weaver" },
-  description: "EduCore bundles course delivery, live classes, assessments, certificates, and fee collection into one branded LMS. White-labelled, live in 4–6 weeks, 0% revenue cut.",
+  description: "EduCore bundles course delivery, live classes, assessments, certificates, and fee collection into one branded LMS — live in 4–6 weeks, 0% revenue cut.",
   alternates: { canonical: "/educore/" },
-  openGraph: { title: "EduCore — Learning Management System | Digital Web Weaver", description: "EduCore bundles course delivery, live classes, assessments, certificates, and fee collection into one branded LMS. White-labelled, live in 4–6 weeks, 0% revenue cut.", url: "/educore/", type: "website" }
+  openGraph: { title: "EduCore — Learning Management System | Digital Web Weaver", description: "EduCore bundles course delivery, live classes, assessments, certificates, and fee collection into one branded LMS — live in 4–6 weeks, 0% revenue cut.", url: "/educore/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "EduCore", description: "EduCore bundles course delivery, live classes, assessments, certificates, and fee collection into one branded LMS. White-labelled, live in 4–6 weeks, 0% revenue cut.", href: "/educore/" })} />
+    <JsonLd data={[serviceSchema({ name: "EduCore", description: "EduCore bundles course delivery, live classes, assessments, certificates, and fee collection into one branded LMS. White-labelled, live in 4–6 weeks, 0% revenue cut.", href: "/educore/" }), faqPageSchema({ href: "/educore/", items: [{ question: "Is EduCore really white-labelled?", answer: "Fully white-labelled. Your logo, your colours, your domain, your app store listing. Nothing identifies Digital Web Weaver to your students unless you want it to." }, { question: "Can I migrate students and courses from my current setup?", answer: "Yes. We help you bulk-import existing course content, student records, and historical progress data as part of onboarding." }, { question: "Do you take a percentage of fees collected?", answer: "No. Payments go through your own gateway account directly to your bank. We don't sit between you and your revenue." }, { question: "What if I need non-standard features?", answer: "Because we built EduCore ourselves, we can scope and build custom additions as paid extensions." }, { question: "Timeline to go live?", answer: "Most institutes are live within 4–6 weeks of kickoff, including branding setup, content migration, and instructor training." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

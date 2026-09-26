@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Business Intelligence & Data Analytics Company India | BI Dashboards, ETL & Data Warehousing — Digital Web Weaver" },
-  description: "BI dashboards, data warehouses, and ETL pipelines that give decision-makers real-time visibility into the metrics that matter. Metabase, dbt, Airflow, Snowflake. India-based senior team.",
+  title: { absolute: "BI & Data Analytics Company — Digital Web Weaver" },
+  description: "BI dashboards, data warehouses, and ETL pipelines giving decision-makers real-time visibility into the metrics that matter. Metabase, dbt, Airflow.",
   alternates: { canonical: "/solutions/business-intelligence/" },
-  openGraph: { title: "Business Intelligence & Data Analytics Company India | BI Dashboards, ETL & Data Warehousing — Digital Web Weaver", description: "BI dashboards, data warehouses, and ETL pipelines that give decision-makers real-time visibility into the metrics that matter. Metabase, dbt, Airflow, Snowflake. India-based senior team.", url: "/solutions/business-intelligence/", type: "website" }
+  openGraph: { title: "BI & Data Analytics Company — Digital Web Weaver", description: "BI dashboards, data warehouses, and ETL pipelines giving decision-makers real-time visibility into the metrics that matter. Metabase, dbt, Airflow.", url: "/solutions/business-intelligence/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Business Intelligence", description: "BI dashboards, data warehouses, and ETL pipelines that give decision-makers real-time visibility into the metrics that matter. Metabase, dbt, Airflow, Snowflake. India-based senior team.", href: "/solutions/business-intelligence/" })} />
+    <JsonLd data={[serviceSchema({ name: "Business Intelligence", description: "BI dashboards, data warehouses, and ETL pipelines that give decision-makers real-time visibility into the metrics that matter. Metabase, dbt, Airflow, Snowflake. India-based senior team.", href: "/solutions/business-intelligence/" }), faqPageSchema({ href: "/solutions/business-intelligence/", items: [{ question: "What BI tool do you recommend?", answer: "Metabase for self-service analytics with a business-friendly UI. Superset for more control. Power BI for Microsoft-integrated enterprises." }, { question: "How do you handle data quality?", answer: "dbt tests validate row counts, uniqueness, referential integrity, and custom business rules at every pipeline run." }, { question: "Can you integrate our CRM and sales data?", answer: "Yes — Salesforce, HubSpot, Pipedrive, and custom CRMs all have API or Fivetran connector support for warehouse ingestion." }, { question: "How long does a BI implementation take?", answer: "Basic dashboard with one data source: 2–3 weeks. Full warehouse with multiple sources and automated reporting: 2–3 months." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Services">⚙</button>
@@ -217,7 +217,7 @@ export default function Page() {
           <div className="grid grid-4">
             <Link className="svc" href="/ai-automation/"><div className="svc__title" style={{"fontSize":"16px"}}>AI &amp; automation</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Predictive analytics and ML models built on your BI data foundation.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/custom-software-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Custom software</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Bespoke ERP, CRM, portals, and workflow automation.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>SaaS platforms, portals, dashboards, and enterprise systems.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>SaaS platforms, portals, dashboards, and enterprise systems.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/cloud-devops/"><div className="svc__title" style={{"fontSize":"16px"}}>Cloud &amp; DevOps</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Infrastructure to run your warehouse, pipelines, and dashboards reliably.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
           </div>
         </section>

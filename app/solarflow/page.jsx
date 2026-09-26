@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "SolarFlow — Solar ERP & CRM for Gujarat Installers | Digital Web Weaver" },
-  description: "SolarFlow manages the entire PM Surya Ghar → GEDA → MGVCL subsidy lifecycle, with AI that quotes, checks compliance, and watches every system you install. Never forfeit a subsidy again.",
+  title: { absolute: "SolarFlow — Solar ERP & CRM | Digital Web Weaver" },
+  description: "SolarFlow manages the entire PM Surya Ghar subsidy lifecycle — AI that quotes, checks compliance, and monitors every system you install.",
   alternates: { canonical: "/solarflow/" },
-  openGraph: { title: "SolarFlow — Solar ERP & CRM for Gujarat Installers | Digital Web Weaver", description: "SolarFlow manages the entire PM Surya Ghar → GEDA → MGVCL subsidy lifecycle, with AI that quotes, checks compliance, and watches every system you install. Never forfeit a subsidy again.", url: "/solarflow/", type: "website" }
+  openGraph: { title: "SolarFlow — Solar ERP & CRM | Digital Web Weaver", description: "SolarFlow manages the entire PM Surya Ghar subsidy lifecycle — AI that quotes, checks compliance, and monitors every system you install.", url: "/solarflow/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "SolarFlow", description: "SolarFlow manages the entire PM Surya Ghar → GEDA → MGVCL subsidy lifecycle, with AI that quotes, checks compliance, and watches every system you install. Never forfeit a subsidy again.", href: "/solarflow/" })} />
+    <JsonLd data={[serviceSchema({ name: "SolarFlow", description: "SolarFlow manages the entire PM Surya Ghar → GEDA → MGVCL subsidy lifecycle, with AI that quotes, checks compliance, and watches every system you install. Never forfeit a subsidy again.", href: "/solarflow/" }), faqPageSchema({ href: "/solarflow/", items: [{ question: "Is data isolated per tenant / company?", answer: "Yes — SolarFlow is multi-tenant with per-company data isolation, enforced with Postgres Row-Level Security." }, { question: "Is it compatible with DISCOMs other than MGVCL, like DGVCL or PGVCL?", answer: "Yes — SolarFlow is built to work across MGVCL, DGVCL, and PGVCL." }, { question: "Can it be white-labelled or branded as ours?", answer: "Yes — white-label and branding customisation is available, and included in the Scale tier." }, { question: "How is GST handled?", answer: "Automatically — SolarFlow applies CGST + SGST or IGST correctly depending on the transaction." }, { question: "What do field technicians need to use it?", answer: "A mobile-first field app for Android and iOS that works over 4G and stays usable offline." }, { question: "Which AI provider does SolarFlow use?", answer: "Your choice of Claude or OpenAI, connected using your own API key." }, { question: "What is ALMM validation and why does it matter?", answer: "ALMM validation ensures every component ordered is on the government's Approved List of Models and Manufacturers — ordering off-list components is one of the most common ways installers accidentally disqualify a customer's subsidy." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-problem" data-target="s-problem" title="The problem">⚠</button>

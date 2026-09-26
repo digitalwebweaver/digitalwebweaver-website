@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Mobile App Development Company | iOS, Android & React Native — Digital Web Weaver" },
-  description: "Native iOS and Android apps, React Native, and Flutter builds profiled for 60fps. 55+ apps shipped, 4.8★ average rating, end-to-end App Store and Play Store submission.",
+  title: { absolute: "Mobile App Development — Digital Web Weaver" },
+  description: "Native iOS and Android apps, React Native, and Flutter builds profiled for 60fps. 55+ apps shipped, 4.8★ average rating.",
   alternates: { canonical: "/mobile-app-development/" },
-  openGraph: { title: "Mobile App Development Company | iOS, Android & React Native — Digital Web Weaver", description: "Native iOS and Android apps, React Native, and Flutter builds profiled for 60fps. 55+ apps shipped, 4.8★ average rating, end-to-end App Store and Play Store submission.", url: "/mobile-app-development/", type: "website" }
+  openGraph: { title: "Mobile App Development — Digital Web Weaver", description: "Native iOS and Android apps, React Native, and Flutter builds profiled for 60fps. 55+ apps shipped, 4.8★ average rating.", url: "/mobile-app-development/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Mobile Apps", description: "Native iOS and Android apps, React Native, and Flutter builds profiled for 60fps. 55+ apps shipped, 4.8★ average rating, end-to-end App Store and Play Store submission.", href: "/mobile-app-development/" })} />
+    <JsonLd data={[serviceSchema({ name: "Mobile Apps", description: "Native iOS and Android apps, React Native, and Flutter builds profiled for 60fps. 55+ apps shipped, 4.8★ average rating, end-to-end App Store and Play Store submission.", href: "/mobile-app-development/" }), faqPageSchema({ href: "/mobile-app-development/", items: [{ question: "Native or cross-platform?", answer: "Native for maximum performance and platform-specific features. React Native or Flutter when cost-efficiency and code sharing outweigh native advantages." }, { question: "How long does a mobile app take?", answer: "Simple app: 6–10 weeks. Complex app with backend: 3–5 months. We scope in week one." }, { question: "Do you maintain apps after launch?", answer: "Yes — we offer retainer plans for OS updates, bug fixes, and feature iterations." }, { question: "Can you take over an existing app?", answer: "Yes — we do code audits, then either modernise or rewrite depending on the state of the codebase." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Services">⚙</button>
@@ -211,7 +211,7 @@ export default function Page() {
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-4">
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{"fontSize":"16px"}}>SaaS development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>The backend SaaS platform your mobile app needs to scale.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Web companion portals and admin dashboards for your mobile product.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Web companion portals and admin dashboards for your mobile product.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <a className="svc" href="https://digitalwebweaver.com/react-native-developer/"><div className="svc__title" style={{"fontSize":"16px"}}>Hire a React Native developer</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Senior React Native engineers for cross-platform mobile development.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
             <a className="svc" href="https://digitalwebweaver.com/flutter-developer/"><div className="svc__title" style={{"fontSize":"16px"}}>Hire a Flutter developer</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Flutter engineers for beautiful, performant iOS and Android apps.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
           </div>

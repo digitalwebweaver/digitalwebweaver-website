@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Cloud & DevOps Company India | AWS, GCP & Kubernetes Experts — Digital Web Weaver" },
-  description: "Cloud architecture, CI/CD pipelines, Kubernetes, and Infrastructure as Code on AWS, GCP, and Azure. 99.9% uptime SLA, zero-downtime deploys. India-based senior DevOps team.",
+  title: { absolute: "Cloud & DevOps Company India — Digital Web Weaver" },
+  description: "Cloud architecture, CI/CD pipelines, Kubernetes, and Infrastructure as Code on AWS, GCP, and Azure. 99.9% uptime SLA, zero-downtime deploys.",
   alternates: { canonical: "/cloud-devops/" },
-  openGraph: { title: "Cloud & DevOps Company India | AWS, GCP & Kubernetes Experts — Digital Web Weaver", description: "Cloud architecture, CI/CD pipelines, Kubernetes, and Infrastructure as Code on AWS, GCP, and Azure. 99.9% uptime SLA, zero-downtime deploys. India-based senior DevOps team.", url: "/cloud-devops/", type: "website" }
+  openGraph: { title: "Cloud & DevOps Company India — Digital Web Weaver", description: "Cloud architecture, CI/CD pipelines, Kubernetes, and Infrastructure as Code on AWS, GCP, and Azure. 99.9% uptime SLA, zero-downtime deploys.", url: "/cloud-devops/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Cloud & DevOps", description: "Cloud architecture, CI/CD pipelines, Kubernetes, and Infrastructure as Code on AWS, GCP, and Azure. 99.9% uptime SLA, zero-downtime deploys. India-based senior DevOps team.", href: "/cloud-devops/" })} />
+    <JsonLd data={[serviceSchema({ name: "Cloud & DevOps", description: "Cloud architecture, CI/CD pipelines, Kubernetes, and Infrastructure as Code on AWS, GCP, and Azure. 99.9% uptime SLA, zero-downtime deploys. India-based senior DevOps team.", href: "/cloud-devops/" }), faqPageSchema({ href: "/cloud-devops/", items: [{ question: "Can you migrate from on-premise to AWS?", answer: "Yes — with lift-and-shift to get you off legacy hardware fast, or a full re-architect to serverless and managed services if you want to modernise at the same time." }, { question: "Kubernetes or ECS?", answer: "ECS Fargate for simpler workloads with less operational overhead. EKS or GKE when you need portability across clouds or already run multi-cloud." }, { question: "Do you offer ongoing SRE support?", answer: "Yes — retainers with monthly infrastructure reviews, patching, and support for teams that want us embedded long-term." }, { question: "How do you handle multi-region failover?", answer: "Route 53 health checks and failover routing, cross-region data replication, and documented runbooks your team can run without us." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What we do">⚙</button>

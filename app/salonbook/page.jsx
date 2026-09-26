@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "SalonBook — Salon Management System | Digital Web Weaver" },
-  description: "SalonBook brings online booking, staff scheduling, billing, service packages, inventory, and automated client follow-ups into one branded system. Live in 3–5 weeks.",
+  description: "SalonBook brings online booking, staff scheduling, billing, service packages, inventory, and follow-ups into one branded system. Live in 3–5 weeks.",
   alternates: { canonical: "/salonbook/" },
-  openGraph: { title: "SalonBook — Salon Management System | Digital Web Weaver", description: "SalonBook brings online booking, staff scheduling, billing, service packages, inventory, and automated client follow-ups into one branded system. Live in 3–5 weeks.", url: "/salonbook/", type: "website" }
+  openGraph: { title: "SalonBook — Salon Management System | Digital Web Weaver", description: "SalonBook brings online booking, staff scheduling, billing, service packages, inventory, and follow-ups into one branded system. Live in 3–5 weeks.", url: "/salonbook/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "SalonBook", description: "SalonBook brings online booking, staff scheduling, billing, service packages, inventory, and automated client follow-ups into one branded system. Live in 3–5 weeks.", href: "/salonbook/" })} />
+    <JsonLd data={[serviceSchema({ name: "SalonBook", description: "SalonBook brings online booking, staff scheduling, billing, service packages, inventory, and automated client follow-ups into one branded system. Live in 3–5 weeks.", href: "/salonbook/" }), faqPageSchema({ href: "/salonbook/", items: [{ question: "Can clients book with a specific stylist?", answer: "Yes — clients can choose their preferred stylist when booking, and the system manages availability accordingly." }, { question: "Does it handle staff commissions automatically?", answer: "Yes — commission rules can be configured per staff member or service, and calculated automatically." }, { question: "Can we sell packages and memberships?", answer: "Yes — create prepaid packages, memberships, and gift cards with automatic balance tracking." }, { question: "Is multi-branch supported?", answer: "Yes — multi-branch salons get centralised reporting with per-location staff, services, and scheduling." }, { question: "What's the timeline to go live?", answer: "Most salons are live within 3–5 weeks, including branding, data migration, and staff training." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

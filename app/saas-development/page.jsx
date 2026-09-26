@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "SaaS Development Company India | Multi-Tenant & Cloud-Native — Digital Web Weaver" },
+  title: { absolute: "SaaS Development Company — Digital Web Weaver" },
   description: "Multi-tenant SaaS platforms built to scale — subscription billing, SSO, product analytics, and architecture that survives Series A growth. 150+ clients served.",
   alternates: { canonical: "/saas-development/" },
-  openGraph: { title: "SaaS Development Company India | Multi-Tenant & Cloud-Native — Digital Web Weaver", description: "Multi-tenant SaaS platforms built to scale — subscription billing, SSO, product analytics, and architecture that survives Series A growth. 150+ clients served.", url: "/saas-development/", type: "website" }
+  openGraph: { title: "SaaS Development Company — Digital Web Weaver", description: "Multi-tenant SaaS platforms built to scale — subscription billing, SSO, product analytics, and architecture that survives Series A growth. 150+ clients served.", url: "/saas-development/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "SaaS Products", description: "Multi-tenant SaaS platforms built to scale — subscription billing, SSO, product analytics, and architecture that survives Series A growth. 150+ clients served.", href: "/saas-development/" })} />
+    <JsonLd data={[serviceSchema({ name: "SaaS Products", description: "Multi-tenant SaaS platforms built to scale — subscription billing, SSO, product analytics, and architecture that survives Series A growth. 150+ clients served.", href: "/saas-development/" }), faqPageSchema({ href: "/saas-development/", items: [{ question: "How long to build an MVP?", answer: "A focused MVP with auth, core feature, and billing takes 8–12 weeks. We scope this tightly in discovery." }, { question: "Do you handle the billing integration?", answer: "Yes — Stripe Billing with plans, trials, coupons, invoice generation, and dunning management." }, { question: "Can you build enterprise features (SSO, audit logs)?", answer: "Yes — Auth0/Okta SAML SSO, role-based access, and SOC 2-aligned audit logging are standard add-ons." }, { question: "Do you help with pricing strategy?", answer: "We advise on value-metric alignment (per-seat, usage-based, flat) based on similar SaaS products we've built." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="Services">⚙</button>
@@ -203,7 +203,7 @@ export default function Page() {
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-4">
             <Link className="svc" href="/mvp-development/"><div className="svc__title" style={{"fontSize":"16px"}}>MVP development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Build and validate your core product in 8–12 weeks before scaling.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Complex portals, dashboards, and multi-user business web applications.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Complex portals, dashboards, and multi-user business web applications.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/ai-automation/"><div className="svc__title" style={{"fontSize":"16px"}}>AI &amp; automation</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Add LLM features, automation pipelines, and intelligent workflows to your SaaS.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/react-developer/"><div className="svc__title" style={{"fontSize":"16px"}}>Hire a React developer</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Senior React engineers to embed in your SaaS product team.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
           </div>

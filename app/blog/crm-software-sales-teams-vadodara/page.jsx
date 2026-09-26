@@ -5,16 +5,16 @@ import JsonLd from "@/components/JsonLd";
 import { blogPostingSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Losing Deals to Forgotten Follow-Ups? You Need a CRM | Digital Web Weaver" },
+  title: { absolute: "Losing Deals to Forgotten Follow-Ups? Get a CRM" },
   description: "If leads slip through the cracks and follow-ups get forgotten, a CRM is the fix. Here's what CRM software does for sales teams in Vadodara, and what it costs.",
   alternates: { canonical: "/blog/crm-software-sales-teams-vadodara/" },
-  openGraph: { title: "Losing Deals to Forgotten Follow-Ups? You Need a CRM | Digital Web Weaver", description: "If leads slip through the cracks and follow-ups get forgotten, a CRM is the fix. Here's what CRM software does for sales teams in Vadodara, and what it costs.", url: "/blog/crm-software-sales-teams-vadodara/", type: "website" }
+  openGraph: { title: "Losing Deals to Forgotten Follow-Ups? Get a CRM", description: "If leads slip through the cracks and follow-ups get forgotten, a CRM is the fix. Here's what CRM software does for sales teams in Vadodara, and what it costs.", url: "/blog/crm-software-sales-teams-vadodara/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={blogPostingSchema({ headline: "Losing Deals to Forgotten Follow-Ups? A CRM Might Be the Fix Your Sales Team Needs", description: "If leads slip through the cracks and follow-ups get forgotten, a CRM is the fix. Here's what CRM software does for sales teams in Vadodara, and what it costs.", href: "/blog/crm-software-sales-teams-vadodara/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })} />
+    <JsonLd data={[blogPostingSchema({ headline: "Losing Deals to Forgotten Follow-Ups? A CRM Might Be the Fix Your Sales Team Needs", description: "If leads slip through the cracks and follow-ups get forgotten, a CRM is the fix. Here's what CRM software does for sales teams in Vadodara, and what it costs.", href: "/blog/crm-software-sales-teams-vadodara/", datePublished: "2026-06-18", authorName: "Kamlesh Nishad" })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-article" data-target="s-article" title="Article">❯</button>

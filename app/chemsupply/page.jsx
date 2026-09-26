@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "ChemSupply — ERP for Chemical Suppliers | Digital Web Weaver" },
-  description: "ChemSupply brings batch & expiry tracking, compliance documentation, order management, distributor portals, and multi-warehouse inventory into one connected ERP for chemical suppliers.",
+  description: "ChemSupply brings batch & expiry tracking, compliance docs, order management, distributor portals, and multi-warehouse inventory into one ERP.",
   alternates: { canonical: "/chemsupply/" },
-  openGraph: { title: "ChemSupply — ERP for Chemical Suppliers | Digital Web Weaver", description: "ChemSupply brings batch & expiry tracking, compliance documentation, order management, distributor portals, and multi-warehouse inventory into one connected ERP for chemical suppliers.", url: "/chemsupply/", type: "website" }
+  openGraph: { title: "ChemSupply — ERP for Chemical Suppliers | Digital Web Weaver", description: "ChemSupply brings batch & expiry tracking, compliance docs, order management, distributor portals, and multi-warehouse inventory into one ERP.", url: "/chemsupply/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "ChemSupply", description: "ChemSupply brings batch & expiry tracking, compliance documentation, order management, distributor portals, and multi-warehouse inventory into one connected ERP for chemical suppliers.", href: "/chemsupply/" })} />
+    <JsonLd data={[serviceSchema({ name: "ChemSupply", description: "ChemSupply brings batch & expiry tracking, compliance documentation, order management, distributor portals, and multi-warehouse inventory into one connected ERP for chemical suppliers.", href: "/chemsupply/" }), faqPageSchema({ href: "/chemsupply/", items: [{ question: "Do you provide batch-level traceability for audits?", answer: "Yes — with full history from receipt to dispatch, attached directly to the batch record." }, { question: "Can we attach safety data sheets & certificates?", answer: "Yes — documents attach at the product/batch level so they travel with the record." }, { question: "Do distributors need special software?", answer: "No — they use a branded web portal that requires no installation." }, { question: "Can it handle different expiry/storage requirements?", answer: "Yes — expiry and storage requirements are tracked per batch with automated alerts." }, { question: "What's the implementation timeline?", answer: "Most suppliers go live within 6–8 weeks, including configuration, migration, and training." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>

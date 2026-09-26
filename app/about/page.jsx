@@ -6,15 +6,15 @@ import { aboutPageSchema } from "@/lib/schema";
 
 export const metadata = {
   title: { absolute: "Software Engineering Studio, India | Digital Web Weaver" },
-  description: "Founded in 2013, Digital Web Weaver is a senior engineering studio of designers, engineers, and architects shipping production-grade software for founders and enterprises across 15 countries.",
+  description: "Founded in 2013, Digital Web Weaver is a senior studio of engineers and architects shipping production-grade software across 15 countries.",
   alternates: { canonical: "/about/" },
-  openGraph: { title: "Software Engineering Studio, India | Digital Web Weaver", description: "Founded in 2013, Digital Web Weaver is a senior engineering studio of designers, engineers, and architects shipping production-grade software for founders and enterprises across 15 countries.", url: "/about/", type: "website" }
+  openGraph: { title: "Software Engineering Studio, India | Digital Web Weaver", description: "Founded in 2013, Digital Web Weaver is a senior studio of engineers and architects shipping production-grade software across 15 countries.", url: "/about/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={aboutPageSchema()} />
+    <JsonLd data={[aboutPageSchema()]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-story" data-target="s-story" title="Our story">⚙</button>

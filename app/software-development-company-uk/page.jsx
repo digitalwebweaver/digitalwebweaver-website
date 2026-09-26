@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Software Development Company UK | Offshore Dev Teams — Digital Web Weaver" },
-  description: "An offshore software development partner for UK businesses — bespoke web apps, e-commerce, and dedicated development teams from senior engineers, at 50-70% less than UK agency rates.",
+  title: { absolute: "Software Development Company, UK — Digital Web Weaver" },
+  description: "An offshore software partner for UK businesses — bespoke web apps, e-commerce, and dedicated teams at 50–70% less than UK agency rates.",
   alternates: { canonical: "/software-development-company-uk/" },
-  openGraph: { title: "Software Development Company UK | Offshore Dev Teams — Digital Web Weaver", description: "An offshore software development partner for UK businesses — bespoke web apps, e-commerce, and dedicated development teams from senior engineers, at 50-70% less than UK agency rates.", url: "/software-development-company-uk/", type: "website" }
+  openGraph: { title: "Software Development Company, UK — Digital Web Weaver", description: "An offshore software partner for UK businesses — bespoke web apps, e-commerce, and dedicated teams at 50–70% less than UK agency rates.", url: "/software-development-company-uk/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "Software Development Company UK", description: "Offshore software development partner for UK businesses — bespoke web applications, e-commerce platforms, custom software, and dedicated development teams from senior engineers at 50-70% less than UK agency rates.", href: "/software-development-company-uk/" })} />
+    <JsonLd data={[serviceSchema({ name: "Software Development Company UK", description: "Offshore software development partner for UK businesses — bespoke web applications, e-commerce platforms, custom software, and dedicated development teams from senior engineers at 50-70% less than UK agency rates.", href: "/software-development-company-uk/" }), faqPageSchema({ href: "/software-development-company-uk/", items: [{ question: "Do you work with UK businesses remotely?", answer: "Yes. We work with clients across London and the wider UK entirely remotely, using video calls, project management tools, and regular progress updates. Many of our long-term UK clients have never needed an in-person meeting." }, { question: "Can your team overlap with UK working hours?", answer: "Yes. Our team can adjust working hours to overlap with GMT/BST for daily standups, calls, and urgent communication, so your project moves at the pace you expect." }, { question: "How much cheaper is offshore development compared to a UK agency?", answer: "Typically 50-70% lower than equivalent UK agency rates, while working with senior engineers (5+ years experience). This is because of lower operating costs in India, not lower quality — many of our UK clients have previously worked with local agencies and switched for both cost and responsiveness." }, { question: "Can you build VAT-compliant e-commerce and invoicing for UK businesses?", answer: "Yes. We build e-commerce platforms and internal tools with UK VAT handling, GBP pricing, Stripe/PayPal integration, and invoicing that meets UK requirements. We can also integrate with UK accounting tools such as Xero and QuickBooks." }, { question: "Do you sign contracts and NDAs for UK clients?", answer: "Yes. We're happy to sign NDAs before any discussion of your project, and provide a clear contract covering scope, timelines, payment milestones, and IP ownership before work begins." }, { question: "What does a project typically cost for a UK business?", answer: "A professional business website starts from £500. A custom web application or SaaS MVP starts from £2,000. A dedicated developer starts from £1,200/month. We'll provide an exact fixed-price quote after a free discovery call." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What we build">⚙</button>

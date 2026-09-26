@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "E-Commerce Development Company India | WooCommerce & Headless — Digital Web Weaver" },
-  description: "High-performance e-commerce storefronts — custom, WooCommerce, or headless — built for conversion. PCI-DSS secure payments, +40% average conversion lift, trusted by 150+ clients.",
+  title: { absolute: "E-Commerce Development — Digital Web Weaver" },
+  description: "High-performance e-commerce storefronts — custom, WooCommerce, or headless — built for conversion. PCI-DSS secure, +40% average conversion lift.",
   alternates: { canonical: "/ecommerce-development/" },
-  openGraph: { title: "E-Commerce Development Company India | WooCommerce & Headless — Digital Web Weaver", description: "High-performance e-commerce storefronts — custom, WooCommerce, or headless — built for conversion. PCI-DSS secure payments, +40% average conversion lift, trusted by 150+ clients.", url: "/ecommerce-development/", type: "website" }
+  openGraph: { title: "E-Commerce Development — Digital Web Weaver", description: "High-performance e-commerce storefronts — custom, WooCommerce, or headless — built for conversion. PCI-DSS secure, +40% average conversion lift.", url: "/ecommerce-development/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "E-Commerce", description: "High-performance e-commerce storefronts — custom, WooCommerce, or headless — built for conversion. PCI-DSS secure payments, +40% average conversion lift, trusted by 150+ clients.", href: "/ecommerce-development/" })} />
+    <JsonLd data={[serviceSchema({ name: "E-Commerce", description: "High-performance e-commerce storefronts — custom, WooCommerce, or headless — built for conversion. PCI-DSS secure payments, +40% average conversion lift, trusted by 150+ clients.", href: "/ecommerce-development/" }), faqPageSchema({ href: "/ecommerce-development/", items: [{ question: "Custom build vs WooCommerce?", answer: "WooCommerce for a quick launch with a mature plugin ecosystem. Custom for unique checkout flows, complex integrations, or performance requirements that exceed WooCommerce's limits." }, { question: "What is headless commerce?", answer: "A Next.js frontend consuming WooCommerce or Shopify via API — faster loads, unlimited design freedom, and better mobile UX than a traditional theme." }, { question: "How do you handle high traffic events?", answer: "Auto-scaling infrastructure, a CDN for static assets, Redis caching, and pre-emptive load testing before peak events like sale days." }, { question: "Can you integrate with our warehouse system?", answer: "Yes — real-time stock sync with 3PL providers, warehouse management systems, and ERP platforms via REST or EDI." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What we build">⚙</button>

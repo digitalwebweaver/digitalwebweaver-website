@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { servicesPageSchema } from "@/lib/schema";
+import { servicesPageSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Software Development Services | Web, Mobile, AI & Cloud — Digital Web Weaver" },
-  description: "Full-spectrum software development: web, mobile, APIs, cloud, AI, and design. 20+ specialist services from one senior team across India, the UK, and South Africa.",
+  title: { absolute: "Software Development Services — Digital Web Weaver" },
+  description: "Full-spectrum software development: web, mobile, APIs, cloud, AI, and design. 20+ specialist services from one senior team.",
   alternates: { canonical: "/services/" },
-  openGraph: { title: "Software Development Services | Web, Mobile, AI & Cloud — Digital Web Weaver", description: "Full-spectrum software development: web, mobile, APIs, cloud, AI, and design. 20+ specialist services from one senior team across India, the UK, and South Africa.", url: "/services/", type: "website" }
+  openGraph: { title: "Software Development Services — Digital Web Weaver", description: "Full-spectrum software development: web, mobile, APIs, cloud, AI, and design. 20+ specialist services from one senior team.", url: "/services/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={servicesPageSchema()} />
+    <JsonLd data={[servicesPageSchema(), faqPageSchema({ href: "/services/", items: [{ question: "How long does a typical project take?", answer: "A focused MVP typically ships in 6–12 weeks; full products and platforms run 3–6 months depending on scope. Every estimate is itemised during a 1–2 week discovery phase, not guessed upfront." }, { question: "Do you work with early-stage startups or only established businesses?", answer: "Both. We've shipped first-time MVPs for pre-seed founders and mission-critical systems for enterprises — the process flexes, the senior-engineer standard doesn't." }, { question: "What's your pricing model — fixed price or time & materials?", answer: "Either. Well-scoped projects get a fixed price and timeline; evolving products run on a monthly dedicated-team or retainer model. We recommend the right fit during discovery." }, { question: "Do you provide ongoing support after launch?", answer: "Yes — every project includes a 30-day hypercare window post-launch, with optional monthly retainers for feature work, monitoring, and security patches." }, { question: "Which countries do you work with?", answer: "Clients across India, the UK, South Africa, and beyond. Our core team spans those time zones, so you get real overlap with your working hours." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-foundation" data-target="s-foundation" title="Engineering">⚙</button>
@@ -137,7 +137,7 @@ export default function Page() {
           <div className="grid grid-3 stagger">
             <Link className="svc" href="/ui-ux-design/"><div className="svc__num">01</div><div className="svc__title">UI/UX Design</div><p className="svc__body">User research, wireframes, prototypes, and pixel-perfect Figma handoff — design systems that keep your product consistent at scale.</p><div className="svc__tags"><span className="tag">Figma</span><span className="tag">UX research</span></div><div className="svc__foot"><span>design.fig</span><span className="open">open ↗</span></div></Link>
             <Link className="svc" href="/custom-web-apps/"><div className="svc__num">02</div><div className="svc__title">Custom Web Apps</div><p className="svc__body">Complex, interactive web applications — dashboards, portals, booking systems, SaaS UIs — built with no off-the-shelf compromise.</p><div className="svc__tags"><span className="tag">React</span><span className="tag">Portals</span></div><div className="svc__foot"><span>app.tsx</span><span className="open">open ↗</span></div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/website-development/"><div className="svc__num">03</div><div className="svc__title">Corporate Websites</div><p className="svc__body">Fast, accessible, SEO-optimised company sites that convert visitors into enquiries — CMS-powered and easy for your team to manage.</p><div className="svc__tags"><span className="tag">CMS</span><span className="tag">SEO</span></div><div className="svc__foot"><span>site.tsx</span><span className="open">open ↗</span></div></a>
+            <Link className="svc" href="/web-development/"><div className="svc__num">03</div><div className="svc__title">Corporate Websites</div><p className="svc__body">Fast, accessible, SEO-optimised company sites that convert visitors into enquiries — CMS-powered and easy for your team to manage.</p><div className="svc__tags"><span className="tag">CMS</span><span className="tag">SEO</span></div><div className="svc__foot"><span>site.tsx</span><span className="open">open ↗</span></div></Link>
           </div>
         </section>
 

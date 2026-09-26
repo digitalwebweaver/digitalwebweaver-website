@@ -2,19 +2,19 @@ import Link from "next/link";
 import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "QuickBite — Branded Food Delivery App Suite | Digital Web Weaver" },
-  description: "QuickBite gives restaurants and cloud kitchens a complete delivery ecosystem — customer app, restaurant dashboard, and delivery partner app — 0% commission, live in 6–8 weeks.",
+  title: { absolute: "QuickBite — Food Delivery App Suite | Digital Web Weaver" },
+  description: "QuickBite gives restaurants and cloud kitchens a complete delivery ecosystem — customer app, dashboard, and delivery app. 0% commission.",
   alternates: { canonical: "/quickbite/" },
-  openGraph: { title: "QuickBite — Branded Food Delivery App Suite | Digital Web Weaver", description: "QuickBite gives restaurants and cloud kitchens a complete delivery ecosystem — customer app, restaurant dashboard, and delivery partner app — 0% commission, live in 6–8 weeks.", url: "/quickbite/", type: "website" }
+  openGraph: { title: "QuickBite — Food Delivery App Suite | Digital Web Weaver", description: "QuickBite gives restaurants and cloud kitchens a complete delivery ecosystem — customer app, dashboard, and delivery app. 0% commission.", url: "/quickbite/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "QuickBite", description: "QuickBite gives restaurants and cloud kitchens a complete delivery ecosystem — customer app, restaurant dashboard, and delivery partner app — 0% commission, live in 6–8 weeks.", href: "/quickbite/" })} />
+    <JsonLd data={[serviceSchema({ name: "QuickBite", description: "QuickBite gives restaurants and cloud kitchens a complete delivery ecosystem — customer app, restaurant dashboard, and delivery partner app — 0% commission, live in 6–8 weeks.", href: "/quickbite/" }), faqPageSchema({ href: "/quickbite/", items: [{ question: "Do we still need to be listed on aggregator apps too?", answer: "That's entirely your call. Many of our clients keep aggregator listings for discovery while actively pushing repeat customers to their own branded app to avoid commissions on those orders." }, { question: "How do we get our delivery riders using the app?", answer: "We help you onboard your existing riders onto the driver app as part of launch — most teams adapt within a few days." }, { question: "Can we run multiple restaurant brands from one kitchen?", answer: "Yes — cloud kitchen operators can run several branded ordering apps and menus from a single restaurant dashboard." }, { question: "What payment methods are supported?", answer: "UPI, debit/credit cards, net-banking, popular wallets, and cash-on-delivery — all with automatic order reconciliation." }, { question: "How long before we can start taking orders through our own app?", answer: "Most restaurants go live within 6–8 weeks, including branding, menu setup, app store approval, and rider onboarding." }] })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-features" data-target="s-features" title="Features">⚙</button>
