@@ -24,6 +24,7 @@ function cleanGroupLabel(label) {
 // slug itself (e.g. "proprail" -> "PropRail", not "Proprail").
 const CASE_STUDY_LABELS = {
   proprail: "PropRail",
+  nextsense: "NextSense",
 };
 
 // Derived from the same siteNav data that already drives the sidebar/footer,
