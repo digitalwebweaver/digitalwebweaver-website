@@ -20,6 +20,12 @@ function cleanGroupLabel(label) {
   return clean.charAt(0).toUpperCase() + clean.slice(1);
 }
 
+// Case-study slugs whose display label isn't a clean title-case of the
+// slug itself (e.g. "proprail" -> "PropRail", not "Proprail").
+const CASE_STUDY_LABELS = {
+  proprail: "PropRail",
+};
+
 // Derived from the same siteNav data that already drives the sidebar/footer,
 // so it can't drift out of sync with the real route tree. Pages curated into
 // a nav group get their real label; blog posts (not individually curated)
@@ -33,6 +39,10 @@ function breadcrumbItems(pathname) {
   if (pathname.startsWith("/blog/") && pathname !== "/blog/") {
     const slug = pathname.replace(/^\/blog\/|\/$/g, "");
     return [{ label: "Home", href: "/" }, { label: "Blog", href: "/blog/" }, { label: titleCaseSlug(slug), href: pathname }];
+  }
+  if (pathname.startsWith("/portfolio/") && pathname !== "/portfolio/") {
+    const slug = pathname.replace(/^\/portfolio\/|\/$/g, "");
+    return [{ label: "Home", href: "/" }, { label: "Portfolio", href: "/portfolio/" }, { label: CASE_STUDY_LABELS[slug] || titleCaseSlug(slug), href: pathname }];
   }
   return [{ label: "Home", href: "/" }, { label: titleCaseSlug(pathname.replace(/^\/|\/$/g, "")), href: pathname }];
 }

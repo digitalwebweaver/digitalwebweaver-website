@@ -35,7 +35,7 @@ export default function Page() {
 
         <section id="s-hero" className="section section--split top">
           <div>
-            <p className="hero__meta">// portfolio.tsx · 9 featured builds · production systems</p>
+            <p className="hero__meta">// portfolio.tsx · 10 featured builds · production systems</p>
             <span className="badge">PORTFOLIO</span>
             <h1 className="hero__h1">Selected <span className="pink">work</span></h1>
             <p className="hero__lead">200+ systems built. Real results, real clients. From two-person startups to global enterprises — every system we ship is production-grade, documented, and built to last.</p>
@@ -59,10 +59,10 @@ export default function Page() {
               <span className="ln">5</span><span className="txt">  industries: <span className="num">12</span>,</span>
               <span className="ln">6</span><span className="txt">  on_time_delivery: <span className="str">"98%"</span>,</span>
               <span className="ln">7</span><span className="kw">&#125;;</span>
-              <span className="ln">8</span><span className="cmt">// → 9 case studies below</span>
+              <span className="ln">8</span><span className="cmt">// → 10 case studies below</span>
               <span className="ln">9</span><span><span className="caret"></span></span>
             </div>
-            <div className="code__foot"><span className="live"></span><span>9 case studies · all client-verified</span></div>
+            <div className="code__foot"><span className="live"></span><span>10 case studies · all client-verified</span></div>
           </div>
         </section>
 
@@ -74,7 +74,7 @@ export default function Page() {
         </section>
 
         <section id="s-work" className="section reveal">
-          <p className="eyebrow">const projects = [ <span className="c">// 9 featured case studies</span></p>
+          <p className="eyebrow">const projects = [ <span className="c">// 10 featured case studies</span></p>
           <h2 className="title mono">Systems we've built</h2>
           <div className="grid grid-3 stagger">
 
@@ -95,6 +95,8 @@ export default function Page() {
             <div className="work"><div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">app.telehealth.us</span></div><div className="work__pad"><div className="work__tag">HEALTHCARE · US</div><div className="work__title">Telemedicine Platform</div><p className="work__desc">HIPAA-compliant telehealth platform with video consultations, e-prescriptions, patient records, and appointment scheduling. Scaled to 8,000 consultations per month in year one.</p><div className="work__metrics"><div className="work__mcell"><b>8k</b><span>consults / month</span></div><div className="work__mcell"><b>HIPAA</b><span>compliant</span></div></div><div className="work__stack"><span className="tag tag--y">React</span><span className="tag tag--y">Node.js</span><span className="tag tag--y">AWS</span><span className="tag tag--y">WebRTC</span></div></div></div>
 
             <div className="work"><div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">erp.logicore.in</span></div><div className="work__pad"><div className="work__tag">LOGISTICS · INDIA</div><div className="work__title">LogiCore — Logistics ERP</div><p className="work__desc">Multi-branch ERP for a logistics company. Fleet management, route optimisation, driver payroll, fuel tracking, billing, and real-time delivery tracking for 1,200 daily trips.</p><div className="work__metrics"><div className="work__mcell"><b>25%</b><span>fuel savings</span></div><div className="work__mcell"><b>1,200</b><span>daily trips</span></div></div><div className="work__stack"><span className="tag tag--y">Node.js</span><span className="tag tag--y">React</span><span className="tag tag--y">PostgreSQL</span><span className="tag tag--y">AWS</span></div></div></div>
+
+            <Link className="work" href="/portfolio/proprail/"><div className="work__bar"><span className="d dot--red"></span><span className="d dot--amber"></span><span className="d dot--green"></span><span className="work__host">proprail.digitalwebweaver.com</span></div><div className="work__pad"><div className="work__tag">PROPTECH · UK</div><div className="work__title">PropRail — Property Management &amp; Accounting</div><p className="work__desc">Cloud-based, multi-entity property management and accounting platform for a UK outsourced accounting firm — RICS-compliant, Sage 50 integrated, on one tested double-entry ledger.</p><div className="work__metrics"><div className="work__mcell"><b>190+</b><span>automated tests</span></div><div className="work__mcell"><b>9-role</b><span>access model</span></div></div><div className="work__stack"><span className="tag tag--y">Laravel</span><span className="tag tag--y">Vue.js</span><span className="tag tag--y">PostgreSQL</span></div><div className="work__view">View case study ↗</div></div></Link>
 
           </div>
         </section>
