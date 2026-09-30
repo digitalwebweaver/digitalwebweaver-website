@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "FabSuite — Cloud-Based Costing & Cutting-Plan Software for Fabricators | Digital Web Weaver" },
   description: "FabSuite is cloud-based costing and cutting-plan software for aluminium & uPVC fabrication shops — quote and cutting-plan a job in minutes, from ₹999/month.",
+  keywords: ["cloud-based aluminium fabrication software", "uPVC fabrication software", "aluminium window costing software", "cutting optimization software", "fenestration software", "window quotation software", "aluminium cutting plan software"],
   alternates: { canonical: "/fabsuite/" },
   openGraph: { title: "FabSuite — Cloud-Based Costing & Cutting-Plan Software for Fabricators | Digital Web Weaver", description: "FabSuite is cloud-based costing and cutting-plan software for aluminium & uPVC fabrication shops — quote and cutting-plan a job in minutes, from ₹999/month.", url: "/fabsuite/", type: "website" }
 };
