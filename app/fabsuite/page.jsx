@@ -5,16 +5,16 @@ import JsonLd from "@/components/JsonLd";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "FabSuite — Costing & Cutting-Plan Software for Fabricators | Digital Web Weaver" },
-  description: "FabSuite turns a customer's window/door measurements into a costed quotation and an optimized aluminium cutting plan — in minutes, not an evening with Excel. Built for aluminium & uPVC fabrication shops.",
+  title: { absolute: "FabSuite — Cloud-Based Costing & Cutting-Plan Software for Fabricators | Digital Web Weaver" },
+  description: "FabSuite is cloud-based costing and cutting-plan software for aluminium & uPVC fabrication shops — quote and cutting-plan a job in minutes, from ₹999/month.",
   alternates: { canonical: "/fabsuite/" },
-  openGraph: { title: "FabSuite — Costing & Cutting-Plan Software for Fabricators | Digital Web Weaver", description: "FabSuite turns a customer's window/door measurements into a costed quotation and an optimized aluminium cutting plan — in minutes, not an evening with Excel. Built for aluminium & uPVC fabrication shops.", url: "/fabsuite/", type: "website" }
+  openGraph: { title: "FabSuite — Cloud-Based Costing & Cutting-Plan Software for Fabricators | Digital Web Weaver", description: "FabSuite is cloud-based costing and cutting-plan software for aluminium & uPVC fabrication shops — quote and cutting-plan a job in minutes, from ₹999/month.", url: "/fabsuite/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={serviceSchema({ name: "FabSuite", description: "FabSuite turns a customer's window/door measurements into a costed quotation and an optimized aluminium cutting plan — in minutes, not an evening with Excel. Built for aluminium & uPVC fabrication shops.", href: "/fabsuite/" })} />
+    <JsonLd data={serviceSchema({ name: "FabSuite", description: "FabSuite is cloud-based costing and cutting-plan software for aluminium & uPVC fabrication shops — quote and cutting-plan a job in minutes, from ₹999/month.", href: "/fabsuite/" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-problem" data-target="s-problem" title="The problem">⚠</button>
@@ -39,10 +39,10 @@ export default function Page() {
 
         <section id="s-hero" className="section section--split top">
           <div>
-            <p className="hero__meta">// fabsuite.ts · costing + cutting-plan software · aluminium &amp; uPVC fabricators</p>
+            <p className="hero__meta">// fabsuite.ts · cloud-based costing + cutting-plan software · aluminium &amp; uPVC fabricators</p>
             <span className="badge">FABSUITE</span>
             <h1 className="hero__h1">From measurements to a <span className="pink">costed quotation</span> in minutes, not an evening with Excel</h1>
-            <p className="hero__lead">FabSuite is built specifically for aluminium and uPVC window/door fabrication shops. Set up your profile catalog, cutting formulas, and pricing once — every job after that gets accurate live costing, an optimized cutting plan, and a shop-branded PDF quotation automatically.</p>
+            <p className="hero__lead">FabSuite is cloud-based fabrication software built specifically for small aluminium and uPVC window/door fabrication businesses. Set up your profile catalog, cutting formulas, and pricing once — every job after that gets accurate live costing, an optimized cutting plan, and a shop-branded PDF quotation automatically, from any browser.</p>
             <div className="btn-row" style={{"marginTop":"26px"}}>
               <a className="btn btn--primary" href="#trial" data-scroll="s-hero">▶ Start your 30-day free trial</a>
               <a className="btn btn--ghost" href="#s-workflow" data-scroll="s-workflow">$ see --how-it-works</a>
@@ -97,7 +97,7 @@ export default function Page() {
           <p className="subtitle">None of these show up as a single bad day — they quietly cost real money, job after job, until nobody remembers a time it was different.</p>
           <div className="grid grid-3 stagger">
             <div className="cap" style={{"borderTop":"3px solid var(--red)"}}><div className="cap__title">Manual costing in Excel or on paper</div><p className="cap__body">Slow, error-prone, no live recalculation when a rate changes, no way to see cutting wastage before you cut, and a quote that looks like a spreadsheet — not a professional proposal.</p></div>
-            <div className="cap" style={{"borderTop":"3px solid var(--red)"}}><div className="cap__title">An expensive, rigid legacy tool</div><p className="cap__body">The established desktop tools in this space are powerful but costly, desktop-only, and built for cutting plans alone — not for a shop that also wants to run its sales pipeline.</p></div>
+            <div className="cap" style={{"borderTop":"3px solid var(--red)"}}><div className="cap__title">An expensive, rigid legacy tool</div><p className="cap__body">The established desktop tools in the fenestration industry are powerful but costly, tied to an annual licence, desktop-only, and built for cutting plans alone — not for a shop that also wants to run its sales pipeline.</p></div>
             <div className="cap" style={{"borderTop":"3px solid var(--red)"}}><div className="cap__title">Nothing for the business side</div><p className="cap__body">No way to track a lead from first inquiry through site visit, quotation, and negotiation to a won job — so real opportunities quietly fall through the cracks.</p></div>
           </div>
         </section>
@@ -168,7 +168,7 @@ export default function Page() {
         <section id="s-coverage" className="section reveal">
           <p className="eyebrow">// built for every job you take — not just plain windows</p>
           <h2 className="title mono">One engine, every opening type</h2>
-          <p className="subtitle">Most costing tools handle a plain sliding window and stop there. FabSuite costs and cutting-plans all five, through the same engine.</p>
+          <p className="subtitle">Most costing and cutting optimization software handles a plain sliding window and stops there. FabSuite costs and cutting-plans all five, through the same engine.</p>
           <div className="grid grid-3 stagger">
             <div className="cap cap--top"><div className="cap__title">Plain windows &amp; doors</div><p className="cap__body">Sliding, casement, tilt &amp; turn, and fixed lights — any of your shop's own systems.</p></div>
             <div className="cap cap--teal"><div className="cap__title">Composite / multi-section</div><p className="cap__body">One outer frame, several sections side by side — a fixed light next to a casement, or a 3-part "Chicago" window.</p></div>
@@ -238,7 +238,7 @@ export default function Page() {
         </section>
 
         <section id="s-pricing" className="section reveal">
-          <p className="eyebrow">const pricing = [ <span className="c">// one plan, everything included</span></p>
+          <p className="eyebrow">const pricing = [ <span className="c">// monthly subscription, everything included</span></p>
           <h2 className="title mono">One plan. No tiers to navigate.</h2>
           <p className="subtitle">Every feature on this page is included from day one — there's no upsell ladder waiting for you later.</p>
           <div className="grid grid-3 stagger">
@@ -259,11 +259,13 @@ export default function Page() {
           <p className="eyebrow">// fabsuite.faq.md</p>
           <h2 className="title mono">Before you write in</h2>
           <div className="faq">
-            <div className="faq__item"><button className="faq__q">Do I need to install anything?<span className="sign">[+]</span></button><div className="faq__a"><p>No — FabSuite is a web app. It works from a browser on a desktop in the office or a phone on the shop floor. Nothing to install, always the latest version.</p></div></div>
+            <div className="faq__item"><button className="faq__q">Do I need to install anything?<span className="sign">[+]</span></button><div className="faq__a"><p>No — FabSuite is cloud-based fabrication software delivered through your browser. It works from a browser on a desktop in the office or a phone on the shop floor. Nothing to install, always the latest version, and your data stays safely in the cloud.</p></div></div>
             <div className="faq__item"><button className="faq__q">What if I already have my own cutting formulas?<span className="sign">[+]</span></button><div className="faq__a"><p>That's exactly how it's built to work. FabSuite doesn't assume how a shop cuts — you enter your own formulas per window type once, and calibration mode lets you check them against a real historical job before you rely on them.</p></div></div>
             <div className="faq__item"><button className="faq__q">Can my staff use it without seeing my margins?<span className="sign">[+]</span></button><div className="faq__a"><p>Yes. Staff accounts can build and manage projects, leads, and quotes, but never see your rate card, margins, or billing — that's Owner-only.</p></div></div>
             <div className="faq__item"><button className="faq__q">What happens to a quote if my rates change later?<span className="sign">[+]</span></button><div className="faq__a"><p>Nothing — a finalized project's numbers are frozen the moment you lock it. Editing your rate card later never retroactively changes a price you already quoted.</p></div></div>
             <div className="faq__item"><button className="faq__q">Is my data safe from other shops using FabSuite?<span className="sign">[+]</span></button><div className="faq__a"><p>Yes — every shop gets its own fully isolated workspace. There's no cross-shop visibility, ever.</p></div></div>
+            <div className="faq__item"><button className="faq__q">How is FabSuite different from other aluminium &amp; uPVC fabrication software?<span className="sign">[+]</span></button><div className="faq__a"><p>Most fenestration and aluminium quotation software is sold as an annual licence, often installed on one computer. FabSuite is cloud-based and priced as a flat monthly subscription — no year-long commitment, nothing to install, and it works from any browser on any device.</p></div></div>
+            <div className="faq__item"><button className="faq__q">Is FabSuite built for small fabrication businesses, or only larger shops?<span className="sign">[+]</span></button><div className="faq__a"><p>Small shops first. One flat monthly price, no per-user fees, and no long contract. If your shop is still quoting jobs on paper or in Excel, that's exactly who FabSuite is built for.</p></div></div>
           </div>
         </section>
 
