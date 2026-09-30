@@ -7,6 +7,7 @@ import { jobPostingSchemas } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Remote Software Engineering Careers | Digital Web Weaver" },
   description: "Join a senior engineering studio, not a ticket factory. Remote-first, async-first team building real systems with real ownership. 4 open roles.",
+  keywords: ["remote software engineering jobs", "senior developer careers India", "remote-first engineering team jobs"],
   alternates: { canonical: "/careers/" },
   openGraph: { title: "Remote Software Engineering Careers | Digital Web Weaver", description: "Join a senior engineering studio, not a ticket factory. Remote-first, async-first team building real systems with real ownership. 4 open roles.", url: "/careers/", type: "website" }
 };

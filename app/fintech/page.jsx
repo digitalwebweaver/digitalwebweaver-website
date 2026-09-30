@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "FinTech Software Development | PCI-DSS Compliant India — Digital Web Weaver" },
   description: "We engineer PCI-DSS compliant payment systems, lending platforms, KYC/AML pipelines, and trading dashboards for regulated financial environments.",
+  keywords: ["fintech software development company", "PCI-DSS compliant payment systems", "lending platform development India"],
   alternates: { canonical: "/fintech/" },
   openGraph: { title: "FinTech Software Development | PCI-DSS Compliant India — Digital Web Weaver", description: "We engineer PCI-DSS compliant payment systems, lending platforms, KYC/AML pipelines, and trading dashboards for regulated financial environments.", url: "/fintech/", type: "website" }
 };

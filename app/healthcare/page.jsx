@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Healthcare Software Development | HIPAA-Compliant India — Digital Web Weaver" },
   description: "We build HIPAA-compliant EHR systems, patient portals, telemedicine apps, and clinical analytics platforms — secure, interoperable, and built for care.",
+  keywords: ["healthcare software development India", "HIPAA compliant EHR development", "telemedicine app development"],
   alternates: { canonical: "/healthcare/" },
   openGraph: { title: "Healthcare Software Development | HIPAA-Compliant India — Digital Web Weaver", description: "We build HIPAA-compliant EHR systems, patient portals, telemedicine apps, and clinical analytics platforms — secure, interoperable, and built for care.", url: "/healthcare/", type: "website" }
 };

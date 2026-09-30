@@ -7,6 +7,7 @@ import { blogPostingSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "What Does a Website Really Cost in Vadodara? 2026 Guide" },
   description: "Confused by ₹8,000 to ₹8,00,000 website quotes in Vadodara? Here's an honest 2026 breakdown of what websites actually cost and what drives the price.",
+  keywords: ["website cost Vadodara", "website pricing India 2026", "how much does a website cost"],
   alternates: { canonical: "/blog/website-cost-vadodara-2026/" },
   openGraph: { title: "What Does a Website Really Cost in Vadodara? 2026 Guide", description: "Confused by ₹8,000 to ₹8,00,000 website quotes in Vadodara? Here's an honest 2026 breakdown of what websites actually cost and what drives the price.", url: "/blog/website-cost-vadodara-2026/", type: "website" }
 };

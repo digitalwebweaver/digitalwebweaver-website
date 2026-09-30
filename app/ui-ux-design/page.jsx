@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "UI/UX Design Company India | Figma & Product Design Experts — Digital Web Weaver" },
   description: "UI/UX design grounded in user research and business goals — wireframes, prototypes, design systems, and developer handoffs. WCAG 2.1 AA, 95+ usability score, 150+ clients.",
+  keywords: ["UI UX design company India", "product design agency India", "Figma design services"],
   alternates: { canonical: "/ui-ux-design/" },
   openGraph: { title: "UI/UX Design Company India | Figma & Product Design Experts — Digital Web Weaver", description: "UI/UX design grounded in user research and business goals — wireframes, prototypes, design systems, and developer handoffs. WCAG 2.1 AA, 95+ usability score, 150+ clients.", url: "/ui-ux-design/", type: "website" }
 };

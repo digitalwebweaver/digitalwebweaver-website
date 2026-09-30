@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "EdTech Software Development Company | LMS & Learning India — Digital Web Weaver" },
   description: "LMS platforms, live classroom tools, assessment engines, and mobile learning apps for schools, universities, and corporate training. India-based senior team, SCORM/xAPI ready.",
+  keywords: ["EdTech software development company", "LMS development India", "e-learning platform development"],
   alternates: { canonical: "/edtech/" },
   openGraph: { title: "EdTech Software Development Company | LMS & Learning India — Digital Web Weaver", description: "LMS platforms, live classroom tools, assessment engines, and mobile learning apps for schools, universities, and corporate training. India-based senior team, SCORM/xAPI ready.", url: "/edtech/", type: "website" }
 };

@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Custom Web Application Development | React & Next.js India — Digital Web Weaver" },
   description: "Custom web apps — portals, dashboards, internal tools, and SaaS products — built with React, Next.js, and Node.js. 80+ web apps delivered for 150+ clients across India, UK & US.",
+  keywords: ["custom web application development", "React Next.js development company", "web portal development India"],
   alternates: { canonical: "/custom-web-apps/" },
   openGraph: { title: "Custom Web Application Development | React & Next.js India — Digital Web Weaver", description: "Custom web apps — portals, dashboards, internal tools, and SaaS products — built with React, Next.js, and Node.js. 80+ web apps delivered for 150+ clients across India, UK & US.", url: "/custom-web-apps/", type: "website" }
 };

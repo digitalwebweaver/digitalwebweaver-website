@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "GlowDesk — Aesthetic Clinic Management Software | Digital Web Weaver" },
   description: "GlowDesk brings booking, treatment plans, before/after galleries, consent forms, billing, and automated follow-ups into one branded system for aesthetic clinics.",
+  keywords: ["aesthetic clinic management software", "med spa software India", "clinic booking software"],
   alternates: { canonical: "/glowdesk/" },
   openGraph: { title: "GlowDesk — Aesthetic Clinic Management Software | Digital Web Weaver", description: "GlowDesk brings booking, treatment plans, before/after galleries, consent forms, billing, and automated follow-ups into one branded system for aesthetic clinics.", url: "/glowdesk/", type: "website" }
 };

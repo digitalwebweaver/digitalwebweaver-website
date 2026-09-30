@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Software Development Company UK | Offshore Dev Teams — Digital Web Weaver" },
   description: "An offshore software development partner for UK businesses — bespoke web apps, e-commerce, and dedicated development teams from senior engineers, at 50-70% less than UK agency rates.",
+  keywords: ["offshore software development UK", "software company for UK business", "outsourced development team UK"],
   alternates: { canonical: "/software-development-company-uk/" },
   openGraph: { title: "Software Development Company UK | Offshore Dev Teams — Digital Web Weaver", description: "An offshore software development partner for UK businesses — bespoke web apps, e-commerce, and dedicated development teams from senior engineers, at 50-70% less than UK agency rates.", url: "/software-development-company-uk/", type: "website" }
 };

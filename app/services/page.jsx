@@ -7,6 +7,7 @@ import { servicesPageSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Software Development Services | Web, Mobile, AI & Cloud — Digital Web Weaver" },
   description: "Full-spectrum software development: web, mobile, APIs, cloud, AI, and design. 20+ specialist services from one senior team across India, the UK, and South Africa.",
+  keywords: ["software development services India", "web mobile AI development company", "full stack development agency"],
   alternates: { canonical: "/services/" },
   openGraph: { title: "Software Development Services | Web, Mobile, AI & Cloud — Digital Web Weaver", description: "Full-spectrum software development: web, mobile, APIs, cloud, AI, and design. 20+ specialist services from one senior team across India, the UK, and South Africa.", url: "/services/", type: "website" }
 };

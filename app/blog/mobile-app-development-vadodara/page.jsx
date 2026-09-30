@@ -7,6 +7,7 @@ import { blogPostingSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Building an App in Vadodara? What It Really Takes & Costs — Digital Web Weaver" },
   description: "Thinking of building a mobile app in Vadodara? Here's what the process really involves, what it costs in 2026, and how to avoid wasting your budget.",
+  keywords: ["mobile app development Vadodara", "app development cost India", "hire app developer Vadodara"],
   alternates: { canonical: "/blog/mobile-app-development-vadodara/" },
   openGraph: { title: "Building an App in Vadodara? What It Really Takes & Costs — Digital Web Weaver", description: "Thinking of building a mobile app in Vadodara? Here's what the process really involves, what it costs in 2026, and how to avoid wasting your budget.", url: "/blog/mobile-app-development-vadodara/", type: "website" }
 };

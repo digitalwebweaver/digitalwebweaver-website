@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Cybersecurity Audits & Penetration Testing Company India | OWASP, Code Review & Compliance — Digital Web Weaver" },
   description: "Penetration tests, OWASP Top 10 audits, code security reviews, and GDPR/HIPAA compliance checks — a detailed report with prioritised remediation steps. India-based senior team.",
+  keywords: ["cybersecurity audit company India", "penetration testing services India", "OWASP security audit"],
   alternates: { canonical: "/solutions/cybersecurity/" },
   openGraph: { title: "Cybersecurity Audits & Penetration Testing Company India | OWASP, Code Review & Compliance — Digital Web Weaver", description: "Penetration tests, OWASP Top 10 audits, code security reviews, and GDPR/HIPAA compliance checks — a detailed report with prioritised remediation steps. India-based senior team.", url: "/solutions/cybersecurity/", type: "website" }
 };

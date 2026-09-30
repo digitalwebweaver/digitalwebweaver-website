@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "EduCore — Learning Management System | Digital Web Weaver" },
   description: "EduCore bundles course delivery, live classes, assessments, certificates, and fee collection into one branded LMS. White-labelled, live in 4–6 weeks, 0% revenue cut.",
+  keywords: ["learning management system software", "white label LMS software", "LMS for schools online courses"],
   alternates: { canonical: "/educore/" },
   openGraph: { title: "EduCore — Learning Management System | Digital Web Weaver", description: "EduCore bundles course delivery, live classes, assessments, certificates, and fee collection into one branded LMS. White-labelled, live in 4–6 weeks, 0% revenue cut.", url: "/educore/", type: "website" }
 };

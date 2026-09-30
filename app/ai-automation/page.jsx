@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "AI & Automation Company India | LLM Integration Experts — Digital Web Weaver" },
   description: "AI-powered systems that work in production — LLM copilots, document processing, predictive analytics, and workflow automation. GPT-4, Claude, LangChain, RAG. India-based senior team.",
+  keywords: ["AI automation company India", "LLM integration services", "GPT-4 Claude integration company", "workflow automation software development"],
   alternates: { canonical: "/ai-automation/" },
   openGraph: { title: "AI & Automation Company India | LLM Integration Experts — Digital Web Weaver", description: "AI-powered systems that work in production — LLM copilots, document processing, predictive analytics, and workflow automation. GPT-4, Claude, LangChain, RAG. India-based senior team.", url: "/ai-automation/", type: "website" }
 };

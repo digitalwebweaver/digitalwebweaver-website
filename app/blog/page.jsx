@@ -7,6 +7,7 @@ import { blogCollectionSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Software Development Blog | Digital Web Weaver" },
   description: "Engineering notes, product thinking, and honest takes on building software — from the team that ships 200+ systems a year. Web development, ERP, SaaS, AI automation, and more.",
+  keywords: ["software development blog", "engineering blog India", "SaaS ERP AI articles"],
   alternates: { canonical: "/blog/" },
   openGraph: { title: "Software Development Blog | Digital Web Weaver", description: "Engineering notes, product thinking, and honest takes on building software — from the team that ships 200+ systems a year. Web development, ERP, SaaS, AI automation, and more.", url: "/blog/", type: "website" }
 };

@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Database Technologies We Use — PostgreSQL, MongoDB, Redis & More | Digital Web Weaver" },
   description: "Database architecture and engineering: PostgreSQL, MongoDB, Redis, Elasticsearch, ClickHouse and SQLite. Schema design, query optimisation, and zero-downtime migrations. India-based senior team.",
+  keywords: ["database architecture services", "PostgreSQL MongoDB consulting", "database optimization company"],
   alternates: { canonical: "/stack/databases/" },
   openGraph: { title: "Database Technologies We Use — PostgreSQL, MongoDB, Redis & More | Digital Web Weaver", description: "Database architecture and engineering: PostgreSQL, MongoDB, Redis, Elasticsearch, ClickHouse and SQLite. Schema design, query optimisation, and zero-downtime migrations. India-based senior team.", url: "/stack/databases/", type: "website" }
 };

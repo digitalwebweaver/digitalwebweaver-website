@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Hire Laravel Developers | PHP Experts for India & UK — Digital Web Weaver" },
   description: "Hire senior Laravel developers — production-grade PHP apps with Laravel 11, Livewire, Filament, and Pest test coverage. Matched with 2–3 pre-vetted profiles fast.",
+  keywords: ["hire Laravel developers", "Laravel development company India", "PHP developer for hire"],
   alternates: { canonical: "/laravel-developer/" },
   openGraph: { title: "Hire Laravel Developers | PHP Experts for India & UK — Digital Web Weaver", description: "Hire senior Laravel developers — production-grade PHP apps with Laravel 11, Livewire, Filament, and Pest test coverage. Matched with 2–3 pre-vetted profiles fast.", url: "/laravel-developer/", type: "website" }
 };

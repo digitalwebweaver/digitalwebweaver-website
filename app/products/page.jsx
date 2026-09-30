@@ -7,6 +7,7 @@ import { productsSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Ready-Made Software Products | Launch in 2–4 Weeks — Digital Web Weaver" },
   description: "17 production-ready software products — LMS, ERP, clinic software, delivery apps, and AI voice agents. White-label ready, deployed with your branding in 2–4 weeks.",
+  keywords: ["ready made software products", "white label software India", "SaaS products for resale"],
   alternates: { canonical: "/products/" },
   openGraph: { title: "Ready-Made Software Products | Launch in 2–4 Weeks — Digital Web Weaver", description: "17 production-ready software products — LMS, ERP, clinic software, delivery apps, and AI voice agents. White-label ready, deployed with your branding in 2–4 weeks.", url: "/products/", type: "website" }
 };

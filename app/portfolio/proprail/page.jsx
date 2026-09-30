@@ -7,6 +7,7 @@ import { caseStudySchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "PropRail — Property Management & Accounting Case Study | Digital Web Weaver" },
   description: "How Digital Web Weaver built PropRail — a cloud-based, multi-entity property management and accounting platform for a UK outsourced accounting firm. RICS-compliant, Sage 50 integrated, 190+ automated tests.",
+  keywords: ["property management software case study", "accounting software case study", "RICS compliant software case study"],
   alternates: { canonical: "/portfolio/proprail/" },
   openGraph: { title: "PropRail — Property Management & Accounting Case Study | Digital Web Weaver", description: "How Digital Web Weaver built PropRail — a cloud-based, multi-entity property management and accounting platform for a UK outsourced accounting firm. RICS-compliant, Sage 50 integrated, 190+ automated tests.", url: "/portfolio/proprail/", type: "article" }
 };

@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "ClinicVoice AI — AI Voice Agent for Clinics | Digital Web Weaver" },
   description: "ClinicVoice AI answers calls, books appointments, sends reminders, answers common questions, and follows up after visits — automatically, in a natural voice, around the clock.",
+  keywords: ["AI voice agent for clinics", "AI appointment booking calls", "automated clinic call answering"],
   alternates: { canonical: "/clinicvoice-ai/" },
   openGraph: { title: "ClinicVoice AI — AI Voice Agent for Clinics | Digital Web Weaver", description: "ClinicVoice AI answers calls, books appointments, sends reminders, answers common questions, and follows up after visits — automatically, in a natural voice, around the clock.", url: "/clinicvoice-ai/", type: "website" }
 };

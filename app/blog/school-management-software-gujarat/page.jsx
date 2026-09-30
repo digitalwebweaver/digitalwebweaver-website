@@ -7,6 +7,7 @@ import { blogPostingSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Why Gujarat Schools Are Ditching Registers for Software — Digital Web Weaver" },
   description: "Attendance registers, paper report cards, fee chaos. Here's why Gujarat schools are switching to school management software — features, GSEB/CBSE fit, and cost.",
+  keywords: ["school management software Gujarat", "school ERP software India", "GSEB CBSE school software"],
   alternates: { canonical: "/blog/school-management-software-gujarat/" },
   openGraph: { title: "Why Gujarat Schools Are Ditching Registers for Software — Digital Web Weaver", description: "Attendance registers, paper report cards, fee chaos. Here's why Gujarat schools are switching to school management software — features, GSEB/CBSE fit, and cost.", url: "/blog/school-management-software-gujarat/", type: "website" }
 };

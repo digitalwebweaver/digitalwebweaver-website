@@ -7,6 +7,7 @@ import { blogPostingSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "WordPress or Custom-Built? The Honest Answer for Your Site | Digital Web Weaver" },
   description: "WordPress or a custom-coded website? Here's the honest comparison — cost, speed, security, and scale — so you pick the right one for your business in 2026.",
+  keywords: ["WordPress vs custom website", "custom website development", "website platform comparison"],
   alternates: { canonical: "/blog/wordpress-vs-custom-website/" },
   openGraph: { title: "WordPress or Custom-Built? The Honest Answer for Your Site | Digital Web Weaver", description: "WordPress or a custom-coded website? Here's the honest comparison — cost, speed, security, and scale — so you pick the right one for your business in 2026.", url: "/blog/wordpress-vs-custom-website/", type: "website" }
 };

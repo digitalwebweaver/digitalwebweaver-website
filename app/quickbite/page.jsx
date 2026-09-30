@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "QuickBite — Branded Food Delivery App Suite | Digital Web Weaver" },
   description: "QuickBite gives restaurants and cloud kitchens a complete delivery ecosystem — customer app, restaurant dashboard, and delivery partner app — 0% commission, live in 6–8 weeks.",
+  keywords: ["food delivery app development", "restaurant delivery app software", "cloud kitchen app development"],
   alternates: { canonical: "/quickbite/" },
   openGraph: { title: "QuickBite — Branded Food Delivery App Suite | Digital Web Weaver", description: "QuickBite gives restaurants and cloud kitchens a complete delivery ecosystem — customer app, restaurant dashboard, and delivery partner app — 0% commission, live in 6–8 weeks.", url: "/quickbite/", type: "website" }
 };

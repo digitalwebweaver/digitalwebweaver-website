@@ -7,6 +7,7 @@ import { blogPostingSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Outgrown Tally? What an ERP Can Do for Your Gujarat Business — Digital Web Weaver" },
   description: "Your business outgrew Tally and spreadsheets. Here's what ERP software really does for Gujarat SMEs, what it costs in 2026, and custom vs ready-made.",
+  keywords: ["ERP software Gujarat", "ERP vs Tally", "ERP software for SME India"],
   alternates: { canonical: "/blog/erp-software-gujarat-business/" },
   openGraph: { title: "Outgrown Tally? What an ERP Can Do for Your Gujarat Business — Digital Web Weaver", description: "Your business outgrew Tally and spreadsheets. Here's what ERP software really does for Gujarat SMEs, what it costs in 2026, and custom vs ready-made.", url: "/blog/erp-software-gujarat-business/", type: "website" }
 };

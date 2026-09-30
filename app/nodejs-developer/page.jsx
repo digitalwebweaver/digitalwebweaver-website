@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Hire Node.js Developers | India, UK & Global Teams — Digital Web Weaver" },
   description: "Hire senior Node.js developers — event-driven APIs, microservices, and real-time backends with TypeScript. Matched with 2–3 pre-vetted profiles in 48 hours.",
+  keywords: ["hire Node.js developers", "Node.js development company India", "backend developer for hire"],
   alternates: { canonical: "/nodejs-developer/" },
   openGraph: { title: "Hire Node.js Developers | India, UK & Global Teams — Digital Web Weaver", description: "Hire senior Node.js developers — event-driven APIs, microservices, and real-time backends with TypeScript. Matched with 2–3 pre-vetted profiles in 48 hours.", url: "/nodejs-developer/", type: "website" }
 };

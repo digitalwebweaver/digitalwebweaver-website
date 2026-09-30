@@ -7,6 +7,7 @@ import { blogPostingSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Still Running Your Clinic on Paper? It's Costing You | Vadodara" },
   description: "Paper files and registers are quietly costing Vadodara clinics time and money. Here's how hospital management software fixes it — features, cost, and a free demo.",
+  keywords: ["hospital management software Vadodara", "clinic software India", "EMR software cost India"],
   alternates: { canonical: "/blog/hospital-clinic-software-vadodara/" },
   openGraph: { title: "Still Running Your Clinic on Paper? It's Costing You | Vadodara", description: "Paper files and registers are quietly costing Vadodara clinics time and money. Here's how hospital management software fixes it — features, cost, and a free demo.", url: "/blog/hospital-clinic-software-vadodara/", type: "website" }
 };

@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "InsureDesk — Insurance Agency CRM Software | Digital Web Weaver" },
   description: "InsureDesk consolidates lead management, policy tracking, renewal reminders, claims follow-up, and client communication into one connected CRM. Live in 4–6 weeks.",
+  keywords: ["insurance agency CRM software", "policy management software", "insurance CRM software India"],
   alternates: { canonical: "/insuredesk/" },
   openGraph: { title: "InsureDesk — Insurance Agency CRM Software | Digital Web Weaver", description: "InsureDesk consolidates lead management, policy tracking, renewal reminders, claims follow-up, and client communication into one connected CRM. Live in 4–6 weeks.", url: "/insuredesk/", type: "website" }
 };

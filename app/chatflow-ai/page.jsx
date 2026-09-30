@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "ChatFlow AI — WhatsApp Business Automation Software | Digital Web Weaver" },
   description: "ChatFlow AI answers enquiries, books appointments, sends order updates, and follows up with customers automatically — on your business WhatsApp number, in your brand's voice, around the clock.",
+  keywords: ["WhatsApp business automation software", "WhatsApp chatbot for business", "WhatsApp AI agent India"],
   alternates: { canonical: "/chatflow-ai/" },
   openGraph: { title: "ChatFlow AI — WhatsApp Business Automation Software | Digital Web Weaver", description: "ChatFlow AI answers enquiries, books appointments, sends order updates, and follows up with customers automatically — on your business WhatsApp number, in your brand's voice, around the clock.", url: "/chatflow-ai/", type: "website" }
 };

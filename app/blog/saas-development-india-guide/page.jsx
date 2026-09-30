@@ -7,6 +7,7 @@ import { blogPostingSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Got a SaaS Idea? How to Build It in India on a Budget | Digital Web Weaver" },
   description: "Have a SaaS idea? Here's how to build a SaaS product in India in 2026 — the real process, what it costs, MVP-first strategy, and mistakes that waste money.",
+  keywords: ["build SaaS in India", "SaaS MVP development cost", "SaaS development guide India"],
   alternates: { canonical: "/blog/saas-development-india-guide/" },
   openGraph: { title: "Got a SaaS Idea? How to Build It in India on a Budget | Digital Web Weaver", description: "Have a SaaS idea? Here's how to build a SaaS product in India in 2026 — the real process, what it costs, MVP-first strategy, and mistakes that waste money.", url: "/blog/saas-development-india-guide/", type: "website" }
 };

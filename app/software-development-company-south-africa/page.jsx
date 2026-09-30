@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Software Development Company South Africa | Offshore Teams — Digital Web Weaver" },
   description: "An offshore software development partner for South African businesses — bespoke web apps, e-commerce, and dedicated teams from senior engineers, with near-real-time IST/SAST overlap.",
+  keywords: ["offshore software development South Africa", "software company for South African business", "outsourced development team South Africa"],
   alternates: { canonical: "/software-development-company-south-africa/" },
   openGraph: { title: "Software Development Company South Africa | Offshore Teams — Digital Web Weaver", description: "An offshore software development partner for South African businesses — bespoke web apps, e-commerce, and dedicated teams from senior engineers, with near-real-time IST/SAST overlap.", url: "/software-development-company-south-africa/", type: "website" }
 };

@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Logistics Software Development | Fleet & Tracking India — Digital Web Weaver" },
   description: "Fleet management, real-time shipment tracking, warehouse management, and route optimisation software for logistics and supply chain operators. India-based senior team.",
+  keywords: ["logistics software development company", "fleet management software India", "shipment tracking software development"],
   alternates: { canonical: "/logistics/" },
   openGraph: { title: "Logistics Software Development | Fleet & Tracking India — Digital Web Weaver", description: "Fleet management, real-time shipment tracking, warehouse management, and route optimisation software for logistics and supply chain operators. India-based senior team.", url: "/logistics/", type: "website" }
 };

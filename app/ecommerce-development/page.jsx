@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "E-Commerce Development Company India | WooCommerce & Headless — Digital Web Weaver" },
   description: "High-performance e-commerce storefronts — custom, WooCommerce, or headless — built for conversion. PCI-DSS secure payments, +40% average conversion lift, trusted by 150+ clients.",
+  keywords: ["e-commerce development company India", "WooCommerce development company", "headless commerce development"],
   alternates: { canonical: "/ecommerce-development/" },
   openGraph: { title: "E-Commerce Development Company India | WooCommerce & Headless — Digital Web Weaver", description: "High-performance e-commerce storefronts — custom, WooCommerce, or headless — built for conversion. PCI-DSS secure payments, +40% average conversion lift, trusted by 150+ clients.", url: "/ecommerce-development/", type: "website" }
 };

@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Business Intelligence & Data Analytics Company India | BI Dashboards, ETL & Data Warehousing — Digital Web Weaver" },
   description: "BI dashboards, data warehouses, and ETL pipelines that give decision-makers real-time visibility into the metrics that matter. Metabase, dbt, Airflow, Snowflake. India-based senior team.",
+  keywords: ["business intelligence company India", "BI dashboard development", "data warehouse ETL services"],
   alternates: { canonical: "/solutions/business-intelligence/" },
   openGraph: { title: "Business Intelligence & Data Analytics Company India | BI Dashboards, ETL & Data Warehousing — Digital Web Weaver", description: "BI dashboards, data warehouses, and ETL pipelines that give decision-makers real-time visibility into the metrics that matter. Metabase, dbt, Airflow, Snowflake. India-based senior team.", url: "/solutions/business-intelligence/", type: "website" }
 };

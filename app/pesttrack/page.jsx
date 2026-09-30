@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "PestTrack — Pest Control CRM & Field Service Software | Digital Web Weaver" },
   description: "PestTrack integrates job scheduling, technician routing, service history, AMC contracts, billing, and automated client reminders into one connected pest control CRM. Live in 3–5 weeks.",
+  keywords: ["pest control software", "pest control CRM field service software", "technician scheduling software"],
   alternates: { canonical: "/pesttrack/" },
   openGraph: { title: "PestTrack — Pest Control CRM & Field Service Software | Digital Web Weaver", description: "PestTrack integrates job scheduling, technician routing, service history, AMC contracts, billing, and automated client reminders into one connected pest control CRM. Live in 3–5 weeks.", url: "/pesttrack/", type: "website" }
 };

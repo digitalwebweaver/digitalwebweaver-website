@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "SalonBook — Salon Management System | Digital Web Weaver" },
   description: "SalonBook brings online booking, staff scheduling, billing, service packages, inventory, and automated client follow-ups into one branded system. Live in 3–5 weeks.",
+  keywords: ["salon management software", "salon booking system India", "spa management system"],
   alternates: { canonical: "/salonbook/" },
   openGraph: { title: "SalonBook — Salon Management System | Digital Web Weaver", description: "SalonBook brings online booking, staff scheduling, billing, service packages, inventory, and automated client follow-ups into one branded system. Live in 3–5 weeks.", url: "/salonbook/", type: "website" }
 };

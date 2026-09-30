@@ -7,6 +7,7 @@ import { blogPostingSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Best Food Delivery Apps in South Africa 2025 — Uber Eats vs Mr D vs Bolt Food" },
   description: "Compare South Africa's top food delivery apps: Uber Eats, Mr D Food, Bolt Food, and Checkers Sixty60. See which app is cheapest, fastest, and best for load shedding in Joburg, Cape Town, and Durban.",
+  keywords: ["food delivery apps South Africa", "Uber Eats vs Mr D Food", "Bolt Food comparison South Africa"],
   alternates: { canonical: "/blog/from-fast-food-to-fine-dining-the-best-food-delivery-apps-in-south-africa/" },
   openGraph: { title: "Best Food Delivery Apps in South Africa 2025 — Uber Eats vs Mr D vs Bolt Food", description: "Compare South Africa's top food delivery apps: Uber Eats, Mr D Food, Bolt Food, and Checkers Sixty60. See which app is cheapest, fastest, and best for load shedding in Joburg, Cape Town, and Durban.", url: "/blog/from-fast-food-to-fine-dining-the-best-food-delivery-apps-in-south-africa/", type: "website" }
 };

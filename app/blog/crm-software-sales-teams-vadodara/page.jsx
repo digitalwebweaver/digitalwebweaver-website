@@ -7,6 +7,7 @@ import { blogPostingSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Losing Deals to Forgotten Follow-Ups? You Need a CRM | Digital Web Weaver" },
   description: "If leads slip through the cracks and follow-ups get forgotten, a CRM is the fix. Here's what CRM software does for sales teams in Vadodara, and what it costs.",
+  keywords: ["CRM software Vadodara", "CRM for sales teams India", "sales follow-up software"],
   alternates: { canonical: "/blog/crm-software-sales-teams-vadodara/" },
   openGraph: { title: "Losing Deals to Forgotten Follow-Ups? You Need a CRM | Digital Web Weaver", description: "If leads slip through the cracks and follow-ups get forgotten, a CRM is the fix. Here's what CRM software does for sales teams in Vadodara, and what it costs.", url: "/blog/crm-software-sales-teams-vadodara/", type: "website" }
 };

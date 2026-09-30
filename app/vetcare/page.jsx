@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "VetCare — Veterinary Practice Management (South Africa) | Digital Web Weaver" },
   description: "VetCare: appointments, patient records, stock, billing, and client WhatsApp in one affordable system — WhatsApp-first, SARS-ready, loadshedding-proof for South African vets.",
+  keywords: ["veterinary practice software South Africa", "vet clinic management system", "animal hospital software"],
   alternates: { canonical: "/vetcare/" },
   openGraph: { title: "VetCare — Veterinary Practice Management (South Africa) | Digital Web Weaver", description: "VetCare: appointments, patient records, stock, billing, and client WhatsApp in one affordable system — WhatsApp-first, SARS-ready, loadshedding-proof for South African vets.", url: "/vetcare/", type: "website" }
 };

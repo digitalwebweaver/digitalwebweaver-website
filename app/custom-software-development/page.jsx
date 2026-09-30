@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Custom Software Development Company India | ERP & CRM — Digital Web Weaver" },
   description: "Bespoke ERP, CRM, internal tools, and client portals built around your exact workflow — not a packaged product you bend your team around. Fixed price. 200+ systems built.",
+  keywords: ["custom software development company India", "bespoke ERP CRM development", "custom business software development"],
   alternates: { canonical: "/custom-software-development/" },
   openGraph: { title: "Custom Software Development Company India | ERP & CRM — Digital Web Weaver", description: "Bespoke ERP, CRM, internal tools, and client portals built around your exact workflow — not a packaged product you bend your team around. Fixed price. 200+ systems built.", url: "/custom-software-development/", type: "website" }
 };

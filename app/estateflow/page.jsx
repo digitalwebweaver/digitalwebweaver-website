@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "EstateFlow — Real Estate CRM for Builders & Developers | Digital Web Weaver" },
   description: "EstateFlow runs the entire buyer journey for property developers — leads, site visits, negotiation, booking, collections and post-sales — with WhatsApp automation and RERA-aware compliance built in.",
+  keywords: ["real estate CRM software", "property developer CRM India", "RERA compliant CRM software"],
   alternates: { canonical: "/estateflow/" },
   openGraph: { title: "EstateFlow — Real Estate CRM for Builders & Developers | Digital Web Weaver", description: "EstateFlow runs the entire buyer journey for property developers — leads, site visits, negotiation, booking, collections and post-sales — with WhatsApp automation and RERA-aware compliance built in.", url: "/estateflow/", type: "website" }
 };

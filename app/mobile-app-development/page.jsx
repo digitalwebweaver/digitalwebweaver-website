@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Mobile App Development Company | iOS, Android & React Native — Digital Web Weaver" },
   description: "Native iOS and Android apps, React Native, and Flutter builds profiled for 60fps. 55+ apps shipped, 4.8★ average rating, end-to-end App Store and Play Store submission.",
+  keywords: ["mobile app development company India", "iOS Android app development company", "React Native app developers"],
   alternates: { canonical: "/mobile-app-development/" },
   openGraph: { title: "Mobile App Development Company | iOS, Android & React Native — Digital Web Weaver", description: "Native iOS and Android apps, React Native, and Flutter builds profiled for 60fps. 55+ apps shipped, 4.8★ average rating, end-to-end App Store and Play Store submission.", url: "/mobile-app-development/", type: "website" }
 };

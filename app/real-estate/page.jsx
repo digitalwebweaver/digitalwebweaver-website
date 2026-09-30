@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Real Estate Software Development Company | PropTech India — Digital Web Weaver" },
   description: "Property listing platforms, agent CRMs, virtual tour software, and lease management systems for real estate businesses. India-based senior team, MLS/RETS integration.",
+  keywords: ["real estate software development company", "PropTech development India", "property listing platform development"],
   alternates: { canonical: "/real-estate/" },
   openGraph: { title: "Real Estate Software Development Company | PropTech India — Digital Web Weaver", description: "Property listing platforms, agent CRMs, virtual tour software, and lease management systems for real estate businesses. India-based senior team, MLS/RETS integration.", url: "/real-estate/", type: "website" }
 };

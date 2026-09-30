@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "ChemSupply — ERP for Chemical Suppliers | Digital Web Weaver" },
   description: "ChemSupply brings batch & expiry tracking, compliance documentation, order management, distributor portals, and multi-warehouse inventory into one connected ERP for chemical suppliers.",
+  keywords: ["ERP for chemical suppliers", "chemical distributor software", "batch expiry tracking software"],
   alternates: { canonical: "/chemsupply/" },
   openGraph: { title: "ChemSupply — ERP for Chemical Suppliers | Digital Web Weaver", description: "ChemSupply brings batch & expiry tracking, compliance documentation, order management, distributor portals, and multi-warehouse inventory into one connected ERP for chemical suppliers.", url: "/chemsupply/", type: "website" }
 };

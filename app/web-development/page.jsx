@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Web Development Company India | React & Next.js Experts — Digital Web Weaver" },
   description: "Full-spectrum web development: marketing sites, web portals, web apps, and API backends. React, Next.js, Node.js, and TypeScript. India-based senior team.",
+  keywords: ["web development company India", "React Next.js development company", "custom website development India"],
   alternates: { canonical: "/web-development/" },
   openGraph: { title: "Web Development Company India | React & Next.js Experts — Digital Web Weaver", description: "Full-spectrum web development: marketing sites, web portals, web apps, and API backends. React, Next.js, Node.js, and TypeScript. India-based senior team.", url: "/web-development/", type: "website" }
 };

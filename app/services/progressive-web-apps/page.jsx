@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Progressive Web App Development Company | PWA Experts, India — Digital Web Weaver" },
   description: "Installable, offline-first Progressive Web Apps with service worker caching, a Web App Manifest, and app-shell architecture. 90+ Lighthouse PWA scores. India-based senior team.",
+  keywords: ["progressive web app development", "PWA development company India", "installable web app development"],
   alternates: { canonical: "/services/progressive-web-apps/" },
   openGraph: { title: "Progressive Web App Development Company | PWA Experts, India — Digital Web Weaver", description: "Installable, offline-first Progressive Web Apps with service worker caching, a Web App Manifest, and app-shell architecture. 90+ Lighthouse PWA scores. India-based senior team.", url: "/services/progressive-web-apps/", type: "website" }
 };

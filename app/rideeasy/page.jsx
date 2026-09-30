@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "RideEasy — Branded Cab Booking App Suite | Digital Web Weaver" },
   description: "RideEasy bundles a rider app, driver app, and dispatch dashboard into one branded platform — live tracking, fare estimation, and payments. 0% commission, live in 6–8 weeks.",
+  keywords: ["cab booking app development", "ride hailing app software", "taxi app development India"],
   alternates: { canonical: "/rideeasy/" },
   openGraph: { title: "RideEasy — Branded Cab Booking App Suite | Digital Web Weaver", description: "RideEasy bundles a rider app, driver app, and dispatch dashboard into one branded platform — live tracking, fare estimation, and payments. 0% commission, live in 6–8 weeks.", url: "/rideeasy/", type: "website" }
 };

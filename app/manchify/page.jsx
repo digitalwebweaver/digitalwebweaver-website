@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Manchify — Operations OS for Event Companies | Digital Web Weaver" },
   description: "Manchify is the Operations OS for Indian event companies — leads, quotes, events, vendors, manpower, rentals, and GST invoicing in one connected system.",
+  keywords: ["event management software India", "operations software for event companies", "event company ERP software"],
   alternates: { canonical: "/manchify/" },
   openGraph: { title: "Manchify — Operations OS for Event Companies | Digital Web Weaver", description: "Manchify is the Operations OS for Indian event companies — leads, quotes, events, vendors, manpower, rentals, and GST invoicing in one connected system.", url: "/manchify/", type: "website" }
 };

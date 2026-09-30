@@ -7,6 +7,7 @@ import { caseStudySchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "NextSense LMS — Frontend Rebuild, QA & Security Audit Case Study | Digital Web Weaver" },
   description: "How Digital Web Weaver took NextSense's Learning Management System from static mockups to a production Vue 3 application — with a full QA audit and a security review of the admin backend.",
+  keywords: ["LMS frontend rebuild case study", "Vue 3 development case study", "software QA audit case study"],
   alternates: { canonical: "/portfolio/nextsense/" },
   openGraph: { title: "NextSense LMS — Frontend Rebuild, QA & Security Audit Case Study | Digital Web Weaver", description: "How Digital Web Weaver took NextSense's Learning Management System from static mockups to a production Vue 3 application — with a full QA audit and a security review of the admin backend.", url: "/portfolio/nextsense/", type: "article" }
 };

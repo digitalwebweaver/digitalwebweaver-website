@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "SaaS Development Company India | Multi-Tenant & Cloud-Native — Digital Web Weaver" },
   description: "Multi-tenant SaaS platforms built to scale — subscription billing, SSO, product analytics, and architecture that survives Series A growth. 150+ clients served.",
+  keywords: ["SaaS development company India", "multi-tenant SaaS architecture", "build SaaS product India"],
   alternates: { canonical: "/saas-development/" },
   openGraph: { title: "SaaS Development Company India | Multi-Tenant & Cloud-Native — Digital Web Weaver", description: "Multi-tenant SaaS platforms built to scale — subscription billing, SSO, product analytics, and architecture that survives Series A growth. 150+ clients served.", url: "/saas-development/", type: "website" }
 };

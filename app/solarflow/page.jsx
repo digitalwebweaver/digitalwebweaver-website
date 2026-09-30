@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "SolarFlow — Solar ERP & CRM for Gujarat Installers | Digital Web Weaver" },
   description: "SolarFlow manages the entire PM Surya Ghar → GEDA → MGVCL subsidy lifecycle, with AI that quotes, checks compliance, and watches every system you install. Never forfeit a subsidy again.",
+  keywords: ["solar ERP software India", "solar CRM Gujarat", "PM Surya Ghar software"],
   alternates: { canonical: "/solarflow/" },
   openGraph: { title: "SolarFlow — Solar ERP & CRM for Gujarat Installers | Digital Web Weaver", description: "SolarFlow manages the entire PM Surya Ghar → GEDA → MGVCL subsidy lifecycle, with AI that quotes, checks compliance, and watches every system you install. Never forfeit a subsidy again.", url: "/solarflow/", type: "website" }
 };

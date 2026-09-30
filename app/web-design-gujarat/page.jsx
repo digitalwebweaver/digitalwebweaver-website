@@ -7,6 +7,7 @@ import { serviceSchema, localBusinessSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Web Design Gujarat | Websites, Apps & ERP Solutions — Digital Web Weaver" },
   description: "Web development company serving Gujarat — senior engineers based in Vadodara building websites, ERP/CRM systems, e-commerce, and mobile apps for Ahmedabad, Surat, Rajkot, and beyond.",
+  keywords: ["web design Gujarat", "web development company Gujarat", "ERP CRM software Gujarat"],
   alternates: { canonical: "/web-design-gujarat/" },
   openGraph: { title: "Web Design Gujarat | Websites, Apps & ERP Solutions — Digital Web Weaver", description: "Web development company serving Gujarat — senior engineers based in Vadodara building websites, ERP/CRM systems, e-commerce, and mobile apps for Ahmedabad, Surat, Rajkot, and beyond.", url: "/web-design-gujarat/", type: "website" }
 };

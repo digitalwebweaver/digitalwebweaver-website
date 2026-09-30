@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Cloud & DevOps Company India | AWS, GCP & Kubernetes Experts — Digital Web Weaver" },
   description: "Cloud architecture, CI/CD pipelines, Kubernetes, and Infrastructure as Code on AWS, GCP, and Azure. 99.9% uptime SLA, zero-downtime deploys. India-based senior DevOps team.",
+  keywords: ["cloud DevOps company India", "AWS Kubernetes consulting", "CI/CD pipeline services India"],
   alternates: { canonical: "/cloud-devops/" },
   openGraph: { title: "Cloud & DevOps Company India | AWS, GCP & Kubernetes Experts — Digital Web Weaver", description: "Cloud architecture, CI/CD pipelines, Kubernetes, and Infrastructure as Code on AWS, GCP, and Azure. 99.9% uptime SLA, zero-downtime deploys. India-based senior DevOps team.", url: "/cloud-devops/", type: "website" }
 };

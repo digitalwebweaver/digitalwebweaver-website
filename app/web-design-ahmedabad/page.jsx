@@ -7,6 +7,7 @@ import { serviceSchema, localBusinessSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Web Design Ahmedabad | Websites, Apps & ERP Systems — Digital Web Weaver" },
   description: "Web development company serving Ahmedabad — business websites, e-commerce, custom ERP/CRM, mobile apps, and SaaS for SG Highway, GIDC, GIFT City and Naroda businesses. Free enquiry, reply in 24h.",
+  keywords: ["web design Ahmedabad", "web development company Ahmedabad", "ERP software Ahmedabad"],
   alternates: { canonical: "/web-design-ahmedabad/" },
   openGraph: { title: "Web Design Ahmedabad | Websites, Apps & ERP Systems — Digital Web Weaver", description: "Web development company serving Ahmedabad — business websites, e-commerce, custom ERP/CRM, mobile apps, and SaaS for SG Highway, GIDC, GIFT City and Naroda businesses. Free enquiry, reply in 24h.", url: "/web-design-ahmedabad/", type: "website" }
 };

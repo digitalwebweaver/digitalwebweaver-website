@@ -7,6 +7,7 @@ import { serviceSchema, localBusinessSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Web Design Rajkot | Websites, ERP & B2B Portals — Digital Web Weaver" },
   description: "Web development company serving Rajkot — manufacturing ERP, B2B dealer portals, and export-ready websites for Saurashtra's engineering, auto-parts and industrial SMEs. Fixed price, free consultation.",
+  keywords: ["web design Rajkot", "manufacturing ERP Rajkot", "B2B portal development Rajkot"],
   alternates: { canonical: "/web-design-rajkot/" },
   openGraph: { title: "Web Design Rajkot | Websites, ERP & B2B Portals — Digital Web Weaver", description: "Web development company serving Rajkot — manufacturing ERP, B2B dealer portals, and export-ready websites for Saurashtra's engineering, auto-parts and industrial SMEs. Fixed price, free consultation.", url: "/web-design-rajkot/", type: "website" }
 };

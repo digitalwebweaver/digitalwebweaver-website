@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Software Development Company Ivory Coast | Abidjan Agency — Digital Web Weaver" },
   description: "Agence de développement web et logiciel pour Abidjan et la Côte d'Ivoire. Sites sur mesure, applications métier, e-commerce avec Mobile Money, et équipes dédiées. Équipe francophone, ingénieurs seniors.",
+  keywords: ["développement web Abidjan", "agence logiciel Côte d'Ivoire", "développement application métier Abidjan", "e-commerce Mobile Money"],
   alternates: { canonical: "/agence-developpement-web-abidjan/" },
   openGraph: { title: "Software Development Company Ivory Coast | Abidjan Agency — Digital Web Weaver", description: "Agence de développement web et logiciel pour Abidjan et la Côte d'Ivoire. Sites sur mesure, applications métier, e-commerce avec Mobile Money, et équipes dédiées. Équipe francophone, ingénieurs seniors.", url: "/agence-developpement-web-abidjan/", type: "website" }
 };

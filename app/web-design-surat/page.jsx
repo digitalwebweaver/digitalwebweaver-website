@@ -7,6 +7,7 @@ import { serviceSchema, localBusinessSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Web Design Surat | Websites, E-commerce & ERP Systems — Digital Web Weaver" },
   description: "Web development company serving Surat — B2B wholesale portals for diamond and textile traders, e-commerce for D2C brands, and custom ERP for SME manufacturers. Fixed price, free consultation.",
+  keywords: ["web design Surat", "B2B portal Surat diamond textile", "ERP software Surat"],
   alternates: { canonical: "/web-design-surat/" },
   openGraph: { title: "Web Design Surat | Websites, E-commerce & ERP Systems — Digital Web Weaver", description: "Web development company serving Surat — B2B wholesale portals for diamond and textile traders, e-commerce for D2C brands, and custom ERP for SME manufacturers. Fixed price, free consultation.", url: "/web-design-surat/", type: "website" }
 };

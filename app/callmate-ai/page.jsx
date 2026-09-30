@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "CallMate AI — 24/7 AI Calling Agent for Businesses | Digital Web Weaver" },
   description: "CallMate AI answers inbound calls, qualifies leads, books appointments, and makes follow-up and reminder calls automatically — in your brand's tone, around the clock.",
+  keywords: ["AI calling agent software", "24/7 AI phone agent", "automated call answering AI", "AI voice agent for business"],
   alternates: { canonical: "/callmate-ai/" },
   openGraph: { title: "CallMate AI — 24/7 AI Calling Agent for Businesses | Digital Web Weaver", description: "CallMate AI answers inbound calls, qualifies leads, books appointments, and makes follow-up and reminder calls automatically — in your brand's tone, around the clock.", url: "/callmate-ai/", type: "website" }
 };

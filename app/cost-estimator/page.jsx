@@ -8,6 +8,7 @@ import CostEstimatorTool from "@/components/CostEstimatorTool";
 export const metadata = {
   title: { absolute: "Free Software & App Cost Estimator | Digital Web Weaver" },
   description: "Answer a few quick questions and get an instant ballpark for your website, app, or software project — in your own currency. No sign-up required.",
+  keywords: ["software project cost estimator", "app development cost calculator", "website cost calculator free"],
   alternates: { canonical: "/cost-estimator/" },
   openGraph: { title: "Free Software & App Cost Estimator | Digital Web Weaver", description: "Answer a few quick questions and get an instant ballpark for your website, app, or software project — in your own currency. No sign-up required.", url: "/cost-estimator/", type: "website" },
 };

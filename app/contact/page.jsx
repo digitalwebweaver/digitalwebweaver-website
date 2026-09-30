@@ -6,6 +6,7 @@ import { contactPageSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Contact Digital Web Weaver — free consultation in 24h" },
   description: "Get in touch with Digital Web Weaver. Free technical consultation and an itemised estimate from senior engineers within 24 hours. Email, phone, or WhatsApp. Vadodara, India.",
+  keywords: ["contact software development company", "free consultation software project", "hire software developers India"],
   alternates: { canonical: "/contact/" },
   openGraph: { title: "Contact Digital Web Weaver — free consultation in 24h", description: "Get in touch with Digital Web Weaver. Free technical consultation and an itemised estimate from senior engineers within 24 hours. Email, phone, or WhatsApp. Vadodara, India.", url: "/contact/", type: "website" }
 };

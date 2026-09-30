@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "TeleCare — Telemedicine Platform | Digital Web Weaver" },
   description: "TeleCare brings video consultations, e-prescriptions, patient records, appointment scheduling, and payments into one branded telemedicine platform. Live in 5–7 weeks.",
+  keywords: ["telemedicine platform software", "video consultation software", "telehealth app development"],
   alternates: { canonical: "/telecare/" },
   openGraph: { title: "TeleCare — Telemedicine Platform | Digital Web Weaver", description: "TeleCare brings video consultations, e-prescriptions, patient records, appointment scheduling, and payments into one branded telemedicine platform. Live in 5–7 weeks.", url: "/telecare/", type: "website" }
 };

@@ -7,6 +7,7 @@ import { aboutPageSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Software Engineering Studio, India | Digital Web Weaver" },
   description: "Founded in 2013, Digital Web Weaver is a senior engineering studio of designers, engineers, and architects shipping production-grade software for founders and enterprises across 15 countries.",
+  keywords: ["software engineering studio India", "senior software engineers India", "custom software development team", "product engineering studio"],
   alternates: { canonical: "/about/" },
   openGraph: { title: "Software Engineering Studio, India | Digital Web Weaver", description: "Founded in 2013, Digital Web Weaver is a senior engineering studio of designers, engineers, and architects shipping production-grade software for founders and enterprises across 15 countries.", url: "/about/", type: "website" }
 };

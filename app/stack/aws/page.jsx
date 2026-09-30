@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "AWS & Cloud Infrastructure — Our Cloud Stack | Digital Web Weaver" },
   description: "AWS, GCP, and Azure cloud architecture: EC2, ECS, Lambda, RDS, EKS and more. Multi-region HA, auto-scaling, security baselines, and cost optimisation. India-based senior team.",
+  keywords: ["AWS cloud consulting India", "cloud infrastructure services", "AWS architecture company India"],
   alternates: { canonical: "/stack/aws/" },
   openGraph: { title: "AWS & Cloud Infrastructure — Our Cloud Stack | Digital Web Weaver", description: "AWS, GCP, and Azure cloud architecture: EC2, ECS, Lambda, RDS, EKS and more. Multi-region HA, auto-scaling, security baselines, and cost optimisation. India-based senior team.", url: "/stack/aws/", type: "website" }
 };

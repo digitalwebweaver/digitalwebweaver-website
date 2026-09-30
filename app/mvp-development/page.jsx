@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "MVP Development Company India | Launch in 8-12 Weeks — Digital Web Weaver" },
   description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and clean architecture ready for technical due diligence. 150+ clients, 4.9/5 average client rating.",
+  keywords: ["MVP development company India", "startup MVP development", "build MVP fast"],
   alternates: { canonical: "/mvp-development/" },
   openGraph: { title: "MVP Development Company India | Launch in 8-12 Weeks — Digital Web Weaver", description: "Investor-ready MVPs in 8–12 weeks — scope discipline, analytics from day one, and clean architecture ready for technical due diligence. 150+ clients, 4.9/5 average client rating.", url: "/mvp-development/", type: "website" }
 };

@@ -7,6 +7,7 @@ import { blogPostingSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "How to Pick a Web Development Company in Vadodara (2026) — Digital Web Weaver" },
   description: "Dozens of web development companies in Vadodara, wildly different quotes. Here's how to choose the right one — the questions to ask and the red flags to run from.",
+  keywords: ["web development company Vadodara", "how to choose a web developer", "Vadodara web design agency"],
   alternates: { canonical: "/blog/choose-web-development-company-vadodara/" },
   openGraph: { title: "How to Pick a Web Development Company in Vadodara (2026) — Digital Web Weaver", description: "Dozens of web development companies in Vadodara, wildly different quotes. Here's how to choose the right one — the questions to ask and the red flags to run from.", url: "/blog/choose-web-development-company-vadodara/", type: "website" }
 };

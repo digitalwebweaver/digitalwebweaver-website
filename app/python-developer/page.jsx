@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Hire Python Developers | Django, AI & Data Experts — Digital Web Weaver" },
   description: "Hire senior Python developers — Django and FastAPI backends, data pipelines, and ML/AI systems. Matched with 2–3 pre-vetted profiles in 48 hours, 14-day free replacement.",
+  keywords: ["hire Python developers", "Django developer for hire", "Python development company India"],
   alternates: { canonical: "/python-developer/" },
   openGraph: { title: "Hire Python Developers | Django, AI & Data Experts — Digital Web Weaver", description: "Hire senior Python developers — Django and FastAPI backends, data pipelines, and ML/AI systems. Matched with 2–3 pre-vetted profiles in 48 hours, 14-day free replacement.", url: "/python-developer/", type: "website" }
 };

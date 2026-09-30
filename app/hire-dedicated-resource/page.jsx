@@ -6,6 +6,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Hire Dedicated Developers India | Digital Web Weaver" },
   description: "Hire dedicated developers from India. Scale your team with vetted full-stack, mobile, AI, and DevOps engineers — flexible 1-to-12 month engagements, deployed in 72 hours.",
+  keywords: ["hire dedicated developers India", "hire remote developers", "dedicated development team India"],
   alternates: { canonical: "/hire-dedicated-resource/" },
   openGraph: { title: "Hire Dedicated Developers India | Digital Web Weaver", description: "Hire dedicated developers from India. Scale your team with vetted full-stack, mobile, AI, and DevOps engineers — flexible 1-to-12 month engagements, deployed in 72 hours.", url: "/hire-dedicated-resource/", type: "website" }
 };

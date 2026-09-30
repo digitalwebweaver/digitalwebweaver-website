@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Retail & E-Commerce Development | Headless Commerce India — Digital Web Weaver" },
   description: "Custom e-commerce, headless storefronts, POS integration, and retail analytics engineered for conversion. +40% average conversion lift, trusted by 150+ clients.",
+  keywords: ["retail e-commerce development company", "headless commerce India", "POS integration development"],
   alternates: { canonical: "/retail-ecommerce/" },
   openGraph: { title: "Retail & E-Commerce Development | Headless Commerce India — Digital Web Weaver", description: "Custom e-commerce, headless storefronts, POS integration, and retail analytics engineered for conversion. +40% average conversion lift, trusted by 150+ clients.", url: "/retail-ecommerce/", type: "website" }
 };

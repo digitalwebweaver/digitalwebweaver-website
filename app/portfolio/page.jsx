@@ -7,6 +7,7 @@ import { portfolioSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Portfolio & Case Studies | Digital Web Weaver" },
   description: "200+ systems built. Real results, real clients — ERP, SaaS, healthtech, logistics, and AI case studies from a senior engineering studio. From two-person startups to global enterprises.",
+  keywords: ["software development portfolio", "ERP SaaS case studies", "client projects software company"],
   alternates: { canonical: "/portfolio/" },
   openGraph: { title: "Portfolio & Case Studies | Digital Web Weaver", description: "200+ systems built. Real results, real clients — ERP, SaaS, healthtech, logistics, and AI case studies from a senior engineering studio. From two-person startups to global enterprises.", url: "/portfolio/", type: "website" }
 };

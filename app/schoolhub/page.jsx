@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "SchoolHub — School Management System | Digital Web Weaver" },
   description: "SchoolHub consolidates admissions, attendance, timetables, fee collection, exams, report cards, and parent communication into one branded platform. Live in 5–7 weeks.",
+  keywords: ["school management system software", "school ERP software India", "admission attendance fee software"],
   alternates: { canonical: "/schoolhub/" },
   openGraph: { title: "SchoolHub — School Management System | Digital Web Weaver", description: "SchoolHub consolidates admissions, attendance, timetables, fee collection, exams, report cards, and parent communication into one branded platform. Live in 5–7 weeks.", url: "/schoolhub/", type: "website" }
 };

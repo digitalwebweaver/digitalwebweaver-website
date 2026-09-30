@@ -7,6 +7,7 @@ import { blogPostingSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "AI Isn't Just for Big Tech: Automation for Gujarat SMEs | Digital Web Weaver" },
   description: "AI automation isn't only for big companies. Here are practical, affordable ways Gujarat SMEs can use AI in 2026 to cut busywork and save real hours each week.",
+  keywords: ["AI automation Gujarat SME", "AI for small business India", "automation tools for Gujarat businesses"],
   alternates: { canonical: "/blog/ai-automation-gujarat-sme/" },
   openGraph: { title: "AI Isn't Just for Big Tech: Automation for Gujarat SMEs | Digital Web Weaver", description: "AI automation isn't only for big companies. Here are practical, affordable ways Gujarat SMEs can use AI in 2026 to cut busywork and save real hours each week.", url: "/blog/ai-automation-gujarat-sme/", type: "website" }
 };

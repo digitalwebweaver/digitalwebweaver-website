@@ -7,6 +7,7 @@ import { serviceSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "ClinicFlow — Clinic Management System | Digital Web Weaver" },
   description: "ClinicFlow brings appointment scheduling, EMR, billing, pharmacy, lab orders, and patient communication into one branded platform. Live in 5–6 weeks.",
+  keywords: ["clinic management system software", "EMR software India", "clinic appointment billing software"],
   alternates: { canonical: "/clinicflow/" },
   openGraph: { title: "ClinicFlow — Clinic Management System | Digital Web Weaver", description: "ClinicFlow brings appointment scheduling, EMR, billing, pharmacy, lab orders, and patient communication into one branded platform. Live in 5–6 weeks.", url: "/clinicflow/", type: "website" }
 };

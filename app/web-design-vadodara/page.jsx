@@ -7,6 +7,7 @@ import { serviceSchema, localBusinessSchema } from "@/lib/schema";
 export const metadata = {
   title: { absolute: "Web Design Vadodara | Digital Web Weaver" },
   description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps and custom web applications for Gujarat's manufacturers, retailers and startups. Free consultation, 24-hour response.",
+  keywords: ["web design Vadodara", "software company Vadodara", "web development Vadodara"],
   alternates: { canonical: "/web-design-vadodara/" },
   openGraph: { title: "Web Design Vadodara | Digital Web Weaver", description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps and custom web applications for Gujarat's manufacturers, retailers and startups. Free consultation, 24-hour response.", url: "/web-design-vadodara/", type: "website" }
 };
