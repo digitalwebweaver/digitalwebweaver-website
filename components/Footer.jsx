@@ -80,7 +80,17 @@ export default function Footer() {
           </div>
         </nav>
       </div>
-      <div className="mono" style={{ marginTop: "30px", display: "flex", alignItems: "center", flexWrap: "wrap", gap: 0, fontSize: "12px", color: "var(--text-2)", border: "1px solid var(--border)", borderRadius: "7px", overflow: "hidden" }}>
+      <div className="mono" style={{ marginTop: "22px", display: "flex", alignItems: "center", flexWrap: "wrap", gap: "6px 12px", fontSize: "12px", color: "var(--muted-2)" }}>
+        <span style={{ color: "var(--border-2)" }} aria-hidden="true">// we build:</span>
+        <NavLink href="/services/" className="ft-link" style={{ fontSize: "12px", textDecoration: "none" }}>Software Development Company</NavLink>
+        <span style={{ color: "var(--border-2)" }} aria-hidden="true">·</span>
+        <NavLink href="/web-development/" className="ft-link" style={{ fontSize: "12px", textDecoration: "none" }}>Web Development Company</NavLink>
+        <span style={{ color: "var(--border-2)" }} aria-hidden="true">·</span>
+        <NavLink href="/ai-automation/" className="ft-link" style={{ fontSize: "12px", textDecoration: "none" }}>AI Development Company</NavLink>
+        <span style={{ color: "var(--border-2)" }} aria-hidden="true">·</span>
+        <NavLink href="/custom-software-development/" className="ft-link" style={{ fontSize: "12px", textDecoration: "none" }}>Custom Software Development</NavLink>
+      </div>
+      <div className="mono" style={{ marginTop: "14px", display: "flex", alignItems: "center", flexWrap: "wrap", gap: 0, fontSize: "12px", color: "var(--text-2)", border: "1px solid var(--border)", borderRadius: "7px", overflow: "hidden" }}>
         <span style={{ display: "flex", alignItems: "center", gap: "7px", background: "var(--teal)", color: "var(--bg)", fontWeight: 700, padding: "8px 14px" }}><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="6" r="2.5"></circle><circle cx="6" cy="18" r="2.5"></circle><circle cx="18" cy="8" r="2.5"></circle><path d="M6 8.5v7M8.5 6H14a4 4 0 0 1 4 4v.5"></path></svg>main</span>
         <span style={{ display: "flex", alignItems: "center", gap: "7px", padding: "8px 14px", borderRight: "1px solid var(--border)" }}><span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "var(--green)", boxShadow: "0 0 8px var(--green)" }}></span>all systems operational</span>
         <span style={{ padding: "8px 14px", borderRight: "1px solid var(--border)", color: "var(--muted-2)" }}>© 2026 Digital Web Weaver</span>
