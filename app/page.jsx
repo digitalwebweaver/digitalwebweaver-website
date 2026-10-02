@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: { absolute: "Digital Web Weaver — Software Development Company | Senior Engineering Studio" },
   description: "Digital Web Weaver is a software development company and custom software development studio building high-performance web platforms, SaaS products, mobile apps, and AI systems since 2013. India · UK · South Africa.",
-  keywords: ["software development company", "custom software development company", "software development company India", "web development company", "senior software engineers India"],
+  keywords: ["software development company", "custom software development company", "software development company Vadodara", "web development company", "senior software engineers Vadodara"],
   alternates: { canonical: "/" },
   openGraph: { title: "Digital Web Weaver — Software Development Company | Senior Engineering Studio", description: "Digital Web Weaver is a software development company and custom software development studio building high-performance web platforms, SaaS products, mobile apps, and AI systems since 2013. India · UK · South Africa.", url: "/", type: "website" }
 };
