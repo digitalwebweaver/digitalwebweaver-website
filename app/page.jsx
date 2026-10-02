@@ -3,10 +3,11 @@ import Interactions from "@/components/Interactions";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: { absolute: "Digital Web Weaver — Senior software engineering studio" },
-  description: "A senior engineering studio building high-performance web platforms, SaaS products, mobile apps, and AI systems since 2013. India · UK · South Africa.",
+  title: { absolute: "Digital Web Weaver — Software Development Company | Senior Engineering Studio" },
+  description: "Digital Web Weaver is a software development company and custom software development studio building high-performance web platforms, SaaS products, mobile apps, and AI systems since 2013. India · UK · South Africa.",
+  keywords: ["software development company", "custom software development company", "software development company India", "web development company", "senior software engineers India"],
   alternates: { canonical: "/" },
-  openGraph: { title: "Digital Web Weaver — Senior software engineering studio", description: "A senior engineering studio building high-performance web platforms, SaaS products, mobile apps, and AI systems since 2013. India · UK · South Africa.", url: "/", type: "website" }
+  openGraph: { title: "Digital Web Weaver — Software Development Company | Senior Engineering Studio", description: "Digital Web Weaver is a software development company and custom software development studio building high-performance web platforms, SaaS products, mobile apps, and AI systems since 2013. India · UK · South Africa.", url: "/", type: "website" }
 };
 
 export default function Page() {
@@ -34,9 +35,9 @@ export default function Page() {
 
         <section id="s-home" className="section section--split">
           <div>
-            <p className="hero__meta">// Home.tsx · senior engineering studio · est. 2013</p>
+            <p className="hero__meta">// Home.tsx · software development company · est. 2013</p>
             <h1 className="hero__h1 big">We build software that <span className="pink">ships()</span> <br />and <span className="teal">scales()</span>.</h1>
-            <p className="hero__lead">A small team of senior engineers and designers building production-grade web platforms, SaaS products, and AI systems — for teams who care how things are made.</p>
+            <p className="hero__lead">Digital Web Weaver is a software development company — a small team of senior engineers and designers offering custom software development, web platforms, SaaS products, and AI systems — for teams who care how things are made.</p>
             <div className="btn-row" style={{"marginTop":"28px"}}>
               <a className="btn btn--primary" href="#s-contact" data-scroll="s-contact">▶ Start a project</a>
               <a className="btn btn--ghost" href="#s-work" data-scroll="s-work">$ view --work</a>
