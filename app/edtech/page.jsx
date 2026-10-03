@@ -152,7 +152,7 @@ export default function Page() {
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{"fontSize":"16px"}}>SaaS development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Multi-tenant LMS SaaS platforms with subscription billing and analytics.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Assessment engines, learning dashboards, and certification platforms.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Assessment engines, learning dashboards, and certification platforms.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/mobile-app-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Mobile app development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>iOS and Android learning apps with offline-first course downloads.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
           </div>
         </section>

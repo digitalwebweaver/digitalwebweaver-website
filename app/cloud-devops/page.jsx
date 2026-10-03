@@ -232,7 +232,6 @@ export default function Page() {
           <div className="grid grid-3">
             <Link className="svc" href="/web-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Marketing sites, web portals, web apps, and API backends.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{"fontSize":"16px"}}>SaaS development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Multi-tenant SaaS with Stripe billing, SSO, and analytics.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/hire-devops-engineer/"><div className="svc__title" style={{"fontSize":"16px"}}>Hire a DevOps engineer</div><p className="svc__body" style={{"fontSize":"13.5px"}}>A dedicated senior DevOps engineer embedded in your team.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
           </div>
         </section>
 

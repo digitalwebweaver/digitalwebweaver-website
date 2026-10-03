@@ -212,9 +212,7 @@ export default function Page() {
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-4">
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{"fontSize":"16px"}}>SaaS development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>The backend SaaS platform your mobile app needs to scale.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Web companion portals and admin dashboards for your mobile product.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
-            <a className="svc" href="https://digitalwebweaver.com/react-native-developer/"><div className="svc__title" style={{"fontSize":"16px"}}>Hire a React Native developer</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Senior React Native engineers for cross-platform mobile development.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
-            <a className="svc" href="https://digitalwebweaver.com/flutter-developer/"><div className="svc__title" style={{"fontSize":"16px"}}>Hire a Flutter developer</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Flutter engineers for beautiful, performant iOS and Android apps.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Web companion portals and admin dashboards for your mobile product.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
           </div>
         </section>
 

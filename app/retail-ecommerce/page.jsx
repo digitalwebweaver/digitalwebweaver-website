@@ -140,7 +140,7 @@ export default function Page() {
         <section className="section reveal">
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{fontSize:"16px"}}>Web application development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Retail portals, OMS dashboards, and multi-role back-office tools.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{fontSize:"16px"}}>Web application development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Retail portals, OMS dashboards, and multi-role back-office tools.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/ecommerce-development/"><div className="svc__title" style={{fontSize:"16px"}}>E-commerce development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Custom storefronts, WooCommerce, and headless commerce builds.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/custom-software-development/"><div className="svc__title" style={{fontSize:"16px"}}>Custom software development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Bespoke OMS, loyalty, and inventory systems built around your operations.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
           </div>

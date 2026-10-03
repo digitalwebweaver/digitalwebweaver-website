@@ -205,7 +205,7 @@ export default function Page() {
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{"fontSize":"16px"}}>SaaS development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Scale your validated MVP into a full multi-tenant SaaS platform.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Complex web apps with enterprise architecture for post-MVP growth.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Complex web apps with enterprise architecture for post-MVP growth.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/react-developer/"><div className="svc__title" style={{"fontSize":"16px"}}>Hire a React developer</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Senior React engineers to accelerate your MVP frontend delivery.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
           </div>
         </section>

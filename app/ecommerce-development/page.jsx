@@ -215,8 +215,6 @@ export default function Page() {
         <section className="section reveal">
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
-            <a className="svc" href="https://digitalwebweaver.com/shopify-development/"><div className="svc__title" style={{fontSize:"16px"}}>Shopify development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Custom Shopify themes with Razorpay, GST invoicing, and conversion-optimised design.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></a>
-            <a className="svc" href="https://digitalwebweaver.com/wordpress-development/"><div className="svc__title" style={{fontSize:"16px"}}>WordPress development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Custom WooCommerce stores — no page builders, performance guaranteed.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></a>
             <Link className="svc" href="/retail-ecommerce/"><div className="svc__title" style={{fontSize:"16px"}}>Retail &amp; e-commerce</div><p className="svc__body" style={{fontSize:"13.5px"}}>Omnichannel retail software, loyalty programs, and inventory sync.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
           </div>
         </section>

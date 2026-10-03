@@ -227,7 +227,7 @@ export default function Page() {
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{"fontSize":"16px"}}>SaaS development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Build AI features into a scalable SaaS product from day one.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>AI-powered dashboards, automation portals, and data pipelines.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{"fontSize":"16px"}}>Web application development</div><p className="svc__body" style={{"fontSize":"13.5px"}}>AI-powered dashboards, automation portals, and data pipelines.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/python-developer/"><div className="svc__title" style={{"fontSize":"16px"}}>Hire a Python developer</div><p className="svc__body" style={{"fontSize":"13.5px"}}>Senior Python engineers for ML, data pipelines, and AI backend development.</p><div className="mono" style={{"fontSize":"12px","color":"var(--pink)","marginTop":"12px"}}>open ↗</div></Link>
           </div>
         </section>

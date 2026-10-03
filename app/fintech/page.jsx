@@ -142,7 +142,7 @@ export default function Page() {
         <section className="section reveal">
           <p className="eyebrow">// you might also need</p>
           <div className="grid grid-3">
-            <a className="svc" href="https://digitalwebweaver.com/web-application-development/"><div className="svc__title" style={{fontSize:"16px"}}>Web application development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Complex FinTech portals, trading dashboards, and multi-user platforms.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></a>
+            <Link className="svc" href="/custom-web-apps/"><div className="svc__title" style={{fontSize:"16px"}}>Web application development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Complex FinTech portals, trading dashboards, and multi-user platforms.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/saas-development/"><div className="svc__title" style={{fontSize:"16px"}}>SaaS development</div><p className="svc__body" style={{fontSize:"13.5px"}}>Multi-tenant FinTech SaaS with Stripe billing and SOC 2-ready architecture.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
             <Link className="svc" href="/ai-automation/"><div className="svc__title" style={{fontSize:"16px"}}>AI &amp; automation</div><p className="svc__body" style={{fontSize:"13.5px"}}>Fraud detection, document processing, and ML-powered credit scoring.</p><div className="mono" style={{fontSize:"12px",color:"var(--pink)",marginTop:"12px"}}>open ↗</div></Link>
           </div>
