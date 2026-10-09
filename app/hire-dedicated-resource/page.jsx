@@ -17,7 +17,7 @@ export default function Page() {
     <JsonLd data={serviceSchema({ name: "Hire Dedicated Team", description: "Hire dedicated developers from India. Scale your team with vetted full-stack, mobile, AI, and DevOps engineers — flexible 1-to-12 month engagements, deployed in 72 hours.", href: "/hire-dedicated-resource/" })} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
-      <button className="activitybar__btn" data-scroll="s-models" data-target="s-models" title="Models &amp; pricing">◈</button>
+      <button className="activitybar__btn" data-scroll="s-models" data-target="s-models" title="Engagement models">◈</button>
       <button className="activitybar__btn" data-scroll="s-stack" data-target="s-stack" title="Stack">❮❯</button>
       <button className="activitybar__btn" data-scroll="s-how" data-target="s-how" title="How it works">❯</button>
       <button className="activitybar__btn" data-scroll="s-guarantees" data-target="s-guarantees" title="Guarantees">✓</button>
@@ -51,7 +51,7 @@ export default function Page() {
               <div className="trust__row"><span className="trust__chip">FinanceHub</span><span className="trust__chip">MedTrack</span><span className="trust__chip">FleetBase</span><span className="trust__chip">EdVault</span></div>
             </div>
             <div className="btn-row" style={{"marginTop":"28px"}}>
-              <a className="btn btn--ghost" href="#s-models" data-scroll="s-models">$ view --pricing</a>
+              <a className="btn btn--ghost" href="#s-models" data-scroll="s-models">$ view --models</a>
               <a className="btn btn--ghost teal" href="#s-how" data-scroll="s-how">$ how --it-works</a>
             </div>
           </div>
@@ -99,18 +99,18 @@ export default function Page() {
           <p className="subtitle">From a single specialist to a full embedded squad — pick the model that fits your context. Every model includes senior engineers and full source-code ownership.</p>
           <div className="grid grid-3 stagger">
             <div className="price">
-              <div className="price__head"><div className="price__kind" style={{"color":"var(--teal)"}}>01 · SINGLE ENGINEER</div><div className="price__title">Single engineer</div><p className="price__body">One senior engineer fully dedicated to your team. Works in your stack, attends your standups, accountable to your PM.</p><div className="price__amt"><b>$3,800</b><span>/month · full-time</span></div></div>
+              <div className="price__head"><div className="price__kind" style={{"color":"var(--teal)"}}>01 · SINGLE ENGINEER</div><div className="price__title">Single engineer</div><p className="price__body">One senior engineer fully dedicated to your team. Works in your stack, attends your standups, accountable to your PM.</p><div className="price__amt"><b>Custom</b><span>/ pricing on request</span></div></div>
               <ul className="price__list"><li><span className="ok">✓</span><span>Dedicated 160 hrs / month</span></li><li><span className="ok">✓</span><span>Works in your timezone (±2h)</span></li><li><span className="ok">✓</span><span>Daily async updates</span></li><li><span className="ok">✓</span><span>14-day risk-free trial</span></li></ul>
               <div className="price__foot"><a className="price__cta btn--ghost" href="#s-contact" data-scroll="s-contact" style={{"display":"block","textAlign":"center","color":"var(--text)"}}>Get started ↗</a></div>
             </div>
             <div className="price is-featured">
               <span className="price__badge">MOST POPULAR</span>
-              <div className="price__head"><div className="price__kind" style={{"color":"var(--pink)"}}>02 · POD TEAM (2–4)</div><div className="price__title">Pod team</div><p className="price__body">A balanced squad — typically a lead, a specialist, and a QA engineer. Owns a product stream end-to-end from day one.</p><div className="price__amt"><b>$9,500</b><span>/month · full team</span></div></div>
+              <div className="price__head"><div className="price__kind" style={{"color":"var(--pink)"}}>02 · POD TEAM (2–4)</div><div className="price__title">Pod team</div><p className="price__body">A balanced squad — typically a lead, a specialist, and a QA engineer. Owns a product stream end-to-end from day one.</p><div className="price__amt"><b>Custom</b><span>/ pricing on request</span></div></div>
               <ul className="price__list"><li><span className="ok">✓</span><span>2–4 senior engineers</span></li><li><span className="ok">✓</span><span>Dedicated Slack channel</span></li><li><span className="ok">✓</span><span>Weekly sprint reviews</span></li><li><span className="ok">✓</span><span>Tech lead included</span></li></ul>
               <div className="price__foot"><a className="price__cta" href="#s-contact" data-scroll="s-contact" style={{"display":"block","textAlign":"center","background":"var(--pink)","color":"var(--bg)"}}>Get started ↗</a></div>
             </div>
             <div className="price">
-              <div className="price__head"><div className="price__kind" style={{"color":"var(--yellow)"}}>03 · EMBEDDED SQUAD (5–12)</div><div className="price__title">Embedded squad</div><p className="price__body">A full cross-functional team inside your org. We bring engineering leadership, establish process, and report into your product org.</p><div className="price__amt"><b>$18,000+</b><span>/month · custom</span></div></div>
+              <div className="price__head"><div className="price__kind" style={{"color":"var(--yellow)"}}>03 · EMBEDDED SQUAD (5–12)</div><div className="price__title">Embedded squad</div><p className="price__body">A full cross-functional team inside your org. We bring engineering leadership, establish process, and report into your product org.</p><div className="price__amt"><b>Custom</b><span>/ pricing on request</span></div></div>
               <ul className="price__list"><li><span className="ok">✓</span><span>5–12 engineers + PM</span></li><li><span className="ok">✓</span><span>Dedicated engineering manager</span></li><li><span className="ok">✓</span><span>Your workflows and tools</span></li><li><span className="ok">✓</span><span>Quarterly roadmap planning</span></li></ul>
               <div className="price__foot"><a className="price__cta btn--ghost" href="#s-contact" data-scroll="s-contact" style={{"display":"block","textAlign":"center","color":"var(--text)"}}>Talk to us ↗</a></div>
             </div>
