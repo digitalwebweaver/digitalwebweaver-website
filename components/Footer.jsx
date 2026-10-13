@@ -95,7 +95,7 @@ export default function Footer() {
         <span style={{ display: "flex", alignItems: "center", gap: "7px", padding: "8px 14px", borderRight: "1px solid var(--border)" }}><span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "var(--green)", boxShadow: "0 0 8px var(--green)" }}></span>all systems operational</span>
         <span style={{ padding: "8px 14px", borderRight: "1px solid var(--border)", color: "var(--muted-2)" }}>© 2026 Digital Web Weaver</span>
         <span style={{ padding: "8px 14px", borderRight: "1px solid var(--border)", color: "var(--muted-2)" }}>built in Vadodara, India</span>
-        <span style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: "9px", padding: "8px 14px", color: "var(--muted-2)" }}><span style={{ color: "var(--teal)" }}>✓</span>ISO 27001<span style={{ color: "var(--border-2)" }}>·</span>SOC 2<span style={{ color: "var(--border-2)" }}>·</span>GDPR aligned</span>
+        <span style={{ marginLeft: "auto", display: "flex", flexWrap: "wrap", alignItems: "center", rowGap: "6px", gap: "9px", padding: "8px 14px", color: "var(--muted-2)" }}><span style={{ color: "var(--teal)" }}>✓</span>ISO 27001<span style={{ color: "var(--border-2)" }}>·</span>SOC 2<span style={{ color: "var(--border-2)" }}>·</span>GDPR aligned<span style={{ color: "var(--border-2)" }}>·</span><span style={{ display: "flex", alignItems: "center", gap: "5px" }}><img src="/assets/bni-member-logo.png" alt="BNI Member" width="666" height="375" style={{ height: "14px", width: "auto" }} />BNI Member</span></span>
       </div>
     </footer>
   );
