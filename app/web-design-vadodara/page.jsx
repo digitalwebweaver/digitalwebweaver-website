@@ -5,17 +5,17 @@ import JsonLd from "@/components/JsonLd";
 import { serviceSchema, localBusinessSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: { absolute: "Web Design Vadodara | Digital Web Weaver" },
-  description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps and custom web applications for Gujarat's manufacturers, retailers and startups. Free consultation, 24-hour response.",
-  keywords: ["web design Vadodara", "software company Vadodara", "web development Vadodara"],
+  title: { absolute: "Software Development Company Vadodara | Digital Web Weaver" },
+  description: "Digital Web Weaver is a software development company headquartered in Vadodara — websites, e-commerce, mobile apps and custom software for Gujarat's manufacturers, retailers and startups. Free consultation, 24-hour response.",
+  keywords: ["software development company Vadodara", "software company Vadodara", "web design Vadodara", "web development Vadodara"],
   alternates: { canonical: "/web-design-vadodara/" },
-  openGraph: { title: "Web Design Vadodara | Digital Web Weaver", description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps and custom web applications for Gujarat's manufacturers, retailers and startups. Free consultation, 24-hour response.", url: "/web-design-vadodara/", type: "website" }
+  openGraph: { title: "Software Development Company Vadodara | Digital Web Weaver", description: "Digital Web Weaver is a software development company headquartered in Vadodara — websites, e-commerce, mobile apps and custom software for Gujarat's manufacturers, retailers and startups. Free consultation, 24-hour response.", url: "/web-design-vadodara/", type: "website" }
 };
 
 export default function Page() {
   return (
     <>
-    <JsonLd data={[localBusinessSchema({ city: "vadodara", description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps, and custom web applications for Gujarat's manufacturers, retailers and startups." }), serviceSchema({ name: "Web Design & Development Vadodara", description: "Senior engineering studio headquartered in Vadodara — websites, e-commerce, mobile apps, and custom web applications. 200+ projects delivered, 12+ years in Vadodara.", href: "/web-design-vadodara/" })]} />
+    <JsonLd data={[localBusinessSchema({ city: "vadodara", description: "Digital Web Weaver is a software development company headquartered in Vadodara — websites, e-commerce, mobile apps, and custom software for Gujarat's manufacturers, retailers and startups." }), serviceSchema({ name: "Software Development Company Vadodara", description: "Digital Web Weaver is a software development company headquartered in Vadodara — websites, e-commerce, mobile apps, and custom software. 200+ projects delivered, 12+ years in Vadodara.", href: "/web-design-vadodara/" })]} />
     <nav className="activitybar mono" aria-label="Sections"><div className="activitybar__toggle-wrap"><button className="activitybar__toggle hint" data-explorer-toggle title="Toggle Explorer (Ctrl+B)">▤</button><div className="menu-hint"><span className="menu-hint__arrow">◀</span><span className="menu-hint__label">Click to browse all pages</span></div></div>
       <button className="activitybar__btn is-active" data-scroll="s-hero" data-target="s-hero" title="Overview">⌂</button>
       <button className="activitybar__btn" data-scroll="s-build" data-target="s-build" title="What we build">⚙</button>
@@ -37,9 +37,9 @@ export default function Page() {
 
         <section id="s-hero" className="section section--split top">
           <div>
-            <p className="hero__meta">// web-design-vadodara.ts · Gujarat · MSME · manufacturers</p>
-            <span className="badge">WEB DESIGN VADODARA</span>
-            <h1 className="hero__h1">#1 Web design company in <span className="pink">Vadodara</span>, Gujarat</h1>
+            <p className="hero__meta">// web-design-vadodara.ts · software development company · Gujarat · MSME · manufacturers</p>
+            <span className="badge">SOFTWARE DEVELOPMENT COMPANY VADODARA</span>
+            <h1 className="hero__h1">A software development company based in <span className="pink">Vadodara</span>, Gujarat</h1>
             <p className="hero__lead">We're a senior engineering studio headquartered in Vadodara — serving local businesses who want a real engineering partner, not a template shop. Our clients get the same quality we deliver to UK and US companies, at Vadodara pricing.</p>
             <div className="btn-row" style={{"marginTop":"26px"}}>
               <a className="btn btn--primary" href="#s-contact" data-scroll="s-contact">▶ Book free consultation</a>
