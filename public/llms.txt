@@ -1,32 +1,97 @@
 # Digital Web Weaver
 
-> A senior engineering studio building high-performance web platforms, SaaS products, mobile apps, and AI systems since 2013. Headquartered in Vadodara, Gujarat, India, working with clients across India, the UK, and South Africa.
+> AI-powered custom software development company based in Vadodara, Gujarat, India. A senior team of engineers and designers building custom software, SaaS products, web platforms and mobile apps with AI built in, for clients in India, the UK, South Africa and West Africa.
 
-Digital Web Weaver is a senior-only engineering team (no juniors) delivering custom software development, a catalog of pre-built SaaS products, and dedicated-resource hiring. Founded 2013.
+Contact: info@digitalwebweaver.com · +91 97125 15105 · WhatsApp +91 97229 15105
 
 ## Services
-
-- [Web Development](https://digitalwebweaver.com/web-development/): Marketing sites to complex web applications
-- [Custom Web Apps](https://digitalwebweaver.com/custom-web-apps/): Portals, dashboards, internal tools
-- [E-Commerce Development](https://digitalwebweaver.com/ecommerce-development/): Storefronts built to convert
-- [UI/UX Design](https://digitalwebweaver.com/ui-ux-design/): Research, systems, prototypes
-- [Mobile App Development](https://digitalwebweaver.com/mobile-app-development/): Native iOS, Android, cross-platform
-- [AI & Automation](https://digitalwebweaver.com/ai-automation/): LLM features and workflow automation
-- [Cloud & DevOps](https://digitalwebweaver.com/cloud-devops/): CI/CD, infrastructure-as-code, uptime
-- [Custom Software Development](https://digitalwebweaver.com/custom-software-development/): Bespoke ERP, CRM, and portals
-- [MVP Development](https://digitalwebweaver.com/mvp-development/): Validate an idea in weeks
-- [SaaS Development](https://digitalwebweaver.com/saas-development/): Multi-tenant, billing, growth-ready products
-- [CRM & ERP Systems](https://digitalwebweaver.com/crm-erp-systems/): Business systems fit to real operations
-- [Hire Dedicated Resource](https://digitalwebweaver.com/hire-dedicated-resource/): Senior engineers embedded with your team
+- [AI & automation services that replace real manual work](https://digitalwebweaver.com/ai-automation/): AI systems that work in production: LLM copilots, document processing, predictive analytics and workflow automation with GPT-4, Claude and RAG.
+- [AWS & cloud infrastructure we use](https://digitalwebweaver.com/stack/aws/): AWS, GCP and Azure architecture: EC2, ECS, Lambda, RDS, EKS. Multi-region HA, auto-scaling, security baselines and cost optimisation.
+- [Business intelligence & data analytics that turn data into decisions](https://digitalwebweaver.com/solutions/business-intelligence/): BI dashboards, data warehouses and ETL pipelines that give decision-makers real-time visibility. Metabase, dbt, Airflow, Snowflake.
+- [Cloud & DevOps infrastructure that scales with your product](https://digitalwebweaver.com/cloud-devops/): Cloud architecture, CI/CD, Kubernetes and Infrastructure as Code on AWS, GCP and Azure. 99.9% uptime SLA, zero-downtime deploys.
+- [Custom CRM & ERP development, built around your business](https://digitalwebweaver.com/crm-erp-systems/): Custom CRM and ERP systems built around your workflows: sales pipeline, inventory, HR, finance and BI in one system. 150+ clients since 2013.
+- [Custom software development built around your business](https://digitalwebweaver.com/custom-software-development/): Bespoke ERP, CRM, internal tools and client portals built around your exact workflow. Fixed price, 200+ systems built.
+- [Custom web application development, built to scale](https://digitalwebweaver.com/custom-web-apps/): Custom portals, dashboards, internal tools and SaaS built with React, Next.js and Node.js. 80+ web apps delivered across India, UK & US.
+- [Cybersecurity audits & penetration testing that find vulnerabilities first](https://digitalwebweaver.com/solutions/cybersecurity/): Penetration tests, OWASP Top 10 audits, code security reviews and GDPR/HIPAA compliance checks, with a prioritised remediation report.
+- [Database development: PostgreSQL, MongoDB, Redis & more](databases.html): PostgreSQL, MongoDB, Redis, Elasticsearch, ClickHouse and SQLite. Schema design, query optimisation and zero-downtime migrations.
+- [E-commerce development built to convert, scale & integrate](https://digitalwebweaver.com/ecommerce-development/): Conversion-focused e-commerce stores: custom, WooCommerce or headless. PCI-DSS secure payments, +40% average conversion lift.
+- [Hire dedicated developers: senior engineers on demand](hire-dedicated-resource.html): Hire vetted full-stack, mobile, AI and DevOps engineers from India. Flexible 1–12 month engagements, deployed in 72 hours.
+- [Hire Laravel developers for production-grade PHP apps](laravel-developer.html): Hire senior Laravel developers for production PHP apps with Laravel 11, Livewire, Filament and Pest. 2–3 pre-vetted profiles, fast.
+- [Mobile app development for iOS & Android at 60fps](https://digitalwebweaver.com/mobile-app-development/): Native iOS, Android, React Native and Flutter apps profiled for 60fps. 55+ apps shipped, 4.8★ average, full App Store and Play Store submission.
+- [MVP development: idea to investor-ready product in 8–12 weeks](https://digitalwebweaver.com/mvp-development/): Investor-ready MVPs in 8–12 weeks: scope discipline, analytics from day one and architecture ready for due diligence. 4.9/5 client rating.
+- [Hire Node.js developers who build backends for scale](nodejs-developer.html): Hire senior Node.js developers — event-driven APIs, microservices, and real-time backends with TypeScript. Matched with 2–3 pre-vetted profiles in 48 hours.
+- [Progressive web app development: native feel, no native build](https://digitalwebweaver.com/services/progressive-web-apps/): Installable, offline-first Progressive Web Apps with service worker caching and app-shell architecture. 90+ Lighthouse PWA scores.
+- [Hire Python developers for web, data & AI](python-developer.html): Hire senior Python developers for Django, FastAPI, data pipelines and ML/AI. 2–3 pre-vetted profiles in 48 hours, 14-day free replacement.
+- [Hire React.js developers who ship fast, scalable UIs](react-developer.html): Hire senior React.js developers: React 18, TypeScript and Next.js for SPAs, dashboards and enterprise frontends. Profiles in 48 hours.
+- [SaaS built to scale from day one](https://digitalwebweaver.com/saas-development/): Multi-tenant SaaS platforms built to scale — subscription billing, SSO, product analytics, and architecture that survives Series A growth. 150+ clients served.
+- [Software development services from one senior team](https://digitalwebweaver.com/services/): Web, mobile, API, cloud, AI and design: 20+ specialist software development services from one senior team across India, the UK and South Africa.
+- [UI/UX design services users love and businesses can measure](https://digitalwebweaver.com/ui-ux-design/): UI/UX design grounded in user research: wireframes, prototypes, design systems and developer handoff. WCAG 2.1 AA, 150+ clients.
+- [Web development company: high-performance websites & web apps](https://digitalwebweaver.com/web-development/): Full-spectrum web development: marketing sites, web portals, web apps, and API backends. React, Next.js, Node.js, and TypeScript. India-based senior team.
 
 ## Products
+- [CallMate AI: the 24/7 AI calling agent for your business](https://digitalwebweaver.com/callmate-ai/): CallMate AI answers inbound calls, qualifies leads, books appointments and makes follow-up calls automatically, in your brand's tone, 24/7.
+- [ChatFlow AI: WhatsApp automation for sales & support](https://digitalwebweaver.com/chatflow-ai/): ChatFlow AI answers enquiries, books appointments, sends order updates and follows up with customers on your business WhatsApp number, 24/7.
+- [ChemSupply: ERP software for chemical suppliers](https://digitalwebweaver.com/chemsupply/): ChemSupply: batch & expiry tracking, compliance documents, orders, distributor portals and multi-warehouse inventory in one ERP for chemical suppliers.
+- [ClinicFlow: clinic management software](https://digitalwebweaver.com/clinicflow/): ClinicFlow brings appointment scheduling, EMR, billing, pharmacy, lab orders, and patient communication into one branded platform. Live in 5–6 weeks.
+- [ClinicVoice AI: the AI voice agent for clinics](https://digitalwebweaver.com/clinicvoice-ai/): ClinicVoice AI answers calls, books appointments, sends reminders and follows up after visits, automatically, in a natural voice, 24/7.
+- [EduCore: white-label LMS software](https://digitalwebweaver.com/educore/): EduCore: course delivery, live classes, assessments, certificates and fee collection in one white-label LMS. Live in 4–6 weeks, 0% revenue cut.
+- [EstateFlow: real estate CRM for builders & developers](https://digitalwebweaver.com/estateflow/): EstateFlow runs the buyer journey for developers: leads, site visits, booking, collections and post-sales, with WhatsApp automation and RERA compliance.
+- [FabSuite: costing & cutting-plan software for fabricators](https://digitalwebweaver.com/fabsuite/): FabSuite is cloud-based costing and cutting-plan software for aluminium & uPVC fabrication shops — quote and cutting-plan a job in minutes, from ₹999/month.
+- [GlowDesk: aesthetic clinic management software](https://digitalwebweaver.com/glowdesk/): GlowDesk: booking, treatment plans, before/after galleries, consent forms, billing and follow-ups in one branded system for aesthetic clinics.
+- [InsureDesk: CRM software for insurance agencies](https://digitalwebweaver.com/insuredesk/): InsureDesk: leads, policy tracking, renewal reminders, claims follow-up and client communication in one insurance agency CRM. Live in 4–6 weeks.
+- [The Operations OS for Indian event companies](https://digitalwebweaver.com/manchify/): Manchify is the Operations OS for Indian event companies — leads, quotes, events, vendors, manpower, rentals, and GST invoicing in one connected system.
+- [Nivas: housing society management software](https://digitalwebweaver.com/nivasone/): Nivas runs your housing society: visitor approvals, maintenance bills, UPI payments, notices, polls and complaints. In Gujarati, Hindi and English.
+- [PestTrack: pest control CRM & field service software](https://digitalwebweaver.com/pesttrack/): PestTrack: job scheduling, technician routing, service history, AMC contracts, billing and client reminders in one pest control CRM. Live in 3–5 weeks.
+- [QuickBite: food delivery app suite with 0% commission](https://digitalwebweaver.com/quickbite/): QuickBite: customer app, restaurant dashboard and delivery partner app for restaurants and cloud kitchens. 0% commission, live in 6–8 weeks.
+- [RideEasy: cab booking app suite with 0% commission](https://digitalwebweaver.com/rideeasy/): RideEasy: rider app, driver app and dispatch dashboard with live tracking, fare estimates and payments. 0% commission, live in 6–8 weeks.
+- [SalonBook: salon management software](https://digitalwebweaver.com/salonbook/): SalonBook: online booking, staff scheduling, billing, packages, inventory and client follow-ups in one branded system. Live in 3–5 weeks.
+- [SchoolHub: school management software](https://digitalwebweaver.com/schoolhub/): SchoolHub: admissions, attendance, timetables, fees, exams, report cards and parent communication in one branded platform. Live in 5–7 weeks.
+- [SolarFlow: ERP & CRM for solar installers](https://digitalwebweaver.com/solarflow/): Solar ERP + CRM for Gujarat installers. Track PM Surya Ghar → GEDA → MGVCL subsidy lifecycle, validate ALMM panels, GST invoicing. Trusted in Vadodara.
+- [TeleCare: telemedicine platform for clinics](https://digitalwebweaver.com/telecare/): TeleCare: video consultations, e-prescriptions, patient records, scheduling and payments in one branded telemedicine platform. Live in 5–7 weeks.
+- [VetCare: veterinary practice software for South Africa](https://digitalwebweaver.com/vetcare/): VetCare: appointments, patient records, stock, billing and client WhatsApp in one system for South African vets. SARS-ready, loadshedding-proof.
 
-Digital Web Weaver also builds and sells pre-built SaaS products for specific industries — full catalog at [/products/](https://digitalwebweaver.com/products/), including [GlowDesk](https://digitalwebweaver.com/glowdesk/) (aesthetic clinic booking), [ClinicFlow](https://digitalwebweaver.com/clinicflow/) (clinic management), [SchoolHub](https://digitalwebweaver.com/schoolhub/) (school administration), [SolarFlow](https://digitalwebweaver.com/solarflow/) (solar installer ERP), and [EduCore](https://digitalwebweaver.com/educore/) (LMS).
+## Industries
+- [EdTech & LMS software development that teaches at scale](https://digitalwebweaver.com/edtech/): LMS platforms, live classrooms, assessment engines and mobile learning apps for schools, universities and corporate training. SCORM/xAPI ready.
+- [FinTech software development built to comply and scale](https://digitalwebweaver.com/fintech/): We engineer PCI-DSS compliant payment systems, lending platforms, KYC/AML pipelines, and trading dashboards for regulated financial environments.
+- [Healthcare software built for patients, clinicians & compliance](https://digitalwebweaver.com/healthcare/): We build HIPAA-compliant EHR systems, patient portals, telemedicine apps, and clinical analytics platforms — secure, interoperable, and built for care.
+- [Logistics & fleet software that moves as fast as your fleet](https://digitalwebweaver.com/logistics/): Fleet management, real-time shipment tracking, warehouse management and route optimisation software for logistics operators.
+- [Real estate software development, from listing to closing](https://digitalwebweaver.com/real-estate/): Property listing platforms, agent CRMs, virtual tours and lease management software for real estate businesses. MLS/RETS integration.
+- [Retail & e-commerce software that sells more and runs smarter](https://digitalwebweaver.com/retail-ecommerce/): Custom e-commerce, headless storefronts, POS integration, and retail analytics engineered for conversion. +40% average conversion lift, trusted by 150+ clients.
+
+## Locations
+- [Agence de Développement Web et Logiciel pour Abidjan](https://digitalwebweaver.com/agence-developpement-web-abidjan/): Agence de développement web pour Abidjan et la Côte d'Ivoire : sites sur mesure, applications métier, e-commerce avec Mobile Money. Équipe francophone.
+- [Software development company for South African businesses](https://digitalwebweaver.com/software-development-company-south-africa/): Offshore software development for South African businesses: bespoke web apps, e-commerce and dedicated teams, with IST/SAST working-hour overlap.
+- [Software development company for UK businesses](https://digitalwebweaver.com/software-development-company-uk/): Offshore software development for UK businesses: bespoke web apps, e-commerce and dedicated teams from senior engineers, at 50–70% below UK agency rates.
+- [Web design & development company in Ahmedabad](https://digitalwebweaver.com/web-design-ahmedabad/): Websites, e-commerce, custom ERP/CRM, mobile apps and SaaS for Ahmedabad businesses on SG Highway, GIDC, GIFT City and Naroda. Reply in 24h.
+- [Web design & development company in Gujarat](https://digitalwebweaver.com/web-design-gujarat/): Vadodara-based senior engineers building websites, ERP/CRM, e-commerce and mobile apps for businesses in Ahmedabad, Surat, Rajkot and across Gujarat.
+- [Web design & development company in Rajkot](https://digitalwebweaver.com/web-design-rajkot/): Manufacturing ERP, B2B dealer portals and export-ready websites for Rajkot's engineering, auto-parts and industrial SMEs. Fixed price.
+- [Web design & development company in Surat](https://digitalwebweaver.com/web-design-surat/): B2B wholesale portals for Surat's diamond and textile traders, e-commerce for D2C brands and custom ERP for manufacturers. Fixed price.
+- [A software development company based in Vadodara, Gujarat](https://digitalwebweaver.com/web-design-vadodara/): Software development company headquartered in Vadodara: websites, e-commerce, mobile apps and custom software for Gujarat businesses. 24-hour reply.
 
 ## Company
+- [About Digital Web Weaver: software that works at scale](https://digitalwebweaver.com/about/): Founded in 2013, Digital Web Weaver is a senior engineering studio shipping production-grade software for founders and enterprises in 15 countries.
+- [Software development blog](https://digitalwebweaver.com/blog/): Engineering notes, product thinking and honest takes on building software: web development, ERP, SaaS and AI automation.
+- [Careers at Digital Web Weaver](https://digitalwebweaver.com/careers/): Join a senior engineering studio, not a ticket factory. Remote-first, async-first team building real systems with real ownership. 4 open roles.
+- [Contact Digital Web Weaver](https://digitalwebweaver.com/contact/): Free technical consultation and an itemised estimate from senior engineers within 24 hours. Email, phone or WhatsApp. Vadodara, India.
+- [Software & app development cost calculator](https://digitalwebweaver.com/cost-estimator/): Estimate the cost and timeline of your website, app, SaaS or ERP project in a minute, in INR, USD or GBP. Fixed quote within 24 hours.
+- [Portfolio & case studies](https://digitalwebweaver.com/portfolio/): 200+ systems built. ERP, SaaS, healthtech, logistics and AI case studies from a senior engineering studio, for startups to global enterprises.
+- [Privacy Policy](https://digitalwebweaver.com/privacy-policy/): How Digital Web Weaver collects, uses, and protects the personal data of clients, website visitors, and prospects.
+- [Ready-made software products you can launch in weeks](https://digitalwebweaver.com/products/): 20 production-ready products: LMS, ERP, clinic software, delivery apps and AI voice agents. White-label, live with your branding in 2–4 weeks.
 
-- [About](https://digitalwebweaver.com/about/): Company history, team, and operating principles
-- [Portfolio](https://digitalwebweaver.com/portfolio/): Case studies of shipped work
-- [Blog](https://digitalwebweaver.com/blog/): Guides on software costs, timelines, and technology choices for Indian and African SMEs
-- [Contact](https://digitalwebweaver.com/contact/): Address, phone, and enquiry form
-- [Cost Estimator](https://digitalwebweaver.com/cost-estimator/): Interactive project pricing tool
+## Case studies
+- [PropRail Case Study: Property Management Software](https://digitalwebweaver.com/portfolio/proprail/): How we built PropRail, a multi-entity property management and accounting platform for a UK firm: RICS-aligned, Sage 50 integrated, 190+ tests.
+- [LMS Frontend Rebuild & QA Audit: NextSense Case Study](https://digitalwebweaver.com/portfolio/nextsense/): How we took NextSense's LMS from static mockups to a production Vue 3 app, with a full QA audit and a security review of the admin backend.
+
+## Blog
+Written by Kamlesh Nishad, Digital Web Weaver. Practical guides for businesses in Vadodara, Gujarat, India and South Africa.
+- [AI Automation for Gujarat SMEs](https://digitalwebweaver.com/blog/ai-automation-gujarat-sme/): AI automation isn't only for big companies. Practical, affordable ways Gujarat SMEs can use AI in 2026 to cut busywork and save hours every week.
+- [How to Choose a Web Development Company in Vadodara](https://digitalwebweaver.com/blog/choose-web-development-company-vadodara/): Dozens of web development companies in Vadodara, wildly different quotes. How to choose the right one: questions to ask and red flags to avoid.
+- [Losing Deals to Missed Follow-Ups? You Need a CRM](https://digitalwebweaver.com/blog/crm-software-sales-teams-vadodara/): If leads slip through the cracks, a CRM is the fix. What CRM software does for sales teams in Vadodara, and what it costs.
+- [Outgrown Tally? What an ERP Does for Gujarat Business](https://digitalwebweaver.com/blog/erp-software-gujarat-business/): Your business outgrew Tally and spreadsheets. Here's what ERP software really does for Gujarat SMEs, what it costs in 2026, and custom vs ready-made.
+- [Best Food Delivery Apps in South Africa Compared](https://digitalwebweaver.com/blog/from-fast-food-to-fine-dining-the-best-food-delivery-apps-in-south-africa/): Compare South Africa's top food delivery apps: Uber Eats, Mr D Food, Bolt Food and Checkers Sixty60 on price, speed and load-shedding resilience.
+- [Clinic Software in Vadodara: Why Paper Files Cost You](https://digitalwebweaver.com/blog/hospital-clinic-software-vadodara/): Paper files quietly cost Vadodara clinics time and money. How hospital management software fixes it: features, cost and a free demo.
+- [Building an App in Vadodara? Process & Costs 2026](https://digitalwebweaver.com/blog/mobile-app-development-vadodara/): Thinking of building a mobile app in Vadodara? Here's what the process really involves, what it costs in 2026, and how to avoid wasting your budget.
+- [How to Build a SaaS in India Without Burning Budget](https://digitalwebweaver.com/blog/saas-development-india-guide/): Have a SaaS idea? Here's how to build a SaaS product in India in 2026 — the real process, what it costs, MVP-first strategy, and mistakes that waste money.
+- [School Management Software for Gujarat Schools](https://digitalwebweaver.com/blog/school-management-software-gujarat/): Registers, paper report cards, fee chaos. Why Gujarat schools are switching to school management software: features, GSEB/CBSE fit and cost.
+- [What Does a Website Really Cost in Vadodara? 2026 Guide](https://digitalwebweaver.com/blog/website-cost-vadodara-2026/): Confused by ₹8,000 to ₹8,00,000 website quotes in Vadodara? Here's an honest 2026 breakdown of what websites actually cost and what drives the price.
+- [WordPress vs Custom Website: The Honest Answer](https://digitalwebweaver.com/blog/wordpress-vs-custom-website/): WordPress or a custom-coded website? Here's the honest comparison — cost, speed, security, and scale — so you pick the right one for your business in 2026.

@@ -17,4 +17,4 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; img-src 'self' data: https://cdn.simpleicons.org; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://vercel.live; connect-src 'self' https://vercel.live wss://vercel.live; frame-src https://www.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https://cdn.simpleicons.org https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' 'inline-speculation-rules' https://vercel.live; connect-src 'self' https://vercel.live wss://vercel.live; frame-src https://www.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'

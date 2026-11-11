@@ -1,59 +1,47 @@
-# Digital Web Weaver — React (Next.js) template
+# Digital Web Weaver: new design (Next.js)
 
-An SEO-friendly React port of the Digital Web Weaver IDE-themed marketing site,
-built with **Next.js (App Router)**. Four pages — Home, Web Development, Hire
-Dedicated, and Contact — share one stylesheet and one behaviour module.
-
-## Requirements
-- Node.js 18.17+ (or 20+)
-
-## Run it
+Next.js 14 (Pages Router) port of the new "Editor Light" design, built for page speed: every page is
+server-rendered static HTML with **no React in the browser**. Same URLs (trailing slashes), `/api/lead`
+(Supabase + Resend) and env vars as `../react-app`. `html/` is the original static prototype, kept for reference.
 
 ```bash
-npm install       # install dependencies
-npm run dev       # start dev server → http://localhost:3000
+npm install
+npm run dev     # http://localhost:3000   (runs scripts/build-assets.mjs first)
+npm run build && npm start
 ```
 
-## Build a static, SEO-ready site
+## How it works
+- `content/pages.json` / `pages-extra.json`: per-URL `<head>` data (title, description, robots, OG, JSON-LD).
+- `content/pages/<file>.html`: the `<main>` markup of each page. **Edit page copy here.**
+- `content/header.html`, `content/footer.html`: shared chrome (`{{CTA}}` = the header button target).
+- `pages/[[...slug]].js`: renders every URL listed in the JSON; `pages/404.js`; `pages/api/lead.js`.
+- `pages/_document.js`: inlines the first-screen CSS, loads the full stylesheet without blocking, preloads the font.
+- `styles/site.css`: the full stylesheet. `styles/critical.css`: the first-screen subset (see below).
+- `components/boot.js` -> `behavior.js`: menus, tabs, estimator, forms (-> `/api/lead/`); `router.js` is a tiny client-side router
+  (no reload: fetches the next static page, swaps it in place, syncs title/meta/canonical/JSON-LD, crossfades with View Transitions,
+  warms pages on hover; any failure falls back to a normal page load);
+  `projectModal.js` is fetched the first time someone opens the "Start a project" brief.
+- `lib/icons.mjs`: gives every card (window cards, capabilities, benefits, related links) a line icon at build time, chosen
+  from the card title by keyword rules. The page gets one empty `<span class="ic ic--name">`; the shapes are CSS masks in
+  `styles/site.css` (Lucide, ISC licence). To add an icon: add a rule in `lib/icons.mjs`, then run
+  `npm i --no-save lucide-static && node scripts/build-icons.mjs`, which also rewrites the review list
+  `digitalwebweaver-audit/card-icons.csv`.
+- `lib/layout.mjs`: layout variety per page group, also at build time: dark capabilities band and a 2x2 lead card on service
+  pages, a module map on product pages, a map card on location pages, a side diagram on "approach" sections and a faint hero
+  icon everywhere. It only adds classes and decorative `aria-hidden` elements (labels are `data-t` attributes drawn by CSS, so
+  page text is unchanged); the styles are the "layout variety" block in `styles/site.css`, all desktop-only extras.
+- `components/motion.js` + the "motion" block at the end of `styles/site.css`: hover and scroll effects. Keep them free of
+  layout reads at start-up (they would force layout of the off-screen sections that `content-visibility` skips).
+- `scripts/build-assets.mjs` (runs before dev/build): minifies CSS/JS into `public/css`, `public/js` with content
+  hashes, writes `lib/assets.json`, `public/sitemap.xml` and `public/robots.txt`.
+- `next.config.mjs` sets long cache headers for `/css`, `/js`, `/fonts`, `/assets`.
 
-```bash
-npm run build     # outputs a fully static site to ./out
-npx serve out     # preview the production build locally
-```
+## After changing styles/site.css
+`styles/critical.css` is generated from the real pages (rules that style anything visible on the first screen at
+phone/tablet/desktop sizes). Regenerate it after big CSS or layout changes: start the site, then run the
+extractor: `npm i -D playwright-core && CHROME_PATH=<chrome> node scripts/critical.mjs http://localhost:3000` (a dev-time tool, not part of the build, so Vercel needs no browser).
+Stale critical CSS only affects the first paint; the full stylesheet is always loaded afterwards.
 
-The build uses `output: "export"`, so `./out` is plain static HTML/CSS/JS you
-can drop on any host (Netlify, Vercel, S3, GitHub Pages, nginx…). Every page is
-pre-rendered to HTML at build time, so crawlers get full content with no JS.
-
-## Project structure
-
-```
-app/
-  layout.jsx            root layout + site-wide <head> metadata
-  globals.css           the shared stylesheet (design tokens + components)
-  page.jsx              Home                      → /
-  web-development/      Web Development service    → /web-development
-  hire-dedicated/       Hire Dedicated             → /hire-dedicated
-  contact/              Contact                    → /contact
-  sitemap.js            generates /sitemap.xml
-  robots.js             generates /robots.txt
-components/
-  Interactions.jsx      client component that boots the UI behaviour
-  behavior.js           drawer, scrollspy, tabs, pipeline, FAQ, forms, sidebar toggle
-public/assets/          images
-```
-
-## SEO notes
-- Per-page `title`, `description`, canonical URL and Open Graph tags via the
-  App Router `metadata` export (see the top of each `page.jsx`).
-- Site-wide defaults + `metadataBase`, Twitter card and `robots` live in
-  `app/layout.jsx`. **Change the domain** in `layout.jsx`, `sitemap.js` and
-  `robots.js` to your own before deploying.
-- `sitemap.xml` and `robots.txt` are generated automatically.
-- Semantic HTML, descriptive `alt` text, and explicit image dimensions are kept
-  from the source for good Core Web Vitals.
-
-## Editing content
-Each page's markup lives directly in its `page.jsx` as JSX. Styling is entirely
-in `app/globals.css` (CSS custom properties at `:root`). Interactive behaviour
-is in `components/behavior.js`.
+## Adding a page
+Add its entry to `content/pages-extra.json`, its markup to `content/pages/`, and (optionally) a link in the header/footer.
+`public/sitemap.xml` is regenerated on every build.
