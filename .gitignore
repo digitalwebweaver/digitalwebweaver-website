@@ -18,3 +18,6 @@ claude-seo/
 /public/sitemap.xml
 /public/robots.txt
 /lib/assets.json
+
+# original screenshots (may show client names); the site uses the cropped copies in public/assets
+/content/portfolio/
