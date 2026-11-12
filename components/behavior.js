@@ -425,6 +425,16 @@ export function initDWW() {
     }));
   })();
 
+  // portfolio: industry filter (every card is in the HTML; this only hides the ones outside the chosen industry)
+  (function () {
+    const bar = $('.pf-filter'); if (!bar) return;
+    const btns = $$('button', bar), items = $$('#work article[data-ind]');
+    btns.forEach(x => x.addEventListener('click', () => {
+      btns.forEach(y => y.setAttribute('aria-pressed', y === x));
+      items.forEach(e => { e.hidden = !!x.dataset.ind && e.dataset.ind !== x.dataset.ind; });
+    }, { signal: ac.signal }));
+  })();
+
   // cost estimator
   (function () {
     const root = document.getElementById('est'); if (!root) return;
