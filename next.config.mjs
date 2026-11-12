@@ -6,6 +6,10 @@ const nextConfig = {
   trailingSlash: true,
   poweredByHeader: false,
   images: { unoptimized: true },
+  // renamed pages: permanent redirects keep old links and search rankings working
+  async redirects() {
+    return [{ source: "/nivasone/", destination: "/nivasgate/", permanent: true }];
+  },
   async headers() {
     return [
       // content-hashed by scripts/build-assets.mjs, so safe to cache forever
