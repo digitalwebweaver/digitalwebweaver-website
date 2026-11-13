@@ -444,3 +444,5 @@ main>section:nth-of-type(n+3):not(:has(.term)){content-visibility:auto;contain-i
 .founder-call__go{color:var(--accent);font-weight:700;transition:transform .35s var(--ease-out)}
 @media (hover:hover) and (pointer:fine){.founder-call:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 18px 32px -20px rgba(200,23,79,.45)}.founder-call:hover .founder-call__go{transform:translateX(4px)}}
 @media (prefers-reduced-motion:reduce){.founder-call,.founder-call__go{transition:none}.founder-call:hover,.founder-call:hover .founder-call__go{transform:none}}
+.nav__item--mob{display:none}
+@media (max-width:1080px){.nav__item--mob{display:block}}

@@ -18,7 +18,7 @@ root.walkRules((r) => { if (r.parent && r.parent.type === 'atrule' && /keyframes
 // icon shapes and the decorative hero icon stay out of the inlined CSS (they would add ~6 KB to every page); they arrive with the full stylesheet
 const list = [...selectors].filter((s) => s && !/^\.ic--|hero-art/.test(s));
 // .skip is parked above the screen, so the viewport test never sees it; without its rule it sits in the flow and shifts the page
-const matched = new Set([".skip"]);
+const matched = new Set([".skip", ".nav__item--mob"]); // .nav__item--mob: hidden on desktop before the full stylesheet arrives
 
 const br = await chromium.launch({ executablePath: process.env.CHROME_PATH, headless: true });
 for (const vp of VIEWPORTS) {
