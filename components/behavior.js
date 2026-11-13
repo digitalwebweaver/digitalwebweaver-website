@@ -461,58 +461,8 @@ export function initDWW() {
     calc();
   })();
 
-  // mac-style form window: red closes to a button, yellow minimises to a dock, green opens it large
-  $$('.form-card--mac').forEach(card => {
-    const host = card.parentElement;
-    if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
-    const make = (cls, html) => { const el = document.createElement('div'); el.className = cls; el.innerHTML = html; host.appendChild(el); return el; };
-    const pillBtn = document.createElement('button'); pillBtn.type = 'button'; pillBtn.className = 'mac-pill'; pillBtn.innerHTML = '<b>&gt;_</b>Get a free estimate'; host.appendChild(pillBtn);
-    const dock = make('mac-dock', '<button type="button"><span></span>estimate.form</button>');
-    let shade = null;
-    const place = (el, where) => {
-      const c = card.getBoundingClientRect(), h = host.getBoundingClientRect(), e = el.getBoundingClientRect();
-      const top = where === 'top' ? c.top - h.top : c.bottom - h.top - e.height - 8;
-      const left = where === 'top' ? c.right - h.left - e.width : c.left - h.left + (c.width - e.width) / 2;
-      el.style.top = top + 'px'; el.style.left = left + 'px';
-    };
-    const unmax = () => {
-      if (!card.classList.contains('is-max')) return;
-      card.classList.remove('is-max');
-      const ph = host.querySelector('.mac-ph'); ph && ph.remove();
-      if (shade) { shade.classList.remove('on'); const s = shade; shade = null; setTimeout(() => s.remove(), 350); }
-    };
-    const restore = () => {
-      unmax();
-      pillBtn.classList.remove('on'); dock.classList.remove('on');
-      card.classList.remove('is-closed', 'is-min');
-      if (!reduce) { card.style.animation = 'none'; void card.offsetWidth; card.style.animation = ''; }
-      ($('input', card) || card).focus({ preventScroll: true });
-    };
-    card.addEventListener('click', ev => {
-      const b = ev.target.closest('[data-mac]'); if (!b) return;
-      const act = b.dataset.mac;
-      if (act === 'max') {
-        if (card.classList.contains('is-max')) return unmax();
-        const ph = document.createElement('div'); ph.className = 'mac-ph'; ph.style.height = card.offsetHeight + 'px';
-        host.insertBefore(ph, card.nextSibling);
-        card.classList.add('is-max');
-        shade = document.createElement('div'); shade.className = 'mac-shade'; host.insertBefore(shade, card);
-        shade.addEventListener('click', unmax); rAF(() => shade && shade.classList.add('on'));
-        return;
-      }
-      unmax();
-      card.classList.add(act === 'close' ? 'is-closed' : 'is-min');
-      const el = act === 'close' ? pillBtn : dock;
-      setTimeout(() => { place(el, act === 'close' ? 'top' : 'bottom'); el.classList.add('on'); (el.matches('button') ? el : $('button', el)).focus({ preventScroll: true }); }, act === 'close' ? 250 : 350);
-    }, { signal: ac.signal });
-    pillBtn.addEventListener('click', restore, { signal: ac.signal });
-    $('button', dock).addEventListener('click', restore, { signal: ac.signal });
-    doc('keydown', ev => { if (ev.key === 'Escape') unmax(); });
-  });
-
   return () => {
     dead = true;
-    $$('.mac-shade').forEach(s => s.remove());
     ac.abort();
     document.body.classList.remove('menu-open');
     timers.forEach(id => { window.clearTimeout(id); window.clearInterval(id); });
